@@ -81,6 +81,7 @@ a{text-decoration:none;color:inherit}
   color:#fff;letter-spacing:-.01em;flex-shrink:0;
   margin-right:clamp(1rem,3vw,2.5rem);
 }
+.nav-logo{display:inline-flex;align-items:baseline;gap:.35em}
 .nav-logo em{font-style:italic;color:var(--coral-light)}
 
 /* Desktop links */
@@ -771,6 +772,158 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   .footer-legal{flex-direction:column;align-items:flex-start}
 }
 
+
+/* ═══════════════════════════════════════════════════════════
+   START PLANNING — decision strip directly below hero
+   Inserted between hero and intro-section.
+   Uses existing design tokens only; no new variables.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.sp-section{
+  background:var(--ocean-deep);
+  padding:0 var(--gutter);
+  position:relative;
+  z-index:1;
+}
+.sp-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:stretch;
+  gap:0;
+  /* pull up into hero bottom edge */
+  margin-top:-1px;
+}
+
+/* ── Left label column ───────────────────────────────────── */
+.sp-label{
+  display:flex;align-items:center;
+  padding:0 clamp(1.2rem,2.5vw,2rem) 0 0;
+  border-right:1px solid rgba(255,255,255,.07);
+  flex-shrink:0;
+}
+.sp-label-text{
+  font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.28);
+  white-space:nowrap;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+}
+
+/* ── Tiles scroll container ──────────────────────────────── */
+.sp-tiles{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.sp-tiles::-webkit-scrollbar{display:none}
+
+/* ── Individual tile ─────────────────────────────────────── */
+.sp-tile{
+  display:flex;flex-direction:column;
+  padding:clamp(1.1rem,2.5vw,1.6rem) clamp(1rem,2vw,1.5rem);
+  border-right:1px solid rgba(255,255,255,.07);
+  border-bottom:none;
+  position:relative;
+  text-decoration:none;
+  transition:background .22s var(--ease);
+  min-width:160px;
+}
+.sp-tile:last-child{border-right:none}
+.sp-tile::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;
+  background:var(--coral);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .28s var(--ease);
+}
+.sp-tile:hover{background:rgba(255,255,255,.04)}
+.sp-tile:hover::after{transform:scaleX(1)}
+
+/* ── Tile contents ───────────────────────────────────────── */
+.sp-tile-icon{
+  font-size:1.3rem;
+  margin-bottom:.6rem;
+  line-height:1;
+  display:block;
+}
+.sp-tile-label{
+  font-size:.62rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--coral-light);
+  margin-bottom:.3rem;
+  opacity:.8;
+}
+.sp-tile-title{
+  font-family:var(--font-serif);
+  font-size:clamp(.95rem,1.5vw,1.1rem);
+  color:#fff;line-height:1.2;
+  letter-spacing:-.015em;
+  margin-bottom:.45rem;
+  flex:1;
+}
+.sp-tile-hint{
+  font-size:.71rem;
+  color:rgba(255,255,255,.38);
+  line-height:1.55;
+  display:flex;align-items:center;gap:5px;
+}
+.sp-tile-hint::after{
+  content:'→';
+  font-size:.8rem;
+  color:rgba(255,255,255,.22);
+  transition:color .2s,transform .2s;
+  flex-shrink:0;
+}
+.sp-tile:hover .sp-tile-hint::after{
+  color:var(--coral-light);
+  transform:translateX(3px);
+}
+
+/* ── Book Now tile (coral accent) ────────────────────────── */
+.sp-tile-book{
+  background:rgba(200,96,74,.12);
+  border-right-color:rgba(255,255,255,.07);
+}
+.sp-tile-book:hover{background:rgba(200,96,74,.2)}
+.sp-tile-book .sp-tile-title{color:var(--coral-light)}
+.sp-tile-book::after{background:var(--coral)}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media(max-width:1100px){
+  .sp-inner{grid-template-columns:1fr}
+  .sp-label{display:none}
+  .sp-tiles{
+    grid-template-columns:repeat(5,minmax(150px,1fr));
+    border-top:1px solid rgba(255,255,255,.07);
+  }
+}
+@media(max-width:768px){
+  .sp-tiles{
+    grid-template-columns:repeat(5,minmax(140px,1fr));
+  }
+  .sp-tile{padding:1rem 1.1rem}
+  .sp-tile-title{font-size:.9rem}
+}
+@media(max-width:480px){
+  .sp-section{padding:0}
+  .sp-tiles{
+    grid-template-columns:repeat(5,minmax(130px,1fr));
+  }
+  .sp-tile{padding:.85rem .9rem}
+  .sp-tile-icon{font-size:1.1rem;margin-bottom:.4rem}
+  .sp-tile-label{font-size:.58rem}
+  .sp-tile-hint{font-size:.65rem}
+}
+
 </style>
 </head>
 <body>
@@ -969,6 +1122,69 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
     </div>
   </div>
 </header>
+
+<!-- ══════════════════════════════════════════════════════════
+     START PLANNING — 5-tile decision strip
+     Inserted directly below hero. Reuses existing content
+     destinations; no duplicate content created.
+     ════════════════════════════════════════════════════════ -->
+<div class="sp-section" role="navigation" aria-label="Start planning your trip">
+  <div class="sp-inner">
+
+    <div class="sp-label" aria-hidden="true">
+      <span class="sp-label-text">Start planning</span>
+    </div>
+
+    <div class="sp-tiles">
+
+      <!-- Tile 1: Browse Hotels -->
+      <a href="best-hotels-in-da-nang.html" class="sp-tile" aria-label="Browse all Da Nang hotels — best picks for every budget">
+        <span class="sp-tile-icon" aria-hidden="true">🏨</span>
+        <span class="sp-tile-label">110+ reviewed</span>
+        <span class="sp-tile-title">Browse Hotels</span>
+        <span class="sp-tile-hint">All budgets &amp; types</span>
+      </a>
+
+      <!-- Tile 2: Where to Stay -->
+      <a href="where-to-stay-in-da-nang.html" class="sp-tile" aria-label="Where to stay in Da Nang — neighbourhood guide">
+        <span class="sp-tile-icon" aria-hidden="true">📍</span>
+        <span class="sp-tile-label">5 areas mapped</span>
+        <span class="sp-tile-title">Pick a Neighbourhood</span>
+        <span class="sp-tile-hint">My Khe · Son Tra · Han River</span>
+      </a>
+
+      <!-- Tile 3: Best Time -->
+      <a href="best-time-to-visit-da-nang.html" class="sp-tile" aria-label="Best time to visit Da Nang — seasonal guide">
+        <span class="sp-tile-icon" aria-hidden="true">🌤</span>
+        <span class="sp-tile-label">Monthly data</span>
+        <span class="sp-tile-title">When to Visit</span>
+        <span class="sp-tile-hint">Best: Mar – May</span>
+      </a>
+
+      <!-- Tile 4: Travel Guides -->
+      <a href="guides.html" class="sp-tile" aria-label="Da Nang travel guides — dining, beaches, itineraries">
+        <span class="sp-tile-icon" aria-hidden="true">🗺</span>
+        <span class="sp-tile-label">Dining · Beaches</span>
+        <span class="sp-tile-title">Travel Guides</span>
+        <span class="sp-tile-hint">MICHELIN · Day trips</span>
+      </a>
+
+      <!-- Tile 5: Book Now (affiliate CTA) -->
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-sp-strip&dest_id=-3714993&dest_type=city&checkin=&checkout="
+         class="sp-tile sp-tile-book affiliate-link"
+         target="_blank" rel="nofollow noopener sponsored"
+         aria-label="Search live hotel availability in Da Nang on Booking.com">
+        <span class="sp-tile-icon" aria-hidden="true">✦</span>
+        <span class="sp-tile-label">Free cancellation</span>
+        <span class="sp-tile-title">Check Availability</span>
+        <span class="sp-tile-hint">Live rates · No fees</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+
 
 <!-- S2: INTRO (SEO content, visually restructured) -->
 <section class="section intro-section" aria-labelledby="intro-heading">
