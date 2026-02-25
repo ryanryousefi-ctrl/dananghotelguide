@@ -481,6 +481,2210 @@ a{text-decoration:none;color:inherit}
   .footer-legal{flex-direction:column;align-items:flex-start}
 }
 
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
 </style>
 </head>
 <body>
@@ -563,183 +2767,213 @@ a{text-decoration:none;color:inherit}
   <ol><li><span aria-current="page">Home</span></li><li><a href="hotels.html">Hotels</a></li><li><span aria-current="page">Family Hotels</span></li></ol>
 </nav>
 <header class="page-hero">
+  <img class="page-hero-img" src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1920&h=900&fit=crop&auto=format&q=75" alt="Family resort in Da Nang with children's pool and calm beach" loading="eager" width="1920" height="900">
+  <div class="page-hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">👨‍👩‍👧‍👦 Family Travel Guide · Updated February 2026</div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">👨‍👩‍👧‍👦 Family Travel Guide &nbsp;·&nbsp; Updated February 2026</div>
       <h1>Family Hotels in <em>Da Nang</em></h1>
-      <p class="hero-sub">Da Nang is a genuinely good family destination — calm beaches, safe streets, and resort infrastructure built for multi-generational groups. Here are the properties that actually deliver on the family promise.</p>
-      <ul class="hero-checklist">
-        <li>Dedicated kids' clubs with qualified supervision</li>
-        <li>Shallow pool sections for young children</li>
-        <li>Connecting room configurations available</li>
-        <li>Beach calm and safe March–August</li>
-        <li>30 min to Hoi An, 20 min to Marble Mountains</li>
-      </ul>
+      <p class="hero-sub">Da Nang is a genuinely good family destination — calm beaches, safe streets, and resort infrastructure built for multi-generational groups. The hotels below deliver on that promise with proper kids' programmes, multiple pools, and family-room configurations that actually work.</p>
+      <div class="hero-meta">
+        <span><strong>4</strong> family hotels reviewed</span>
+        <span>From <strong>$120</strong>/night</span>
+        <span>Kids' programmes included</span>
+        <span>✓ Calm surf at Non Nuoc</span>
+      </div>
     </div>
-    <div class="family-aside" aria-hidden="true">
-      <div class="fa-title">What to look for in family hotels</div>
-      <ul style="list-style:none">
-        <li class="fa-item"><span>🏊</span> Multiple pools with shallow sections</li>
-        <li class="fa-item"><span>🎯</span> Structured kids' programme (ages 4–12)</li>
-        <li class="fa-item"><span>🛏️</span> Confirmed connecting rooms at booking</li>
-        <li class="fa-item"><span>🏖️</span> Direct, calm beach access</li>
-        <li class="fa-item"><span>🍽️</span> Multiple dining options on-site</li>
-      </ul>
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="fa-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse family resorts →</a>
+    <div class="hero-card">
+      <div class="hero-card-title">Family guide at a glance</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">Family resorts</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">$120</div><div class="hero-stat-label">Lowest family rate</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">Calm</div><div class="hero-stat-label">Non Nuoc surf</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">30min</div><div class="hero-stat-label">To Hoi An</div></div>
+      </div>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-hero&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hero-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse family hotels →</a>
     </div>
   </div>
 </header>
+
+<!-- ── MAIN CONTENT ── -->
 <div class="page-wrap">
-<article class="article">
-  <nav class="toc-box" aria-label="Table of contents">
-    <div class="toc-label">In this guide</div>
-    <ul class="toc-list">
-      <li><a href="#intro">Why Da Nang works for families</a></li>
-      <li><a href="#top-picks">Top family hotel picks</a></li>
-      <li><a href="#checklist">What to look for before you book</a></li>
-      <li><a href="#areas">Best areas for families</a></li>
-      <li><a href="#faq">Frequently asked questions</a></li>
-    </ul>
-  </nav>
-  <section id="intro" class="intro-block" aria-labelledby="intro-h">
-    <h2 class="section-h2" id="intro-h">Why Da Nang <em>works for families</em></h2>
-    <div class="prose">
-      <p>Da Nang doesn't require the same tolerances that family travel in, say, Bangkok or Ho Chi Minh City demands. The city is small by Vietnamese standards, easy to navigate, clean, and genuinely safe. The beach is wide and calm during the main travel months — March through August — with lifeguards at most sections of My Khe. And the hotel infrastructure here has been shaped significantly by domestic Vietnamese family tourism, which means kids' clubs, waterslide parks, and connecting-room configurations are standard at any serious resort property, not a premium add-on.</p>
-      <p>The resort landscape is concentrated in two zones. Non Nuoc Beach, 15 kilometres south of the city, has the largest resort compounds — the Hyatt Regency's six-hectare layout and similar properties — designed explicitly for self-contained family stays. My Khe Beach offers a broader hotel range and better city access, with family-focused properties clustered at the quieter southern end of the strip. Son Tra Peninsula has the most dramatic natural setting but is better suited to couples than families with young children.</p>
-      <p>Day-trip options are good: the Marble Mountains are 5 minutes from Non Nuoc hotels, Ba Na Hills is a 45-minute transfer, and Hoi An is 30–40 minutes south depending on your starting point. For detailed neighbourhood guidance, see the <a href="where-to-stay-in-da-nang.html">Da Nang area guide</a>.</p>
-    </div>
-  </section>
-  <section id="top-picks" aria-labelledby="picks-h">
-    <h2 class="section-label" id="picks-h">Top <em>Family Hotel</em> Picks</h2>
-    <p class="section-desc">Ranked by overall family suitability — kids' programme quality, pool configuration, beach access, and room flexibility.</p>
-    <div class="hotel-card">
-      <div class="hotel-img-wrap">
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=280&fit=crop&auto=format" alt="Hyatt Regency Da Nang Non Nuoc family resort pools" loading="eager" width="800" height="200">
-      </div>
-      <div class="hotel-body">
-        <div class="hb-top">
-          <div><span class="hotel-badge b-fam">🥇 Top Family Pick</span><div class="hotel-name">Hyatt Regency Da Nang Resort &amp; Spa</div><div class="hotel-loc">Non Nuoc Beach · 6-hectare compound · 35 min to Hoi An</div></div>
-          <div class="hb-price-box"><div class="hb-price-from">From</div><div class="hb-price-num">$155</div><div class="hb-price-night">/night</div></div>
-        </div>
-        <p class="hotel-desc">The most substantive family resort in Da Nang, full stop. Four pools terrace down to a wide, calm beach section — including a dedicated children's pool with maximum depth of 60cm and a supervised shallow play area. The Camp Hyatt kids' club accepts ages 3–12, runs structured daily programmes (cooking, arts, beach activities), and operates until 9pm — a meaningful difference from resorts that close their programmes at 5pm. Family suites include dedicated bunk rooms for children while parents get a separate sleeping space, and connecting rooms can be requested and confirmed at the time of booking rather than "subject to availability on arrival." The beach at Non Nuoc is the strongest practical argument for this property: wider, less trafficked, and safer for young swimmers than the busier My Khe central strip.</p>
-        <div class="family-features"><span class="ff-tag">Kids' club ages 3–12</span><span class="ff-tag">4 pools incl. children's section</span><span class="ff-tag">Beach lifeguards</span><span class="ff-tag">Family suite configuration</span><span class="ff-tag">Evening programme until 9pm</span><span class="ff-tag">Waterslide</span><span class="ff-tag">Marble Mountains 10 min</span></div>
-        <div class="hb-footer"><div class="hb-verdict">Best all-round family resort in Da Nang. Non Nuoc's quieter beach is the decisive advantage.</div><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hb-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a></div>
-      </div>
-    </div>
-    <div class="hotel-card">
-      <div class="hotel-img-wrap">
-        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=240&fit=crop&auto=format" alt="Sunrise Premium Resort pool and slides" loading="lazy" width="800" height="200">
-      </div>
-      <div class="hotel-body">
-        <div class="hb-top">
-          <div><span class="hotel-badge b-resort">Resort</span><div class="hotel-name">Sunrise Premium Resort Da Nang</div><div class="hotel-loc">Son Tra Peninsula · quieter coastal setting · 20 min from city</div></div>
-          <div class="hb-price-box"><div class="hb-price-from">From</div><div class="hb-price-num">$130</div><div class="hb-price-night">/night</div></div>
-        </div>
-        <p class="hotel-desc">The Sunrise runs a proper waterslide park — four slides, a lazy river section, and a dedicated splash zone for under-5s — which makes it the most immediately appealing option for families with children aged 5–12. The beach here is calmer and less vendor-populated than My Khe's central strip. Complimentary transfers to Da Nang city centre are available for guests staying three nights or more, which addresses the one practical limitation of Son Tra-based properties. Connecting room categories are available; book directly to secure specific configurations.</p>
-        <div class="family-features"><span class="ff-tag">Waterslide park</span><span class="ff-tag">Lazy river</span><span class="ff-tag">Splash zone under-5s</span><span class="ff-tag">Kids' club</span><span class="ff-tag">Private beach</span><span class="ff-tag">City transfers incl. (3+ nights)</span></div>
-        <div class="hb-footer"><div class="hb-verdict">Best for families with kids aged 5–12 who want a resort with genuine water-park energy.</div><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hb-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a></div>
-      </div>
-    </div>
-    <div class="hotel-card">
-      <div class="hotel-img-wrap">
-        <img src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=800&h=240&fit=crop&auto=format" alt="Platinum Retreat Non Nuoc lagoon pool villas for families" loading="lazy" width="800" height="200">
-      </div>
-      <div class="hotel-body">
-        <div class="hb-top">
-          <div><span class="hotel-badge b-resort">Lagoon Resort</span><div class="hotel-name">Platinum Retreat Non Nuoc</div><div class="hotel-loc">Non Nuoc Beach · lagoon-pool villas · 5 min to Marble Mountains</div></div>
-          <div class="hb-price-box"><div class="hb-price-from">From</div><div class="hb-price-num">$135</div><div class="hb-price-night">/night</div></div>
-        </div>
-        <p class="hotel-desc">The lagoon-pool layout here works especially well for families with toddlers and young children: every villa opens directly onto the shared water, which eliminates the standard resort logistics of crossing paths and car parks to reach the pool. The water depth varies across the lagoon, with a reliably shallow section adjoining the family villa cluster. Evening cultural programming — lantern lighting, Vietnamese traditional music — creates memorable moments for children without the forced theming that makes similar activities at other resorts feel awkward.</p>
-        <div class="family-features"><span class="ff-tag">Lagoon-access villas</span><span class="ff-tag">Shallow pool section</span><span class="ff-tag">Evening cultural programme</span><span class="ff-tag">Marble Mountains walking distance</span><span class="ff-tag">Hoi An 35 min</span></div>
-        <div class="hb-footer"><div class="hb-verdict">Best for families with toddlers and pre-schoolers. The lagoon layout removes most resort logistics.</div><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hb-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a></div>
-      </div>
-    </div>
-    <div class="hotel-card">
-      <div class="hotel-img-wrap">
-        <img src="https://images.unsplash.com/photo-1501117716987-c8c394bb29df?w=800&h=200&fit=crop&auto=format" alt="Sheraton Grand Danang Resort family beachfront" loading="lazy" width="800" height="180">
-      </div>
-      <div class="hotel-body">
-        <div class="hb-top">
-          <div><span class="hotel-badge b-mid">City-Connected</span><div class="hotel-name">Sheraton Grand Danang Resort</div><div class="hotel-loc">My Khe Beach · central · 10 min to city by Grab</div></div>
-          <div class="hb-price-box"><div class="hb-price-from">From</div><div class="hb-price-num">$180</div><div class="hb-price-night">/night</div></div>
-        </div>
-        <p class="hotel-desc">The best option for families who want resort quality alongside genuine city access. The Sheraton's three pools, direct beach access, and children's pool section are competitive; the real advantage over Non Nuoc properties is the 10-minute Grab to the Han River dining and activity scene. Older children and teenagers who find resort-only days restrictive will appreciate the walkable access to the An Thuong neighbourhood. Large family rooms and suite configurations available — confirm connecting rooms at booking.</p>
-        <div class="family-features"><span class="ff-tag">3 pools</span><span class="ff-tag">Children's pool</span><span class="ff-tag">Direct beach access</span><span class="ff-tag">10 min to city dining</span><span class="ff-tag">Family suites</span></div>
-        <div class="hb-footer"><div class="hb-verdict">Best for families with older children or teenagers who want city access alongside beach and pool.</div><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hb-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a></div>
-      </div>
-    </div>
-  </section>
-  <section id="checklist" aria-labelledby="cl-h">
-    <h2 class="section-label" id="cl-h">What to check <em>before booking</em></h2>
-    <p class="section-desc">Family hotel marketing is frequently aspirational. These are the questions worth asking directly before committing to a booking.</p>
-    <div class="checklist-box">
-      <div class="cl-title">Pre-booking family hotel checklist</div>
-      <ul class="cl-list">
-        <li>Kids' club age range and maximum ratios</li>
-        <li>Connecting room confirmed in writing at booking</li>
-        <li>Shallow pool depth and dedicated children's section</li>
-        <li>Kids' club operating hours (especially evenings)</li>
-        <li>Beach lifeguard coverage and flag system</li>
-        <li>Cot/crib availability (and charge)</li>
-        <li>Children's menu at on-site restaurants</li>
-        <li>Transfer logistics if hotel is remote (Son Tra etc.)</li>
+  <article class="article">
+
+    <nav class="toc-box" aria-label="Table of contents">
+      <div class="toc-label">In this guide</div>
+      <ul class="toc-list">
+        <li><a href="#intro">Why Da Nang works for families</a></li>
+        <li><a href="#top-picks">Top family hotel picks</a></li>
+        <li><a href="#beach-zone">Which beach zone for families?</a></li>
+        <li><a href="#checklist">Family hotel checklist</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
+    </nav>
+
+    <section id="intro" aria-labelledby="intro-h">
+      <span class="section-label">Overview</span>
+      <h2 class="section-heading" id="intro-h">Why Da Nang <em>Works for Families</em></h2>
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=1200&h=420&fit=crop&auto=format&q=80" alt="Children playing on Da Nang beach with calm water and family resort in background" loading="lazy" width="1200" height="420">
+        <p class="img-caption">Da Nang's Non Nuoc Beach has calmer surf than the main My Khe strip — better for families with young children</p>
+      </div>
+      <div class="prose">
+        <p>Da Nang is underrated as a family destination — particularly by travellers who associate Vietnam with busy cities and unstructured beach towns. The reality is different. Da Nang has some of the safest and cleanest streets in Vietnam, a beach infrastructure specifically developed for domestic Vietnamese family tourism, and resort properties that rival family-focused resorts in Thailand for facilities and programmes.</p>
+        <p>Non Nuoc Beach, 15 minutes south of the city, is measurably calmer than the main My Khe strip due to its slightly more sheltered coastal position. The Hyatt Regency and Platinum Retreat — both on Non Nuoc — are among the best family resort options in Central Vietnam at their respective price points. Marble Mountains (geological formations with cave temples inside) are a 5-minute drive, and Hoi An's Ancient Town — one of Southeast Asia's most photogenic UNESCO sites — is 35 minutes south.</p>
+        <p>The practical case is also strong: Da Nang Airport has direct flights from multiple Asian hubs, the food scene has genuine options for children, and the Grab (ride-sharing) infrastructure is reliable and cheap for getting around. See the <a href="best-hotels-in-da-nang.html">Da Nang hotel guide</a> for all budget categories.</p>
+      </div>
+    </section>
+
+    <section id="top-picks" aria-labelledby="picks-h">
+      <span class="section-label">Hotel Reviews</span>
+      <h2 class="section-heading" id="picks-h">Top <em>Family Hotel</em> Picks</h2>
+
+      <div class="hotel-stack">
+        <article class="hotel-card">
+          <img class="hotel-card-img" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=440&h=340&fit=crop&auto=format" alt="Hyatt Regency Da Nang family resort pools and beach Non Nuoc" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge b-fam">Top Family Pick</span>
+              <div class="hotel-name">Hyatt Regency Da Nang Resort &amp; Spa</div>
+              <div class="hotel-loc">📍 Non Nuoc Beach · 6-hectare compound · 35 min to Hoi An</div>
+              <p class="hotel-desc">The most substantive family resort in Da Nang. Four pools terrace down to a wide, calm beach section — including a dedicated children's pool with a maximum depth of 60cm and a supervised shallow area for under-5s. Kids' Club runs daily from 9am to 6pm with structured activities. Family suites have proper adjoining room configurations. The six-hectare scale means children have room to move without the parents losing them.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price">From <strong>$155</strong>/night</div>
+              <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-hyatt&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img" src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=440&h=340&fit=crop&auto=format" alt="Sunrise Premium Resort Da Nang waterslide park and family pool" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge b-fam">Family</span>
+              <div class="hotel-name">Sunrise Premium Resort Da Nang</div>
+              <div class="hotel-loc">📍 Son Tra Peninsula · quieter coastal setting · 20 min from city</div>
+              <p class="hotel-desc">The Sunrise runs a proper waterslide park — four slides, a lazy river section, and a dedicated splash zone for under-5s — which makes it the most immediately appealing option for families with children who respond to visual excitement. Daily activity programmes, a dedicated kids' beach section with shallower water, and family suites with connecting rooms that actually connect. The 20-minute drive from the city is the trade-off; most families find they rarely need to leave.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price">From <strong>$120</strong>/night</div>
+              <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-sunrise&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img" src="https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=440&h=340&fit=crop&auto=format" alt="Platinum Retreat Non Nuoc lagoon pool villas family resort" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge b-fam">Family</span>
+              <div class="hotel-name">Platinum Retreat Non Nuoc</div>
+              <div class="hotel-loc">📍 Non Nuoc Beach · lagoon-pool villas · 5 min to Marble Mountains</div>
+              <p class="hotel-desc">The lagoon-pool layout works especially well for families with toddlers and young children: every villa opens directly onto shared water, which eliminates standard resort logistics. The evening lantern-lighting ceremony and nightly traditional music are the kinds of touches that make a holiday memorable for children without being gratingly themed. Marble Mountains are a 5-minute drive; Hoi An is 40 minutes south.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price">From <strong>$135</strong>/night</div>
+              <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-platinum&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=440&h=340&fit=crop&auto=format" alt="Sheraton Grand Danang family beach resort pool and beach access" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge b-mid">City Access</span>
+              <div class="hotel-name">Sheraton Grand Danang Resort</div>
+              <div class="hotel-loc">📍 My Khe Beach · central · 10 min to city by Grab</div>
+              <p class="hotel-desc">Best for families who want resort quality alongside genuine city access. Three pools, direct beach access, and a children's pool section are competitive; the real advantage over the Non Nuoc resorts is the 10-minute Grab to the city's restaurants and attractions. Worth considering if your family wants to combine beach time with actual exploration of Da Nang — the Sheraton is the most accessible five-star for doing both.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price">From <strong>$180</strong>/night</div>
+              <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-sheraton&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="beach-zone" aria-labelledby="bz-h">
+      <span class="section-label">Beach Decision</span>
+      <h2 class="section-heading" id="bz-h">Which Beach Zone for <em>Families</em>?</h2>
+      <p class="section-intro">The choice between My Khe and Non Nuoc matters more for families than for most other traveller types. Here's the honest comparison.</p>
+      <div class="area-grid">
+        <div class="area-card">
+          <div class="area-card-name">Non Nuoc Beach</div>
+          <div class="area-tag">Recommended for families</div>
+          <p class="area-desc"><strong>Calmer surf</strong> than My Khe. Wider beach with fewer vendors. The Hyatt Regency, Sunrise, and Platinum Retreat are all here. Marble Mountains are a 5-min drive — a genuine half-day activity for older children. Hoi An is 35–40 minutes south. The trade-off: you need a car or Grab for city restaurant access.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-name">My Khe Beach</div>
+          <div class="area-tag">Best for city access</div>
+          <p class="area-desc">The Sheraton Grand is the best family option here. <strong>More active surf</strong> than Non Nuoc — fine for older children and adults, less ideal for under-5s. The major advantage: the city's dining and attractions are 10 minutes away by Grab. Good choice for families who want beach mornings and city exploring in the evenings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" aria-labelledby="cl-h">
+      <span class="section-label">Planning Guide</span>
+      <h2 class="section-heading" id="cl-h">Family Hotel <em>Checklist</em></h2>
+      <div class="prose">
+        <p>When booking a family hotel in Da Nang, the following criteria distinguish a genuinely family-ready property from one that merely tolerates children:</p>
+      </div>
+      <div class="checklist-box">
+        <div class="cl-title">What to look for</div>
+        <ul class="cl-list">
+          <li>Dedicated children's pool with controlled depth (not just a cordoned section of the main pool)</li>
+          <li>Kids' Club with structured daily programme — not just a room with toys</li>
+          <li>Family room configurations with adjoining rooms that connect through a shared door, not just adjacent rooms</li>
+          <li>Direct beach access, not a beach club 2–3 blocks away</li>
+          <li>On-site restaurant with children's menu or willingness to accommodate dietary restrictions</li>
+          <li>Shallow beach section or lagoon-style water access appropriate for non-swimmers</li>
+        </ul>
+      </div>
+      <div class="callout">
+        <div class="callout-label">👨‍👩‍👧 Korean families</div>
+        <p>Da Nang is one of Korea's most popular short-haul family destinations. Direct flights from Seoul, Busan, and Daegu run year-round. Korean-language menus are common in the An Thuong restaurant strip, and several hotels have Korean-speaking concierge staff. The Hyatt Regency at Non Nuoc is particularly popular with Korean family groups due to its scale and facilities.</p>
+      </div>
+    </section>
+
+    <div class="cta-block">
+      <h3>Find family hotels for <em>your dates</em></h3>
+      <p class="cta-block-text">Live availability across all Da Nang family-friendly properties.</p>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-cta&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="cta-block-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse family hotels →</a>
     </div>
-    <div class="callout"><div class="callout-label">Booking tip</div><p>Confirm connecting rooms in writing rather than trusting the website description. At peak occupancy (July–August), many properties will say connecting rooms "may be arranged" rather than guaranteeing them. Booking directly with the hotel and getting written confirmation of a specific configuration is worth the small extra effort. For broader trip planning, the <a href="best-hotels-in-da-nang.html">full Da Nang hotel guide</a> covers all property types and budgets.</p></div>
-  </section>
-  <section id="areas" aria-labelledby="areas-h">
-    <h2 class="section-label" id="areas-h">Best areas for <em>family stays</em></h2>
-    <div class="prose">
-      <p><strong>Non Nuoc Beach</strong> is the strongest area for families overall — quieter, wider beach, larger resort compounds, and the Marble Mountains within reach. The trade-off is 20 minutes to the city centre, which matters less for families who are content with on-site dining and activities.</p>
-      <p><strong>My Khe Beach</strong> is better for families with older children or teenagers who want access to the city's restaurant scene, independent cafés, and evening activities. The central My Khe strip is busier than Non Nuoc in peak season, but beach conditions are still good and the hotel range is wider.</p>
-      <p><strong>Son Tra Peninsula</strong> is the most scenic setting but less practical for families — limited walkability, no independent restaurant options nearby, and the absence of a waterpark-style resort. The Sunrise Premium Resort addresses some of these gaps with its water facilities and free transfers, but it's still a more isolated choice than the beach-strip alternatives.</p>
-      <p>For a complete area-by-area breakdown including transport times and dining access, see the <a href="where-to-stay-in-da-nang.html">where to stay in Da Nang guide</a>.</p>
-    </div>
-  </section>
-  <div class="cta-block">
-    <h3>Find the right <em>family hotel</em></h3>
-    <p>110+ Da Nang hotels with live availability and confirmed family room configurations.</p>
-    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse family hotels →</a>
-  </div>
-  <section id="faq" class="faq-section" aria-labelledby="faq-h">
-    <h2 class="faq-h2" id="faq-h">Frequently asked questions</h2>
-    <div class="faq-item"><details><summary>Is Da Nang good for families with young children?</summary><div class="faq-answer">Yes — Da Nang is one of Southeast Asia's most practical family destinations. The beach is safe and calm from March through August, the city is clean and easy to navigate, and resort infrastructure here has been shaped significantly by domestic Vietnamese family tourism. The main considerations are the monsoon season (September–November, when beach swimming is inadvisable) and Tet week (late January/early February) when domestic tourism causes significant price and availability pressure.</div></details></div>
-    <div class="faq-item"><details><summary>Which is the best family resort in Da Nang?</summary><div class="faq-answer">The Hyatt Regency Da Nang on Non Nuoc Beach is consistently the strongest family resort. Its six-hectare compound, four pools, Camp Hyatt kids' club, and the quieter Non Nuoc beach environment make it the most complete package. The Sunrise Premium Resort on Son Tra Peninsula is a strong alternative if waterslide facilities are a priority for your children. Both start from $130–$155/night. See our <a href="best-hotels-in-da-nang.html">full hotel guide</a> for all family-friendly options.</div></details></div>
-    <div class="faq-item"><details><summary>What age range do Da Nang kids' clubs cover?</summary><div class="faq-answer">Most resort kids' clubs in Da Nang cover ages 4–12, with supervised programmes running daily from approximately 9am to 5pm — some properties extend to 9pm. The Hyatt Regency's Camp Hyatt starts at age 3. Infant care for children under 3 is available at some properties at additional cost. Confirm specific ages and operating hours directly before booking.</div></details></div>
-    <div class="faq-item"><details><summary>Are there connecting rooms in Da Nang hotels?</summary><div class="faq-answer">Yes — most four and five-star family-focused hotels offer connecting room configurations. The key is to confirm in writing at time of booking, particularly during peak season (July–August) when occupancy is high. Book directly with the hotel rather than through a third party if a specific connecting configuration is essential — it gives you more leverage to get a written guarantee.</div></details></div>
-  </section>
-  <aside style="background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--radius-lg);padding:1.3rem 1.5rem;margin-top:2rem;">
-    <p style="font-size:.77rem;color:var(--ink-muted);line-height:1.7;margin:0;"><strong style="color:var(--ink);">Editorial note:</strong> Family hotel picks are assessed on verified kids' club availability, pool configurations, beach safety, and current guest scores. Properties are updated quarterly. For all Da Nang hotels, see the <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family&dest_id=-3714993&dest_type=city&checkin=&checkout=" style="color:var(--ocean);font-weight:600;" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">full hotel listings</a>.</p>
-  </aside>
-</article>
-<aside class="sidebar" aria-label="Supplementary content">
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">About this guide</div>
+
+    <section id="faq" class="faq-section" aria-labelledby="faq-h">
+      <span class="section-label">FAQ</span>
+      <h2 class="faq-h2" id="faq-h">Family Travel <em>FAQs</em></h2>
+      <div class="faq-item"><details><summary>Is Da Nang safe for families with young children?</summary><div class="faq-answer">Yes — Da Nang is consistently rated among the safest cities in Vietnam. Street crime is rare, traffic is more orderly than Hanoi or Ho Chi Minh City, and the beach areas are well-lit and actively managed. The main practical concern for families is beach surf conditions during July–August peak season, when My Khe can have strong waves. Non Nuoc Beach is calmer and better suited to young children year-round.</div></details></div>
+      <div class="faq-item"><details><summary>Which Da Nang hotel has the best kids' pool?</summary><div class="faq-answer">The Hyatt Regency Da Nang has the most comprehensive children's aquatic setup: a dedicated kids' pool with a 60cm maximum depth, a supervised shallow beach section, and four terraced pools ranging from lap-pool to leisure pool. The Sunrise Premium Resort has a more exciting waterslide park setup (four slides, lazy river) which is better for children aged 6–12. Platinum Retreat's lagoon-pool layout is best for toddlers.</div></details></div>
+      <div class="faq-item"><details><summary>What is the best age group for a Da Nang family holiday?</summary><div class="faq-answer">Da Nang works well across age groups, but it's particularly good for families with children aged 5–14. The waterslide parks, beach activities, Marble Mountains, and Ba Na Hills cable car are all engaging for this age range. Toddlers and under-5s are well-served at the Platinum Retreat's lagoon-pool villas and the Hyatt Regency's shallow beach sections. Teenagers tend to find Da Nang engaging — the city has enough activity variety beyond resort-sitting.</div></details></div>
+      <div class="faq-item"><details><summary>Is Hoi An easy to visit from Da Nang with children?</summary><div class="faq-answer">Yes — and it's one of the best day trips in Southeast Asia for families. Hoi An is 35–40 minutes south by car or Grab from the Non Nuoc hotels, and the Ancient Town is walkable, UNESCO-listed, and genuinely photogenic. The lantern-lit streets are particularly memorable at dusk. Book a tailor (Hoi An is famous for fast, inexpensive custom clothing) and allow 4–6 hours minimum. The My Son Sanctuary (Cham ruins) is a worthwhile half-day trip for older children interested in history.</div></details></div>
+    </section>
+
+  </article>
+
+    <!-- ── SIDEBAR ── -->
+  <aside class="sidebar" aria-label="Supplementary content">
     <div class="author-mini">
-      <div class="author-avatar" aria-hidden="true">TW</div>
-      <div><div class="author-name">Tom Whitfield</div><div class="author-role">SE Asia Hotel Editor · Da Nang Hotel Guide</div><div class="author-note">Based in Da Nang since 2021. Family hotel assessments incorporate feedback from guests with children of various ages. Last updated: Feb 2026.</div></div>
+      <div class="av">TW</div>
+      <div>
+        <div class="avname">Tom Whitfield</div>
+        <div class="avrole">SE Asia Hotel Editor</div>
+        <div class="avnote">Based in Da Nang since 2021. Last visited: February 2026.</div>
+      </div>
     </div>
-  </div>
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">Family travel facts</div>
-    <div class="quick-row"><span class="quick-label">Best beach season</span><span class="quick-val">Mar – Aug</span></div>
-    <div class="quick-row"><span class="quick-label">Family hotels from</span><span class="quick-val">$130/night</span></div>
-    <div class="quick-row"><span class="quick-label">Kids' clubs from age</span><span class="quick-val">3 years</span></div>
-    <div class="quick-row"><span class="quick-label">Marble Mountains</span><span class="quick-val">5 min (Non Nuoc)</span></div>
-    <div class="quick-row"><span class="quick-label">Hoi An distance</span><span class="quick-val">30–40 min</span></div>
-  </div>
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">Related guides</div>
-    <ul class="sidebar-links">
-      <li><a href="best-hotels-in-da-nang.html">Best hotels in Da Nang</a></li>
-      <li><a href="da-nang-beach-hotels.html">Beach hotels</a></li>
-      <li><a href="where-to-stay-in-da-nang.html">Where to stay guide</a></li>
-      <li><a href="luxury-hotels-da-nang.html">Luxury hotels</a></li>
-      <li><a href="guides.html">Da Nang travel guides</a></li>
-    </ul>
-  </div>
-</aside>
-</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Quick facts</div>
+      <div class="sidebar-quick"><div class="quick-item"><span class="quick-label">Family hotels</span><span class="quick-val">4 reviewed</span></div><div class="quick-item"><span class="quick-label">Lowest rate</span><span class="quick-val">$120/night</span></div><div class="quick-item"><span class="quick-label">Best for families</span><span class="quick-val">Non Nuoc</span></div><div class="quick-item"><span class="quick-label">Calmer surf</span><span class="quick-val">Non Nuoc Beach</span></div><div class="quick-item"><span class="quick-label">To Hoi An</span><span class="quick-val">35 min</span></div><div class="quick-item"><span class="quick-label">Airport</span><span class="quick-val">DAD — 3km</span></div><div class="quick-item"><span class="quick-label">Marble Mtns</span><span class="quick-val">5 min from resort</span></div></div>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-family-sidebar&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="sidebar-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse hotels →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Related guides</div>
+      <ul class="sidebar-links"><li><a href="best-hotels-in-da-nang.html">Best hotels Da Nang</a></li><li><a href="da-nang-beach-hotels.html">Beach hotels</a></li><li><a href="luxury-hotels-da-nang.html">Luxury hotels</a></li><li><a href="where-to-stay-in-da-nang.html">Where to stay</a></li><li><a href="best-time-to-visit-da-nang.html">Best time to visit</a></li></ul>
+    </div>
+  </aside>
+
+</div><!-- /page-wrap -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">

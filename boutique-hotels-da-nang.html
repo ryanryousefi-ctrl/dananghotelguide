@@ -481,6 +481,1659 @@ a{text-decoration:none;color:inherit}
   .footer-legal{flex-direction:column;align-items:flex-start}
 }
 
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   GUIDE PAGE CSS — shared across all article pages
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:420px;display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.25;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.6) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:.9rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.4rem,5.5vw,3.8rem);
+  color:#fff;line-height:1.07;letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);color:rgba(255,255,255,.58);
+  max-width:520px;line-height:1.78;margin-bottom:1.4rem;
+}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero chips (neighbourhood nav) */
+.hero-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
+.hero-chip,.hchip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:100px;padding:5px 13px;
+  transition:background .18s,color .18s;text-decoration:none;
+}
+.hero-chip:hover,.hchip:hover{background:rgba(255,255,255,.15);color:#fff}
+/* hero stats card */
+.hero-card,.hero-aside{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row,.hero-stats{
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat{min-width:0}
+.hero-stat-num,.stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label,.stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+/* seasonal bar (weather hero) */
+.hero-seasonal-bar,.hero-stripe,.hero-dots{
+  position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(to right,
+    var(--ink-muted) 0%,var(--ink-muted) 8%,
+    #5a9e6f 8%,#5a9e6f 42%,
+    var(--coral) 42%,var(--coral) 67%,
+    #4a80b8 67%,#4a80b8 92%,
+    var(--ink-muted) 92%);
+  opacity:.6;z-index:3;
+}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+}
+.article,.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title,.toc-label{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+.toc-month-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem;
+}
+.toc-month-btn{
+  display:flex;align-items:center;justify-content:center;
+  padding:7px 4px;font-size:.78rem;font-weight:700;
+  border-radius:var(--r-sm);color:var(--ocean);
+  background:var(--ocean-pale);transition:background .15s,color .15s;
+  text-decoration:none;
+}
+.toc-month-btn:hover{background:var(--ocean);color:#fff}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article > section,.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article > section:last-of-type,.article-body > section:last-of-type{border-bottom:none}
+.section-intro,.section-desc,.intro-block{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.82;margin-bottom:1.8rem;
+}
+.section-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;line-height:1.15;margin-bottom:.7rem;
+}
+.section-h2 em{font-style:italic;color:var(--ocean)}
+/* alias */
+.faq-h2{
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.4rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+}
+.section-img-wrap img{
+  width:100%;height:300px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.5rem .8rem;text-align:right;font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+.prose{margin-bottom:1.8rem}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack,.hotel-list{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card,.hotel-card-lg{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover,.hotel-card-lg:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img,.hotel-card-img-wrap img{
+  width:220px;height:100%;min-height:195px;object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body,.hcard-body{
+  padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-section{margin-bottom:2rem}
+/* hotel row (alternate layout) */
+.hotel-row{
+  display:grid;grid-template-columns:180px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;
+  margin-bottom:1rem;
+}
+.hotel-row:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hotel-row-img{width:180px;height:100%;min-height:170px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.hotel-row:hover .hotel-row-img{transform:scale(1.04)}
+.hotel-row-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between}
+/* boutique card */
+.boutique-card{
+  display:grid;grid-template-columns:240px 1fr;
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .22s;margin-bottom:1rem;
+}
+.boutique-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.boutique-card-img{width:240px;height:100%;min-height:200px;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.boutique-card:hover .boutique-card-img{transform:scale(1.04)}
+.boutique-card-body{padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between}
+.boutique-details{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:.5rem}
+.boutique-detail{font-size:.75rem;color:var(--ink-muted)}
+.boutique-detail strong{color:var(--ink);font-weight:700}
+/* beach card */
+.beach-card,.beach-section{
+  background:var(--white);border-radius:var(--r-xl);overflow:hidden;
+  border:1px solid var(--sand-dark);margin-bottom:1.5rem;
+  transition:box-shadow .2s;
+}
+.beach-card:hover{box-shadow:var(--shadow-hover)}
+.beach-section-header,.bsh-b{
+  padding:1.2rem 1.5rem;background:var(--ocean-deep);
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+.bsh-title{font-family:var(--font-serif);font-size:1.2rem;color:#fff;letter-spacing:-.02em}
+.bsh-tag,.bsh-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:600}
+.beach-body,.bc-item{padding:1.2rem 1.5rem}
+
+/* hotel badge labels */
+.hotel-badge,.hbadge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;
+  border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach,.b-bch{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury,.b-lux,.b-ultra,.b-five{background:#fdf5e0;color:#7a5800}
+.badge-boutique,.b-bou{background:#f5f0e8;color:#6b4c2a}
+.badge-family,.b-fam{background:#eef7ee;color:#2a6e2a}
+.badge-value,.b-value,.b-budget{background:#fff3f1;color:#a83a25}
+.badge-mid,.b-mid,.b-four,.b-res{background:var(--ocean-pale);color:var(--ocean)}
+.feat-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:var(--sand-dark);color:var(--ink-muted);margin-bottom:.5rem}
+/* hotel name/meta */
+.hotel-name,.boutique-name,.hname{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-name a,.boutique-name a,.hname a{color:inherit;border:none}
+.hotel-loc,.boutique-loc,.hloc{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;
+}
+.hotel-rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--ocean);
+  color:#fff;font-size:.78rem;font-weight:700;flex-shrink:0;margin-right:8px;
+}
+.hotel-features,.hotel-feature-list{
+  display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0;
+}
+.hotel-features span,.hotel-feature{
+  font-size:.68rem;font-weight:600;color:var(--ocean);
+  background:var(--ocean-pale);padding:2px 8px;border-radius:100px;
+}
+.hotel-desc,.boutique-desc,.hdesc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer,.hfoot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price,.hprice,.boutique-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong,.hprice strong,.boutique-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;font-family:var(--font-serif);
+}
+.hotel-book-btn,.hotel-btn,.boutique-btn,.hbtn,.hc-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover,.hc-btn:hover{
+  background:var(--ocean-light);transform:translateY(-1px)
+}
+/* hc- (hotel card alternate naming) */
+.hc-top{flex:1}
+.hc-verdict,.hotel-verdict{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-top:.5rem;line-height:1.6}
+.hc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--sand-dark);margin-top:1rem;gap:.5rem;flex-wrap:wrap}
+.hc-price-box{display:flex;align-items:baseline;gap:4px}
+.hc-price-from{font-size:.72rem;color:var(--ink-muted)}
+.hc-price-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700}
+.hc-price-night{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral)}
+.callout-coral .callout-label{color:var(--coral)}
+/* checklist */
+.checklist-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.3rem 1.5rem;margin:1.5rem 0;
+}
+.cl-title{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem}
+.cl-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.cl-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.87rem;color:var(--ink-soft);line-height:1.65}
+.cl-list li::before{content:'✓';color:var(--ocean);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.6rem 0}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);
+  padding:1.3rem 1.5rem;transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name,.carea{
+  font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+.area-cta{margin-top:.8rem}
+.area-cta-link{color:var(--ocean);font-size:.8rem;font-weight:700;border-bottom:1px solid rgba(27,92,92,.2)}
+/* pros/cons */
+.pros,.cons{font-size:.82rem;line-height:1.75;color:var(--ink-soft)}
+.pros strong{color:#2a6e2a}
+.cons strong{color:#a83a25}
+
+/* ── SEASON / DATA TABLES ────────────────────────────────── */
+.season-table,.festival-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th,.festival-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td,.festival-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);background:var(--white);vertical-align:middle;
+}
+.season-table tr:last-child td,.festival-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td,.festival-table tr:hover td{background:var(--sand)}
+.tag-good,.vc-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-wet,.tag-bad{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+.tag-ok{background:#fdf5e0;color:#7a5800;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px}
+/* badge variants for weather */
+.badge-dry,.badge-best{background:#eef7ee;color:#2a6e2a;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-peak{background:#fff0e0;color:#8a5500;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+.badge-rain,.badge-trans{background:#fff3f1;color:#a83a25;display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px}
+/* festival badge */
+.festival-badge{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:100px;background:var(--ocean-pale);color:var(--ocean)}
+.fb-annual{background:#eef7ee;color:#2a6e2a}
+.fb-major{background:#fdf5e0;color:#7a5800}
+.fb-local{background:var(--ocean-pale);color:var(--ocean)}
+/* rainfall bar */
+.rain-track{height:6px;background:var(--sand-dark);border-radius:3px;overflow:hidden;flex:1;min-width:60px}
+.rain-fill{height:100%;border-radius:3px;background:var(--ocean)}
+/* value comparison */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.value-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem;text-align:center}
+.vc-country{font-weight:700;color:var(--ink);font-size:.9rem;margin-bottom:.4rem}
+.vc-price{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.2rem}
+.vc-note{font-size:.72rem;color:var(--ink-muted);line-height:1.5}
+
+/* ── MONTH WEATHER CARDS ─────────────────────────────────── */
+.climate-mini{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:.75rem;background:var(--sand);
+  border-radius:var(--r-lg);padding:1.2rem;margin:1.2rem 0;
+  border:1px solid var(--sand-dark);
+}
+.climate-mini .cm-item{text-align:center}
+.cm-num{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);font-weight:700;line-height:1}
+.cm-label{font-size:.62rem;color:var(--ink-muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+
+/* ── WHO IS IT FOR band ──────────────────────────────────── */
+.who-band{
+  background:var(--ocean-deep);border-radius:var(--r-lg);
+  padding:1.1rem 1.4rem;margin:1.4rem 0;
+  display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+}
+.who-band .who-label{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);flex-shrink:0}
+.who-band .who-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.who-band .who-pill{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:4px 12px}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&q=30') center/cover;
+  opacity:.1;
+}
+.cta-block h3,.cta-heading{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em,.cta-heading em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p,.cta-block-text{position:relative;z-index:1;font-size:.88rem;color:rgba(255,255,255,.5);max-width:420px;margin:0 auto 1.5rem;line-height:1.65}
+.cta-block-btn,.cta-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover,.cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-item,.faqitem{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child,.faqitem:last-child{border-bottom:none}
+.faq-item details,.faqitem details{padding:.9rem 0}
+.faq-item summary,.faqitem summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);cursor:pointer;
+  list-style:none;display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker,.faqitem summary::-webkit-details-marker{display:none}
+.faq-item summary::after,.faqitem summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300;
+}
+.faq-item details[open] summary::after,.faqitem details[open] summary::after{transform:rotate(45deg)}
+.faq-answer,.faqans{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.qna{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.6rem 0 .3rem}
+
+/* ── SIDEBAR ─────────────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item,.quick-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem}
+.quick-item:last-child,.quick-row:last-child{border-bottom:none;padding-bottom:0}
+.quick-label,.qfl{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val,.qfr,.qfv{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta,.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;transition:background .18s;
+}
+.sidebar-cta:hover,.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+/* author mini */
+.author-mini,.author{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.2rem 1.4rem;margin-bottom:1.2rem;
+}
+.av{width:44px;height:44px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1rem;flex-shrink:0}
+.author-name,.avname{font-size:.87rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.author-role,.avrole{font-size:.73rem;color:var(--ink-muted)}
+.author-note,.avnote{font-size:.73rem;color:var(--ink-muted);line-height:1.55;margin-top:.25rem}
+/* jmap (journey map / neighbourhood visual) */
+.jmap{background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);padding:1.2rem;margin-bottom:1.2rem;overflow:hidden}
+.jmap-t{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:1rem}
+.jmap-l{display:flex;flex-direction:column;gap:.5rem}
+.jmap-li{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--ink-soft);font-weight:500}
+.jmap-a{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
+/* pcbox (price comparison box) */
+.pcbox{background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark);padding:1.1rem 1.3rem;margin-bottom:1.2rem}
+.pclbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.8rem}
+.pcrow{display:flex;justify-content:space-between;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--sand-dark);gap:.5rem}
+.pcrow:last-child{border-bottom:none}
+.pn{font-size:.82rem;color:var(--ink-soft);font-weight:500}
+.py{font-size:.82rem;color:var(--ink);font-weight:700}
+.pm{font-size:.68rem;color:var(--ink-muted)}
+/* mcta */
+.mcta{display:flex;align-items:center;justify-content:center}
+.mctabtn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 20px;background:var(--ocean);color:#fff;
+  font-size:.82rem;font-weight:700;border-radius:100px;margin-top:.6rem;
+  transition:background .18s;
+}
+.mctabtn:hover{background:var(--ocean-light)}
+/* ha- (highlights area) */
+.ha-list{list-style:none;padding:0;margin:.5rem 0}
+.ha-item{display:flex;align-items:flex-start;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--sand-dark);font-size:.85rem;color:var(--ink-soft)}
+.ha-item:last-child{border-bottom:none}
+.ha-item::before{content:'●';color:var(--ocean);font-size:.55rem;margin-top:4px;flex-shrink:0}
+.ha-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.ha-cta{display:block;margin-top:.9rem;padding:9px;background:var(--coral);color:#fff;text-align:center;border-radius:var(--r-md);font-size:.8rem;font-weight:700;transition:background .18s}
+.ha-cta:hover{background:var(--coral-light)}
+/* qdot spinner */
+.qdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ocean);margin-right:6px}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card,.hero-aside{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .value-grid{grid-template-columns:1fr 1fr}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hotel-card,.hotel-card-lg,.boutique-card,.hotel-row{grid-template-columns:1fr}
+  .hotel-card-img,.hotel-card-img-wrap img,.boutique-card-img,.hotel-row-img{width:100%;height:210px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table,.festival-table{font-size:.78rem}
+  .season-table th,.season-table td,.festival-table th,.festival-table td{padding:.55rem .7rem}
+  .area-grid{grid-template-columns:1fr}
+  .value-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+  .climate-mini{grid-template-columns:repeat(2,1fr)}
+  .toc-month-grid{grid-template-columns:repeat(3,1fr)}
+}
+
 </style>
 </head>
 <body>
@@ -563,348 +2216,234 @@ a{text-decoration:none;color:inherit}
   <ol><li><span aria-current="page">Home</span></li><li><a href="hotels.html">Hotels</a></li><li><span aria-current="page">Boutique Hotels</span></li></ol>
 </nav>
 <header class="page-hero">
-  <div class="hero-dots" aria-hidden="true"></div>
+  <img class="page-hero-img" src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1920&h=900&fit=crop&auto=format&q=75" alt="Boutique hotel courtyard garden with colonial architecture in Da Nang Vietnam" loading="eager" width="1920" height="900">
+  <div class="page-hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">✦ Boutique &amp; Design Hotels · Da Nang 2026</div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">✦ Boutique &amp; Design Hotels &nbsp;·&nbsp; Da Nang 2026</div>
       <h1>Boutique Hotels <em>Da Nang</em></h1>
-      <p class="hero-sub">Da Nang's boutique scene is concentrated, not sprawling — the best properties are clustered in An Thuong behind My Khe Beach, where a grid of café-lined streets supports the kind of small hotel that works best when it knows its neighbourhood intimately.</p>
-      <div class="hero-chips">
-        <span class="hero-chip">🏡 10–40 rooms</span>
-        <span class="hero-chip">📍 An Thuong focus</span>
-        <span class="hero-chip">💰 From $55/night</span>
-        <span class="hero-chip">✓ Local knowledge</span>
-        <span class="hero-chip">🍳 Real breakfasts</span>
+      <p class="hero-sub">Da Nang's boutique scene is concentrated, not sprawling — the best properties are clustered in An Thuong behind My Khe Beach, where a walkable neighbourhood has grown to support them. Four genuine boutiques with honest assessments of what each delivers.</p>
+      <div class="hero-meta">
+        <span><strong>4</strong> boutique hotels reviewed</span>
+        <span>From <strong>$65</strong>/night</span>
+        <span>An Thuong cluster</span>
+        <span>✓ Character over chain</span>
       </div>
     </div>
-    <div class="principles-card" aria-hidden="true">
-      <div class="pc-card-title">What makes a true boutique</div>
-      <div class="principle-item"><span class="principle-icon">🏠</span><span class="principle-text"><strong>Scale:</strong> Typically 10–40 rooms — small enough that staff know guests by name after day one</span></div>
-      <div class="principle-item"><span class="principle-icon">🎨</span><span class="principle-text"><strong>Design:</strong> Curated interiors, not cookie-cutter brand standards — art on the walls that someone chose deliberately</span></div>
-      <div class="principle-item"><span class="principle-icon">🗺️</span><span class="principle-text"><strong>Local knowledge:</strong> Staff who give restaurant recommendations based on what they actually eat, not commission</span></div>
-      <div class="principle-item"><span class="principle-icon">🍳</span><span class="principle-text"><strong>Breakfast:</strong> Made to order or from a market-sourced spread, not a buffet of anonymous pastries</span></div>
-      <div class="principle-item"><span class="principle-icon">📵</span><span class="principle-text"><strong>Ownership:</strong> Often owner-managed — someone is accountable in a way that chain GMs are structurally not</span></div>
+    <div class="hero-card">
+      <div class="hero-card-title">Boutique guide at a glance</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">Boutiques reviewed</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">$65</div><div class="hero-stat-label">Starting price</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">24</div><div class="hero-stat-label">Avg room count</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">4.7★</div><div class="hero-stat-label">Guest scores</div></div>
+      </div>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-hero&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hero-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse boutique hotels →</a>
     </div>
   </div>
 </header>
 
+<!-- ── MAIN CONTENT ── -->
 <div class="page-wrap">
-<article class="article">
+  <article class="article">
 
-  <nav class="toc-box" aria-label="Table of contents">
-    <div class="toc-label">In this guide</div>
-    <ul class="toc-list">
-      <li><a href="#intro">Da Nang's boutique hotel scene — an honest picture</a></li>
-      <li><a href="#anthuong">Best boutique hotels in An Thuong</a></li>
-      <li><a href="#design">Best design-forward hotels</a></li>
-      <li><a href="#tradeoffs">Boutique vs. resort — the honest trade-offs</a></li>
-      <li><a href="#where">Where boutique hotels are (and aren't)</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-  </nav>
+    <nav class="toc-box" aria-label="Table of contents">
+      <div class="toc-label">In this guide</div>
+      <ul class="toc-list">
+        <li><a href="#intro">Da Nang's boutique hotel scene</a></li>
+        <li><a href="#horizon">Horizon Grand Hotel</a></li>
+        <li><a href="#pearl">Pearl Hotel Da Nang</a></li>
+        <li><a href="#anthuong">An Thuong Garden Hotel</a></li>
+        <li><a href="#naman">Naman Retreat</a></li>
+        <li><a href="#area-map">Boutique hotels by area</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
 
-  <!-- INTRO -->
-  <section id="intro" aria-labelledby="intro-h">
-    <h2 class="section-h2" id="intro-h">Da Nang's boutique hotel scene — <em>an honest picture</em></h2>
-    <div class="prose">
-      <p>
-        The honest comparison point for Da Nang's boutique scene is Hoi An, 30 minutes south, which has been a boutique hotel market for over two decades and has the depth to show it: dozens of distinctive small properties spanning converted merchant houses, garden villas, and genuinely characterful guesthouses with long-running owners who have shaped their hotels around the town they know. Da Nang is not at that level. The boutique market here is newer, smaller, and somewhat concentrated in a single neighbourhood — but the properties that have emerged from it are genuinely good.
-      </p>
-      <p>
-        The <strong>An Thuong village area</strong> — a compact grid of streets running behind the northern section of My Khe Beach — is where Da Nang's boutique scene has taken root. The neighbourhood has the right conditions: a local residential character, a density of independent cafés and restaurants that gives it a lived-in quality, and enough footfall from beachgoers to sustain small hospitality businesses without becoming over-touristed. Several Vietnamese-owned boutique properties have opened here in the past four years, and a few international-design-influenced guesthouses have followed.
-      </p>
-      <p>
-        What you get from Da Nang's boutique properties is broadly consistent: better breakfast than chain hotels at the same price, staff who give recommendations drawn from local knowledge rather than Tripadvisor, rooms that have been designed rather than specified from a brand manual, and the experience of staying in a neighbourhood rather than on a resort compound. What you don't get: multiple pools, beach clubs, spa suites, or the anonymous efficiency of an international hotel. For the full range of options at all scales, the <a href="best-hotels-in-da-nang.html">best hotels in Da Nang guide</a> covers every category.
-      </p>
-    </div>
-  </section>
+    <section id="intro" aria-labelledby="intro-h">
+      <span class="section-label">Overview</span>
+      <h2 class="section-heading" id="intro-h">Da Nang's Boutique Hotel <em>Scene — An Honest Picture</em></h2>
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&h=420&fit=crop&auto=format&q=80" alt="An Thuong neighbourhood Da Nang independent boutique hotels and cafes" loading="lazy" width="1200" height="420">
+        <p class="img-caption">The An Thuong neighbourhood behind My Khe Beach is Da Nang's most concentrated boutique hotel zone — and the city's best independent restaurant and café district</p>
+      </div>
+      <div class="prose">
+        <p>Da Nang's boutique hotel scene is smaller and more concentrated than Hoi An's — which has dozens of genuinely distinctive small properties — but it has been developing with intention. The best options cluster in and around the An Thuong village strip behind My Khe Beach, where a walkable neighbourhood of independent restaurants, coffee shops, and local businesses provides exactly the kind of context a good boutique hotel needs to earn its label.</p>
+        <p>What makes a genuine boutique here versus a small chain hotel in disguise? The distinction matters. The properties reviewed below all demonstrate at least some of the following: scale under 40 rooms, design that reflects the local context, individualised service that chains structurally cannot replicate, and food and beverage that operates as if it's cooking for guests rather than processing them.</p>
+        <p>The price range ($65–$180) means these sit between budget guesthouses and the five-star resorts on the beach. For travellers who care more about character and service than pools and beach clubs, they represent the best-value accommodation in Da Nang. See the full <a href="best-hotels-in-da-nang.html">Da Nang hotel guide</a> for all categories.</p>
+      </div>
+    </section>
 
-  <!-- AN THUONG BOUTIQUES -->
-  <section id="anthuong" aria-labelledby="anthuong-h">
-    <h2 class="section-h2" id="anthuong-h">Best boutique hotels in <em>An Thuong</em></h2>
-    <p class="section-intro">An Thuong is the only Da Nang neighbourhood with the density of independent restaurants and cafés to support a proper boutique hotel ecosystem. The best properties here are within 5 minutes of My Khe Beach and within walking distance of the city's strongest independent food scene.</p>
-
-    <div class="boutique-stack">
-
-      <article class="boutique-card">
-        <img class="boutique-card-img"
-             src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=900&h=280&fit=crop&auto=format"
-             alt="Horizon Grand Hotel Da Nang rooftop and herb garden"
-             loading="eager" width="900" height="200">
+    <section id="horizon" aria-labelledby="hz-h">
+      <span class="section-label">Editor's Choice</span>
+      <h2 class="section-heading" id="hz-h">Horizon Grand Hotel — <em>Most Recommended</em></h2>
+      <div class="boutique-card">
+        <img class="boutique-card-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=480&h=380&fit=crop&auto=format" alt="Horizon Grand Hotel An Thuong Da Nang rooftop garden and pool" loading="lazy" width="480" height="380">
         <div class="boutique-card-body">
-          <span class="boutique-badge">Editor's Pick · An Thuong</span>
-          <div class="boutique-name">Horizon Grand Hotel</div>
-          <div class="boutique-loc">An Thuong village · 90 seconds to My Khe Beach</div>
-          <p class="boutique-desc">
-            The Horizon Grand is the most consistently recommended boutique property in Da Nang, and the reason is straightforward: the small scale (24 rooms) enables the kind of service that larger properties structurally can't provide. Staff remember your coffee order by day two. Breakfast is made to order from a menu that changes with what's available at the morning market. The rooftop herb garden is actually used by the kitchen — this is not a visual amenity.
-          </p>
-          <p class="boutique-desc">
-            The design leans contemporary Vietnamese: clean lines, natural materials, local ceramics on the walls. It doesn't scream for attention, which is the right call for a neighbourhood hotel. The beach is a 90-second walk north. An Thuong's best restaurants — several of which appear in the <a href="dining.html">MICHELIN dining guide</a> — are within a five-minute walk in multiple directions.
-          </p>
-          <div class="boutique-details">
-            <span class="boutique-detail">24 rooms</span>
-            <span class="boutique-detail">Made-to-order breakfast</span>
-            <span class="boutique-detail">Rooftop herb garden</span>
-            <span class="boutique-detail">90 sec to beach</span>
-            <span class="boutique-detail">Motorbike rental arranged</span>
+          <div>
+            <span class="hotel-badge b-bou">Boutique · Editor's Choice</span>
+            <div class="boutique-name">Horizon Grand Hotel</div>
+            <div class="boutique-loc">📍 An Thuong village · 90 seconds to My Khe Beach</div>
+            <p class="boutique-desc">The most consistently recommended boutique property in Da Nang. The small scale (24 rooms) enables the kind of service that larger properties structurally can't deliver — staff remember your coffee order by day two, restaurant recommendations are based on actual knowledge, and the breakfast is cooked to order rather than buffet-dispensed. A rooftop garden the kitchen actually uses for herbs, curated art exhibitions in common areas, and a genuine sense of place make this stand out. The one-block-from-beach position means you pay 35% less than beachfront properties for a 90-second walk to the sand.</p>
+            <div class="boutique-details">
+              <div class="boutique-detail"><strong>Size:</strong> 24 rooms</div>
+              <div class="boutique-detail"><strong>Location:</strong> An Thuong, My Khe</div>
+              <div class="boutique-detail"><strong>Best for:</strong> Couples, solo travellers</div>
+            </div>
           </div>
-          <div class="boutique-footer">
+          <div class="hotel-footer">
             <div class="boutique-price">From <strong>$65</strong>/night</div>
-            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-horizon&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
           </div>
         </div>
-      </article>
+      </div>
+      <div class="callout callout-gold">
+        <div class="callout-label">✦ Editor's note</div>
+        <p>The Horizon Grand is the property that Da Nang residents most often recommend when asked where visiting friends should stay. That kind of local endorsement is harder to earn than a review score — and more reliable.</p>
+      </div>
+    </section>
 
-      <article class="boutique-card">
-        <img class="boutique-card-img"
-             src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=900&h=280&fit=crop&auto=format"
-             alt="Pearl Hotel Da Nang courtyard interior"
-             loading="lazy" width="900" height="200">
+    <section id="pearl" aria-labelledby="pl-h">
+      <span class="section-label">Heritage Character</span>
+      <h2 class="section-heading" id="pl-h">Pearl Hotel Da Nang — <em>Colonial Heritage</em></h2>
+      <div class="boutique-card">
+        <img class="boutique-card-img" src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=480&h=380&fit=crop&auto=format" alt="Pearl Hotel Da Nang colonial courtyard with mosaic tiles and teak furniture" loading="lazy" width="480" height="380">
         <div class="boutique-card-body">
-          <span class="boutique-badge">Heritage Boutique</span>
-          <div class="boutique-name">Pearl Hotel Da Nang</div>
-          <div class="boutique-loc">Pham Van Dong · south My Khe</div>
-          <p class="boutique-desc">
-            The Pearl occupies a converted French-colonial-influenced building in the southern My Khe area and has leaned into the heritage rather than trying to modernise it away. Mosaic-tiled floors in the common areas, hand-carved teak furnishings in the rooms, and a courtyard garden at the back that operates as a genuinely calm space for breakfast rather than a design feature nobody uses. The 22 rooms are smaller than the chain hotel equivalents at this price, which is appropriate — boutique hotels at this scale aren't trying to compete on square footage.
-          </p>
-          <p class="boutique-desc">
-            The breakfast programme is one of the most consistently praised in the city's boutique tier: market-sourced fruit, Vietnamese egg dishes made to order, and the kind of attention to coffee that suggests the management actually cares about it. Guests consistently note that the staff recommendations for local restaurants send them to places they'd never have found on a map.
-          </p>
-          <div class="boutique-details">
-            <span class="boutique-detail">22 rooms</span>
-            <span class="boutique-detail">Heritage building</span>
-            <span class="boutique-detail">Courtyard garden</span>
-            <span class="boutique-detail">Strong local recommendations</span>
-            <span class="boutique-detail">Near beach</span>
+          <div>
+            <span class="hotel-badge b-bou">Boutique · Heritage</span>
+            <div class="boutique-name">Pearl Hotel Da Nang</div>
+            <div class="boutique-loc">📍 Pham Van Dong · south My Khe</div>
+            <p class="boutique-desc">The Pearl occupies a converted French-colonial-influenced building in the southern My Khe area and has leaned into the heritage rather than trying to modernise it away. Mosaic-tiled floors in common areas, hand-crafted teak furnishings, and a secret garden courtyard at the back that's a genuinely pleasant place to spend a morning. Breakfast operates like it's cooking for house guests. Rooms are smaller than the big resorts, which feels appropriate rather than compromised. The beach here (southern My Khe, Pham Van Dong stretch) is less crowded and more atmospheric than the busy northern strip.</p>
+            <div class="boutique-details">
+              <div class="boutique-detail"><strong>Size:</strong> 24 rooms</div>
+              <div class="boutique-detail"><strong>Location:</strong> South My Khe</div>
+              <div class="boutique-detail"><strong>Best for:</strong> Couples, slow travel</div>
+            </div>
           </div>
-          <div class="boutique-footer">
+          <div class="hotel-footer">
             <div class="boutique-price">From <strong>$75</strong>/night</div>
-            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-pearl&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
           </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="boutique-card">
-        <img class="boutique-card-img"
-             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900&h=280&fit=crop&auto=format"
-             alt="boutique design hotel Da Nang living room"
-             loading="lazy" width="900" height="200">
+    <section id="anthuong" aria-labelledby="at-h">
+      <span class="section-label">Design Forward</span>
+      <h2 class="section-heading" id="at-h">An Thuong Garden Hotel — <em>Contemporary Design</em></h2>
+      <div class="boutique-card">
+        <img class="boutique-card-img" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=480&h=380&fit=crop&auto=format" alt="An Thuong Garden Hotel Da Nang contemporary design with rooftop terrace" loading="lazy" width="480" height="380">
         <div class="boutique-card-body">
-          <span class="boutique-badge">Design Boutique</span>
-          <div class="boutique-name">An Thuong Garden Hotel</div>
-          <div class="boutique-loc">An Thuong · central neighbourhood position</div>
-          <p class="boutique-desc">
-            A newer property (opened 2024) that has taken a more design-forward approach than most Da Nang boutiques: exposed concrete and warm timber, artwork commissioned from local artists, a rooftop bar open to non-guests that has become a neighbourhood gathering point rather than a hotel amenity. The 18 rooms are genuinely well-designed, with enough built-in storage to actually live from a bag for a week.
-          </p>
-          <p class="boutique-desc">
-            The hotel's founder ran a restaurant in An Thuong before converting to hospitality, which explains the food quality — the breakfast and the rooftop bar menu both reflect actual cooking intelligence rather than obligatory hotel F&B. At $80–$100 per night, it represents the upper end of the Da Nang boutique bracket but sits in genuinely comfortable territory for what it delivers.
-          </p>
-          <div class="boutique-details">
-            <span class="boutique-detail">18 rooms</span>
-            <span class="boutique-detail">Commissioned local art</span>
-            <span class="boutique-detail">Rooftop bar</span>
-            <span class="boutique-detail">Opened 2024</span>
-            <span class="boutique-detail">5 min to beach</span>
+          <div>
+            <span class="hotel-badge b-bou">Boutique · New Opening</span>
+            <div class="boutique-name">An Thuong Garden Hotel</div>
+            <div class="boutique-loc">📍 An Thuong · central neighbourhood position</div>
+            <p class="boutique-desc">A newer property (opened 2024) that has taken a more design-forward approach than most Da Nang boutiques: exposed concrete and warm timber, artwork commissioned from local artists, a rooftop pool with genuine panoramic views, and a breakfast menu that changes weekly based on market availability. The An Thuong neighbourhood location places you immediately in the city's best independent dining and café district.</p>
+            <div class="boutique-details">
+              <div class="boutique-detail"><strong>Opened:</strong> 2024</div>
+              <div class="boutique-detail"><strong>Location:</strong> An Thuong strip</div>
+              <div class="boutique-detail"><strong>Best for:</strong> Design-focused travellers</div>
+            </div>
           </div>
-          <div class="boutique-footer">
+          <div class="hotel-footer">
             <div class="boutique-price">From <strong>$82</strong>/night</div>
-            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
+            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-anthuong&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
           </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- DESIGN HOTELS -->
-  <section id="design" aria-labelledby="design-h">
-    <h2 class="section-h2" id="design-h">Best <em>design-forward</em> hotels in Da Nang</h2>
-    <p class="section-intro">A handful of Da Nang properties straddle the line between boutique and luxury — too design-conscious to be chain hotels, too well-resourced to be simple guesthouses. These are the options for travellers who want character and infrastructure simultaneously.</p>
-
-    <div class="boutique-stack">
-      <article class="boutique-card">
-        <img class="boutique-card-img"
-             src="https://images.unsplash.com/photo-1549294413-26f195200c16?w=900&h=260&fit=crop&auto=format"
-             alt="boutique luxury hotel Da Nang lobby design"
-             loading="lazy" width="900" height="200">
+    <section id="naman" aria-labelledby="nm-h">
+      <span class="section-label">Architectural Resort</span>
+      <h2 class="section-heading" id="nm-h">Naman Retreat — <em>Architectural Statement</em></h2>
+      <div class="boutique-card">
+        <img class="boutique-card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=480&h=380&fit=crop&auto=format" alt="Naman Retreat Da Nang bamboo architecture by Vo Trong Nghia" loading="lazy" width="480" height="380">
         <div class="boutique-card-body">
-          <span class="boutique-badge">Design-Luxury Hybrid</span>
-          <div class="boutique-name">Naman Retreat Da Nang</div>
-          <div class="boutique-loc">Non Nuoc Beach · architectural resort</div>
-          <p class="boutique-desc">
-            Naman is the property that defies easy categorisation in Da Nang's hotel market. The resort was designed by Vo Trong Nghia — Vietnam's most internationally recognised architect, known for his work with bamboo and natural materials — and the result is an experience that is simultaneously resort-scale and architecturally serious in a way that very few properties in Southeast Asia manage. The bamboo-screened corridors and thatched pavilions are not a style affectation; they're the actual structure of the buildings, designed with the local climate in mind.
-          </p>
-          <p class="boutique-desc">
-            The villas have private gardens and pools; the beach access is direct from Non Nuoc's quieter southern stretch. The food programme draws from the resort's own herb garden and a sourcing relationship with local fishermen that is the foundation of several dishes rather than a marketing line. This is the right choice for travellers who want design integrity and resort comfort simultaneously — and are willing to pay for both.
-          </p>
-          <div class="boutique-details">
-            <span class="boutique-detail">Vo Trong Nghia architecture</span>
-            <span class="boutique-detail">Private pool villas</span>
-            <span class="boutique-detail">Direct Non Nuoc beach</span>
-            <span class="boutique-detail">Bamboo + natural materials</span>
-            <span class="boutique-detail">Own herb garden</span>
+          <div>
+            <span class="hotel-badge b-lux">Architectural Resort</span>
+            <div class="boutique-name">Naman Retreat Da Nang</div>
+            <div class="boutique-loc">📍 Non Nuoc Beach · architectural resort</div>
+            <p class="boutique-desc">Naman defies easy categorisation. Designed by Vo Trong Nghia — Vietnam's most internationally recognised architect, known for bamboo construction and sustainable design — the resort is first a piece of architecture that happens to accommodate guests. Soaring bamboo pavilions, pool villas that are more sculpture than room, and a restaurant that takes food as seriously as the design. The scale is larger than a classic boutique, but the philosophy and individualised experience earn the classification. Non Nuoc Beach setting means Hoi An is 35 minutes south.</p>
+            <div class="boutique-details">
+              <div class="boutique-detail"><strong>Location:</strong> Non Nuoc Beach</div>
+              <div class="boutique-detail"><strong>Architect:</strong> Vo Trong Nghia</div>
+              <div class="boutique-detail"><strong>Best for:</strong> Architecture enthusiasts, couples</div>
+            </div>
           </div>
-          <div class="boutique-footer">
+          <div class="hotel-footer">
             <div class="boutique-price">From <strong>$180</strong>/night · Villas from $320</div>
-            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="callout">
-      <div class="callout-label">Context</div>
-      <p>Naman Retreat straddles the boutique and resort categories — it's too architecturally specific for chain-hotel comparisons, but too large to fit neatly in the boutique bracket. If you're choosing between Naman and a simpler An Thuong boutique, the question is whether you want resort infrastructure (pool, full spa, beach club) or neighbourhood immersion. They're genuinely different trips.</p>
-    </div>
-  </section>
-
-  <!-- TRADE-OFFS -->
-  <section id="tradeoffs" aria-labelledby="tradeoffs-h">
-    <h2 class="section-h2" id="tradeoffs-h">Boutique vs. resort — <em>the honest trade-offs</em></h2>
-    <p class="section-intro">The choice between a Da Nang boutique hotel and a beachfront resort isn't simply about budget — it's about how you want to spend your time and what matters in a hotel stay.</p>
-
-    <div class="tradeoff-grid">
-      <div class="tradeoff-box tradeoff-get">
-        <div class="tradeoff-label">What boutiques deliver</div>
-        <ul class="tradeoff-list">
-          <li>Staff who know the city, not just the hotel</li>
-          <li>Better breakfast quality per price point</li>
-          <li>Rooms with actual design decisions</li>
-          <li>Access to neighbourhood rather than compound</li>
-          <li>Restaurant recommendations that aren't commission-driven</li>
-          <li>Faster, more personal problem-solving</li>
-          <li>30–50% lower price than equivalent resort nights</li>
-        </ul>
-      </div>
-      <div class="tradeoff-box tradeoff-give">
-        <div class="tradeoff-label">What boutiques give up</div>
-        <ul class="tradeoff-list">
-          <li>No beach club or beach service</li>
-          <li>Single pool or no pool at small properties</li>
-          <li>No spa or fitness facilities</li>
-          <li>Smaller room footprint</li>
-          <li>No airport transfer included</li>
-          <li>Less predictable service consistency</li>
-          <li>No loyalty points / brand rewards</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="prose">
-      <p>
-        For travellers staying five or more days who plan to spend significant time outside the hotel — at restaurants, on day trips to Hoi An and the Marble Mountains, exploring the city — the boutique calculus usually wins. You pay less, stay in a more interesting neighbourhood, and use the hotel primarily as a base. For beach-focused shorter trips where you want pool time, beach service, and resort amenities as the core activity, see the <a href="da-nang-beach-hotels.html">Da Nang beach hotels guide</a> or the <a href="luxury-hotels-da-nang.html">luxury hotels guide</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- WHERE BOUTIQUES ARE -->
-  <section id="where" aria-labelledby="where-h">
-    <h2 class="section-h2" id="where-h">Where boutique hotels <em>are (and aren't)</em></h2>
-    <div class="neighbourhood-band">
-      <div class="nb-title">Boutique hotel map by area</div>
-      <div class="nb-items">
-        <div class="nb-item">
-          <div class="nb-dot" style="background:#38BDF8"></div>
-          <div>
-            <div class="nb-name">An Thuong / North My Khe <span style="font-size:.7rem;font-weight:400;color:var(--ink-muted)">— Best boutique cluster</span></div>
-            <div class="nb-desc">The strongest concentration. Independent cafés, restaurants, and a residential character that supports small hotels. 10–15 boutique properties, ranging from $55 guesthouses to $130 design hotels. 90 seconds to My Khe Beach.</div>
-          </div>
-        </div>
-        <div class="nb-item">
-          <div class="nb-dot" style="background:#F59E0B"></div>
-          <div>
-            <div class="nb-name">Han River / City Centre <span style="font-size:.7rem;font-weight:400;color:var(--ink-muted)">— Limited but growing</span></div>
-            <div class="nb-desc">A few small design hotels have opened near the river, aimed at the business-traveller and city-explorer market. Proximity to the MICHELIN restaurant strip is the draw. Beach is a 15-minute taxi. The boutique scene here is thinner than An Thuong.</div>
-          </div>
-        </div>
-        <div class="nb-item">
-          <div class="nb-dot" style="background:#34D399"></div>
-          <div>
-            <div class="nb-name">Non Nuoc / South Beach <span style="font-size:.7rem;font-weight:400;color:var(--ink-muted)">— Architectural exception</span></div>
-            <div class="nb-desc">Naman Retreat is the sole property that fits the design-boutique bracket here. The rest of Non Nuoc is large resort territory. Good for travellers who want a design-forward stay with direct beach access, but not a neighbourhood-boutique experience.</div>
-          </div>
-        </div>
-        <div class="nb-item">
-          <div class="nb-dot" style="background:#F87171"></div>
-          <div>
-            <div class="nb-name">Son Tra Peninsula <span style="font-size:.7rem;font-weight:400;color:var(--ink-muted)">— Not boutique territory</span></div>
-            <div class="nb-desc">Son Tra is luxury resort territory dominated by the InterContinental. No true boutique properties operate here — the infrastructure costs and seclusion don't support the neighbourhood-hotel model.</div>
+            <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-naman&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="boutique-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="area-map" aria-labelledby="am-h">
+      <span class="section-label">By Location</span>
+      <h2 class="section-heading" id="am-h">Boutique Hotels <em>by Area</em></h2>
+      <p class="section-intro">Da Nang's boutiques are not evenly distributed. Most cluster in two zones — An Thuong and south My Khe — with one architectural outlier at Non Nuoc.</p>
+      <div class="area-grid">
+        <div class="area-card">
+          <div class="area-card-name">An Thuong / North My Khe</div>
+          <div class="area-tag">Most concentrated</div>
+          <p class="area-desc">The Horizon Grand and An Thuong Garden Hotel are both here. This is Da Nang's most liveable neighbourhood — independent restaurants, coffee shops, a night market, and direct beach access. Best for travellers who want boutique accommodation with urban character. Beach is 60–120 seconds' walk.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-name">South My Khe (Pham Van Dong)</div>
+          <div class="area-tag">Heritage character</div>
+          <p class="area-desc">Pearl Hotel is here. Quieter stretch of My Khe with less development, fewer vendors, and a more atmospheric beachfront. Still within easy Grab reach of the city. Better for those who find the An Thuong strip too busy.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-name">Non Nuoc Beach</div>
+          <div class="area-tag">Architectural resort</div>
+          <p class="area-desc">Naman Retreat only. Quieter beach, larger grounds, and 40 minutes from Hoi An. Worth the out-of-city location if the architecture is the reason you're visiting — Vo Trong Nghia's bamboo structures are genuinely significant.</p>
+        </div>
+        <div class="area-card">
+          <div class="area-card-name">Han River / City Centre</div>
+          <div class="area-tag">Limited options</div>
+          <p class="area-desc">The city centre has few genuine boutiques — most accommodation here is business-oriented mid-range. Better to base at An Thuong for beach-and-city access than to use the Han River solely for boutique options.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-block">
+      <h3>Browse all <em>Da Nang boutique hotels</em></h3>
+      <p class="cta-block-text">Independent properties with character — filtered and sorted.</p>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-cta&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="cta-block-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse boutique hotels →</a>
     </div>
 
-    <div class="prose">
-      <p>
-        The practical conclusion: if you want a boutique hotel in Da Nang, you're choosing An Thuong. The other areas don't have the conditions — neighbourhood restaurant density, walkability, and the kind of foot traffic that makes a small hotel's local knowledge useful. For area-by-area hotel comparison across all categories, the <a href="where-to-stay-in-da-nang.html">where to stay in Da Nang guide</a> covers the full picture.
-      </p>
+    <section id="faq" class="faq-section" aria-labelledby="faq-h">
+      <span class="section-label">FAQ</span>
+      <h2 class="faq-h2" id="faq-h">Boutique Hotel <em>FAQs</em></h2>
+      <div class="faq-item"><details><summary>Are Da Nang boutique hotels better than Hoi An boutiques?</summary><div class="faq-answer">Hoi An has more boutique options and more consistently strong ones — the Ancient Town neighbourhood provides a ready-made context that Da Nang's beach strip can't replicate. However, Da Nang's best boutiques (particularly the Horizon Grand) hold their own on service quality and value. The right choice depends on your trip: Da Nang for beach access and a more urban atmosphere; Hoi An for UNESCO heritage context and a denser boutique scene.</div></details></div>
+      <div class="faq-item"><details><summary>What makes a Da Nang hotel genuinely boutique?</summary><div class="faq-answer">The distinction matters in Da Nang because many hotels describe themselves as boutique while operating as standard mid-range properties. Genuine boutiques demonstrate: under 40 rooms (preferably under 30), design that reflects local context rather than generic hotel aesthetics, individualised service where staff know returning guests, and food and beverage that serves the property rather than just feeding guests. The Horizon Grand, Pearl Hotel, and Naman Retreat all qualify under these criteria.</div></details></div>
+      <div class="faq-item"><details><summary>Is the An Thuong neighbourhood good for staying in Da Nang?</summary><div class="faq-answer">Yes — it's the best base in Da Nang for travellers who want more than just beach time. The An Thuong village strip has the city's highest concentration of independent restaurants and coffee shops (including several MICHELIN Bib Gourmand-recognised spots), a night market, and a generally liveable urban feel that the pure beach strip lacks. My Khe Beach is 60–120 seconds' walk for most An Thuong properties. See the full <a href="where-to-stay-in-da-nang.html">neighbourhood guide</a> for area comparisons.</div></details></div>
+    </section>
+
+  </article>
+
+    <!-- ── SIDEBAR ── -->
+  <aside class="sidebar" aria-label="Supplementary content">
+    <div class="author-mini">
+      <div class="av">TW</div>
+      <div>
+        <div class="avname">Tom Whitfield</div>
+        <div class="avrole">SE Asia Hotel Editor</div>
+        <div class="avnote">Based in Da Nang since 2021. Last visited: February 2026.</div>
+      </div>
     </div>
-  </section>
-
-  <div class="cta-block">
-    <h3>Browse all <em>boutique hotels</em> in Da Nang</h3>
-    <p>Small-scale properties with verified character and guest scores — plus the full 110+ hotel database with filters.</p>
-    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="cta-block-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Da Nang hotels →</a>
-  </div>
-
-  <!-- FAQ -->
-  <section id="faq" class="faq-section" aria-labelledby="faq-h">
-    <h2 class="faq-h2" id="faq-h">Frequently asked questions</h2>
-
-    <div class="faq-item"><details><summary>Are there good boutique hotels in Da Nang?</summary>
-    <div class="faq-answer">Yes, though the scene is smaller than neighbouring Hoi An. Da Nang's best boutique properties are in the An Thuong neighbourhood behind My Khe Beach — Horizon Grand, Pearl Hotel, and a handful of newer design-conscious properties. The market is growing: several new boutique properties have opened since 2023. For the full range, see <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">all Da Nang hotels</a>.</div></details></div>
-
-    <div class="faq-item"><details><summary>What is the difference between boutique and luxury hotels in Da Nang?</summary>
-    <div class="faq-answer">Luxury hotels in Da Nang offer full resort infrastructure — multiple pools, spas, beach clubs, large F&B operations. Boutique hotels prioritise scale and personality: fewer rooms (typically 10–40), curated design, owner-managed service, and stronger local identity. Boutique properties run $55–$150; luxury hotels $130–$400+. Some properties (Naman Retreat) have both character and infrastructure — but in Da Nang 'boutique' most accurately describes the smaller An Thuong properties.</div></details></div>
-
-    <div class="faq-item"><details><summary>Where are Da Nang's best boutique hotels?</summary>
-    <div class="faq-answer">An Thuong — the grid of streets behind the northern section of My Khe Beach — is Da Nang's strongest boutique cluster. It combines beach proximity (90 seconds to 5 minutes on foot) with a genuine café and restaurant scene that gives the area a residential quality. A few properties also operate near the Han River. See the <a href="where-to-stay-in-da-nang.html">where to stay guide</a> for the full neighbourhood breakdown.</div></details></div>
-
-    <div class="faq-item"><details><summary>Are boutique hotels in Da Nang good value?</summary>
-    <div class="faq-answer">Yes, particularly in the $65–$100 range. A well-run Da Nang boutique typically delivers better room quality, more attentive service, and a stronger breakfast than a midrange chain hotel at the same price. The trade-off is fewer amenities — no large pool, no spa, no beach club. For travellers who spend most of their time exploring rather than in the hotel, the boutique calculus usually wins.</div></details></div>
-
-  </section>
-
-  <aside style="background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--radius-lg);padding:1.3rem 1.5rem;margin-top:2rem">
-    <p style="font-size:.77rem;color:var(--ink-muted);line-height:1.7;margin:0"><strong style="color:var(--ink)">Editorial note:</strong> Boutique hotel picks are selected on guest scores (min 4.2/5.0), verified small-scale operation (under 50 rooms), and editorial assessment of local knowledge quality and design intent. Properties must be owner-managed or have genuine independent character — brand-affiliated "boutique" properties are excluded. Updated quarterly. For the full hotel range see the <a href="best-hotels-in-da-nang.html">best hotels in Da Nang guide</a>.</p>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Quick facts</div>
+      <div class="sidebar-quick"><div class="quick-item"><span class="quick-label">Boutiques reviewed</span><span class="quick-val">4</span></div><div class="quick-item"><span class="quick-label">Lowest rate</span><span class="quick-val">$65/night</span></div><div class="quick-item"><span class="quick-label">Best zone</span><span class="quick-val">An Thuong strip</span></div><div class="quick-item"><span class="quick-label">Best overall</span><span class="quick-val">Horizon Grand</span></div><div class="quick-item"><span class="quick-label">Heritage pick</span><span class="quick-val">Pearl Hotel</span></div><div class="quick-item"><span class="quick-label">Architectural</span><span class="quick-val">Naman Retreat</span></div><div class="quick-item"><span class="quick-label">Beach walk</span><span class="quick-val">60–120 seconds</span></div></div>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique-sidebar&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="sidebar-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse hotels →</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Related guides</div>
+      <ul class="sidebar-links"><li><a href="best-hotels-in-da-nang.html">Best hotels Da Nang</a></li><li><a href="da-nang-beach-hotels.html">Beach hotels</a></li><li><a href="luxury-hotels-da-nang.html">Luxury hotels</a></li><li><a href="where-to-stay-in-da-nang.html">Where to stay</a></li><li><a href="dining.html">Dining guide</a></li></ul>
+    </div>
   </aside>
 
-</article>
-
-<aside class="sidebar" aria-label="Supplementary content">
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">About this guide</div>
-    <div class="author-mini">
-      <div class="author-avatar" aria-hidden="true">TW</div>
-      <div>
-        <div class="author-name">Tom Whitfield</div>
-        <div class="author-role">SE Asia Hotel Editor · Da Nang Hotel Guide</div>
-        <div class="author-note">Based in An Thuong, Da Nang since 2021. All boutique assessments from personal stays. Last updated: February 2026.</div>
-      </div>
-    </div>
-  </div>
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">Top boutique picks</div>
-    <ul class="sidebar-links">
-      <li><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Horizon Grand — Best overall boutique</a></li>
-      <li><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Pearl Hotel — Best heritage character</a></li>
-      <li><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">An Thuong Garden — Best design</a></li>
-      <li><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Naman Retreat — Best design-luxury</a></li>
-    </ul>
-    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-boutique&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="sidebar-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse all boutique hotels →</a>
-  </div>
-  <div class="sidebar-card">
-    <div class="sidebar-card-title">Related guides</div>
-    <ul class="sidebar-links">
-      <li><a href="best-hotels-in-da-nang.html">Best hotels in Da Nang</a></li>
-      <li><a href="luxury-hotels-da-nang.html">Luxury hotels guide</a></li>
-      <li><a href="da-nang-beach-hotels.html">Beach hotels guide</a></li>
-      <li><a href="where-to-stay-in-da-nang.html">Where to stay guide</a></li>
-      <li><a href="dining.html">MICHELIN dining guide</a></li>
-    </ul>
-  </div>
-</aside>
-</div>
+</div><!-- /page-wrap -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
