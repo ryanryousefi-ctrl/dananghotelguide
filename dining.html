@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Da Nang Dining Guide — MICHELIN &amp; Street Food 2026</title>
-<meta name="description" content="Da Nang dining guide — 43 MICHELIN-listed restaurants, street food by neighbourhood, and what to eat in Central Vietnam.">
+<title>Da Nang MICHELIN Guide Restaurants 2025 — Dining in Da Nang</title>
+<meta name="description" content="Da Nang's MICHELIN Guide restaurants 2025 — 1 Star, 1 Green Star, 20 Bib Gourmand, and 22 Selected restaurants. Full guide to dining in Da Nang, Vietnam.">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://www.dananghotelguide.com/dining.html">
 <link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/dining.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<meta property="og:title" content="Da Nang Dining Guide — MICHELIN Restaurants & Street Food 2026">
-<meta property="og:description" content="Da Nang dining guide — 43 MICHELIN-listed restaurants, street food by neighbourhood, and what to eat in Central Vietnam.">
+<meta property="og:title" content="Da Nang MICHELIN Guide Restaurants 2025">
+<meta property="og:description" content="Da Nang's MICHELIN Guide restaurants 2025 — 1 Star, 1 Green Star, 20 Bib Gourmand, and 22 Selected restaurants.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dananghotelguide.com/dining.html">
-<meta property="og:image" content="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=630&fit=crop">
+<meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=630&fit=crop">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -23,11 +23,14 @@
   --white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
+  --gold:#B8860B;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
   --r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;
+  --shadow-card:0 2px 12px rgba(0,0,0,.07);
+  --shadow-hover:0 8px 32px rgba(0,0,0,.13);
   --ease:cubic-bezier(.4,0,.2,1);
 }
 html{scroll-behavior:smooth}
@@ -37,7 +40,7 @@ img{display:block;max-width:100%}
 
 /* Nav */
 .site-nav{position:sticky;top:0;z-index:500;height:64px;background:rgba(13,53,53,.97);backdrop-filter:blur(18px);display:flex;align-items:center;padding:0 var(--gutter);gap:0;border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{font-family:var(--font-serif);font-size:1.35rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1rem,3vw,2.5rem)}
+.nav-logo{font-family:var(--font-serif);font-size:1.35rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1rem,3vw,2.5rem);display:inline-flex;align-items:baseline;gap:.35em}
 .nav-logo em{font-style:italic;color:#E07A62}
 .nav-links{display:flex;align-items:center;gap:0;flex:1}
 .nav-link{position:relative;padding:8px 13px;border-radius:8px;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.5);transition:color .18s,background .18s;white-space:nowrap}
@@ -53,8 +56,23 @@ img{display:block;max-width:100%}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#C8604A;color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s}
 .nav-stays-btn:hover{background:#E07A62}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:8px;padding:10px;margin-left:8px}
-.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px}
+.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}}
+
+/* Mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:450;background:var(--ocean-deep);transform:translateX(100%);transition:transform .3s var(--ease);display:flex;flex-direction:column;padding:calc(64px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.mobile-nav-link:hover{color:#fff}
+.mobile-nav-link.active{color:var(--coral-light)}
+.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.mobile-dropdown-items.open{max-height:500px}
+.mobile-sub-link{display:block;padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s}
+.mobile-sub-link:hover{color:#fff}
+.mobile-stays-btn{display:block;margin-top:2rem;padding:15px;background:var(--coral);color:#fff;text-align:center;font-size:.95rem;font-weight:700;border-radius:var(--r-xl)}
 
 /* Breadcrumb */
 .breadcrumb{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:10px var(--gutter)}
@@ -64,19 +82,23 @@ img{display:block;max-width:100%}
 .breadcrumb a:hover{opacity:.7}
 .breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
 
-/* Page wrap */
-.page-wrap{max-width:760px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) var(--gutter)}
-.page-h1{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);color:var(--ink);letter-spacing:-.03em;margin-bottom:.5rem;line-height:1.1}
-.page-h1 em{font-style:italic;color:var(--ocean)}
-.page-meta{font-size:.75rem;color:var(--ink-muted);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand-dark)}
-.prose p{font-size:.97rem;color:var(--ink-soft);line-height:1.85;margin-bottom:1.2rem}
-.prose h2{font-family:var(--font-serif);font-size:1.5rem;color:var(--ink);letter-spacing:-.02em;margin:2.5rem 0 .8rem}
-.prose h2:first-child{margin-top:0}
-.prose ul{padding-left:1.2rem;margin-bottom:1.2rem}
-.prose li{font-size:.95rem;color:var(--ink-soft);line-height:1.8;margin-bottom:.25rem}
-.prose a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
-.prose strong{color:var(--ink);font-weight:700}
-.prose .notice{background:var(--ocean-pale);border:1px solid rgba(27,92,92,.15);border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:.9rem;color:var(--ocean)}
+/* Search overlay */
+.search-overlay{position:fixed;inset:0;z-index:900;background:rgba(10,30,30,.75);backdrop-filter:blur(8px);display:flex;align-items:flex-start;justify-content:center;padding-top:80px;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.search-overlay.open{opacity:1;visibility:visible}
+.search-input-wrap{width:100%;max-width:600px;margin:0 var(--gutter);background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.search-input-wrap input{width:100%;padding:1.1rem 1.5rem;font-size:1.05rem;border:none;outline:none;font-family:var(--font-sans);color:var(--ink);background:transparent}
+.search-results-inline{max-height:420px;overflow-y:auto;border-top:1px solid var(--sand-dark)}
+.sri{display:flex;gap:12px;padding:.9rem 1.5rem;border-bottom:1px solid var(--sand);cursor:pointer;transition:background .15s}
+.sri:hover{background:var(--sand)}
+.sri-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-muted);white-space:nowrap;padding-top:2px}
+.sri-title{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:2px}
+.sri-excerpt{font-size:.78rem;color:var(--ink-muted);line-height:1.5}
+.search-hint{padding:1rem 1.5rem;font-size:.82rem;color:var(--ink-muted)}
+.sh-pill{display:inline-block;background:var(--sand);border-radius:100px;padding:4px 12px;margin:4px 4px 0 0;cursor:pointer;font-size:.78rem;color:var(--ink-soft);transition:background .15s}
+.sh-pill:hover{background:var(--sand-mid)}
+.search-close{display:flex;align-items:center;justify-content:flex-end;padding:.6rem 1rem .4rem;border-bottom:1px solid var(--sand-dark)}
+.search-close button{background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--ink-muted);line-height:1}
+.search-no-results{padding:1.2rem 1.5rem;font-size:.88rem;color:var(--ink-muted)}
 
 /* Footer */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,4rem) var(--gutter) 0}
@@ -99,26 +121,433 @@ img{display:block;max-width:100%}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
 
-.mobile-menu{position:fixed;inset:0;z-index:450;background:var(--ocean-deep);transform:translateX(100%);transition:transform .3s var(--ease);display:flex;flex-direction:column;padding:calc(64px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
-.mobile-nav-link:hover{color:#fff}
-.mobile-nav-link.active{color:var(--coral-light)}
-.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
-.mobile-dropdown-items.open{max-height:500px}
-.mobile-sub-link{display:block;padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s}
-.mobile-sub-link:hover{color:#fff}
-.mobile-stays-btn{display:block;margin-top:2rem;padding:15px;background:var(--coral);color:#fff;text-align:center;font-size:.95rem;font-weight:700;border-radius:var(--r-xl)}
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:8px;padding:10px;margin-left:8px}
-.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
-.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.nav-hamburger.open span:nth-child(2){opacity:0}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-@media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}}
+/* ═══════════════════════════════════════════════════════════
+   PAGE CSS — best-hotels-in-da-nang.html
+   Uses homepage design tokens; adds article layout only
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── ARTICLE HERO ────────────────────────────────────────── */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:var(--ocean-deep);
+  min-height:440px;
+  display:flex;align-items:flex-end;
+}
+.page-hero-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  opacity:.28;
+}
+.page-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,53,53,.98) 0%,rgba(13,53,53,.65) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);
+  display:grid;
+  grid-template-columns:1fr 290px;
+  gap:clamp(2rem,4vw,3.5rem);
+  align-items:end;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--coral-light);margin-bottom:1rem;
+}
+.hero-text h1{
+  font-family:var(--font-serif);
+  font-size:clamp(2.5rem,5.5vw,4rem);
+  color:#fff;line-height:1.06;
+  letter-spacing:-.035em;margin-bottom:1rem;
+}
+.hero-text h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-sub{
+  font-size:clamp(.92rem,1.6vw,1.05rem);
+  color:rgba(255,255,255,.58);
+  max-width:500px;line-height:1.78;margin-bottom:1.5rem;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+}
+.hero-meta span{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.73rem;font-weight:600;
+  color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:100px;padding:5px 12px;
+}
+.hero-meta span strong{color:rgba(255,255,255,.85)}
+/* hero stats card */
+.hero-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-xl);
+  backdrop-filter:blur(20px);padding:1.6rem 1.8rem;
+}
+.hero-card-title{
+  font-size:.63rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);
+  margin-bottom:1.1rem;padding-bottom:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-stat-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:.9rem;margin-bottom:1.4rem;
+}
+.hero-stat-num{
+  font-family:var(--font-serif);font-size:1.55rem;
+  color:#fff;letter-spacing:-.02em;line-height:1;margin-bottom:3px;
+}
+.hero-stat-label{font-size:.65rem;color:rgba(255,255,255,.38);font-weight:500}
+.hero-cta-btn{
+  display:block;padding:11px 16px;
+  background:var(--coral);color:#fff;
+  text-align:center;font-size:.82rem;font-weight:700;
+  border-radius:var(--r-md);transition:background .18s,transform .15s;
+}
+.hero-cta-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+
+/* ── PAGE LAYOUT ─────────────────────────────────────────── */
+.page-wrap{
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(2.5rem,5vw,4rem) var(--gutter);
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:clamp(2rem,4vw,3.5rem);
+  align-items:start;
+}
+.article-body{min-width:0}
+.sidebar{position:sticky;top:80px;min-width:0}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+.toc-box{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-lg);padding:1.4rem 1.6rem;margin-bottom:2.5rem;
+}
+.toc-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:.85rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.toc-list{padding-left:1.1rem;margin:0;display:flex;flex-direction:column;gap:.3rem}
+.toc-list li{font-size:.84rem}
+.toc-list a{color:var(--ocean);font-weight:500;transition:opacity .15s}
+.toc-list a:hover{opacity:.7}
+
+/* ── SECTION SPACING ─────────────────────────────────────── */
+.article-body > section{
+  padding-bottom:clamp(2.5rem,5vw,4rem);
+  border-bottom:1px solid var(--sand-dark);
+  margin-bottom:clamp(2.5rem,5vw,4rem);
+}
+.article-body > section:last-of-type{border-bottom:none}
+.section-intro{
+  font-size:.97rem;color:var(--ink-soft);
+  line-height:1.82;margin-bottom:1.8rem;
+}
+
+/* ── SECTION IMAGE ───────────────────────────────────────── */
+.section-img-wrap{
+  margin:1.6rem 0;border-radius:var(--r-xl);overflow:hidden;
+  position:relative;
+}
+.section-img-wrap img{
+  width:100%;height:320px;object-fit:cover;display:block;
+  transition:transform .6s var(--ease);
+}
+.section-img-wrap:hover img{transform:scale(1.025)}
+.img-caption{
+  font-size:.72rem;color:var(--ink-muted);
+  padding:.6rem .8rem;text-align:right;
+  font-style:italic;
+}
+
+/* ── PROSE ───────────────────────────────────────────────── */
+.prose p{
+  font-size:.97rem;color:var(--ink-soft);
+  line-height:1.85;margin-bottom:1.15rem;
+}
+.prose p:last-child{margin-bottom:0}
+.prose a{
+  color:var(--ocean);font-weight:600;
+  border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s;
+}
+.prose a:hover{border-color:var(--ocean)}
+.prose strong{color:var(--ink);font-weight:700}
+
+/* ── HOTEL CARDS ─────────────────────────────────────────── */
+.hotel-stack{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:1.8rem}
+.hotel-card{
+  display:grid;grid-template-columns:220px 1fr;
+  background:var(--white);border-radius:var(--r-xl);
+  overflow:hidden;border:1px solid var(--sand-dark);
+  transition:box-shadow .25s,transform .22s;
+}
+.hotel-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hotel-card-img{
+  width:220px;height:100%;min-height:200px;
+  object-fit:cover;display:block;
+  transition:transform .5s var(--ease);
+}
+.hotel-card:hover .hotel-card-img{transform:scale(1.04)}
+.hotel-card-body{
+  padding:1.4rem 1.6rem;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.hotel-card-top{flex:1}
+.hotel-badge{
+  display:inline-block;font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;margin-bottom:.6rem;
+}
+.badge-beach{background:var(--ocean-pale);color:var(--ocean)}
+.badge-luxury{background:#fdf5e0;color:#7a5800}
+.badge-boutique{background:#f5f0e8;color:#6b4c2a}
+.badge-family{background:#eef7ee;color:#2a6e2a}
+.badge-value{background:#fff3f1;color:#a83a25}
+.hotel-name{
+  font-family:var(--font-serif);font-size:1.2rem;
+  color:var(--ink);letter-spacing:-.02em;
+  margin-bottom:.2rem;line-height:1.2;
+}
+.hotel-location{
+  font-size:.74rem;color:var(--ink-muted);font-weight:600;
+  margin-bottom:.7rem;display:flex;align-items:center;gap:4px;
+}
+.hotel-desc{font-size:.85rem;color:var(--ink-soft);line-height:1.72}
+.hotel-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:1rem;border-top:1px solid var(--sand-dark);
+  margin-top:1rem;gap:.75rem;flex-wrap:wrap;
+}
+.hotel-price{font-size:.82rem;color:var(--ink-muted)}
+.hotel-price strong{
+  font-size:1.05rem;color:var(--ink);font-weight:700;
+  font-family:var(--font-serif);
+}
+.hotel-book-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:8px 16px;background:var(--ocean);color:#fff;
+  font-size:.77rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;white-space:nowrap;
+}
+.hotel-book-btn:hover{background:var(--ocean-light);transform:translateY(-1px)}
+
+/* ── CALLOUT BOXES ───────────────────────────────────────── */
+.callout{
+  border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.8rem 0;
+  border:1px solid rgba(27,92,92,.15);
+  border-left:3px solid var(--ocean);
+  background:var(--ocean-pale);
+}
+.callout-label{
+  font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ocean);margin-bottom:.45rem;
+}
+.callout p{font-size:.87rem;color:var(--ink-soft);line-height:1.72;margin:0}
+.callout a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+.callout-gold{
+  background:#fffbf0;border-color:#e8c84a;border-left-color:#c9a227;
+}
+.callout-gold .callout-label{color:var(--gold)}
+.callout-coral{
+  background:#fff5f3;border-color:rgba(200,96,74,.2);border-left-color:var(--coral);
+}
+.callout-coral .callout-label{color:var(--coral)}
+
+/* ── AREA GRID ───────────────────────────────────────────── */
+.area-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin:1.6rem 0;
+}
+.area-card{
+  background:var(--white);border-radius:var(--r-lg);
+  border:1px solid var(--sand-dark);padding:1.3rem 1.5rem;
+  transition:box-shadow .2s,transform .2s;
+}
+.area-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.area-card-name{
+  font-family:var(--font-serif);font-size:1.05rem;
+  color:var(--ink);letter-spacing:-.02em;margin-bottom:.2rem;
+}
+.area-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ocean);background:var(--ocean-pale);
+  padding:3px 8px;border-radius:100px;margin-bottom:.6rem;
+}
+.area-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.72}
+.area-desc strong{color:var(--ink);font-weight:700}
+
+/* ── SEASON TABLE ────────────────────────────────────────── */
+.season-table{
+  width:100%;border-collapse:collapse;margin:1.5rem 0;
+  font-size:.84rem;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 1px 4px rgba(26,26,24,.06);
+}
+.season-table th{
+  background:var(--ocean-deep);color:rgba(255,255,255,.75);
+  padding:.75rem 1rem;text-align:left;font-size:.7rem;
+  font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+}
+.season-table td{
+  padding:.7rem 1rem;border-bottom:1px solid var(--sand-dark);
+  color:var(--ink-soft);vertical-align:middle;
+  background:var(--white);
+}
+.season-table tr:last-child td{border-bottom:none}
+.season-table tr:hover td{background:var(--sand)}
+.tag-good{
+  display:inline-block;background:#eef7ee;color:#2a6e2a;
+  font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px;
+}
+.tag-wet{
+  display:inline-block;background:#fff3f1;color:#a83a25;
+  font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px;
+}
+.tag-ok{
+  display:inline-block;background:#fdf5e0;color:#7a5800;
+  font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:100px;
+}
+
+/* ── CTA BLOCK ───────────────────────────────────────────── */
+.cta-block{
+  background:var(--ocean-deep);border-radius:var(--r-xl);
+  padding:clamp(1.8rem,4vw,2.8rem);text-align:center;
+  margin:2.5rem 0;position:relative;overflow:hidden;
+}
+.cta-block::before{
+  content:'';position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=400&fit=crop&auto=format&q=40') center/cover;
+  opacity:.1;
+}
+.cta-block h3{
+  position:relative;z-index:1;
+  font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);
+  color:#fff;letter-spacing:-.025em;line-height:1.15;margin-bottom:.7rem;
+}
+.cta-block h3 em{font-style:italic;color:rgba(255,255,255,.6)}
+.cta-block p{
+  position:relative;z-index:1;
+  font-size:.88rem;color:rgba(255,255,255,.5);
+  max-width:420px;margin:0 auto 1.5rem;line-height:1.65;
+}
+.cta-block-btn{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 28px;background:var(--coral);color:#fff;
+  font-size:.88rem;font-weight:700;border-radius:100px;
+  transition:background .18s,transform .15s;
+}
+.cta-block-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq-section{margin-top:0}
+.faq-title{
+  font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.2rem);
+  color:var(--ink);letter-spacing:-.03em;margin-bottom:1.5rem;
+}
+.faq-item{border-bottom:1px solid var(--sand-dark)}
+.faq-item:last-child{border-bottom:none}
+.faq-item details{padding:.9rem 0}
+.faq-item summary{
+  font-size:.95rem;font-weight:700;color:var(--ink);
+  cursor:pointer;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;padding-right:.5rem;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:'+';font-size:1.2rem;color:var(--ocean);
+  flex-shrink:0;transition:transform .2s;
+  font-weight:300;
+}
+.faq-item details[open] summary::after{transform:rotate(45deg)}
+.faq-answer{
+  font-size:.9rem;color:var(--ink-soft);line-height:1.8;
+  padding:.8rem 0 .4rem;max-width:70ch;
+}
+
+/* ── SIDEBAR CARDS ───────────────────────────────────────── */
+.sidebar-card{
+  background:var(--white);border:1px solid var(--sand-dark);
+  border-radius:var(--r-xl);padding:1.4rem 1.6rem;margin-bottom:1.2rem;
+}
+.sidebar-card-title{
+  font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-muted);margin-bottom:1rem;padding-bottom:.7rem;
+  border-bottom:1px solid var(--sand-dark);
+}
+.sidebar-quick{display:flex;flex-direction:column}
+.quick-item{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:.55rem 0;border-bottom:1px solid var(--sand-dark);gap:.75rem;
+}
+.quick-item:last-child{border-bottom:none;padding-bottom:0}
+.quick-label{font-size:.8rem;color:var(--ink-muted);font-weight:500}
+.quick-val{font-size:.82rem;color:var(--ink);font-weight:700;text-align:right}
+.sidebar-cta-btn{
+  display:block;margin-top:1.2rem;padding:10px;
+  background:var(--ocean);color:#fff;text-align:center;
+  border-radius:var(--r-md);font-size:.82rem;font-weight:700;
+  transition:background .18s;
+}
+.sidebar-cta-btn:hover{background:var(--ocean-light)}
+.sidebar-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:.15rem}
+.sidebar-links li a{
+  display:block;padding:.42rem 0;font-size:.83rem;color:var(--ocean);
+  font-weight:500;border-bottom:1px solid var(--sand-dark);
+  transition:color .15s,padding-left .15s;
+}
+.sidebar-links li:last-child a{border-bottom:none}
+.sidebar-links li a:hover{color:var(--ocean-light);padding-left:.35rem}
+.author-note{font-size:.75rem;color:var(--ink-muted);line-height:1.6;margin-top:.3rem}
+.affiliate-link{/* no visual change — purely semantic */}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;padding-bottom:2.5rem}
+  .hero-card{display:none}
+  .page-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .area-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .hotel-card{grid-template-columns:1fr}
+  .hotel-card-img{width:100%;height:220px;min-height:0}
+  .hero-text h1{font-size:2.2rem}
+  .season-table{font-size:.78rem}
+  .season-table th,.season-table td{padding:.55rem .7rem}
+}
+@media(max-width:480px){
+  .area-grid{grid-template-columns:1fr}
+  .hero-meta span{font-size:.68rem;padding:4px 9px}
+}
+
 
 </style>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Da Nang Dining Guide","description":"Da Nang dining guide — 43 MICHELIN-listed restaurants, street food by neighbourhood, and what to eat in Central Vietnam.","url":"https://www.dananghotelguide.com/dining.html","author":{"@type":"Organization","name":"Da Nang Hotel Guide"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Da Nang MICHELIN Guide Restaurants 2025","description":"Da Nang dining guide — 1 MICHELIN Star, 1 Green Star, 20 Bib Gourmand, and 22 Selected restaurants. The complete guide to dining in Da Nang, Vietnam.","url":"https://www.dananghotelguide.com/dining.html","author":{"@type":"Organization","name":"Da Nang Hotel Guide"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
+</script>
+
+<script type="application/ld+json">
+[
+  {"@context":"https://schema.org","@type":"Restaurant","name":"La Maison 1888","address":{"@type":"PostalAddress","streetAddress":"Bai Bac, Son Tra Peninsula","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"French","priceRange":"$$$$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/la-maison-1888"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Nen Restaurant","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"Vietnamese","priceRange":"$$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/nen"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Madame Lan","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"Vietnamese","priceRange":"$$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Bé Mặn","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"Central Vietnamese","priceRange":"$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Bánh Xèo Bà Dưỡng","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"Central Vietnamese","priceRange":"$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Mì Quảng 1A","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"Central Vietnamese","priceRange":"$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Waterfront Restaurant & Bar","address":{"@type":"PostalAddress","streetAddress":"150-152 Bach Dang","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"International","priceRange":"$$$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants"},
+  {"@context":"https://schema.org","@type":"Restaurant","name":"Luna Pub & Restaurant","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"},"servesCuisine":"International","priceRange":"$$","url":"https://www.dananghotelguide.com/dining.html","sameAs":"https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants"}
+]
 </script>
 </head>
 <body>
@@ -128,80 +557,503 @@ img{display:block;max-width:100%}
   <div class="nav-links" role="list">
     <a href="index.html" class="nav-link">Home</a>
     <div class="nav-dropdown">
-      <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true">Hotels</a>
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Hotels</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span>★</span>Best Hotels</a>
-        <a href="da-nang-beach-hotels.html"   class="nav-dropdown-item" role="menuitem"><span>🏖</span>Beachfront</a>
-        <a href="luxury-hotels-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span>✦</span>Luxury</a>
-        <a href="family-hotels-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span>👨‍👩‍👧</span>Family</a>
+        <a href="best-hotels-in-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span>★</span>Best Hotels</a>
+        <a href="da-nang-beach-hotels.html"    class="nav-dropdown-item" role="menuitem"><span>🏖</span>Beachfront</a>
+        <a href="luxury-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span>✦</span>Luxury</a>
+        <a href="family-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span>👨‍👩‍👧</span>Family</a>
         <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span>◈</span>Boutique</a>
       </div>
     </div>
-    <a href="where-to-stay.html" class="nav-link">Where to Stay</a>
-    <a href="dining.html" class="nav-link">Dining</a>
-    <a href="guides.html" class="nav-link  active">Guides</a>
-    <a href="about.html" class="nav-link">About</a>
+    <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
+    <a href="dining.html"   class="nav-link active">Dining</a>
+    <a href="guides.html"   class="nav-link">Guides</a>
+    <a href="about.html"    class="nav-link">About</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-nav&dest_id=-3714993&dest_type=city" class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays</a>
-    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search" aria-expanded="false" style="background:rgba(255,255,255,.08);border:none;cursor:pointer;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:1rem;transition:background .15s">⌕</button>
+    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-nav&dest_id=-3714993&dest_type=city"
+       class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- Mobile drawer -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <a href="index.html" class="mobile-nav-link">Home</a>
-  <a href="hotels.html" class="mobile-nav-link" id="mobileHotelsToggle">
-    Hotels <span id="mobileHotelsChevron" style="transition:transform .25s">▾</span>
-  </a>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html"              class="mobile-nav-link">Home</a>
+  <a href="hotels.html"             class="mobile-nav-link" id="mobileHotelsToggle">Hotels <span style="font-size:.8rem;opacity:.5">▾</span></a>
   <div class="mobile-dropdown-items" id="mobileHotelsSub">
-    <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">★ Best Hotels</a>
-    <a href="da-nang-beach-hotels.html"   class="mobile-sub-link">🏖 Beachfront</a>
-    <a href="luxury-hotels-da-nang.html"  class="mobile-sub-link">✦ Luxury</a>
-    <a href="family-hotels-da-nang.html"  class="mobile-sub-link">Family</a>
-    <a href="boutique-hotels-da-nang.html" class="mobile-sub-link">Boutique</a>
+    <a href="best-hotels-in-da-nang.html"  class="mobile-sub-link">Best Hotels</a>
+    <a href="da-nang-beach-hotels.html"    class="mobile-sub-link">Beachfront Hotels</a>
+    <a href="luxury-hotels-da-nang.html"   class="mobile-sub-link">Luxury Hotels</a>
+    <a href="family-hotels-da-nang.html"   class="mobile-sub-link">Family Hotels</a>
+    <a href="boutique-hotels-da-nang.html" class="mobile-sub-link">Boutique Hotels</a>
   </div>
-  <a href="where-to-stay.html" class="mobile-nav-link">Where to Stay</a>
-  <a href="dining.html"        class="mobile-nav-link">Dining</a>
-  <a href="guides.html"        class="mobile-nav-link">Guides</a>
-  <a href="about.html"         class="mobile-nav-link">About</a>
-  <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-mobile&dest_id=-3714993&dest_type=city" class="mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com</a>
+  <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
+  <a href="dining.html"   class="mobile-nav-link active">Dining</a>
+  <a href="guides.html"   class="mobile-nav-link">Guides</a>
+  <a href="about.html"    class="mobile-nav-link">About</a>
+  <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-mobile&dest_id=-3714993&dest_type=city"
+     class="mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Site search">
+  <div style="width:100%;max-width:600px;margin:0 var(--gutter)">
+    <div class="search-input-wrap">
+      <div class="search-close"><button id="searchCloseBtn" aria-label="Close search">✕</button></div>
+      <input type="search" id="searchInput" placeholder="Search Da Nang Hotel Guide…" autocomplete="off" aria-label="Search">
+      <div class="search-results-inline" id="searchResultsInline" role="listbox"></div>
+      <div class="search-hint" id="searchHint">
+        <p style="margin-bottom:.5rem;font-weight:600;font-size:.8rem;color:var(--ink-soft)">Search Da Nang Hotel Guide</p>
+        <span class="sh-pill" data-q="Luxury hotels">Luxury hotels</span>
+        <span class="sh-pill" data-q="Beachfront">Beachfront</span>
+        <span class="sh-pill" data-q="Best time to visit">Best time to visit</span>
+        <span class="sh-pill" data-q="MICHELIN">MICHELIN</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <ol>
     <li><a href="index.html">Home</a></li>
-    <li><span aria-current="page">Da Nang Dining Guide — MICHELIN Restaurants & Street Food 2026</span></li>
+    <li><span aria-current="page">Da Nang MICHELIN Guide Restaurants 2025</span></li>
   </ol>
 </nav>
 
-<div class="page-wrap" style="max-width:900px">
-  <h1 class="page-h1">Da Nang <em>Dining Guide</em></h1>
-  <p class="page-meta">MICHELIN Guide 2025 &middot; 43 listed restaurants &middot; Updated February 2026</p>
-
-  <div style="background:var(--ocean-pale);border:1px solid rgba(27,92,92,.15);border-radius:20px;padding:2rem;margin-bottom:2.5rem">
-    <p style="font-size:.95rem;color:var(--ocean);font-weight:600;margin-bottom:.5rem">Full dining guide coming soon</p>
-    <p style="font-size:.88rem;color:var(--ink-muted);line-height:1.7">Da Nang has 43 MICHELIN-listed restaurants including one MICHELIN Star, one Green Star, 20 Bib Gourmand, and 22 Selected restaurants. Our full dining guide is in development. In the meantime, the overview below covers the essentials.</p>
+<header class="page-hero">
+  <img class="page-hero-img"
+    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=900&fit=crop&auto=format&q=75"
+    alt="Elegant fine dining restaurant interior with candlelight and white linen"
+    loading="eager" width="1920" height="900">
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">🍽 Da Nang Hotel Guide &nbsp;·&nbsp; MICHELIN Guide 2025</div>
+      <h1>Da Nang <em>MICHELIN Guide</em></h1>
+      <p class="hero-sub">Da Nang's first MICHELIN Guide coverage arrived in 2023, establishing the city alongside Hoi An and Ho Chi Minh City as a serious dining destination. From the Star-holding fine dining of Son Tra to $3 bib gourmand bowls in Hai Chau — the full picture.</p>
+      <div class="hero-meta">
+        <span><strong>1</strong> MICHELIN Star</span>
+        <span><strong>1</strong> Green Star</span>
+        <span><strong>20</strong> Bib Gourmand</span>
+        <span><strong>22</strong> Selected restaurants</span>
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="hero-card-title">At a glance</div>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">44</div>
+          <div class="hero-stat-label">Listed total</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">1★</div>
+          <div class="hero-stat-label">MICHELIN Star</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20</div>
+          <div class="hero-stat-label">Bib Gourmand</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$3</div>
+          <div class="hero-stat-label">Cheapest listed</div>
+        </div>
+      </div>
+      <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants"
+         class="hero-cta-btn" target="_blank" rel="nofollow noopener">View MICHELIN Guide →</a>
+    </div>
   </div>
+</header>
 
-  <div class="prose">
-    <h2>The MICHELIN picture</h2>
-    <p>Da Nang received its first MICHELIN Guide coverage in 2023, establishing the city as a serious dining destination. The single MICHELIN Star holder is <strong>La Maison 1888</strong> at the InterContinental Sun Peninsula Resort — a French fine-dining experience set in a colonial villa on Son Tra Peninsula, with one of the most dramatic dining settings in Vietnam.</p>
-    <p>The Green Star goes to <strong>Nen Restaurant</strong>, recognised for its sustainable approach to Central Vietnamese cuisine. The 20 Bib Gourmand listings represent outstanding value — restaurants serving quality meals at accessible prices, predominantly focused on Da Nang's distinctive Central Vietnamese street food traditions.</p>
+<div class="page-wrap">
 
-    <h2>What to eat</h2>
-    <p>Da Nang sits in Central Vietnam, where the cuisine is distinct from both the north and south. The essential dishes: <strong>mì Quảng</strong> (turmeric noodles with pork, shrimp, and peanuts), <strong>bánh mì</strong> (the Da Nang version is notably different from Saigon's), <strong>bánh xèo</strong> (sizzling rice crepes), and grilled seafood sourced from the morning catch at Mỹ Khê fishing village.</p>
-    <p>The An Thuong neighbourhood around Mỹ Khê Beach has the highest concentration of internationally oriented restaurants and cafés. For authentic local food, the markets and street stalls around Hàn Market and the backstreets of Hải Châu district are the right places to look.</p>
+  <!-- ── ARTICLE ── -->
+  <article class="article-body">
 
-    <h2>Dining by area</h2>
-    <p><strong>An Thuong / Mỹ Khê:</strong> The tourist dining strip — international cuisines, beach clubs, rooftop bars, and a handful of genuinely excellent local restaurants mixed in. Best for convenience.<br>
-    <strong>Hàn River promenade:</strong> Evening dining with Dragon Bridge views. More atmospheric than culinarily exceptional, but several strong Vietnamese restaurants worth seeking out.<br>
-    <strong>Hải Châu district:</strong> The local food neighbourhood. Breakfast culture is strong here — bánh mì carts, phở stalls, cà phê trứng (egg coffee).<br>
-    <strong>Son Tra Peninsula:</strong> Resort dining only, but La Maison 1888 makes the 20-minute taxi worthwhile for a special occasion.</p>
+    <!-- TOC -->
+    <nav class="toc-box" aria-label="Table of contents">
+      <div class="toc-title">In this guide</div>
+      <ol class="toc-list">
+        <li><a href="#overview">The MICHELIN picture in Da Nang</a></li>
+        <li><a href="#star">MICHELIN Star restaurant</a></li>
+        <li><a href="#green-star">Green Star — sustainable dining</a></li>
+        <li><a href="#bib-gourmand">Bib Gourmand — best value</a></li>
+        <li><a href="#selected">MICHELIN Selected restaurants</a></li>
+        <li><a href="#what-to-eat">What to eat in Da Nang</a></li>
+        <li><a href="#by-area">Dining by area</a></li>
+      </ol>
+    </nav>
 
-    <p style="margin-top:2rem"><a href="guides.html" style="color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)">← Back to all guides</a></p>
-  </div>
-</div>
+    <!-- OVERVIEW -->
+    <section id="overview" aria-labelledby="overview-h">
+      <span class="section-label">Overview</span>
+      <h2 class="section-heading" id="overview-h">The MICHELIN Picture in <em>Da Nang</em></h2>
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=480&fit=crop&auto=format&q=80"
+          alt="Da Nang coastline and city from above showing the dining and hotel district" loading="lazy" width="1200" height="480">
+        <p class="img-caption">Da Nang — where a one-MICHELIN-Star resort restaurant on Son Tra Peninsula coexists with $3 bib gourmand noodle shops in Hai Chau district</p>
+      </div>
+      <div class="prose">
+        <p>Da Nang entered the MICHELIN Guide universe in 2023, becoming one of three Vietnamese cities — alongside Ho Chi Minh City and Hanoi — to receive formal recognition. The listing reflected what local food culture had known for years: that Central Vietnam's cuisine is distinct, historically deep, and genuinely excellent value.</p>
+        <p>The 2025 Guide lists 44 restaurants in Da Nang: one MICHELIN Star, one Green Star for sustainable practice, 20 Bib Gourmand (outstanding value), and 22 Selected restaurants. The range is deliberately wide — the inspectors clearly understood that Da Nang's food culture lives at every price point, and a guide that covered only fine dining would misrepresent the city entirely.</p>
+        <p>What connects the Star restaurant to the $3 bib gourmand bowl shop is Central Vietnamese technique: the careful layering of fermented shrimp paste, turmeric, lemongrass, and fresh herbs that defines mì Quảng, bánh xèo, and the dozens of dishes unique to this stretch of coastline.</p>
+        <div class="notice" style="background:var(--ocean-pale);border:1px solid rgba(27,92,92,.15);border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin:1.5rem 0;font-size:.9rem;color:var(--ocean)">
+          <strong>MICHELIN Guide Vietnam:</strong> The complete and searchable MICHELIN Guide for Da Nang is at <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants" target="_blank" rel="nofollow noopener" style="color:var(--ocean);font-weight:700;border-bottom:1px solid rgba(27,92,92,.3)">guide.michelin.com/vn/en/da-nang-region</a> — updated annually each autumn.
+        </div>
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- MICHELIN STAR -->
+    <section id="star" aria-labelledby="star-h">
+      <span class="section-label">⭐ MICHELIN Star</span>
+      <h2 class="section-heading" id="star-h">MICHELIN <em>Star Restaurant</em></h2>
+      <p class="section-intro">Da Nang has one MICHELIN Star restaurant — a number that belies the quality. La Maison 1888 consistently appears on Southeast Asia best-restaurant lists and is one of the most dramatically sited fine-dining experiences in Vietnam.</p>
+
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1200&h=420&fit=crop&auto=format&q=80"
+          alt="Elegant fine dining table setting with white linen and candlelight" loading="lazy" width="1200" height="420">
+        <p class="img-caption">La Maison 1888 — French fine dining in a colonial villa on Son Tra Peninsula, MICHELIN Star since 2023</p>
+      </div>
+
+      <div class="hotel-stack">
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=440&h=340&fit=crop&auto=format"
+            alt="La Maison 1888 restaurant interior elegant colonial French dining" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-luxury">⭐ MICHELIN Star</span>
+              <div class="hotel-name">La Maison 1888</div>
+              <div class="hotel-location">📍 Son Tra Peninsula — InterContinental Sun Peninsula Resort</div>
+              <p class="hotel-desc">Da Nang's only MICHELIN Star restaurant, set inside a restored colonial villa at the InterContinental Sun Peninsula. The cuisine is French fine dining conceived with Pierre Gagnaire's influence — precise technique, Vietnamese ingredients, and a wine list with genuine depth. The setting — a forested hillside above a private bay — is among the most dramatic in Southeast Asia. Booking essential: dinner reservations fill weeks in advance in peak season.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$$$$</strong> &nbsp;·&nbsp; Tasting menu from <strong>$120</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/la-maison-1888"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="callout callout-gold" style="background:#fdf5e0;border:1px solid rgba(184,134,11,.2);border-radius:var(--r-lg);padding:1.2rem 1.5rem;margin-top:1.5rem">
+        <div class="callout-label" style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:.5rem">📍 Getting there</div>
+        <p style="font-size:.88rem;color:var(--ink-soft);line-height:1.75">La Maison 1888 is 20 minutes from Da Nang city centre by taxi. The InterContinental runs a complimentary city transfer for dinner guests — call ahead when booking. Many guests combine an evening at La Maison 1888 with a stay at the resort itself; <a href="luxury-hotels-da-nang.html" style="color:var(--ocean);font-weight:600">see the InterContinental review</a> in the luxury hotels guide.</p>
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- GREEN STAR -->
+    <section id="green-star" aria-labelledby="green-h">
+      <span class="section-label">🟢 Green Star</span>
+      <h2 class="section-heading" id="green-h">Green Star — <em>Sustainable Dining</em></h2>
+      <p class="section-intro">The MICHELIN Green Star recognises restaurants committed to sustainable gastronomy. Da Nang has one — Nen Restaurant, which has built its menu around Central Vietnamese tradition and responsible sourcing since opening in 2019.</p>
+
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1200&h=420&fit=crop&auto=format&q=80"
+          alt="Sustainable restaurant interior with natural materials and tropical garden" loading="lazy" width="1200" height="420">
+        <p class="img-caption">Nen Restaurant — Central Vietnamese cuisine, sustainable sourcing, MICHELIN Green Star 2025</p>
+      </div>
+
+      <div class="hotel-stack">
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=440&h=340&fit=crop&auto=format"
+            alt="Vietnamese restaurant bowl with fresh herbs peanuts and turmeric noodles" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-boutique">🟢 Green Star</span>
+              <div class="hotel-name">Nen Restaurant</div>
+              <div class="hotel-location">📍 Hai Chau District — 2 Dong Da Street</div>
+              <p class="hotel-desc">Central Vietnamese cuisine built on a sustainable sourcing philosophy — the menu changes with the season and the available catch, and the kitchen works directly with fishing families and small farms in the surrounding region. The food is deeply rooted in Da Nang's culinary heritage: bún bò Huế, mì Quảng, and bánh xèo reinterpreted with careful technique and better ingredients than most versions of the same dishes. The dining room is warm and unhurried. The price point is fair.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$$</strong> &nbsp;·&nbsp; Mains from <strong>$8</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/nen"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- BIB GOURMAND -->
+    <section id="bib-gourmand" aria-labelledby="bib-h">
+      <span class="section-label">🍽 Bib Gourmand</span>
+      <h2 class="section-heading" id="bib-h">Bib Gourmand — <em>Outstanding Value</em></h2>
+      <p class="section-intro">The Bib Gourmand designation marks restaurants offering exceptional cooking at accessible prices. Da Nang's 20 listings are the most representative cross-section of what the city actually eats — Central Vietnamese street food elevated to its best expression.</p>
+
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=1200&h=420&fit=crop&auto=format&q=80"
+          alt="Central Vietnamese street food market with fresh herbs and noodle dishes" loading="lazy" width="1200" height="420">
+        <p class="img-caption">Da Nang's Bib Gourmand listings are concentrated in the market streets of Hai Chau — the city's authentic food neighbourhood</p>
+      </div>
+
+      <div class="hotel-stack">
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=440&h=340&fit=crop&auto=format"
+            alt="Vietnamese bun bo hue noodle soup with lemongrass and beef" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-boutique">🍽 Bib Gourmand</span>
+              <div class="hotel-name">Madame Lan</div>
+              <div class="hotel-location">📍 An Thuong — My Khe Beach area</div>
+              <p class="hotel-desc">One of the most established Vietnamese restaurants on the My Khe strip, Madame Lan has consistently served the central coast canon to international visitors without compromising on technique or authenticity. The bún bò Huế is the best version in the An Thuong area, and the bánh xèo reliably delivers the crispy-crepe-with-fresh-herb combination that defines the dish. Booking recommended on weekends.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$</strong> &nbsp;·&nbsp; Mains from <strong>$5</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=440&h=340&fit=crop&auto=format"
+            alt="Banh xeo Vietnamese sizzling crepe with pork shrimp and bean sprouts" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-boutique">🍽 Bib Gourmand</span>
+              <div class="hotel-name">Bánh Xèo Bà Dưỡng</div>
+              <div class="hotel-location">📍 Hai Chau District — 23 Hoang Dieu Street</div>
+              <p class="hotel-desc">The definitive bánh xèo address in Da Nang — a local institution that has been producing the same sizzling rice crepes stuffed with pork, shrimp, and bean sprouts since 1960. The secret is the rice batter fermented overnight and the cast-iron pan technique that produces the paper-thin, properly crispy shell that makes or breaks the dish. Queue in the evening; arrive before 7pm to avoid the longest waits. Cash only, and worth every minute.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$</strong> &nbsp;·&nbsp; From <strong>$3</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=440&h=340&fit=crop&auto=format"
+            alt="Mi Quang turmeric noodles with pork shrimp peanuts and fresh herbs" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-boutique">🍽 Bib Gourmand</span>
+              <div class="hotel-name">Mì Quảng 1A</div>
+              <div class="hotel-location">📍 Hai Chau District — 1 Hai Phong Street</div>
+              <p class="hotel-desc">Mì Quảng — Da Nang's signature noodle dish — is turmeric-stained, thick-cut rice noodles served in a shallow broth with pork, shrimp, peanuts, rice crackers, and a mountain of fresh herbs. The version at 1A is widely considered the city's best: the broth is richer and less diluted than tourist-area competitors, the pork is sourced fresh daily, and the portion proportions are correct. Opens 6am, often sold out by 9. Go for breakfast.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$</strong> &nbsp;·&nbsp; From <strong>$2.50</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=440&h=340&fit=crop&auto=format"
+            alt="Vietnamese restaurant cosy interior warm lighting and wooden tables" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-boutique">🍽 Bib Gourmand</span>
+              <div class="hotel-name">Bé Mặn</div>
+              <div class="hotel-location">📍 Son Tra District — beachside lanes</div>
+              <p class="hotel-desc">A small, family-run restaurant in the lanes behind the Son Tra waterfront that has accumulated a loyal following for its Central Vietnamese home cooking. The braised pork belly with shrimp paste, the cá kho (caramelised fish in clay pot), and the daily fish dishes sourced from the adjacent fishing pier are the reasons to visit. No English menu — point and see what arrives. Almost always excellent.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$</strong> &nbsp;·&nbsp; From <strong>$4</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">💡 Bib Gourmand tip</div>
+        <p>Da Nang's Bib Gourmand restaurants cluster in two zones: the An Thuong village strip behind My Khe Beach (accessible, tourist-friendly) and the Hai Chau / Han Market district (more authentic, requires some navigation, lower prices). The MICHELIN Guide's full list of 20 is at <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand" target="_blank" rel="nofollow noopener" style="color:var(--ocean);font-weight:600">guide.michelin.com</a>.</p>
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- SELECTED -->
+    <section id="selected" aria-labelledby="sel-h">
+      <span class="section-label">MICHELIN Selected</span>
+      <h2 class="section-heading" id="sel-h">MICHELIN <em>Selected Restaurants</em></h2>
+      <p class="section-intro">The 22 Selected listings cover Da Nang's broader restaurant scene — well-run, quality-focused establishments that didn't reach Bib Gourmand threshold but are recommended by MICHELIN inspectors as reliably good.</p>
+
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1200&h=420&fit=crop&auto=format&q=80"
+          alt="Modern restaurant interior on the Han River Da Nang with city views" loading="lazy" width="1200" height="420">
+        <p class="img-caption">Selected restaurants span everything from casual Han River dining to international kitchens on My Khe Beach</p>
+      </div>
+
+      <div class="hotel-stack">
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=440&h=340&fit=crop&auto=format"
+            alt="Waterfront restaurant terrace on the Han River Da Nang at night" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-value">✦ MICHELIN Selected</span>
+              <div class="hotel-name">Waterfront Restaurant &amp; Bar</div>
+              <div class="hotel-location">📍 Bach Dang Street — Han River promenade</div>
+              <p class="hotel-desc">The most-visited Western-oriented restaurant on the Han River promenade, and one of the few Da Nang addresses where a business dinner or date-night with foreign guests reliably works. The menu covers Vietnamese and Western dishes without mishandling either. The river terrace with Dragon Bridge views is genuinely one of the better dining settings in the city — arrive by 8pm on weekends to beat the reservation queue. Wine selection is adequate; cocktails are better.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$$$</strong> &nbsp;·&nbsp; Mains from <strong>$12</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hotel-card">
+          <img class="hotel-card-img"
+            src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=440&h=340&fit=crop&auto=format"
+            alt="International restaurant beach terrace with palm trees and ocean view" loading="lazy" width="440" height="340">
+          <div class="hotel-card-body">
+            <div class="hotel-card-top">
+              <span class="hotel-badge badge-value">✦ MICHELIN Selected</span>
+              <div class="hotel-name">Luna Pub &amp; Restaurant</div>
+              <div class="hotel-location">📍 An Thuong Village — My Khe Beach area</div>
+              <p class="hotel-desc">A long-standing My Khe institution that has maintained quality across a decade of tourism expansion in the An Thuong neighbourhood. The menu leans international — grills, pasta, seafood platters — executed at a standard that justifies the modest premium over street-food alternatives. The outdoor seating area under the frangipani trees is pleasant in the evening dry season. Among the most reliable mid-range dining choices for first-time visitors to Da Nang.</p>
+            </div>
+            <div class="hotel-footer">
+              <div class="hotel-price"><strong>$$</strong> &nbsp;·&nbsp; Mains from <strong>$9</strong></div>
+              <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants"
+                 class="hotel-book-btn" target="_blank" rel="nofollow noopener">View on MICHELIN Guide →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">📋 Full Selected list</div>
+        <p>All 22 MICHELIN Selected restaurants in Da Nang are listed at <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants" target="_blank" rel="nofollow noopener" style="color:var(--ocean);font-weight:600">guide.michelin.com</a>. The list includes several Vietnamese-only restaurants that reward the effort of navigation — cross-reference with Google Maps reviews for current opening hours.</p>
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- WHAT TO EAT -->
+    <section id="what-to-eat" aria-labelledby="eat-h">
+      <span class="section-label">Local Dishes</span>
+      <h2 class="section-heading" id="eat-h">What to Eat in <em>Da Nang</em></h2>
+
+      <div class="section-img-wrap">
+        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&h=380&fit=crop&auto=format&q=80"
+          alt="Central Vietnamese food spread with mì Quảng bánh xèo fresh herbs and rice crackers" loading="lazy" width="1200" height="380">
+        <p class="img-caption">Central Vietnamese cuisine — mì Quảng, bánh xèo, and fresh herb platters are the essential dishes</p>
+      </div>
+
+      <div class="prose">
+        <p>Da Nang sits in Central Vietnam, where the cuisine is distinct from both Hanoi in the north and Ho Chi Minh City in the south. The flavours are stronger, the use of fermented shrimp paste more pronounced, the chilli heat more present. The essential dishes to seek out:</p>
+        <p><strong>Mì Quảng</strong> — Da Nang's signature noodle dish. Wide, turmeric-yellow rice noodles in a minimal, flavour-concentrated broth with pork, shrimp, quail egg, peanuts, rice crackers, and a full platter of fresh herbs. Unlike phở, you eat it semi-dry — just enough broth to coat. Best at Mì Quảng 1A (MICHELIN Bib Gourmand) from 6am.</p>
+        <p><strong>Bánh Xèo</strong> — Sizzling rice flour crepes cooked in a searingly hot pan with pork belly, shrimp, and bean sprouts. Eaten wrapped in rice paper with fresh herbs and dipped in fish sauce. Bánh Xèo Bà Dưỡng (MICHELIN Bib Gourmand) is the institution; the queue at 6pm confirms its status.</p>
+        <p><strong>Bún Chả Cá</strong> — Fish cake noodle soup specific to Da Nang. Lighter than phở, with thin vermicelli noodles, fish cakes made from the fresh daily catch, and a clear broth seasoned with dill. Find it in the Hai Chau market streets for breakfast.</p>
+        <p><strong>Grilled seafood</strong> — Da Nang has a working fishing harbour. The city's best grilled seafood restaurants source from the morning catch at Mỹ Khê fishing village — whole fish, clams, crab, and prawns grilled over charcoal and served with salt, lime, and chilli. The An Thuong strip has tourist-accessible versions; the local ones are in the seafood restaurants on the northern beach road.</p>
+      </div>
+    </section>
+
+    <hr class="sdiv" style="border:none;border-top:1px solid var(--sand-dark);margin:3rem 0">
+
+    <!-- BY AREA -->
+    <section id="by-area" aria-labelledby="area-h">
+      <span class="section-label">By Area</span>
+      <h2 class="section-heading" id="area-h">Dining <em>by Area</em></h2>
+      <div class="prose">
+        <p><strong>An Thuong / Mỹ Khê:</strong> The main restaurant strip for international visitors. Reliable MICHELIN Selected and Bib Gourmand listings, beach clubs, rooftop bars, and cafés. Best for convenience and English menus. Several genuinely good Vietnamese restaurants alongside the international options.</p>
+        <p><strong>Hàn River promenade:</strong> Evening atmosphere over culinary depth. Dragon Bridge views, cocktail bars, and Vietnamese restaurants with river terraces. Waterfront Restaurant (MICHELIN Selected) is the anchor recommendation. Better for drinks and atmosphere than for discovering local food.</p>
+        <p><strong>Hải Châu district:</strong> The authentic food neighbourhood. Breakfast culture is the strongest argument for basing yourself here — bánh mì carts from 5am, mì Quảng and bún chả cá stalls by 6am, and a morning market (Chợ Hàn) with the best produce in the city. The Bib Gourmand concentration is highest in these streets.</p>
+        <p><strong>Son Tra Peninsula:</strong> Resort dining only, with one significant exception. La Maison 1888 at the InterContinental (MICHELIN Star) makes the 20-minute taxi ride worthwhile for a special occasion. Outside the resort context, dining options on the peninsula are limited.</p>
+        <p><strong>Non Nuoc / Marble Mountains:</strong> The resort strip south of the city has a handful of decent hotel restaurants and one strong independent address near the Marble Mountains — worth knowing if you're staying at the Hyatt Regency or Platinum Retreat.</p>
+      </div>
+    </section>
+
+    <!-- mid-article CTA -->
+    <div class="cta-block">
+      <h3>Staying in Da Nang? Find your <em>hotel</em></h3>
+      <p>From $20 guesthouses near the best Bib Gourmand streets to five-star resorts with MICHELIN-starred dining on-site.</p>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-dining&dest_id=-3714993&dest_type=city&checkin=&checkout="
+         class="cta-block-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse Da Nang hotels →</a>
+    </div>
+
+    <aside style="background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-xl);padding:1.3rem 1.5rem;margin-top:2rem" aria-label="Editorial note">
+      <p style="font-size:.76rem;color:var(--ink-muted);line-height:1.7;margin:0">
+        <strong style="color:var(--ink-soft)">How this guide is maintained:</strong> Restaurant listings reflect the MICHELIN Guide Vietnam 2025 edition. MICHELIN designations, opening hours, and pricing are subject to change — always verify directly with the restaurant or at <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants" target="_blank" rel="nofollow noopener" style="color:var(--ocean);font-weight:600">guide.michelin.com</a> before visiting. This guide is updated annually following the MICHELIN Guide Vietnam release.
+      </p>
+    </aside>
+
+  </article>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar" aria-label="Supplementary content">
+
+    <!-- Author Box -->
+    <div class="author-box" style="background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-xl);padding:1.3rem 1.5rem;margin-bottom:1.2rem;">
+      <div class="author-avatar" style="width:48px;height:48px;border-radius:50%;background:var(--ocean-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.1rem;flex-shrink:0;">TW</div>
+      <div style="margin-left:12px;">
+        <div class="author-name">Tom Whitfield</div>
+        <div class="author-role">SE Asia Editor · Da Nang Hotel Guide</div>
+        <div class="author-note">Based in Da Nang since 2021. Covers dining, hotels, and travel infrastructure across Vietnam's Central Coast.</div>
+      </div>
+    </div>
+
+    <!-- MICHELIN Quick Stats -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">MICHELIN Guide 2025</div>
+      <div class="sidebar-quick">
+        <div class="quick-item"><span class="quick-label">⭐ MICHELIN Star</span><span class="quick-val">1 restaurant</span></div>
+        <div class="quick-item"><span class="quick-label">🟢 Green Star</span><span class="quick-val">1 restaurant</span></div>
+        <div class="quick-item"><span class="quick-label">🍽 Bib Gourmand</span><span class="quick-val">20 restaurants</span></div>
+        <div class="quick-item"><span class="quick-label">✦ Selected</span><span class="quick-val">22 restaurants</span></div>
+        <div class="quick-item"><span class="quick-label">Cheapest listed</span><span class="quick-val">From $2.50</span></div>
+        <div class="quick-item"><span class="quick-label">Guide published</span><span class="quick-val">Annually, autumn</span></div>
+      </div>
+      <a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants"
+         class="sidebar-cta-btn" target="_blank" rel="nofollow noopener">View full MICHELIN Guide →</a>
+    </div>
+
+    <!-- Related hotel guides -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Related guides</div>
+      <ul class="sidebar-links">
+        <li><a href="luxury-hotels-da-nang.html">Luxury hotels — incl. La Maison 1888</a></li>
+        <li><a href="best-hotels-in-da-nang.html">Best hotels in Da Nang</a></li>
+        <li><a href="where-to-stay-in-da-nang.html">Where to stay by area</a></li>
+        <li><a href="best-time-to-visit-da-nang.html">Best time to visit</a></li>
+        <li><a href="guides.html">All Da Nang travel guides</a></li>
+      </ul>
+    </div>
+
+    <!-- Top picks -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Editor's dining picks</div>
+      <ul class="sidebar-links">
+        <li><a href="https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/la-maison-1888" target="_blank" rel="nofollow noopener">La Maison 1888 — MICHELIN Star</a></li>
+        <li><a href="https://guide.michelin.com/vn/en/da-nang-region/da-nang/restaurant/nen" target="_blank" rel="nofollow noopener">Nen Restaurant — Green Star</a></li>
+        <li><a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand" target="_blank" rel="nofollow noopener">Mì Quảng 1A — Best breakfast bowl</a></li>
+        <li><a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=bib-gourmand" target="_blank" rel="nofollow noopener">Bánh Xèo Bà Dưỡng — Institution since 1960</a></li>
+        <li><a href="https://guide.michelin.com/vn/en/da-nang-region/restaurants?distinctions=selected-restaurants" target="_blank" rel="nofollow noopener">Waterfront — Best Han River terrace</a></li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div><!-- /page-wrap -->
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -209,7 +1061,7 @@ img{display:block;max-width:100%}
       <div>
         <a href="index.html" class="footer-brand">Da Nang<em>Hotel Guide</em></a>
         <p class="footer-brand-desc">The independent guide to hotels, neighbourhoods, and travel in Da Nang, Vietnam. Locally maintained since 2021.</p>
-        <div class="footer-disclosure-box"><strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links earn a small commission at no extra cost to you. This never influences editorial rankings.</div>
+        <div class="footer-disclosure-box"><strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links go to Booking.com. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.</div>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Hotels</div>
@@ -222,7 +1074,7 @@ img{display:block;max-width:100%}
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Explore</div>
-        <a href="where-to-stay.html">Where to Stay</a>
+        <a href="where-to-stay-in-da-nang.html">Where to Stay</a>
         <a href="guides.html">Travel Guides</a>
         <a href="best-time-to-visit-da-nang.html">Best Time to Visit</a>
         <a href="da-nang-weather-by-month.html">Weather by Month</a>
@@ -230,18 +1082,19 @@ img{display:block;max-width:100%}
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Site</div>
-        <a href="about.html">About & Editorial</a>
+        <a href="about.html">About &amp; Editorial</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
         <a href="contact.html">Contact</a>
+        <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-footer&dest_id=-3714993&dest_type=city" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Book via Booking.com ↗</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Da Nang Hotel Guide &middot; Da Nang, Vietnam</span>
-      <span>Prices indicative &middot; Weather data: VNMHA long-term averages</span>
+      <span>Restaurant listings: MICHELIN Guide Vietnam 2025</span>
     </div>
     <div class="footer-legal">
-      <p class="footer-legal-text">Da Nang Hotel Guide earns a commission when you make a booking through our Booking.com links, at no extra cost to you. This never influences editorial rankings or recommendations.</p>
+      <p class="footer-legal-text">Da Nang Hotel Guide earns a commission when you make a booking through our Booking.com links, at no extra cost to you. This never influences editorial rankings or recommendations. MICHELIN Guide listings are reproduced for editorial reference only; all MICHELIN designations are the property of Michelin.</p>
       <nav class="footer-legal-links" aria-label="Legal">
         <a href="privacy.html">Privacy</a><span class="sep">·</span>
         <a href="terms.html">Terms</a><span class="sep">·</span>
@@ -251,5 +1104,130 @@ img{display:block;max-width:100%}
     </div>
   </div>
 </footer>
+
+<script>
+window.SEARCH_INDEX = [
+  { title:"Best Hotels in Da Nang (2026 Guide)", url:"best-hotels-in-da-nang.html", cat:"Hotels Guide", excerpt:"The definitive guide to the best hotels in Da Nang — luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget." },
+  { title:"Where to Stay in Da Nang: Area Guide", url:"where-to-stay-in-da-nang.html", cat:"Neighbourhood Guide", excerpt:"My Khe, Son Tra, Han River, City Centre — each Da Nang neighbourhood mapped and compared." },
+  { title:"Luxury Hotels in Da Nang", url:"luxury-hotels-da-nang.html", cat:"Hotel Category", excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points — the best luxury and five-star resorts in Da Nang." },
+  { title:"Da Nang Beach Hotels", url:"da-nang-beach-hotels.html", cat:"Hotel Category", excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access." },
+  { title:"Da Nang MICHELIN Guide Restaurants", url:"dining.html", cat:"Dining Guide", excerpt:"Da Nang's MICHELIN Guide 2025 — 1 Star, 1 Green Star, 20 Bib Gourmand, 22 Selected restaurants." },
+  { title:"Best Time to Visit Da Nang", url:"best-time-to-visit-da-nang.html", cat:"Travel Guide", excerpt:"Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August." },
+  { title:"Da Nang Weather by Month", url:"da-nang-weather-by-month.html", cat:"Climate Guide", excerpt:"Temperature, rainfall, sea conditions, and humidity data for all 12 months." }
+];
+
+function runSearch(query) {
+  if (!query || query.length < 2) return [];
+  const q = query.toLowerCase();
+  return window.SEARCH_INDEX.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.excerpt.toLowerCase().includes(q) ||
+    item.cat.toLowerCase().includes(q)
+  );
+}
+
+(function() {
+  // Hamburger
+  var ham  = document.getElementById('navHamburger');
+  var mob  = document.getElementById('mobileMenu');
+  if (ham && mob) {
+    ham.addEventListener('click', function() {
+      var open = mob.classList.toggle('open');
+      ham.classList.toggle('open', open);
+      ham.setAttribute('aria-expanded', open);
+      mob.setAttribute('aria-hidden', !open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  }
+  var hotTgl = document.getElementById('mobileHotelsToggle');
+  var hotSub = document.getElementById('mobileHotelsSub');
+  if (hotTgl && hotSub) {
+    hotTgl.addEventListener('click', function(e) {
+      e.preventDefault();
+      hotSub.classList.toggle('open');
+    });
+  }
+  if (mob) {
+    mob.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        mob.classList.remove('open');
+        if (ham) { ham.classList.remove('open'); ham.setAttribute('aria-expanded','false'); }
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Search
+  var overlay    = document.getElementById('searchOverlay');
+  var searchBtn  = document.getElementById('searchOpenBtn');
+  var searchClose = document.getElementById('searchCloseBtn');
+  var searchInput = document.getElementById('searchInput');
+  var results    = document.getElementById('searchResultsInline');
+  var hint       = document.getElementById('searchHint');
+
+  function openSearch() {
+    if (!overlay) return;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (searchBtn) searchBtn.setAttribute('aria-expanded','true');
+    setTimeout(function() { if (searchInput) searchInput.focus(); }, 100);
+  }
+  function closeSearch() {
+    if (!overlay) return;
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if (searchBtn) searchBtn.setAttribute('aria-expanded','false');
+    if (searchInput) searchInput.value = '';
+    if (results) results.innerHTML = '';
+    if (hint) hint.style.display = '';
+  }
+  if (searchBtn) searchBtn.addEventListener('click', openSearch);
+  if (searchClose) searchClose.addEventListener('click', closeSearch);
+  if (overlay) {
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeSearch(); });
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSearch();
+    if (e.key === '/' && overlay && !overlay.classList.contains('open') && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault(); openSearch();
+    }
+  });
+  if (searchInput && results) {
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (q.length < 2) { results.innerHTML=''; if (hint) hint.style.display=''; return; }
+      if (hint) hint.style.display = 'none';
+      var hits = window.runSearch ? runSearch(q) : [];
+      if (!hits.length) { results.innerHTML='<p class="search-no-results">No results for "'+q+'"</p>'; return; }
+      results.innerHTML = hits.slice(0,8).map(function(item) {
+        return '<a class="sri" href="'+item.url+'" role="option">'+
+          '<div class="sri-cat">'+item.cat+'</div>'+
+          '<div class="sri-body"><div class="sri-title">'+item.title+'</div>'+
+          '<div class="sri-excerpt">'+item.excerpt+'</div></div></a>';
+      }).join('');
+    });
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var first = results.querySelector('.sri');
+        if (first) { first.click(); closeSearch(); }
+      }
+    });
+  }
+  if (overlay) {
+    overlay.querySelectorAll('.sh-pill').forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        if (searchInput) { searchInput.value = this.dataset.q; searchInput.dispatchEvent(new Event('input')); }
+      });
+    });
+  }
+  // Dropdown keyboard
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+    });
+  });
+})();
+</script>
 </body>
 </html>
