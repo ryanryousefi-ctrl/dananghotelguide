@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da Nang Travel Guides — Hotel Planning, Prices & Neighborhood Breakdowns | DaNangHotelGuide.com</title>
+<meta name="description" content="Data-driven travel guides for Da Nang, Vietnam. Monthly hotel pricing, neighborhood breakdowns, seasonal analysis, and insider planning tools. Independent and ad-free.">
+<link rel="canonical" href="https://dananghotelguide.com/guides/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --sand: #f5f0e8;
+    --deep-ocean: #0a2342;
+    --ocean: #1a4a6b;
+    --teal: #2d8b7a;
+    --coral: #e8614d;
+    --gold: #c9973a;
+    --mist: #e8edf2;
+    --text: #1a1a2e;
+    --text-muted: #5a6a7a;
+    --border: #dde3ea;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--sand);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ─── NAV ─── */
+  .site-nav {
+    background: var(--deep-ocean);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .site-nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .site-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .site-logo span { color: #7ecfc3; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+  .nav-links a.active { color: #7ecfc3; background: rgba(45,139,122,0.15); }
+
+  @media (max-width: 680px) {
+    .nav-links { display: none; }
+  }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .breadcrumb-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    font-size: 13px;
+  }
+
+  .breadcrumb li { display: flex; align-items: center; gap: 4px; }
+  .breadcrumb a { color: var(--teal); text-decoration: none; font-weight: 500; }
+  .breadcrumb .sep { color: var(--border); font-size: 14px; }
+  .breadcrumb .current { color: var(--text-muted); }
+
+  /* ─── PAGE HERO ─── */
+  .guides-hero {
+    background: var(--deep-ocean);
+    background-image:
+      radial-gradient(ellipse at 10% 60%, rgba(45,139,122,0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 10%, rgba(201,151,58,0.15) 0%, transparent 50%);
+    padding: 64px 24px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .guides-hero::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0; right: 0;
+    height: 40px;
+    background: var(--sand);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .guides-hero-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .guides-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #fff;
+    line-height: 1.15;
+    max-width: 580px;
+    margin-bottom: 14px;
+  }
+
+  .guides-hero h1 em { font-style: italic; color: #7ecfc3; }
+
+  .guides-hero-intro {
+    color: rgba(255,255,255,0.72);
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.75;
+  }
+
+  .guides-hero-intro a {
+    color: #7ecfc3;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(126,207,195,0.4);
+  }
+
+  /* ─── MAIN CONTENT ─── */
+  .guides-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+
+  /* ─── FEATURED GUIDE ─── */
+  .featured-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+
+  .featured-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(10,35,66,0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid var(--border);
+  }
+
+  .featured-card:hover {
+    box-shadow: 0 12px 48px rgba(10,35,66,0.15);
+    transform: translateY(-2px);
+  }
+
+  .featured-card-visual {
+    background: var(--deep-ocean);
+    background-image:
+      radial-gradient(ellipse at 30% 60%, rgba(45,139,122,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,151,58,0.3) 0%, transparent 50%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
+    position: relative;
+  }
+
+  .featured-data-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(45,139,122,0.25);
+    border: 1px solid rgba(45,139,122,0.5);
+    color: #7ecfc3;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    width: fit-content;
+  }
+
+  .featured-price-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .price-row .star-label { color: rgba(255,255,255,0.6); }
+  .price-row .price-range { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .price-row .season-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .featured-card-body {
+    padding: 36px 36px 36px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .featured-guide-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+  }
+
+  .featured-card-body h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--deep-ocean);
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .featured-card-body p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .featured-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .meta-chip {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--mist);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  .cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 20px;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background 0.15s;
+  }
+
+  .cta-link:hover { background: var(--ocean); }
+
+  @media (max-width: 680px) {
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-card-visual { min-height: 200px; padding: 28px; }
+    .featured-card-body { padding: 24px; }
+  }
+
+  /* ─── GUIDE GRID ─── */
+  .guides-section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 48px 0 20px;
+  }
+
+  .guides-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .guide-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(10,35,66,0.06);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.18s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guide-card:hover {
+    border-color: var(--teal);
+    box-shadow: 0 6px 24px rgba(10,35,66,0.1);
+    transform: translateY(-2px);
+  }
+
+  .guide-card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .guide-card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+
+  .guide-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--deep-ocean);
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+
+  .guide-card p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0 0 16px;
+    flex: 1;
+  }
+
+  .guide-card-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .footer-links a { color: var(--teal); text-decoration: none; }
+  .footer-links a:hover { text-decoration: underline; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dananghotelguide.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://dananghotelguide.com/guides/" }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Da Nang Travel Guides",
+      "url": "https://dananghotelguide.com/guides/",
+      "description": "Data-driven hotel and travel guides for Da Nang, Vietnam. Monthly pricing, neighborhood breakdowns, and seasonal planning tools.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DaNangHotelGuide.com",
+        "url": "https://dananghotelguide.com"
+      },
+      "hasPart": [
+        { "@type": "Article", "name": "Da Nang Hotel Prices by Month (2026 Index)", "url": "https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" },
+        { "@type": "Article", "name": "Best Hotels in Da Nang", "url": "https://dananghotelguide.com/guides/best-hotels-in-da-nang/" },
+        { "@type": "Article", "name": "Where to Stay in Da Nang", "url": "https://dananghotelguide.com/guides/where-to-stay-in-da-nang/" },
+        { "@type": "Article", "name": "Best Beachfront Hotels Da Nang", "url": "https://dananghotelguide.com/guides/best-beachfront-hotels-da-nang/" },
+        { "@type": "Article", "name": "Da Nang Travel Cost Guide", "url": "https://dananghotelguide.com/guides/da-nang-travel-cost-guide/" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="https://dananghotelguide.com/" class="site-logo">DaNang<span>HotelGuide</span></a>
+    <ul class="nav-links">
+      <li><a href="https://dananghotelguide.com/">Home</a></li>
+      <li><a href="https://dananghotelguide.com/guides/" class="active">Guides</a></li>
+      <li><a href="https://dananghotelguide.com/neighborhoods/">Neighborhoods</a></li>
+      <li><a href="https://dananghotelguide.com/hotels/">Hotels</a></li>
+      <li><a href="https://dananghotelguide.com/search/">Search</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <div class="breadcrumb-inner">
+    <ol class="breadcrumb">
+      <li>
+        <a href="https://dananghotelguide.com/">Home</a>
+        <span class="sep">›</span>
+      </li>
+      <li><span class="current" aria-current="page">Guides</span></li>
+    </ol>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="guides-hero">
+  <div class="guides-hero-inner">
+    <h1>Da Nang <em>Travel Guides</em></h1>
+    <p class="guides-hero-intro">
+      Our data-driven guides include <a href="https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/">monthly hotel pricing</a>, neighborhood breakdowns, seasonal travel analysis, and insider planning tools — all independently researched, with no sponsored placements. Use these guides to plan smarter and spend less.
+    </p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="guides-content">
+
+  <!-- FEATURED GUIDE: PRICE INDEX -->
+  <div class="featured-label">📊 Featured Guide · New for 2026</div>
+
+  <a href="https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" class="featured-card">
+    <div class="featured-card-visual">
+      <div class="featured-data-badge">📊 2026 Price Index</div>
+      <div class="featured-price-preview">
+        <div class="price-row">
+          <span class="star-label">3-Star</span>
+          <span class="price-range">$22 – $55 / night</span>
+          <span class="season-dot" style="background:#2d8b7a"></span>
+        </div>
+        <div class="price-row">
+          <span class="star-label">4-Star</span>
+          <span class="price-range">$45 – $120 / night</span>
+          <span class="season-dot" style="background:#c9973a"></span>
+        </div>
+        <div class="price-row">
+          <span class="star-label">5-Star</span>
+          <span class="price-range">$90 – $350 / night</span>
+          <span class="season-dot" style="background:#e8614d"></span>
+        </div>
+        <p style="color:rgba(255,255,255,0.45); font-size:11.5px; margin-top:10px; margin-bottom:0;">Based on 20 hotels sampled · All 12 months covered</p>
+      </div>
+    </div>
+    <div class="featured-card-body">
+      <div class="featured-guide-tag">Planning Guide · Data Index</div>
+      <h2>Da Nang Hotel Prices by Month (2026 Index)</h2>
+      <p>The only manually compiled monthly price index for Da Nang hotels — covering every season, all three market tiers, peak vs. low season savings, and year-over-year trend data. An essential first stop for any trip planner.</p>
+      <div class="featured-card-meta">
+        <span class="meta-chip">📅 All 12 months</span>
+        <span class="meta-chip">⭐ 3, 4 &amp; 5-star</span>
+        <span class="meta-chip">📈 2024–2026 trends</span>
+        <span class="meta-chip">❓ FAQ &amp; schema</span>
+      </div>
+      <span class="cta-link">Read the Price Guide →</span>
+    </div>
+  </a>
+
+  <!-- PLANNING GUIDES -->
+  <div class="guides-section-label">Planning Guides</div>
+  <div class="guides-grid">
+
+    <a href="https://dananghotelguide.com/guides/where-to-stay-in-da-nang/" class="guide-card">
+      <div class="guide-card-icon">🗺️</div>
+      <div class="guide-card-tag">Neighborhood Guide</div>
+      <h3>Where to Stay in Da Nang</h3>
+      <p>My Khe Beach, Son Tra, Han River, Non Nuoc — each area has a different character and price point. Find out which neighborhood fits your priorities.</p>
+      <span class="guide-card-link">Read guide →</span>
+    </a>
+
+    <a href="https://dananghotelguide.com/guides/da-nang-travel-cost-guide/" class="guide-card">
+      <div class="guide-card-icon">💵</div>
+      <div class="guide-card-tag">Budget Planning</div>
+      <h3>Da Nang Travel Cost Guide</h3>
+      <p>Full daily budget breakdown covering hotels, food, transport, activities and hidden costs. Includes budget, mid-range and luxury traveler tiers.</p>
+      <span class="guide-card-link">Read guide →</span>
+    </a>
+
+    <a href="https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" class="guide-card">
+      <div class="guide-card-icon">📊</div>
+      <div class="guide-card-tag">Price Index · 2026</div>
+      <h3>Da Nang Hotel Prices by Month</h3>
+      <p>Manually compiled <a href="https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" style="color:var(--teal);">Da Nang hotel prices by month</a> — realistic ranges for every season, 3 to 5-star categories, with peak vs. low season analysis.</p>
+      <span class="guide-card-link">View price index →</span>
+    </a>
+
+  </div>
+
+  <!-- HOTEL PICKS -->
+  <div class="guides-section-label">Hotel Picks</div>
+  <div class="guides-grid">
+
+    <a href="https://dananghotelguide.com/guides/best-hotels-in-da-nang/" class="guide-card">
+      <div class="guide-card-icon">⭐</div>
+      <div class="guide-card-tag">Editorial Picks</div>
+      <h3>Best Hotels in Da Nang</h3>
+      <p>Our top-rated hotels across all price tiers — from budget city stays to landmark beachfront resorts — with honest notes on what each does best.</p>
+      <span class="guide-card-link">See top picks →</span>
+    </a>
+
+    <a href="https://dananghotelguide.com/guides/best-beachfront-hotels-da-nang/" class="guide-card">
+      <div class="guide-card-icon">🏖️</div>
+      <div class="guide-card-tag">Beach Hotels</div>
+      <h3>Best Beachfront Hotels</h3>
+      <p>Direct beachfront properties on My Khe and Non Nuoc — ranked by value, facilities, and real guest feedback. Includes price context from our monthly index.</p>
+      <span class="guide-card-link">See beach hotels →</span>
+    </a>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p><strong>DaNangHotelGuide.com</strong> — Independent hotel research for Da Nang, Vietnam.</p>
+  <div class="footer-links">
+    <a href="https://dananghotelguide.com/">Home</a>
+    <a href="https://dananghotelguide.com/guides/">All Guides</a>
+    <a href="https://dananghotelguide.com/guides/da-nang-hotel-prices-by-month/">Hotel Prices by Month</a>
+    <a href="https://dananghotelguide.com/guides/best-hotels-in-da-nang/">Best Hotels</a>
+    <a href="https://dananghotelguide.com/guides/where-to-stay-in-da-nang/">Where to Stay</a>
+  </div>
+</footer>
+
+</body>
+</html>
