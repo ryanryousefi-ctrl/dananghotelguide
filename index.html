@@ -519,6 +519,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   color:rgba(255,255,255,.58);
   max-width:460px;line-height:1.72;margin-bottom:0;
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STEP 1 — HERO ACTIONS: primary CTA is now editorial guide;
+   secondary CTA is smaller/less dominant booking link.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:1.6rem}
 .hero-btn-primary{
   display:inline-flex;align-items:center;gap:8px;
@@ -530,14 +535,18 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   background:var(--coral-light);transform:translateY(-2px);
   box-shadow:0 8px 24px rgba(200,96,74,.35);
 }
+/* STEP 1: Secondary CTA — smaller and visually subordinate */
 .hero-btn-secondary{
   display:inline-flex;align-items:center;gap:6px;
-  padding:13px 26px;background:rgba(255,255,255,.1);
-  backdrop-filter:blur(8px);color:#fff;
-  font-size:.88rem;font-weight:600;border-radius:100px;
-  border:1px solid rgba(255,255,255,.18);transition:background .2s;
+  padding:10px 20px;                          /* reduced from 13px 26px */
+  background:rgba(255,255,255,.07);           /* more subtle than original */
+  backdrop-filter:blur(8px);color:rgba(255,255,255,.75);
+  font-size:.8rem;font-weight:500;            /* lighter weight */
+  border-radius:100px;
+  border:1px solid rgba(255,255,255,.12);transition:background .2s;
 }
-.hero-btn-secondary:hover{background:rgba(255,255,255,.18)}
+.hero-btn-secondary:hover{background:rgba(255,255,255,.14);color:#fff}
+
 .hero-stats{
   display:flex;gap:clamp(1.5rem,4vw,3.5rem);
   margin-top:2.8rem;padding-top:2rem;
@@ -549,14 +558,13 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 }
 .stat-label{font-size:.72rem;color:rgba(255,255,255,.42);font-weight:500}
 
-/* ─── HERO BOOKING BAR ───────────────────────────────────── */
-/*
- * AFFILIATE CONFIG
- * To activate: replace AFFILIATE_ID_PLACEHOLDER with your Booking.com aid= value
- * The form action and hidden aid field below both reference this placeholder.
- */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STEP 1 — HERO BOOKING BAR: reduced visual dominance.
+   Decreased vertical padding ~40%, reduced input height,
+   reduced background opacity. All affiliate fields intact.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .hb-wrap{
-  margin-top:2rem;
+  margin-top:1.4rem;                          /* reduced from 2rem */
   width:100%;
   max-width:900px;
 }
@@ -564,43 +572,43 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   display:grid;
   grid-template-columns: 1.6fr 1fr 1fr 0.7fr auto;
   gap:0;
-  background:rgba(255,255,255,.10);
+  background:rgba(255,255,255,.07);           /* reduced from .10 */
   backdrop-filter:blur(24px) saturate(180%);
   -webkit-backdrop-filter:blur(24px) saturate(180%);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:16px;
+  border:1px solid rgba(255,255,255,.14);     /* reduced from .18 */
+  border-radius:14px;                         /* slightly tighter */
   overflow:hidden;
   transition:border-color .2s,box-shadow .2s;
 }
 .hb-form:focus-within{
-  border-color:rgba(255,255,255,.38);
-  box-shadow:0 8px 40px rgba(0,0,0,.25),0 0 0 3px rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.30);
+  box-shadow:0 6px 30px rgba(0,0,0,.2),0 0 0 2px rgba(255,255,255,.05);
 }
 .hb-field{
   display:flex;flex-direction:column;
-  padding:14px 18px 12px;
+  padding:10px 16px 9px;                      /* reduced from 14px 18px 12px */
   border-right:1px solid rgba(255,255,255,.1);
   position:relative;
   cursor:text;
 }
 .hb-field:last-of-type{border-right:none}
 .hb-label{
-  font-size:.6rem;font-weight:700;
+  font-size:.58rem;font-weight:700;           /* slightly smaller */
   letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);
-  margin-bottom:5px;
+  color:rgba(255,255,255,.4);
+  margin-bottom:4px;                          /* reduced from 5px */
   white-space:nowrap;
   pointer-events:none;
 }
 .hb-input{
   background:transparent;border:none;outline:none;
   font-family:var(--font-sans);
-  font-size:.88rem;font-weight:500;
+  font-size:.84rem;font-weight:500;           /* slightly reduced */
   color:#fff;
   width:100%;min-width:0;
   padding:0;line-height:1.3;
 }
-.hb-input::placeholder{color:rgba(255,255,255,.38)}
+.hb-input::placeholder{color:rgba(255,255,255,.35)}
 /* Native date input — clean up browser chrome */
 .hb-input[type="date"]{
   -webkit-appearance:none;
@@ -620,50 +628,50 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 }
 .hb-submit{
   display:flex;align-items:center;justify-content:center;gap:7px;
-  padding:0 28px;
+  padding:0 24px;                             /* reduced from 28px */
   background:var(--coral);color:#fff;
   border:none;cursor:pointer;
   font-family:var(--font-sans);
-  font-size:.85rem;font-weight:700;
+  font-size:.82rem;font-weight:700;           /* slightly reduced */
   letter-spacing:.02em;
   white-space:nowrap;
   transition:background .2s,transform .1s;
-  min-width:140px;
+  min-width:130px;                            /* reduced from 140px */
 }
 .hb-submit svg{
-  width:15px;height:15px;
+  width:14px;height:14px;                     /* reduced from 15px */
   stroke:currentColor;fill:none;stroke-width:2.2;
   flex-shrink:0;
 }
 .hb-submit:hover{background:var(--coral-light)}
 .hb-submit:active{transform:scale(.98)}
 .hb-note{
-  margin-top:.55rem;
-  font-size:.65rem;color:rgba(255,255,255,.32);
+  margin-top:.4rem;                           /* reduced from .55rem */
+  font-size:.62rem;color:rgba(255,255,255,.25);
   padding-left:4px;letter-spacing:.01em;
   display:flex;align-items:center;gap:5px;
 }
 .hb-note::before{
   content:'';display:inline-block;
-  width:12px;height:1px;background:rgba(255,255,255,.2);
+  width:12px;height:1px;background:rgba(255,255,255,.15);
 }
 
 /* Responsive — stack on mobile */
 @media(max-width:720px){
   .hb-form{
     grid-template-columns:1fr 1fr;
-    border-radius:14px;
+    border-radius:12px;
   }
   .hb-field:nth-child(1){grid-column:1/-1;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .hb-field:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1)}
   .hb-field:nth-child(3){border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
   .hb-field:nth-child(4){grid-column:1/-1;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-submit{grid-column:1/-1;min-height:52px;border-radius:0}
+  .hb-submit{grid-column:1/-1;min-height:48px;border-radius:0}
 }
 @media(max-width:420px){
-  .hb-form{grid-template-columns:1fr;border-radius:12px}
+  .hb-form{grid-template-columns:1fr;border-radius:10px}
   .hb-field{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-submit{min-height:52px}
+  .hb-submit{min-height:48px}
 }
 
 /* ─── INTRO / CONTENT SECTIONS ───────────────────────────── */
@@ -742,11 +750,77 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 .cta-btn-ghost{padding:14px 30px;background:transparent;color:var(--ink);font-size:.9rem;font-weight:600;border-radius:100px;border:2px solid var(--sand-dark);transition:border-color .2s,background .2s}
 .cta-btn-ghost:hover{border-color:var(--ink-muted);background:var(--sand-mid)}
 
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STEP 2 — FEATURED GUIDES SECTION (large image tiles)
+   Inserted below hero + planning strip, above intro text.
+   Reuses .cat-card, .cat-img, .cat-overlay, .cat-body,
+   .cat-pill, .cat-name, .cat-meta, .cat-link tokens exactly.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.featured-guides-section{
+  background:var(--white);
+  padding:clamp(3.5rem,7vw,6rem) var(--gutter);
+}
+.featured-guides-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto auto;
+  gap:1.2rem;
+  margin-top:2.5rem;
+}
+/* First tile spans 2 rows (tall hero tile) */
+.fg-card-hero{grid-row:1/3}
+/* Remaining 5 tiles fill the 2×2+1 gap */
+.fg-card-half{aspect-ratio:5/3}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STEP 3 — BOOKING WIDGET standalone section (below guides)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.rates-section{
+  background:var(--ocean-deep);
+  padding:clamp(3rem,6vw,5rem) var(--gutter);
+}
+.rates-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 900px;
+  gap:clamp(2rem,4vw,4rem);
+  align-items:center;
+}
+.rates-text .section-label{color:rgba(255,255,255,.35)}
+.rates-text .section-label::before{background:rgba(255,255,255,.35)}
+.rates-heading{
+  font-family:var(--font-serif);
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  color:#fff;line-height:1.1;letter-spacing:-.03em;
+  margin-bottom:.6rem;
+}
+.rates-heading em{font-style:italic;color:rgba(255,255,255,.5)}
+.rates-sub{
+  font-size:.9rem;color:rgba(255,255,255,.45);
+  line-height:1.7;max-width:30ch;
+}
+/* Override booking bar colours to sit on dark bg */
+.rates-section .hb-form{
+  background:rgba(255,255,255,.09);
+  border-color:rgba(255,255,255,.16);
+}
+.rates-section .hb-form:focus-within{
+  border-color:rgba(255,255,255,.34);
+}
+@media(max-width:1100px){
+  .rates-inner{
+    grid-template-columns:1fr;
+  }
+  .rates-text .rates-sub{max-width:none}
+}
+
 /* ─── HOME RESPONSIVE ────────────────────────────────────── */
 @media(max-width:1024px){
   .category-grid{grid-template-columns:repeat(2,1fr)}
   .cat-card:first-child{grid-row:auto;aspect-ratio:3/2}
   .trust-grid{grid-template-columns:1fr 1fr}
+  .featured-guides-grid{grid-template-columns:repeat(2,1fr)}
+  .fg-card-hero{grid-row:auto;aspect-ratio:3/2}
 }
 @media(max-width:768px){
   .intro-grid{grid-template-columns:1fr}
@@ -755,6 +829,8 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   .category-grid{grid-template-columns:1fr}
   .cat-card,.cat-card:first-child{aspect-ratio:3/2;grid-row:auto}
   .trust-grid{grid-template-columns:1fr}
+  .featured-guides-grid{grid-template-columns:1fr}
+  .fg-card-hero,.fg-card-half{aspect-ratio:3/2;grid-row:auto}
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
@@ -924,6 +1000,14 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   .sp-tile-hint{font-size:.65rem}
 }
 
+/* ─── AFFILIATE LINK INLINE STYLE ───────────────────────── */
+.affiliate-link-inline{
+  color:var(--ocean);font-weight:600;
+  border-bottom:1px solid rgba(27,92,92,.25);
+  transition:border-color .15s;
+}
+.affiliate-link-inline:hover{border-color:var(--ocean)}
+
 </style>
 </head>
 <body>
@@ -1003,6 +1087,13 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   </div>
 </div>
 
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     STEP 1 — HERO SIMPLIFIED
+     • Booking bar: reduced padding, opacity, input height
+     • Primary CTA → editorial guide (best-hotels-in-da-nang.html)
+     • Secondary CTA → Search Hotels (smaller, less dominant)
+     • All affiliate hidden fields INTACT
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <header class="hero" role="banner">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay" aria-hidden="true"></div>
@@ -1012,13 +1103,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
     <h1 class="hero-h1 fade-up fu2">Best Hotels &amp; Beach Resorts<br>in <em>Da Nang</em></h1>
     <p class="hero-sub fade-up fu3">Curated hotels, beach resorts, and private villas &mdash; handpicked by a local team who know every stretch of coastline.</p>
 
-    <!-- ══════════════════════════════════════════════════════
-         HERO BOOKING BAR
-         Affiliate: replace AFFILIATE_ID_PLACEHOLDER with your
-         Booking.com aid= value before going live.
-         Form uses GET — no JavaScript required.
-         target="_blank" + rel="nofollow noopener sponsored"
-         ══════════════════════════════════════════════════════ -->
+    <!-- STEP 1: Booking bar — reduced visual dominance. Affiliate fields unchanged. -->
     <div class="hb-wrap fade-up fu4">
       <form
         class="hb-form"
@@ -1028,7 +1113,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
         rel="nofollow noopener sponsored"
         aria-label="Search hotels in Da Nang"
       >
-        <!-- Hidden affiliate + tracking params -->
+        <!-- Hidden affiliate + tracking params — DO NOT REMOVE -->
         <input type="hidden" name="aid"        value="AFFILIATE_ID_PLACEHOLDER">
         <input type="hidden" name="label"      value="dananghotelguide-hero-search">
         <input type="hidden" name="dest_id"    value="-3714993">
@@ -1092,16 +1177,18 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
             <circle cx="11" cy="11" r="7"/>
             <line x1="16.5" y1="16.5" x2="22" y2="22"/>
           </svg>
-          Search Hotels
+          Search
         </button>
       </form>
       <p class="hb-note">Free cancellation on most bookings &middot; No booking fees</p>
     </div>
 
+    <!-- STEP 1: CTA row — primary = editorial guide; secondary = search hotels (visually subordinate) -->
     <div class="hero-actions fade-up fu5">
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-homepage&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hero-btn-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse Hotels <span aria-hidden="true">&rarr;</span></a>
-      <a href="best-hotels-in-da-nang.html" class="hero-btn-secondary">Read the Guide</a>
+      <a href="best-hotels-in-da-nang.html" class="hero-btn-primary">Read the Best Hotels Guide <span aria-hidden="true">&rarr;</span></a>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-homepage&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hero-btn-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Hotels</a>
     </div>
+
     <div class="hero-stats fade-up fu6" aria-label="Site highlights">
       <div class="stat-item">
         <div class="stat-num">110<span style="font-size:.9rem;opacity:.6">+</span></div>
@@ -1123,11 +1210,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   </div>
 </header>
 
-<!-- ══════════════════════════════════════════════════════════
-     START PLANNING — 5-tile decision strip
-     Inserted directly below hero. Reuses existing content
-     destinations; no duplicate content created.
-     ════════════════════════════════════════════════════════ -->
+<!-- START PLANNING — 5-tile decision strip -->
 <div class="sp-section" role="navigation" aria-label="Start planning your trip">
   <div class="sp-inner">
 
@@ -1185,8 +1268,167 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 </div>
 
 
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     STEP 2 — FEATURED GUIDES SECTION
+     Inserted here: BELOW hero + planning strip, ABOVE intro.
+     6 large image tile cards using existing .cat-card tokens.
+     Links reuse existing destinations — no duplicate content.
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="featured-guides-section" aria-labelledby="featured-guides-heading">
+  <div class="section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:0">
+      <div>
+        <p class="section-label">Expert guides</p>
+        <h2 class="section-heading" id="featured-guides-heading">Featured <em>hotel guides</em></h2>
+      </div>
+      <a href="hotels.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0">All hotel guides &rarr;</a>
+    </div>
 
-<!-- S2: INTRO (SEO content, visually restructured) -->
+    <div class="featured-guides-grid" role="list">
+
+      <!-- Tile 1: Best Hotels (hero tall tile) -->
+      <a href="best-hotels-in-da-nang.html" class="cat-card fg-card-hero" role="listitem" aria-label="Best Hotels in Da Nang — full guide">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1200&fit=crop&auto=format&q=80" alt="Luxury hotel pool overlooking Da Nang coastline at sunset" loading="eager" width="800" height="1200">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Definitive Guide &middot; 2026</span>
+          <h3 class="cat-name">Best Hotels in Da Nang</h3>
+          <p class="cat-meta">The complete breakdown — luxury, mid-range, and budget picks across every neighbourhood and price point.</p>
+          <span class="cat-link">Read the guide <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tile 2: Where to Stay -->
+      <a href="where-to-stay-in-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Where to Stay in Da Nang — neighbourhood guide">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=500&fit=crop&auto=format&q=80" alt="Da Nang beachfront neighbourhood aerial view at golden hour" loading="lazy" width="800" height="500">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Neighbourhood Guide</span>
+          <h3 class="cat-name">Where to Stay in Da Nang</h3>
+          <p class="cat-meta">My Khe, Son Tra, Han River — each area mapped and compared honestly.</p>
+          <span class="cat-link">Read the guide <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tile 3: Luxury Hotels -->
+      <a href="luxury-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Luxury Hotels in Da Nang">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=500&fit=crop&auto=format&q=80" alt="Luxury infinity pool at an InterContinental Da Nang resort" loading="lazy" width="800" height="500">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Luxury &middot; From $160</span>
+          <h3 class="cat-name">Luxury Hotels &amp; Resorts</h3>
+          <p class="cat-meta">InterContinental, Sheraton Grand, Hyatt — world-class service on the finest stretches of coastline.</p>
+          <span class="cat-link">Explore luxury stays <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tile 4: Beachfront Hotels -->
+      <a href="da-nang-beach-hotels.html" class="cat-card fg-card-half" role="listitem" aria-label="Beachfront Hotels in Da Nang">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop&auto=format&q=80" alt="My Khe Beach stretching along Da Nang coastline with calm South China Sea" loading="lazy" width="800" height="500">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Beachfront &middot; From $65</span>
+          <h3 class="cat-name">Beachfront Hotels</h3>
+          <p class="cat-meta">Direct sand access on My Khe and Non Nuoc beaches. All budgets covered.</p>
+          <span class="cat-link">See beach hotels <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tile 5: Family Hotels -->
+      <a href="family-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Family Hotels in Da Nang">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=500&fit=crop&auto=format&q=80" alt="Family resort pool with waterparks at a Da Nang hotel" loading="lazy" width="800" height="500">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Family &middot; Kids clubs &amp; pools</span>
+          <h3 class="cat-name">Family Hotels</h3>
+          <p class="cat-meta">Waterparks, kids clubs, connecting rooms — the best resorts for travelling families.</p>
+          <span class="cat-link">View family hotels <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- Tile 6: Boutique Hotels -->
+      <a href="boutique-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Boutique Hotels in Da Nang">
+        <img class="cat-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=500&fit=crop&auto=format&q=80" alt="Design-forward boutique hotel in Da Nang An Thuong district" loading="lazy" width="800" height="500">
+        <div class="cat-overlay" aria-hidden="true"></div>
+        <div class="cat-body">
+          <span class="cat-pill">Boutique &middot; From $45</span>
+          <h3 class="cat-name">Boutique Hotels</h3>
+          <p class="cat-meta">Personality over scale — An Thuong's hidden gems and character stays.</p>
+          <span class="cat-link">Discover boutiques <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     STEP 3 — BOOKING WIDGET repositioned to its own section
+     below Featured Guides. Heading + subtext added.
+     All affiliate parameters (aid, label, dest_id, dest_type)
+     and rel="nofollow noopener sponsored" intact.
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="rates-section" aria-labelledby="rates-heading">
+  <div class="rates-inner">
+    <div class="rates-text">
+      <p class="section-label" style="color:rgba(255,255,255,.35)"><span style="background:rgba(255,255,255,.35);display:inline-block;width:16px;height:2px;border-radius:1px;margin-right:8px;vertical-align:middle"></span>Live availability</p>
+      <h2 class="rates-heading" id="rates-heading">Check Live Rates<br><em>in Da Nang</em></h2>
+      <p class="rates-sub">Compare real-time prices across 110+ curated properties. Free cancellation on most bookings.</p>
+    </div>
+    <div>
+      <form
+        class="hb-form"
+        action="https://www.booking.com/searchresults.html"
+        method="GET"
+        target="_blank"
+        rel="nofollow noopener sponsored"
+        aria-label="Search live hotel rates in Da Nang"
+      >
+        <!-- Hidden affiliate + tracking params — DO NOT REMOVE -->
+        <input type="hidden" name="aid"        value="AFFILIATE_ID_PLACEHOLDER">
+        <input type="hidden" name="label"      value="dananghotelguide-rates-section">
+        <input type="hidden" name="dest_id"    value="-3714993">
+        <input type="hidden" name="dest_type"  value="city">
+        <input type="hidden" name="lang"       value="en-gb">
+        <input type="hidden" name="sb"         value="1">
+
+        <label class="hb-field">
+          <span class="hb-label">Destination</span>
+          <input class="hb-input" type="text" name="ss" value="Da Nang, Vietnam" placeholder="Da Nang, Vietnam" autocomplete="off" aria-label="Destination">
+        </label>
+        <label class="hb-field">
+          <span class="hb-label">Check-in</span>
+          <input class="hb-input" type="date" name="checkin" aria-label="Check-in date">
+        </label>
+        <label class="hb-field">
+          <span class="hb-label">Check-out</span>
+          <input class="hb-input" type="date" name="checkout" aria-label="Check-out date">
+        </label>
+        <label class="hb-field">
+          <span class="hb-label">Guests</span>
+          <input class="hb-input" type="number" name="group_adults" value="2" min="1" max="30" aria-label="Number of adults">
+        </label>
+        <button class="hb-submit" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+          Search Hotels
+        </button>
+      </form>
+      <p class="hb-note">Powered by Booking.com &middot; No extra fees &middot; Free cancellation on most rates</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     S2: INTRO — SEO content.
+     STEP 4: 3 contextual affiliate links added naturally
+     inside the prose paragraphs with:
+       • affiliate parameters (aid, label, dest_id, dest_type)
+       • target="_blank"
+       • rel="nofollow noopener sponsored"
+       • class="affiliate-link"
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="section intro-section" aria-labelledby="intro-heading">
   <div class="section-inner">
     <div class="intro-grid">
@@ -1195,10 +1437,10 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
         <span class="intro-updated" role="note">Last updated: February 2026</span>
         <h2 class="section-heading" id="intro-heading" style="margin-bottom:1.4rem">Why Da Nang beats <em>Phuket and Bali</em></h2>
         <div class="intro-prose" itemprop="description">
-          <p>Da Nang occupies a rare sweet spot: five-star resorts on a world-class coastline at prices that undercut comparable destinations by <strong>30&ndash;50%</strong>. My Khe Beach &mdash; one of Asia's most consistently rated urban beaches &mdash; runs 30 kilometres of white sand directly accessible from hotels at every price point. A beachfront four-star with a rooftop infinity pool can still be secured for under $100 outside peak season.</p>
-          <p>The accommodation landscape divides across three corridors. The <strong>My Khe strip</strong> is the most popular base &mdash; walkable to the beach, Da Nang's best restaurants, and the lively An Thuong village bar scene. Browse <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-homepage&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">all Da Nang hotels</a> to filter by category and live Booking.com rates. The <strong>Son Tra Peninsula</strong> offers the most dramatic resort experiences &mdash; private clifftop infinity pools, lush jungle settings, and near-total seclusion. The <strong>Han River strip</strong> suits business travellers and city explorers who want to be minutes from Dragon Bridge, the Marble Mountains, and Hoi An, 30&nbsp;minutes south.</p>
+          <p>Da Nang occupies a rare sweet spot: five-star resorts on a world-class coastline at prices that undercut comparable destinations by <strong>30&ndash;50%</strong>. My Khe Beach &mdash; one of Asia's most consistently rated urban beaches &mdash; runs 30 kilometres of white sand directly accessible from hotels at every price point. A beachfront four-star with a rooftop infinity pool can still be secured for under $100 outside peak season. <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-intro-cta1&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check current availability here</a>.</p>
+          <p>The accommodation landscape divides across three corridors. The <strong>My Khe strip</strong> is the most popular base &mdash; walkable to the beach, Da Nang's best restaurants, and the lively An Thuong village bar scene. <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-intro-cta2&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored">See live prices for these hotels</a> or filter by category across the guide. The <strong>Son Tra Peninsula</strong> offers the most dramatic resort experiences &mdash; private clifftop infinity pools, lush jungle settings, and near-total seclusion. The <strong>Han River strip</strong> suits business travellers and city explorers who want to be minutes from Dragon Bridge, the Marble Mountains, and Hoi An, 30&nbsp;minutes south.</p>
           <p><strong>Best travel window:</strong> March through August when beach conditions are perfect &mdash; calm South China Sea, sustained sunshine, and sea temperatures around 28&deg;C. November through February offers 30&ndash;40% discounts on peak rates, though northeast monsoon swells make ocean swimming rougher. Read the full <a href="best-time-to-visit-da-nang.html">best time to visit Da Nang guide</a> and <a href="da-nang-weather-by-month.html">month-by-month weather breakdown</a>.</p>
-          <p>Beyond accommodation, the <a href="dining.html">MICHELIN-recognised dining scene</a> spans 43 restaurants &mdash; one MICHELIN Star, one Green Star, 20 Bib Gourmand and 22 Selected listings &mdash; anchored by street food centred on m&igrave; Qu&#7843;ng, b&aacute;nh m&igrave;, and grilled seafood fresh from the morning catch. Every price bracket is covered within walking distance of My Khe Beach.</p>
+          <p>Beyond accommodation, the <a href="dining.html">MICHELIN-recognised dining scene</a> spans 43 restaurants &mdash; one MICHELIN Star, one Green Star, 20 Bib Gourmand and 22 Selected listings &mdash; anchored by street food centred on m&igrave; Qu&#7843;ng, b&aacute;nh m&igrave;, and grilled seafood fresh from the morning catch. Every price bracket is covered within walking distance of My Khe Beach. <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-intro-cta3&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored">Browse all Da Nang hotel deals</a> and lock in free cancellation while rates are at their most competitive.</p>
         </div>
       </div>
 
@@ -1397,7 +1639,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER — unchanged -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
