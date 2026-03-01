@@ -470,32 +470,75 @@ a{text-decoration:none;color:inherit}
 .fu3{animation-delay:.28s}.fu4{animation-delay:.38s}
 .fu5{animation-delay:.5s}.fu6{animation-delay:.62s}
 
-/* ─── HOMEPAGE HERO ──────────────────────────────────────── */
+/* ─── HOMEPAGE HERO — CINEMATIC SLIDESHOW ──────────────── */
 .hero{
-  position:relative;height:88vh;
-  min-height:580px;max-height:900px;
-  display:flex;align-items:flex-end;overflow:hidden;
+  position:relative;
+  height:92vh;
+  min-height:600px;
+  max-height:980px;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
 }
-.hero-bg{
+
+/* Slideshow container */
+.hero-slides{
   position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1920&h=1080&fit=crop&auto=format&q=85') center 40% / cover no-repeat;
-  transform:scale(1.04);
-  transition:transform 8s var(--ease);
 }
-.hero-bg.loaded{transform:scale(1)}
+.hero-slide{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.6s ease-in-out;
+}
+.hero-slide.active{opacity:1}
+
+/* Fallback background while images load */
+.hero-slide:nth-child(1){background-image:url('images/my-khe.jpg'),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop&auto=format&q=85');background-position:center 40%}
+.hero-slide:nth-child(2){background-image:url('images/lady-buddha.jpg'),url('https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1920&h=1080&fit=crop&auto=format&q=85')}
+.hero-slide:nth-child(3){background-image:url('images/luxury-pool.jpg'),url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&h=1080&fit=crop&auto=format&q=85')}
+.hero-slide:nth-child(4){background-image:url('images/dragon-bridge.jpg'),url('https://images.unsplash.com/photo-1578559284894-4a3e17bb30b9?w=1920&h=1080&fit=crop&auto=format&q=85')}
+
+/* Slide indicators */
+.hero-indicators{
+  position:absolute;
+  bottom:clamp(3rem,7vh,5rem);
+  right:var(--gutter);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  z-index:3;
+}
+.hero-indicator{
+  width:3px;
+  height:24px;
+  border-radius:2px;
+  background:rgba(255,255,255,.25);
+  cursor:pointer;
+  transition:background .3s,height .3s;
+  border:none;
+  padding:0;
+}
+.hero-indicator.active{
+  background:#fff;
+  height:36px;
+}
+
 .hero-overlay{
   position:absolute;inset:0;
   background:
-    linear-gradient(to top,rgba(10,24,24,.94) 0%,rgba(10,24,24,.6) 38%,rgba(10,24,24,.28) 65%,transparent 100%),
-    linear-gradient(to right,rgba(10,24,24,.32) 0%,transparent 60%);
+    linear-gradient(to top,rgba(6,16,16,.96) 0%,rgba(6,16,16,.55) 35%,rgba(6,16,16,.2) 65%,transparent 100%),
+    linear-gradient(to right,rgba(6,16,16,.4) 0%,transparent 55%);
+  z-index:1;
 }
 .hero-grain{
-  position:absolute;inset:0;opacity:.035;pointer-events:none;
+  position:absolute;inset:0;opacity:.035;pointer-events:none;z-index:1;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 }
 .hero-content{
   position:relative;z-index:2;width:100%;
-  padding:0 var(--gutter) clamp(3rem,7vh,5rem);
+  padding:0 var(--gutter) clamp(3.5rem,8vh,6rem);
   max-width:calc(var(--max) + var(--gutter)*2);margin:0 auto;
 }
 .hero-location{
@@ -509,44 +552,29 @@ a{text-decoration:none;color:inherit}
 }
 h1.hero-h1{
   font-family:var(--font-serif);
-  font-size:clamp(2.6rem,6.5vw,5rem);
+  font-size:clamp(2.6rem,6vw,4.8rem);
   color:#fff;line-height:1.06;letter-spacing:-.035em;
-  margin-bottom:1.1rem;max-width:680px;
+  margin-bottom:1.1rem;max-width:760px;
 }
-h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
+h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
 .hero-sub{
-  font-size:clamp(.92rem,1.7vw,1.08rem);
-  color:rgba(255,255,255,.58);
-  max-width:460px;line-height:1.72;margin-bottom:0;
+  font-size:clamp(.92rem,1.6vw,1.06rem);
+  color:rgba(255,255,255,.55);
+  max-width:520px;line-height:1.75;margin-bottom:0;
 }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   STEP 1 — HERO ACTIONS: primary CTA is now editorial guide;
-   secondary CTA is smaller/less dominant booking link.
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:1.6rem}
+.hero-actions{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:2rem;
+}
 .hero-btn-primary{
   display:inline-flex;align-items:center;gap:8px;
-  padding:13px 26px;background:var(--coral);color:#fff;
-  font-size:.88rem;font-weight:700;border-radius:100px;
+  padding:14px 28px;background:var(--coral);color:#fff;
+  font-size:.9rem;font-weight:700;border-radius:100px;
   transition:background .2s,transform .15s,box-shadow .2s;
 }
 .hero-btn-primary:hover{
   background:var(--coral-light);transform:translateY(-2px);
   box-shadow:0 8px 24px rgba(200,96,74,.35);
 }
-/* STEP 1: Secondary CTA — smaller and visually subordinate */
-.hero-btn-secondary{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:10px 20px;                          /* reduced from 13px 26px */
-  background:rgba(255,255,255,.07);           /* more subtle than original */
-  backdrop-filter:blur(8px);color:rgba(255,255,255,.75);
-  font-size:.8rem;font-weight:500;            /* lighter weight */
-  border-radius:100px;
-  border:1px solid rgba(255,255,255,.12);transition:background .2s;
-}
-.hero-btn-secondary:hover{background:rgba(255,255,255,.14);color:#fff}
-
 .hero-stats{
   display:flex;gap:clamp(1.5rem,4vw,3.5rem);
   margin-top:2.8rem;padding-top:2rem;
@@ -558,121 +586,101 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 }
 .stat-label{font-size:.72rem;color:rgba(255,255,255,.42);font-weight:500}
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   STEP 1 — HERO BOOKING BAR: reduced visual dominance.
-   Decreased vertical padding ~40%, reduced input height,
-   reduced background opacity. All affiliate fields intact.
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.hb-wrap{
-  margin-top:1.4rem;                          /* reduced from 2rem */
-  width:100%;
-  max-width:900px;
+/* ─── FEATURED GUIDES CAROUSEL ───────────────────────────── */
+.featured-carousel-section{
+  background:var(--white);
+  padding:clamp(3.5rem,7vw,6rem) 0;
 }
-.hb-form{
-  display:grid;
-  grid-template-columns: 1.6fr 1fr 1fr 0.7fr auto;
-  gap:0;
-  background:rgba(255,255,255,.07);           /* reduced from .10 */
-  backdrop-filter:blur(24px) saturate(180%);
-  -webkit-backdrop-filter:blur(24px) saturate(180%);
-  border:1px solid rgba(255,255,255,.14);     /* reduced from .18 */
-  border-radius:14px;                         /* slightly tighter */
-  overflow:hidden;
-  transition:border-color .2s,box-shadow .2s;
+.featured-carousel-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 var(--gutter);
 }
-.hb-form:focus-within{
-  border-color:rgba(255,255,255,.30);
-  box-shadow:0 6px 30px rgba(0,0,0,.2),0 0 0 2px rgba(255,255,255,.05);
+.featured-carousel-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-bottom:2.5rem;
 }
-.hb-field{
-  display:flex;flex-direction:column;
-  padding:10px 16px 9px;                      /* reduced from 14px 18px 12px */
-  border-right:1px solid rgba(255,255,255,.1);
-  position:relative;
-  cursor:text;
+.featured-all-link{
+  font-size:.85rem;font-weight:700;color:var(--ocean);
+  border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;
+  white-space:nowrap;flex-shrink:0;
+  transition:border-color .15s;
 }
-.hb-field:last-of-type{border-right:none}
-.hb-label{
-  font-size:.58rem;font-weight:700;           /* slightly smaller */
-  letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(255,255,255,.4);
-  margin-bottom:4px;                          /* reduced from 5px */
-  white-space:nowrap;
-  pointer-events:none;
-}
-.hb-input{
-  background:transparent;border:none;outline:none;
-  font-family:var(--font-sans);
-  font-size:.84rem;font-weight:500;           /* slightly reduced */
-  color:#fff;
-  width:100%;min-width:0;
-  padding:0;line-height:1.3;
-}
-.hb-input::placeholder{color:rgba(255,255,255,.35)}
-/* Native date input — clean up browser chrome */
-.hb-input[type="date"]{
-  -webkit-appearance:none;
-  appearance:none;
-  color-scheme:dark;
-}
-.hb-input[type="date"]::-webkit-calendar-picker-indicator{
-  opacity:.35;filter:invert(1);cursor:pointer;
-  margin:0;padding:0;width:14px;height:14px;
-}
-.hb-input[type="number"]{
-  -moz-appearance:textfield;
-}
-.hb-input[type="number"]::-webkit-inner-spin-button,
-.hb-input[type="number"]::-webkit-outer-spin-button{
-  -webkit-appearance:none;
-}
-.hb-submit{
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  padding:0 24px;                             /* reduced from 28px */
-  background:var(--coral);color:#fff;
-  border:none;cursor:pointer;
-  font-family:var(--font-sans);
-  font-size:.82rem;font-weight:700;           /* slightly reduced */
-  letter-spacing:.02em;
-  white-space:nowrap;
-  transition:background .2s,transform .1s;
-  min-width:130px;                            /* reduced from 140px */
-}
-.hb-submit svg{
-  width:14px;height:14px;                     /* reduced from 15px */
-  stroke:currentColor;fill:none;stroke-width:2.2;
-  flex-shrink:0;
-}
-.hb-submit:hover{background:var(--coral-light)}
-.hb-submit:active{transform:scale(.98)}
-.hb-note{
-  margin-top:.4rem;                           /* reduced from .55rem */
-  font-size:.62rem;color:rgba(255,255,255,.25);
-  padding-left:4px;letter-spacing:.01em;
-  display:flex;align-items:center;gap:5px;
-}
-.hb-note::before{
-  content:'';display:inline-block;
-  width:12px;height:1px;background:rgba(255,255,255,.15);
-}
+.featured-all-link:hover{border-color:var(--ocean)}
 
-/* Responsive — stack on mobile */
-@media(max-width:720px){
-  .hb-form{
-    grid-template-columns:1fr 1fr;
-    border-radius:12px;
-  }
-  .hb-field:nth-child(1){grid-column:1/-1;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-field:nth-child(2){border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-field:nth-child(3){border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-field:nth-child(4){grid-column:1/-1;border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-submit{grid-column:1/-1;min-height:48px;border-radius:0}
+/* Scroll track — full bleed on mobile, contained on desktop */
+.featured-carousel-track{
+  display:flex;
+  gap:1.25rem;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-padding-left:var(--gutter);
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:0 var(--gutter) 1.5rem;
+  margin:0 calc(var(--gutter) * -1);
 }
-@media(max-width:420px){
-  .hb-form{grid-template-columns:1fr;border-radius:10px}
-  .hb-field{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1)}
-  .hb-submit{min-height:48px}
+.featured-carousel-track::-webkit-scrollbar{display:none}
+
+/* Cards */
+.fc-card{
+  flex:0 0 clamp(280px, 38vw, 420px);
+  scroll-snap-align:start;
+  position:relative;
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  aspect-ratio:3/4;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  box-shadow:var(--shadow-card);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
 }
+.fc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.fc-img{
+  position:absolute;inset:0;
+  object-fit:cover;width:100%;height:100%;
+  transition:transform .6s var(--ease);
+}
+.fc-card:hover .fc-img{transform:scale(1.04)}
+.fc-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(8,20,20,.92) 0%,rgba(8,20,20,.35) 50%,transparent 100%);
+}
+.fc-body{
+  position:relative;z-index:1;
+  padding:1.4rem 1.5rem;
+}
+.fc-pill{
+  display:inline-block;font-size:.63rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);
+  backdrop-filter:blur(4px);padding:4px 10px;
+  border-radius:100px;margin-bottom:.75rem;
+  border:1px solid rgba(255,255,255,.15);
+}
+.fc-title{
+  font-family:var(--font-serif);font-size:1.35rem;
+  color:#fff;line-height:1.15;letter-spacing:-.02em;
+  margin-bottom:.4rem;
+}
+.fc-desc{
+  font-size:.8rem;color:rgba(255,255,255,.55);
+  line-height:1.5;margin-bottom:1rem;
+}
+.fc-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:.78rem;font-weight:700;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.35);
+  padding-bottom:1px;
+  transition:border-color .15s,gap .2s;
+}
+.fc-card:hover .fc-link{gap:9px;border-color:#fff}
 
 /* ─── INTRO / CONTENT SECTIONS ───────────────────────────── */
 .intro-section{background:var(--white)}
@@ -750,77 +758,19 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 .cta-btn-ghost{padding:14px 30px;background:transparent;color:var(--ink);font-size:.9rem;font-weight:600;border-radius:100px;border:2px solid var(--sand-dark);transition:border-color .2s,background .2s}
 .cta-btn-ghost:hover{border-color:var(--ink-muted);background:var(--sand-mid)}
 
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   STEP 2 — FEATURED GUIDES SECTION (large image tiles)
-   Inserted below hero + planning strip, above intro text.
-   Reuses .cat-card, .cat-img, .cat-overlay, .cat-body,
-   .cat-pill, .cat-name, .cat-meta, .cat-link tokens exactly.
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.featured-guides-section{
-  background:var(--white);
-  padding:clamp(3.5rem,7vw,6rem) var(--gutter);
+/* ─── AFFILIATE LINK INLINE STYLE ───────────────────────── */
+.affiliate-link-inline{
+  color:var(--ocean);font-weight:600;
+  border-bottom:1px solid rgba(27,92,92,.25);
+  transition:border-color .15s;
 }
-.featured-guides-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  grid-template-rows:auto auto;
-  gap:1.2rem;
-  margin-top:2.5rem;
-}
-/* First tile spans 2 rows (tall hero tile) */
-.fg-card-hero{grid-row:1/3}
-/* Remaining 5 tiles fill the 2×2+1 gap */
-.fg-card-half{aspect-ratio:5/3}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   STEP 3 — BOOKING WIDGET standalone section (below guides)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.rates-section{
-  background:var(--ocean-deep);
-  padding:clamp(3rem,6vw,5rem) var(--gutter);
-}
-.rates-inner{
-  max-width:var(--max);margin:0 auto;
-  display:grid;
-  grid-template-columns:1fr 900px;
-  gap:clamp(2rem,4vw,4rem);
-  align-items:center;
-}
-.rates-text .section-label{color:rgba(255,255,255,.35)}
-.rates-text .section-label::before{background:rgba(255,255,255,.35)}
-.rates-heading{
-  font-family:var(--font-serif);
-  font-size:clamp(1.7rem,3vw,2.5rem);
-  color:#fff;line-height:1.1;letter-spacing:-.03em;
-  margin-bottom:.6rem;
-}
-.rates-heading em{font-style:italic;color:rgba(255,255,255,.5)}
-.rates-sub{
-  font-size:.9rem;color:rgba(255,255,255,.45);
-  line-height:1.7;max-width:30ch;
-}
-/* Override booking bar colours to sit on dark bg */
-.rates-section .hb-form{
-  background:rgba(255,255,255,.09);
-  border-color:rgba(255,255,255,.16);
-}
-.rates-section .hb-form:focus-within{
-  border-color:rgba(255,255,255,.34);
-}
-@media(max-width:1100px){
-  .rates-inner{
-    grid-template-columns:1fr;
-  }
-  .rates-text .rates-sub{max-width:none}
-}
+.affiliate-link-inline:hover{border-color:var(--ocean)}
 
 /* ─── HOME RESPONSIVE ────────────────────────────────────── */
 @media(max-width:1024px){
   .category-grid{grid-template-columns:repeat(2,1fr)}
   .cat-card:first-child{grid-row:auto;aspect-ratio:3/2}
   .trust-grid{grid-template-columns:1fr 1fr}
-  .featured-guides-grid{grid-template-columns:repeat(2,1fr)}
-  .fg-card-hero{grid-row:auto;aspect-ratio:3/2}
 }
 @media(max-width:768px){
   .intro-grid{grid-template-columns:1fr}
@@ -829,8 +779,8 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   .category-grid{grid-template-columns:1fr}
   .cat-card,.cat-card:first-child{aspect-ratio:3/2;grid-row:auto}
   .trust-grid{grid-template-columns:1fr}
-  .featured-guides-grid{grid-template-columns:1fr}
-  .fg-card-hero,.fg-card-half{aspect-ratio:3/2;grid-row:auto}
+  .fc-card{flex:0 0 clamp(260px, 80vw, 340px)}
+  .hero-indicators{display:none}
 }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
@@ -847,166 +797,6 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   .footer-grid{grid-template-columns:1fr}
   .footer-legal{flex-direction:column;align-items:flex-start}
 }
-
-
-/* ═══════════════════════════════════════════════════════════
-   START PLANNING — decision strip directly below hero
-   Inserted between hero and intro-section.
-   Uses existing design tokens only; no new variables.
-   ═══════════════════════════════════════════════════════════ */
-
-/* ── Wrapper ─────────────────────────────────────────────── */
-.sp-section{
-  background:var(--ocean-deep);
-  padding:0 var(--gutter);
-  position:relative;
-  z-index:1;
-}
-.sp-inner{
-  max-width:var(--max);
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:auto 1fr;
-  align-items:stretch;
-  gap:0;
-  /* pull up into hero bottom edge */
-  margin-top:-1px;
-}
-
-/* ── Left label column ───────────────────────────────────── */
-.sp-label{
-  display:flex;align-items:center;
-  padding:0 clamp(1.2rem,2.5vw,2rem) 0 0;
-  border-right:1px solid rgba(255,255,255,.07);
-  flex-shrink:0;
-}
-.sp-label-text{
-  font-size:.62rem;font-weight:700;
-  letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(255,255,255,.28);
-  white-space:nowrap;
-  writing-mode:vertical-rl;
-  transform:rotate(180deg);
-}
-
-/* ── Tiles scroll container ──────────────────────────────── */
-.sp-tiles{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:0;
-  overflow-x:auto;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-}
-.sp-tiles::-webkit-scrollbar{display:none}
-
-/* ── Individual tile ─────────────────────────────────────── */
-.sp-tile{
-  display:flex;flex-direction:column;
-  padding:clamp(1.1rem,2.5vw,1.6rem) clamp(1rem,2vw,1.5rem);
-  border-right:1px solid rgba(255,255,255,.07);
-  border-bottom:none;
-  position:relative;
-  text-decoration:none;
-  transition:background .22s var(--ease);
-  min-width:160px;
-}
-.sp-tile:last-child{border-right:none}
-.sp-tile::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;
-  height:2px;
-  background:var(--coral);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .28s var(--ease);
-}
-.sp-tile:hover{background:rgba(255,255,255,.04)}
-.sp-tile:hover::after{transform:scaleX(1)}
-
-/* ── Tile contents ───────────────────────────────────────── */
-.sp-tile-icon{
-  font-size:1.3rem;
-  margin-bottom:.6rem;
-  line-height:1;
-  display:block;
-}
-.sp-tile-label{
-  font-size:.62rem;font-weight:700;
-  letter-spacing:.1em;text-transform:uppercase;
-  color:var(--coral-light);
-  margin-bottom:.3rem;
-  opacity:.8;
-}
-.sp-tile-title{
-  font-family:var(--font-serif);
-  font-size:clamp(.95rem,1.5vw,1.1rem);
-  color:#fff;line-height:1.2;
-  letter-spacing:-.015em;
-  margin-bottom:.45rem;
-  flex:1;
-}
-.sp-tile-hint{
-  font-size:.71rem;
-  color:rgba(255,255,255,.38);
-  line-height:1.55;
-  display:flex;align-items:center;gap:5px;
-}
-.sp-tile-hint::after{
-  content:'→';
-  font-size:.8rem;
-  color:rgba(255,255,255,.22);
-  transition:color .2s,transform .2s;
-  flex-shrink:0;
-}
-.sp-tile:hover .sp-tile-hint::after{
-  color:var(--coral-light);
-  transform:translateX(3px);
-}
-
-/* ── Book Now tile (coral accent) ────────────────────────── */
-.sp-tile-book{
-  background:rgba(200,96,74,.12);
-  border-right-color:rgba(255,255,255,.07);
-}
-.sp-tile-book:hover{background:rgba(200,96,74,.2)}
-.sp-tile-book .sp-tile-title{color:var(--coral-light)}
-.sp-tile-book::after{background:var(--coral)}
-
-/* ── Responsive ──────────────────────────────────────────── */
-@media(max-width:1100px){
-  .sp-inner{grid-template-columns:1fr}
-  .sp-label{display:none}
-  .sp-tiles{
-    grid-template-columns:repeat(5,minmax(150px,1fr));
-    border-top:1px solid rgba(255,255,255,.07);
-  }
-}
-@media(max-width:768px){
-  .sp-tiles{
-    grid-template-columns:repeat(5,minmax(140px,1fr));
-  }
-  .sp-tile{padding:1rem 1.1rem}
-  .sp-tile-title{font-size:.9rem}
-}
-@media(max-width:480px){
-  .sp-section{padding:0}
-  .sp-tiles{
-    grid-template-columns:repeat(5,minmax(130px,1fr));
-  }
-  .sp-tile{padding:.85rem .9rem}
-  .sp-tile-icon{font-size:1.1rem;margin-bottom:.4rem}
-  .sp-tile-label{font-size:.58rem}
-  .sp-tile-hint{font-size:.65rem}
-}
-
-/* ─── AFFILIATE LINK INLINE STYLE ───────────────────────── */
-.affiliate-link-inline{
-  color:var(--ocean);font-weight:600;
-  border-bottom:1px solid rgba(27,92,92,.25);
-  transition:border-color .15s;
-}
-.affiliate-link-inline:hover{border-color:var(--ocean)}
 
 </style>
 </head>
@@ -1088,108 +878,39 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
 </div>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     STEP 1 — HERO SIMPLIFIED
-     • Booking bar: reduced padding, opacity, input height
-     • Primary CTA → editorial guide (best-hotels-in-da-nang.html)
-     • Secondary CTA → Search Hotels (smaller, less dominant)
-     • All affiliate hidden fields INTACT
+     HERO — Cinematic rotating slideshow, editorial positioning
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <header class="hero" role="banner">
-  <div class="hero-bg" id="heroBg"></div>
+
+  <!-- Rotating slides -->
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" role="img" aria-label="My Khe Beach sunrise, Da Nang"></div>
+    <div class="hero-slide" role="img" aria-label="Lady Buddha on Son Tra Peninsula"></div>
+    <div class="hero-slide" role="img" aria-label="Luxury hotel pool overlooking the ocean"></div>
+    <div class="hero-slide" role="img" aria-label="Dragon Bridge illuminated at night"></div>
+  </div>
+
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-grain"   aria-hidden="true"></div>
+
+  <!-- Slide indicators -->
+  <div class="hero-indicators" role="tablist" aria-label="Slideshow navigation">
+    <button class="hero-indicator active" role="tab" aria-label="Slide 1: My Khe Beach" aria-selected="true" data-slide="0"></button>
+    <button class="hero-indicator" role="tab" aria-label="Slide 2: Lady Buddha" aria-selected="false" data-slide="1"></button>
+    <button class="hero-indicator" role="tab" aria-label="Slide 3: Luxury Pool" aria-selected="false" data-slide="2"></button>
+    <button class="hero-indicator" role="tab" aria-label="Slide 4: Dragon Bridge" aria-selected="false" data-slide="3"></button>
+  </div>
+
   <div class="hero-content">
     <p class="hero-location fade-up fu1">Da Nang, Vietnam</p>
-    <h1 class="hero-h1 fade-up fu2">Best Hotels &amp; Beach Resorts<br>in <em>Da Nang</em></h1>
-    <p class="hero-sub fade-up fu3">Curated hotels, beach resorts, and private villas &mdash; handpicked by a local team who know every stretch of coastline.</p>
+    <h1 class="hero-h1 fade-up fu2">The Independent Guide to the<br><em>Best Hotels in Da Nang</em></h1>
+    <p class="hero-sub fade-up fu3">Locally curated hotel reviews, neighbourhood breakdowns, and seasonal travel insight — trusted by international travellers since 2021.</p>
 
-    <!-- STEP 1: Booking bar — reduced visual dominance. Affiliate fields unchanged. -->
-    <div class="hb-wrap fade-up fu4">
-      <form
-        class="hb-form"
-        action="https://www.booking.com/searchresults.html"
-        method="GET"
-        target="_blank"
-        rel="nofollow noopener sponsored"
-        aria-label="Search hotels in Da Nang"
-      >
-        <!-- Hidden affiliate + tracking params — DO NOT REMOVE -->
-        <input type="hidden" name="aid"        value="AFFILIATE_ID_PLACEHOLDER">
-        <input type="hidden" name="label"      value="dananghotelguide-hero-search">
-        <input type="hidden" name="dest_id"    value="-3714993">
-        <input type="hidden" name="dest_type"  value="city">
-        <input type="hidden" name="lang"       value="en-gb">
-        <input type="hidden" name="sb"         value="1">
-
-        <!-- Destination -->
-        <label class="hb-field">
-          <span class="hb-label">Destination</span>
-          <input
-            class="hb-input"
-            type="text"
-            name="ss"
-            value="Da Nang, Vietnam"
-            placeholder="Da Nang, Vietnam"
-            autocomplete="off"
-            aria-label="Destination"
-          >
-        </label>
-
-        <!-- Check-in -->
-        <label class="hb-field">
-          <span class="hb-label">Check-in</span>
-          <input
-            class="hb-input"
-            type="date"
-            name="checkin"
-            aria-label="Check-in date"
-          >
-        </label>
-
-        <!-- Check-out -->
-        <label class="hb-field">
-          <span class="hb-label">Check-out</span>
-          <input
-            class="hb-input"
-            type="date"
-            name="checkout"
-            aria-label="Check-out date"
-          >
-        </label>
-
-        <!-- Guests -->
-        <label class="hb-field">
-          <span class="hb-label">Guests</span>
-          <input
-            class="hb-input"
-            type="number"
-            name="group_adults"
-            value="2"
-            min="1"
-            max="30"
-            aria-label="Number of adults"
-          >
-        </label>
-
-        <!-- Submit -->
-        <button class="hb-submit" type="submit">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"/>
-            <line x1="16.5" y1="16.5" x2="22" y2="22"/>
-          </svg>
-          Search
-        </button>
-      </form>
-      <p class="hb-note">Free cancellation on most bookings &middot; No booking fees</p>
+    <div class="hero-actions fade-up fu4">
+      <a href="guides.html" class="hero-btn-primary">Explore Hotel Guides <span aria-hidden="true">&rarr;</span></a>
     </div>
 
-    <!-- STEP 1: CTA row — primary = editorial guide; secondary = search hotels (visually subordinate) -->
-    <div class="hero-actions fade-up fu5">
-      <a href="best-hotels-in-da-nang.html" class="hero-btn-primary">Read the Best Hotels Guide <span aria-hidden="true">&rarr;</span></a>
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-homepage&dest_id=-3714993&dest_type=city&checkin=&checkout=" class="hero-btn-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Hotels</a>
-    </div>
-
-    <div class="hero-stats fade-up fu6" aria-label="Site highlights">
+    <div class="hero-stats fade-up fu5" aria-label="Site highlights">
       <div class="stat-item">
         <div class="stat-num">110<span style="font-size:.9rem;opacity:.6">+</span></div>
         <div class="stat-label">Curated properties</div>
@@ -1210,225 +931,87 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.72)}
   </div>
 </header>
 
-<!-- START PLANNING — 5-tile decision strip -->
-<div class="sp-section" role="navigation" aria-label="Start planning your trip">
-  <div class="sp-inner">
-
-    <div class="sp-label" aria-hidden="true">
-      <span class="sp-label-text">Start planning</span>
-    </div>
-
-    <div class="sp-tiles">
-
-      <!-- Tile 1: Browse Hotels -->
-      <a href="best-hotels-in-da-nang.html" class="sp-tile" aria-label="Browse all Da Nang hotels — best picks for every budget">
-        <span class="sp-tile-icon" aria-hidden="true">🏨</span>
-        <span class="sp-tile-label">110+ reviewed</span>
-        <span class="sp-tile-title">Browse Hotels</span>
-        <span class="sp-tile-hint">All budgets &amp; types</span>
-      </a>
-
-      <!-- Tile 2: Where to Stay -->
-      <a href="where-to-stay-in-da-nang.html" class="sp-tile" aria-label="Where to stay in Da Nang — neighbourhood guide">
-        <span class="sp-tile-icon" aria-hidden="true">📍</span>
-        <span class="sp-tile-label">5 areas mapped</span>
-        <span class="sp-tile-title">Pick a Neighbourhood</span>
-        <span class="sp-tile-hint">My Khe · Son Tra · Han River</span>
-      </a>
-
-      <!-- Tile 3: Best Time -->
-      <a href="best-time-to-visit-da-nang.html" class="sp-tile" aria-label="Best time to visit Da Nang — seasonal guide">
-        <span class="sp-tile-icon" aria-hidden="true">🌤</span>
-        <span class="sp-tile-label">Monthly data</span>
-        <span class="sp-tile-title">When to Visit</span>
-        <span class="sp-tile-hint">Best: Mar – May</span>
-      </a>
-
-      <!-- Tile 4: Travel Guides -->
-      <a href="guides.html" class="sp-tile" aria-label="Da Nang travel guides — dining, beaches, itineraries">
-        <span class="sp-tile-icon" aria-hidden="true">🗺</span>
-        <span class="sp-tile-label">Dining · Beaches</span>
-        <span class="sp-tile-title">Travel Guides</span>
-        <span class="sp-tile-hint">MICHELIN · Day trips</span>
-      </a>
-
-      <!-- Tile 5: Book Now (affiliate CTA) -->
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=dananghotelguide-sp-strip&dest_id=-3714993&dest_type=city&checkin=&checkout="
-         class="sp-tile sp-tile-book affiliate-link"
-         target="_blank" rel="nofollow noopener sponsored"
-         aria-label="Search live hotel availability in Da Nang on Booking.com">
-        <span class="sp-tile-icon" aria-hidden="true">✦</span>
-        <span class="sp-tile-label">Free cancellation</span>
-        <span class="sp-tile-title">Check Availability</span>
-        <span class="sp-tile-hint">Live rates · No fees</span>
-      </a>
-
-    </div>
-  </div>
-</div>
-
-
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     STEP 2 — FEATURED GUIDES SECTION
-     Inserted here: BELOW hero + planning strip, ABOVE intro.
-     6 large image tile cards using existing .cat-card tokens.
-     Links reuse existing destinations — no duplicate content.
+     FEATURED GUIDES CAROUSEL — horizontally scrollable, snap
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="featured-guides-section" aria-labelledby="featured-guides-heading">
-  <div class="section-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:0">
+<section class="featured-carousel-section" aria-labelledby="featured-carousel-heading">
+  <div class="featured-carousel-inner">
+    <div class="featured-carousel-header">
       <div>
-        <p class="section-label">Expert guides</p>
-        <h2 class="section-heading" id="featured-guides-heading">Featured <em>hotel guides</em></h2>
+        <p class="section-label">Expert editorial guides</p>
+        <h2 class="section-heading" id="featured-carousel-heading">Featured <em>Hotel Guides</em></h2>
       </div>
-      <a href="hotels.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0">All hotel guides &rarr;</a>
+      <a href="guides.html" class="featured-all-link">All guides &rarr;</a>
     </div>
+  </div>
 
-    <div class="featured-guides-grid" role="list">
+  <div class="featured-carousel-track" role="list" aria-label="Featured hotel guides">
 
-      <!-- Tile 1: Best Hotels (hero tall tile) -->
-      <a href="best-hotels-in-da-nang.html" class="cat-card fg-card-hero" role="listitem" aria-label="Best Hotels in Da Nang — full guide">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1200&fit=crop&auto=format&q=80" alt="Luxury hotel pool overlooking Da Nang coastline at sunset" loading="eager" width="800" height="1200">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Definitive Guide &middot; 2026</span>
-          <h3 class="cat-name">Best Hotels in Da Nang</h3>
-          <p class="cat-meta">The complete breakdown — luxury, mid-range, and budget picks across every neighbourhood and price point.</p>
-          <span class="cat-link">Read the guide <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+    <!-- Card 1: Best Hotels -->
+    <a href="best-hotels-in-da-nang.html" class="fc-card" role="listitem" aria-label="Best Hotels in Da Nang — definitive 2026 guide">
+      <img class="fc-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1200&fit=crop&auto=format&q=80" alt="Luxury hotel pool overlooking Da Nang coastline at sunset" loading="eager" width="800" height="1200">
+      <div class="fc-overlay" aria-hidden="true"></div>
+      <div class="fc-body">
+        <span class="fc-pill">Definitive Guide &middot; 2026</span>
+        <h3 class="fc-title">Best Hotels in Da Nang</h3>
+        <p class="fc-desc">The complete breakdown — luxury, mid-range, and budget picks across every neighbourhood and price point.</p>
+        <span class="fc-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
 
-      <!-- Tile 2: Where to Stay -->
-      <a href="where-to-stay-in-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Where to Stay in Da Nang — neighbourhood guide">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=500&fit=crop&auto=format&q=80" alt="Da Nang beachfront neighbourhood aerial view at golden hour" loading="lazy" width="800" height="500">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Neighbourhood Guide</span>
-          <h3 class="cat-name">Where to Stay in Da Nang</h3>
-          <p class="cat-meta">My Khe, Son Tra, Han River — each area mapped and compared honestly.</p>
-          <span class="cat-link">Read the guide <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+    <!-- Card 2: Where to Stay -->
+    <a href="where-to-stay-in-da-nang.html" class="fc-card" role="listitem" aria-label="Where to Stay in Da Nang — neighbourhood guide">
+      <img class="fc-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=800&h=1200&fit=crop&auto=format&q=80" alt="Da Nang beachfront neighbourhood aerial view at golden hour" loading="lazy" width="800" height="1200">
+      <div class="fc-overlay" aria-hidden="true"></div>
+      <div class="fc-body">
+        <span class="fc-pill">Neighbourhood Guide</span>
+        <h3 class="fc-title">Where to Stay in Da Nang</h3>
+        <p class="fc-desc">My Khe, Son Tra, Han River — each area mapped and compared honestly for every type of traveller.</p>
+        <span class="fc-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
 
-      <!-- Tile 3: Luxury Hotels -->
-      <a href="luxury-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Luxury Hotels in Da Nang">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=500&fit=crop&auto=format&q=80" alt="Luxury infinity pool at an InterContinental Da Nang resort" loading="lazy" width="800" height="500">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Luxury &middot; From $160</span>
-          <h3 class="cat-name">Luxury Hotels &amp; Resorts</h3>
-          <p class="cat-meta">InterContinental, Sheraton Grand, Hyatt — world-class service on the finest stretches of coastline.</p>
-          <span class="cat-link">Explore luxury stays <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+    <!-- Card 3: Luxury Hotels -->
+    <a href="luxury-hotels-da-nang.html" class="fc-card" role="listitem" aria-label="Luxury Hotels in Da Nang">
+      <img class="fc-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=1200&fit=crop&auto=format&q=80" alt="Luxury infinity pool at an InterContinental Da Nang resort" loading="lazy" width="800" height="1200">
+      <div class="fc-overlay" aria-hidden="true"></div>
+      <div class="fc-body">
+        <span class="fc-pill">Luxury &middot; From $160</span>
+        <h3 class="fc-title">Luxury Hotels &amp; Resorts</h3>
+        <p class="fc-desc">InterContinental, Sheraton Grand, Hyatt — world-class service on the finest stretches of coastline.</p>
+        <span class="fc-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
 
-      <!-- Tile 4: Beachfront Hotels -->
-      <a href="da-nang-beach-hotels.html" class="cat-card fg-card-half" role="listitem" aria-label="Beachfront Hotels in Da Nang">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=500&fit=crop&auto=format&q=80" alt="My Khe Beach stretching along Da Nang coastline with calm South China Sea" loading="lazy" width="800" height="500">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Beachfront &middot; From $65</span>
-          <h3 class="cat-name">Beachfront Hotels</h3>
-          <p class="cat-meta">Direct sand access on My Khe and Non Nuoc beaches. All budgets covered.</p>
-          <span class="cat-link">See beach hotels <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+    <!-- Card 4: Beachfront Hotels -->
+    <a href="da-nang-beach-hotels.html" class="fc-card" role="listitem" aria-label="Beachfront Hotels in Da Nang">
+      <img class="fc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=1200&fit=crop&auto=format&q=80" alt="My Khe Beach stretching along Da Nang coastline" loading="lazy" width="800" height="1200">
+      <div class="fc-overlay" aria-hidden="true"></div>
+      <div class="fc-body">
+        <span class="fc-pill">Beachfront &middot; From $65</span>
+        <h3 class="fc-title">Beachfront Hotels</h3>
+        <p class="fc-desc">Direct sand access on My Khe and Non Nuoc beaches — all budgets, all reviewed on location.</p>
+        <span class="fc-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
 
-      <!-- Tile 5: Family Hotels -->
-      <a href="family-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Family Hotels in Da Nang">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=500&fit=crop&auto=format&q=80" alt="Family resort pool with waterparks at a Da Nang hotel" loading="lazy" width="800" height="500">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Family &middot; Kids clubs &amp; pools</span>
-          <h3 class="cat-name">Family Hotels</h3>
-          <p class="cat-meta">Waterparks, kids clubs, connecting rooms — the best resorts for travelling families.</p>
-          <span class="cat-link">View family hotels <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+    <!-- Card 5: Family Hotels -->
+    <a href="family-hotels-da-nang.html" class="fc-card" role="listitem" aria-label="Family Hotels in Da Nang">
+      <img class="fc-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=1200&fit=crop&auto=format&q=80" alt="Family resort pool with waterparks at a Da Nang hotel" loading="lazy" width="800" height="1200">
+      <div class="fc-overlay" aria-hidden="true"></div>
+      <div class="fc-body">
+        <span class="fc-pill">Family &middot; Kids clubs &amp; pools</span>
+        <h3 class="fc-title">Family Hotels</h3>
+        <p class="fc-desc">Waterparks, kids clubs, connecting rooms — the best Da Nang resorts built for travelling families.</p>
+        <span class="fc-link">Read Guide <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </a>
 
-      <!-- Tile 6: Boutique Hotels -->
-      <a href="boutique-hotels-da-nang.html" class="cat-card fg-card-half" role="listitem" aria-label="Boutique Hotels in Da Nang">
-        <img class="cat-img" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=500&fit=crop&auto=format&q=80" alt="Design-forward boutique hotel in Da Nang An Thuong district" loading="lazy" width="800" height="500">
-        <div class="cat-overlay" aria-hidden="true"></div>
-        <div class="cat-body">
-          <span class="cat-pill">Boutique &middot; From $45</span>
-          <h3 class="cat-name">Boutique Hotels</h3>
-          <p class="cat-meta">Personality over scale — An Thuong's hidden gems and character stays.</p>
-          <span class="cat-link">Discover boutiques <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
-
-    </div>
   </div>
 </section>
 
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     STEP 3 — BOOKING WIDGET repositioned to its own section
-     below Featured Guides. Heading + subtext added.
-     All affiliate parameters (aid, label, dest_id, dest_type)
-     and rel="nofollow noopener sponsored" intact.
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="rates-section" aria-labelledby="rates-heading">
-  <div class="rates-inner">
-    <div class="rates-text">
-      <p class="section-label" style="color:rgba(255,255,255,.35)"><span style="background:rgba(255,255,255,.35);display:inline-block;width:16px;height:2px;border-radius:1px;margin-right:8px;vertical-align:middle"></span>Live availability</p>
-      <h2 class="rates-heading" id="rates-heading">Check Live Rates<br><em>in Da Nang</em></h2>
-      <p class="rates-sub">Compare real-time prices across 110+ curated properties. Free cancellation on most bookings.</p>
-    </div>
-    <div>
-      <form
-        class="hb-form"
-        action="https://www.booking.com/searchresults.html"
-        method="GET"
-        target="_blank"
-        rel="nofollow noopener sponsored"
-        aria-label="Search live hotel rates in Da Nang"
-      >
-        <!-- Hidden affiliate + tracking params — DO NOT REMOVE -->
-        <input type="hidden" name="aid"        value="AFFILIATE_ID_PLACEHOLDER">
-        <input type="hidden" name="label"      value="dananghotelguide-rates-section">
-        <input type="hidden" name="dest_id"    value="-3714993">
-        <input type="hidden" name="dest_type"  value="city">
-        <input type="hidden" name="lang"       value="en-gb">
-        <input type="hidden" name="sb"         value="1">
-
-        <label class="hb-field">
-          <span class="hb-label">Destination</span>
-          <input class="hb-input" type="text" name="ss" value="Da Nang, Vietnam" placeholder="Da Nang, Vietnam" autocomplete="off" aria-label="Destination">
-        </label>
-        <label class="hb-field">
-          <span class="hb-label">Check-in</span>
-          <input class="hb-input" type="date" name="checkin" aria-label="Check-in date">
-        </label>
-        <label class="hb-field">
-          <span class="hb-label">Check-out</span>
-          <input class="hb-input" type="date" name="checkout" aria-label="Check-out date">
-        </label>
-        <label class="hb-field">
-          <span class="hb-label">Guests</span>
-          <input class="hb-input" type="number" name="group_adults" value="2" min="1" max="30" aria-label="Number of adults">
-        </label>
-        <button class="hb-submit" type="submit">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
-          Search Hotels
-        </button>
-      </form>
-      <p class="hb-note">Powered by Booking.com &middot; No extra fees &middot; Free cancellation on most rates</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     S2: INTRO — SEO content.
-     STEP 4: 3 contextual affiliate links added naturally
-     inside the prose paragraphs with:
-       • affiliate parameters (aid, label, dest_id, dest_type)
-       • target="_blank"
-       • rel="nofollow noopener sponsored"
-       • class="affiliate-link"
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<!-- S2: INTRO — SEO content -->
 <section class="section intro-section" aria-labelledby="intro-heading">
   <div class="section-inner">
     <div class="intro-grid">
@@ -1913,7 +1496,6 @@ function runSearch(query) {
   // ── Dropdown keyboard accessibility ─────────────────
   document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
     toggle.addEventListener('click', function(e) {
-      // On click (not hover), toggle for keyboard users
       var menu = this.parentNode.querySelector('.nav-dropdown-menu');
       if (!menu) return;
       var expanded = this.getAttribute('aria-expanded') === 'true';
@@ -1921,9 +1503,57 @@ function runSearch(query) {
     });
   });
 
-  // Hero Ken Burns
-  var heroBg = document.getElementById('heroBg');
-  if (heroBg) requestAnimationFrame(function() { heroBg.classList.add('loaded'); });
+  // ── Hero Slideshow ───────────────────────────────────
+  (function() {
+    var slides = document.querySelectorAll('.hero-slide');
+    var indicators = document.querySelectorAll('.hero-indicator');
+    var current = 0;
+    var total = slides.length;
+    var timer = null;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      if (indicators[current]) {
+        indicators[current].classList.remove('active');
+        indicators[current].setAttribute('aria-selected', 'false');
+      }
+      current = (index + total) % total;
+      slides[current].classList.add('active');
+      if (indicators[current]) {
+        indicators[current].classList.add('active');
+        indicators[current].setAttribute('aria-selected', 'true');
+      }
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 7000);
+    }
+
+    // Indicator click
+    indicators.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var idx = parseInt(this.dataset.slide, 10);
+        goTo(idx);
+        startTimer();
+      });
+    });
+
+    // Start auto-rotation
+    startTimer();
+
+    // Pause on hover
+    var heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', function() { clearInterval(timer); });
+      heroEl.addEventListener('mouseleave', function() { startTimer(); });
+    }
+  })();
+
 })();
 
 </script>
