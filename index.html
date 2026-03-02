@@ -474,7 +474,7 @@ a{text-decoration:none;color:inherit}
 .hero{
   position:relative;
   height:92vh;
-  min-height:600px;
+  min-height:680px;
   max-height:980px;
   display:flex;
   align-items:center;
@@ -539,7 +539,7 @@ a{text-decoration:none;color:inherit}
 .hero-content{
   position:relative;z-index:2;width:100%;
   padding:0 var(--gutter);
-  margin-top:-3rem;
+  margin-top:4.5rem;
   max-width:calc(var(--max) + var(--gutter)*2);margin-left:auto;margin-right:auto;
 }
 .hero-location{
@@ -873,7 +873,6 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
   padding:0;
 }
 .hw-field-input:focus{color:#fff}
-/* Date input arrow colour for dark bg */
 .hw-field-input[type=date]::-webkit-calendar-picker-indicator{
   filter:invert(1) opacity(.4);
   cursor:pointer;
@@ -1035,53 +1034,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
 }
 
 /* ─── END WIDGET CSS ──────────────────────────────────────── */
-
-/* ─── FEATURED GUIDES SECTION (homepage) ─────────────────── */
-.fg-section{background:var(--sand)}
-.fg-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  flex-wrap:wrap;
-  gap:1rem;
-  margin-bottom:0;
-}
-.fg-intro{
-  font-size:.92rem;
-  color:var(--ink-muted);
-  max-width:480px;
-  line-height:1.7;
-  margin-top:.25rem;
-  margin-bottom:0;
-}
-.fg-all-link{
-  font-size:.85rem;
-  font-weight:700;
-  color:var(--ocean);
-  border-bottom:1px solid rgba(27,92,92,.3);
-  padding-bottom:2px;
-  white-space:nowrap;
-  flex-shrink:0;
-  align-self:flex-end;
-  transition:border-color .15s;
-}
-.fg-all-link:hover{border-color:var(--ocean)}
-/* Guide tile grid — mirrors guides.html */
-.guide-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
-.ghc{background:var(--white);border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column}
-.ghc:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
-.ghc-img{width:100%;height:160px;object-fit:cover;display:block;transition:transform .5s}
-.ghc:hover .ghc-img{transform:scale(1.04)}
-.ghc-body{padding:1.3rem 1.4rem;flex:1;display:flex;flex-direction:column}
-.ghc-cat{font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.35rem}
-.ghc-title{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);line-height:1.25;margin-bottom:.4rem;letter-spacing:-.01em}
-.ghc-desc{font-size:.8rem;color:var(--ink-muted);line-height:1.65;flex:1;margin-bottom:.9rem}
-.ghc-read{display:inline-flex;align-items:center;gap:4px;font-size:.78rem;font-weight:700;color:var(--ocean);margin-top:auto;transition:gap .15s}
-.ghc:hover .ghc-read{gap:7px}
-@media(max-width:900px){.guide-hub-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.guide-hub-grid{grid-template-columns:1fr}}
-/* END FEATURED GUIDES SECTION */
-
+/* ─── HOME RESPONSIVE ────────────────────────────────────── */
 @media(max-width:1024px){
   .category-grid{grid-template-columns:repeat(2,1fr)}
   .cat-card:first-child{grid-row:auto;aspect-ratio:3/2}
@@ -1325,105 +1278,6 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
     </div><!-- /hero-inner -->
   </div><!-- /hero-content -->
 </header>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     FEATURED GUIDES — 3-column tile grid
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="section fg-section" aria-labelledby="fg-heading">
-  <div class="section-inner">
-
-    <div class="fg-header">
-      <div>
-        <p class="section-label">Travel Intelligence</p>
-        <h2 class="section-heading" id="fg-heading">Explore Da Nang <em>Like a Local</em></h2>
-        <p class="fg-intro">A curated selection of our most-read planning guides — updated for 2026.</p>
-      </div>
-      <a href="guides.html" class="fg-all-link" aria-label="Browse all Da Nang travel guides">All guides &rarr;</a>
-    </div>
-
-    <div class="guide-hub-grid">
-
-      <a href="best-hotels-in-da-nang.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=320&fit=crop&q=75"
-             alt="Luxury beachfront hotel pool in Da Nang, Vietnam"
-             width="500" height="160" loading="eager">
-        <div class="ghc-body">
-          <div class="ghc-cat">Definitive Guide · 2026</div>
-          <h3 class="ghc-title">Best Hotels in Da Nang</h3>
-          <p class="ghc-desc">Every top property ranked across luxury, beachfront, boutique, family, and budget — the complete breakdown to start your search.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=320&fit=crop&q=75"
-             alt="My Khe Beach shoreline at sunrise, Da Nang"
-             width="500" height="160" loading="eager">
-        <div class="ghc-body">
-          <div class="ghc-cat">Neighbourhood Guide · 2026</div>
-          <h3 class="ghc-title">Where to Stay in Da Nang</h3>
-          <p class="ghc-desc">My Khe, Son Tra, Han River, Non Nuoc — each area mapped with honest pros, cons, and who each neighbourhood suits best.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotel-prices-by-month.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=320&fit=crop&q=75"
-             alt="Da Nang beachfront resort at golden hour"
-             width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Price Index · Data Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotel Prices by Month</h3>
-          <p class="ghc-desc">When rates drop, when they spike, and how to time your booking for the best value. Real price data across all categories.</p>
-          <span class="ghc-read">View price index →</span>
-        </div>
-      </a>
-
-      <a href="best-time-to-visit-da-nang.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=320&fit=crop&q=75"
-             alt="Turquoise sea and blue sky at My Khe Beach, Da Nang"
-             width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Climate &amp; Timing · 2026</div>
-          <h3 class="ghc-title">Best Time to Visit Da Nang</h3>
-          <p class="ghc-desc">Beach season, value season, and the months to avoid. Month-by-month climate breakdown with temperature and rainfall data.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="visa-run-da-nang.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=320&fit=crop&q=75"
-             alt="Da Nang International Airport terminal departure hall"
-             width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Visa &amp; Entry · 2026</div>
-          <h3 class="ghc-title">Da Nang Visa Run Guide</h3>
-          <p class="ghc-desc">E-visa rules, exemption countries, Lao Bao border crossings, and Bangkok or KL flight runs — with a step-by-step checklist.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="malls-in-da-nang.html" class="ghc">
-        <img class="ghc-img"
-             src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=500&h=320&fit=crop&q=75"
-             alt="Modern shopping mall interior in Da Nang city centre"
-             width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Shopping &amp; Lifestyle · 2026</div>
-          <h3 class="ghc-title">Malls &amp; Shopping in Da Nang</h3>
-          <p class="ghc-desc">Vincom Plaza, AEON, Lotte Mart, and the best local markets — where to go for fashion, electronics, groceries, and gifts.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-    </div><!-- /guide-hub-grid -->
-  </div><!-- /section-inner -->
-</section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FEATURED GUIDES CAROUSEL — horizontally scrollable, snap
@@ -2027,8 +1881,6 @@ function runSearch(query) {
 
   // ── Weather widget ────────────────────────────────────────
   (function() {
-    // Replace YOUR_OPENWEATHER_KEY with a real key to enable live data.
-    // With no key, the widget shows a graceful static fallback.
     var OW_KEY = 'YOUR_OPENWEATHER_KEY';
     var DA_NANG_LAT = '16.0544';
     var DA_NANG_LON = '108.2022';
@@ -2040,7 +1892,6 @@ function runSearch(query) {
     var elWind    = document.getElementById('hw-wind');
     var elFeels   = document.getElementById('hw-feels');
 
-    // Inline SVG icons keyed by OpenWeather icon prefix
     var ICONS = {
       '01': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="rgba(255,200,80,.85)"/><g stroke="rgba(255,200,80,.6)" stroke-width="2.5" stroke-linecap="round"><line x1="32" y1="4" x2="32" y2="12"/><line x1="32" y1="52" x2="32" y2="60"/><line x1="4" y1="32" x2="12" y2="32"/><line x1="52" y1="32" x2="60" y2="32"/><line x1="12.7" y1="12.7" x2="18.4" y2="18.4"/><line x1="45.6" y1="45.6" x2="51.3" y2="51.3"/><line x1="51.3" y1="12.7" x2="45.6" y2="18.4"/><line x1="18.4" y1="45.6" x2="12.7" y2="51.3"/></g></svg>',
       '02': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="26" cy="30" r="10" fill="rgba(255,200,80,.7)"/><ellipse cx="38" cy="36" rx="14" ry="10" fill="rgba(255,255,255,.25)"/><ellipse cx="24" cy="38" rx="11" ry="8" fill="rgba(255,255,255,.2)"/></svg>',
@@ -2070,7 +1921,6 @@ function runSearch(query) {
 
     function fetchWeather() {
       if (!OW_KEY || OW_KEY === 'YOUR_OPENWEATHER_KEY') {
-        // Graceful fallback — realistic Da Nang defaults
         setWeather(30, 'Partly cloudy', '02d', 72, 18, 33);
         return;
       }
@@ -2092,7 +1942,6 @@ function runSearch(query) {
     }
 
     fetchWeather();
-    // Refresh every 60 min
     setInterval(fetchWeather, 3600000);
   })();
 
