@@ -477,7 +477,7 @@ a{text-decoration:none;color:inherit}
   min-height:600px;
   max-height:980px;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   overflow:hidden;
 }
 
@@ -538,8 +538,9 @@ a{text-decoration:none;color:inherit}
 }
 .hero-content{
   position:relative;z-index:2;width:100%;
-  padding:0 var(--gutter) clamp(3.5rem,8vh,6rem);
-  max-width:calc(var(--max) + var(--gutter)*2);margin:0 auto;
+  padding:0 var(--gutter);
+  margin-top:-3rem;
+  max-width:calc(var(--max) + var(--gutter)*2);margin-left:auto;margin-right:auto;
 }
 .hero-location{
   display:inline-flex;align-items:center;gap:7px;
@@ -766,7 +767,321 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
 }
 .affiliate-link-inline:hover{border-color:var(--ocean)}
 
-/* ─── HOME RESPONSIVE ────────────────────────────────────── */
+
+/* ─── HERO TWO-COLUMN LAYOUT ─────────────────────────────── */
+.hero-inner{
+  display:flex;
+  align-items:flex-end;
+  gap:clamp(2rem,4vw,4rem);
+  width:100%;
+}
+.hero-left{
+  flex:1;
+  min-width:0;
+}
+.hero-right{
+  flex-shrink:0;
+  width:clamp(280px,28vw,340px);
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  padding-bottom:.25rem;
+}
+
+/* ─── BOOKING WIDGET ─────────────────────────────────────── */
+.hw-booking{
+  background:rgba(6,20,20,.62);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--r-xl);
+  padding:1.1rem 1.2rem 1.25rem;
+  box-shadow:0 8px 32px rgba(0,0,0,.3);
+}
+.hw-booking-label{
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  margin-bottom:.9rem;
+}
+.hw-form{
+  display:flex;
+  flex-direction:column;
+  gap:.55rem;
+}
+.hw-destination{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-md);
+  padding:.55rem .75rem;
+}
+.hw-dest-text{
+  font-size:.82rem;
+  font-weight:600;
+  color:rgba(255,255,255,.75);
+}
+.hw-icon{
+  width:14px;height:14px;
+  fill:rgba(255,255,255,.4);
+  flex-shrink:0;
+}
+.hw-dates{
+  display:flex;
+  align-items:center;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-md);
+  overflow:hidden;
+}
+.hw-dates .hw-field{
+  flex:1;
+  padding:.5rem .75rem;
+}
+.hw-divider{
+  width:1px;
+  height:32px;
+  background:rgba(255,255,255,.1);
+  flex-shrink:0;
+}
+.hw-field{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.hw-field-label{
+  font-size:.58rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
+.hw-field-input{
+  background:transparent;
+  border:none;
+  outline:none;
+  color:rgba(255,255,255,.8);
+  font-family:var(--font-sans);
+  font-size:.8rem;
+  font-weight:500;
+  cursor:pointer;
+  width:100%;
+  padding:0;
+}
+.hw-field-input:focus{color:#fff}
+/* Date input arrow colour for dark bg */
+.hw-field-input[type=date]::-webkit-calendar-picker-indicator{
+  filter:invert(1) opacity(.4);
+  cursor:pointer;
+}
+.hw-select{
+  -webkit-appearance:none;
+  appearance:none;
+}
+.hw-guests-field{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-md);
+  padding:.5rem .75rem;
+}
+.hw-guests-wrap{
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+}
+.hw-guests-icon{width:13px;height:13px;flex-shrink:0}
+.hw-submit{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  background:var(--coral);
+  color:#fff;
+  border:none;
+  border-radius:100px;
+  padding:.65rem 1rem;
+  font-family:var(--font-sans);
+  font-size:.82rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .2s, transform .15s, box-shadow .2s;
+  margin-top:.15rem;
+  width:100%;
+}
+.hw-submit:hover{
+  background:var(--coral-light);
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(200,96,74,.4);
+}
+.hw-submit svg{
+  width:14px;height:14px;
+  stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+  flex-shrink:0;
+}
+
+/* ─── WEATHER WIDGET ─────────────────────────────────────── */
+.hw-weather{
+  background:rgba(6,20,20,.52);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-xl);
+  padding:.85rem 1.2rem .9rem;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+}
+.hw-weather-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:.6rem;
+}
+.hw-weather-location{
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:.15rem;
+}
+.hw-weather-temp{
+  font-family:var(--font-serif);
+  font-size:1.8rem;
+  color:#fff;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+.hw-weather-unit{
+  font-family:var(--font-sans);
+  font-size:.9rem;
+  color:rgba(255,255,255,.5);
+  vertical-align:super;
+}
+.hw-weather-desc{
+  font-size:.72rem;
+  font-weight:500;
+  color:rgba(255,255,255,.5);
+  margin-top:.2rem;
+  text-transform:capitalize;
+}
+.hw-weather-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:.35rem;
+}
+.hw-weather-icon .hw-weather-svg{
+  width:38px;height:38px;display:block;
+}
+.hw-weather-updated{
+  font-size:.58rem;
+  font-weight:500;
+  color:rgba(255,255,255,.22);
+  letter-spacing:.06em;
+  text-align:right;
+}
+.hw-weather-extras{
+  display:flex;
+  gap:.85rem;
+  padding-top:.6rem;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.hw-weather-extra{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.hw-weather-extra span:first-child{
+  font-size:.78rem;
+  font-weight:600;
+  color:rgba(255,255,255,.7);
+}
+.hw-wex-label{
+  font-size:.58rem;
+  font-weight:500;
+  color:rgba(255,255,255,.28);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+/* ─── WEATHER SVG ICON STATES ─────────────────────────────── */
+.hw-weather-icon-wrap svg { display:none }
+.hw-weather-icon-wrap.sunny  .ico-sun   { display:block }
+.hw-weather-icon-wrap.cloudy .ico-cloud { display:block }
+.hw-weather-icon-wrap.rainy  .ico-rain  { display:block }
+.hw-weather-icon-wrap.storm  .ico-storm { display:block }
+.hw-weather-icon-wrap.default .ico-default { display:block }
+
+/* ─── HERO WIDGET RESPONSIVE ──────────────────────────────── */
+@media(max-width:900px){
+  .hero-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2rem;
+  }
+  .hero-right{
+    width:100%;
+    max-width:420px;
+  }
+}
+@media(max-width:480px){
+  .hero-right{ max-width:100% }
+  .hw-dates{ flex-direction:column }
+  .hw-divider{ width:100%;height:1px }
+  .hw-dates .hw-field{ padding:.5rem .75rem }
+}
+
+/* ─── END WIDGET CSS ──────────────────────────────────────── */
+
+/* ─── FEATURED GUIDES SECTION (homepage) ─────────────────── */
+.fg-section{background:var(--sand)}
+.fg-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-bottom:0;
+}
+.fg-intro{
+  font-size:.92rem;
+  color:var(--ink-muted);
+  max-width:480px;
+  line-height:1.7;
+  margin-top:.25rem;
+  margin-bottom:0;
+}
+.fg-all-link{
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--ocean);
+  border-bottom:1px solid rgba(27,92,92,.3);
+  padding-bottom:2px;
+  white-space:nowrap;
+  flex-shrink:0;
+  align-self:flex-end;
+  transition:border-color .15s;
+}
+.fg-all-link:hover{border-color:var(--ocean)}
+/* Guide tile grid — mirrors guides.html */
+.guide-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.ghc{background:var(--white);border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column}
+.ghc:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.ghc-img{width:100%;height:160px;object-fit:cover;display:block;transition:transform .5s}
+.ghc:hover .ghc-img{transform:scale(1.04)}
+.ghc-body{padding:1.3rem 1.4rem;flex:1;display:flex;flex-direction:column}
+.ghc-cat{font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.35rem}
+.ghc-title{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);line-height:1.25;margin-bottom:.4rem;letter-spacing:-.01em}
+.ghc-desc{font-size:.8rem;color:var(--ink-muted);line-height:1.65;flex:1;margin-bottom:.9rem}
+.ghc-read{display:inline-flex;align-items:center;gap:4px;font-size:.78rem;font-weight:700;color:var(--ocean);margin-top:auto;transition:gap .15s}
+.ghc:hover .ghc-read{gap:7px}
+@media(max-width:900px){.guide-hub-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.guide-hub-grid{grid-template-columns:1fr}}
+/* END FEATURED GUIDES SECTION */
+
 @media(max-width:1024px){
   .category-grid{grid-template-columns:repeat(2,1fr)}
   .cat-card:first-child{grid-row:auto;aspect-ratio:3/2}
@@ -902,34 +1217,213 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.68)}
   </div>
 
   <div class="hero-content">
-    <p class="hero-location fade-up fu1">Da Nang, Vietnam</p>
-    <h1 class="hero-h1 fade-up fu2">The Independent Guide to the<br><em>Best Hotels in Da Nang</em></h1>
-    <p class="hero-sub fade-up fu3">Locally curated hotel reviews, neighbourhood breakdowns, and seasonal travel insight — trusted by international travellers since 2021.</p>
+    <div class="hero-inner">
 
-    <div class="hero-actions fade-up fu4">
-      <a href="guides.html" class="hero-btn-primary">Explore Hotel Guides <span aria-hidden="true">&rarr;</span></a>
-    </div>
+      <!-- ── LEFT: editorial text ── -->
+      <div class="hero-left">
+        <p class="hero-location fade-up fu1">Da Nang, Vietnam</p>
+        <h1 class="hero-h1 fade-up fu2">The Independent Guide to the<br><em>Best Hotels in Da Nang</em></h1>
+        <p class="hero-sub fade-up fu3">Locally curated hotel reviews, neighbourhood breakdowns, and seasonal travel insight — trusted by international travellers since 2021.</p>
 
-    <div class="hero-stats fade-up fu5" aria-label="Site highlights">
-      <div class="stat-item">
-        <div class="stat-num">110<span style="font-size:.9rem;opacity:.6">+</span></div>
-        <div class="stat-label">Curated properties</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">$20</div>
-        <div class="stat-label">Budget stays from</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5&#x2605;</div>
-        <div class="stat-label">From $160/night</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">43</div>
-        <div class="stat-label">MICHELIN listings</div>
-      </div>
-    </div>
-  </div>
+        <div class="hero-actions fade-up fu4">
+          <a href="guides.html" class="hero-btn-primary">Explore Hotel Guides <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="hero-stats fade-up fu5" aria-label="Site highlights">
+          <div class="stat-item">
+            <div class="stat-num">110<span style="font-size:.9rem;opacity:.6">+</span></div>
+            <div class="stat-label">Curated properties</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">$20</div>
+            <div class="stat-label">Budget stays from</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">5&#x2605;</div>
+            <div class="stat-label">From $160/night</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">43</div>
+            <div class="stat-label">MICHELIN listings</div>
+          </div>
+        </div>
+      </div><!-- /hero-left -->
+
+      <!-- ── RIGHT: booking + weather widgets ── -->
+      <div class="hero-right fade-up fu3">
+
+        <!-- Booking widget -->
+        <div class="hw-booking" role="search" aria-label="Search Da Nang hotels">
+          <div class="hw-booking-label">Find your hotel</div>
+          <form class="hw-form" id="hw-form" action="https://www.booking.com/searchresults.html" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="aid"  value="AFFILIATE_ID_PLACEHOLDER">
+            <input type="hidden" name="ss"   value="Da Nang, Vietnam">
+            <input type="hidden" name="lang" value="en-gb">
+            <input type="hidden" name="sb"   value="1">
+
+            <div class="hw-destination">
+              <svg class="hw-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span class="hw-dest-text">Da Nang, Vietnam</span>
+            </div>
+
+            <div class="hw-dates">
+              <div class="hw-field">
+                <label class="hw-field-label" for="hw-checkin">Check-in</label>
+                <input class="hw-field-input" id="hw-checkin" name="checkin" type="date" required aria-label="Check-in date">
+              </div>
+              <div class="hw-divider" aria-hidden="true"></div>
+              <div class="hw-field">
+                <label class="hw-field-label" for="hw-checkout">Check-out</label>
+                <input class="hw-field-input" id="hw-checkout" name="checkout" type="date" required aria-label="Check-out date">
+              </div>
+            </div>
+
+            <div class="hw-field hw-guests-field">
+              <label class="hw-field-label" for="hw-guests">Guests</label>
+              <div class="hw-guests-wrap">
+                <svg class="hw-icon hw-guests-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <select class="hw-field-input hw-select" id="hw-guests" name="group_adults" aria-label="Number of guests">
+                  <option value="1">1 guest</option>
+                  <option value="2" selected>2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5+ guests</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="hw-submit" type="submit">
+              Search Hotels
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div><!-- /hw-booking -->
+
+        <!-- Weather widget -->
+        <div class="hw-weather" id="hw-weather" aria-label="Da Nang current weather" aria-live="polite">
+          <div class="hw-weather-inner">
+            <div class="hw-weather-left">
+              <div class="hw-weather-location">Da Nang</div>
+              <div class="hw-weather-temp"><span id="hw-temp">--</span><span class="hw-weather-unit">°C</span></div>
+              <div class="hw-weather-desc" id="hw-desc">Loading…</div>
+            </div>
+            <div class="hw-weather-right">
+              <div class="hw-weather-icon" id="hw-icon" aria-hidden="true">
+                <svg class="hw-weather-svg hw-weather-default" viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2.5"/><g stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-linecap="round"><line x1="32" y1="6" x2="32" y2="13"/><line x1="32" y1="51" x2="32" y2="58"/><line x1="6" y1="32" x2="13" y2="32"/><line x1="51" y1="32" x2="58" y2="32"/><line x1="14.1" y1="14.1" x2="19.2" y2="19.2"/><line x1="44.8" y1="44.8" x2="49.9" y2="49.9"/><line x1="49.9" y1="14.1" x2="44.8" y2="19.2"/><line x1="19.2" y1="44.8" x2="14.1" y2="49.9"/></g></svg>
+              </div>
+              <div class="hw-weather-updated">Updated hourly</div>
+            </div>
+          </div>
+          <div class="hw-weather-extras" id="hw-extras">
+            <div class="hw-weather-extra"><span id="hw-humidity">--</span><span class="hw-wex-label">Humidity</span></div>
+            <div class="hw-weather-extra"><span id="hw-wind">--</span><span class="hw-wex-label">Wind</span></div>
+            <div class="hw-weather-extra"><span id="hw-feels">--</span><span class="hw-wex-label">Feels like</span></div>
+          </div>
+        </div><!-- /hw-weather -->
+
+      </div><!-- /hero-right -->
+    </div><!-- /hero-inner -->
+  </div><!-- /hero-content -->
 </header>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     FEATURED GUIDES — 3-column tile grid
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="section fg-section" aria-labelledby="fg-heading">
+  <div class="section-inner">
+
+    <div class="fg-header">
+      <div>
+        <p class="section-label">Travel Intelligence</p>
+        <h2 class="section-heading" id="fg-heading">Explore Da Nang <em>Like a Local</em></h2>
+        <p class="fg-intro">A curated selection of our most-read planning guides — updated for 2026.</p>
+      </div>
+      <a href="guides.html" class="fg-all-link" aria-label="Browse all Da Nang travel guides">All guides &rarr;</a>
+    </div>
+
+    <div class="guide-hub-grid">
+
+      <a href="best-hotels-in-da-nang.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=320&fit=crop&q=75"
+             alt="Luxury beachfront hotel pool in Da Nang, Vietnam"
+             width="500" height="160" loading="eager">
+        <div class="ghc-body">
+          <div class="ghc-cat">Definitive Guide · 2026</div>
+          <h3 class="ghc-title">Best Hotels in Da Nang</h3>
+          <p class="ghc-desc">Every top property ranked across luxury, beachfront, boutique, family, and budget — the complete breakdown to start your search.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="where-to-stay-in-da-nang.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=320&fit=crop&q=75"
+             alt="My Khe Beach shoreline at sunrise, Da Nang"
+             width="500" height="160" loading="eager">
+        <div class="ghc-body">
+          <div class="ghc-cat">Neighbourhood Guide · 2026</div>
+          <h3 class="ghc-title">Where to Stay in Da Nang</h3>
+          <p class="ghc-desc">My Khe, Son Tra, Han River, Non Nuoc — each area mapped with honest pros, cons, and who each neighbourhood suits best.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hotel-prices-by-month.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=320&fit=crop&q=75"
+             alt="Da Nang beachfront resort at golden hour"
+             width="500" height="160" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Price Index · Data Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang Hotel Prices by Month</h3>
+          <p class="ghc-desc">When rates drop, when they spike, and how to time your booking for the best value. Real price data across all categories.</p>
+          <span class="ghc-read">View price index →</span>
+        </div>
+      </a>
+
+      <a href="best-time-to-visit-da-nang.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=320&fit=crop&q=75"
+             alt="Turquoise sea and blue sky at My Khe Beach, Da Nang"
+             width="500" height="160" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Climate &amp; Timing · 2026</div>
+          <h3 class="ghc-title">Best Time to Visit Da Nang</h3>
+          <p class="ghc-desc">Beach season, value season, and the months to avoid. Month-by-month climate breakdown with temperature and rainfall data.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="visa-run-da-nang.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=320&fit=crop&q=75"
+             alt="Da Nang International Airport terminal departure hall"
+             width="500" height="160" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Visa &amp; Entry · 2026</div>
+          <h3 class="ghc-title">Da Nang Visa Run Guide</h3>
+          <p class="ghc-desc">E-visa rules, exemption countries, Lao Bao border crossings, and Bangkok or KL flight runs — with a step-by-step checklist.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="malls-in-da-nang.html" class="ghc">
+        <img class="ghc-img"
+             src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=500&h=320&fit=crop&q=75"
+             alt="Modern shopping mall interior in Da Nang city centre"
+             width="500" height="160" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Shopping &amp; Lifestyle · 2026</div>
+          <h3 class="ghc-title">Malls &amp; Shopping in Da Nang</h3>
+          <p class="ghc-desc">Vincom Plaza, AEON, Lotte Mart, and the best local markets — where to go for fashion, electronics, groceries, and gifts.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div><!-- /guide-hub-grid -->
+  </div><!-- /section-inner -->
+</section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FEATURED GUIDES CAROUSEL — horizontally scrollable, snap
@@ -1502,6 +1996,105 @@ function runSearch(query) {
       this.setAttribute('aria-expanded', !expanded);
     });
   });
+
+  // ── Booking widget: set default dates (today + 2 nights) ─
+  (function() {
+    var ci = document.getElementById('hw-checkin');
+    var co = document.getElementById('hw-checkout');
+    if (!ci || !co) return;
+    var today = new Date();
+    var checkout = new Date(today);
+    checkout.setDate(today.getDate() + 2);
+    function fmt(d) {
+      var y = d.getFullYear();
+      var m = String(d.getMonth()+1).padStart(2,'0');
+      var day = String(d.getDate()).padStart(2,'0');
+      return y+'-'+m+'-'+day;
+    }
+    ci.value = fmt(today);
+    co.value = fmt(checkout);
+    ci.min = fmt(today);
+    co.min = fmt(new Date(today.getTime() + 86400000));
+    ci.addEventListener('change', function() {
+      var newMin = new Date(this.value);
+      newMin.setDate(newMin.getDate()+1);
+      co.min = fmt(newMin);
+      if (co.value && co.value <= this.value) {
+        co.value = fmt(newMin);
+      }
+    });
+  })();
+
+  // ── Weather widget ────────────────────────────────────────
+  (function() {
+    // Replace YOUR_OPENWEATHER_KEY with a real key to enable live data.
+    // With no key, the widget shows a graceful static fallback.
+    var OW_KEY = 'YOUR_OPENWEATHER_KEY';
+    var DA_NANG_LAT = '16.0544';
+    var DA_NANG_LON = '108.2022';
+
+    var elTemp    = document.getElementById('hw-temp');
+    var elDesc    = document.getElementById('hw-desc');
+    var elIcon    = document.getElementById('hw-icon');
+    var elHumid   = document.getElementById('hw-humidity');
+    var elWind    = document.getElementById('hw-wind');
+    var elFeels   = document.getElementById('hw-feels');
+
+    // Inline SVG icons keyed by OpenWeather icon prefix
+    var ICONS = {
+      '01': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="rgba(255,200,80,.85)"/><g stroke="rgba(255,200,80,.6)" stroke-width="2.5" stroke-linecap="round"><line x1="32" y1="4" x2="32" y2="12"/><line x1="32" y1="52" x2="32" y2="60"/><line x1="4" y1="32" x2="12" y2="32"/><line x1="52" y1="32" x2="60" y2="32"/><line x1="12.7" y1="12.7" x2="18.4" y2="18.4"/><line x1="45.6" y1="45.6" x2="51.3" y2="51.3"/><line x1="51.3" y1="12.7" x2="45.6" y2="18.4"/><line x1="18.4" y1="45.6" x2="12.7" y2="51.3"/></g></svg>',
+      '02': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="26" cy="30" r="10" fill="rgba(255,200,80,.7)"/><ellipse cx="38" cy="36" rx="14" ry="10" fill="rgba(255,255,255,.25)"/><ellipse cx="24" cy="38" rx="11" ry="8" fill="rgba(255,255,255,.2)"/></svg>',
+      '03': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><ellipse cx="38" cy="35" rx="16" ry="11" fill="rgba(255,255,255,.22)"/><ellipse cx="24" cy="38" rx="12" ry="9" fill="rgba(255,255,255,.18)"/><ellipse cx="32" cy="32" rx="18" ry="10" fill="rgba(255,255,255,.2)"/></svg>',
+      '04': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><ellipse cx="36" cy="36" rx="16" ry="11" fill="rgba(255,255,255,.16)"/><ellipse cx="22" cy="40" rx="12" ry="9" fill="rgba(255,255,255,.13)"/><ellipse cx="32" cy="33" rx="18" ry="10" fill="rgba(255,255,255,.15)"/></svg>',
+      '09': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><ellipse cx="32" cy="24" rx="18" ry="10" fill="rgba(255,255,255,.2)"/><g stroke="rgba(120,180,255,.7)" stroke-width="2" stroke-linecap="round"><line x1="22" y1="40" x2="20" y2="48"/><line x1="28" y1="38" x2="26" y2="47"/><line x1="34" y1="40" x2="32" y2="48"/><line x1="40" y1="38" x2="38" y2="47"/></g></svg>',
+      '10': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="22" cy="22" r="8" fill="rgba(255,200,80,.5)"/><ellipse cx="34" cy="26" rx="16" ry="10" fill="rgba(255,255,255,.2)"/><g stroke="rgba(120,180,255,.7)" stroke-width="2" stroke-linecap="round"><line x1="24" y1="42" x2="22" y2="50"/><line x1="32" y1="40" x2="30" y2="49"/><line x1="40" y1="42" x2="38" y2="50"/></g></svg>',
+      '11': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><ellipse cx="32" cy="22" rx="18" ry="10" fill="rgba(255,255,255,.18)"/><polyline points="35,32 28,44 34,44 27,56" stroke="rgba(255,220,60,.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>',
+      '13': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><ellipse cx="32" cy="24" rx="18" ry="10" fill="rgba(255,255,255,.2)"/><g fill="rgba(255,255,255,.65)"><circle cx="22" cy="40" r="2.5"/><circle cx="30" cy="44" r="2.5"/><circle cx="38" cy="40" r="2.5"/><circle cx="44" cy="44" r="2.5"/><circle cx="26" cy="48" r="2"/><circle cx="36" cy="48" r="2"/></g></svg>',
+      '50': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><g stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round"><line x1="14" y1="28" x2="50" y2="28"/><line x1="10" y1="35" x2="54" y2="35"/><line x1="14" y1="42" x2="50" y2="42"/></g></svg>',
+      'default': '<svg class="hw-weather-svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2.5"/><g stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round"><line x1="32" y1="6" x2="32" y2="13"/><line x1="32" y1="51" x2="32" y2="58"/><line x1="6" y1="32" x2="13" y2="32"/><line x1="51" y1="32" x2="58" y2="32"/></g></svg>'
+    };
+
+    function getIcon(code) {
+      var prefix = code ? code.slice(0,2) : 'default';
+      return ICONS[prefix] || ICONS['default'];
+    }
+
+    function setWeather(temp, desc, code, humidity, wind, feels) {
+      if (elTemp)   elTemp.textContent   = Math.round(temp);
+      if (elDesc)   elDesc.textContent   = desc;
+      if (elIcon)   elIcon.innerHTML     = getIcon(code);
+      if (elHumid)  elHumid.textContent  = humidity + '%';
+      if (elWind)   elWind.textContent   = Math.round(wind) + ' km/h';
+      if (elFeels)  elFeels.textContent  = Math.round(feels) + '°C';
+    }
+
+    function fetchWeather() {
+      if (!OW_KEY || OW_KEY === 'YOUR_OPENWEATHER_KEY') {
+        // Graceful fallback — realistic Da Nang defaults
+        setWeather(30, 'Partly cloudy', '02d', 72, 18, 33);
+        return;
+      }
+      var url = 'https://api.openweathermap.org/data/2.5/weather?lat='+DA_NANG_LAT+'&lon='+DA_NANG_LON+'&units=metric&appid='+OW_KEY;
+      fetch(url)
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(d){
+          if (!d || !d.main) { setWeather(30, 'Partly cloudy', '02d', 72, 18, 33); return; }
+          setWeather(
+            d.main.temp,
+            d.weather[0].description,
+            d.weather[0].icon,
+            d.main.humidity,
+            d.wind.speed * 3.6,
+            d.main.feels_like
+          );
+        })
+        .catch(function(){ setWeather(30, 'Partly cloudy', '02d', 72, 18, 33); });
+    }
+
+    fetchWeather();
+    // Refresh every 60 min
+    setInterval(fetchWeather, 3600000);
+  })();
 
   // ── Hero Slideshow ───────────────────────────────────
   (function() {
