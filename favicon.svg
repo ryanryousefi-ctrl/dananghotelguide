@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B5C5C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0E3B3B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="building" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F6F1E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D9D1C4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+
+  <!-- Ground line -->
+  <rect x="80" y="368" width="352" height="18" rx="4" fill="#C8604A" opacity="0.85"/>
+
+  <!-- Main hotel building body -->
+  <rect x="148" y="168" width="216" height="202" rx="6" fill="url(#building)"/>
+
+  <!-- Roof / roofline with slight peak -->
+  <polygon points="136,172 256,110 376,172" fill="#C8604A"/>
+  <polygon points="148,172 256,120 364,172" fill="#E8725A"/>
+
+  <!-- Chimney / flagpole -->
+  <rect x="248" y="96" width="16" height="28" rx="2" fill="#C8604A"/>
+  <!-- Flag -->
+  <polygon points="264,98 294,110 264,122" fill="#F6F1E9" opacity="0.9"/>
+
+  <!-- Hotel windows — row 1 -->
+  <rect x="175" y="198" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+  <rect x="237" y="198" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+  <rect x="299" y="198" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+
+  <!-- Hotel windows — row 2 -->
+  <rect x="175" y="254" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+  <rect x="237" y="254" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+  <rect x="299" y="254" width="38" height="32" rx="3" fill="#1B5C5C" opacity="0.85"/>
+
+  <!-- Window highlight glints -->
+  <rect x="178" y="201" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+  <rect x="240" y="201" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+  <rect x="302" y="201" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+  <rect x="178" y="257" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+  <rect x="240" y="257" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+  <rect x="302" y="257" width="12" height="10" rx="2" fill="#7FBFBF" opacity="0.5"/>
+
+  <!-- Entrance door arch -->
+  <rect x="222" y="312" width="68" height="58" rx="4" fill="#1B5C5C" opacity="0.9"/>
+  <ellipse cx="256" cy="312" rx="34" ry="20" fill="#1B5C5C" opacity="0.9"/>
+  <!-- Door highlight -->
+  <rect x="232" y="320" width="18" height="42" rx="3" fill="#2A7A7A" opacity="0.7"/>
+  <rect x="262" y="320" width="18" height="42" rx="3" fill="#2A7A7A" opacity="0.7"/>
+
+  <!-- Palm tree LEFT -->
+  <rect x="108" y="270" width="12" height="100" rx="6" fill="#5C3D1A"/>
+  <!-- Palm fronds left -->
+  <ellipse cx="114" cy="262" rx="36" ry="12" fill="#2D7A2D" opacity="0.9" transform="rotate(-30 114 262)"/>
+  <ellipse cx="114" cy="262" rx="36" ry="12" fill="#2D7A2D" opacity="0.9" transform="rotate(20 114 262)"/>
+  <ellipse cx="114" cy="262" rx="30" ry="10" fill="#3A9A3A" opacity="0.85" transform="rotate(-70 114 262)"/>
+  <ellipse cx="114" cy="262" rx="30" ry="10" fill="#3A9A3A" opacity="0.85" transform="rotate(70 114 262)"/>
+
+  <!-- Palm tree RIGHT -->
+  <rect x="392" y="275" width="12" height="95" rx="6" fill="#5C3D1A"/>
+  <!-- Palm fronds right -->
+  <ellipse cx="398" cy="268" rx="36" ry="12" fill="#2D7A2D" opacity="0.9" transform="rotate(30 398 268)"/>
+  <ellipse cx="398" cy="268" rx="36" ry="12" fill="#2D7A2D" opacity="0.9" transform="rotate(-20 398 268)"/>
+  <ellipse cx="398" cy="268" rx="30" ry="10" fill="#3A9A3A" opacity="0.85" transform="rotate(70 398 268)"/>
+  <ellipse cx="398" cy="268" rx="30" ry="10" fill="#3A9A3A" opacity="0.85" transform="rotate(-70 398 268)"/>
+
+  <!-- Stars / decoration (subtle) -->
+  <circle cx="156" cy="148" r="5" fill="#F6F1E9" opacity="0.4"/>
+  <circle cx="360" cy="138" r="4" fill="#F6F1E9" opacity="0.3"/>
+  <circle cx="192" cy="128" r="3" fill="#F6F1E9" opacity="0.25"/>
+</svg>
