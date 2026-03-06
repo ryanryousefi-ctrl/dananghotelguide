@@ -2063,13 +2063,14 @@ function runSearch(query) {
   <script>
   function handleBookingFormSubmit(e) {
     e.preventDefault();
-    var form = document.getElementById('hw-form');
-    var checkin  = (form.querySelector('[name='checkin'')  || {}).value || '';
-    var checkout = (form.querySelector('[name='checkout'') || {}).value || '';
+    var checkin  = document.getElementById('hw-checkin')  ? document.getElementById('hw-checkin').value  : '';
+    var checkout = document.getElementById('hw-checkout') ? document.getElementById('hw-checkout').value : '';
+    var guests   = document.getElementById('hw-guests')   ? document.getElementById('hw-guests').value   : '2';
     var dest = 'https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&lang=en-gb&sb=1'
-             + (checkin  ? '&checkin='  + checkin  : '')
-             + (checkout ? '&checkout=' + checkout : '');
-    var awinLink = window.generateBookingLink(dest, 'dananghotelguide-homepage-search-form');
+             + (checkin  ? '&checkin='       + checkin  : '')
+             + (checkout ? '&checkout='      + checkout : '')
+             + (guests   ? '&group_adults='  + guests   : '');
+    var awinLink = window.generateBookingLink(dest, 'homepage-widget');
     window.open(awinLink, '_blank', 'noopener,noreferrer');
     return false;
   }
