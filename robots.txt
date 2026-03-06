@@ -1,20 +1,25 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /staging/
-Disallow: /*.json$
 
-# Block AI training bots
+# Block internal search/filter URLs if they exist
+Disallow: /search?
+Disallow: /?s=
+
+# Allow all major crawlers including AI agents
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
-User-agent: CCBot
-Disallow: /
+User-agent: ClaudeBot
+Allow: /
 
-User-agent: anthropic-ai
-Disallow: /
+User-agent: PerplexityBot
+Allow: /
 
-User-agent: Claude-Web
-Disallow: /
+User-agent: Googlebot
+Allow: /
 
-Sitemap: https://dananghotelguide.com/sitemap.xml
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.dananghotelguide.com/sitemap.xml
