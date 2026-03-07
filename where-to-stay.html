@@ -584,7 +584,40 @@ a{text-decoration:none;color:inherit}
 .area-link{display:inline-flex;align-items:center;gap:5px;font-size:.82rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.25);padding-bottom:1px;transition:gap .15s,border-color .15s}
 .area-card:hover .area-link{gap:8px;border-color:var(--ocean)}
 @media(max-width:768px){.area-grid{grid-template-columns:1fr}}
+
+/* ─── NEIGHBOURHOOD MAP ─── */
+.neighbourhood-map-section{margin:2rem 0 2.5rem}
+.map-section-header{margin-bottom:1.2rem}
+.map-section-label{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ocean);margin-bottom:.4rem}
+.map-section-title{font-family:var(--font-serif);font-size:clamp(1.3rem,2.2vw,1.65rem);color:var(--ink);letter-spacing:-.025em;line-height:1.15;margin-bottom:.4rem}
+.map-section-desc{font-size:.85rem;color:var(--ink-muted);line-height:1.6}
+.map-container-wrap{position:relative;border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);box-shadow:var(--shadow-card);background:var(--white)}
+#danang-map{width:100%;height:440px}
+.map-legend{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border:1px solid var(--sand-dark);border-radius:var(--r-md);padding:.7rem .85rem;box-shadow:0 4px 20px rgba(26,26,24,.12);z-index:1000;min-width:165px}
+.map-legend-title{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.5rem}
+.map-legend-item{display:flex;align-items:center;gap:.5rem;width:100%;padding:.35rem .4rem;background:none;border:none;cursor:pointer;border-radius:6px;transition:background .15s;text-align:left}
+.map-legend-item:hover{background:var(--sand)}
+.map-legend-item.active{background:var(--sand-mid)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.legend-name{font-size:.76rem;font-weight:600;color:var(--ink-soft);font-family:var(--font-sans)}
+.leaflet-popup-content-wrapper{border-radius:var(--r-lg)!important;box-shadow:0 8px 32px rgba(26,26,24,.18)!important;border:1px solid var(--sand-dark);font-family:var(--font-sans)!important;padding:0!important;overflow:hidden}
+.leaflet-popup-content{margin:0!important;width:220px!important}
+.leaflet-popup-tip-container{display:none}
+.map-popup{padding:.95rem 1.1rem}
+.map-popup-tag{font-size:.57rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem}
+.map-popup h3{font-family:var(--font-serif);font-size:1rem;color:var(--ink);letter-spacing:-.02em;line-height:1.2;margin-bottom:.28rem}
+.map-popup p{font-size:.76rem;color:var(--ink-muted);line-height:1.5;margin-bottom:.65rem}
+.map-popup-link{display:inline-flex;align-items:center;gap:4px;font-size:.71rem;font-weight:700;color:var(--ocean);text-decoration:none;transition:opacity .15s}
+.map-popup-link:hover{opacity:.7}
+.map-popup-link svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.5}
+@media(max-width:640px){
+  #danang-map{height:340px}
+  .map-legend{position:static;border-radius:0 0 var(--r-xl) var(--r-xl);border:none;border-top:1px solid var(--sand-dark);display:flex;flex-wrap:wrap;gap:.2rem;padding:.65rem .9rem;box-shadow:none}
+  .map-legend-title{display:none}
+  .map-legend-item{width:auto;flex:0 1 auto}
+}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 
 <header style="background:var(--ocean-deep);padding:clamp(3rem,7vw,5rem) var(--gutter)">
   <div style="max-width:var(--max);margin:0 auto">
@@ -601,6 +634,37 @@ a{text-decoration:none;color:inherit}
     <h2 class="section-heading">Choose your <em>base</em></h2>
     <p style="font-size:.95rem;color:var(--ink-muted);max-width:600px;line-height:1.7;margin-bottom:.5rem">Every area has a different character. The one that suits you depends on whether you want beach access, nightlife proximity, resort seclusion, or city walkability.</p>
     
+    <!-- NEIGHBOURHOOD MAP -->
+    <div class="neighbourhood-map-section" id="neighbourhood-map">
+      <div class="map-section-header">
+        <div class="map-section-label">Interactive Map</div>
+        <h2 class="map-section-title">Where Are These Areas?</h2>
+        <p class="map-section-desc">Click any pin to explore each neighbourhood. All four zones sit within 25 minutes of each other.</p>
+      </div>
+      <div class="map-container-wrap">
+        <div id="danang-map"></div>
+        <div class="map-legend">
+          <div class="map-legend-title">Areas</div>
+          <button class="map-legend-item active" data-area="my-khe" onclick="focusArea('my-khe')">
+            <span class="legend-dot" style="background:#C8604A"></span>
+            <span class="legend-name">My Khe Beach</span>
+          </button>
+          <button class="map-legend-item" data-area="son-tra" onclick="focusArea('son-tra')">
+            <span class="legend-dot" style="background:#4A7C4A"></span>
+            <span class="legend-name">Son Tra Peninsula</span>
+          </button>
+          <button class="map-legend-item" data-area="han-river" onclick="focusArea('han-river')">
+            <span class="legend-dot" style="background:#1B5C5C"></span>
+            <span class="legend-name">Han River</span>
+          </button>
+          <button class="map-legend-item" data-area="non-nuoc" onclick="focusArea('non-nuoc')">
+            <span class="legend-dot" style="background:#5A7FA0"></span>
+            <span class="legend-name">Non Nuoc Beach</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="area-grid">
       <a href="where-to-stay-in-da-nang.html#my-khe" class="area-card">
         <img class="area-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&h=400&fit=crop&q=75" alt="My Khe Beach Da Nang" loading="eager" width="700" height="200">
@@ -955,6 +1019,129 @@ function runSearch(query) {
   if (heroBg) requestAnimationFrame(function() { heroBg.classList.add('loaded'); });
 })();
 
+</script>
+
+<!-- ── LEAFLET MAP ──────────────────────────────────────── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function(){
+  if(!document.getElementById('danang-map')) return;
+
+  var map = L.map('danang-map', {
+    center: [16.047, 108.213],
+    zoom: 12,
+    zoomControl: true,
+    scrollWheelZoom: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  var areas = [
+    {
+      id: 'my-khe',
+      lat: 16.0621, lng: 108.2472,
+      color: '#C8604A',
+      label: '🏖 Best for most travellers',
+      name: 'My Khe Beach',
+      desc: 'Direct sand access, best hotel concentration, An Thuong dining scene nearby.',
+      anchor: 'where-to-stay-in-da-nang.html#my-khe',
+      zoom: 14
+    },
+    {
+      id: 'son-tra',
+      lat: 16.1050, lng: 108.2730,
+      color: '#4A7C4A',
+      label: '🌿 Luxury seclusion',
+      name: 'Son Tra Peninsula',
+      desc: 'InterContinental Sun Peninsula. Clifftop resorts, jungle, dramatic views.',
+      anchor: 'where-to-stay-in-da-nang.html#son-tra',
+      zoom: 13
+    },
+    {
+      id: 'han-river',
+      lat: 16.0680, lng: 108.2210,
+      color: '#1B5C5C',
+      label: '🌉 City culture & business',
+      name: 'Han River & City Centre',
+      desc: 'Dragon Bridge, night market, walkable city. 15 min taxi to the beach.',
+      anchor: 'where-to-stay-in-da-nang.html#han-river',
+      zoom: 14
+    },
+    {
+      id: 'non-nuoc',
+      lat: 16.0000, lng: 108.2540,
+      color: '#5A7FA0',
+      label: '🌊 Families & quiet beach',
+      name: 'Non Nuoc Beach',
+      desc: 'Hyatt Regency, Marble Mountains nearby. Quieter and more spacious.',
+      anchor: 'where-to-stay-in-da-nang.html#non-nuoc',
+      zoom: 14
+    }
+  ];
+
+  function makeIcon(color) {
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40">'
+      + '<filter id="s"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".25"/></filter>'
+      + '<g filter="url(#s)">'
+      + '<path d="M16 2C9.373 2 4 7.373 4 14c0 8.5 12 22 12 22s12-13.5 12-22C28 7.373 22.627 2 16 2z" fill="' + color + '"/>'
+      + '<circle cx="16" cy="14" r="5" fill="white" opacity="0.9"/>'
+      + '</g></svg>';
+    return L.divIcon({
+      html: svg,
+      className: '',
+      iconSize: [32, 40],
+      iconAnchor: [16, 40],
+      popupAnchor: [0, -42]
+    });
+  }
+
+  var markers = {};
+
+  areas.forEach(function(area) {
+    var marker = L.marker([area.lat, area.lng], { icon: makeIcon(area.color) });
+    var popup = L.popup({ closeButton: false, maxWidth: 240, className: 'map-custom-popup' })
+      .setContent(
+        '<div class="map-popup">'
+        + '<div class="map-popup-tag" style="color:' + area.color + '">' + area.label + '</div>'
+        + '<h3>' + area.name + '</h3>'
+        + '<p>' + area.desc + '</p>'
+        + '<a class="map-popup-link" href="' + area.anchor + '">'
+        + 'Read full guide'
+        + '<svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>'
+        + '</a>'
+        + '</div>'
+      );
+    marker.bindPopup(popup);
+    marker.addTo(map);
+    markers[area.id] = { marker: marker, data: area };
+  });
+
+  setTimeout(function() {
+    markers['my-khe'].marker.openPopup();
+    setActiveLegend('my-khe');
+  }, 600);
+
+  function setActiveLegend(id) {
+    document.querySelectorAll('.map-legend-item').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.area === id);
+    });
+  }
+
+  window.focusArea = function(id) {
+    var item = markers[id];
+    if (!item) return;
+    map.flyTo([item.data.lat, item.data.lng], item.data.zoom, { duration: 0.8 });
+    setTimeout(function() { item.marker.openPopup(); }, 400);
+    setActiveLegend(id);
+  };
+
+  map.on('click', function() { map.scrollWheelZoom.enable(); });
+  map.on('mouseout', function() { map.scrollWheelZoom.disable(); });
+})();
 </script>
 </body>
 </html>
