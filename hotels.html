@@ -618,8 +618,10 @@ a{text-decoration:none;color:inherit}
 .hub-chip:hover{background:rgba(255,255,255,.14);color:#fff}
 
 .hub-cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.8rem}
-.hub-cat-card{background:var(--white);border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .25s}
+.hub-cat-card{background:var(--white);border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column}
 .hub-cat-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.hub-cat-card h3{color:var(--ink);text-decoration:none}
+.hub-cat-card a h3:hover{color:var(--ocean)}
 .hub-cat-img-wrap{height:180px;overflow:hidden;position:relative}
 .hub-cat-img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .hub-cat-card:hover .hub-cat-img{transform:scale(1.04)}
@@ -682,35 +684,39 @@ a{text-decoration:none;color:inherit}
             </div>
           </a>
           
-          <a href="da-nang-beach-hotels.html" class="hub-cat-card">
+          <div class="hub-cat-card">
+            <a href="da-nang-beach-hotels.html">
             <div class="hub-cat-img-wrap">
               <img class="hub-cat-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=360&fit=crop&q=75" alt="Beachfront hotels on My Khe Beach Da Nang" loading="lazy" width="600" height="360">
             </div>
+            </a>
             <div class="hub-cat-body">
               <div class="hub-cat-label">Beachfront · From $65</div>
-              <h3 class="hub-cat-name">Beach Hotels</h3>
+              <a href="da-nang-beach-hotels.html"><h3 class="hub-cat-name">Beach Hotels</h3></a>
               <p class="hub-cat-desc">Direct sand access on My Khe and Non Nuoc. "Beachfront" means front row to the water — not a beach club down the road.</p>
               <div class="hub-cat-links">
-                <span class="hub-cat-guide">See beach hotels →</span>
+                <a href="da-nang-beach-hotels.html" class="hub-cat-guide">See beach hotels →</a>
                 <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=da-nang-hotels-hub&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3714993%26dest_type%3Dcity" class="hub-cat-book" target="_blank" rel="nofollow noopener sponsored">Check availability</a>
               </div>
             </div>
-          </a>
+          </div>
           
-          <a href="luxury-hotels-da-nang.html" class="hub-cat-card">
+          <div class="hub-cat-card">
+            <a href="luxury-hotels-da-nang.html">
             <div class="hub-cat-img-wrap">
               <img class="hub-cat-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=360&fit=crop&q=75" alt="Luxury resort pool Da Nang" loading="lazy" width="600" height="360">
             </div>
+            </a>
             <div class="hub-cat-body">
               <div class="hub-cat-label">Luxury · From $160</div>
-              <h3 class="hub-cat-name">Luxury Hotels &amp; Resorts</h3>
+              <a href="luxury-hotels-da-nang.html"><h3 class="hub-cat-name">Luxury Hotels &amp; Resorts</h3></a>
               <p class="hub-cat-desc">InterContinental Sun Peninsula, Sheraton Grand, Hyatt Regency — world-class properties at Southeast Asia's most undervalued luxury destination.</p>
               <div class="hub-cat-links">
-                <span class="hub-cat-guide">Explore luxury →</span>
+                <a href="luxury-hotels-da-nang.html" class="hub-cat-guide">Explore luxury →</a>
                 <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=da-nang-hotels-hub&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3714993%26dest_type%3Dcity" class="hub-cat-book" target="_blank" rel="nofollow noopener sponsored">See rates</a>
               </div>
             </div>
-          </a>
+          </div>
           
           <a href="family-hotels-da-nang.html" class="hub-cat-card">
             <div class="hub-cat-img-wrap">
