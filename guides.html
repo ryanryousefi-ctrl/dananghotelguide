@@ -1080,24 +1080,10 @@ window.SEARCH_INDEX = [
     cat: "About",
     excerpt: "Da Nang Hotel Guide is founded and run by Ryan Yousefi, an award-winning American journalist based in Da Nang since 2022."
   }
-,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
-        ];
+];
 
 function runSearch(query) {
-  if (!query || query.length < 2) return [,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
-        ];
+  if (!query || query.length < 2) return [];
   const q = query.toLowerCase();
   return window.SEARCH_INDEX.filter(item => {
     return (
@@ -1197,21 +1183,7 @@ function runSearch(query) {
         return;
       }
       if (hint) hint.style.display = 'none';
-      var hits = window.runSearch ? runSearch(q) : [,
-    {{
-      title: "Da Nang Visa Run Guide 2026",
-      desc: "Vietnam e-visa rules, visa exemption countries, Lao Bao border run, Lynn Visa Da Nang, step-by-step checklist and FAQ.",
-      url: "da-nang-visa-run-guide.html",
-      category: "Visa & Entry"
-    }}
-  ,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
-        ];
+      var hits = window.runSearch ? runSearch(q) : [];
       if (!hits.length) {
         results.innerHTML = '<p class="search-no-results">No results for "' + q + '" — try a different term.</p>';
         return;
