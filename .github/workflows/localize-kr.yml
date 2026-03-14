@@ -1,5 +1,8 @@
 name: Korean Localization
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
 
@@ -23,15 +26,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node localize-kr.js --all
-        - name: Run localization
-  env:
-    ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-  run: node localize-kr.js --all
 
-- name: Commit Korean pages
-  run: |
-    git config --global user.name "github-actions"
-    git config --global user.email "actions@github.com"
-    git add kr/
-    git commit -m "Add Korean translations" || echo "No changes"
-    git push
+      - name: Commit Korean pages
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add kr/
+          git commit -m "Add Korean translations" || echo "No changes"
+          git push
