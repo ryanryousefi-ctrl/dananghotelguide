@@ -1,0 +1,14 @@
+{
+  "name": "dananghotelguide-kr-localization",
+  "version": "1.0.0",
+  "description": "Korean localization pipeline for dananghotelguide.com",
+  "scripts": {
+    "localize": "node localize-kr.js --all",
+    "localize:dry": "node localize-kr.js --all --dry-run",
+    "localize:file": "node localize-kr.js --file"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}

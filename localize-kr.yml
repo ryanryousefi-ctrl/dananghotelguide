@@ -1,0 +1,76 @@
+name: Korean Localization
+
+on:
+  # Run manually from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Localization mode'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - dry-run
+      file:
+        description: 'Single file (optional, overrides mode)'
+        required: false
+        default: ''
+
+  # Uncomment to auto-run when English pages change:
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - '*.html'
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install cheerio node-fetch
+
+      - name: Copy localization script
+        run: |
+          # Script should be committed to repo root as localize-kr.js
+          ls -la localize-kr.js
+
+      - name: Run localization (single file)
+        if: ${{ inputs.file != '' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_ROOT: ${{ github.workspace }}
+        run: node localize-kr.js --file "${{ inputs.file }}"
+
+      - name: Run localization (all files)
+        if: ${{ inputs.file == '' && inputs.mode == 'all' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_ROOT: ${{ github.workspace }}
+        run: node localize-kr.js --all
+
+      - name: Dry run (no API calls)
+        if: ${{ inputs.file == '' && inputs.mode == 'dry-run' }}
+        env:
+          SITE_ROOT: ${{ github.workspace }}
+        run: node localize-kr.js --all --dry-run
+
+      - name: Commit and push /kr files
+        if: ${{ inputs.mode != 'dry-run' }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add kr/
+          git diff --staged --quiet || git commit -m "chore: auto-localize Korean pages [skip ci]"
+          git push
