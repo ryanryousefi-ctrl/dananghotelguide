@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da Nang Hotels Map: Where to Stay by Area (Beach, River, Son Tra) — 2026 Guide</title>
+<meta name="description" content="Interactive Da Nang hotels map showing where to stay by neighbourhood — My Khe Beach, Han River, Son Tra Peninsula, and Central City. Hotel locations, prices, and expert recommendations for 2026.">
+<link rel="canonical" href="https://www.dananghotelguide.com/da-nang-hotels-map.html">
+<link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/da-nang-hotels-map.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Da Nang Hotels Map: Where to Stay by Area — 2026 Guide">
+<meta property="og:description" content="Interactive map showing Da Nang hotel locations by neighbourhood — My Khe Beach, Han River, Son Tra, and Central City. Find the best area for your trip.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.dananghotelguide.com/da-nang-hotels-map.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=630&fit=crop&auto=format&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Da Nang Hotels Map: Where to Stay by Area">
+<meta name="twitter:description" content="Interactive map of Da Nang hotel locations — My Khe Beach, Han River, Son Tra Peninsula, and Central City.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Da Nang Hotels Map: Where to Stay by Area (Beach, River, Son Tra)",
+  "description": "Comprehensive guide to Da Nang hotel locations by neighbourhood — My Khe Beach, Han River, Son Tra Peninsula, and Central City, with interactive map and hotel recommendations.",
+  "url": "https://www.dananghotelguide.com/da-nang-hotels-map.html",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-15",
+  "author": {"@type": "Person", "name": "Ryan Yousefi", "jobTitle": "Travel Editor"},
+  "publisher": {"@type": "Organization", "name": "Da Nang Hotel Guide", "url": "https://www.dananghotelguide.com"},
+  "about": {"@type": "City", "name": "Da Nang", "addressCountry": "VN"},
+  "inLanguage": "en"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is the best area to stay in Da Nang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most visitors, My Khe Beach is the best area to stay in Da Nang. It offers direct beach access, walkable restaurants and cafes, and hotels at every price point from $50 to $250 per night. First-time visitors should base themselves on the Pham Van Dong beachfront strip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are Da Nang luxury hotels located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da Nang's top luxury resorts are located on the Son Tra Peninsula, particularly the InterContinental Danang Sun Peninsula Resort, which sits on a private clifftop above the bay. The Hyatt Regency and Sheraton Grand are located further south along My An Beach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should budget travellers stay in Da Nang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Budget travellers should stay in Central Da Nang, around the Hai Chau district near the Han River. Hotels here start from $20–$40 per night and offer easy access to local markets, street food, and the Han River promenade."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far are Da Nang beach hotels from the city centre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "My Khe Beach hotels are approximately 3–5 km from Da Nang city centre and the Han River. The drive or taxi takes around 10 minutes. Most tourists find this distance very manageable for day trips to Dragon Bridge and the night markets."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dananghotelguide.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.dananghotelguide.com/guides.html"},
+    {"@type": "ListItem", "position": 3, "name": "Da Nang Hotels Map", "item": "https://www.dananghotelguide.com/da-nang-hotels-map.html"}
+  ]
+}
+</script>
+
+<style>
+/* ─── RESET & BASE ─────────────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sand:#F6F1E9; --sand-mid:#EDE5D8; --sand-dark:#D9CDBB;
+  --white:#FFFFFF;
+  --ocean:#1B5C5C; --ocean-light:#217070; --ocean-deep:#0D3535; --ocean-pale:#EAF4F4;
+  --coral:#C8604A; --coral-light:#E07A62;
+  --ink:#1A1A18; --ink-soft:#3C3C38; --ink-muted:#7A7A70;
+  --gold:#B8901E;
+  --font-serif:"Instrument Serif",Georgia,serif;
+  --font-sans:"Satoshi",system-ui,sans-serif;
+  --max:1160px; --gutter:clamp(1.25rem,5vw,3rem);
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px;
+  --shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);
+  --shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
+::selection{background:var(--ocean);color:#fff}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ─── SITE NAV ──────────────────────────────────────────── */
+.site-nav{position:sticky;top:0;z-index:500;height:64px;background:rgba(13,53,53,.97);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;padding:0 var(--gutter);gap:0}
+.nav-logo{font-family:var(--font-serif);font-size:1.35rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1rem,3vw,2.5rem)}
+.nav-logo em{font-style:italic;color:var(--coral-light)}
+.nav-links{display:flex;align-items:center;gap:0;flex:1}
+.nav-link{position:relative;padding:8px 13px;border-radius:8px;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.5);transition:color .18s,background .18s;white-space:nowrap}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle::after{content:"";display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:5px;transition:transform .2s}
+.nav-dropdown:hover .nav-dropdown-toggle::after{transform:rotate(-135deg) translateY(-2px)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--ocean-deep);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:.5rem;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,visibility .2s,transform .2s;box-shadow:0 16px 40px rgba(0,0,0,.4);z-index:600}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown-menu:focus-within{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:var(--r-md);transition:color .15s,background .15s}
+.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-dropdown-item .di-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+.nav-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;cursor:pointer;background:rgba(255,255,255,.08);border-radius:50%;color:rgba(255,255,255,.6);transition:background .18s,color .18s}
+.nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
+.nav-search-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--coral);color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s,transform .15s;border:none;cursor:pointer;text-decoration:none}
+.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:var(--r-sm);padding:10px;margin-left:8px}
+.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:450;background:var(--ocean-deep);transform:translateX(100%);transition:transform .3s var(--ease);display:flex;flex-direction:column;padding:calc(64px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.mobile-nav-link:hover{color:#fff}
+.mobile-nav-link.active{color:var(--coral-light)}
+.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.mobile-dropdown-items.open{max-height:500px}
+.mobile-sub-link{display:block;padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s}
+.mobile-sub-link:hover{color:#fff}
+.mobile-stays-btn{display:block;margin-top:2rem;padding:15px;background:var(--coral);color:#fff;text-align:center;font-size:.95rem;font-weight:700;border-radius:var(--r-xl)}
+
+/* ─── BREADCRUMB ────────────────────────────────────────── */
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:10px var(--gutter)}
+.breadcrumb ol{max-width:var(--max);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted)}
+.breadcrumb li+li::before{content:"›";margin-right:4px;opacity:.5}
+.breadcrumb a{color:var(--ocean);transition:opacity .15s}
+.breadcrumb a:hover{opacity:.7}
+.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
+
+/* ─── SECTION UTILITIES ─────────────────────────────────── */
+.section{padding:clamp(3.5rem,7vw,6rem) var(--gutter)}
+.section-inner{max-width:var(--max);margin:0 auto}
+.section-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;display:flex;align-items:center;gap:8px}
+.section-label::before{content:"";display:block;width:16px;height:2px;background:var(--ocean);border-radius:1px}
+.section-heading{font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--ink);line-height:1.1;letter-spacing:-.03em;margin-bottom:.8rem}
+.section-heading em{font-style:italic;color:var(--ocean)}
+.section-subhead{font-size:1rem;color:var(--ink-muted);max-width:640px;line-height:1.72}
+
+/* ─── ARTICLE HERO ──────────────────────────────────────── */
+.article-hero{position:relative;background:var(--ocean-deep);padding:clamp(3.5rem,7vw,6rem) var(--gutter) clamp(3rem,5vw,4.5rem);overflow:hidden}
+.article-hero::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1920&h=700&fit=crop&auto=format&q=50") center/cover no-repeat;opacity:.2}
+.article-hero-inner{position:relative;z-index:1;max-width:var(--max);margin:0 auto}
+.hero-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--coral-light);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.hero-label::before{content:"";display:block;width:20px;height:2px;background:var(--coral-light);border-radius:1px}
+.article-h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5vw,4rem);color:#fff;line-height:1.06;letter-spacing:-.035em;margin-bottom:1.1rem;max-width:820px}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,.65)}
+.article-sub{font-size:clamp(.93rem,1.6vw,1.08rem);color:rgba(255,255,255,.55);max-width:600px;line-height:1.75;margin-bottom:1.8rem}
+.article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem;font-size:.76rem;color:rgba(255,255,255,.38);margin-bottom:2.2rem}
+.article-meta strong{color:rgba(255,255,255,.7);font-weight:600}
+.article-meta .sep{color:rgba(255,255,255,.15)}
+.toc-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.toc-pill{padding:6px 14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:.73rem;font-weight:600;color:rgba(255,255,255,.55);transition:background .15s,color .15s;white-space:nowrap}
+.toc-pill:hover{background:rgba(255,255,255,.14);color:#fff}
+
+/* ─── MAP SECTION ───────────────────────────────────────── */
+.map-section{background:var(--ocean-deep);padding:clamp(3rem,6vw,5rem) var(--gutter)}
+.map-section-inner{max-width:var(--max);margin:0 auto}
+.map-section .section-label{color:rgba(255,255,255,.4)}
+.map-section .section-label::before{background:rgba(255,255,255,.3)}
+.map-section .section-heading{color:#fff}
+.map-section .section-subhead{color:rgba(255,255,255,.45)}
+.map-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start;margin-top:2rem}
+#dnmap{height:480px;border-radius:var(--r-xl);overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.1)}
+.map-legend{display:flex;flex-direction:column;gap:.8rem}
+.map-legend-title{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:.3rem}
+.map-cluster{padding:1rem 1.2rem;border-radius:var(--r-lg);border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.05);cursor:pointer;transition:background .2s,border-color .2s}
+.map-cluster:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.18)}
+.map-cluster-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;flex-shrink:0}
+.dot-beach{background:#2DD4BF}
+.dot-river{background:#F59E0B}
+.dot-sontra{background:#A78BFA}
+.dot-central{background:#F87171}
+.map-cluster-name{font-weight:700;font-size:.88rem;color:#fff;margin-bottom:.2rem;display:flex;align-items:center}
+.map-cluster-desc{font-size:.75rem;color:rgba(255,255,255,.45);line-height:1.5}
+.map-cluster-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.5rem}
+.mc-tag{font-size:.59rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:100px;color:rgba(255,255,255,.45)}
+
+/* ─── AI ANSWER BOX ─────────────────────────────────────── */
+.ai-answer-section{background:var(--ocean-pale);padding:clamp(3rem,6vw,5rem) var(--gutter)}
+.ai-answer-inner{max-width:var(--max);margin:0 auto}
+.ai-box{background:var(--white);border-radius:var(--r-xl);border:2px solid var(--ocean);padding:2rem 2.2rem;box-shadow:var(--shadow-card)}
+.ai-box-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid var(--sand-dark)}
+.ai-box-icon{width:36px;height:36px;border-radius:50%;background:var(--ocean);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.ai-box-title{font-family:var(--font-serif);font-size:1.25rem;color:var(--ink);letter-spacing:-.02em}
+.ai-box-sub{font-size:.75rem;color:var(--ink-muted);margin-top:.1rem}
+.ai-answers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.ai-answer-item{padding:1rem 1.1rem;background:var(--sand);border-radius:var(--r-lg);border:1px solid var(--sand-dark)}
+.ai-answer-label{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-muted);margin-bottom:.35rem}
+.ai-answer-area{font-family:var(--font-serif);font-size:1rem;color:var(--ink);letter-spacing:-.01em;margin-bottom:.2rem}
+.ai-answer-why{font-size:.76rem;color:var(--ink-soft);line-height:1.5}
+
+/* ─── NEIGHBOURHOOD SECTIONS ────────────────────────────── */
+.area-section{padding:clamp(3.5rem,7vw,6rem) var(--gutter)}
+.area-section:nth-child(odd){background:var(--white)}
+.area-section:nth-child(even){background:var(--sand)}
+.area-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4rem);align-items:start}
+.area-inner.reverse{direction:rtl}
+.area-inner.reverse > *{direction:ltr}
+.area-content{}
+.area-badge{display:inline-flex;align-items:center;gap:6px;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:.9rem}
+.badge-beach-bg{background:#D1FAF6;color:#0D5C52}
+.badge-river-bg{background:#FEF3C7;color:#78340F}
+.badge-sontra-bg{background:#EDE9FE;color:#4C1D95}
+.badge-central-bg{background:#FEE2E2;color:#7F1D1D}
+.area-h2{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--ink);line-height:1.1;letter-spacing:-.03em;margin-bottom:.6rem}
+.area-h2 em{font-style:italic;color:var(--ocean)}
+.area-verdict{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ocean);margin-bottom:.9rem}
+.area-desc{font-size:.92rem;color:var(--ink-soft);line-height:1.8;margin-bottom:1.5rem}
+.area-features{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.6rem}
+.area-feature{display:flex;align-items:flex-start;gap:.6rem;font-size:.83rem;color:var(--ink-soft)}
+.area-feature-icon{font-size:.85rem;width:20px;text-align:center;flex-shrink:0;margin-top:.05rem}
+.area-hotels-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-muted);margin-bottom:.6rem}
+.area-hotel-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.area-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;background:var(--ocean-pale);border:1px solid rgba(27,92,92,.2);border-radius:100px;font-size:.74rem;font-weight:600;color:var(--ocean);transition:background .15s}
+.area-pill:hover{background:var(--ocean);color:#fff}
+.area-mini-map{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);box-shadow:var(--shadow-card);height:320px;position:relative}
+.area-mini-map-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ocean-pale) 0%,#c5e8e8 100%);gap:1rem}
+.area-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.4rem}
+.area-stat{background:var(--white);border-radius:var(--r-lg);padding:.85rem 1rem;border:1px solid var(--sand-dark);text-align:center}
+.area-stat-val{font-family:var(--font-serif);font-size:1.25rem;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.area-stat-key{font-size:.63rem;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.09em;margin-top:.2rem}
+
+/* ─── COMPARISON TABLE ──────────────────────────────────── */
+.table-section{padding:clamp(3.5rem,7vw,6rem) var(--gutter);background:var(--ocean-deep)}
+.table-section-inner{max-width:var(--max);margin:0 auto}
+.table-section .section-label{color:rgba(255,255,255,.4)}
+.table-section .section-label::before{background:rgba(255,255,255,.3)}
+.table-section .section-heading{color:#fff}
+.table-section .section-subhead{color:rgba(255,255,255,.45)}
+.table-wrap{overflow-x:auto;border-radius:var(--r-lg);border:1px solid rgba(255,255,255,.1);box-shadow:0 8px 40px rgba(0,0,0,.35);margin-top:2rem}
+.comp-table{width:100%;border-collapse:collapse;font-size:.83rem;background:var(--white)}
+.comp-table th{background:var(--ink);color:rgba(255,255,255,.7);font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:12px 16px;text-align:left;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.06)}
+.comp-table th:first-child{color:#fff}
+.comp-table td{padding:12px 16px;border-bottom:1px solid var(--sand-dark);color:var(--ink-soft);vertical-align:middle}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr:hover td{background:var(--sand)}
+.ct-area{font-weight:700;color:var(--ink)}
+.ct-pill{display:inline-block;font-size:.63rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:100px;white-space:nowrap}
+.pill-beach{background:#D1FAF6;color:#0D5C52}
+.pill-river{background:#FEF3C7;color:#78340F}
+.pill-sontra{background:#EDE9FE;color:#4C1D95}
+.pill-central{background:#FEE2E2;color:#7F1D1D}
+.pill-price-low{background:#EDFAF3;color:#1A5238}
+.pill-price-mid{background:#FEF6E4;color:#7A5A10}
+.pill-price-high{background:#FEE2E2;color:#7F1D1D}
+.pill-price-lux{background:#EDE9FE;color:#4C1D95}
+
+/* ─── PRICE HEATMAP ─────────────────────────────────────── */
+.heatmap-section{padding:clamp(3.5rem,7vw,6rem) var(--gutter);background:var(--sand)}
+.heatmap-inner{max-width:var(--max);margin:0 auto}
+.heatmap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.heatmap-card{border-radius:var(--r-xl);padding:1.6rem 1.5rem;border:1px solid transparent;position:relative;overflow:hidden}
+.hm-budget{background:#EDFAF3;border-color:#C5EBDB}
+.hm-midrange{background:#FEF6E4;border-color:#F0D9A0}
+.hm-upscale{background:#FEE2E2;border-color:#F5CCC5}
+.hm-luxury{background:#EDE9FE;border-color:#C4B5FD}
+.hm-price{font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);letter-spacing:-.03em;margin-bottom:.3rem}
+.hm-tier{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;margin-bottom:.6rem}
+.hm-tier-budget{color:#1A5238}
+.hm-tier-mid{color:#78340F}
+.hm-tier-up{color:#7F1D1D}
+.hm-tier-lux{color:#4C1D95}
+.hm-area{font-size:.82rem;color:var(--ink-soft);line-height:1.55;margin-bottom:.8rem}
+.hm-bars{display:flex;flex-direction:column;gap:.3rem}
+.hm-bar-row{display:flex;align-items:center;gap:.5rem}
+.hm-bar-label{font-size:.68rem;color:var(--ink-muted);min-width:70px}
+.hm-bar-track{flex:1;height:5px;background:rgba(26,26,24,.08);border-radius:3px;overflow:hidden}
+.hm-bar-fill{height:100%;border-radius:3px;transition:width .4s var(--ease)}
+.bar-fill-1{background:var(--ocean);width:25%}
+.bar-fill-2{background:var(--ocean);width:45%}
+.bar-fill-3{background:var(--coral);width:65%}
+.bar-fill-4{background:var(--coral);width:90%}
+.seasonal-note{margin-top:2rem;padding:1.2rem 1.5rem;background:var(--white);border-radius:var(--r-lg);border:1px solid var(--sand-dark);font-size:.83rem;color:var(--ink-soft);line-height:1.7}
+.seasonal-note strong{color:var(--ink)}
+
+/* ─── ATTRACTIONS SECTION ───────────────────────────────── */
+.attractions-section{padding:clamp(3.5rem,7vw,6rem) var(--gutter);background:var(--white)}
+.attractions-inner{max-width:var(--max);margin:0 auto}
+.attractions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.attraction-card{display:grid;grid-template-columns:80px 1fr;gap:1.2rem;align-items:start;padding:1.4rem 1.5rem;background:var(--sand);border-radius:var(--r-xl);border:1px solid var(--sand-dark);transition:border-color .2s,box-shadow .2s}
+.attraction-card:hover{border-color:var(--ocean-pale);box-shadow:var(--shadow-hover)}
+.attraction-icon-wrap{width:80px;height:80px;border-radius:var(--r-lg);overflow:hidden;flex-shrink:0}
+.attraction-icon-wrap img{width:100%;height:100%;object-fit:cover}
+.attraction-name{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:.25rem}
+.attraction-dist{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ocean);margin-bottom:.5rem}
+.attraction-desc{font-size:.8rem;color:var(--ink-soft);line-height:1.6;margin-bottom:.7rem}
+.attraction-link{font-size:.76rem;font-weight:700;color:var(--ocean);display:flex;align-items:center;gap:4px}
+
+/* ─── FEATURED HOTEL CARDS ──────────────────────────────── */
+.hotels-section{padding:clamp(3.5rem,7vw,6rem) var(--gutter);background:var(--sand)}
+.hotels-inner{max-width:var(--max);margin:0 auto}
+.hotels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.hcard{display:flex;flex-direction:column;background:var(--white);border-radius:var(--r-xl);border:1px solid var(--sand-dark);overflow:hidden;transition:box-shadow .25s,transform .2s;box-shadow:var(--shadow-card)}
+.hcard:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.hcard-img{aspect-ratio:16/9;overflow:hidden;position:relative}
+.hcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.hcard:hover .hcard-img img{transform:scale(1.04)}
+.hcard-area-tag{position:absolute;top:10px;left:10px;font-size:.59rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:3px 8px;border-radius:100px;backdrop-filter:blur(4px)}
+.hcard-body{padding:1.1rem 1.2rem;flex:1;display:flex;flex-direction:column;gap:.35rem}
+.hcard-name{font-family:var(--font-serif);font-size:1rem;color:var(--ink);letter-spacing:-.02em;line-height:1.25}
+.hcard-meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.hcard-stars{color:var(--gold);font-size:.7rem}
+.hcard-price{font-size:.76rem;color:var(--ink-muted)}
+.hcard-price strong{color:var(--ink);font-weight:700}
+.hcard-desc{font-size:.78rem;color:var(--ink-soft);line-height:1.6;flex:1}
+.hcard-footer{padding:.85rem 1.2rem;border-top:1px solid var(--sand-dark);display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.hcard-link{font-size:.74rem;font-weight:700;color:var(--ocean);display:flex;align-items:center;gap:4px}
+.hcard-book{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:var(--ocean);color:#fff;font-size:.71rem;font-weight:700;border-radius:100px;transition:background .18s}
+.hcard-book:hover{background:var(--ocean-light)}
+
+/* ─── FAQ SECTION ───────────────────────────────────────── */
+.faq-section{background:var(--white);padding:clamp(3.5rem,7vw,6rem) var(--gutter)}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-list{margin-top:2rem;display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid var(--sand-dark)}
+.faq-item:first-child{border-top:1px solid var(--sand-dark)}
+.faq-question{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 0;cursor:pointer;font-size:.98rem;font-weight:700;color:var(--ink);line-height:1.4;list-style:none}
+.faq-question::after{content:"";display:block;width:8px;height:8px;border-right:2px solid var(--ocean);border-bottom:2px solid var(--ocean);transform:rotate(45deg) translateY(-3px);flex-shrink:0;transition:transform .22s}
+details[open] .faq-question::after{transform:rotate(-135deg) translateY(2px)}
+.faq-answer{font-size:.9rem;color:var(--ink-soft);line-height:1.82;padding-bottom:1.3rem}
+.faq-answer a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25)}
+
+/* ─── RELATED / INTERNAL LINKS ──────────────────────────── */
+.related-section{background:var(--sand);padding:clamp(3.5rem,7vw,6rem) var(--gutter)}
+.related-inner{max-width:var(--max);margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.related-card{display:block;padding:1.4rem 1.5rem;background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-xl);transition:border-color .2s,box-shadow .2s,transform .2s}
+.related-card:hover{border-color:var(--ocean-pale);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.rc-icon{font-size:1.4rem;margin-bottom:.65rem;display:block}
+.rc-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:.11em;color:var(--ocean);margin-bottom:.3rem}
+.rc-title{font-family:var(--font-serif);font-size:1rem;color:var(--ink);line-height:1.3;letter-spacing:-.01em;margin-bottom:.3rem}
+.rc-desc{font-size:.78rem;color:var(--ink-muted);line-height:1.55}
+.rc-arrow{font-size:.78rem;font-weight:700;color:var(--ocean);margin-top:.6rem;display:block}
+
+/* ─── SEO RELATED GUIDES ────────────────────────────────── */
+.seo-related{background:var(--ocean-deep);padding:2rem var(--gutter)}
+.seo-related-inner{max-width:var(--max);margin:0 auto}
+.seo-related-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.35);margin-bottom:.75rem}
+.seo-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.seo-pill{padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.78rem;font-weight:500;color:rgba(255,255,255,.6);transition:background .15s,color .15s}
+.seo-pill:hover{background:rgba(255,255,255,.14);color:#fff}
+
+/* ─── FOOTER ────────────────────────────────────────────── */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
+.footer-inner{max-width:var(--max);margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem}
+.footer-brand em{font-style:italic;color:var(--coral-light)}
+.footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem}
+.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.06)}
+.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s}
+.footer-col a:hover{color:rgba(255,255,255,.75)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.8rem 0;font-size:.72rem}
+.footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem}
+.footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch}
+.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0}
+.footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35);transition:color .15s}
+.footer-legal-links a:hover{color:rgba(255,255,255,.75)}
+.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
+
+/* ─── LEAFLET POPUP OVERRIDE ────────────────────────────── */
+.dn-popup{font-family:var(--font-sans)!important;font-size:13px!important}
+.dn-popup .dn-popup-name{font-weight:700;color:var(--ink);font-size:.88rem;margin:0 0 3px;line-height:1.3}
+.dn-popup .dn-popup-desc{font-size:.75rem;color:var(--ink-soft);line-height:1.45;margin:0 0 7px}
+.dn-popup .dn-popup-link{display:inline-flex;align-items:center;gap:3px;font-size:.7rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.25)}
+.leaflet-popup-content-wrapper{border-radius:var(--r-lg)!important;box-shadow:var(--shadow-hover)!important;border:1px solid var(--sand-dark)!important;padding:0!important}
+.leaflet-popup-content{margin:12px 14px!important}
+.leaflet-popup-tip-container{margin-top:-1px}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .6s var(--ease) both}
+.fu1{animation-delay:.06s}.fu2{animation-delay:.14s}.fu3{animation-delay:.22s}.fu4{animation-delay:.3s}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:1060px){
+  .map-grid{grid-template-columns:1fr}
+  .area-inner{grid-template-columns:1fr}
+  .area-inner.reverse{direction:ltr}
+  .heatmap-grid{grid-template-columns:repeat(2,1fr)}
+  .attractions-grid{grid-template-columns:1fr}
+  .hotels-grid{grid-template-columns:repeat(2,1fr)}
+  .related-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .ai-answers-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-stays-btn .btn-text{display:none}
+  .heatmap-grid{grid-template-columns:1fr}
+  .hotels-grid{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+  #dnmap{height:380px}
+  .area-mini-map{height:250px}
+  .ai-answers-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-legal{flex-direction:column;align-items:flex-start}
+  .area-stats-row{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ──────────────────────────────────────────── -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Da Nang<em>Hotel Guide</em></a>
+  <div class="nav-links" role="list">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">Hotels</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
+        <a href="da-nang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🏖</span>Beachfront</a>
+        <a href="luxury-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">✦</span>Luxury</a>
+        <a href="family-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">👪</span>Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">◇</span>Boutique</a>
+      </div>
+    </div>
+    <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
+    <a href="dining.html" class="nav-link">Dining</a>
+    <a href="guides.html" class="nav-link">Guides</a>
+    <a href="about.html" class="nav-link">About</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="22" y2="22"></line></svg>
+    </button>
+    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=da-nang-hotels-map&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span class="btn-text">Search Stays</span>
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html" class="mobile-nav-link">Home</a>
+  <div>
+    <a href="hotels.html" class="mobile-nav-link active" id="mobileHotelsToggle">Hotels <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items" id="mobileHotelsSub">
+      <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
+      <a href="da-nang-beach-hotels.html" class="mobile-sub-link">Beachfront Hotels</a>
+      <a href="luxury-hotels-da-nang.html" class="mobile-sub-link">Luxury Hotels</a>
+      <a href="family-hotels-da-nang.html" class="mobile-sub-link">Family Hotels</a>
+      <a href="boutique-hotels-da-nang.html" class="mobile-sub-link">Boutique Hotels</a>
+    </div>
+  </div>
+  <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
+  <a href="dining.html" class="mobile-nav-link">Dining</a>
+  <a href="guides.html" class="mobile-nav-link">Guides</a>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=da-nang-hotels-map&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+</div>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="guides.html">Guides</a></li>
+    <li><span>Da Nang Hotels Map</span></li>
+  </ol>
+</nav>
+
+<!-- ── ARTICLE HERO ─────────────────────────────────────────── -->
+<header class="article-hero" role="banner">
+  <div class="article-hero-inner">
+    <p class="hero-label fade-up fu1">Hotel Location Guide · Updated March 2026</p>
+    <h1 class="article-h1 fade-up fu2">Da Nang Hotels Map: <em>Where to Stay by Area</em></h1>
+    <p class="article-sub fade-up fu3">Da Nang hotels are split across four distinct areas — My Khe Beach, the Han River, Son Tra Peninsula, and Central City. Which one is right for your trip depends on whether you want beach access, city nightlife, luxury seclusion, or the best value for money. This guide maps them all.</p>
+    <div class="article-meta fade-up fu3">
+      <span>✎ Written by <strong>Ryan Yousefi</strong>, Da Nang resident since 2021</span>
+      <span class="sep">·</span>
+      <span>📅 Last updated: <strong>March 2026</strong></span>
+      <span class="sep">·</span>
+      <span>⏰ 12–min read</span>
+      <span class="sep">·</span>
+      <span>🗺 Interactive map included</span>
+    </div>
+    <nav class="toc-pills fade-up fu4" aria-label="Jump to section">
+      <a href="#map" class="toc-pill">🗺 Interactive Map</a>
+      <a href="#quick-answer" class="toc-pill">⚡ Quick Answer</a>
+      <a href="#my-khe" class="toc-pill">🏖 My Khe Beach</a>
+      <a href="#han-river" class="toc-pill">🌉 Han River</a>
+      <a href="#son-tra" class="toc-pill">🌿 Son Tra</a>
+      <a href="#central" class="toc-pill">🏙 Central City</a>
+      <a href="#table" class="toc-pill">📊 Compare Areas</a>
+      <a href="#hotels" class="toc-pill">🏨 Featured Hotels</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── SECTION 1: INTERACTIVE MAP ──────────────────────────── -->
+<p style="max-width:var(--max);margin:0 auto;padding:1.5rem var(--gutter) 0;font-size:.97rem;color:var(--ink-soft);line-height:1.7">This interactive Da Nang hotel map shows the exact locations of beachfront hotels at My Khe Beach, riverfront hotels along the Han River, and resorts on the Son Tra Peninsula. Use the map to understand where each neighbourhood sits before choosing where to stay.</p>
+<section class="map-section" id="map" aria-labelledby="map-heading">
+  <div class="map-section-inner">
+    <p class="section-label">Interactive Hotel Map</p>
+    <h2 class="section-heading" id="map-heading">Da Nang Hotel <em>Locations</em></h2>
+    <p class="section-subhead">Explore hotel locations across all four neighbourhoods. Click any marker for hotel details and review links.</p>
+    <div class="map-grid">
+      <div>
+        <div id="dnmap" role="region" aria-label="Interactive map of Da Nang hotel locations by neighbourhood"></div>
+      </div>
+      <div class="map-legend">
+        <p class="map-legend-title">Neighbourhood Clusters</p>
+        <div class="map-cluster" data-area="mykhe">
+          <div class="map-cluster-name"><span class="map-cluster-dot dot-beach"></span>My Khe Beach</div>
+          <div class="map-cluster-desc">Da Nang's main tourist strip. 8 km of white sand, walkable restaurants, and sunset views. Best for most visitors.</div>
+          <div class="map-cluster-tags">
+            <span class="mc-tag">Beach Access</span>
+            <span class="mc-tag">Walkable</span>
+            <span class="mc-tag">All Budgets</span>
+          </div>
+        </div>
+        <div class="map-cluster" data-area="hanriver">
+          <div class="map-cluster-name"><span class="map-cluster-dot dot-river"></span>Han River / Dragon Bridge</div>
+          <div class="map-cluster-desc">City centre, nightlife, and riverfront walks. Dragon Bridge is 5 minutes on foot. Better value than the beach strip.</div>
+          <div class="map-cluster-tags">
+            <span class="mc-tag">City Views</span>
+            <span class="mc-tag">Nightlife</span>
+            <span class="mc-tag">Value</span>
+          </div>
+        </div>
+        <div class="map-cluster" data-area="sontra">
+          <div class="map-cluster-name"><span class="map-cluster-dot dot-sontra"></span>Son Tra Peninsula</div>
+          <div class="map-cluster-desc">Clifftop luxury resorts above the bay. Private, dramatic, and expensive. Home to the InterContinental.</div>
+          <div class="map-cluster-tags">
+            <span class="mc-tag">Luxury</span>
+            <span class="mc-tag">Private</span>
+            <span class="mc-tag">Views</span>
+          </div>
+        </div>
+        <div class="map-cluster" data-area="central">
+          <div class="map-cluster-name"><span class="map-cluster-dot dot-central"></span>Central Da Nang</div>
+          <div class="map-cluster-desc">Budget-friendly hotels near local markets, street food, and the Marble Mountains day trip route.</div>
+          <div class="map-cluster-tags">
+            <span class="mc-tag">Budget</span>
+            <span class="mc-tag">Local</span>
+            <span class="mc-tag">Authentic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 2: AI ANSWER BOX ─────────────────────────────── -->
+<section class="ai-answer-section" id="quick-answer" aria-labelledby="ai-answer-heading">
+  <div class="ai-answer-inner">
+    <div class="ai-box" itemscope itemtype="https://schema.org/Article">
+      <div class="ai-box-header">
+        <div class="ai-box-icon" aria-hidden="true">⚡</div>
+        <div>
+          <h2 class="ai-box-title" id="ai-answer-heading">Where Should You Stay in Da Nang?</h2>
+          <p class="ai-box-sub">Quick summary — the right area for every traveller type</p>
+        </div>
+      </div>
+      <div class="ai-answers-grid" itemprop="description">
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">First-Time Visitors</div>
+          <div class="ai-answer-area">My Khe Beach</div>
+          <div class="ai-answer-why">Direct beach access, walkable restaurants, and hotels from $55/night. The Pham Van Dong strip is the easiest base for a first trip.</div>
+        </div>
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">Beach Hotels</div>
+          <div class="ai-answer-area">My Khe Beach</div>
+          <div class="ai-answer-why">The widest selection of <a href="da-nang-beach-hotels.html" style="color:var(--ocean);font-weight:600">beachfront hotels in Da Nang</a> — from budget guesthouses to 4-star resort towers with rooftop pools.</div>
+        </div>
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">Luxury Resorts</div>
+          <div class="ai-answer-area">Son Tra Peninsula</div>
+          <div class="ai-answer-why">The <a href="review-intercontinental-da-nang.html" style="color:var(--ocean);font-weight:600">InterContinental Sun Peninsula</a> is on a private clifftop above the bay — one of Southeast Asia's most dramatic resort settings.</div>
+        </div>
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">Nightlife &amp; City Energy</div>
+          <div class="ai-answer-area">Han River / Dragon Bridge</div>
+          <div class="ai-answer-why">The Dragon Bridge area has rooftop bars, night markets, and the Han River promenade. Best access to Da Nang's city nightlife.</div>
+        </div>
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">Budget Travellers</div>
+          <div class="ai-answer-area">Central Da Nang</div>
+          <div class="ai-answer-why">Hotels from $20–$45/night near local markets and street food. A 10-minute taxi to the beach. See our <a href="da-nang-budget-guide.html" style="color:var(--ocean);font-weight:600">budget guide</a> for picks.</div>
+        </div>
+        <div class="ai-answer-item">
+          <div class="ai-answer-label">Families with Kids</div>
+          <div class="ai-answer-area">Non Nuoc Beach / My An</div>
+          <div class="ai-answer-why">Quieter beaches further south with larger resort grounds, kids clubs, and space. The <a href="family-hotels-da-nang.html" style="color:var(--ocean);font-weight:600">Hyatt Regency and Furama</a> are the top family picks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3A: MY KHE BEACH ──────────────────────────────── -->
+<section class="area-section" id="my-khe" aria-labelledby="mykhe-heading">
+  <div class="area-inner">
+    <div class="area-content">
+      <span class="area-badge badge-beach-bg">🏖 Most Popular Area</span>
+      <h2 class="area-h2" id="mykhe-heading">My Khe Beach — <em>Best for Most Visitors</em></h2>
+      <p class="area-verdict">The default recommendation for first-time visitors</p>
+      <p class="area-desc">My Khe Beach is Da Nang's main tourist corridor — an 8-kilometre stretch of white sand running directly along the South China Sea. The Pham Van Dong beachfront strip is lined with mid-range and 4-star hotels, all with direct beach access and a walkable cluster of restaurants, cafes, and convenience stores. It's the most practical base for a Da Nang holiday.</p>
+      <p class="area-desc">The <strong>An Thuong neighbourhood</strong> sits behind the beach strip and adds a social layer: Da Nang's best cafe culture, a Saturday night market, and the highest concentration of expat-friendly bars. Most visitors never need to leave this kilometre-square zone.</p>
+      <div class="area-features">
+        <div class="area-feature"><span class="area-feature-icon">🏖</span><span>Direct sand access from almost every hotel</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🍜</span><span>100+ restaurants within a 5-minute walk</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🌅</span><span>West-facing for dramatic sunset views over the mountains</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🚕</span><span>10 minutes to Dragon Bridge, 15 to the Marble Mountains</span></div>
+        <div class="area-feature"><span class="area-feature-icon">💰</span><span>Prices from $55/night (mid-range) to $200/night (4-star beachfront)</span></div>
+      </div>
+      <p class="area-hotels-label">Popular Hotels in This Area</p>
+      <div class="area-hotel-pills">
+        <a href="review-four-points-sheraton-da-nang.html" class="area-pill">Four Points Sheraton</a>
+        <a href="review-hilton-da-nang.html" class="area-pill">Hilton Garden Inn</a>
+        <a href="review-tms-hotel-da-nang.html" class="area-pill">TMS Hotel Da Nang Beach</a>
+        <a href="review-a-la-carte-da-nang.html" class="area-pill">A La Carte Da Nang</a>
+        <a href="review-muong-thanh-luxury-da-nang.html" class="area-pill">Muong Thanh Luxury</a>
+        <a href="review-wyndham-soleil-da-nang.html" class="area-pill">Wyndham Soleil</a>
+      </div>
+      <div class="area-stats-row">
+        <div class="area-stat"><div class="area-stat-val">$55–$200</div><div class="area-stat-key">Per night</div></div>
+        <div class="area-stat"><div class="area-stat-val">8 km</div><div class="area-stat-key">Of beach</div></div>
+        <div class="area-stat"><div class="area-stat-val">10 min</div><div class="area-stat-key">To city centre</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="area-mini-map" id="map-mykhe" aria-label="Map of My Khe Beach hotel area"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3B: HAN RIVER ─────────────────────────────────── -->
+<section class="area-section" id="han-river" aria-labelledby="hanriver-heading">
+  <div class="area-inner reverse">
+    <div>
+      <div class="area-mini-map" id="map-hanriver" aria-label="Map of Han River hotel area"></div>
+    </div>
+    <div class="area-content">
+      <span class="area-badge badge-river-bg">🌉 Best for City Lovers</span>
+      <h2 class="area-h2" id="hanriver-heading">Han River &amp; Dragon Bridge — <em>Best for Nightlife</em></h2>
+      <p class="area-verdict">City views, walkable bars, and better value than the beach strip</p>
+      <p class="area-desc">Staying near the Han River puts you in the pulse of Da Nang's urban energy. Dragon Bridge — the city's fire-breathing icon — is walking distance from most river hotels. The waterfront promenade is Da Nang's social hub: evening markets, street food stalls, and the best rooftop bar scene in the city.</p>
+      <p class="area-desc">Hotels here are generally 15–25% cheaper than equivalent My Khe properties. The trade-off: you're 3–5 km from the beach (a 10-minute taxi). For travellers who want to explore the city, visit night markets, or make day trips to Hoi An, this is the most practical location.</p>
+      <div class="area-features">
+        <div class="area-feature"><span class="area-feature-icon">🐉</span><span>Dragon Bridge walking distance — fire show on Saturdays at 21:00</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🍺</span><span>Best nightlife access: Sky 36, Buddha Bar, Rong Den Beach Club</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🛒</span><span>Han Market, Con Market, and night markets all nearby</span></div>
+        <div class="area-feature"><span class="area-feature-icon">💰</span><span>Typically 20–30% cheaper than equivalent beach hotels</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🏖</span><span>10-minute taxi to My Khe Beach</span></div>
+      </div>
+      <p class="area-hotels-label">Popular Hotels in This Area</p>
+      <div class="area-hotel-pills">
+        <a href="review-novotel-da-nang-han-river.html" class="area-pill">Novotel Danang Premier</a>
+        <a href="review-brilliant-hotel-da-nang.html" class="area-pill">Brilliant Hotel</a>
+        <a href="review-azura-da-nang.html" class="area-pill">Azura Da Nang</a>
+        <a href="review-grand-mercure-da-nang.html" class="area-pill">Grand Mercure Da Nang</a>
+      </div>
+      <div class="area-stats-row">
+        <div class="area-stat"><div class="area-stat-val">$40–$130</div><div class="area-stat-key">Per night</div></div>
+        <div class="area-stat"><div class="area-stat-val">5 min</div><div class="area-stat-key">To Dragon Bridge</div></div>
+        <div class="area-stat"><div class="area-stat-val">10 min</div><div class="area-stat-key">To beach</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3C: SON TRA PENINSULA ────────────────────────── -->
+<section class="area-section" id="son-tra" aria-labelledby="sontra-heading">
+  <div class="area-inner">
+    <div class="area-content">
+      <span class="area-badge badge-sontra-bg">🌿 Most Exclusive Area</span>
+      <h2 class="area-h2" id="sontra-heading">Son Tra Peninsula — <em>Best for Luxury Resorts</em></h2>
+      <p class="area-verdict">Jungle cliffs, ocean views, and total seclusion</p>
+      <p class="area-desc">Son Tra is a protected jungle peninsula jutting into the South China Sea, 8 km north of the city. It's dramatically different from every other part of Da Nang — steep mountain roads, wild monkey populations, and clifftop infinity pools with uninterrupted bay views. This is where Da Nang's flagship luxury resort is located.</p>
+      <p class="area-desc">The <a href="review-intercontinental-da-nang.html" style="color:var(--ocean);font-weight:700">InterContinental Danang Sun Peninsula Resort</a> defines this area — 197 villas on a private clifftop, a MICHELIN-starred restaurant, and Asia's longest non-urban funicular. It's one of the most dramatic resort settings in Southeast Asia. The peninsula also hosts smaller boutique properties for those who want nature without the five-star price.</p>
+      <div class="area-features">
+        <div class="area-feature"><span class="area-feature-icon">🌊</span><span>Private clifftop villas above the South China Sea</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🦁</span><span>Protected jungle — red-shanked douc langur monkeys on-site</span></div>
+        <div class="area-feature"><span class="area-feature-icon">⭐</span><span>MICHELIN-starred dining at the InterContinental</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🚁</span><span>Isolated setting — taxi to city takes 20–25 minutes</span></div>
+        <div class="area-feature"><span class="area-feature-icon">💰</span><span>From $350/night at the InterContinental; boutique options from $120</span></div>
+      </div>
+      <p class="area-hotels-label">Luxury Resorts on Son Tra</p>
+      <div class="area-hotel-pills">
+        <a href="review-intercontinental-da-nang.html" class="area-pill">InterContinental Sun Peninsula</a>
+        <a href="luxury-hotels-da-nang.html" class="area-pill">All Luxury Hotels →</a>
+      </div>
+      <div class="area-stats-row">
+        <div class="area-stat"><div class="area-stat-val">$120–$800</div><div class="area-stat-key">Per night</div></div>
+        <div class="area-stat"><div class="area-stat-val">8 km</div><div class="area-stat-key">From city centre</div></div>
+        <div class="area-stat"><div class="area-stat-val">Private</div><div class="area-stat-key">Beach access</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="area-mini-map" id="map-sontra" aria-label="Map of Son Tra Peninsula resort area"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3D: CENTRAL DA NANG ──────────────────────────── -->
+<section class="area-section" id="central" aria-labelledby="central-heading">
+  <div class="area-inner reverse">
+    <div>
+      <div class="area-mini-map" id="map-central" aria-label="Map of Central Da Nang hotel area"></div>
+    </div>
+    <div class="area-content">
+      <span class="area-badge badge-central-bg">🏙 Best Value Area</span>
+      <h2 class="area-h2" id="central-heading">Central Da Nang — <em>Best for Budget Hotels</em></h2>
+      <p class="area-verdict">Local flavour, affordable rates, and easy day-trip access</p>
+      <p class="area-desc">Central Da Nang — particularly the Hai Chau and Thanh Khe districts — is where most locals live and where prices are consistently the lowest. Budget hotels, family-run guesthouses, and mid-range business hotels cluster in a grid of walkable streets near local markets and street food alleys. It's the most authentic part of the city for travellers who want to avoid tourist bubble pricing.</p>
+      <p class="area-desc">The trade-off is that you're 4–6 km from the beach — a 10–15 minute taxi. But if your priority is budget, local food, and easy access to the <a href="marble-mountains-da-nang.html" style="color:var(--ocean);font-weight:600">Marble Mountains</a> and Hoi An day trips, this area delivers the best overall value in the city.</p>
+      <div class="area-features">
+        <div class="area-feature"><span class="area-feature-icon">🛒</span><span>Con Market and Han Market — authentic local shopping</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🍜</span><span>Best street food prices in the city — Mi Quang, Banh Mi, Bun Cha Ca</span></div>
+        <div class="area-feature"><span class="area-feature-icon">💰</span><span>Hotels from $20–$65/night</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🗺</span><span>Best base for Marble Mountains, Hoi An, and Hue day trips</span></div>
+        <div class="area-feature"><span class="area-feature-icon">🏖</span><span>10–15 minutes to My Khe Beach by taxi</span></div>
+      </div>
+      <p class="area-hotels-label">Budget &amp; Mid-Range Hotels in This Area</p>
+      <div class="area-hotel-pills">
+        <a href="da-nang-budget-guide.html" class="area-pill">Da Nang Budget Guide →</a>
+        <a href="boutique-hotels-da-nang.html" class="area-pill">Boutique Hotels →</a>
+      </div>
+      <div class="area-stats-row">
+        <div class="area-stat"><div class="area-stat-val">$20–$65</div><div class="area-stat-key">Per night</div></div>
+        <div class="area-stat"><div class="area-stat-val">10 min</div><div class="area-stat-key">To beach</div></div>
+        <div class="area-stat"><div class="area-stat-val">Best</div><div class="area-stat-key">Value</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 5+6: COMPARISON TABLE + PRICE HEATMAP ────────── -->
+<section class="table-section" id="table" aria-labelledby="table-heading">
+  <div class="table-section-inner">
+    <p class="section-label">Area Comparison</p>
+    <h2 class="section-heading" id="table-heading">Best Area by <em>Traveller Type</em></h2>
+    <p class="section-subhead">The honest summary of every Da Nang neighbourhood — who it suits and why.</p>
+    <div class="table-wrap" role="region" aria-label="Da Nang hotel area comparison table">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Traveller Type</th>
+            <th>Best Area</th>
+            <th>Price Range</th>
+            <th>Distance to Beach</th>
+            <th>Why Choose It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>First-time visitors</strong></td>
+            <td><span class="ct-pill pill-beach">My Khe Beach</span></td>
+            <td>$55–$200</td>
+            <td>Beachfront</td>
+            <td>Walkable, easy, best all-round choice</td>
+          </tr>
+          <tr>
+            <td><strong>Luxury travellers</strong></td>
+            <td><span class="ct-pill pill-sontra">Son Tra Peninsula</span></td>
+            <td>$350–$800</td>
+            <td>Private beach</td>
+            <td>Clifftop villas, MICHELIN dining, total privacy</td>
+          </tr>
+          <tr>
+            <td><strong>Couples</strong></td>
+            <td><span class="ct-pill pill-beach">My Khe Beach</span></td>
+            <td>$80–$250</td>
+            <td>Beachfront</td>
+            <td>Rooftop pool hotels, sunset views, restaurant access</td>
+          </tr>
+          <tr>
+            <td><strong>Nightlife lovers</strong></td>
+            <td><span class="ct-pill pill-river">Han River</span></td>
+            <td>$40–$130</td>
+            <td>10 min taxi</td>
+            <td>Dragon Bridge, rooftop bars, walking promenade</td>
+          </tr>
+          <tr>
+            <td><strong>Budget travellers</strong></td>
+            <td><span class="ct-pill pill-central">Central Da Nang</span></td>
+            <td>$20–$65</td>
+            <td>15 min taxi</td>
+            <td>Local markets, street food, cheapest hotels</td>
+          </tr>
+          <tr>
+            <td><strong>Families with kids</strong></td>
+            <td><span class="ct-pill pill-beach">My An / Non Nuoc</span></td>
+            <td>$120–$300</td>
+            <td>Beachfront</td>
+            <td>Kids clubs, larger grounds, quieter beaches</td>
+          </tr>
+          <tr>
+            <td><strong>Business travellers</strong></td>
+            <td><span class="ct-pill pill-river">Han River</span></td>
+            <td>$50–$150</td>
+            <td>10 min taxi</td>
+            <td>City centre, convention facilities, meeting rooms</td>
+          </tr>
+          <tr>
+            <td><strong>Long stays / digital nomads</strong></td>
+            <td><span class="ct-pill pill-beach">My Khe Beach</span></td>
+            <td>$40–$120</td>
+            <td>Walkable</td>
+            <td>Best café infrastructure, An Thuong co-working scene</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICE HEATMAP ──────────────────────────────────────────── -->
+<section class="heatmap-section" aria-labelledby="heatmap-heading">
+  <div class="heatmap-inner">
+    <p class="section-label">Hotel Price Guide</p>
+    <h2 class="section-heading" id="heatmap-heading">Da Nang Hotel <em>Price by Area</em></h2>
+    <p class="section-subhead">Mid-season indicative prices (April–June, September). Peak season (July–August, Tet) adds 20–40%.</p>
+    <div class="heatmap-grid">
+      <div class="heatmap-card hm-budget">
+        <div class="hm-tier hm-tier-budget">$ Budget</div>
+        <div class="hm-price">$20–$55</div>
+        <div class="hm-area"><strong>Central Da Nang</strong><br>Guesthouses, budget hostels, local hotels. Basic rooms but excellent food access.</div>
+        <div class="hm-bars">
+          <div class="hm-bar-row"><span class="hm-bar-label">Location</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-2"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Value</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Beach</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-1"></div></div></div>
+        </div>
+      </div>
+      <div class="heatmap-card hm-midrange">
+        <div class="hm-tier hm-tier-mid">$$ Mid-Range</div>
+        <div class="hm-price">$55–$150</div>
+        <div class="hm-area"><strong>My Khe Beach &amp; Han River</strong><br>The best value bracket in Da Nang. 4-star hotels with pools at prices that undercut Phuket by 40%.</div>
+        <div class="hm-bars">
+          <div class="hm-bar-row"><span class="hm-bar-label">Location</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Value</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Beach</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+        </div>
+      </div>
+      <div class="heatmap-card hm-upscale">
+        <div class="hm-tier hm-tier-up">$$$ Upscale</div>
+        <div class="hm-price">$150–$350</div>
+        <div class="hm-area"><strong>My An Beach &amp; Non Nuoc</strong><br>Resort-style properties with larger grounds, private beach stretches, and full-service spa facilities.</div>
+        <div class="hm-bars">
+          <div class="hm-bar-row"><span class="hm-bar-label">Location</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-3"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Value</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-3"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Beach</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+        </div>
+      </div>
+      <div class="heatmap-card hm-luxury">
+        <div class="hm-tier hm-tier-lux">$$$$ Luxury</div>
+        <div class="hm-price">$350–$800+</div>
+        <div class="hm-area"><strong>Son Tra Peninsula</strong><br>The InterContinental and private villa resorts. One of Southeast Asia's most dramatic luxury settings.</div>
+        <div class="hm-bars">
+          <div class="hm-bar-row"><span class="hm-bar-label">Location</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Value</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-2"></div></div></div>
+          <div class="hm-bar-row"><span class="hm-bar-label">Beach</span><div class="hm-bar-track"><div class="hm-bar-fill bar-fill-4"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="seasonal-note">
+      <strong>Seasonal pricing note:</strong> Da Nang peaks in July–August (summer school holidays) when beach hotel rates rise 25–40%. The <strong>Tet holiday</strong> (late January–February) causes a sharp 3–5 day spike across all properties. <strong>Weekends year-round</strong> tend to run 10–15% above weekday prices at the beachfront hotels. The best value window is <strong>March–May</strong> and <strong>October</strong> — dry weather, manageable crowds, and off-peak rates.
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 7: HOTELS NEAR ATTRACTIONS ───────────────────── -->
+<section class="attractions-section" aria-labelledby="attractions-heading">
+  <div class="attractions-inner">
+    <p class="section-label">Location Guide</p>
+    <h2 class="section-heading" id="attractions-heading">Hotels Near Da Nang's <em>Top Attractions</em></h2>
+    <p class="section-subhead">Where to stay for easy access to Da Nang's most-visited landmarks and beaches.</p>
+    <div class="attractions-grid">
+      <div class="attraction-card">
+        <div class="attraction-icon-wrap">
+          <img src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=160&h=160&fit=crop&auto=format&q=70" alt="Dragon Bridge illuminated at night Da Nang" loading="lazy" width="80" height="80">
+        </div>
+        <div>
+          <div class="attraction-name">Dragon Bridge</div>
+          <div class="attraction-dist">🌉 Han River · City Centre</div>
+          <div class="attraction-desc">Da Nang's most photographed landmark — a 666-metre dragon that breathes fire and water on Saturday and Sunday nights at 21:00. Best viewed from the riverfront promenade.</div>
+          <a href="where-to-stay-in-da-nang.html#han-river" class="attraction-link">Hotels near Dragon Bridge <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <div class="attraction-icon-wrap">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=160&h=160&fit=crop&auto=format&q=70" alt="My Khe Beach Da Nang white sand" loading="lazy" width="80" height="80">
+        </div>
+        <div>
+          <div class="attraction-name">My Khe Beach</div>
+          <div class="attraction-dist">🏖 Pham Van Dong Strip</div>
+          <div class="attraction-desc">Da Nang's main beach — 8 km of fine white sand, calm South China Sea water, and the city's best beach café culture. Dozens of hotels have direct beach entrances.</div>
+          <a href="da-nang-beach-hotels.html" class="attraction-link">Beach hotels guide <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <div class="attraction-icon-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=160&h=160&fit=crop&auto=format&q=70" alt="Marble Mountains Da Nang pagoda and caves" loading="lazy" width="80" height="80">
+        </div>
+        <div>
+          <div class="attraction-name">Marble Mountains</div>
+          <div class="attraction-dist">🗻 15 km South · Non Nuoc Area</div>
+          <div class="attraction-desc">Five marble and limestone hills with pagodas, caves, and sky-high views. Taxis from My Khe Beach take 20 minutes. Also accessible from Central Da Nang.</div>
+          <a href="best-hotels-in-da-nang.html" class="attraction-link">Best hotels for this area <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <div class="attraction-icon-wrap">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=160&h=160&fit=crop&auto=format&q=70" alt="Son Tra Peninsula Da Nang jungle and sea" loading="lazy" width="80" height="80">
+        </div>
+        <div>
+          <div class="attraction-name">Son Tra Peninsula</div>
+          <div class="attraction-dist">🌿 8 km North · Clifftop</div>
+          <div class="attraction-desc">A protected jungle headland above the bay — wildlife, panoramic viewpoints, and the Lady Buddha statue at the peak. Home to the InterContinental resort.</div>
+          <a href="luxury-hotels-da-nang.html" class="attraction-link">Luxury resorts on Son Tra <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 8: FEATURED HOTEL CARDS ──────────────────────── -->
+<section class="hotels-section" id="hotels" aria-labelledby="hotels-heading">
+  <div class="hotels-inner">
+    <p class="section-label">Featured Hotels</p>
+    <h2 class="section-heading" id="hotels-heading">Most Popular Hotels <em>in Da Nang</em></h2>
+    <p class="section-subhead">Mid-range picks across My Khe Beach and the Han River — independently reviewed. See our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.3)">full guide to the best hotels in Da Nang</a> for the complete ranking.</p>
+    <div class="hotels-grid">
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&h=338&fit=crop&auto=format&q=70" alt="Four Points by Sheraton Da Nang rooftop pool overlooking My Khe Beach" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-beach-bg">My Khe Beach</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">Four Points by Sheraton Da Nang</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★</span>
+            <span class="hcard-price">from <strong>$70</strong>/night</span>
+          </div>
+          <p class="hcard-desc">Beachfront 4-star on the Pham Van Dong strip with an infinity pool, multiple dining outlets, and direct sand access. One of the best mid-range options on My Khe Beach.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-four-points-sheraton-da-nang.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-four-points&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Ffour-points-by-sheraton-danang.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=338&fit=crop&auto=format&q=70" alt="Hilton Garden Inn Da Nang beach view" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-beach-bg">My Khe Beach</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">Hilton Garden Inn Da Nang</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★</span>
+            <span class="hcard-price">from <strong>$80</strong>/night</span>
+          </div>
+          <p class="hcard-desc">Modern beachfront property with clean contemporary rooms, a rooftop pool, and strong service standards. Excellent value for a globally recognised brand on the beach.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-hilton-da-nang.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-hilton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhilton-garden-inn-danang.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=338&fit=crop&auto=format&q=70" alt="TMS Hotel Da Nang Beach rooftop infinity pool" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-beach-bg">My Khe Beach</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">TMS Hotel Da Nang Beach</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★</span>
+            <span class="hcard-price">from <strong>$65</strong>/night</span>
+          </div>
+          <p class="hcard-desc">Stylish local brand with a spectacular rooftop infinity pool, beach access, and a polished interior design that punches above its price point. A top pick for couples.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-tms-hotel-da-nang.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-tms&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Ftms-hotel-da-nang-beach.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&h=338&fit=crop&auto=format&q=70" alt="Muong Thanh Luxury Da Nang hotel pool and beach" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-beach-bg">My Khe Beach</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">Muong Thanh Luxury Da Nang</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★★</span>
+            <span class="hcard-price">from <strong>$90</strong>/night</span>
+          </div>
+          <p class="hcard-desc">A large 5-star property with exceptional value pricing. High floors have panoramic sea views. One of the best-value 5-star options in Da Nang for those who want the stars on a budget.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-muong-thanh-luxury-da-nang.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-muong-thanh&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fmuong-thanh-luxury-da-nang.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=338&fit=crop&auto=format&q=70" alt="Novotel Danang Premier Han River night view" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-river-bg">Han River</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">Novotel Danang Premier Han River</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★</span>
+            <span class="hcard-price">from <strong>$70</strong>/night</span>
+          </div>
+          <p class="hcard-desc">The most central hotel in Da Nang — walking distance from Dragon Bridge, the Han Market, and the river promenade. Rooftop pool with panoramic city views.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-novotel-da-nang-han-river.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-novotel&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fnovotel-da-nang-premier-han-river.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+      <article class="hcard">
+        <div class="hcard-img">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=338&fit=crop&auto=format&q=70" alt="InterContinental Danang Sun Peninsula Resort infinity pool" loading="lazy" width="600" height="338">
+          <span class="hcard-area-tag badge-sontra-bg">Son Tra Peninsula</span>
+        </div>
+        <div class="hcard-body">
+          <h3 class="hcard-name">InterContinental Sun Peninsula</h3>
+          <div class="hcard-meta">
+            <span class="hcard-stars">★★★★★</span>
+            <span class="hcard-price">from <strong>$380</strong>/night</span>
+          </div>
+          <p class="hcard-desc">Da Nang's flagship luxury resort — 197 villas on a private clifftop above the bay, Asia's longest non-urban funicular, and a MICHELIN-starred restaurant. One of Asia's finest hotels.</p>
+        </div>
+        <div class="hcard-footer">
+          <a href="review-intercontinental-da-nang.html" class="hcard-link">Read review <span aria-hidden="true">→</span></a>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=map-intercontinental&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fintercontinental-danang-sun-peninsula-resort.html" class="hcard-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ SECTION ────────────────────────────────────────────── -->
+<section class="faq-section" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-inner">
+    <p class="section-label" style="justify-content:center">Common Questions</p>
+    <h2 class="section-heading" id="faq-heading" style="text-align:center">Da Nang Hotel <em>Location FAQ</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">Where is the best area to stay in Da Nang for first-time visitors?</summary>
+        <p class="faq-answer">My Khe Beach is the best area for first-time visitors to Da Nang. The Pham Van Dong beachfront strip offers direct beach access, a high density of restaurants and cafes within walking distance, and hotels across all budgets from $55/night. It's the most practical and enjoyable base for a first trip. See our <a href="where-to-stay-in-da-nang.html">full neighbourhood guide</a> for detailed area comparisons.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How far are Da Nang beach hotels from the city centre and Dragon Bridge?</summary>
+        <p class="faq-answer">My Khe Beach hotels are 3–5 km from Da Nang city centre and Dragon Bridge. In light traffic, this takes 8–12 minutes by taxi (typically 40,000–60,000 VND). Most visitors find this distance very easy — taxis and Grab cars are plentiful, and many hotels also offer free shuttle services to and from the city.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Is Son Tra Peninsula far from Da Nang city?</summary>
+        <p class="faq-answer">Son Tra Peninsula is 8–10 km from Da Nang city centre — a 20–25 minute drive by taxi. The InterContinental provides a shuttle service for guests. The isolation is part of the appeal: Son Tra feels worlds away from city noise, with jungle roads, wildlife, and dramatic ocean views. It's best suited to travellers who want a true resort experience rather than city access.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What is the cheapest area to stay in Da Nang?</summary>
+        <p class="faq-answer">Central Da Nang — particularly the Hai Chau and Thanh Khe districts near Han Market — has the cheapest hotels, starting from $20–$35/night for clean budget guesthouses. You sacrifice beach proximity (10–15 minutes by taxi) but gain access to authentic local food and the lowest prices in the city. See our <a href="da-nang-budget-guide.html">Da Nang budget guide</a> for specific recommendations.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Which Da Nang hotels are closest to Dragon Bridge?</summary>
+        <p class="faq-answer">The closest hotels to Dragon Bridge are on the Han River strip — the Novotel Danang Premier Han River and Brilliant Hotel are both within a 5-minute walk. The bridge's fire-breathing show takes place every Saturday and Sunday at 21:00 and is best viewed from the riverfront promenade. See the <a href="hotel-reviews.html">hotel reviews page</a> for full listings.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Are there luxury hotels on My Khe Beach?</summary>
+        <p class="faq-answer">Yes — My Khe Beach has several 4-star and upscale 5-star options, including the Hyatt Regency Da Nang (at the quieter My An stretch), the Sheraton Grand, and Pullman. However, Da Nang's flagship luxury resort — the InterContinental Sun Peninsula — is on Son Tra Peninsula, not My Khe. See the full <a href="luxury-hotels-da-nang.html">luxury hotels in Da Nang</a> guide for the best options by area.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── RELATED GUIDES ─────────────────────────────────────────── -->
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="related-inner">
+    <p class="section-label">More from Da Nang Hotel Guide</p>
+    <h2 class="section-heading" id="related-heading">Continue <em>Researching</em></h2>
+    <div class="related-grid">
+      <a href="best-hotels-in-da-nang.html" class="related-card">
+        <span class="rc-icon">⭑</span>
+        <span class="rc-label">Curated Guide</span>
+        <div class="rc-title">Best Hotels in Da Nang</div>
+        <p class="rc-desc">Our curated selection — the standout picks per category, independently assessed and honestly ranked.</p>
+        <span class="rc-arrow">Read guide →</span>
+      </a>
+      <a href="where-to-stay-in-da-nang.html" class="related-card">
+        <span class="rc-icon">🗺</span>
+        <span class="rc-label">Neighbourhood Guide</span>
+        <div class="rc-title">Where to Stay in Da Nang</div>
+        <p class="rc-desc">Five distinct areas, honest trade-offs, and a clear verdict on which neighbourhood suits your trip.</p>
+        <span class="rc-arrow">Read guide →</span>
+      </a>
+      <a href="da-nang-beach-hotels.html" class="related-card">
+        <span class="rc-icon">🏖</span>
+        <span class="rc-label">Hotel Guide</span>
+        <div class="rc-title">Da Nang Beach Hotels</div>
+        <p class="rc-desc">Every beachfront property across My Khe, My An, and Non Nuoc — with beach quality ratings and comparisons.</p>
+        <span class="rc-arrow">Read guide →</span>
+      </a>
+      <a href="luxury-hotels-da-nang.html" class="related-card">
+        <span class="rc-icon">✦</span>
+        <span class="rc-label">Luxury</span>
+        <div class="rc-title">Luxury Hotels in Da Nang</div>
+        <p class="rc-desc">Five-star resorts and luxury properties — from Son Tra clifftop villas to premium beachfront towers.</p>
+        <span class="rc-arrow">Read guide →</span>
+      </a>
+      <a href="hotel-reviews.html" class="related-card">
+        <span class="rc-icon">✎</span>
+        <span class="rc-label">Independent Reviews</span>
+        <div class="rc-title">All Da Nang Hotel Reviews</div>
+        <p class="rc-desc">24 independent hotel reviews covering luxury, mid-range, boutique, and budget options across the city.</p>
+        <span class="rc-arrow">Browse reviews →</span>
+      </a>
+      <a href="da-nang-budget-guide.html" class="related-card">
+        <span class="rc-icon">💰</span>
+        <span class="rc-label">Budget Guide</span>
+        <div class="rc-title">Da Nang Travel Cost Guide</div>
+        <p class="rc-desc">Hotel prices, food costs, transport, and activities — everything you need to budget a Da Nang trip.</p>
+        <span class="rc-arrow">Read guide →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Related Guides -->
+<div style="background:var(--sand);padding:1.5rem var(--gutter);border-top:1px solid var(--sand-dark)">
+  <div style="max-width:var(--max);margin:0 auto">
+    <h2 style="font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,1.9rem);color:var(--ink);margin-bottom:.75rem">Not Sure Which Area to Stay?</h2>
+    <p style="font-size:.97rem;color:var(--ink-soft);line-height:1.7;max-width:600px;margin-bottom:.6rem">Choosing the right neighbourhood can shape your entire trip. Read our full guide explaining the best areas of Da Nang.</p>
+    <p style="margin-bottom:1.25rem"><a href="/where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:700">Read: Where to Stay in Da Nang →</a></p>
+    <p style="font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-muted);margin-bottom:.6rem;font-weight:700">Related Hotel Guides</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+      <a href="best-hotels-in-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Best Hotels in Da Nang</a>
+      <a href="where-to-stay-in-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Where to Stay in Da Nang</a>
+      <a href="da-nang-beach-hotels.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Beach Hotels in Da Nang</a>
+      <a href="luxury-hotels-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Luxury Hotels in Da Nang</a>
+      <a href="family-hotels-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Family Hotels in Da Nang</a>
+      <a href="boutique-hotels-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Boutique Hotels</a>
+      <a href="hotel-reviews.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Hotel Reviews</a>
+      <a href="da-nang-budget-guide.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Budget Guide</a>
+      <a href="best-time-to-visit-da-nang.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">Best Time to Visit</a>
+      <a href="guides.html" style="padding:5px 13px;background:var(--white);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-soft);transition:border-color .15s">All Da Nang Guides</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">Da Nang<em>Hotel Guide</em></a>
+        <p class="footer-brand-desc">The independent guide to hotels, neighbourhoods, and travel in Da Nang, Vietnam. Locally maintained since 2021.</p>
+        <div class="footer-disclosure-box">
+          <strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links go to Booking.com. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Hotels</div>
+        <a href="best-hotels-in-da-nang.html">Best Hotels Guide</a>
+        <a href="luxury-hotels-da-nang.html">Luxury Hotels</a>
+        <a href="da-nang-beach-hotels.html">Beach Hotels</a>
+        <a href="boutique-hotels-da-nang.html">Boutique Hotels</a>
+        <a href="family-hotels-da-nang.html">Family Hotels</a>
+        <a href="hotel-reviews.html">Hotel Reviews</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Explore</div>
+        <a href="where-to-stay-in-da-nang.html">Where to Stay</a>
+        <a href="da-nang-hotels-map.html">Hotels Map</a>
+        <a href="guides.html">Travel Guides</a>
+        <a href="best-time-to-visit-da-nang.html">Best Time to Visit</a>
+        <a href="dining.html">Dining Guide</a>
+        <a href="da-nang-budget-guide.html">Budget Guide</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Site</div>
+        <a href="about.html">About &amp; Editorial</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=footer-map&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored">Book via Booking.com ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Da Nang Hotel Guide · Da Nang, Vietnam</span>
+      <span>Hotel prices indicative · Last updated March 2026</span>
+    </div>
+    <div class="footer-legal">
+      <p class="footer-legal-text">Da Nang Hotel Guide earns a commission when you make a booking through our Booking.com links, at no extra cost to you. This never influences editorial rankings or recommendations. All hotel rates quoted are indicative mid-season prices; live availability and pricing may differ. Booking.com is a registered trademark of Booking.com B.V.</p>
+      <nav class="footer-legal-links" aria-label="Legal">
+        <a href="privacy.html">Privacy</a><span class="sep">·</span>
+        <a href="terms.html">Terms</a><span class="sep">·</span>
+        <a href="contact.html">Contact</a><span class="sep">·</span>
+        <a href="about.html">Editorial Policy</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs=" crossorigin=""></script>
+
+<script>
+// ── Nav hamburger ──────────────────────────────────────────────────
+const hamburger = document.getElementById('navHamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+}
+
+// ── Mobile hotel dropdown ──────────────────────────────────────────
+const mHotels = document.getElementById('mobileHotelsToggle');
+const mHotelsSub = document.getElementById('mobileHotelsSub');
+if (mHotels && mHotelsSub) {
+  mHotels.addEventListener('click', e => {
+    e.preventDefault();
+    mHotelsSub.classList.toggle('open');
+  });
+}
+
+// ── Leaflet map colour scheme ──────────────────────────────────────
+const COLOURS = {
+  mykhe:    '#0D9488', // teal
+  hanriver: '#D97706', // amber
+  sontra:   '#7C3AED', // violet
+  central:  '#DC2626', // red
+  landmark: '#1B5C5C', // ocean
+};
+
+function makeIcon(colour, label) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36">
+    <path d="M13 0C5.8 0 0 5.8 0 13c0 9.75 13 23 13 23S26 22.75 26 13C26 5.8 20.2 0 13 0z" fill="${colour}"/>
+    <circle cx="13" cy="13" r="5" fill="white"/>
+  </svg>`;
+  return L.divIcon({
+    html: svg,
+    iconSize: [26, 36],
+    iconAnchor: [13, 36],
+    popupAnchor: [0, -36],
+    className: ''
+  });
+}
+
+function makeSmallIcon(colour) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 26 36">
+    <path d="M13 0C5.8 0 0 5.8 0 13c0 9.75 13 23 13 23S26 22.75 26 13C26 5.8 20.2 0 13 0z" fill="${colour}"/>
+    <circle cx="13" cy="13" r="5" fill="white"/>
+  </svg>`;
+  return L.divIcon({
+    html: svg,
+    iconSize: [20, 28],
+    iconAnchor: [10, 28],
+    popupAnchor: [0, -28],
+    className: ''
+  });
+}
+
+function popup(name, desc, slug) {
+  return `<div class="dn-popup">
+    <div class="dn-popup-name">${name}</div>
+    <div class="dn-popup-desc">${desc}</div>
+    <a href="${slug}" class="dn-popup-link">Read review →</a>
+  </div>`;
+}
+
+// ── MAIN MAP ───────────────────────────────────────────────────────
+(function initMainMap() {
+  if (!document.getElementById('dnmap')) return;
+
+  const map = L.map('dnmap', {
+    center: [16.044, 108.212],
+    zoom: 13,
+    scrollWheelZoom: false,
+    zoomControl: true
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Hotel markers — My Khe Beach (teal)
+  const hotels = [
+    { lat: 16.0664, lng: 108.2472, name: 'Four Points by Sheraton Da Nang', desc: 'Beachfront 4-star · My Khe Beach', slug: 'review-four-points-sheraton-da-nang.html', area: 'mykhe' },
+    { lat: 16.0680, lng: 108.2468, name: 'Hilton Garden Inn Da Nang', desc: 'Modern beachfront hotel · My Khe Beach', slug: 'review-hilton-da-nang.html', area: 'mykhe' },
+    { lat: 16.0645, lng: 108.2476, name: 'TMS Hotel Da Nang Beach', desc: 'Rooftop infinity pool · My Khe Beach', slug: 'review-tms-hotel-da-nang.html', area: 'mykhe' },
+    { lat: 16.0658, lng: 108.2480, name: 'A La Carte Da Nang Beach', desc: 'Sky bar & rooftop pool · My Khe Beach', slug: 'review-a-la-carte-da-nang.html', area: 'mykhe' },
+    { lat: 16.0700, lng: 108.2460, name: 'Muong Thanh Luxury Da Nang', desc: '5-star beachfront value · My Khe Beach', slug: 'review-muong-thanh-luxury-da-nang.html', area: 'mykhe' },
+    { lat: 16.0630, lng: 108.2484, name: 'Wyndham Soleil Da Nang', desc: 'Contemporary beachfront · My Khe Beach', slug: 'review-wyndham-soleil-da-nang.html', area: 'mykhe' },
+    // Han River
+    { lat: 16.0590, lng: 108.2280, name: 'Novotel Danang Premier Han River', desc: 'Rooftop pool · Han River waterfront', slug: 'review-novotel-da-nang-han-river.html', area: 'hanriver' },
+    { lat: 16.0610, lng: 108.2264, name: 'Brilliant Hotel Da Nang', desc: 'City centre value · Han River area', slug: 'review-brilliant-hotel-da-nang.html', area: 'hanriver' },
+    { lat: 16.0572, lng: 108.2295, name: 'Azura Da Nang Hotel', desc: 'Contemporary boutique · Han River', slug: 'review-azura-da-nang.html', area: 'hanriver' },
+    { lat: 16.0545, lng: 108.2310, name: 'Grand Mercure Da Nang', desc: 'Upscale riverside hotel', slug: 'review-grand-mercure-da-nang.html', area: 'hanriver' },
+    // Son Tra
+    { lat: 16.1125, lng: 108.2770, name: 'InterContinental Danang Sun Peninsula', desc: 'Clifftop luxury villas · Son Tra Peninsula', slug: 'review-intercontinental-da-nang.html', area: 'sontra' },
+  ];
+
+  hotels.forEach(h => {
+    L.marker([h.lat, h.lng], { icon: makeIcon(COLOURS[h.area]) })
+      .addTo(map)
+      .bindPopup(popup(h.name, h.desc, h.slug), { maxWidth: 240, className: '' });
+  });
+
+  // Landmarks
+  const landmarks = [
+    { lat: 16.0610, lng: 108.2270, name: 'Dragon Bridge', desc: 'Fire-breathing landmark — show Sat & Sun 21:00' },
+    { lat: 16.0671, lng: 108.2482, name: 'My Khe Beach', desc: '8 km of white sand · main tourist beach' },
+    { lat: 16.0778, lng: 108.2535, name: 'Lady Buddha (Son Tra)', desc: 'Iconic 67m white marble statue' },
+  ];
+
+  landmarks.forEach(lm => {
+    L.circleMarker([lm.lat, lm.lng], {
+      radius: 7,
+      fillColor: COLOURS.landmark,
+      color: '#fff',
+      weight: 2,
+      fillOpacity: 0.9
+    }).addTo(map)
+      .bindPopup(`<div class="dn-popup"><div class="dn-popup-name">${lm.name}</div><div class="dn-popup-desc">${lm.desc}</div></div>`, { maxWidth: 200 });
+  });
+
+  // Click-to-zoom on cluster cards
+  document.querySelectorAll('.map-cluster').forEach(card => {
+    card.addEventListener('click', () => {
+      const area = card.dataset.area;
+      const views = {
+        mykhe:    { center: [16.065, 108.247], zoom: 15 },
+        hanriver: { center: [16.059, 108.228], zoom: 15 },
+        sontra:   { center: [16.112, 108.277], zoom: 14 },
+        central:  { center: [16.047, 108.206], zoom: 14 },
+      };
+      if (views[area]) map.flyTo(views[area].center, views[area].zoom, { duration: 1.2 });
+    });
+  });
+
+  // Enable scroll zoom on click
+  map.on('click', () => map.scrollWheelZoom.enable());
+})();
+
+// ── MINI MAPS ─────────────────────────────────────────────────────
+function initMiniMap(containerId, center, zoom, markers) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+
+  const map = L.map(containerId, {
+    center: center,
+    zoom: zoom,
+    scrollWheelZoom: false,
+    zoomControl: false,
+    dragging: false,
+    doubleClickZoom: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  markers.forEach(m => {
+    L.marker([m.lat, m.lng], { icon: makeSmallIcon(m.colour) })
+      .addTo(map)
+      .bindPopup(`<div class="dn-popup"><div class="dn-popup-name">${m.name}</div></div>`, { maxWidth: 180 });
+  });
+}
+
+initMiniMap('map-mykhe', [16.066, 108.247], 15, [
+  { lat: 16.0664, lng: 108.2472, name: 'Four Points Sheraton', colour: COLOURS.mykhe },
+  { lat: 16.0680, lng: 108.2468, name: 'Hilton Garden Inn', colour: COLOURS.mykhe },
+  { lat: 16.0645, lng: 108.2476, name: 'TMS Hotel', colour: COLOURS.mykhe },
+  { lat: 16.0658, lng: 108.2480, name: 'A La Carte', colour: COLOURS.mykhe },
+  { lat: 16.0700, lng: 108.2460, name: 'Muong Thanh Luxury', colour: COLOURS.mykhe },
+]);
+
+initMiniMap('map-hanriver', [16.059, 108.228], 15, [
+  { lat: 16.0590, lng: 108.2280, name: 'Novotel Danang Premier', colour: COLOURS.hanriver },
+  { lat: 16.0610, lng: 108.2264, name: 'Brilliant Hotel', colour: COLOURS.hanriver },
+  { lat: 16.0572, lng: 108.2295, name: 'Azura Da Nang', colour: COLOURS.hanriver },
+]);
+
+initMiniMap('map-sontra', [16.108, 108.274], 14, [
+  { lat: 16.1125, lng: 108.2770, name: 'InterContinental Sun Peninsula', colour: COLOURS.sontra },
+]);
+
+initMiniMap('map-central', [16.047, 108.206], 14, [
+  { lat: 16.0450, lng: 108.2080, name: 'Central Da Nang Hotels', colour: COLOURS.central },
+  { lat: 16.0490, lng: 108.2100, name: 'Budget Hotels', colour: COLOURS.central },
+]);
+
+// ── Smooth scroll for TOC pills ───────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
