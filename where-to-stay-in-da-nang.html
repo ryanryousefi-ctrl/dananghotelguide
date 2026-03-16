@@ -386,12 +386,14 @@ td strong{color:var(--ink)}
 }
 .sidebar-cta p{font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1rem;line-height:1.6}
 .sidebar-cta a{
-  display:block;padding:11px;
-  background:var(--coral);color:#fff;
-  font-size:.82rem;font-weight:700;
-  border-radius:100px;transition:background .15s;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  padding:8px 16px!important;
+  background:#fff!important;color:#003580!important;
+  border:1.5px solid #003580!important;
+  border-radius:6px!important;font-size:0!important;
+  transition:box-shadow .18s,transform .15s!important;
 }
-.sidebar-cta a:hover{background:var(--coral-light)}
+.sidebar-cta a:hover{background:#f0f4ff!important;box-shadow:0 4px 14px rgba(0,53,128,.25)!important;transform:translateY(-1px)!important;}
 .sidebar-related-link{
   display:flex;align-items:center;justify-content:space-between;
   gap:.5rem;padding:9px 0;
@@ -452,12 +454,13 @@ td strong{color:var(--ink)}
 .final-rec h2{font-family:var(--font-serif);font-size:1.6rem;color:#fff;margin-bottom:.8rem;letter-spacing:-.02em}
 .final-rec p{font-size:.95rem;color:rgba(255,255,255,.7);line-height:1.75;max-width:520px;margin:0 auto 1.5rem}
 .final-rec a{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:12px 28px;background:var(--coral);color:#fff;
-  font-size:.85rem;font-weight:700;border-radius:100px;
-  transition:background .15s,transform .15s;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  padding:8px 16px!important;background:#fff!important;color:#003580!important;
+  border:1.5px solid #003580!important;
+  border-radius:6px!important;font-size:0!important;
+  transition:box-shadow .15s,transform .15s!important;
 }
-.final-rec a:hover{background:var(--coral-light);transform:translateY(-1px)}
+.final-rec a:hover{background:#f0f4ff!important;box-shadow:0 4px 14px rgba(0,53,128,.25)!important;transform:translateY(-1px)!important;}
 
 /* ─── FOOTER ─── */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
@@ -628,9 +631,20 @@ td strong{color:var(--ink)}
 }
 
 /* ── Booking.com button logo styles ─────────────────────── */
-.bcom-logo{display:inline-block;vertical-align:middle;margin-right:5px}
+.bcom-logo{display:inline-block;vertical-align:middle}
 .booking-button,.hotel-book-btn,.hc-btn,.hub-cat-book,.hotel-pick-btn,.hotel-btn,.boutique-btn,.hbtn{
-  display:inline-flex;align-items:center;gap:6px
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:0!important;
+  background:#fff!important;color:#003580!important;
+  border:1.5px solid #003580!important;
+  border-radius:6px!important;
+  padding:6px 12px!important;
+  font-size:0!important;
+  transition:box-shadow .18s,transform .15s!important;
+}
+.booking-button:hover,.hotel-book-btn:hover,.hc-btn:hover,.hub-cat-book:hover,.hotel-pick-btn:hover,.hotel-btn:hover,.boutique-btn:hover,.hbtn:hover{
+  box-shadow:0 4px 14px rgba(0,53,128,.25)!important;
+  transform:translateY(-1px)!important;
+  background:#f0f4ff!important;
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
@@ -913,8 +927,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$95–$160</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -924,8 +937,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$85–$130</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -935,8 +947,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$70–$120</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -946,8 +957,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$60–$110</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
         </div>
@@ -1005,8 +1015,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$60–$95</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1016,8 +1025,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$65–$105</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
         </div>
@@ -1070,8 +1078,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$85–$130</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1081,8 +1088,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$120–$250</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1092,8 +1098,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$50–$80</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
         </div>
@@ -1149,8 +1154,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$250–$600</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1160,8 +1164,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$135–$290</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
         </div>
@@ -1214,8 +1217,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$165–$380</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1225,8 +1227,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$155–$350</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
           <div class="hotel-pick">
@@ -1236,8 +1237,7 @@ td strong{color:var(--ink)}
             </div>
             <span class="hotel-pick-price">$110–$180</span>
             <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button hotel-pick-btn" target="_blank" rel="nofollow noopener sponsored">
-          <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-          View on Booking.com
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
         </a>
           </div>
         </div>
@@ -1414,7 +1414,7 @@ td strong{color:var(--ink)}
       <h2>The Bottom Line</h2>
       <p>If it's your first time in Da Nang, book a hotel on My Khe Beach. Pick something with direct sand access or within a 3-minute walk. You'll wake up 10 minutes from the airport, a short walk from breakfast, and a $2 Grab ride from everything else the city offers. It's not complicated. It's just right.</p>
       <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" target="_blank" rel="nofollow noopener sponsored">
-        Browse available hotels → Booking.com
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
       </a>
     </div>
 
@@ -1490,7 +1490,7 @@ td strong{color:var(--ink)}
     <div class="sidebar-cta">
       <p>Search live availability and current rates for Da Nang hotels</p>
       <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" target="_blank" rel="nofollow noopener sponsored">
-        Search on Booking.com →
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg>
       </a>
     </div>
 
@@ -1605,7 +1605,7 @@ td strong{color:var(--ink)}
         Privacy Policy
         Terms of Use
         Contact
-        <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" target="_blank" rel="nofollow noopener sponsored">Book via Booking.com ↗</a>
+        <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3714993&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="booking-button" target="_blank" rel="nofollow noopener sponsored"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 24" width="108" height="22" role="img" aria-label="Booking.com"><circle cx="6" cy="12" r="6" fill="#003580"/><text x="16" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#003580">Booking</text><text x="77" y="17" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#0077cc">.com</text></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
