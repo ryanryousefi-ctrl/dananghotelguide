@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Da Nang Hotels Map: Where to Stay by Area (Beach, River, Son Tra) — 2026 Guide</title>
-<meta name="description" content="Interactive Da Nang hotels map showing where to stay by neighbourhood — My Khe Beach, Han River, Son Tra Peninsula, and Central City. Hotel locations, prices, and expert recommendations for 2026.">
+<title>Da Nang Hotels Map: Where to Stay by Area (2026)</title>
+<meta name="description" content="Interactive Da Nang hotels map — explore hotel locations by neighbourhood: My Khe Beach, Han River, Son Tra Peninsula, and Central City. Updated 2026.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://www.dananghotelguide.com/da-nang-hotels-map.html">
 <link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/da-nang-hotels-map.html">
 
@@ -1247,9 +1248,10 @@ details[open] .faq-question::after{transform:rotate(-135deg) translateY(2px)}
 </footer>
 
 <!-- Leaflet JS -->
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
 // ── Nav hamburger ──────────────────────────────────────────────────
 const hamburger = document.getElementById('navHamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -1454,6 +1456,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+}); // end DOMContentLoaded
 </script>
 
 </body>

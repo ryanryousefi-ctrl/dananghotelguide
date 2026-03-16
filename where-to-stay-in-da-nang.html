@@ -645,7 +645,7 @@ td strong{color:var(--ink)}
     <div class="nav-dropdown">
       <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="25-best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
         <a href="da-nang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🏖</span>Beachfront</a>
         <a href="luxury-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">✦</span>Luxury</a>
         <a href="family-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">👨‍👩‍👧</span>Family</a>
@@ -673,7 +673,7 @@ td strong{color:var(--ink)}
   <div>
     <a href="hotels.html" class="mobile-nav-link" id="mobileHotelsToggle">Hotels <span style="font-size:.8rem;opacity:.5">▾</span></a>
     <div class="mobile-dropdown-items" id="mobileHotelsSub">
-      <a href="25-best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
+      <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
       <a href="da-nang-beach-hotels.html" class="mobile-sub-link">Beachfront Hotels</a>
       <a href="luxury-hotels-da-nang.html" class="mobile-sub-link">Luxury Hotels</a>
       <a href="family-hotels-da-nang.html" class="mobile-sub-link">Family Hotels</a>
@@ -1686,6 +1686,7 @@ td strong{color:var(--ink)}
 <!-- ── LEAFLET MAP ──────────────────────────────────────── -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
 (function(){
   if(!document.getElementById('danang-map')) return;
 
@@ -1821,6 +1822,7 @@ td strong{color:var(--ink)}
   map.on('mouseout', function() { map.scrollWheelZoom.disable(); });
 
 })();
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>
