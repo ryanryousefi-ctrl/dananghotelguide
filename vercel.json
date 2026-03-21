@@ -4,6 +4,16 @@
       "source": "/where-to-stay-in-da-nang__1_.html",
       "destination": "/where-to-stay-in-da-nang.html",
       "permanent": true
+    },
+    {
+      "source": "/25-best-hotels-in-da-nang.html",
+      "destination": "/best-hotels-in-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/where-to-stay.html",
+      "destination": "/where-to-stay-in-da-nang.html",
+      "permanent": true
     }
   ]
 }
