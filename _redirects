@@ -26,3 +26,7 @@
 /review-tms-hotel-da-nang.html /tms-hotel-da-nang.html 301
 /review-vinpearl-luxury-da-nang.html /vinpearl-luxury-da-nang.html 301
 /review-wyndham-soleil-da-nang.html /wyndham-soleil-da-nang.html 301
+
+# 301 Redirects: additional duplicate pages -> canonical
+/where-to-stay.html /where-to-stay-in-da-nang.html 301
+/guides-da-nang-hotel-prices-by-month.html /da-nang-hotel-prices-by-month.html 301
