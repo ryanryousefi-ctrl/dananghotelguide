@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Dawn sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1035"/>
+      <stop offset="40%" stop-color="#2d1b5e"/>
+      <stop offset="70%" stop-color="#7b3f6e"/>
+      <stop offset="85%" stop-color="#d4704a"/>
+      <stop offset="95%" stop-color="#f0a855"/>
+      <stop offset="100%" stop-color="#f5c870"/>
+    </linearGradient>
+    <!-- Tarmac gradient -->
+    <linearGradient id="tarmac" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3c42"/>
+      <stop offset="100%" stop-color="#2a2c30"/>
+    </linearGradient>
+    <!-- Horizon glow -->
+    <radialGradient id="hglow" cx="50%" cy="100%" r="60%" fx="50%" fy="100%">
+      <stop offset="0%" stop-color="#f0a040" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f0a040" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Terminal window glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Atmosphere blur -->
+    <filter id="atmo">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+    <!-- Plane glow filter -->
+    <filter id="planeglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Dark hero overlay for text -->
+    <linearGradient id="heroOverlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#000" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="1400" height="500" fill="url(#sky)"/>
+  
+  <!-- Horizon atmospheric glow -->
+  <rect width="1400" height="500" fill="url(#hglow)"/>
+  
+  <!-- Stars (subtle) -->
+  <g opacity="0.6">
+    <circle cx="120" cy="40" r="1" fill="white"/>
+    <circle cx="250" cy="25" r="1.2" fill="white"/>
+    <circle cx="380" cy="55" r="0.8" fill="white"/>
+    <circle cx="520" cy="18" r="1" fill="white"/>
+    <circle cx="680" cy="38" r="0.9" fill="white"/>
+    <circle cx="820" cy="22" r="1.1" fill="white"/>
+    <circle cx="960" cy="45" r="0.8" fill="white"/>
+    <circle cx="1100" cy="15" r="1" fill="white"/>
+    <circle cx="1250" cy="50" r="0.9" fill="white"/>
+    <circle cx="1380" cy="30" r="1" fill="white"/>
+    <circle cx="160" cy="80" r="0.7" fill="white"/>
+    <circle cx="440" cy="90" r="0.8" fill="white"/>
+    <circle cx="750" cy="65" r="0.7" fill="white"/>
+    <circle cx="1050" cy="75" r="0.9" fill="white"/>
+    <circle cx="1300" cy="88" r="0.7" fill="white"/>
+  </g>
+
+  <!-- TARMAC -->
+  <rect y="300" width="1400" height="200" fill="url(#tarmac)"/>
+  
+  <!-- Tarmac markings / taxiway lines -->
+  <g opacity="0.35" stroke="#f5d060" stroke-width="2" fill="none">
+    <line x1="0" y1="340" x2="1400" y2="340"/>
+    <line x1="0" y1="380" x2="1400" y2="380"/>
+  </g>
+  <!-- Center taxiway line (yellow dashes) -->
+  <g fill="#f5d060" opacity="0.5">
+    <rect x="0" y="360" width="80" height="3"/>
+    <rect x="120" y="360" width="80" height="3"/>
+    <rect x="240" y="360" width="80" height="3"/>
+    <rect x="360" y="360" width="80" height="3"/>
+    <rect x="480" y="360" width="80" height="3"/>
+    <rect x="600" y="360" width="80" height="3"/>
+    <rect x="720" y="360" width="80" height="3"/>
+    <rect x="840" y="360" width="80" height="3"/>
+    <rect x="960" y="360" width="80" height="3"/>
+    <rect x="1080" y="360" width="80" height="3"/>
+    <rect x="1200" y="360" width="80" height="3"/>
+    <rect x="1320" y="360" width="80" height="3"/>
+  </g>
+
+  <!-- Runway lights (perspective row) -->
+  <g fill="#ffe87a" filter="url(#glow)">
+    <circle cx="80" cy="307" r="3"/>
+    <circle cx="160" cy="308" r="3"/>
+    <circle cx="260" cy="309" r="2.5"/>
+    <circle cx="370" cy="310" r="2.5"/>
+    <circle cx="490" cy="311" r="2"/>
+    <circle cx="620" cy="312" r="2"/>
+    <circle cx="760" cy="313" r="1.8"/>
+    <circle cx="910" cy="314" r="1.5"/>
+    <circle cx="1070" cy="315" r="1.2"/>
+    <circle cx="1240" cy="316" r="1"/>
+    <circle cx="1380" cy="317" r="0.8"/>
+  </g>
+
+  <!-- ═══ TERMINAL BUILDING ═══ -->
+  <!-- Main terminal body -->
+  <rect x="0" y="120" width="880" height="180" fill="#131520"/>
+  <!-- Slanted modern roofline -->
+  <polygon points="0,120 880,120 880,80 620,60 0,90" fill="#0e1018"/>
+  <!-- Glass facade (lighter section) -->
+  <rect x="0" y="120" width="550" height="180" fill="#181b2a"/>
+  <!-- Terminal windows - illuminated rows -->
+  <g filter="url(#glow)">
+    <!-- Row 1 -->
+    <g fill="#ffd580" opacity="0.95">
+      <rect x="18" y="128" width="32" height="22" rx="2"/>
+      <rect x="58" y="128" width="32" height="22" rx="2"/>
+      <rect x="98" y="128" width="32" height="22" rx="2"/>
+      <rect x="138" y="128" width="32" height="22" rx="2"/>
+      <rect x="178" y="128" width="32" height="22" rx="2"/>
+      <rect x="218" y="128" width="32" height="22" rx="2"/>
+      <rect x="258" y="128" width="32" height="22" rx="2"/>
+      <rect x="298" y="128" width="32" height="22" rx="2"/>
+      <rect x="338" y="128" width="32" height="22" rx="2"/>
+      <rect x="378" y="128" width="32" height="22" rx="2"/>
+      <rect x="418" y="128" width="32" height="22" rx="2"/>
+      <rect x="458" y="128" width="32" height="22" rx="2"/>
+      <rect x="498" y="128" width="32" height="22" rx="2"/>
+    </g>
+    <!-- Row 2 (some dark) -->
+    <g fill="#ffc860" opacity="0.85">
+      <rect x="18" y="160" width="32" height="22" rx="2"/>
+      <rect x="98" y="160" width="32" height="22" rx="2"/>
+      <rect x="178" y="160" width="32" height="22" rx="2"/>
+      <rect x="218" y="160" width="32" height="22" rx="2"/>
+      <rect x="298" y="160" width="32" height="22" rx="2"/>
+      <rect x="338" y="160" width="32" height="22" rx="2"/>
+      <rect x="418" y="160" width="32" height="22" rx="2"/>
+      <rect x="458" y="160" width="32" height="22" rx="2"/>
+      <rect x="498" y="160" width="32" height="22" rx="2"/>
+    </g>
+    <!-- Row 3 -->
+    <g fill="#ffb840" opacity="0.75">
+      <rect x="18" y="192" width="32" height="22" rx="2"/>
+      <rect x="58" y="192" width="32" height="22" rx="2"/>
+      <rect x="138" y="192" width="32" height="22" rx="2"/>
+      <rect x="218" y="192" width="32" height="22" rx="2"/>
+      <rect x="258" y="192" width="32" height="22" rx="2"/>
+      <rect x="338" y="192" width="32" height="22" rx="2"/>
+      <rect x="418" y="192" width="32" height="22" rx="2"/>
+      <rect x="498" y="192" width="32" height="22" rx="2"/>
+    </g>
+    <!-- Row 4 -->
+    <g fill="#ffc870" opacity="0.7">
+      <rect x="58" y="224" width="32" height="22" rx="2"/>
+      <rect x="138" y="224" width="32" height="22" rx="2"/>
+      <rect x="178" y="224" width="32" height="22" rx="2"/>
+      <rect x="258" y="224" width="32" height="22" rx="2"/>
+      <rect x="338" y="224" width="32" height="22" rx="2"/>
+      <rect x="378" y="224" width="32" height="22" rx="2"/>
+      <rect x="458" y="224" width="32" height="22" rx="2"/>
+    </g>
+    <!-- Right section windows (less dense) -->
+    <g fill="#ffd090" opacity="0.8">
+      <rect x="570" y="135" width="28" height="20" rx="2"/>
+      <rect x="612" y="135" width="28" height="20" rx="2"/>
+      <rect x="654" y="135" width="28" height="20" rx="2"/>
+      <rect x="696" y="135" width="28" height="20" rx="2"/>
+      <rect x="738" y="135" width="28" height="20" rx="2"/>
+      <rect x="780" y="135" width="28" height="20" rx="2"/>
+      <rect x="822" y="135" width="28" height="20" rx="2"/>
+    </g>
+    <g fill="#ffc060" opacity="0.65">
+      <rect x="570" y="168" width="28" height="20" rx="2"/>
+      <rect x="654" y="168" width="28" height="20" rx="2"/>
+      <rect x="738" y="168" width="28" height="20" rx="2"/>
+      <rect x="822" y="168" width="28" height="20" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Control Tower -->
+  <rect x="880" y="80" width="30" height="220" fill="#0f1118"/>
+  <!-- Tower cab -->
+  <rect x="858" y="62" width="74" height="28" rx="4" fill="#162035"/>
+  <rect x="862" y="55" width="66" height="15" rx="3" fill="#1a2840"/>
+  <!-- Tower cab windows (lit blue) -->
+  <rect x="865" y="64" width="14" height="12" rx="1" fill="#4090c0" opacity="0.9"/>
+  <rect x="884" y="64" width="14" height="12" rx="1" fill="#3880b0" opacity="0.85"/>
+  <rect x="903" y="64" width="14" height="12" rx="1" fill="#4090c0" opacity="0.9"/>
+
+  <!-- Distant hangar / right buildings -->
+  <rect x="960" y="180" width="200" height="120" fill="#0c0e14"/>
+  <rect x="1010" y="155" width="100" height="145" fill="#0a0c12"/>
+  <!-- Small windows on hangar -->
+  <g fill="#ffd070" opacity="0.5">
+    <rect x="975" y="195" width="18" height="14" rx="1"/>
+    <rect x="1000" y="195" width="18" height="14" rx="1"/>
+    <rect x="1025" y="195" width="18" height="14" rx="1"/>
+  </g>
+
+  <!-- ═══ JETBRIDGES ═══ -->
+  <g fill="#1a1d2a" stroke="#2a2d3a" stroke-width="1">
+    <rect x="120" y="290" width="12" height="30" rx="2" transform="rotate(-15 126 305)"/>
+    <rect x="280" y="290" width="12" height="35" rx="2" transform="rotate(-12 286 307)"/>
+    <rect x="440" y="290" width="12" height="28" rx="2" transform="rotate(-18 446 304)"/>
+  </g>
+
+  <!-- ═══ AIRCRAFT 1 (large, centre-left) ═══ -->
+  <g transform="translate(200, 310)" filter="url(#atmo)">
+    <!-- Wings -->
+    <polygon points="120,18 200,18 240,90 80,90" fill="#c8cdd8"/>
+    <!-- Wing engines -->
+    <ellipse cx="100" cy="68" rx="28" ry="9" fill="#a0a5b0"/>
+    <ellipse cx="175" cy="65" rx="25" ry="8" fill="#a0a5b0"/>
+    <!-- Fuselage -->
+    <ellipse cx="155" cy="22" rx="155" ry="22" fill="#d0d5e0"/>
+    <!-- Nose -->
+    <ellipse cx="20" cy="22" rx="35" ry="18" fill="#c8cdd8"/>
+    <!-- Tail vertical -->
+    <polygon points="280,2 310,2 305,-48 276,0" fill="#c0c5d0"/>
+    <!-- Tail horizontal -->
+    <polygon points="270,18 310,18 335,55 245,55" fill="#b8bdc8"/>
+    <!-- Cockpit windows -->
+    <ellipse cx="32" cy="16" rx="14" ry="9" fill="#1a3550" opacity="0.9"/>
+    <ellipse cx="55" cy="13" rx="16" ry="8" fill="#153045" opacity="0.85"/>
+    <!-- Livery stripe - blue -->
+    <rect x="0" y="18" width="310" height="6" fill="#1a5fa0" rx="1"/>
+    <!-- Red accent -->
+    <rect x="50" y="15" width="260" height="3" fill="#cc2030" opacity="0.6" rx="1"/>
+    <!-- Gear shadow under plane -->
+    <ellipse cx="155" cy="95" rx="120" ry="8" fill="#0a0c10" opacity="0.4"/>
+  </g>
+
+  <!-- ═══ AIRCRAFT 2 (smaller, right side, distant) ═══ -->
+  <g transform="translate(900, 325) scale(0.65)" opacity="0.85">
+    <!-- Wings -->
+    <polygon points="110,16 175,16 205,75 70,75" fill="#b8bcc8"/>
+    <!-- Engine -->
+    <ellipse cx="88" cy="58" rx="22" ry="7" fill="#9095a0"/>
+    <!-- Fuselage -->
+    <ellipse cx="140" cy="19" rx="140" ry="19" fill="#c0c5d0"/>
+    <ellipse cx="18" cy="19" rx="30" ry="16" fill="#b8bcc8"/>
+    <!-- Tail -->
+    <polygon points="250,2 272,2 268,-38 247,0" fill="#b0b5c0"/>
+    <polygon points="242,16 272,16 292,48 222,48" fill="#a8adb8"/>
+    <!-- Cockpit -->
+    <ellipse cx="28" cy="14" rx="12" ry="8" fill="#1a3550" opacity="0.85"/>
+    <!-- Orange livery -->
+    <rect x="0" y="16" width="272" height="5" fill="#e06020" rx="1"/>
+    <ellipse cx="140" cy="82" rx="100" ry="6" fill="#0a0c10" opacity="0.3"/>
+  </g>
+
+  <!-- ═══ GROUND VEHICLES ═══ -->
+  <!-- Baggage cart (yellow) -->
+  <g transform="translate(680, 385)">
+    <rect x="0" y="0" width="38" height="16" rx="3" fill="#f0c020"/>
+    <circle cx="8" cy="18" r="5" fill="#333"/>
+    <circle cx="30" cy="18" r="5" fill="#333"/>
+    <rect x="-25" y="4" width="25" height="10" rx="2" fill="#e0b018"/>
+    <circle cx="-17" cy="16" r="4" fill="#333"/>
+  </g>
+  <!-- Fuel truck -->
+  <g transform="translate(820, 380)">
+    <rect x="0" y="0" width="55" height="22" rx="3" fill="#4060a0"/>
+    <rect x="38" y="-8" width="18" height="30" rx="2" fill="#3050888"/>
+    <circle cx="10" cy="24" r="6" fill="#222"/>
+    <circle cx="42" cy="24" r="6" fill="#222"/>
+  </g>
+
+  <!-- Terminal light spill onto tarmac -->
+  <ellipse cx="440" cy="300" rx="350" ry="20" fill="#ffa040" opacity="0.08"/>
+
+  <!-- Dark overlay for text legibility -->
+  <rect width="1400" height="500" fill="url(#heroOverlay)"/>
+  
+  <!-- Subtle bottom darkening -->
+  <rect y="420" width="1400" height="80" fill="#000" opacity="0.25"/>
+</svg>
