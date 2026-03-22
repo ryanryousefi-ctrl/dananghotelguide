@@ -1,2 +1,28 @@
 # 301 Redirect — duplicate page to canonical
 /where-to-stay-in-da-nang__1_.html /where-to-stay-in-da-nang.html 301
+
+# 301 Redirects: review-* duplicates -> canonical flat pages
+/review-a-la-carte-da-nang.html /a-la-carte-da-nang.html 301
+/review-azura-da-nang.html /azura-da-nang.html 301
+/review-brilliant-hotel-da-nang.html /brilliant-hotel-da-nang.html 301
+/review-four-points-sheraton-da-nang.html /four-points-sheraton-da-nang.html 301
+/review-furama-resort-da-nang.html /furama-resort-da-nang.html 301
+/review-fusion-suites-da-nang.html /fusion-suites-da-nang.html 301
+/review-grand-mercure-da-nang.html /grand-mercure-da-nang.html 301
+/review-hilton-da-nang.html /hilton-da-nang.html 301
+/review-hyatt-regency-da-nang.html /hyatt-regency-da-nang.html 301
+/review-intercontinental-da-nang.html /intercontinental-da-nang.html 301
+/review-marriott-resort-da-nang.html /marriott-resort-da-nang.html 301
+/review-melia-da-nang.html /melia-da-nang.html 301
+/review-mikazuki-da-nang.html /mikazuki-da-nang.html 301
+/review-muong-thanh-luxury-da-nang.html /muong-thanh-luxury-da-nang.html 301
+/review-naman-retreat-da-nang.html /naman-retreat-da-nang.html 301
+/review-novotel-da-nang-han-river.html /novotel-da-nang-han-river.html 301
+/review-premier-village-da-nang.html /premier-village-da-nang.html 301
+/review-pullman-da-nang.html /pullman-da-nang.html 301
+/review-radisson-blu-da-nang.html /radisson-blu-da-nang.html 301
+/review-sheraton-grand-da-nang.html /sheraton-grand-da-nang.html 301
+/review-tia-wellness-resort-da-nang.html /tia-wellness-resort-da-nang.html 301
+/review-tms-hotel-da-nang.html /tms-hotel-da-nang.html 301
+/review-vinpearl-luxury-da-nang.html /vinpearl-luxury-da-nang.html 301
+/review-wyndham-soleil-da-nang.html /wyndham-soleil-da-nang.html 301
