@@ -30,3 +30,15 @@
 # 301 Redirects: additional duplicate pages -> canonical
 /where-to-stay.html /where-to-stay-in-da-nang.html 301
 /guides-da-nang-hotel-prices-by-month.html /da-nang-hotel-prices-by-month.html 301
+
+# 301 Redirects: old duplicate slugs -> canonical pages
+
+# 301 Redirects: mismatched internal link targets -> correct existing pages
+/25-best-hotels-in-da-nang.html /best-hotels-in-da-nang.html 301
+/da-nang-hotel-map.html /da-nang-hotels-map.html 301
+/da-nang-dragon-bridge-guide.html /dragon-bridge-da-nang.html 301
+/da-nang-night-cruise-guide.html /han-river-night-cruise-da-nang.html 301
+/da-nang-market-guide.html /da-nang-hoi-an-markets-guide.html 301
+/da-nang-family-guide.html /family-hotels-da-nang.html 301
+/da-nang-guide-for-kids.html /family-hotels-da-nang.html 301
+/budget-hotels-da-nang.html /da-nang-budget-guide.html 301
