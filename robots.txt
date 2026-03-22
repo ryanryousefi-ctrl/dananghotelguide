@@ -22,4 +22,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.dananghotelguide.com/sitemap.xml
+Sitemap: https://dananghotelguide.com/sitemap.xml
