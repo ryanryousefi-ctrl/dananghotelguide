@@ -601,6 +601,151 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-cta-text{color:rgba(255,255,255,.75);font-size:.9rem}
     .review-cta-text strong{color:#fff;display:block;font-size:1rem;margin-bottom:.25rem}
     .review-cta a{display:inline-block;padding:.7rem 1.5rem;background:var(--coral);border-radius:100px;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none}
+
+    /* ── PHOTO HERO ─────────────────────────────────────────── */
+    .review-photo-hero{
+      position:relative;height:70vh;min-height:480px;max-height:700px;
+      overflow:hidden;display:flex;align-items:flex-end;
+    }
+    .review-photo-hero img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      object-position:center;
+    }
+    .review-photo-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(10,25,25,.85) 0%,rgba(10,25,25,.35) 45%,rgba(10,25,25,.1) 100%);
+    }
+    .review-photo-hero-content{
+      position:relative;z-index:2;
+      width:100%;max-width:860px;margin:0 auto;
+      padding:0 var(--gutter) 3rem;
+    }
+    .review-photo-eyebrow{
+      font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+      color:rgba(255,255,255,.55);margin-bottom:.8rem;
+      display:flex;align-items:center;gap:8px;
+    }
+    .review-photo-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral-light);}
+    .review-photo-hero h1{
+      font-family:var(--font-serif);
+      font-size:clamp(2rem,5vw,3.4rem);
+      color:#fff;line-height:1.08;letter-spacing:-.03em;
+      margin-bottom:.9rem;text-shadow:0 3px 18px rgba(0,0,0,.5);
+    }
+    .review-photo-hero h1 em{font-style:italic;color:var(--coral-light);}
+    .review-author-strip{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.15);
+      margin-top:.5rem;
+    }
+    .review-author-avatar{
+      width:38px;height:38px;border-radius:50%;
+      background:var(--ocean);border:2px solid rgba(255,255,255,.3);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0;
+    }
+    .review-author-info{flex:1;min-width:0;}
+    .review-author-name{font-size:.82rem;font-weight:700;color:#fff;}
+    .review-author-meta{font-size:.73rem;color:rgba(255,255,255,.45);}
+    .review-photo-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;}
+    .review-tag{
+      display:inline-block;padding:4px 12px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+      border-radius:100px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+    }
+
+    /* ── BLOG OPENING ────────────────────────────────────────── */
+    .blog-opening{
+      max-width:860px;margin:0 auto;
+      padding:3rem var(--gutter) 0;
+    }
+    .blog-opening-lede{
+      font-family:var(--font-serif);
+      font-size:clamp(1.15rem,2.2vw,1.4rem);
+      color:var(--ink);line-height:1.65;letter-spacing:-.01em;
+      margin-bottom:1.4rem;border-bottom:2px solid var(--sand-mid);
+      padding-bottom:1.4rem;
+    }
+    .blog-opening-body p{
+      font-size:.97rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.1rem;
+    }
+
+    /* ── INLINE PHOTOS ───────────────────────────────────────── */
+    .review-inline-photo{
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-inline-photo img{
+      width:100%;border-radius:var(--r-xl);
+      object-fit:cover;display:block;
+      box-shadow:0 8px 32px rgba(26,26,24,.14);
+    }
+    .review-inline-photo figcaption{
+      font-size:.74rem;color:var(--ink-muted);margin-top:.6rem;
+      font-style:italic;text-align:center;
+    }
+    .review-photo-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-photo-grid img{
+      width:100%;border-radius:var(--r-lg);object-fit:cover;
+      aspect-ratio:4/3;
+      box-shadow:0 4px 16px rgba(26,26,24,.1);
+    }
+    @media(max-width:600px){.review-photo-grid{grid-template-columns:1fr}}
+
+    /* ── PULL QUOTE ──────────────────────────────────────────── */
+    .pull-quote{
+      max-width:860px;margin:2.5rem auto;padding:1.75rem 2rem 1.75rem 2.5rem;
+      border-left:3px solid var(--ocean);background:var(--ocean-pale);
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote p{
+      font-family:var(--font-serif);font-size:1.15rem;
+      color:var(--ocean-deep);line-height:1.6;font-style:italic;margin:0;
+    }
+
+    /* ── QUICK FACTS FLOATING BOX ────────────────────────────── */
+    .review-quick-facts{
+      float:right;width:280px;margin:0 0 2rem 2.5rem;
+      background:var(--sand);border:1px solid var(--sand-dark);
+      border-radius:var(--r-xl);padding:1.4rem 1.6rem;
+      font-size:.83rem;
+    }
+    .rqf-title{font-size:.67rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--ink-muted);margin-bottom:1rem;
+      padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark);
+    }
+    .rqf-row{display:flex;justify-content:space-between;gap.75rem;
+      padding:.55rem 0;border-bottom:1px solid var(--sand-dark);font-size:.8rem;
+    }
+    .rqf-row:last-of-type{border-bottom:none}
+    .rqf-key{color:var(--ink-muted);}
+    .rqf-val{font-weight:700;color:var(--ink);text-align:right;}
+    .rqf-btn{
+      display:block;margin-top:1.1rem;padding:10px;
+      background:var(--ocean);color:#fff;text-align:center;
+      border-radius:var(--r-md);font-size:.8rem;font-weight:700;
+      transition:background .2s;
+    }
+    .rqf-btn:hover{background:var(--ocean-light);}
+    @media(max-width:680px){
+      .review-quick-facts{float:none;width:100%;margin:0 0 2rem;}
+    }
+
+    /* ── REVIEW BODY OVERRIDES ───────────────────────────────── */
+    .review-body{max-width:860px;margin:0 auto;padding:0 var(--gutter);}
+    .review-body p{color:var(--ink-soft);line-height:1.88;font-size:.97rem;margin-bottom:1.15rem}
+    .review-body h2{
+      font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);
+      margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid);
+      clear:both;
+    }
+    .review-body h2 em{font-style:italic;color:var(--ocean)}
+    .review-body strong{color:var(--ink);font-weight:700}
+    .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+    .review-body a:hover{border-color:var(--ocean)}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"LodgingBusiness","name":"Melia Danang Beach Resort","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"}},"author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"url":"https://dananghotelguide.com/review-melia-da-nang.html","datePublished":"2026-01-01","dateModified":"2026-03-15"}
@@ -682,74 +827,114 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 </div>
 
+
 <main>
-  <!-- Review hero -->
-  <section class="review-hero">
-    <p class="review-eyebrow">5-Star Beach · My Khe Beach · Da Nang</p>
-    <h1>Melia Danang Beach Resort <em>Review</em></h1>
-    <div class="review-meta">
-      <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-      <span>·</span>
-      <span>📅 Last updated: <strong>March 2026</strong></span>
-      <span>·</span>
-      <span>5 stars · From <strong>$110/night</strong></span>
+  <!-- Photo Hero -->
+  <section class="review-photo-hero">
+    <img src="https://ak-d.tripcdn.com/images/1mc3w12000lyf8smp7A24_W_1600_900_R5.webp" alt="Meliá Danang Beach Resort on Non Nuoc Beach" loading="eager">
+    <div class="review-photo-hero-overlay"></div>
+    <div class="review-photo-hero-content">
+      <p class="review-photo-eyebrow">4-Star Beach Hotel · My Khe Beach · Da Nang</p>
+      <h1>Meliá <em>Da Nang Beach</em> <em>Review</em></h1>
+      <div class="review-author-strip">
+        <div class="review-author-avatar">RY</div>
+        <div class="review-author-info">
+          <div class="review-author-name">Ryan Yousefi</div>
+          <div class="review-author-meta">Da Nang Hotel Guide · Last updated March 2026 · ★★★★ · From $100/night</div>
+        </div>
+      </div>
+      <div class="review-photo-tags"><span class="review-tag">Mid-Range</span><span class="review-tag">My Khe</span><span class="review-tag">Infinity Pool</span><span class="review-tag">Couples</span></div>
     </div>
   </section>
 
+  <!-- Blog opening -->
+  <section class="blog-opening">
+    <p class="blog-opening-lede">The Meliá is the My Khe hotel that consistently surprises people who didn't expect to like it as much as they did.</p>
+    <div class="blog-opening-body">
+      <p>I have a friend who books mid-range hotels at every destination she visits and always comes away saying the big-name five-stars weren't worth the premium. She stays at the Meliá when she's in Da Nang, and she's not wrong.</p>
+    <p>The infinity pool here is genuinely one of the more attractive on the strip — curved edge, ocean-facing, looks great at any time of day and actually has room to swim in it. The service is warmer than you typically get at 200-room properties with the staff-to-guest ratio stretched. And the location on My Khe puts An Thuong — the neighbourhood with Da Nang's best independent restaurants — about 10 minutes and 70,000 VND away.</p>
+    <p>It's not the Marriott. The rooms are slightly smaller, the facilities are lighter, and the YHI Spa won't blow your mind. But for a beachfront stay that doesn't require resort-tier pricing, it's consistently solid.</p>
+    </div>
+  </section>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc3w12000lyf8smp7A24_W_1200_700_R5.webp" alt="Meliá Danang Beach Resort infinity pool with ocean views" loading="lazy">
+    <figcaption>The curved infinity pool is one of the better-looking pools on the My Khe strip.</figcaption>
+  </figure>
+
   <div class="review-body">
 
-    <div class="review-summary">
-      <h3>At a Glance</h3>
-      <p style="margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8">Adults-focused five-star resort on My Khe Beach with strong pool infrastructure, direct beach access, and a quieter atmosphere than the Pullman. Excellent for couples.</p>
+        <aside class="review-quick-facts">
+      <div class="rqf-title">Quick Facts</div>
+      <div class="rqf-row"><span class="rqf-key">Location</span><span class="rqf-val">My Khe Beach</span></div>
+<div class="rqf-row"><span class="rqf-key">Stars</span><span class="rqf-val">4-star hotel</span></div>
+<div class="rqf-row"><span class="rqf-key">Price from</span><span class="rqf-val">$100 / night</span></div>
+<div class="rqf-row"><span class="rqf-key">Airport</span><span class="rqf-val">~15 min</span></div>
+<div class="rqf-row"><span class="rqf-key">Beach</span><span class="rqf-val">Direct access</span></div>
+<div class="rqf-row"><span class="rqf-key">To An Thuong</span><span class="rqf-val">~10 min Grab</span></div>
+
+      <a href="hotel-reviews.html" class="rqf-btn">Check Rates on Booking.com →</a>
+    </aside>
+
+    <h2>Location &amp; <em>Getting There</em></h2>
+    <p>My Khe Beach, 6km south of the city centre. Good positioning — An Thuong is a short Grab ride, the Han River restaurants are 15–20 minutes away. Airport takes around 15 minutes. The beach here gets busy on weekend mornings with local Vietnamese beachgoers, which is genuinely lively if you're into that energy and occasionally loud if you're not. By mid-morning the resort's own section settles down.</p>
+
+    <h2>The Rooms</h2>
+    <p>Contemporary design, clean and well-maintained. Standard rooms run 42–48sqm — not the biggest on the strip but well laid out with no wasted space. Upper-floor sea-facing rooms have good ocean views and the sunrise from the balcony is worth setting an early alarm for once. Blackout curtains work. Bathrooms are modern. The minibar is hotel-priced (buy beer from the 7-Eleven 400m north).</p>
+    <p>Rates from around $100–130/night make this one of the more accessible options for My Khe beachfront. The quality-to-price ratio is strong for what you're getting.</p>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc3w12000lyf8smp7A24_W_1200_700_R5.webp" alt="Meliá Danang Beach Resort room with sea view balcony" loading="lazy">
+    <figcaption>Upper-floor sea-facing rooms catch the sunrise over the ocean — an early alarm worth setting.</figcaption>
+  </figure>
+
+    <h2>Pool, Beach &amp; <em>Facilities</em></h2>
+    <p>The main pool is the visual centrepiece — a curved infinity design facing the ocean with actual room to move in it. A secondary pool for families provides overflow. Beach access is direct with lounger and umbrella service. The beach here is good for swimming in most months; seasonal current warnings go up from July, same as the rest of My Khe. YHI Spa operates competently with good Vietnamese massage specialists.</p>
+
+    <h2>Food &amp; <em>Drink</em></h2>
+    <p>El Olivo is the main restaurant and breakfast is a genuine strength — one of the better hotel breakfast spreads in the mid-tier Da Nang market. Good Vietnamese and Western options, solid coffee, attentive service. Dinner menus are competent but my honest recommendation is to use the An Thuong proximity properly: Nen, Luna Pub, and Madame Lan's are all 10 minutes away and more interesting than anything the hotel kitchen produces in the evenings.</p>
+
+    <div class="pull-quote">
+      <p>Consistently solid and often underrated on the My Khe strip. The pool, location, and service quality all deliver at above the price point. If the Sheraton or Marriott are out of budget, this is where the value lands.</p>
     </div>
 
-    <h2>Location &amp; <em>Setting</em></h2>
-    <p>Located in <strong>My Khe Beach</strong>, Da Nang. The hotel occupies one of Da Nang's most sought-after positions — My Khe Beach is consistently ranked among the city's top locations for accommodation due to its balance of beach access, resort facilities, and proximity to the city's dining and transport network.</p>
-    <p>Da Nang International Airport is approximately 10 minutes by taxi. For transport options, see our <a href="da-nang-transport-guide.html" style="color:var(--ocean);font-weight:500">Da Nang Transport Guide</a>.</p>
-
-    <h2>Rooms &amp; <em>Accommodation</em></h2>
-    <p>Rates start from <strong>$110/night</strong> in mid-season. The hotel offers a range of room categories from standard rooms to suites and villas depending on availability and booking period. We recommend booking the sea-view or premium category for the best experience.</p>
-    <p>Check current rates and availability on <a href="hotel-reviews.html" style="color:var(--ocean);font-weight:500">Booking.com</a> — live pricing reflects seasonal demand and is updated daily.</p>
-
-    <h2>Facilities &amp; <em>Amenities</em></h2>
-    <p>Melia Danang Beach Resort provides the facilities expected of a 5-star beach in Da Nang, including pool access, beach proximity (or direct beach access where applicable), dining options, and fitness facilities. Full amenity details are confirmed on the hotel's direct booking page.</p>
-
-    <div class="pros-cons">
+        <div class="pros-cons">
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">Strengths</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">The Good Stuff</h3>
         <ul class="pros">
-          <li>Strong location in My Khe Beach</li>
-          <li>Reliable service quality for category</li>
-          <li>Good beach or pool access</li>
-          <li>Competitive rates vs international peers</li>
+          <li>Infinity pool design is among the more attractive on My Khe — and it's a proper size</li>
+          <li>Warmer service atmosphere than the large resort properties</li>
+          <li>An Thuong dining proximity transforms evening options</li>
+          <li>YHI Spa delivers good treatment quality</li>
+          <li>Strong value for beachfront My Khe access</li>
         </ul>
       </div>
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Considerations</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Worth Knowing</h3>
         <ul class="cons">
-          <li>Taxi required for city restaurants</li>
-          <li>Book early for peak season (Jul–Aug)</li>
-          <li>Sea-view rooms command a premium</li>
+          <li>My Khe weekends get crowded — the local beach culture adds noise in the mornings</li>
+          <li>Rooms are slightly smaller than the five-star resort tier</li>
+          <li>In-house dinner dining doesn't particularly compete with the neighbourhood</li>
         </ul>
       </div>
     </div>
 
     <div class="review-cta">
       <div class="review-cta-text">
-        <strong>Check Current Rates</strong>
-        Live prices updated daily on Booking.com
+        <strong>Ready to Book?</strong>
+        Live rates on Booking.com — updated daily
       </div>
-      <a href="hotel-reviews.html">View on Booking.com →</a>
+      <a href="hotel-reviews.html">Check Availability →</a>
     </div>
 
-    <h2>Who It's <em>Best For</em></h2>
-    <p>Couples and honeymooners seeking luxury and seclusion. The hotel is particularly well-suited to travellers visiting Da Nang for 3–7 nights who want a base that provides genuine resort amenities without requiring constant off-resort excursions for dining or activities.</p>
-    <p>For a complete picture of Da Nang's hotel landscape and how this property compares, see our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:500">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:500">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
+    <h2>Who Should <em>Stay Here</em></h2>
+    <p>Mid-range travellers who want a proper beach hotel without resort-tier pricing. Couples who plan to mix beach time with city exploration. Good for stays of 3–5 nights.</p>
+    <p>For a full picture of Da Nang's hotel landscape, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
 
   </div>
 
-  
-<!-- ── RELATED HOTELS ─────────────────────────────────── -->
+
+  <!-- ── RELATED HOTELS ─────────────────────────────────── -->
 <section style="background:var(--sand,#F6F1E9);padding:2.5rem 0;margin-top:3rem">
   <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
     <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 1.25rem;font-weight:600">Related Hotels in Da Nang</p>

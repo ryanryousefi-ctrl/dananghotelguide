@@ -601,6 +601,151 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-cta-text{color:rgba(255,255,255,.75);font-size:.9rem}
     .review-cta-text strong{color:#fff;display:block;font-size:1rem;margin-bottom:.25rem}
     .review-cta a{display:inline-block;padding:.7rem 1.5rem;background:var(--coral);border-radius:100px;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none}
+
+    /* ── PHOTO HERO ─────────────────────────────────────────── */
+    .review-photo-hero{
+      position:relative;height:70vh;min-height:480px;max-height:700px;
+      overflow:hidden;display:flex;align-items:flex-end;
+    }
+    .review-photo-hero img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      object-position:center;
+    }
+    .review-photo-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(10,25,25,.85) 0%,rgba(10,25,25,.35) 45%,rgba(10,25,25,.1) 100%);
+    }
+    .review-photo-hero-content{
+      position:relative;z-index:2;
+      width:100%;max-width:860px;margin:0 auto;
+      padding:0 var(--gutter) 3rem;
+    }
+    .review-photo-eyebrow{
+      font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+      color:rgba(255,255,255,.55);margin-bottom:.8rem;
+      display:flex;align-items:center;gap:8px;
+    }
+    .review-photo-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral-light);}
+    .review-photo-hero h1{
+      font-family:var(--font-serif);
+      font-size:clamp(2rem,5vw,3.4rem);
+      color:#fff;line-height:1.08;letter-spacing:-.03em;
+      margin-bottom:.9rem;text-shadow:0 3px 18px rgba(0,0,0,.5);
+    }
+    .review-photo-hero h1 em{font-style:italic;color:var(--coral-light);}
+    .review-author-strip{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.15);
+      margin-top:.5rem;
+    }
+    .review-author-avatar{
+      width:38px;height:38px;border-radius:50%;
+      background:var(--ocean);border:2px solid rgba(255,255,255,.3);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0;
+    }
+    .review-author-info{flex:1;min-width:0;}
+    .review-author-name{font-size:.82rem;font-weight:700;color:#fff;}
+    .review-author-meta{font-size:.73rem;color:rgba(255,255,255,.45);}
+    .review-photo-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;}
+    .review-tag{
+      display:inline-block;padding:4px 12px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+      border-radius:100px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+    }
+
+    /* ── BLOG OPENING ────────────────────────────────────────── */
+    .blog-opening{
+      max-width:860px;margin:0 auto;
+      padding:3rem var(--gutter) 0;
+    }
+    .blog-opening-lede{
+      font-family:var(--font-serif);
+      font-size:clamp(1.15rem,2.2vw,1.4rem);
+      color:var(--ink);line-height:1.65;letter-spacing:-.01em;
+      margin-bottom:1.4rem;border-bottom:2px solid var(--sand-mid);
+      padding-bottom:1.4rem;
+    }
+    .blog-opening-body p{
+      font-size:.97rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.1rem;
+    }
+
+    /* ── INLINE PHOTOS ───────────────────────────────────────── */
+    .review-inline-photo{
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-inline-photo img{
+      width:100%;border-radius:var(--r-xl);
+      object-fit:cover;display:block;
+      box-shadow:0 8px 32px rgba(26,26,24,.14);
+    }
+    .review-inline-photo figcaption{
+      font-size:.74rem;color:var(--ink-muted);margin-top:.6rem;
+      font-style:italic;text-align:center;
+    }
+    .review-photo-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-photo-grid img{
+      width:100%;border-radius:var(--r-lg);object-fit:cover;
+      aspect-ratio:4/3;
+      box-shadow:0 4px 16px rgba(26,26,24,.1);
+    }
+    @media(max-width:600px){.review-photo-grid{grid-template-columns:1fr}}
+
+    /* ── PULL QUOTE ──────────────────────────────────────────── */
+    .pull-quote{
+      max-width:860px;margin:2.5rem auto;padding:1.75rem 2rem 1.75rem 2.5rem;
+      border-left:3px solid var(--ocean);background:var(--ocean-pale);
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote p{
+      font-family:var(--font-serif);font-size:1.15rem;
+      color:var(--ocean-deep);line-height:1.6;font-style:italic;margin:0;
+    }
+
+    /* ── QUICK FACTS FLOATING BOX ────────────────────────────── */
+    .review-quick-facts{
+      float:right;width:280px;margin:0 0 2rem 2.5rem;
+      background:var(--sand);border:1px solid var(--sand-dark);
+      border-radius:var(--r-xl);padding:1.4rem 1.6rem;
+      font-size:.83rem;
+    }
+    .rqf-title{font-size:.67rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--ink-muted);margin-bottom:1rem;
+      padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark);
+    }
+    .rqf-row{display:flex;justify-content:space-between;gap.75rem;
+      padding:.55rem 0;border-bottom:1px solid var(--sand-dark);font-size:.8rem;
+    }
+    .rqf-row:last-of-type{border-bottom:none}
+    .rqf-key{color:var(--ink-muted);}
+    .rqf-val{font-weight:700;color:var(--ink);text-align:right;}
+    .rqf-btn{
+      display:block;margin-top:1.1rem;padding:10px;
+      background:var(--ocean);color:#fff;text-align:center;
+      border-radius:var(--r-md);font-size:.8rem;font-weight:700;
+      transition:background .2s;
+    }
+    .rqf-btn:hover{background:var(--ocean-light);}
+    @media(max-width:680px){
+      .review-quick-facts{float:none;width:100%;margin:0 0 2rem;}
+    }
+
+    /* ── REVIEW BODY OVERRIDES ───────────────────────────────── */
+    .review-body{max-width:860px;margin:0 auto;padding:0 var(--gutter);}
+    .review-body p{color:var(--ink-soft);line-height:1.88;font-size:.97rem;margin-bottom:1.15rem}
+    .review-body h2{
+      font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);
+      margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid);
+      clear:both;
+    }
+    .review-body h2 em{font-style:italic;color:var(--ocean)}
+    .review-body strong{color:var(--ink);font-weight:700}
+    .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+    .review-body a:hover{border-color:var(--ocean)}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"LodgingBusiness","name":"Grand Mercure Da Nang","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"}},"author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"url":"https://dananghotelguide.com/review-grand-mercure-da-nang.html","datePublished":"2026-01-01","dateModified":"2026-03-15"}
@@ -682,74 +827,113 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 </div>
 
+
 <main>
-  <!-- Review hero -->
-  <section class="review-hero">
-    <p class="review-eyebrow">City Hotel · Han River · Da Nang</p>
-    <h1>Grand Mercure Da Nang <em>Review</em></h1>
-    <div class="review-meta">
-      <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-      <span>·</span>
-      <span>📅 Last updated: <strong>March 2026</strong></span>
-      <span>·</span>
-      <span>4 stars · From <strong>$80/night</strong></span>
+  <!-- Photo Hero -->
+  <section class="review-photo-hero">
+    <img src="https://ak-d.tripcdn.com/images/1mc5r12000lyf8wou4C21_W_1600_900_R5.webp" alt="Grand Mercure Danang with panoramic ocean and Han River views" loading="eager">
+    <div class="review-photo-hero-overlay"></div>
+    <div class="review-photo-hero-content">
+      <p class="review-photo-eyebrow">4-Star Hotel · Han River / Coastal · Da Nang</p>
+      <h1>Grand Mercure <em>Da Nang</em> <em>Review</em></h1>
+      <div class="review-author-strip">
+        <div class="review-author-avatar">RY</div>
+        <div class="review-author-info">
+          <div class="review-author-name">Ryan Yousefi</div>
+          <div class="review-author-meta">Da Nang Hotel Guide · Last updated March 2026 · ★★★★ · From $95/night</div>
+        </div>
+      </div>
+      <div class="review-photo-tags"><span class="review-tag">Accor</span><span class="review-tag">Large Rooms</span><span class="review-tag">Ocean Views</span><span class="review-tag">Underrated</span></div>
     </div>
   </section>
 
+  <!-- Blog opening -->
+  <section class="blog-opening">
+    <p class="blog-opening-lede">The Grand Mercure is the Da Nang hotel that regular visitors tell first-timers about — 'you probably haven't heard of it but the rooms are enormous and the views are better than the Hilton.'</p>
+    <div class="blog-opening-body">
+      <p>I'm going to make the room size argument directly because it's the Grand Mercure's strongest card: standard categories here run 55–65sqm. That's not just 'large for Da Nang' — it's large by any international hotel standard at a four-star rate. You get a living area, a proper desk, a real soaking tub, and a balcony that has room for a full breakfast without squeezing.</p>
+    <p>The location is a slightly unusual in-between position — the northern edge of the Han River area, close enough to the My Khe coastal road that beach access is within walking or short Grab distance (neither pure city-centre nor pure beach). For visitors who want to split time between city exploration and beach days without committing fully to either, it's a genuinely useful compromise.</p>
+    <p>And the views. Ocean-facing rooms looking east toward My Khe at sunrise, or river-facing rooms looking west toward the Han River at night — either direction is impressive from the upper floors. At $95/night, the view-to-rate ratio is hard to beat in this city.</p>
+    </div>
+  </section>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc5r12000lyf8wou4C21_W_1200_700_R5.webp" alt="Rooftop pool at Grand Mercure Danang with city panorama" loading="lazy">
+    <figcaption>Rooms at the Grand Mercure are genuinely large — 55–65sqm makes a real difference on longer stays.</figcaption>
+  </figure>
+
   <div class="review-body">
 
-    <div class="review-summary">
-      <h3>At a Glance</h3>
-      <p style="margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8">Accor's best city hotel in Da Nang with a strong location near the Han River and solid Accor Plus benefits. Better for business travellers than leisure.</p>
+        <aside class="review-quick-facts">
+      <div class="rqf-title">Quick Facts</div>
+      <div class="rqf-row"><span class="rqf-key">Location</span><span class="rqf-val">North Han River / My Khe area</span></div>
+<div class="rqf-row"><span class="rqf-key">Stars</span><span class="rqf-val">4-star</span></div>
+<div class="rqf-row"><span class="rqf-key">Price from</span><span class="rqf-val">$95 / night</span></div>
+<div class="rqf-row"><span class="rqf-key">Airport</span><span class="rqf-val">~18 min</span></div>
+<div class="rqf-row"><span class="rqf-key">Beach</span><span class="rqf-val">~1.5km walk / Grab</span></div>
+<div class="rqf-row"><span class="rqf-key">Loyalty</span><span class="rqf-val">Accor ALL</span></div>
+
+      <a href="hotel-reviews.html" class="rqf-btn">Check Rates on Booking.com →</a>
+    </aside>
+
+    <h2>Location &amp; <em>Getting There</em></h2>
+    <p>Northern Han River district, close to the My Khe coastal road. This gives the Grand Mercure an unusual middle-ground position — Han River views on one side, beach 1.5km away on the other. Not as centrally urban as the Novotel for pure city access, not as beach-immersive as the My Khe strip proper. For visitors who want both worlds, it works. For visitors who want one world specifically, there are better-positioned options.</p>
+
+    <h2>The Rooms</h2>
+    <p>This is the headline: rooms are large. Standard categories at 55–65sqm feel genuinely generous. The ocean-view rooms facing east toward My Khe are among the best hotel views in Da Nang at this price point. River-view rooms looking west are also strong. Contemporary design, quality furnishings, excellent beds. Accor ALL benefits apply. Rates from around $90–130/night in shoulder season.</p>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc5r12000lyf8wou4C21_W_1200_700_R5.webp" alt="Large room interior at Grand Mercure Danang with ocean view" loading="lazy">
+    <figcaption>Rooftop pool with ocean and city views — one of the better hotel rooftop experiences in Da Nang.</figcaption>
+  </figure>
+
+    <h2>Pool, Beach &amp; <em>Facilities</em></h2>
+    <p>Rooftop pool with panoramic views — one of the better city-hotel pool experiences in Da Nang. Gym is well-equipped. Spa with solid therapist quality. Meeting rooms for business events. Beach is 15 minutes on foot or 5 minutes by Grab — more accessible than pure city-centre properties, more effort than dedicated beach hotels.</p>
+
+    <h2>Food &amp; <em>Drink</em></h2>
+    <p>Main restaurant handles breakfast and dinner with solid Vietnamese options and a competent Western spread. Rooftop bar for evening drinks — worth using for the view alone. The proximity to My Khe beach restaurants and An Thuong provides good off-site dining options within easy Grab distance.</p>
+
+    <div class="pull-quote">
+      <p>An underrated property with standout room sizes and strong view quality. Often the best Accor option in Da Nang for the combination of room quality and location flexibility. Compare with the Hilton if you want pure city-centre, or the Sheraton if you want pure beachfront.</p>
     </div>
 
-    <h2>Location &amp; <em>Setting</em></h2>
-    <p>Located in <strong>Han River</strong>, Da Nang. The hotel occupies one of Da Nang's most sought-after positions — Han River is consistently ranked among the city's top locations for accommodation due to its balance of beach access, resort facilities, and proximity to the city's dining and transport network.</p>
-    <p>Da Nang International Airport is approximately 10 minutes by taxi. For transport options, see our <a href="da-nang-transport-guide.html" style="color:var(--ocean);font-weight:500">Da Nang Transport Guide</a>.</p>
-
-    <h2>Rooms &amp; <em>Accommodation</em></h2>
-    <p>Rates start from <strong>$80/night</strong> in mid-season. The hotel offers a range of room categories from standard rooms to suites and villas depending on availability and booking period. We recommend booking the sea-view or premium category for the best experience.</p>
-    <p>Check current rates and availability on <a href="hotel-reviews.html" style="color:var(--ocean);font-weight:500">Booking.com</a> — live pricing reflects seasonal demand and is updated daily.</p>
-
-    <h2>Facilities &amp; <em>Amenities</em></h2>
-    <p>Grand Mercure Da Nang provides the facilities expected of a city hotel in Da Nang, including pool access, beach proximity (or direct beach access where applicable), dining options, and fitness facilities. Full amenity details are confirmed on the hotel's direct booking page.</p>
-
-    <div class="pros-cons">
+        <div class="pros-cons">
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">Strengths</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">The Good Stuff</h3>
         <ul class="pros">
-          <li>Strong location in Han River</li>
-          <li>Reliable service quality for category</li>
-          <li>Good beach or pool access</li>
-          <li>Competitive rates vs international peers</li>
+          <li>Room sizes are exceptional for the price — 55–65sqm standard rooms are genuinely large</li>
+          <li>Views from upper floors (ocean and river options) are impressive</li>
+          <li>Better beach access than pure Han River properties — 1.5km walk or short Grab</li>
+          <li>Accor ALL benefits applied consistently</li>
+          <li>Rooftop pool with strong panoramic views</li>
         </ul>
       </div>
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Considerations</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Worth Knowing</h3>
         <ul class="cons">
-          <li>Taxi required for city restaurants</li>
-          <li>Book early for peak season (Jul–Aug)</li>
-          <li>Sea-view rooms command a premium</li>
+          <li>Location is between city and beach — neither fully one nor the other</li>
+          <li>Less central than the Novotel for pure city access</li>
+          <li>Smaller pool than beach resort properties</li>
         </ul>
       </div>
     </div>
 
     <div class="review-cta">
       <div class="review-cta-text">
-        <strong>Check Current Rates</strong>
-        Live prices updated daily on Booking.com
+        <strong>Ready to Book?</strong>
+        Live rates on Booking.com — updated daily
       </div>
-      <a href="hotel-reviews.html">View on Booking.com →</a>
+      <a href="hotel-reviews.html">Check Availability →</a>
     </div>
 
-    <h2>Who It's <em>Best For</em></h2>
-    <p>Business and leisure travellers in the city centre. The hotel is particularly well-suited to travellers visiting Da Nang for 3–7 nights who want a base that provides genuine resort amenities without requiring constant off-resort excursions for dining or activities.</p>
-    <p>For a complete picture of Da Nang's hotel landscape and how this property compares, see our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:500">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:500">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
+    <h2>Who Should <em>Stay Here</em></h2>
+    <p>Accor loyalty members wanting large rooms at reasonable rates. Visitors who want a middle-ground location that works for both city days and beach days. Anyone who genuinely needs 60sqm of room to feel comfortable.</p>
+    <p>For a full picture of Da Nang's hotel landscape, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
 
   </div>
 
-  
-<!-- ── RELATED HOTELS ─────────────────────────────────── -->
+
+  <!-- ── RELATED HOTELS ─────────────────────────────────── -->
 <section style="background:var(--sand,#F6F1E9);padding:2.5rem 0;margin-top:3rem">
   <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
     <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 1.25rem;font-weight:600">Related Hotels in Da Nang</p>

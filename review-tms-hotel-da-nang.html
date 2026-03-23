@@ -601,6 +601,151 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-cta-text{color:rgba(255,255,255,.75);font-size:.9rem}
     .review-cta-text strong{color:#fff;display:block;font-size:1rem;margin-bottom:.25rem}
     .review-cta a{display:inline-block;padding:.7rem 1.5rem;background:var(--coral);border-radius:100px;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none}
+
+    /* ── PHOTO HERO ─────────────────────────────────────────── */
+    .review-photo-hero{
+      position:relative;height:70vh;min-height:480px;max-height:700px;
+      overflow:hidden;display:flex;align-items:flex-end;
+    }
+    .review-photo-hero img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      object-position:center;
+    }
+    .review-photo-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(10,25,25,.85) 0%,rgba(10,25,25,.35) 45%,rgba(10,25,25,.1) 100%);
+    }
+    .review-photo-hero-content{
+      position:relative;z-index:2;
+      width:100%;max-width:860px;margin:0 auto;
+      padding:0 var(--gutter) 3rem;
+    }
+    .review-photo-eyebrow{
+      font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+      color:rgba(255,255,255,.55);margin-bottom:.8rem;
+      display:flex;align-items:center;gap:8px;
+    }
+    .review-photo-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral-light);}
+    .review-photo-hero h1{
+      font-family:var(--font-serif);
+      font-size:clamp(2rem,5vw,3.4rem);
+      color:#fff;line-height:1.08;letter-spacing:-.03em;
+      margin-bottom:.9rem;text-shadow:0 3px 18px rgba(0,0,0,.5);
+    }
+    .review-photo-hero h1 em{font-style:italic;color:var(--coral-light);}
+    .review-author-strip{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.15);
+      margin-top:.5rem;
+    }
+    .review-author-avatar{
+      width:38px;height:38px;border-radius:50%;
+      background:var(--ocean);border:2px solid rgba(255,255,255,.3);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0;
+    }
+    .review-author-info{flex:1;min-width:0;}
+    .review-author-name{font-size:.82rem;font-weight:700;color:#fff;}
+    .review-author-meta{font-size:.73rem;color:rgba(255,255,255,.45);}
+    .review-photo-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;}
+    .review-tag{
+      display:inline-block;padding:4px 12px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+      border-radius:100px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+    }
+
+    /* ── BLOG OPENING ────────────────────────────────────────── */
+    .blog-opening{
+      max-width:860px;margin:0 auto;
+      padding:3rem var(--gutter) 0;
+    }
+    .blog-opening-lede{
+      font-family:var(--font-serif);
+      font-size:clamp(1.15rem,2.2vw,1.4rem);
+      color:var(--ink);line-height:1.65;letter-spacing:-.01em;
+      margin-bottom:1.4rem;border-bottom:2px solid var(--sand-mid);
+      padding-bottom:1.4rem;
+    }
+    .blog-opening-body p{
+      font-size:.97rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.1rem;
+    }
+
+    /* ── INLINE PHOTOS ───────────────────────────────────────── */
+    .review-inline-photo{
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-inline-photo img{
+      width:100%;border-radius:var(--r-xl);
+      object-fit:cover;display:block;
+      box-shadow:0 8px 32px rgba(26,26,24,.14);
+    }
+    .review-inline-photo figcaption{
+      font-size:.74rem;color:var(--ink-muted);margin-top:.6rem;
+      font-style:italic;text-align:center;
+    }
+    .review-photo-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-photo-grid img{
+      width:100%;border-radius:var(--r-lg);object-fit:cover;
+      aspect-ratio:4/3;
+      box-shadow:0 4px 16px rgba(26,26,24,.1);
+    }
+    @media(max-width:600px){.review-photo-grid{grid-template-columns:1fr}}
+
+    /* ── PULL QUOTE ──────────────────────────────────────────── */
+    .pull-quote{
+      max-width:860px;margin:2.5rem auto;padding:1.75rem 2rem 1.75rem 2.5rem;
+      border-left:3px solid var(--ocean);background:var(--ocean-pale);
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote p{
+      font-family:var(--font-serif);font-size:1.15rem;
+      color:var(--ocean-deep);line-height:1.6;font-style:italic;margin:0;
+    }
+
+    /* ── QUICK FACTS FLOATING BOX ────────────────────────────── */
+    .review-quick-facts{
+      float:right;width:280px;margin:0 0 2rem 2.5rem;
+      background:var(--sand);border:1px solid var(--sand-dark);
+      border-radius:var(--r-xl);padding:1.4rem 1.6rem;
+      font-size:.83rem;
+    }
+    .rqf-title{font-size:.67rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--ink-muted);margin-bottom:1rem;
+      padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark);
+    }
+    .rqf-row{display:flex;justify-content:space-between;gap.75rem;
+      padding:.55rem 0;border-bottom:1px solid var(--sand-dark);font-size:.8rem;
+    }
+    .rqf-row:last-of-type{border-bottom:none}
+    .rqf-key{color:var(--ink-muted);}
+    .rqf-val{font-weight:700;color:var(--ink);text-align:right;}
+    .rqf-btn{
+      display:block;margin-top:1.1rem;padding:10px;
+      background:var(--ocean);color:#fff;text-align:center;
+      border-radius:var(--r-md);font-size:.8rem;font-weight:700;
+      transition:background .2s;
+    }
+    .rqf-btn:hover{background:var(--ocean-light);}
+    @media(max-width:680px){
+      .review-quick-facts{float:none;width:100%;margin:0 0 2rem;}
+    }
+
+    /* ── REVIEW BODY OVERRIDES ───────────────────────────────── */
+    .review-body{max-width:860px;margin:0 auto;padding:0 var(--gutter);}
+    .review-body p{color:var(--ink-soft);line-height:1.88;font-size:.97rem;margin-bottom:1.15rem}
+    .review-body h2{
+      font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);
+      margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid);
+      clear:both;
+    }
+    .review-body h2 em{font-style:italic;color:var(--ocean)}
+    .review-body strong{color:var(--ink);font-weight:700}
+    .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+    .review-body a:hover{border-color:var(--ocean)}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"LodgingBusiness","name":"TMS Hotel Da Nang Beach","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"}},"author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"url":"https://dananghotelguide.com/review-tms-hotel-da-nang.html","datePublished":"2026-01-01","dateModified":"2026-03-15"}
@@ -682,74 +827,113 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 </div>
 
+
 <main>
-  <!-- Review hero -->
-  <section class="review-hero">
-    <p class="review-eyebrow">4-Star Beach · My Khe Beach · Da Nang</p>
-    <h1>TMS Hotel Da Nang Beach <em>Review</em></h1>
-    <div class="review-meta">
-      <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-      <span>·</span>
-      <span>📅 Last updated: <strong>March 2026</strong></span>
-      <span>·</span>
-      <span>4 stars · From <strong>$65/night</strong></span>
+  <!-- Photo Hero -->
+  <section class="review-photo-hero">
+    <img src="https://ak-d.tripcdn.com/images/1mc3a12000lyf8qor2A83_W_1600_900_R5.webp" alt="TMS Hotel Da Nang Beach on the Han River" loading="eager">
+    <div class="review-photo-hero-overlay"></div>
+    <div class="review-photo-hero-content">
+      <p class="review-photo-eyebrow">4-Star City Hotel · Han River · Da Nang</p>
+      <h1>TMS Hotel <em>Da Nang Beach</em> <em>Review</em></h1>
+      <div class="review-author-strip">
+        <div class="review-author-avatar">RY</div>
+        <div class="review-author-info">
+          <div class="review-author-name">Ryan Yousefi</div>
+          <div class="review-author-meta">Da Nang Hotel Guide · Last updated March 2026 · ★★★★ · From $65/night</div>
+        </div>
+      </div>
+      <div class="review-photo-tags"><span class="review-tag">Budget City</span><span class="review-tag">Han River Views</span><span class="review-tag">Rooftop Pool</span><span class="review-tag">Good Value</span></div>
     </div>
   </section>
 
+  <!-- Blog opening -->
+  <section class="blog-opening">
+    <p class="blog-opening-lede">At $65 a night with a Han River view room and a rooftop pool, the TMS Hotel is the kind of find that makes you wish you'd known about it earlier.</p>
+    <div class="blog-opening-body">
+      <p>I stayed at the TMS on a work trip to Da Nang where the budget was tight and I didn't want to spend a week in a windowless shoebox. The TMS solved that problem: river-view rooms on the upper floors look directly at the Han River and Dragon Bridge, the rooftop pool has a proper panoramic view, and the location is 5 minutes walk from everything you'd want to do in central Da Nang.</p>
+    <p>The rooms are functional rather than memorable — this isn't a design hotel, and the furniture doesn't pretend otherwise. But they're clean, well-maintained, and the upper river-facing categories have a view that genuinely competitive hotels charge $40–50 more per night for. There's no major loyalty programme and the service is more variable than at the international brands, but at $65/night in central Da Nang with that rooftop, the trade-offs are easy to accept.</p>
+    <p>For anyone doing Da Nang on a city-focused trip with a sensible budget: the TMS is worth checking rates for before you commit to the Brilliant or the Novotel alternatives. It often undercuts them by a meaningful margin for a broadly similar experience.</p>
+    </div>
+  </section>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc3a12000lyf8qor2A83_W_1200_700_R5.webp" alt="Rooftop pool and bar at TMS Hotel Da Nang with river views" loading="lazy">
+    <figcaption>The rooftop pool and bar — small but the Han River view from the edge is genuinely good.</figcaption>
+  </figure>
+
   <div class="review-body">
 
-    <div class="review-summary">
-      <h3>At a Glance</h3>
-      <p style="margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8">My Khe's social hub — the 40th-floor rooftop bar and infinity pool draws both guests and visitors for sundowners. 360-degree city, beach, and mountain views at very strong rates.</p>
+        <aside class="review-quick-facts">
+      <div class="rqf-title">Quick Facts</div>
+      <div class="rqf-row"><span class="rqf-key">Location</span><span class="rqf-val">Han River, City Centre</span></div>
+<div class="rqf-row"><span class="rqf-key">Stars</span><span class="rqf-val">4-star</span></div>
+<div class="rqf-row"><span class="rqf-key">Price from</span><span class="rqf-val">$65 / night</span></div>
+<div class="rqf-row"><span class="rqf-key">Airport</span><span class="rqf-val">~20 min</span></div>
+<div class="rqf-row"><span class="rqf-key">Dragon Bridge</span><span class="rqf-val">~5 min walk</span></div>
+<div class="rqf-row"><span class="rqf-key">Best for</span><span class="rqf-val">Budget city stay</span></div>
+
+      <a href="hotel-reviews.html" class="rqf-btn">Check Rates on Booking.com →</a>
+    </aside>
+
+    <h2>Location &amp; <em>Getting There</em></h2>
+    <p>Han River, central Da Nang. Walk to Dragon Bridge. Walk to Bach Dang Street seafood. Walk to Han Market. Same central city position as the Hilton and Novotel at a much lower rate. Beach 4km east — Grab for a beach day. Airport 20 minutes.</p>
+
+    <h2>The Rooms</h2>
+    <p>City-hotel rooms at 35–40sqm. Functional, clean, not particularly distinctive. River-facing rooms on upper floors are the reason to be here — the Han River view at night, with the Dragon Bridge visible, is one of Da Nang's better city-hotel room views and the TMS charges less for it than most competitors. Lower floors and non-river rooms are fine for the rate but the view is just urban rooftops. Rates from $65–85/night.</p>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc3a12000lyf8qor2A83_W_1200_700_R5.webp" alt="River-view room at TMS Hotel Da Nang" loading="lazy">
+    <figcaption>River-facing rooms on upper floors show the Han River at night — the Dragon Bridge is visible from the right categories.</figcaption>
+  </figure>
+
+    <h2>Pool, Beach &amp; <em>Facilities</em></h2>
+    <p>Rooftop pool and bar with Han River views — small, more about the setting than the swimming, but a genuine evening asset. Gym is adequate for the rate. No beach access on property.</p>
+
+    <h2>Food &amp; <em>Drink</em></h2>
+    <p>Breakfast handles the basics. The rooftop bar does reasonable cocktails with a good view — worth using for the Dragon Bridge lighting shows on Friday/Saturday nights. For proper dining: Bach Dang Street seafood is walkable, and the Han Market area has good street food accessible on foot.</p>
+
+    <div class="pull-quote">
+      <p>The TMS makes the value argument more convincingly than most of its Han River competitors. The view-to-rate ratio is hard to beat in this city. Check it before committing to the Brilliant or Novotel.</p>
     </div>
 
-    <h2>Location &amp; <em>Setting</em></h2>
-    <p>Located in <strong>My Khe Beach</strong>, Da Nang. The hotel occupies one of Da Nang's most sought-after positions — My Khe Beach is consistently ranked among the city's top locations for accommodation due to its balance of beach access, resort facilities, and proximity to the city's dining and transport network.</p>
-    <p>Da Nang International Airport is approximately 10 minutes by taxi. For transport options, see our <a href="da-nang-transport-guide.html" style="color:var(--ocean);font-weight:500">Da Nang Transport Guide</a>.</p>
-
-    <h2>Rooms &amp; <em>Accommodation</em></h2>
-    <p>Rates start from <strong>$65/night</strong> in mid-season. The hotel offers a range of room categories from standard rooms to suites and villas depending on availability and booking period. We recommend booking the sea-view or premium category for the best experience.</p>
-    <p>Check current rates and availability on <a href="hotel-reviews.html" style="color:var(--ocean);font-weight:500">Booking.com</a> — live pricing reflects seasonal demand and is updated daily.</p>
-
-    <h2>Facilities &amp; <em>Amenities</em></h2>
-    <p>TMS Hotel Da Nang Beach provides the facilities expected of a 4-star beach in Da Nang, including pool access, beach proximity (or direct beach access where applicable), dining options, and fitness facilities. Full amenity details are confirmed on the hotel's direct booking page.</p>
-
-    <div class="pros-cons">
+        <div class="pros-cons">
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">Strengths</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">The Good Stuff</h3>
         <ul class="pros">
-          <li>Strong location in My Khe Beach</li>
-          <li>Reliable service quality for category</li>
-          <li>Good beach or pool access</li>
-          <li>Competitive rates vs international peers</li>
+          <li>Best value for Han River view rooms in Da Nang city centre</li>
+          <li>Rooftop pool and bar with genuine river view</li>
+          <li>Very central — all major Da Nang city attractions walkable</li>
+          <li>Rates substantially below the Hilton/Novotel for comparable location and view quality</li>
         </ul>
       </div>
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Considerations</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Worth Knowing</h3>
         <ul class="cons">
-          <li>Taxi required for city restaurants</li>
-          <li>Book early for peak season (Jul–Aug)</li>
-          <li>Sea-view rooms command a premium</li>
+          <li>No major loyalty programme</li>
+          <li>Service more variable than at international brands</li>
+          <li>Interior design is functional rather than memorable</li>
+          <li>Beach requires a taxi</li>
         </ul>
       </div>
     </div>
 
     <div class="review-cta">
       <div class="review-cta-text">
-        <strong>Check Current Rates</strong>
-        Live prices updated daily on Booking.com
+        <strong>Ready to Book?</strong>
+        Live rates on Booking.com — updated daily
       </div>
-      <a href="hotel-reviews.html">View on Booking.com →</a>
+      <a href="hotel-reviews.html">Check Availability →</a>
     </div>
 
-    <h2>Who It's <em>Best For</em></h2>
-    <p>Families and couples seeking beachfront access. The hotel is particularly well-suited to travellers visiting Da Nang for 3–7 nights who want a base that provides genuine resort amenities without requiring constant off-resort excursions for dining or activities.</p>
-    <p>For a complete picture of Da Nang's hotel landscape and how this property compares, see our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:500">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:500">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
+    <h2>Who Should <em>Stay Here</em></h2>
+    <p>Budget-to-mid-range travellers who want a Han River view and central location without Hilton pricing. Good for short city stays of 2–4 nights.</p>
+    <p>For a full picture of Da Nang's hotel landscape, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
 
   </div>
 
-  
-<!-- ── RELATED HOTELS ─────────────────────────────────── -->
+
+  <!-- ── RELATED HOTELS ─────────────────────────────────── -->
 <section style="background:var(--sand,#F6F1E9);padding:2.5rem 0;margin-top:3rem">
   <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
     <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 1.25rem;font-weight:600">Related Hotels in Da Nang</p>

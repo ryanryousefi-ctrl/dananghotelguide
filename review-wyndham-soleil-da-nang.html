@@ -601,6 +601,151 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-cta-text{color:rgba(255,255,255,.75);font-size:.9rem}
     .review-cta-text strong{color:#fff;display:block;font-size:1rem;margin-bottom:.25rem}
     .review-cta a{display:inline-block;padding:.7rem 1.5rem;background:var(--coral);border-radius:100px;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none}
+
+    /* ── PHOTO HERO ─────────────────────────────────────────── */
+    .review-photo-hero{
+      position:relative;height:70vh;min-height:480px;max-height:700px;
+      overflow:hidden;display:flex;align-items:flex-end;
+    }
+    .review-photo-hero img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      object-position:center;
+    }
+    .review-photo-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(10,25,25,.85) 0%,rgba(10,25,25,.35) 45%,rgba(10,25,25,.1) 100%);
+    }
+    .review-photo-hero-content{
+      position:relative;z-index:2;
+      width:100%;max-width:860px;margin:0 auto;
+      padding:0 var(--gutter) 3rem;
+    }
+    .review-photo-eyebrow{
+      font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+      color:rgba(255,255,255,.55);margin-bottom:.8rem;
+      display:flex;align-items:center;gap:8px;
+    }
+    .review-photo-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral-light);}
+    .review-photo-hero h1{
+      font-family:var(--font-serif);
+      font-size:clamp(2rem,5vw,3.4rem);
+      color:#fff;line-height:1.08;letter-spacing:-.03em;
+      margin-bottom:.9rem;text-shadow:0 3px 18px rgba(0,0,0,.5);
+    }
+    .review-photo-hero h1 em{font-style:italic;color:var(--coral-light);}
+    .review-author-strip{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.15);
+      margin-top:.5rem;
+    }
+    .review-author-avatar{
+      width:38px;height:38px;border-radius:50%;
+      background:var(--ocean);border:2px solid rgba(255,255,255,.3);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0;
+    }
+    .review-author-info{flex:1;min-width:0;}
+    .review-author-name{font-size:.82rem;font-weight:700;color:#fff;}
+    .review-author-meta{font-size:.73rem;color:rgba(255,255,255,.45);}
+    .review-photo-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;}
+    .review-tag{
+      display:inline-block;padding:4px 12px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+      border-radius:100px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+    }
+
+    /* ── BLOG OPENING ────────────────────────────────────────── */
+    .blog-opening{
+      max-width:860px;margin:0 auto;
+      padding:3rem var(--gutter) 0;
+    }
+    .blog-opening-lede{
+      font-family:var(--font-serif);
+      font-size:clamp(1.15rem,2.2vw,1.4rem);
+      color:var(--ink);line-height:1.65;letter-spacing:-.01em;
+      margin-bottom:1.4rem;border-bottom:2px solid var(--sand-mid);
+      padding-bottom:1.4rem;
+    }
+    .blog-opening-body p{
+      font-size:.97rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.1rem;
+    }
+
+    /* ── INLINE PHOTOS ───────────────────────────────────────── */
+    .review-inline-photo{
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-inline-photo img{
+      width:100%;border-radius:var(--r-xl);
+      object-fit:cover;display:block;
+      box-shadow:0 8px 32px rgba(26,26,24,.14);
+    }
+    .review-inline-photo figcaption{
+      font-size:.74rem;color:var(--ink-muted);margin-top:.6rem;
+      font-style:italic;text-align:center;
+    }
+    .review-photo-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-photo-grid img{
+      width:100%;border-radius:var(--r-lg);object-fit:cover;
+      aspect-ratio:4/3;
+      box-shadow:0 4px 16px rgba(26,26,24,.1);
+    }
+    @media(max-width:600px){.review-photo-grid{grid-template-columns:1fr}}
+
+    /* ── PULL QUOTE ──────────────────────────────────────────── */
+    .pull-quote{
+      max-width:860px;margin:2.5rem auto;padding:1.75rem 2rem 1.75rem 2.5rem;
+      border-left:3px solid var(--ocean);background:var(--ocean-pale);
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote p{
+      font-family:var(--font-serif);font-size:1.15rem;
+      color:var(--ocean-deep);line-height:1.6;font-style:italic;margin:0;
+    }
+
+    /* ── QUICK FACTS FLOATING BOX ────────────────────────────── */
+    .review-quick-facts{
+      float:right;width:280px;margin:0 0 2rem 2.5rem;
+      background:var(--sand);border:1px solid var(--sand-dark);
+      border-radius:var(--r-xl);padding:1.4rem 1.6rem;
+      font-size:.83rem;
+    }
+    .rqf-title{font-size:.67rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--ink-muted);margin-bottom:1rem;
+      padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark);
+    }
+    .rqf-row{display:flex;justify-content:space-between;gap.75rem;
+      padding:.55rem 0;border-bottom:1px solid var(--sand-dark);font-size:.8rem;
+    }
+    .rqf-row:last-of-type{border-bottom:none}
+    .rqf-key{color:var(--ink-muted);}
+    .rqf-val{font-weight:700;color:var(--ink);text-align:right;}
+    .rqf-btn{
+      display:block;margin-top:1.1rem;padding:10px;
+      background:var(--ocean);color:#fff;text-align:center;
+      border-radius:var(--r-md);font-size:.8rem;font-weight:700;
+      transition:background .2s;
+    }
+    .rqf-btn:hover{background:var(--ocean-light);}
+    @media(max-width:680px){
+      .review-quick-facts{float:none;width:100%;margin:0 0 2rem;}
+    }
+
+    /* ── REVIEW BODY OVERRIDES ───────────────────────────────── */
+    .review-body{max-width:860px;margin:0 auto;padding:0 var(--gutter);}
+    .review-body p{color:var(--ink-soft);line-height:1.88;font-size:.97rem;margin-bottom:1.15rem}
+    .review-body h2{
+      font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);
+      margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid);
+      clear:both;
+    }
+    .review-body h2 em{font-style:italic;color:var(--ocean)}
+    .review-body strong{color:var(--ink);font-weight:700}
+    .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+    .review-body a:hover{border-color:var(--ocean)}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"LodgingBusiness","name":"Wyndham Soleil Danang","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"}},"author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"url":"https://dananghotelguide.com/review-wyndham-soleil-da-nang.html","datePublished":"2026-01-01","dateModified":"2026-03-15"}
@@ -682,74 +827,113 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 </div>
 
+
 <main>
-  <!-- Review hero -->
-  <section class="review-hero">
-    <p class="review-eyebrow">4-Star Beach · My Khe Beach · Da Nang</p>
-    <h1>Wyndham Soleil Danang <em>Review</em></h1>
-    <div class="review-meta">
-      <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-      <span>·</span>
-      <span>📅 Last updated: <strong>March 2026</strong></span>
-      <span>·</span>
-      <span>4 stars · From <strong>$80/night</strong></span>
+  <!-- Photo Hero -->
+  <section class="review-photo-hero">
+    <img src="https://ak-d.tripcdn.com/images/1mc4c12000lyf8v2d2B95_W_1600_900_R5.webp" alt="Wyndham Soleil Da Nang condo-hotel on My Khe Beach" loading="eager">
+    <div class="review-photo-hero-overlay"></div>
+    <div class="review-photo-hero-content">
+      <p class="review-photo-eyebrow">4-Star Condo Hotel · My Khe Beach · Da Nang</p>
+      <h1>Wyndham Soleil <em>Da Nang</em> <em>Review</em></h1>
+      <div class="review-author-strip">
+        <div class="review-author-avatar">RY</div>
+        <div class="review-author-info">
+          <div class="review-author-name">Ryan Yousefi</div>
+          <div class="review-author-meta">Da Nang Hotel Guide · Last updated March 2026 · ★★★★ · From $110/night</div>
+        </div>
+      </div>
+      <div class="review-photo-tags"><span class="review-tag">Condo Hotel</span><span class="review-tag">Apartment Format</span><span class="review-tag">Longer Stays</span><span class="review-tag">Kitchen Access</span></div>
     </div>
   </section>
 
+  <!-- Blog opening -->
+  <section class="blog-opening">
+    <p class="blog-opening-lede">The Wyndham Soleil is technically a hotel, but staying here feels more like renting a contemporary Da Nang apartment that happens to have a rooftop pool and someone to clean it daily.</p>
+    <div class="blog-opening-body">
+      <p>A week into a Da Nang stay, the hotel room feeling starts to compress on me. The same 30sqm of carpet, the minibar I'm not using, the breakfast window that closes at 10am. The Wyndham Soleil solves this problem: the units are 60–80sqm apartments with a kitchen, a living room, a laundry, and a balcony. It's residential living with hotel services layered over it.</p>
+    <p>The condo-hotel format is worth understanding before you book: the units are privately owned by individual investors and managed under the Wyndham flag. That means the overall hotel services (front desk, pool, cleaning) are managed to Wyndham standards, but the individual unit fit-outs vary by owner. Some have better furnishings than others. Checking recent guest reviews for the specific unit type you're booking is worth doing — more so than at a purpose-built hotel where every room of the same category is identical.</p>
+    <p>For longer stays — five nights or more — the Wyndham Soleil makes a compelling case. Cook breakfast in your own kitchen, have coffee on the balcony with the beach visible, stock the fridge from the market down the road. At $110–150/night for what's functionally a furnished apartment with My Khe beach access and a rooftop pool, it's solid value for the right trip profile.</p>
+    </div>
+  </section>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc4c12000lyf8v2d2B95_W_1200_700_R5.webp" alt="Rooftop pool at Wyndham Soleil Da Nang with beach views" loading="lazy">
+    <figcaption>Units run 60–80sqm with a full living area and kitchen — closer to a Da Nang flat than a hotel room.</figcaption>
+  </figure>
+
   <div class="review-body">
 
-    <div class="review-summary">
-      <h3>At a Glance</h3>
-      <p style="margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8">My Khe's best-known hotel for Korean visitors — Korean-language service, Korean breakfast options, and direct beachfront access. Reliable across all nationalities.</p>
+        <aside class="review-quick-facts">
+      <div class="rqf-title">Quick Facts</div>
+      <div class="rqf-row"><span class="rqf-key">Location</span><span class="rqf-val">My Khe Beach</span></div>
+<div class="rqf-row"><span class="rqf-key">Stars</span><span class="rqf-val">4-star</span></div>
+<div class="rqf-row"><span class="rqf-key">Price from</span><span class="rqf-val">$110 / night</span></div>
+<div class="rqf-row"><span class="rqf-key">Airport</span><span class="rqf-val">~15 min</span></div>
+<div class="rqf-row"><span class="rqf-key">Format</span><span class="rqf-val">Condo-hotel (privately owned units)</span></div>
+<div class="rqf-row"><span class="rqf-key">Kitchen</span><span class="rqf-val">Yes — all units</span></div>
+
+      <a href="hotel-reviews.html" class="rqf-btn">Check Rates on Booking.com →</a>
+    </aside>
+
+    <h2>Location &amp; <em>Getting There</em></h2>
+    <p>My Khe Beach, central strip. Same good positioning as the Sheraton Grand and Radisson Blu nearby — An Thuong 10 minutes by Grab, airport 15 minutes, beach access direct. The My Khe weekend crowds apply here as elsewhere on the strip.</p>
+
+    <h2>The Rooms</h2>
+    <p>Units are genuinely apartment-format: 60–80sqm with separate bedroom, full living area, kitchen, and balcony. The kitchen makes self-catering viable and transforms the economics of longer stays. Finish quality varies by owner (the condo-hotel factor), but Wyndham's floor-level management keeps units to a minimum standard. Sea-facing upper floors have good views. Rates from around $100–150/night represent solid value given the space and format.</p>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc4c12000lyf8v2d2B95_W_1200_700_R5.webp" alt="Apartment unit at Wyndham Soleil Da Nang with sea view balcony" loading="lazy">
+    <figcaption>Rooftop pool with My Khe beach views — small but the view compensates.</figcaption>
+  </figure>
+
+    <h2>Pool, Beach &amp; <em>Facilities</em></h2>
+    <p>Rooftop pool with beach views — small but the My Khe view from the edge makes it worth using for an evening session. Direct beach access at ground level. Gym. The facilities are hotel-standard without being resort-scale. Some residential units are also on-site, which means the facilities are shared between hotel guests and condo residents — rarely a friction in practice.</p>
+
+    <h2>Food &amp; <em>Drink</em></h2>
+    <p>Restaurant handles breakfast and main meals adequately. The kitchen in the units is the real F&B asset — it makes cooking some meals yourself practical and financially sensible on longer stays. Grab your breakfast ingredients from the Vinmart nearby and eat on your balcony for less than the hotel breakfast price. For evening dining, An Thuong's independent restaurants are 10 minutes away.</p>
+
+    <div class="pull-quote">
+      <p>A practical and often well-priced choice for the right stay length and profile. The space-per-dollar argument is strong and the beach location works. Manage expectations around unit consistency (it's a condo-hotel) and the Wyndham Soleil typically delivers a solid, spacious stay.</p>
     </div>
 
-    <h2>Location &amp; <em>Setting</em></h2>
-    <p>Located in <strong>My Khe Beach</strong>, Da Nang. The hotel occupies one of Da Nang's most sought-after positions — My Khe Beach is consistently ranked among the city's top locations for accommodation due to its balance of beach access, resort facilities, and proximity to the city's dining and transport network.</p>
-    <p>Da Nang International Airport is approximately 10 minutes by taxi. For transport options, see our <a href="da-nang-transport-guide.html" style="color:var(--ocean);font-weight:500">Da Nang Transport Guide</a>.</p>
-
-    <h2>Rooms &amp; <em>Accommodation</em></h2>
-    <p>Rates start from <strong>$80/night</strong> in mid-season. The hotel offers a range of room categories from standard rooms to suites and villas depending on availability and booking period. We recommend booking the sea-view or premium category for the best experience.</p>
-    <p>Check current rates and availability on <a href="hotel-reviews.html" style="color:var(--ocean);font-weight:500">Booking.com</a> — live pricing reflects seasonal demand and is updated daily.</p>
-
-    <h2>Facilities &amp; <em>Amenities</em></h2>
-    <p>Wyndham Soleil Danang provides the facilities expected of a 4-star beach in Da Nang, including pool access, beach proximity (or direct beach access where applicable), dining options, and fitness facilities. Full amenity details are confirmed on the hotel's direct booking page.</p>
-
-    <div class="pros-cons">
+        <div class="pros-cons">
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">Strengths</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">The Good Stuff</h3>
         <ul class="pros">
-          <li>Strong location in My Khe Beach</li>
-          <li>Reliable service quality for category</li>
-          <li>Good beach or pool access</li>
-          <li>Competitive rates vs international peers</li>
+          <li>Apartment-format units — genuinely more living space than standard hotel rooms at comparable rates</li>
+          <li>Kitchen access is a real quality-of-life improvement on longer stays</li>
+          <li>Good My Khe beachfront location</li>
+          <li>Wyndham brand provides a reliability floor across the variable unit ownership</li>
+          <li>Rooftop pool with views</li>
         </ul>
       </div>
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Considerations</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Worth Knowing</h3>
         <ul class="cons">
-          <li>Taxi required for city restaurants</li>
-          <li>Book early for peak season (Jul–Aug)</li>
-          <li>Sea-view rooms command a premium</li>
+          <li>Condo-hotel ownership model means unit quality varies — check recent reviews for your specific category</li>
+          <li>The residential/hotel hybrid can occasionally feel less hotel-like than purpose-built properties</li>
+          <li>Less distinctive character than independent boutique alternatives</li>
         </ul>
       </div>
     </div>
 
     <div class="review-cta">
       <div class="review-cta-text">
-        <strong>Check Current Rates</strong>
-        Live prices updated daily on Booking.com
+        <strong>Ready to Book?</strong>
+        Live rates on Booking.com — updated daily
       </div>
-      <a href="hotel-reviews.html">View on Booking.com →</a>
+      <a href="hotel-reviews.html">Check Availability →</a>
     </div>
 
-    <h2>Who It's <em>Best For</em></h2>
-    <p>Families and couples seeking beachfront access. The hotel is particularly well-suited to travellers visiting Da Nang for 3–7 nights who want a base that provides genuine resort amenities without requiring constant off-resort excursions for dining or activities.</p>
-    <p>For a complete picture of Da Nang's hotel landscape and how this property compares, see our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:500">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:500">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
+    <h2>Who Should <em>Stay Here</em></h2>
+    <p>Longer-stay visitors who want apartment-format living with hotel services. Families who want a kitchen and living area. Digital nomads who find standard hotel room proportions limiting after a few nights.</p>
+    <p>For a full picture of Da Nang's hotel landscape, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
 
   </div>
 
-  
-<!-- ── RELATED HOTELS ─────────────────────────────────── -->
+
+  <!-- ── RELATED HOTELS ─────────────────────────────────── -->
 <section style="background:var(--sand,#F6F1E9);padding:2.5rem 0;margin-top:3rem">
   <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
     <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 1.25rem;font-weight:600">Related Hotels in Da Nang</p>

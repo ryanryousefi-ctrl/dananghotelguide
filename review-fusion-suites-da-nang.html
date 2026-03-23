@@ -601,6 +601,151 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-cta-text{color:rgba(255,255,255,.75);font-size:.9rem}
     .review-cta-text strong{color:#fff;display:block;font-size:1rem;margin-bottom:.25rem}
     .review-cta a{display:inline-block;padding:.7rem 1.5rem;background:var(--coral);border-radius:100px;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none}
+
+    /* ── PHOTO HERO ─────────────────────────────────────────── */
+    .review-photo-hero{
+      position:relative;height:70vh;min-height:480px;max-height:700px;
+      overflow:hidden;display:flex;align-items:flex-end;
+    }
+    .review-photo-hero img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      object-position:center;
+    }
+    .review-photo-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(10,25,25,.85) 0%,rgba(10,25,25,.35) 45%,rgba(10,25,25,.1) 100%);
+    }
+    .review-photo-hero-content{
+      position:relative;z-index:2;
+      width:100%;max-width:860px;margin:0 auto;
+      padding:0 var(--gutter) 3rem;
+    }
+    .review-photo-eyebrow{
+      font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+      color:rgba(255,255,255,.55);margin-bottom:.8rem;
+      display:flex;align-items:center;gap:8px;
+    }
+    .review-photo-eyebrow::before{content:'';display:block;width:20px;height:1.5px;background:var(--coral-light);}
+    .review-photo-hero h1{
+      font-family:var(--font-serif);
+      font-size:clamp(2rem,5vw,3.4rem);
+      color:#fff;line-height:1.08;letter-spacing:-.03em;
+      margin-bottom:.9rem;text-shadow:0 3px 18px rgba(0,0,0,.5);
+    }
+    .review-photo-hero h1 em{font-style:italic;color:var(--coral-light);}
+    .review-author-strip{
+      display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+      padding:1rem 0 0;border-top:1px solid rgba(255,255,255,.15);
+      margin-top:.5rem;
+    }
+    .review-author-avatar{
+      width:38px;height:38px;border-radius:50%;
+      background:var(--ocean);border:2px solid rgba(255,255,255,.3);
+      display:flex;align-items:center;justify-content:center;
+      font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0;
+    }
+    .review-author-info{flex:1;min-width:0;}
+    .review-author-name{font-size:.82rem;font-weight:700;color:#fff;}
+    .review-author-meta{font-size:.73rem;color:rgba(255,255,255,.45);}
+    .review-photo-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem;}
+    .review-tag{
+      display:inline-block;padding:4px 12px;
+      background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);
+      border-radius:100px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);
+    }
+
+    /* ── BLOG OPENING ────────────────────────────────────────── */
+    .blog-opening{
+      max-width:860px;margin:0 auto;
+      padding:3rem var(--gutter) 0;
+    }
+    .blog-opening-lede{
+      font-family:var(--font-serif);
+      font-size:clamp(1.15rem,2.2vw,1.4rem);
+      color:var(--ink);line-height:1.65;letter-spacing:-.01em;
+      margin-bottom:1.4rem;border-bottom:2px solid var(--sand-mid);
+      padding-bottom:1.4rem;
+    }
+    .blog-opening-body p{
+      font-size:.97rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.1rem;
+    }
+
+    /* ── INLINE PHOTOS ───────────────────────────────────────── */
+    .review-inline-photo{
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-inline-photo img{
+      width:100%;border-radius:var(--r-xl);
+      object-fit:cover;display:block;
+      box-shadow:0 8px 32px rgba(26,26,24,.14);
+    }
+    .review-inline-photo figcaption{
+      font-size:.74rem;color:var(--ink-muted);margin-top:.6rem;
+      font-style:italic;text-align:center;
+    }
+    .review-photo-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:.75rem;
+      max-width:860px;margin:2.5rem auto;padding:0 var(--gutter);
+    }
+    .review-photo-grid img{
+      width:100%;border-radius:var(--r-lg);object-fit:cover;
+      aspect-ratio:4/3;
+      box-shadow:0 4px 16px rgba(26,26,24,.1);
+    }
+    @media(max-width:600px){.review-photo-grid{grid-template-columns:1fr}}
+
+    /* ── PULL QUOTE ──────────────────────────────────────────── */
+    .pull-quote{
+      max-width:860px;margin:2.5rem auto;padding:1.75rem 2rem 1.75rem 2.5rem;
+      border-left:3px solid var(--ocean);background:var(--ocean-pale);
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+    }
+    .pull-quote p{
+      font-family:var(--font-serif);font-size:1.15rem;
+      color:var(--ocean-deep);line-height:1.6;font-style:italic;margin:0;
+    }
+
+    /* ── QUICK FACTS FLOATING BOX ────────────────────────────── */
+    .review-quick-facts{
+      float:right;width:280px;margin:0 0 2rem 2.5rem;
+      background:var(--sand);border:1px solid var(--sand-dark);
+      border-radius:var(--r-xl);padding:1.4rem 1.6rem;
+      font-size:.83rem;
+    }
+    .rqf-title{font-size:.67rem;font-weight:700;text-transform:uppercase;
+      letter-spacing:.1em;color:var(--ink-muted);margin-bottom:1rem;
+      padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark);
+    }
+    .rqf-row{display:flex;justify-content:space-between;gap.75rem;
+      padding:.55rem 0;border-bottom:1px solid var(--sand-dark);font-size:.8rem;
+    }
+    .rqf-row:last-of-type{border-bottom:none}
+    .rqf-key{color:var(--ink-muted);}
+    .rqf-val{font-weight:700;color:var(--ink);text-align:right;}
+    .rqf-btn{
+      display:block;margin-top:1.1rem;padding:10px;
+      background:var(--ocean);color:#fff;text-align:center;
+      border-radius:var(--r-md);font-size:.8rem;font-weight:700;
+      transition:background .2s;
+    }
+    .rqf-btn:hover{background:var(--ocean-light);}
+    @media(max-width:680px){
+      .review-quick-facts{float:none;width:100%;margin:0 0 2rem;}
+    }
+
+    /* ── REVIEW BODY OVERRIDES ───────────────────────────────── */
+    .review-body{max-width:860px;margin:0 auto;padding:0 var(--gutter);}
+    .review-body p{color:var(--ink-soft);line-height:1.88;font-size:.97rem;margin-bottom:1.15rem}
+    .review-body h2{
+      font-family:var(--font-serif);font-size:1.6rem;color:var(--ink);
+      margin:3rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid);
+      clear:both;
+    }
+    .review-body h2 em{font-style:italic;color:var(--ocean)}
+    .review-body strong{color:var(--ink);font-weight:700}
+    .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
+    .review-body a:hover{border-color:var(--ocean)}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Review","itemReviewed":{"@type":"LodgingBusiness","name":"Fusion Suites Da Nang Beach","address":{"@type":"PostalAddress","addressLocality":"Da Nang","addressCountry":"VN"}},"author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"url":"https://dananghotelguide.com/review-fusion-suites-da-nang.html","datePublished":"2026-01-01","dateModified":"2026-03-15"}
@@ -682,74 +827,113 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 </div>
 
+
 <main>
-  <!-- Review hero -->
-  <section class="review-hero">
-    <p class="review-eyebrow">All-Suite · My Khe Beach · Da Nang</p>
-    <h1>Fusion Suites Da Nang Beach <em>Review</em></h1>
-    <div class="review-meta">
-      <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-      <span>·</span>
-      <span>📅 Last updated: <strong>March 2026</strong></span>
-      <span>·</span>
-      <span>4 stars · From <strong>$90/night</strong></span>
+  <!-- Photo Hero -->
+  <section class="review-photo-hero">
+    <img src="https://ak-d.tripcdn.com/images/1mc4v12000lyf8vns5B63_W_1600_900_R5.webp" alt="Fusion Suites Da Nang Beach all-suite hotel on My Khe" loading="eager">
+    <div class="review-photo-hero-overlay"></div>
+    <div class="review-photo-hero-content">
+      <p class="review-photo-eyebrow">4-Star All-Suite Beach Hotel · My Khe Beach · Da Nang</p>
+      <h1>Fusion Suites <em>Da Nang Beach</em> <em>Review</em></h1>
+      <div class="review-author-strip">
+        <div class="review-author-avatar">RY</div>
+        <div class="review-author-info">
+          <div class="review-author-name">Ryan Yousefi</div>
+          <div class="review-author-meta">Da Nang Hotel Guide · Last updated March 2026 · ★★★★ · From $115/night</div>
+        </div>
+      </div>
+      <div class="review-photo-tags"><span class="review-tag">All-Suite</span><span class="review-tag">Spa</span><span class="review-tag">Breakfast Anytime</span><span class="review-tag">Adults</span></div>
     </div>
   </section>
 
+  <!-- Blog opening -->
+  <section class="blog-opening">
+    <p class="blog-opening-lede">Breakfast in bed at noon, delivered to your poolside sun lounger — the Fusion Suites 'breakfast anytime, anywhere' policy sounds gimmicky until it's the difference between a normal beach day and a great one.</p>
+    <div class="blog-opening-body">
+      <p>Most hotels that describe themselves as 'wellness-focused' mean they have a spa menu and some herbal tea in the room. Fusion Suites means something closer to a genuine operating philosophy: the breakfast-anywhere-anytime concept, the spa treatments (included in some rate plans), the absence of a rushed morning buffet ritual.</p>
+    <p>The breakfast policy is the single best amenity decision I've seen a Da Nang hotel make. You want breakfast at 6am before a dive trip? Done. At noon poolside? Also done. In your suite after a late night? Obviously. The freedom is genuinely luxurious in a way that doesn't cost the hotel much but transforms the guest experience.</p>
+    <p>Add the all-suite format (separate living area and kitchenette in every category) and the spa quality that's consistently above comparable properties on My Khe, and Fusion Suites has a distinctive enough identity to earn its position in the market. Not the right hotel for everyone, but the right hotel for a specific kind of trip.</p>
+    </div>
+  </section>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc4v12000lyf8vns5B63_W_1200_700_R5.webp" alt="Pool and beach at Fusion Suites Da Nang" loading="lazy">
+    <figcaption>The Fusion spa is the brand's centrepiece — Vietnamese wellness traditions taken seriously rather than decoratively.</figcaption>
+  </figure>
+
   <div class="review-body">
 
-    <div class="review-summary">
-      <h3>At a Glance</h3>
-      <p style="margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.8">All-suite beachfront hotel with spa-inclusive rates — twice-daily treatments included in the tariff. Strong value for My Khe Beach and genuinely distinctive among the mid-range options.</p>
+        <aside class="review-quick-facts">
+      <div class="rqf-title">Quick Facts</div>
+      <div class="rqf-row"><span class="rqf-key">Location</span><span class="rqf-val">My Khe Beach</span></div>
+<div class="rqf-row"><span class="rqf-key">Stars</span><span class="rqf-val">4-star boutique</span></div>
+<div class="rqf-row"><span class="rqf-key">Price from</span><span class="rqf-val">$115 / night</span></div>
+<div class="rqf-row"><span class="rqf-key">Format</span><span class="rqf-val">All-suite</span></div>
+<div class="rqf-row"><span class="rqf-key">Breakfast</span><span class="rqf-val">Served anytime, anywhere on property</span></div>
+<div class="rqf-row"><span class="rqf-key">Spa</span><span class="rqf-val">Included in some packages</span></div>
+
+      <a href="hotel-reviews.html" class="rqf-btn">Check Rates on Booking.com →</a>
+    </aside>
+
+    <h2>Location &amp; <em>Getting There</em></h2>
+    <p>My Khe Beach, centrally positioned. An Thuong restaurant district 10 minutes by Grab. Airport 15 minutes. The Fusion wellness positioning works well in this location — quiet enough beach access, close enough to city dining for evenings when you want to venture out.</p>
+
+    <h2>The Rooms</h2>
+    <p>Every room is at least 50sqm with separate living area and kitchenette — the all-suite format is the baseline, not an upgrade. Vietnamese art and natural materials used thoughtfully throughout. The design is warm and contemporary without trying too hard. Sea-view suites have proper balcony views. Rates from around $115–150/night including the breakfast flexibility.</p>
+
+  <figure class="review-inline-photo">
+    <img src="https://ak-d.tripcdn.com/images/1mc4v12000lyf8vns5B63_W_1200_700_R5.webp" alt="Suite interior at Fusion Suites Da Nang with ocean view" loading="lazy">
+    <figcaption>All-suite format — even entry-level studios have a separate living area and kitchenette.</figcaption>
+  </figure>
+
+    <h2>Pool, Beach &amp; <em>Facilities</em></h2>
+    <p>Pool faces the beach with a clean design. Direct beach access. The spa is the centrepiece of the Fusion brand and it shows — daily spa treatment inclusion applies in some rate packages (verify current terms at booking). Therapist quality is consistently good. Gym facilities lean toward yoga and flexibility work rather than heavy weights, matching the brand positioning.</p>
+
+    <h2>Food &amp; <em>Drink</em></h2>
+    <p>The breakfast-anytime concept is the headline F&B feature — being able to take breakfast whenever and wherever on the property is a meaningful quality-of-life improvement over the 6:30–10am breakfast rush of most hotels. Food quality is solid across the day menu. For evening dining, An Thuong proximity makes external options easy. The in-house dining works best when you're committed to the wellness and spa experience overall.</p>
+
+    <div class="pull-quote">
+      <p>A distinctive property with a clear identity that works. The breakfast flexibility and spa quality are the real differentiators. Compare on the specific proposition rather than the headline rate — it usually makes sense.</p>
     </div>
 
-    <h2>Location &amp; <em>Setting</em></h2>
-    <p>Located in <strong>My Khe Beach</strong>, Da Nang. The hotel occupies one of Da Nang's most sought-after positions — My Khe Beach is consistently ranked among the city's top locations for accommodation due to its balance of beach access, resort facilities, and proximity to the city's dining and transport network.</p>
-    <p>Da Nang International Airport is approximately 10 minutes by taxi. For transport options, see our <a href="da-nang-transport-guide.html" style="color:var(--ocean);font-weight:500">Da Nang Transport Guide</a>.</p>
-
-    <h2>Rooms &amp; <em>Accommodation</em></h2>
-    <p>Rates start from <strong>$90/night</strong> in mid-season. The hotel offers a range of room categories from standard rooms to suites and villas depending on availability and booking period. We recommend booking the sea-view or premium category for the best experience.</p>
-    <p>Check current rates and availability on <a href="hotel-reviews.html" style="color:var(--ocean);font-weight:500">Booking.com</a> — live pricing reflects seasonal demand and is updated daily.</p>
-
-    <h2>Facilities &amp; <em>Amenities</em></h2>
-    <p>Fusion Suites Da Nang Beach provides the facilities expected of a all-suite in Da Nang, including pool access, beach proximity (or direct beach access where applicable), dining options, and fitness facilities. Full amenity details are confirmed on the hotel's direct booking page.</p>
-
-    <div class="pros-cons">
+        <div class="pros-cons">
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">Strengths</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean);margin-bottom:.75rem;font-weight:700">The Good Stuff</h3>
         <ul class="pros">
-          <li>Strong location in My Khe Beach</li>
-          <li>Reliable service quality for category</li>
-          <li>Good beach or pool access</li>
-          <li>Competitive rates vs international peers</li>
+          <li>Breakfast-anytime-anywhere policy is a genuine differentiator — transforms the morning routine</li>
+          <li>All-suite format — more space than standard hotel rooms at comparable My Khe rates</li>
+          <li>Spa quality is the brand's strongest asset and consistently above comparable properties</li>
+          <li>My Khe position provides good beach and city access balance</li>
+          <li>Warm boutique atmosphere without being precious about it</li>
         </ul>
       </div>
       <div>
-        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Considerations</h3>
+        <h3 style="font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:var(--coral);margin-bottom:.75rem;font-weight:700">Worth Knowing</h3>
         <ul class="cons">
-          <li>Taxi required for city restaurants</li>
-          <li>Book early for peak season (Jul–Aug)</li>
-          <li>Sea-view rooms command a premium</li>
+          <li>Rates are higher than non-suite equivalents at the same star rating</li>
+          <li>Smaller pool infrastructure than full resort competitors</li>
+          <li>The spa-focused ethos isn't universally appealing — wrong vibe for party-focused trips</li>
         </ul>
       </div>
     </div>
 
     <div class="review-cta">
       <div class="review-cta-text">
-        <strong>Check Current Rates</strong>
-        Live prices updated daily on Booking.com
+        <strong>Ready to Book?</strong>
+        Live rates on Booking.com — updated daily
       </div>
-      <a href="hotel-reviews.html">View on Booking.com →</a>
+      <a href="hotel-reviews.html">Check Availability →</a>
     </div>
 
-    <h2>Who It's <em>Best For</em></h2>
-    <p>Business and leisure travellers in the city centre. The hotel is particularly well-suited to travellers visiting Da Nang for 3–7 nights who want a base that provides genuine resort amenities without requiring constant off-resort excursions for dining or activities.</p>
-    <p>For a complete picture of Da Nang's hotel landscape and how this property compares, see our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:500">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);font-weight:500">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
+    <h2>Who Should <em>Stay Here</em></h2>
+    <p>Spa-oriented travellers, couples doing a deliberate slow trip, anyone who wants suite-format accommodation, and people who find the standard hotel breakfast routine a daily irritation they'd rather avoid.</p>
+    <p>For a full picture of Da Nang's hotel landscape, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a> guide and our <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> neighbourhood breakdown.</p>
 
   </div>
 
-  
-<!-- ── RELATED HOTELS ─────────────────────────────────── -->
+
+  <!-- ── RELATED HOTELS ─────────────────────────────────── -->
 <section style="background:var(--sand,#F6F1E9);padding:2.5rem 0;margin-top:3rem">
   <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
     <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 1.25rem;font-weight:600">Related Hotels in Da Nang</p>
