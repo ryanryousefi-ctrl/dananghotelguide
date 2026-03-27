@@ -403,21 +403,31 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 
 /* Slide nav — bottom left dots */
 .hero-nav{
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:center;gap:6px;
   position:absolute;
-  bottom:clamp(1.6rem,4vh,3rem);
-  right:var(--gutter);
+  bottom:clamp(1.8rem,4vh,3rem);
+  left:50%;
+  transform:translateX(-50%);
   z-index:3;
 }
+/* Large invisible tap target wrapping the visible bar */
 .hero-dot{
-  width:28px;height:2px;
-  border-radius:2px;
-  background:rgba(255,255,255,.25);
-  border:none;cursor:pointer;
-  padding:0;
+  position:relative;
+  width:44px;height:44px;
+  background:none;border:none;cursor:pointer;padding:0;
+  display:flex;align-items:center;justify-content:center;
+  -webkit-tap-highlight-color:transparent;
+}
+.hero-dot::after{
+  content:'';
+  display:block;
+  width:32px;height:3px;
+  border-radius:3px;
+  background:rgba(255,255,255,.3);
   transition:background .3s,width .3s;
 }
-.hero-dot.active{background:#fff;width:40px;}
+.hero-dot.active::after{background:#fff;width:48px;}
+.hero-dot:hover::after{background:rgba(255,255,255,.65)}
 
 /* Slide counter top-right */
 .hero-counter{
@@ -941,95 +951,79 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
   </div>
 </header>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     BROWSE STRIP
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<nav class="quick-browse" aria-label="Browse by category">
-  <div class="qb-inner">
-    <a href="where-to-stay-in-da-nang.html" class="qb-item active">Where to Stay</a>
-    <a href="best-hotels-in-da-nang.html"   class="qb-item">Best Hotels</a>
-    <a href="luxury-hotels-da-nang.html"    class="qb-item">Luxury</a>
-    <a href="da-nang-beach-hotels.html"     class="qb-item">Beachfront</a>
-    <a href="family-hotels-da-nang.html"    class="qb-item">Family</a>
-    <a href="boutique-hotels-da-nang.html"  class="qb-item">Boutique</a>
-    <div class="qb-sep" aria-hidden="true"></div>
-    <a href="guides.html"                   class="qb-item">Travel Guides</a>
-    <a href="best-time-to-visit-da-nang.html" class="qb-item">When to Visit</a>
-    <a href="dining.html"                   class="qb-item">Dining</a>
-    <a href="hotel-reviews.html"            class="qb-item">Hotel Reviews</a>
-    <a href="da-nang-hotels-map.html"       class="qb-item">Map</a>
-  </div>
-</nav>
+
+
+
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     GUIDE TEASER GRID — immediate navigation, no emojis
+     WHERE TO STAY — Neighborhood Guide
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="teaser-section" aria-labelledby="teaser-heading">
-  <div class="teaser-inner">
-    <div class="teaser-header">
+<section class="neighborhoods-section" aria-labelledby="neighborhoods-heading">
+  <div class="neighborhoods-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
       <div>
-        <p class="section-label">Start here</p>
-        <h2 class="section-heading" id="teaser-heading">What are you <em>looking for?</em></h2>
+        <p class="section-label">Where to Stay</p>
+        <h2 class="section-heading" id="neighborhoods-heading">Da Nang <em>Neighbourhood Guide</em></h2>
+        <p style="font-size:.97rem;color:var(--ink-muted);max-width:520px;line-height:1.7;margin-top:.4rem">Five distinct areas — each with a different character, price range, and travel style.</p>
       </div>
-      <a href="guides.html" style="font-size:.82rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">All guides &rarr;</a>
+      <a href="where-to-stay-in-da-nang.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">Full area guide →</a>
     </div>
 
-    <div class="teaser-grid" role="list">
+    <div class="neighborhood-grid" role="list">
 
-      <a href="where-to-stay-in-da-nang.html" class="teaser-card accent" role="listitem">
-        <div class="tc-label">Neighbourhood guide</div>
-        <div class="tc-title">Where to Stay in Da Nang</div>
-        <div class="tc-desc">My Khe, Son Tra, Han River, Non Nuoc — each area mapped and compared honestly by budget and travel style.</div>
-        <span class="tc-link">Read guide &rarr;</span>
+      <a href="where-to-stay-in-da-nang.html#my-khe" class="nbhd-card" role="listitem" aria-label="Where to stay in My Khe Beach">
+        <img class="nbhd-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=900&fit=crop&auto=format&q=80" alt="My Khe Beach, Da Nang — white sand and calm South China Sea" loading="eager" width="600" height="900">
+        <div class="nbhd-overlay" aria-hidden="true"></div>
+        <div class="nbhd-body">
+          <span class="nbhd-tag">Most Popular</span>
+          <h3 class="nbhd-name">My Khe Beach</h3>
+          <p class="nbhd-desc">Da Nang's main beach strip — 30km of white sand, walkable dining, and hotels at every price point.</p>
+          <span class="nbhd-link">Explore area →</span>
+        </div>
       </a>
 
-      <a href="best-hotels-in-da-nang.html" class="teaser-card" role="listitem">
-        <div class="tc-label">Definitive guide &middot; 2026</div>
-        <div class="tc-title">Best Hotels in Da Nang</div>
-        <div class="tc-desc">Every price point covered — from $20 guesthouses to $400 private villas, across every neighbourhood.</div>
-        <span class="tc-link">Read guide &rarr;</span>
+      <a href="where-to-stay-in-da-nang.html#son-tra" class="nbhd-card" role="listitem" aria-label="Where to stay on Son Tra Peninsula">
+        <img class="nbhd-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=900&fit=crop&auto=format&q=80" alt="Son Tra Peninsula jungle and private resort infinity pool" loading="lazy" width="600" height="900">
+        <div class="nbhd-overlay" aria-hidden="true"></div>
+        <div class="nbhd-body">
+          <span class="nbhd-tag">Luxury &amp; Seclusion</span>
+          <h3 class="nbhd-name">Son Tra Peninsula</h3>
+          <p class="nbhd-desc">Clifftop jungle resorts and private infinity pools — the most dramatic setting in Da Nang.</p>
+          <span class="nbhd-link">Explore area →</span>
+        </div>
       </a>
 
-      <a href="luxury-hotels-da-nang.html" class="teaser-card" role="listitem">
-        <div class="tc-label">5-star &middot; From $160</div>
-        <div class="tc-title">Luxury Hotels &amp; Resorts</div>
-        <div class="tc-desc">InterContinental, Sheraton Grand, Hyatt Regency — the best properties on Da Nang's finest coastline.</div>
-        <span class="tc-link">Read guide &rarr;</span>
+      <a href="where-to-stay-in-da-nang.html#han-river" class="nbhd-card" role="listitem" aria-label="Where to stay in Han River City Center">
+        <img class="nbhd-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=900&fit=crop&auto=format&q=80" alt="Han River waterfront and Dragon Bridge in Da Nang city center" loading="lazy" width="600" height="900">
+        <div class="nbhd-overlay" aria-hidden="true"></div>
+        <div class="nbhd-body">
+          <span class="nbhd-tag">City &amp; Business</span>
+          <h3 class="nbhd-name">Han River</h3>
+          <p class="nbhd-desc">Dragon Bridge, city dining, and easy access to Hoi An — best for city explorers.</p>
+          <span class="nbhd-link">Explore area →</span>
+        </div>
       </a>
 
-      <a href="da-nang-beach-hotels.html" class="teaser-card" role="listitem">
-        <div class="tc-label">My Khe &amp; Non Nuoc</div>
-        <div class="tc-title">Beachfront Hotels</div>
-        <div class="tc-desc">Direct sand access at every budget — from boutique guesthouses to full-service resorts reviewed on location.</div>
-        <span class="tc-link">Read guide &rarr;</span>
+      <a href="where-to-stay-in-da-nang.html#non-nuoc" class="nbhd-card" role="listitem" aria-label="Where to stay at Non Nuoc Beach">
+        <img class="nbhd-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&h=900&fit=crop&auto=format&q=80" alt="Non Nuoc Beach with Marble Mountains in the background" loading="lazy" width="600" height="900">
+        <div class="nbhd-overlay" aria-hidden="true"></div>
+        <div class="nbhd-body">
+          <span class="nbhd-tag">Quiet &amp; Family</span>
+          <h3 class="nbhd-name">Non Nuoc Beach</h3>
+          <p class="nbhd-desc">Quieter southern beach near the Marble Mountains — ideal for families and surfers.</p>
+          <span class="nbhd-link">Explore area →</span>
+        </div>
       </a>
 
-      <a href="best-time-to-visit-da-nang.html" class="teaser-card" role="listitem">
-        <div class="tc-label">Climate &amp; timing</div>
-        <div class="tc-title">Best Time to Visit</div>
-        <div class="tc-desc">Month-by-month breakdown of weather, beach conditions, crowds, and the best windows for cheaper rates.</div>
-        <span class="tc-link">Read guide &rarr;</span>
-      </a>
-
-      <a href="dining.html" class="teaser-card" role="listitem">
-        <div class="tc-label">MICHELIN &middot; 43 listings</div>
-        <div class="tc-title">Da Nang Dining Guide</div>
-        <div class="tc-desc">One MICHELIN Star, one Green Star, 20 Bib Gourmand, and the best street food by neighbourhood.</div>
-        <span class="tc-link">Explore dining &rarr;</span>
-      </a>
-
-      <a href="family-hotels-da-nang.html" class="teaser-card" role="listitem">
-        <div class="tc-label">Kids clubs &amp; pools</div>
-        <div class="tc-title">Family Hotels</div>
-        <div class="tc-desc">Waterparks, connecting rooms, and kids menus — the resorts that actually work for travelling families.</div>
-        <span class="tc-link">Read guide &rarr;</span>
-      </a>
-
-      <a href="hotel-reviews.html" class="teaser-card" role="listitem">
-        <div class="tc-label">24 hotels reviewed</div>
-        <div class="tc-title">Da Nang Hotel Reviews</div>
-        <div class="tc-desc">Individual property reviews — Hilton Garden Inn to InterContinental Sun Peninsula, written on the ground.</div>
-        <span class="tc-link">Browse reviews &rarr;</span>
+      <a href="where-to-stay-in-da-nang.html#an-thuong" class="nbhd-card" role="listitem" aria-label="Where to stay in An Thuong">
+        <img class="nbhd-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=900&fit=crop&auto=format&q=80" alt="An Thuong village cafes and boutique hotels in Da Nang" loading="lazy" width="600" height="900">
+        <div class="nbhd-overlay" aria-hidden="true"></div>
+        <div class="nbhd-body">
+          <span class="nbhd-tag">Boutique &amp; Bars</span>
+          <h3 class="nbhd-name">An Thuong Village</h3>
+          <p class="nbhd-desc">Lively expat village behind My Khe — cafes, restaurants, and boutique stays steps from the sand.</p>
+          <span class="nbhd-link">Explore area →</span>
+        </div>
       </a>
 
     </div>
@@ -1037,7 +1031,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 </section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     PLAN YOUR TRIP GUIDES HUB (moved up to S2)
+     PLAN YOUR TRIP GUIDES HUB
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="section guides-section" aria-labelledby="guides-heading">
   <div class="section-inner">
@@ -1135,135 +1129,6 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 </section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     WHERE TO STAY — Neighborhood Guide
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="neighborhoods-section" aria-labelledby="neighborhoods-heading">
-  <div class="neighborhoods-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
-      <div>
-        <p class="section-label">Where to Stay</p>
-        <h2 class="section-heading" id="neighborhoods-heading">Da Nang <em>Neighbourhood Guide</em></h2>
-        <p style="font-size:.97rem;color:var(--ink-muted);max-width:520px;line-height:1.7;margin-top:.4rem">Five distinct areas — each with a different character, price range, and travel style.</p>
-      </div>
-      <a href="where-to-stay-in-da-nang.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">Full area guide →</a>
-    </div>
-
-    <div class="neighborhood-grid" role="list">
-
-      <a href="where-to-stay-in-da-nang.html#my-khe" class="nbhd-card" role="listitem" aria-label="Where to stay in My Khe Beach">
-        <img class="nbhd-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=900&fit=crop&auto=format&q=80" alt="My Khe Beach, Da Nang — white sand and calm South China Sea" loading="eager" width="600" height="900">
-        <div class="nbhd-overlay" aria-hidden="true"></div>
-        <div class="nbhd-body">
-          <span class="nbhd-tag">Most Popular</span>
-          <h3 class="nbhd-name">My Khe Beach</h3>
-          <p class="nbhd-desc">Da Nang's main beach strip — 30km of white sand, walkable dining, and hotels at every price point.</p>
-          <span class="nbhd-link">Explore area →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html#son-tra" class="nbhd-card" role="listitem" aria-label="Where to stay on Son Tra Peninsula">
-        <img class="nbhd-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=900&fit=crop&auto=format&q=80" alt="Son Tra Peninsula jungle and private resort infinity pool" loading="lazy" width="600" height="900">
-        <div class="nbhd-overlay" aria-hidden="true"></div>
-        <div class="nbhd-body">
-          <span class="nbhd-tag">Luxury &amp; Seclusion</span>
-          <h3 class="nbhd-name">Son Tra Peninsula</h3>
-          <p class="nbhd-desc">Clifftop jungle resorts and private infinity pools — the most dramatic setting in Da Nang.</p>
-          <span class="nbhd-link">Explore area →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html#han-river" class="nbhd-card" role="listitem" aria-label="Where to stay in Han River City Center">
-        <img class="nbhd-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=900&fit=crop&auto=format&q=80" alt="Han River waterfront and Dragon Bridge in Da Nang city center" loading="lazy" width="600" height="900">
-        <div class="nbhd-overlay" aria-hidden="true"></div>
-        <div class="nbhd-body">
-          <span class="nbhd-tag">City &amp; Business</span>
-          <h3 class="nbhd-name">Han River</h3>
-          <p class="nbhd-desc">Dragon Bridge, city dining, and easy access to Hoi An — best for city explorers.</p>
-          <span class="nbhd-link">Explore area →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html#non-nuoc" class="nbhd-card" role="listitem" aria-label="Where to stay at Non Nuoc Beach">
-        <img class="nbhd-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&h=900&fit=crop&auto=format&q=80" alt="Non Nuoc Beach with Marble Mountains in the background" loading="lazy" width="600" height="900">
-        <div class="nbhd-overlay" aria-hidden="true"></div>
-        <div class="nbhd-body">
-          <span class="nbhd-tag">Quiet &amp; Family</span>
-          <h3 class="nbhd-name">Non Nuoc Beach</h3>
-          <p class="nbhd-desc">Quieter southern beach near the Marble Mountains — ideal for families and surfers.</p>
-          <span class="nbhd-link">Explore area →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html#an-thuong" class="nbhd-card" role="listitem" aria-label="Where to stay in An Thuong">
-        <img class="nbhd-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=900&fit=crop&auto=format&q=80" alt="An Thuong village cafes and boutique hotels in Da Nang" loading="lazy" width="600" height="900">
-        <div class="nbhd-overlay" aria-hidden="true"></div>
-        <div class="nbhd-body">
-          <span class="nbhd-tag">Boutique &amp; Bars</span>
-          <h3 class="nbhd-name">An Thuong Village</h3>
-          <p class="nbhd-desc">Lively expat village behind My Khe — cafes, restaurants, and boutique stays steps from the sand.</p>
-          <span class="nbhd-link">Explore area →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     BEST HOTELS — Category cards
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="section hotel-guides-section" aria-labelledby="hotelguides-heading">
-  <div class="section-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:0">
-      <div>
-        <p class="section-label">Curated Collections</p>
-        <h2 class="section-heading" id="hotelguides-heading">Best Hotels <em>in Da Nang</em></h2>
-        <p style="font-size:.97rem;color:var(--ink-muted);max-width:520px;line-height:1.7;margin-top:.4rem">Every category reviewed independently — no paid rankings, no algorithmic filler.</p>
-        <p style="font-size:.83rem;color:var(--ink-soft);line-height:1.7;margin-top:.6rem;max-width:560px">Popular mid-range picks on My Khe ($50–$150/night): <a href="review-four-points-sheraton-da-nang.html" style="color:var(--ocean);font-weight:600">Four Points Sheraton</a>, <a href="review-tms-hotel-da-nang.html" style="color:var(--ocean);font-weight:600">TMS Hotel Beach</a>, <a href="review-muong-thanh-luxury-da-nang.html" style="color:var(--ocean);font-weight:600">Muong Thanh Luxury</a>, and <a href="review-hilton-da-nang.html" style="color:var(--ocean);font-weight:600">Hilton Garden Inn</a>.</p>
-      </div>
-      <a href="hotels.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">All hotel guides →</a>
-    </div>
-
-    <div class="hg-grid" role="list">
-
-      <a href="best-hotels-in-da-nang.html" class="hg-card" role="listitem" aria-label="Best Hotels in Da Nang — definitive guide">
-        <img class="hg-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop&auto=format&q=80" alt="Luxury hotel pool with Da Nang coastline views" loading="lazy" width="800" height="600">
-        <div class="hg-overlay" aria-hidden="true"></div>
-        <div class="hg-body">
-          <span class="hg-pill">Definitive Guide · 2026</span>
-          <h3 class="hg-title">Best Hotels in Da Nang</h3>
-          <p class="hg-desc">Top picks at every price point — from $20 budget stays to $400 private villas across all neighborhoods.</p>
-          <span class="hg-link">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="luxury-hotels-da-nang.html" class="hg-card" role="listitem" aria-label="Luxury Hotels and Resorts in Da Nang">
-        <img class="hg-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=600&fit=crop&auto=format&q=80" alt="Infinity pool at a luxury Da Nang resort overlooking the South China Sea" loading="lazy" width="800" height="600">
-        <div class="hg-overlay" aria-hidden="true"></div>
-        <div class="hg-body">
-          <span class="hg-pill">5-Star · From $160</span>
-          <h3 class="hg-title">Luxury Hotels &amp; Resorts</h3>
-          <p class="hg-desc">InterContinental, Sheraton Grand, Hyatt Regency — world-class service on the finest coastline.</p>
-          <span class="hg-link">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-beach-hotels.html" class="hg-card" role="listitem" aria-label="Beachfront Hotels in Da Nang">
-        <img class="hg-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop&auto=format&q=80" alt="Beachfront hotel on My Khe Beach Da Nang" loading="lazy" width="800" height="600">
-        <div class="hg-overlay" aria-hidden="true"></div>
-        <div class="hg-body">
-          <span class="hg-pill">Beachfront · From $65</span>
-          <h3 class="hg-title">Beachfront Hotels</h3>
-          <p class="hg-desc">Direct sand access on My Khe and Non Nuoc — all budgets, all reviewed on location.</p>
-          <span class="hg-link">Read guide →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FEATURED CAROUSEL — Hotel categories
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="featured-carousel-section" aria-labelledby="featured-heading">
@@ -1319,6 +1184,10 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
     </a>
   </div>
 </section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     BEST HOTELS — Category cards
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      MAP SECTION
