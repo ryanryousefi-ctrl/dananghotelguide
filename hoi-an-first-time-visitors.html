@@ -165,6 +165,42 @@
     .hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin-top: 1.5rem; }
     .hero-chip { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.85); font-size: .78rem; font-weight: 600; padding: .35rem .8rem; border-radius: 20px; letter-spacing: .03em; }
 
+    /* ── BOOKING CTA BAR ───────────────────────────────── */
+    .booking-cta-bar {
+      background: linear-gradient(90deg, var(--ocean-deep) 0%, var(--ocean-mid) 100%);
+      border-bottom: 3px solid var(--coral);
+      padding: 1rem clamp(1rem, 4vw, 2.5rem);
+    }
+    .booking-cta-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .booking-cta-text {
+      display: flex; align-items: center; gap: .9rem; color: var(--white);
+    }
+    .booking-cta-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .booking-cta-text strong { display: block; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .1rem; }
+    .booking-cta-sub { font-size: .85rem; color: rgba(255,255,255,.72); line-height: 1.4; }
+    .booking-cta-btn {
+      display: inline-flex; align-items: center;
+      background: var(--coral); color: var(--white);
+      font-weight: 700; font-size: .9rem; letter-spacing: .02em;
+      padding: .75rem 1.4rem; border-radius: 8px;
+      white-space: nowrap; flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(232,96,60,.4);
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+    .booking-cta-btn:hover {
+      background: var(--coral-dark); color: var(--white);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(232,96,60,.5);
+    }
+    @media (max-width: 640px) {
+      .booking-cta-inner { flex-direction: column; align-items: flex-start; }
+      .booking-cta-btn { width: 100%; justify-content: center; }
+    }
+
     /* ── FADE-UP ANIMATIONS ────────────────────────────── */
     .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp .6s ease forwards; }
     .fu1 { animation-delay: .1s; } .fu2 { animation-delay: .25s; } .fu3 { animation-delay: .4s; } .fu4 { animation-delay: .55s; }
@@ -395,6 +431,26 @@
     </div>
   </div>
 </header>
+
+<!-- ── BOOKING CTA BAR ─────────────────────────────────────── -->
+<div class="booking-cta-bar">
+  <div class="booking-cta-inner">
+    <div class="booking-cta-text">
+      <span class="booking-cta-icon">🏨</span>
+      <div>
+        <strong>Ready to book your Hoi An stay?</strong>
+        <span class="booking-cta-sub">Curated picks at every price point — Ancient Town boutiques to beachside resorts.</span>
+      </div>
+    </div>
+    <a href="https://www.booking.com/searchresults.html?ss=Hoi+An%2C+Vietnam&dest_id=-3712125&dest_type=city&aid=1784897&label=affnetawin-index_pub-2788028_site"
+       class="booking-cta-btn affiliate-link"
+       data-booking-url="-3712125"
+       data-clickref="first-time-guide-cta-bar"
+       target="_blank" rel="nofollow noopener sponsored">
+      Check Lowest Prices on Booking.com →
+    </a>
+  </div>
+</div>
 
 <!-- ── PAGE WRAP ───────────────────────────────────────────── -->
 <div class="page-wrap">
