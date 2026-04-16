@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Da Nang Travel News & Updates — Da Nang Hotel Guide</title>
-<meta name="description" content="Latest travel news, flight updates, and tourism developments in Da Nang, Vietnam. Stay informed about new routes, visitor statistics, and local travel information.">
+<title>Da Nang Charts Mega Merger for Global Eco-City Vision (2026) — Da Nang Hotel Guide</title>
+<meta name="description" content="Da Nang is merging with Quang Nam province to create one of Vietnam's largest urban areas, with plans to become a global eco-city by 2075 and space for six million residents.">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="canonical" href="https://www.dananghotelguide.com/news.html">
+<link rel="canonical" href="https://www.dananghotelguide.com/da-nang-eco-city-merger-2050.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Open Graph -->
-<meta property="og:title" content="Da Nang Travel News & Updates">
-<meta property="og:description" content="Latest travel news, flight updates, and tourism developments in Da Nang, Vietnam.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dananghotelguide.com/news.html">
+<meta property="og:title" content="Da Nang Charts Mega Merger for Global Eco-City Vision">
+<meta property="og:description" content="Da Nang is merging with Quang Nam province to create one of Vietnam's largest urban areas, with plans to become a global eco-city by 2075.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dananghotelguide.com/da-nang-eco-city-merger-2050.html">
 <meta property="og:image" content="https://dananghotelguide.com/images/guides-3a53ce1c.jpg">
+<meta property="article:published_time" content="2026-04-16">
+<meta property="article:author" content="Da Nang Hotel Guide">
 
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebPage", "name": "Da Nang Travel News", "url": "https://dananghotelguide.com/news.html", "description": "Latest travel news, flight updates, and tourism developments in Da Nang, Vietnam."}
+{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Da Nang Charts Mega Merger for Global Eco-City Vision", "datePublished": "2026-04-16", "dateModified": "2026-04-16", "author": {"@type": "Organization", "name": "Da Nang Hotel Guide"}, "publisher": {"@type": "Organization", "name": "Da Nang Hotel Guide", "logo": {"@type": "ImageObject", "url": "https://dananghotelguide.com/logo.png"}}, "description": "Da Nang is merging with Quang Nam province to create one of Vietnam's largest urban areas, with plans to become a global eco-city by 2075 and space for six million residents."}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dananghotelguide.com/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://dananghotelguide.com/news.html"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dananghotelguide.com/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://dananghotelguide.com/news.html"}, {"@type": "ListItem", "position": 3, "name": "Eco-City Merger", "item": "https://dananghotelguide.com/da-nang-eco-city-merger-2050.html"}]}
 </script>
 
 <style>
@@ -204,132 +206,218 @@ a{text-decoration:none;color:inherit}
   .nav-stays-btn{padding:9px 12px}
 }
 
-/* ─── PAGE HEADER ────────────────────────────────────────── */
-.page-header{
-  background:var(--ocean-deep);
-  padding:clamp(3rem,8vh,5rem) var(--gutter) clamp(2.5rem,6vh,4rem);
-  position:relative;
-  overflow:hidden;
-}
-.page-header::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg, rgba(27,92,92,.15) 0%, transparent 60%);
-  pointer-events:none;
-}
-.header-inner{
-  max-width:var(--max);margin:0 auto;
-  position:relative;z-index:2;
-}
-.header-kicker{
-  font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--coral-light);
-  margin-bottom:.75rem;
-}
-.header-title{
-  font-family:var(--font-serif);
-  font-size:clamp(2rem,4.5vw,3.2rem);
-  color:#fff;
-  line-height:1.1;
-  letter-spacing:-.02em;
-  margin-bottom:.85rem;
-}
-.header-subtitle{
-  font-size:1.05rem;
-  color:rgba(255,255,255,.65);
-  line-height:1.6;
-  max-width:680px;
-}
-
-/* ─── GUIDE GRID ─────────────────────────────────────────── */
-.guides-grid{
+/* ─── ARTICLE LAYOUT ─────────────────────────────────────── */
+.article-wrap{
   max-width:var(--max);
   margin:0 auto;
   padding:clamp(2.5rem,6vh,4.5rem) var(--gutter);
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
-  gap:clamp(1.5rem,3vw,2.5rem);
+  grid-template-columns:1fr 340px;
+  gap:clamp(2rem,4vw,3.5rem);
+  align-items:start;
 }
 
-.guide-card{
-  background:var(--white);
-  border-radius:var(--r-lg);
-  overflow:hidden;
-  box-shadow:var(--shadow-card);
-  transition:box-shadow .25s var(--ease), transform .25s var(--ease);
+@media (max-width: 900px){
+  .article-wrap{
+    grid-template-columns:1fr;
+    gap:2.5rem;
+  }
+}
+
+/* ─── ARTICLE HEADER ─────────────────────────────────────── */
+.article-header{
+  margin-bottom:2.5rem;
+}
+.breadcrumbs{
   display:flex;
-  flex-direction:column;
+  align-items:center;
+  gap:.5rem;
+  font-size:.8rem;
+  color:var(--ink-muted);
+  margin-bottom:1.25rem;
+  flex-wrap:wrap;
 }
-.guide-card:hover{
-  box-shadow:var(--shadow-hover);
-  transform:translateY(-3px);
+.breadcrumbs a{
+  color:var(--ink-muted);
+  transition:color .2s;
+}
+.breadcrumbs a:hover{
+  color:var(--ocean);
+}
+.breadcrumbs-sep{
+  color:var(--sand-dark);
 }
 
-.guide-card-content{
-  padding:1.75rem;
-  flex:1;
-  display:flex;
-  flex-direction:column;
-}
-
-.guide-meta{
+.article-meta{
   display:flex;
   align-items:center;
   gap:1rem;
-  margin-bottom:1rem;
+  margin-bottom:1.25rem;
+  flex-wrap:wrap;
 }
-.guide-date{
-  font-size:.75rem;
+.article-date{
+  font-size:.8rem;
   font-weight:600;
   color:var(--ink-muted);
   letter-spacing:.02em;
 }
-.guide-category{
-  font-size:.7rem;
+.article-category{
+  font-size:.72rem;
   font-weight:700;
   letter-spacing:.08em;
   text-transform:uppercase;
   color:var(--coral);
   background:var(--ocean-pale);
-  padding:4px 10px;
+  padding:5px 12px;
   border-radius:100px;
 }
 
-.guide-title{
+.article-title{
   font-family:var(--font-serif);
-  font-size:1.45rem;
+  font-size:clamp(2rem,4vw,2.75rem);
   color:var(--ink);
-  line-height:1.25;
-  letter-spacing:-.015em;
-  margin-bottom:.85rem;
-  transition:color .2s;
-}
-.guide-card:hover .guide-title{
-  color:var(--ocean);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin-bottom:1rem;
 }
 
-.guide-excerpt{
-  font-size:.92rem;
+.article-excerpt{
+  font-size:1.12rem;
   color:var(--ink-soft);
   line-height:1.65;
-  margin-bottom:1.25rem;
-  flex:1;
+  margin-bottom:2rem;
 }
 
-.guide-link{
+/* ─── ARTICLE CONTENT ────────────────────────────────────── */
+.article-content{
+  background:var(--white);
+  border-radius:var(--r-lg);
+  padding:clamp(2rem,4vw,3rem);
+  box-shadow:var(--shadow-card);
+}
+
+.article-content p{
+  font-size:1.02rem;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:1.5rem;
+}
+.article-content p:last-child{
+  margin-bottom:0;
+}
+.article-content strong{
+  font-weight:600;
+  color:var(--ink);
+}
+
+.article-content h2{
+  font-family:var(--font-serif);
+  font-size:1.75rem;
+  color:var(--ink);
+  line-height:1.3;
+  letter-spacing:-.015em;
+  margin:2.5rem 0 1.25rem;
+}
+.article-content h2:first-child{
+  margin-top:0;
+}
+
+.article-content ul, .article-content ol{
+  margin:1.5rem 0;
+  padding-left:1.5rem;
+}
+.article-content li{
+  font-size:1.02rem;
+  line-height:1.8;
+  color:var(--ink-soft);
+  margin-bottom:.75rem;
+}
+
+/* ─── SIDEBAR ────────────────────────────────────────────── */
+.sidebar{
+  position:sticky;
+  top:calc(64px + 2rem);
+}
+
+.sidebar-section{
+  background:var(--white);
+  border-radius:var(--r-lg);
+  padding:1.75rem;
+  margin-bottom:1.5rem;
+  box-shadow:var(--shadow-card);
+}
+
+.sidebar-title{
+  font-family:var(--font-serif);
+  font-size:1.25rem;
+  color:var(--ink);
+  margin-bottom:1.25rem;
+  letter-spacing:-.01em;
+}
+
+.sidebar-list{
+  list-style:none;
+}
+.sidebar-list li{
+  padding:.65rem 0;
+  border-bottom:1px solid var(--sand-mid);
+}
+.sidebar-list li:last-child{
+  border-bottom:none;
+}
+.sidebar-list a{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:.88rem;
+  font-weight:500;
+  color:var(--ink-soft);
+  transition:color .2s;
+}
+.sidebar-list a:hover{
+  color:var(--ocean);
+}
+.sidebar-list a::before{
+  content:'★';
+  font-size:.85em;
+  color:var(--coral);
+}
+
+.cta-box{
+  background:linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 100%);
+  border-radius:var(--r-lg);
+  padding:2rem;
+  text-align:center;
+  color:#fff;
+}
+.cta-box-title{
+  font-family:var(--font-serif);
+  font-size:1.45rem;
+  margin-bottom:.75rem;
+  letter-spacing:-.015em;
+}
+.cta-box-text{
+  font-size:.88rem;
+  color:rgba(255,255,255,.75);
+  line-height:1.6;
+  margin-bottom:1.5rem;
+}
+.cta-box-btn{
   display:inline-flex;
   align-items:center;
-  gap:6px;
+  justify-content:center;
+  gap:8px;
+  padding:12px 28px;
+  background:var(--coral);
+  color:#fff;
   font-size:.85rem;
-  font-weight:600;
-  color:var(--ocean);
-  transition:gap .2s var(--ease);
+  font-weight:700;
+  border-radius:100px;
+  transition:background .2s, transform .15s;
 }
-.guide-card:hover .guide-link{
-  gap:10px;
-}
-.guide-link::after{
-  content:'→';
-  font-size:1.1em;
+.cta-box-btn:hover{
+  background:var(--coral-light);
+  transform:translateY(-2px);
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
@@ -368,12 +456,6 @@ a{text-decoration:none;color:inherit}
 .footer-copy{
   font-size:.75rem;
   color:rgba(255,255,255,.4);
-}
-
-@media (max-width: 768px){
-  .guides-grid{
-    grid-template-columns:1fr;
-  }
 }
 </style>
 </head>
@@ -418,7 +500,7 @@ a{text-decoration:none;color:inherit}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+    <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-news_pub-2788028_site" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <span class="btn-text">Search Stays</span>
     </a>
@@ -460,48 +542,106 @@ a{text-decoration:none;color:inherit}
     </div>
   </div>
   <a href="about.html" class="mobile-nav-link">About</a>
-  <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-index_pub-2788028_site" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+  <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&checkin=&checkout=&aid=1784897&label=affnetawin-news_pub-2788028_site" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
 </div>
 
-<!-- ── PAGE HEADER ───────────────────────────────────────── -->
-<header class="page-header">
-  <div class="header-inner">
-    <p class="header-kicker">Stay Informed</p>
-    <h1 class="header-title">Da Nang Travel News</h1>
-    <p class="header-subtitle">Latest flight updates, tourism developments, and travel information for Da Nang and central Vietnam.</p>
-  </div>
-</header>
+<!-- ── ARTICLE CONTENT ────────────────────────────────────── -->
+<div class="article-wrap">
+  
+  <main>
+    <article>
+      <header class="article-header">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumbs-sep">/</span>
+          <a href="news.html">News</a>
+          <span class="breadcrumbs-sep">/</span>
+          <span>Eco-City Merger</span>
+        </nav>
 
-<!-- ── NEWS GRID ──────────────────────────────────────────── -->
-<section class="guides-grid">
+        <div class="article-meta">
+          <time class="article-date" datetime="2026-04-16">April 16, 2026</time>
+          <span class="article-category">Development</span>
+        </div>
 
-  <!-- Article 1: Russia/CIS Air Links -->
-  <a href="da-nang-russia-cis-air-links-2026.html" class="guide-card">
-    <div class="guide-card-content">
-      <div class="guide-meta">
-        <time class="guide-date" datetime="2026-04-16">April 16, 2026</time>
-        <span class="guide-category">Flight Updates</span>
+        <h1 class="article-title">Da Nang Charts Mega Merger for Global Eco-City Vision</h1>
+
+        <p class="article-excerpt">Da Nang is setting out an ambitious long-term vision to become a smart, livable urban centre and a key national hub for logistics, start-up innovation, finance, free trade, and sea-based economic growth by 2050, with a further goal of evolving into a global eco-city and desirable destination by 2075.</p>
+      </header>
+
+      <div class="article-content">
+        <p>Da Nang has set a target of having at least five financial technology (FinTech) businesses with revenues of over 1 trillion VND ($40 million) yearly, while the Free Trade Zone would contribute 17.9% to the city's gross regional domestic product.</p>
+
+        <p>The city's Master Plan for 2050–75, approved by the Government, aims to reshape the central city by <strong>merging with the former Quang Nam province</strong>, creating one of the largest urban areas among the country's six centrally governed cities, with a total area of 11,859.59 sq.km.</p>
+
+        <p>The plan, signed by Deputy Prime Minister Tran Hong Ha, projects space for a population of up to six million and envisions a network of economically strong urban centers.</p>
+
+        <p>These include Da Nang's downtown, the ancient town of Hoi An, Tam Ky township, the culturally rich Dien Ban town, and the logistics-focused Chu Lai open economic and industrial manufacturing zone. The Chu Lai area is expected to expand from 28,000 to 40,000 hectares in the coming decades.</p>
+
+        <h2>Infrastructure & Logistics Hub</h2>
+
+        <p>Da Nang is accelerating construction of an international logistics center, underpinned by a growing transport network that includes the Lien Chieu deep-sea port, Tien Sa and Chu Lai ports, and the international airports in Da Nang and Chu Lai.</p>
+
+        <p>The planned 22-berth Lien Chieu Port is set to become a key logistics hub, linking north–south rail and road networks with the East–West Economic Corridor 2, which connects Thailand, Myanmar, Laos, and Vietnam through Da Nang's port system. It is expected to operate as an international gateway port, the country's third after Lach Huyen Port in Hai Phong and Cai Mep–Thi Vai.</p>
+
+        <p>The city has also proposed a 10 billion USD investment to upgrade Chu Lai International Airport to meet rising demand driven by tourism, investment, and logistics growth through 2050.</p>
+
+        <h2>Tourism & Cultural Heritage</h2>
+
+        <p>The central hub is also expected to strengthen tourism and cultural industries, positioning them as key economic drivers. The city is home to globally recognised attractions such as the UNESCO-listed Hoi An Ancient Town and My Son Sanctuary, the Cham Islands–Hoi An World Biosphere Reserve, and the Ma Nhai cliff inscription collection at Ngu Hanh Son (Marble Mountains), which is inscribed on UNESCO's Memory of the World Register for Asia and the Pacific.</p>
+
+        <h2>Environmental Conservation</h2>
+
+        <p>The expanded Da Nang now includes around 500,000 hectares of protected natural areas across national parks and nature reserves. These include conservation programs for two critically endangered species, the saola (Pseudoryx nghetinhensis) and the grey-shanked douc langur (Pygathrix cinerea), as well as endangered species such as the red-shanked douc langur (Pygathrix nemaeus) and the Asian elephant (Elephas maximus).</p>
+
+        <h2>International Financial Centre</h2>
+
+        <p>Authorities have launched Vietnam's International Financial Centre in Da Nang (IFC Da Nang) and are moving ahead with plans for a free trade zone aimed at drawing global investment in high-tech industries, including semiconductors and artificial intelligence.</p>
+
+        <p>Twelve organisations and financial institutions have joined IFC Da Nang as members, including Makara Capital Vietnam Holding, Bybit Technology Vietnam, Da Nang Fintech Lab, Siglaw IFC, DTC Pay Vietnam, APEX Vietnam IFC Services, Valverde Investment Partners, Misa Novafinx, and Remi Tech.</p>
+
+        <p>Memoranda of understanding on cooperation have also been signed with Newtechco Group, Deutsche Bank Vietnam, United Overseas Bank, JP Morgan Chase, Terne Holdings, TMC Academy Singapore, Yuan Ze University in Taiwan, the Institute of Chartered Accountants in England and Wales, and the Vietnam Blockchain Association to support the development of high-quality human resources for the IFC.</p>
+
+        <h2>Administrative Structure</h2>
+
+        <p>Under a Government decision establishing the new administrative unit formed by merging Da Nang and Quang Nam, the city will comprise 94 local administrative units, including 23 wards, 70 communes, and a special administrative zone covering the Hoang Sa (Paracel) Islands.</p>
+
+        <p>The new Da Nang has attracted a total registered investment of 30.6 billion USD from domestic and foreign direct investment projects.</p>
       </div>
-      <h2 class="guide-title">Da Nang Restores Russia and CIS Air Links, Ramps Up Foreign Visitor Attraction</h2>
-      <p class="guide-excerpt">Da Nang has officially resumed air services from Russia and the Commonwealth of Independent States from April 2026, with nearly 570 flights expected through October carrying an estimated 120,000 passengers.</p>
-      <span class="guide-link">Read full story</span>
-    </div>
-  </a>
+    </article>
+  </main>
 
-  <!-- Article 2: Mega Merger for Global Eco-City Vision -->
-  <a href="da-nang-eco-city-merger-2050.html" class="guide-card">
-    <div class="guide-card-content">
-      <div class="guide-meta">
-        <time class="guide-date" datetime="2026-04-16">April 16, 2026</time>
-        <span class="guide-category">Development</span>
-      </div>
-      <h2 class="guide-title">Da Nang Charts Mega Merger for Global Eco-City Vision</h2>
-      <p class="guide-excerpt">Da Nang is merging with Quang Nam province to create one of Vietnam's largest urban areas, with plans to become a global eco-city by 2075 and space for six million residents.</p>
-      <span class="guide-link">Read full story</span>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    
+    <div class="sidebar-section">
+      <h3 class="sidebar-title">More News</h3>
+      <ul class="sidebar-list">
+        <li><a href="news.html">All Travel News</a></li>
+        <li><a href="da-nang-russia-cis-air-links-2026.html">Russia & CIS Air Links</a></li>
+      </ul>
     </div>
-  </a>
 
-</section>
+    <div class="sidebar-section">
+      <h3 class="sidebar-title">Popular Guides</h3>
+      <ul class="sidebar-list">
+        <li><a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a></li>
+        <li><a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang</a></li>
+        <li><a href="3-day-itinerary-da-nang.html">3-Day Da Nang Itinerary</a></li>
+        <li><a href="da-nang-airport-guide.html">Airport Guide</a></li>
+        <li><a href="living-in-da-nang.html">Living in Da Nang</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h3 class="cta-box-title">Find Your Stay</h3>
+      <p class="cta-box-text">Browse thousands of hotels, resorts, and guesthouses across Da Nang.</p>
+      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&aid=1784897&label=affnetawin-news-article_pub-2788028_site" class="cta-box-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Hotels</a>
+    </div>
+
+  </aside>
+
+</div>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="site-footer">
