@@ -552,12 +552,52 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 /* ─── NEIGHBORHOOD SECTION ───────────────────────────────── */
 .neighborhoods-section{background:var(--white);padding:clamp(3.5rem,7vw,6rem) var(--gutter);}
 .neighborhoods-inner{max-width:var(--max);margin:0 auto;}
+.neighborhoods-layout{display:grid;grid-template-columns:1fr 360px;gap:3.5rem;align-items:start;}
 .neighborhood-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:1rem;
-  margin-top:2.5rem;
+  margin-top:2rem;
 }
+/* booking widget in neighborhoods section */
+.nbhd-booking-widget{
+  position:sticky;top:84px;
+  background:var(--ocean-deep);
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(13,53,53,.25);
+}
+.nbw-header{
+  background:linear-gradient(135deg,var(--ocean-deep) 0%,var(--ocean-light) 100%);
+  padding:1.6rem 1.6rem 1.2rem;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nbw-eyebrow{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.5rem;}
+.nbw-headline{font-family:var(--font-serif);font-size:1.35rem;color:#fff;line-height:1.2;letter-spacing:-.02em;}
+.nbw-headline em{font-style:italic;color:rgba(255,255,255,.65);}
+.nbw-sub{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:.4rem;line-height:1.5;}
+.nbw-body{padding:1.4rem 1.6rem;}
+.nbw-field{display:flex;flex-direction:column;gap:4px;margin-bottom:.9rem;}
+.nbw-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.nbw-input{background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:10px 13px;font-family:var(--font-sans);font-size:.88rem;color:#fff;outline:none;transition:border-color .2s;width:100%;-webkit-appearance:none;appearance:none;}
+.nbw-input:focus{border-color:rgba(255,255,255,.35);}
+.nbw-input option{background:var(--ocean-deep);color:#fff;}
+.nbw-dates{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.9rem;}
+.nbw-submit{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:14px 1rem;
+  background:var(--coral);color:#fff;
+  border:none;border-radius:100px;
+  font-family:var(--font-sans);font-size:.9rem;font-weight:700;
+  cursor:pointer;transition:background .18s,transform .15s;
+  letter-spacing:.01em;
+}
+.nbw-submit:hover{background:var(--coral-light);transform:translateY(-1px);}
+.nbw-trust{display:flex;align-items:center;justify-content:center;gap:1rem;padding:.9rem 1.6rem 1.3rem;flex-wrap:wrap;}
+.nbw-trust-item{font-size:.68rem;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:4px;}
+.nbw-trust-item::before{content:'✓';color:var(--coral-light);font-weight:700;}
+.nbw-disclosure{font-size:.62rem;color:rgba(255,255,255,.2);text-align:center;padding:0 1.6rem 1.2rem;line-height:1.5;}
+.nbw-disclosure a{color:rgba(255,255,255,.35);}
 .nbhd-card{
   position:relative;border-radius:var(--r-xl);overflow:hidden;
   aspect-ratio:3/4;
@@ -757,6 +797,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1100px){
+  .neighborhoods-layout{grid-template-columns:1fr;}
   .neighborhood-grid{grid-template-columns:repeat(3,1fr);}
   .hg-grid{grid-template-columns:repeat(2,1fr);}
   .map-layout{grid-template-columns:1fr;}
@@ -990,16 +1031,20 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="neighborhoods-section" aria-labelledby="neighborhoods-heading">
   <div class="neighborhoods-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
-      <div>
-        <p class="section-label">Where to Stay</p>
-        <h2 class="section-heading" id="neighborhoods-heading">Da Nang <em>Neighbourhood Guide</em></h2>
-        <p style="font-size:.97rem;color:var(--ink-muted);max-width:520px;line-height:1.7;margin-top:.4rem">Five distinct areas — each with a different character, price range, and travel style.</p>
-      </div>
-      <a href="where-to-stay-in-da-nang.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">Full area guide →</a>
-    </div>
+    <div class="neighborhoods-layout">
 
-    <div class="neighborhood-grid" role="list">
+      <!-- LEFT: heading + neighbourhood cards -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:.2rem">
+          <div>
+            <p class="section-label">Where to Stay</p>
+            <h2 class="section-heading" id="neighborhoods-heading">Da Nang <em>Neighbourhood Guide</em></h2>
+            <p style="font-size:.97rem;color:var(--ink-muted);max-width:480px;line-height:1.7;margin-top:.4rem">Five distinct areas — each with a different character, price range, and travel style.</p>
+          </div>
+          <a href="where-to-stay-in-da-nang.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0;align-self:flex-end">Full area guide →</a>
+        </div>
+
+        <div class="neighborhood-grid" role="list">
 
       <a href="where-to-stay-in-da-nang.html#my-khe" class="nbhd-card" role="listitem" aria-label="Where to stay in My Khe Beach">
         <img class="nbhd-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=900&fit=crop&auto=format&q=80" alt="My Khe Beach, Da Nang — white sand and calm South China Sea" loading="eager" width="600" height="900">
@@ -1056,8 +1101,58 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
         </div>
       </a>
 
-    </div>
-  </div>
+        </div><!-- /neighborhood-grid -->
+      </div><!-- /left column -->
+
+      <!-- RIGHT: booking widget -->
+      <div class="nbhd-booking-widget" role="complementary" aria-label="Search Da Nang hotels">
+        <div class="nbw-header">
+          <div class="nbw-eyebrow">Booking.com · 110+ Da Nang Hotels</div>
+          <div class="nbw-headline">Check <em>Lowest Prices</em><br>in Da Nang</div>
+          <p class="nbw-sub">Live rates · Free cancellation where available</p>
+        </div>
+        <div class="nbw-body">
+          <form id="nbw-form" onsubmit="return handleNbwSubmit(event)">
+            <div class="nbw-field">
+              <label class="nbw-label" for="nbw-dest">Destination</label>
+              <input class="nbw-input" id="nbw-dest" type="text" value="Da Nang, Vietnam" readonly>
+            </div>
+            <div class="nbw-dates">
+              <div class="nbw-field" style="margin-bottom:0">
+                <label class="nbw-label" for="nbw-checkin">Check-in</label>
+                <input class="nbw-input" id="nbw-checkin" type="date" required>
+              </div>
+              <div class="nbw-field" style="margin-bottom:0">
+                <label class="nbw-label" for="nbw-checkout">Check-out</label>
+                <input class="nbw-input" id="nbw-checkout" type="date" required>
+              </div>
+            </div>
+            <div class="nbw-field">
+              <label class="nbw-label" for="nbw-guests">Guests</label>
+              <select class="nbw-input" id="nbw-guests">
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5+ guests</option>
+              </select>
+            </div>
+            <button class="nbw-submit" type="submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+              Check Lowest Prices
+            </button>
+          </form>
+        </div>
+        <div class="nbw-trust">
+          <span class="nbw-trust-item">Free cancellation</span>
+          <span class="nbw-trust-item">Best price guarantee</span>
+          <span class="nbw-trust-item">110+ hotels</span>
+        </div>
+        <p class="nbw-disclosure">Via <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=nbw-disclosure&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2520Nang%252C%2520Vietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
+      </div><!-- /booking widget -->
+
+    </div><!-- /neighborhoods-layout -->
+  </div><!-- /neighborhoods-inner -->
 </section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1775,6 +1870,40 @@ function handleBookingWidgetSubmit(e) {
   window.open(awinLink, '_blank', 'noopener,noreferrer');
   return false;
 }
+
+function handleNbwSubmit(e) {
+  e.preventDefault();
+  var checkin  = document.getElementById('nbw-checkin')  ? document.getElementById('nbw-checkin').value  : '';
+  var checkout = document.getElementById('nbw-checkout') ? document.getElementById('nbw-checkout').value : '';
+  var guests   = document.getElementById('nbw-guests')   ? document.getElementById('nbw-guests').value   : '2';
+  var dest = 'https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&lang=en-gb&sb=1'
+           + (checkin  ? '&checkin='      + checkin  : '')
+           + (checkout ? '&checkout='     + checkout : '')
+           + (guests   ? '&group_adults=' + guests   : '');
+  var awinLink = window.generateBookingLink ? window.generateBookingLink(dest, 'nbw-widget') : 'https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=nbw-widget&ued=' + encodeURIComponent(dest);
+  window.open(awinLink, '_blank', 'noopener,noreferrer');
+  return false;
+}
+
+// Date defaults for nbw widget
+(function() {
+  var ci = document.getElementById('nbw-checkin');
+  var co = document.getElementById('nbw-checkout');
+  if (!ci || !co) return;
+  var today = new Date();
+  var checkout = new Date(today);
+  checkout.setDate(today.getDate() + 2);
+  function fmt(d) { return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+  ci.value = fmt(today);
+  co.value = fmt(checkout);
+  ci.min = fmt(today);
+  co.min = fmt(new Date(today.getTime() + 86400000));
+  ci.addEventListener('change', function() {
+    var newMin = new Date(this.value); newMin.setDate(newMin.getDate()+1);
+    co.min = fmt(newMin);
+    if (co.value && co.value <= this.value) co.value = fmt(newMin);
+  });
+})();
 </script>
 </body>
 </html>
