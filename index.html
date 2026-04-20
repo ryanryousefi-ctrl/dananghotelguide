@@ -1148,7 +1148,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
           <span class="nbw-trust-item">Best price guarantee</span>
           <span class="nbw-trust-item">110+ hotels</span>
         </div>
-        <p class="nbw-disclosure">Via <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=nbw-disclosure&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2520Nang%252C%2520Vietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
+        <p class="nbw-disclosure">Via <a href="https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
       </div><!-- /booking widget -->
 
     </div><!-- /neighborhoods-layout -->
@@ -1876,12 +1876,11 @@ function handleNbwSubmit(e) {
   var checkin  = document.getElementById('nbw-checkin')  ? document.getElementById('nbw-checkin').value  : '';
   var checkout = document.getElementById('nbw-checkout') ? document.getElementById('nbw-checkout').value : '';
   var guests   = document.getElementById('nbw-guests')   ? document.getElementById('nbw-guests').value   : '2';
-  var dest = 'https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&dest_id=-3730689&dest_type=city&lang=en-gb&sb=1'
+  var url = 'https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city&lang=en-gb&sb=1'
            + (checkin  ? '&checkin='      + checkin  : '')
            + (checkout ? '&checkout='     + checkout : '')
            + (guests   ? '&group_adults=' + guests   : '');
-  var awinLink = window.generateBookingLink ? window.generateBookingLink(dest, 'nbw-widget') : 'https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=nbw-widget&ued=' + encodeURIComponent(dest);
-  window.open(awinLink, '_blank', 'noopener,noreferrer');
+  window.open(url, '_blank', 'noopener,noreferrer');
   return false;
 }
 
