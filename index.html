@@ -340,17 +340,21 @@ a{text-decoration:none;color:inherit}
 }
 .hero-content--split{display:flex;align-items:flex-end;gap:2rem;}
 .hero-text{flex:1;min-width:0;}
-.hero-booking-widget{
-  flex:0 0 340px;
-  margin-right:calc(2rem + 96px);
+.hero-widget-wrap{
+  flex:0 0 auto;
+  margin-right:calc(1rem + 96px);
   margin-bottom:clamp(4rem,10vh,7rem);
   transform:translateY(-96px);
   position:relative;
   z-index:10;
+  padding:2px;
+}
+.hero-booking-widget{
+  width:340px;
   background:rgba(13,40,40,.72);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
   border-radius:var(--r-xl);
   overflow:hidden;
   box-shadow:0 20px 60px rgba(0,0,0,.45);
@@ -822,7 +826,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 }
 @media(max-width:768px){
   .hero-content--split{display:block;}
-  .hero-booking-widget{display:none;}
+  .hero-widget-wrap{display:none;}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .nav-stays-btn span.btn-text{display:none}
@@ -1035,7 +1039,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
   </div>
   </div><!-- /hero-text -->
   <!-- HERO: booking widget -->
-  <div class="hero-booking-widget" role="complementary" aria-label="Search Da Nang hotels">
+  <div class="hero-widget-wrap"><div class="hero-booking-widget" role="complementary" aria-label="Search Da Nang hotels">
 <div class="nbw-header">
           <div class="nbw-eyebrow">Booking.com · 110+ Da Nang Hotels</div>
           <div class="nbw-headline">Check <em>Lowest Prices</em><br>in Da Nang</div>
@@ -1079,7 +1083,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
           <span class="nbw-trust-item">110+ hotels</span>
         </div>
         <p class="nbw-disclosure">Via <a href="https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
-  </div><!-- /hero-booking-widget -->
+  </div></div><!-- /hero-booking-widget -->
 </header>
 
 
