@@ -1880,11 +1880,18 @@ function handleNbwSubmit(e) {
   var checkin  = document.getElementById('nbw-checkin')  ? document.getElementById('nbw-checkin').value  : '';
   var checkout = document.getElementById('nbw-checkout') ? document.getElementById('nbw-checkout').value : '';
   var guests   = document.getElementById('nbw-guests')   ? document.getElementById('nbw-guests').value   : '2';
-  var url = 'https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city&lang=en-gb&sb=1'
+  var dest = 'https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city&lang=en-gb&sb=1'
            + (checkin  ? '&checkin='      + checkin  : '')
            + (checkout ? '&checkout='     + checkout : '')
            + (guests   ? '&group_adults=' + guests   : '');
-  window.open(url, '_blank', 'noopener,noreferrer');
+  var awinUrl = 'https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hero-widget&ued=' + encodeURIComponent(dest);
+  var a = document.createElement('a');
+  a.href = awinUrl;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer sponsored';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
   return false;
 }
 
