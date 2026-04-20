@@ -338,6 +338,19 @@ a{text-decoration:none;color:inherit}
   max-width:var(--max);
   margin:0 auto;
 }
+.hero-content--split{display:flex;align-items:flex-end;gap:3rem;}
+.hero-text{flex:1;min-width:0;}
+.hero-booking-widget{
+  flex:0 0 340px;
+  background:rgba(13,40,40,.72);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+  margin-bottom:clamp(2.5rem,6vh,4.5rem);
+}
 
 /* Slide-synced tag line above the title */
 .hero-tag{
@@ -552,7 +565,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 /* ─── NEIGHBORHOOD SECTION ───────────────────────────────── */
 .neighborhoods-section{background:var(--white);padding:clamp(3.5rem,7vw,6rem) var(--gutter);}
 .neighborhoods-inner{max-width:var(--max);margin:0 auto;}
-.neighborhoods-layout{display:grid;grid-template-columns:1fr 360px;gap:3.5rem;align-items:start;}
+
 .neighborhood-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -560,13 +573,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
   margin-top:2rem;
 }
 /* booking widget in neighborhoods section */
-.nbhd-booking-widget{
-  position:sticky;top:84px;
-  background:var(--ocean-deep);
-  border-radius:var(--r-xl);
-  overflow:hidden;
-  box-shadow:0 12px 40px rgba(13,53,53,.25);
-}
+
 .nbw-header{
   background:linear-gradient(135deg,var(--ocean-deep) 0%,var(--ocean-light) 100%);
   padding:1.6rem 1.6rem 1.2rem;
@@ -797,7 +804,6 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
 
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:1100px){
-  .neighborhoods-layout{grid-template-columns:1fr;}
   .neighborhood-grid{grid-template-columns:repeat(3,1fr);}
   .hg-grid{grid-template-columns:repeat(2,1fr);}
   .map-layout{grid-template-columns:1fr;}
@@ -811,6 +817,8 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
   .links-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:768px){
+  .hero-content--split{display:block;}
+  .hero-booking-widget{display:none;}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .nav-stays-btn span.btn-text{display:none}
@@ -1002,7 +1010,8 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
   <div class="hero-counter" aria-hidden="true"><span id="heroCurrentNum">01</span> / 05</div>
 
   <!-- Content area — text updated by JS on each slide transition -->
-  <div class="hero-content">
+  <div class="hero-content hero-content--split">
+  <div class="hero-text">
     <p class="hero-kicker fade-up fu1">Da Nang, Vietnam &nbsp;&middot;&nbsp; Independent since 2021</p>
     <h1 class="hero-h1 fade-up fu2" id="heroTitle">Where to stay in Da Nang</h1>
     <p class="hero-sub fade-up fu3" id="heroSub">My Khe, Son Tra, Han River, Non Nuoc — five neighbourhoods, one honest guide. Find the right part of the city before you book.</p>
@@ -1020,6 +1029,53 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
     <button class="hero-dot"        role="tab" aria-selected="false" data-slide="3" aria-label="Slide 4"></button>
     <button class="hero-dot"        role="tab" aria-selected="false" data-slide="4" aria-label="Slide 5"></button>
   </div>
+  </div><!-- /hero-text -->
+  <!-- HERO: booking widget -->
+  <div class="hero-booking-widget" role="complementary" aria-label="Search Da Nang hotels">
+<div class="nbw-header">
+          <div class="nbw-eyebrow">Booking.com · 110+ Da Nang Hotels</div>
+          <div class="nbw-headline">Check <em>Lowest Prices</em><br>in Da Nang</div>
+          <p class="nbw-sub">Live rates · Free cancellation where available</p>
+        </div>
+        <div class="nbw-body">
+          <form id="nbw-form" onsubmit="return handleNbwSubmit(event)">
+            <div class="nbw-field">
+              <label class="nbw-label" for="nbw-dest">Destination</label>
+              <input class="nbw-input" id="nbw-dest" type="text" value="Da Nang, Vietnam" readonly>
+            </div>
+            <div class="nbw-dates">
+              <div class="nbw-field" style="margin-bottom:0">
+                <label class="nbw-label" for="nbw-checkin">Check-in</label>
+                <input class="nbw-input" id="nbw-checkin" type="date" required>
+              </div>
+              <div class="nbw-field" style="margin-bottom:0">
+                <label class="nbw-label" for="nbw-checkout">Check-out</label>
+                <input class="nbw-input" id="nbw-checkout" type="date" required>
+              </div>
+            </div>
+            <div class="nbw-field">
+              <label class="nbw-label" for="nbw-guests">Guests</label>
+              <select class="nbw-input" id="nbw-guests">
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5+ guests</option>
+              </select>
+            </div>
+            <button class="nbw-submit" type="submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+              Check Lowest Prices
+            </button>
+          </form>
+        </div>
+        <div class="nbw-trust">
+          <span class="nbw-trust-item">Free cancellation</span>
+          <span class="nbw-trust-item">Best price guarantee</span>
+          <span class="nbw-trust-item">110+ hotels</span>
+        </div>
+        <p class="nbw-disclosure">Via <a href="https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
+  </div><!-- /hero-booking-widget -->
 </header>
 
 
@@ -1031,11 +1087,7 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="neighborhoods-section" aria-labelledby="neighborhoods-heading">
   <div class="neighborhoods-inner">
-    <div class="neighborhoods-layout">
-
-      <!-- LEFT: heading + neighbourhood cards -->
-      <div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:.2rem">
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:.2rem">
           <div>
             <p class="section-label">Where to Stay</p>
             <h2 class="section-heading" id="neighborhoods-heading">Da Nang <em>Neighbourhood Guide</em></h2>
@@ -1102,56 +1154,6 @@ h1.hero-h1 em{font-style:italic;font-weight:400}
       </a>
 
         </div><!-- /neighborhood-grid -->
-      </div><!-- /left column -->
-
-      <!-- RIGHT: booking widget -->
-      <div class="nbhd-booking-widget" role="complementary" aria-label="Search Da Nang hotels">
-        <div class="nbw-header">
-          <div class="nbw-eyebrow">Booking.com · 110+ Da Nang Hotels</div>
-          <div class="nbw-headline">Check <em>Lowest Prices</em><br>in Da Nang</div>
-          <p class="nbw-sub">Live rates · Free cancellation where available</p>
-        </div>
-        <div class="nbw-body">
-          <form id="nbw-form" onsubmit="return handleNbwSubmit(event)">
-            <div class="nbw-field">
-              <label class="nbw-label" for="nbw-dest">Destination</label>
-              <input class="nbw-input" id="nbw-dest" type="text" value="Da Nang, Vietnam" readonly>
-            </div>
-            <div class="nbw-dates">
-              <div class="nbw-field" style="margin-bottom:0">
-                <label class="nbw-label" for="nbw-checkin">Check-in</label>
-                <input class="nbw-input" id="nbw-checkin" type="date" required>
-              </div>
-              <div class="nbw-field" style="margin-bottom:0">
-                <label class="nbw-label" for="nbw-checkout">Check-out</label>
-                <input class="nbw-input" id="nbw-checkout" type="date" required>
-              </div>
-            </div>
-            <div class="nbw-field">
-              <label class="nbw-label" for="nbw-guests">Guests</label>
-              <select class="nbw-input" id="nbw-guests">
-                <option value="1">1 guest</option>
-                <option value="2" selected>2 guests</option>
-                <option value="3">3 guests</option>
-                <option value="4">4 guests</option>
-                <option value="5">5+ guests</option>
-              </select>
-            </div>
-            <button class="nbw-submit" type="submit">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
-              Check Lowest Prices
-            </button>
-          </form>
-        </div>
-        <div class="nbw-trust">
-          <span class="nbw-trust-item">Free cancellation</span>
-          <span class="nbw-trust-item">Best price guarantee</span>
-          <span class="nbw-trust-item">110+ hotels</span>
-        </div>
-        <p class="nbw-disclosure">Via <a href="https://www.booking.com/searchresults.html?aid=1784897&label=affnetawin-index_pub-2788028_site-_pname-_plc-&dest_id=-3730689&dest_type=city" target="_blank" rel="nofollow noopener sponsored">Booking.com</a>. We earn a small commission at no extra cost to you.</p>
-      </div><!-- /booking widget -->
-
-    </div><!-- /neighborhoods-layout -->
   </div><!-- /neighborhoods-inner -->
 </section>
 
