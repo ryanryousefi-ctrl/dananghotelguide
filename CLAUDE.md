@@ -15,20 +15,28 @@ NEVER use `href="/filename.html"` or `href="guides/filename.html"` — leading s
 
 ## Affiliate parameters
 
-- Booking.com Da Nang dest_id: `-3730689`
 - Booking.com aid: `1784897`
 - Awin mid: `18119`
 - Awin affid: `2788028`
-- Hoi An dest_id: `-3723930`
+- NEVER use `dest_id` in Da Nang search URLs — `-3730689` resolves to wrong location (Thôn Mai Ðang), use `ss=Da+Nang%2C+Vietnam` only
 - NEVER use Hanoi dest_id `-3714993` — wrong city, has appeared in past errors
 
 ## Booking.com link format
 
+Generic Da Nang search (always use ss= not dest_id):
 ```
-https://www.booking.com/searchresults.html?dest_id=-3730689&dest_type=city&aid=1784897
+https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=1784897
 ```
 
-Affiliate wrapper: use `awinmid=18119` and `awinaffid=2788028` via Awin network.
+Hotel-specific (use the hotel's own Booking.com URL slug):
+```
+https://www.booking.com/hotel/vn/hotel-slug.html?aid=1784897
+```
+
+Affiliate wrapper: ALL Booking.com links must go through the Awin network:
+```
+https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=LABEL&ued=ENCODED_BOOKING_URL
+```
 
 ## Design system
 
