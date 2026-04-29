@@ -13,7 +13,7 @@
 <style>
   :root {
     --sand: #f5f0e8;
-    --deep-ocean: #0a2342;
+    --ocean-deep: #0a2342;
     --ocean: #1a4a6b;
     --teal: #2d8b7a;
     --coral: #e8614d;
@@ -38,23 +38,61 @@
   }
 
   /* ─── SITE NAVIGATION ─── */
-  .site-nav {
-    background: var(--deep-ocean);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+  
+/* ─── SITE NAV ──────────────────────────────────────────── */
+.site-nav{
+  position:sticky;top:0;z-index:500;
+  height:64px;
+  background:rgba(13,53,53,.97);
+  backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;
+  padding:0 var(--gutter);
+  gap:0;
+}
+.nav-logo{font-family:var(--font-serif);font-size:1.35rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1rem,3vw,2.5rem);}
+.nav-logo{display:inline-flex;align-items:baseline;gap:.35em}
+.nav-logo em{font-style:italic;color:var(--coral-light)}
+.nav-links{display:flex;align-items:center;gap:0;flex:1;}
+.nav-link{
+  position:relative;
+  padding:8px 13px;
+  border-radius:8px;
+  font-size:.82rem;font-weight:600;
+  color:rgba(255,255,255,.5);
+  transition:color .18s,background .18s;
+  white-space:nowrap;
+}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
+.nav-dropdown{position:relative;}
+.nav-dropdown-toggle::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:5px;transition:transform .2s;}
+.nav-dropdown:hover .nav-dropdown-toggle::after{transform:rotate(-135deg) translateY(-2px);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--ocean-deep);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:.5rem;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,visibility .2s,transform .2s;box-shadow:0 16px 40px rgba(0,0,0,.4);z-index:600;}
+.nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:var(--r-md);transition:color .15s,background .15s;}
+.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-dropdown-item .di-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0;}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
+.nav-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;cursor:pointer;background:rgba(255,255,255,.08);border-radius:50%;color:rgba(255,255,255,.6);transition:background .18s,color .18s;}
+.nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
+.nav-search-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.nav-stays-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;background:var(--coral);border-radius:100px;font-size:.8rem;font-weight:700;color:#fff;border:none;cursor:pointer;transition:background .18s,transform .18s;white-space:nowrap;text-decoration:none;}
+.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:8px;padding:8px;}
+.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}
+.mobile-menu{display:none;position:fixed;inset:0;top:64px;background:var(--ocean-deep);z-index:490;padding:1.5rem var(--gutter);overflow-y:auto;flex-direction:column;}
+.mobile-menu.open{display:flex}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s;}
+.mobile-nav-link:hover{color:#fff}
+.mobile-nav-link.active{color:var(--coral-light)}
+.mobile-sub-link{display:block;padding:8px 16px;font-size:.9rem;color:rgba(255,255,255,.5);transition:color .15s;}
+.mobile-sub-link:hover{color:#fff}
+.mobile-dropdown-items{display:none;}
+.mobile-dropdown-items.open{display:block}
+.mobile-stays-btn{display:block;margin-top:1.5rem;padding:14px;background:var(--coral);border-radius:var(--r-lg);text-align:center;font-weight:700;color:#fff;}
 
-  .site-nav-inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 56px;
-  }
 
   .site-logo {
     font-family: 'DM Serif Display', serif;
@@ -114,7 +152,7 @@
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    background: var(--deep-ocean);
+    background: rgba(13,53,53,.97);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 10px;
     padding: 8px;
@@ -209,7 +247,7 @@
 
   /* ─── HERO ─── */
   .hero {
-    background: var(--deep-ocean);
+    background: rgba(13,53,53,.97);
     background-image: 
       radial-gradient(ellipse at 20% 50%, rgba(45, 139, 122, 0.3) 0%, transparent 60%),
       radial-gradient(ellipse at 80% 20%, rgba(201, 151, 58, 0.2) 0%, transparent 50%);
@@ -298,7 +336,7 @@
   h2 {
     font-family: 'DM Serif Display', serif;
     font-size: clamp(1.5rem, 4vw, 2.1rem);
-    color: var(--deep-ocean);
+    color: rgba(13,53,53,.97);
     margin-bottom: 16px;
     line-height: 1.25;
   }
@@ -361,7 +399,7 @@
   }
 
   thead th {
-    background: var(--deep-ocean);
+    background: rgba(13,53,53,.97);
     color: rgba(255,255,255,0.9);
     font-weight: 600;
     font-size: 12px;
@@ -384,7 +422,7 @@
   tbody tr:hover { background: var(--mist); }
 
   tbody td { padding: 13px 16px; color: var(--text); }
-  tbody td:first-child { font-weight: 600; color: var(--deep-ocean); }
+  tbody td:first-child { font-weight: 600; color: rgba(13,53,53,.97); }
 
   .price-cell {
     font-weight: 500;
@@ -429,7 +467,7 @@
   .stat-value {
     font-family: 'DM Serif Display', serif;
     font-size: 1.9rem;
-    color: var(--deep-ocean);
+    color: rgba(13,53,53,.97);
     line-height: 1;
     margin-bottom: 4px;
   }
@@ -480,7 +518,7 @@
 
   /* ─── ANALYSIS BLOCK ─── */
   .analysis-block {
-    background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--ocean) 100%);
+    background: linear-gradient(135deg, rgba(13,53,53,.97) 0%, var(--ocean) 100%);
     border-radius: 14px;
     padding: 28px 32px;
     color: #fff;
@@ -513,7 +551,7 @@
   .faq-q {
     font-family: 'DM Serif Display', serif;
     font-size: 1.1rem;
-    color: var(--deep-ocean);
+    color: rgba(13,53,53,.97);
     margin-bottom: 10px;
   }
 
@@ -749,41 +787,71 @@
 <body>
 
 <!-- ─── SITE NAVIGATION ─── -->
-<nav class="site-nav" aria-label="Main navigation">
-  <div class="site-nav-inner">
-    <a href="https://www.dananghotelguide.com/" class="site-logo">DaNang<span>HotelGuide</span></a>
-    <ul class="nav-links" role="list">
-      <li><a href="https://www.dananghotelguide.com/">Home</a></li>
-      <li class="nav-dropdown nav-active">
-        <a href="https://www.dananghotelguide.com/guides/" class="active" aria-haspopup="true">Guides</a>
-        <div class="dropdown-menu" role="menu">
-          <div class="dropdown-label">Planning Guides</div>
-          <a href="https://www.dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" class="current" role="menuitem">📊 Hotel Prices by Month</a>
-          <a href="https://www.dananghotelguide.com/guides/da-nang-travel-cost-guide/" role="menuitem">💵 Da Nang Travel Cost Guide</a>
-          <a href="https://www.dananghotelguide.com/guides/where-to-stay-in-da-nang/" role="menuitem">🗺️ Where to Stay in Da Nang</a>
-          <div class="dropdown-label" style="margin-top:4px;">Hotel Picks</div>
-          <a href="https://www.dananghotelguide.com/guides/best-hotels-in-da-nang/" role="menuitem">⭐ Best Hotels in Da Nang</a>
-          <a href="https://www.dananghotelguide.com/guides/best-beachfront-hotels-da-nang/" role="menuitem">🏖️ Best Beachfront Hotels</a>
-        </div>
-      </li>
-      <li><a href="https://www.dananghotelguide.com/neighborhoods/">Neighborhoods</a></li>
-      <li><a href="https://www.dananghotelguide.com/hotels/">Hotels</a></li>
-      <li><a href="https://www.dananghotelguide.com/search/">Search</a></li>
-    </ul>
-    <button class="nav-hamburger" aria-label="Open menu">☰</button>
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Da Nang <em>Hotel Guide</em></a>
+  <div class="nav-links" role="list">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
+        <a href="da-nang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🏖</span>Beachfront</a>
+        <a href="luxury-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">✦</span>Luxury</a>
+        <a href="family-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">👨‍👩‍👧</span>Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">◈</span>Boutique</a>
+      </div>
+    </div>
+    <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
+    <a href="dining.html" class="nav-link">Dining</a>
+    <a href="guides.html" class="nav-link">Guides</a>
+    <a href="hotel-reviews.html" class="nav-link">Hotel Reviews</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="da-nang-videos.html" class="nav-link">Videos</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-search-btn" aria-label="Search site">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hotel-prices-by-month-nav&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Search Stays</span>
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html" class="mobile-nav-link">Home</a>
+  <div>
+    <a href="hotels.html" class="mobile-nav-link" id="mobileHotelsToggle">Hotels <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items" id="mobileHotelsSub">
+      <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
+      <a href="da-nang-beach-hotels.html" class="mobile-sub-link">Beachfront Hotels</a>
+      <a href="luxury-hotels-da-nang.html" class="mobile-sub-link">Luxury Hotels</a>
+      <a href="family-hotels-da-nang.html" class="mobile-sub-link">Family Hotels</a>
+      <a href="boutique-hotels-da-nang.html" class="mobile-sub-link">Boutique Hotels</a>
+    </div>
+  </div>
+  <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
+  <a href="dining.html" class="mobile-nav-link">Dining</a>
+  <a href="guides.html" class="mobile-nav-link">Guides</a>
+  <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
+  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hotel-prices-by-month-mobile&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DDa%2BNang%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" class="mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+</div>
 
 <!-- ─── BREADCRUMB ─── -->
 <div class="breadcrumb-bar">
   <div class="breadcrumb-inner">
     <ol class="breadcrumb" aria-label="Breadcrumb">
       <li>
-        <a href="https://www.dananghotelguide.com/">Home</a>
+        <a href="index.html">Home</a>
         <span class="sep" aria-hidden="true">›</span>
       </li>
       <li>
-        <a href="https://www.dananghotelguide.com/guides/">Guides</a>
+        <a href="guides.html">Guides</a>
         <span class="sep" aria-hidden="true">›</span>
       </li>
       <li>
@@ -830,7 +898,7 @@
       </p>
     </div>
     <p style="margin-top:20px;">
-      The price index on this page was compiled by manually sampling rates across <strong>20 representative hotels</strong> in Da Nang's three main market tiers — 3-star city hotels, 4-star beach hotels, and 5-star resort properties. Rates were cross-referenced against booking platforms and property rate sheets from late 2025 and early 2026. This is not an automated aggregation; it is a curated editorial index intended to give travelers a realistic planning baseline. For a full breakdown of what a trip costs beyond accommodation, see our <a href="https://www.dananghotelguide.com/guides/da-nang-travel-cost-guide/" style="color:var(--teal); font-weight:600;">Da Nang Travel Cost Guide</a>.
+      The price index on this page was compiled by manually sampling rates across <strong>20 representative hotels</strong> in Da Nang's three main market tiers — 3-star city hotels, 4-star beach hotels, and 5-star resort properties. Rates were cross-referenced against booking platforms and property rate sheets from late 2025 and early 2026. This is not an automated aggregation; it is a curated editorial index intended to give travelers a realistic planning baseline. For a full breakdown of what a trip costs beyond accommodation, see our <a href="da-nang-budget-guide.html" style="color:var(--teal); font-weight:600;">Da Nang Travel Cost Guide</a>.
     </p>
 
     <div class="data-note">
@@ -1157,31 +1225,31 @@
   <section>
     <div class="section-label">Related Guides</div>
     <h2>Continue Planning Your Da Nang Trip</h2>
-    <p>Use these guides alongside the <a href="https://www.dananghotelguide.com/guides/da-nang-hotel-prices-by-month/" style="color:var(--teal); font-weight:500;">Da Nang hotel prices by month</a> index to plan your full itinerary and budget.</p>
+    <p>Use these guides alongside the <a href="guides-da-nang-hotel-prices-by-month.html" style="color:var(--teal); font-weight:500;">Da Nang hotel prices by month</a> index to plan your full itinerary and budget.</p>
 
     <div class="related-guides">
       <h3>From the Guides Section</h3>
       <ul class="related-links">
         <li>
-          <a href="https://www.dananghotelguide.com/guides/best-hotels-in-da-nang/">
+          <a href="best-hotels-in-da-nang.html">
             <span class="link-icon">⭐</span>
             Best Hotels in Da Nang
           </a>
         </li>
         <li>
-          <a href="https://www.dananghotelguide.com/guides/where-to-stay-in-da-nang/">
+          <a href="where-to-stay-in-da-nang.html">
             <span class="link-icon">🗺️</span>
             Where to Stay in Da Nang
           </a>
         </li>
         <li>
-          <a href="https://www.dananghotelguide.com/guides/best-beachfront-hotels-da-nang/">
+          <a href="da-nang-beach-hotels.html">
             <span class="link-icon">🏖️</span>
             Best Beachfront Hotels
           </a>
         </li>
         <li>
-          <a href="https://www.dananghotelguide.com/guides/da-nang-travel-cost-guide/">
+          <a href="da-nang-budget-guide.html">
             <span class="link-icon">💵</span>
             Da Nang Travel Cost Guide
           </a>
@@ -1197,11 +1265,11 @@
     <p><strong>DaNangHotelGuide.com</strong> — Independent hotel research for Da Nang, Vietnam.</p>
     <p style="margin-top:8px;">Price index last reviewed: January 2026. All rates in USD. Not affiliated with any hotel or booking platform.<br>Data is for planning purposes only. Actual rates vary by property, availability, and booking channel.</p>
     <div class="footer-links">
-      <a href="https://www.dananghotelguide.com/">Home</a>
-      <a href="https://www.dananghotelguide.com/guides/">All Guides</a>
-      <a href="https://www.dananghotelguide.com/guides/best-hotels-in-da-nang/">Best Hotels</a>
-      <a href="https://www.dananghotelguide.com/guides/da-nang-travel-cost-guide/">Travel Costs</a>
-      <a href="https://www.dananghotelguide.com/guides/where-to-stay-in-da-nang/">Where to Stay</a>
+      <a href="index.html">Home</a>
+      <a href="guides.html">All Guides</a>
+      <a href="best-hotels-in-da-nang.html">Best Hotels</a>
+      <a href="da-nang-budget-guide.html">Travel Costs</a>
+      <a href="where-to-stay-in-da-nang.html">Where to Stay</a>
     </div>
   </div>
 </footer>
