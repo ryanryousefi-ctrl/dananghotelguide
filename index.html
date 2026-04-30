@@ -1794,31 +1794,17 @@ function runSearch(query) {
 </script>
 
 <script>
+var STATIC_DA_NANG_AWIN = 'https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&ued=' + encodeURIComponent('https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Da+Nang+Municipality%2C+Vietnam&dest_id=-3730689&dest_type=city&aid=1784897');
+
 function handleBookingWidgetSubmit(e) {
   e.preventDefault();
-  var checkin  = document.getElementById('bw-checkin')  ? document.getElementById('bw-checkin').value  : '';
-  var checkout = document.getElementById('bw-checkout') ? document.getElementById('bw-checkout').value : '';
-  var guests   = document.getElementById('bw-guests')   ? document.getElementById('bw-guests').value   : '2';
-  var dest = 'https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Da+Nang+Municipality%2C+Vietnam&dest_id=-3730689&dest_type=city&aid=1784897'
-           + (checkin  ? '&checkin='      + checkin  : '')
-           + (checkout ? '&checkout='     + checkout : '')
-           + (guests   ? '&group_adults=' + guests   : '');
-  var awinLink = window.generateBookingLink(dest, 'booking-widget');
-  window.open(awinLink, '_blank', 'noopener,noreferrer');
+  window.open(STATIC_DA_NANG_AWIN, '_blank', 'noopener,noreferrer');
   return false;
 }
 
 function handleNbwSubmit(e) {
   e.preventDefault();
-  var checkin  = document.getElementById('nbw-checkin')  ? document.getElementById('nbw-checkin').value  : '';
-  var checkout = document.getElementById('nbw-checkout') ? document.getElementById('nbw-checkout').value : '';
-  var guests   = document.getElementById('nbw-guests')   ? document.getElementById('nbw-guests').value   : '2';
-  var dest = 'https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Da+Nang+Municipality%2C+Vietnam&dest_id=-3730689&dest_type=city&aid=1784897'
-           + (checkin  ? '&checkin='      + checkin  : '')
-           + (checkout ? '&checkout='     + checkout : '')
-           + (guests   ? '&group_adults=' + guests   : '');
-  var awinLink = window.generateBookingLink(dest, 'hero-widget');
-  window.open(awinLink, '_blank', 'noopener,noreferrer');
+  window.open(STATIC_DA_NANG_AWIN, '_blank', 'noopener,noreferrer');
   return false;
 }
 
