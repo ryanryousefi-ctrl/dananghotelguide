@@ -59,7 +59,7 @@ Affiliate wrapper: use `awinmid=18119` and `awinaffid=2788028` via Awin network.
 
 ## SEO rules
 
-- Canonical URLs: non-www (`https://dananghotelguide.com/filename.html`)
+- Canonical URLs: www (`https://www.dananghotelguide.com/filename.html`)
 - No noindex tags on hotel or guide pages
 - `og:url` must match canonical
 - FAQPage schema where applicable
