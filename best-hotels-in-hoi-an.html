@@ -97,6 +97,10 @@ a{text-decoration:none;color:inherit}
 .nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:var(--r-md);transition:color .15s,background .15s}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
 .nav-dropdown-item .di-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
+.lang-toggle{display:flex;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;overflow:hidden;flex-shrink:0}
+.lang-btn{padding:5px 10px;font-size:.7rem;font-weight:700;letter-spacing:.05em;color:rgba(255,255,255,.4);transition:color .15s,background .15s;cursor:pointer;text-decoration:none;line-height:1}
+.lang-btn.active{background:var(--coral);color:#fff}
+.lang-btn:hover:not(.active){color:#fff}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .nav-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;cursor:pointer;background:rgba(255,255,255,.08);border-radius:50%;color:rgba(255,255,255,.6);transition:background .18s,color .18s}
 .nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
@@ -416,6 +420,11 @@ details[open] .faq-question::after{transform:rotate(-135deg) translateY(2px)}
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
+    <div class="lang-toggle" role="navigation" aria-label="Language selection">
+      <a href="/best-hotels-in-hoi-an.html" class="lang-btn active">EN</a>
+      <a href="/kr/best-hotels-in-hoi-an.html" class="lang-btn">KR</a>
+      <a href="/ru/best-hotels-in-hoi-an.html" class="lang-btn">RU</a>
+    </div>
     <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=best-hotels-in-hoi-an-bare&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHoi%2BAn%252C%2BVietnam%26dest_id%3D-3723930%26dest_type%3Dcity%26aid%3D1784897"
        class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
       <span class="btn-text">Search Hoi An Hotels</span>

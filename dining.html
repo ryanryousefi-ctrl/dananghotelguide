@@ -58,6 +58,10 @@ img{display:block;max-width:100%}
 .nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:var(--r-md);transition:color .15s,background .15s}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
+.lang-toggle{display:flex;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;overflow:hidden;flex-shrink:0}
+.lang-btn{padding:5px 10px;font-size:.7rem;font-weight:700;letter-spacing:.05em;color:rgba(255,255,255,.4);transition:color .15s,background .15s;cursor:pointer;text-decoration:none;line-height:1}
+.lang-btn.active{background:var(--coral);color:#fff}
+.lang-btn:hover:not(.active){color:#fff}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#C8604A;color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s}
 .nav-stays-btn:hover{background:#E07A62}
@@ -752,6 +756,11 @@ img{display:block;max-width:100%}
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
+    <div class="lang-toggle" role="navigation" aria-label="Language selection">
+      <a href="/dining.html" class="lang-btn active">EN</a>
+      <a href="/kr/dining.html" class="lang-btn">KR</a>
+      <a href="/ru/dining.html" class="lang-btn">RU</a>
+    </div>
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search" aria-expanded="false" style="background:rgba(255,255,255,.08);border:none;cursor:pointer;width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:1rem;transition:background .15s">⌕</button>
     <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=dining-lk1&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us"
        class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays</a>
