@@ -1,0 +1,14 @@
+node_modules/
+.claude/
+*.log
+*.zip
+*.patch
+da-nang-malls-guide-ko.html
+fix_all_dupe_images.py
+fix_riverfront_images.py
+improve_hotels.py
+fix-domain-consistency.py
+fix-all-sitewide.py
+fix_riverfront_images.py
+seo_improvements.py
+process_hotels.py
