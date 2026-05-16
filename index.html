@@ -7,10 +7,7 @@
 <meta name="description" content="Find Da Nang's best hotels for 2026. 110+ honest reviews — luxury from $140/night, beach resorts from $80. Local expat guide, no paid rankings.">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://www.dananghotelguide.com/">
-<link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/">
-<link rel="alternate" hreflang="ko" href="https://www.dananghotelguide.com/kr/">
-<link rel="alternate" hreflang="x-default" href="https://www.dananghotelguide.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Open Graph -->
@@ -158,6 +155,10 @@ a{text-decoration:none;color:inherit}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-dropdown-item .di-icon{font-size:.85rem;width:18px;text-align:center;flex-shrink:0;display:none}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
+.lang-toggle{display:flex;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;overflow:hidden;flex-shrink:0}
+.lang-btn{padding:5px 11px;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.45);transition:color .15s,background .15s;cursor:pointer;text-decoration:none}
+.lang-btn.active{background:var(--coral);color:#fff}
+.lang-btn:hover:not(.active){color:#fff}
 .nav-search-btn{
   display:flex;align-items:center;justify-content:center;
   width:36px;height:36px;border:1px solid rgba(255,255,255,.15);cursor:pointer;
@@ -844,6 +845,10 @@ h1.hero-h1 em{font-style:italic}
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
+    <div class="lang-toggle" role="navigation" aria-label="Language selection">
+      <a href="/" class="lang-btn active">EN</a>
+      <a href="/kr/" class="lang-btn">KR</a>
+    </div>
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>

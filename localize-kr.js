@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * dananghotelguide.com — Korean Localization Pipeline
- * Usage: node localize-kr.js [--file filename.html] [--all] [--dry-run]
+ * Usage: node localize-kr.js [--file filename.html] [--all] [--missing] [--dry-run]
  *
  * Requires: ANTHROPIC_API_KEY in environment
  * Install deps: npm install cheerio node-fetch
@@ -21,26 +21,30 @@ try {
 }
 
 // ── config ─────────────────────────────────────────────────────────────────
-const ROOT_DIR = process.env.SITE_ROOT || ".";           // repo root
+const ROOT_DIR = process.env.SITE_ROOT || ".";
 const KR_DIR = path.join(ROOT_DIR, "kr");
-const BASE_URL = "https://dananghotelguide.com";
+const BASE_URL = "https://www.dananghotelguide.com";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const MODEL = "claude-sonnet-4-20250514";
-const BATCH_SIZE = 8;          // text nodes per API call
-const DELAY_MS = 500;          // ms between API calls (rate limiting)
+const MODEL = "claude-sonnet-4-5";
+const BATCH_SIZE = 10;
+const DELAY_MS = 300;
 const MAX_RETRIES = 3;
 
-// Pages to skip (already perfect or non-translatable)
-const SKIP_FILES = new Set([]);
+// Non-public pages to skip
+const SKIP_FILES = new Set([
+  "favicon-html-snippet.html",
+  "site-preview.html",
+]);
 
 // ── CLI args ───────────────────────────────────────────────────────────────
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
+const MISSING_ONLY = args.includes("--missing");
 const TARGET_FILE = (() => {
   const i = args.indexOf("--file");
   return i !== -1 ? args[i + 1] : null;
 })();
-const ALL = args.includes("--all");
+const ALL = args.includes("--all") || MISSING_ONLY;
 
 // ── helpers ────────────────────────────────────────────────────────────────
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -51,7 +55,6 @@ function log(msg) {
 
 /**
  * Translate an array of English strings → Korean via Claude API.
- * Returns array in same order.
  */
 async function translateBatch(texts, retries = 0) {
   if (!ANTHROPIC_API_KEY) {
@@ -61,16 +64,19 @@ async function translateBatch(texts, retries = 0) {
   const numbered = texts.map((t, i) => `${i + 1}. ${t}`).join("\n");
 
   const systemPrompt = `You are a professional travel content translator specializing in Korean SEO.
-Translate the provided numbered English strings into natural, fluent Korean suitable for a luxury travel website targeting Korean tourists visiting Da Nang, Vietnam.
+Translate the provided numbered English strings into natural, fluent Korean suitable for a travel website targeting Korean tourists visiting Da Nang, Vietnam.
 
 Rules:
-- Return ONLY the translated strings in the same numbered format
-- Preserve any HTML entities (&amp; &nbsp; etc.) exactly
+- Return ONLY the translated strings in the same numbered format: "1. translation"
+- Preserve any HTML entities (&amp; &nbsp; &lt; &gt; etc.) exactly as-is
 - Preserve placeholder tokens like {YEAR}, {PRICE} etc.
-- Do not translate proper nouns: Da Nang, Hoi An, Ba Na Hills, My Khe, Han River, Booking.com, brand names, hotel names
-- Use formal polite Korean (존댓말/합쇼체)
-- Optimize for Korean Google search intent where relevant
-- Return exactly the same number of lines as input`;
+- Do NOT translate proper nouns: Da Nang, Hoi An, Ba Na Hills, My Khe, Non Nuoc, Son Tra, Han River, An Bang, Booking.com, Agoda
+- Do NOT translate hotel brand names: Hyatt, Marriott, Intercontinental, Melia, Furama, Pullman, Hilton, Novotel, Sheraton, Radisson, Naman, Premier Village, Muong Thanh, Mikazuki, TMS, Wyndham, Vinpearl, A La Carte, Azura, Brilliant, Fusion, Grand Mercure, Four Points, Tia Wellness, Silk Path, Arbora
+- Use formal polite Korean (합쇼체/존댓말)
+- Write naturally for Korean travelers — use Korean travel search phrasing where natural:
+  다낭 호텔 추천, 다낭 오션뷰 호텔, 다낭 가족여행, 다낭 리조트, 미케비치, 다낭 여행, 호이안 당일치기
+- Return EXACTLY the same number of numbered lines as input
+- Do not add extra lines or commentary`;
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -83,12 +89,7 @@ Rules:
       model: MODEL,
       max_tokens: 4096,
       system: systemPrompt,
-      messages: [
-        {
-          role: "user",
-          content: `Translate these strings to Korean:\n\n${numbered}`,
-        },
-      ],
+      messages: [{ role: "user", content: `Translate these strings to Korean:\n\n${numbered}` }],
     }),
   });
 
@@ -105,7 +106,6 @@ Rules:
   const data = await response.json();
   const raw = data.content[0].text.trim();
 
-  // Parse numbered output back to array
   const lines = raw.split(/\n+/);
   const results = [];
   for (const line of lines) {
@@ -114,7 +114,6 @@ Rules:
   }
 
   if (results.length !== texts.length) {
-    // Fallback: return raw split by newline
     log(`  Warning: expected ${texts.length} translations, got ${results.length}. Using fallback.`);
     return texts.map((_, i) => results[i] || texts[i]);
   }
@@ -124,15 +123,17 @@ Rules:
 
 /**
  * Collect all translatable text nodes from a cheerio document.
- * Returns array of { selector, index, text } objects.
  */
 function collectTextNodes($) {
   const nodes = [];
 
-  // Elements that contain visible text we want to translate
   const TRANSLATE_SELECTORS = [
     "title",
     "meta[name='description']",
+    "meta[property='og:title']",
+    "meta[property='og:description']",
+    "meta[name='twitter:title']",
+    "meta[name='twitter:description']",
     "h1", "h2", "h3", "h4", "h5", "h6",
     "p",
     "li",
@@ -144,57 +145,65 @@ function collectTextNodes($) {
     "figcaption",
     "blockquote",
     "dt", "dd",
-    ".hotel-name",
-    ".hotel-desc",
-    ".cta-text",
-    ".card-body",
-    ".guide-text",
-    ".btn",
     "strong",
     "em",
+    "[aria-label]",
+    "[placeholder]",
+    "img[alt]",
   ];
 
-  // Elements to NEVER translate
-  const SKIP_PARENTS = new Set([
-    "script", "style", "code", "pre", "noscript",
-    "[data-no-translate]", "svg",
-  ]);
+  const SKIP_TAGS = new Set(["script", "style", "code", "pre", "noscript", "svg"]);
 
-  $(TRANSLATE_SELECTORS.join(",")).each((i, el) => {
-    const $el = $(el);
-
-    // Skip if inside a skip-parent
-    let parent = el.parent;
-    let skip = false;
-    while (parent && parent.tagName) {
-      if (SKIP_PARENTS.has(parent.tagName.toLowerCase())) {
-        skip = true;
-        break;
-      }
-      parent = parent.parent;
+  function isInsideSkipTag(el) {
+    let p = el.parent;
+    while (p && p.tagName) {
+      if (SKIP_TAGS.has(p.tagName.toLowerCase())) return true;
+      p = p.parent;
     }
-    if (skip) return;
+    return false;
+  }
 
-    // For meta[name=description], translate content attribute
-    if (el.tagName === "meta") {
+  $(TRANSLATE_SELECTORS.join(",")).each((_, el) => {
+    const $el = $(el);
+    if (isInsideSkipTag(el)) return;
+
+    const tag = el.tagName ? el.tagName.toLowerCase() : "";
+
+    // meta content attributes
+    if (tag === "meta") {
       const content = $el.attr("content");
-      if (content && content.trim()) {
+      if (content && content.trim().length > 1) {
         nodes.push({ type: "attr", el, attr: "content", text: content.trim() });
       }
       return;
     }
 
-    // For title tag
-    if (el.tagName === "title") {
-      const text = $el.text().trim();
-      if (text) nodes.push({ type: "text", el, text });
+    // img alt
+    if (tag === "img") {
+      const alt = $el.attr("alt");
+      if (alt && alt.trim().length > 1) {
+        nodes.push({ type: "attr", el, attr: "alt", text: alt.trim() });
+      }
       return;
     }
 
-    // For regular elements: only translate direct text, not nested
-    // (to avoid double-translating)
-    const directText = $el
-      .contents()
+    // aria-label
+    const ariaLabel = $el.attr("aria-label");
+    if (ariaLabel && ariaLabel.trim().length > 1) {
+      nodes.push({ type: "attr", el, attr: "aria-label", text: ariaLabel.trim() });
+    }
+
+    // placeholder
+    if (tag === "input" || tag === "textarea") {
+      const ph = $el.attr("placeholder");
+      if (ph && ph.trim().length > 1) {
+        nodes.push({ type: "attr", el, attr: "placeholder", text: ph.trim() });
+      }
+      return;
+    }
+
+    // Direct text content only (skip if it only has child elements)
+    const directText = $el.contents()
       .filter((_, n) => n.type === "text")
       .map((_, n) => n.data)
       .get()
@@ -204,28 +213,12 @@ function collectTextNodes($) {
     if (directText && directText.length > 1) {
       nodes.push({ type: "text", el, text: directText });
     }
-
-    // Also handle alt attributes on images
-    if (el.tagName === "img") {
-      const alt = $el.attr("alt");
-      if (alt && alt.trim()) {
-        nodes.push({ type: "attr", el, attr: "alt", text: alt.trim() });
-      }
-    }
-
-    // placeholder attributes
-    if (el.tagName === "input" || el.tagName === "textarea") {
-      const ph = $el.attr("placeholder");
-      if (ph && ph.trim()) {
-        nodes.push({ type: "attr", el, attr: "placeholder", text: ph.trim() });
-      }
-    }
   });
 
-  // Deduplicate by text+el combo
+  // Deduplicate
   const seen = new Set();
   return nodes.filter((n) => {
-    const key = `${n.text}::${n.type}`;
+    const key = `${n.type}:${n.attr || ""}:${n.text}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -234,76 +227,104 @@ function collectTextNodes($) {
 
 /**
  * Fix all internal links to point to /kr/ versions.
+ * Never creates /kr/kr/ links.
  */
 function fixInternalLinks($) {
-  // href attributes
   $("[href]").each((_, el) => {
     const $el = $(el);
     let href = $el.attr("href") || "";
 
-    // Skip anchors, external links, mailto, tel, affiliate links
+    // Skip: anchors, external, mailto, tel, already /kr/, known affiliate domains
     if (
       href.startsWith("#") ||
-      href.startsWith("http") ||
       href.startsWith("mailto") ||
       href.startsWith("tel") ||
-      href.includes("booking.com") ||
-      href.includes("awin") ||
-      href === ""
-    )
-      return;
+      href.startsWith("/kr/") ||
+      href.startsWith("kr/") ||
+      href === "" ||
+      href === "/" ||
+      /^https?:\/\/(www\.)?(booking\.com|awin1\.com|agoda\.com)/.test(href)
+    ) return;
 
-    // Convert root-relative .html links
-    if (href.match(/^\/[^/].*\.html/) && !href.startsWith("/kr/")) {
-      $el.attr("href", "/kr" + href);
-    } else if (href.match(/^[^/].*\.html/) && !href.startsWith("kr/")) {
-      // relative link like "best-hotels-in-da-nang.html"
-      $el.attr("href", "/kr/" + href);
+    // External links — leave alone
+    if (href.startsWith("http")) return;
+
+    // Root homepage: href="/" or href="index.html"
+    if (href === "index.html") {
+      $el.attr("href", "/kr/");
+      return;
     }
+
+    // Root-relative .html links: /filename.html
+    if (href.match(/^\/[^/].+\.html$/)) {
+      $el.attr("href", "/kr" + href);
+      return;
+    }
+
+    // Relative .html links: filename.html
+    if (href.match(/^[^/].+\.html$/)) {
+      $el.attr("href", "/kr/" + href);
+      return;
+    }
+
+    // Root-relative non-html paths (e.g. /images/foo.jpg, /sitemap.xml) — leave alone
   });
 }
 
 /**
- * Update SEO tags: canonical, hreflang, og:url, og:locale
+ * Update SEO tags: lang, canonical, hreflang, og:url, og:locale.
  */
 function updateSeoTags($, filename) {
-  const enUrl = `${BASE_URL}/${filename}`;
-  const krUrl = `${BASE_URL}/kr/${filename}`;
+  const isIndex = filename === "index.html";
+  const enUrl = isIndex ? `${BASE_URL}/` : `${BASE_URL}/${filename}`;
+  const krUrl = isIndex ? `${BASE_URL}/kr/` : `${BASE_URL}/kr/${filename}`;
 
-  // Canonical → Korean URL
-  $('link[rel="canonical"]').attr("href", krUrl);
+  // lang="ko" on <html>
+  $("html").attr("lang", "ko");
+
+  // charset
+  if (!$("meta[charset]").length) {
+    $("head").prepend('<meta charset="UTF-8">');
+  }
+
+  // canonical
+  if ($('link[rel="canonical"]').length) {
+    $('link[rel="canonical"]').attr("href", krUrl);
+  } else {
+    $("head").append(`<link rel="canonical" href="${krUrl}">`);
+  }
 
   // Remove existing hreflang
   $('link[rel="alternate"]').remove();
 
-  // Add hreflang pair after canonical
-  const hreflangEn = `<link rel="alternate" hreflang="en" href="${enUrl}">`;
-  const hreflangKr = `<link rel="alternate" hreflang="ko" href="${krUrl}">`;
-  const hreflangX  = `<link rel="alternate" hreflang="x-default" href="${enUrl}">`;
-
-  $("head").append(hreflangEn + "\n" + hreflangKr + "\n" + hreflangX);
+  // Add hreflang set
+  $("head").append(
+    `<link rel="alternate" hreflang="en" href="${enUrl}">` + "\n" +
+    `<link rel="alternate" hreflang="ko" href="${krUrl}">` + "\n" +
+    `<link rel="alternate" hreflang="x-default" href="${enUrl}">`
+  );
 
   // og:url
-  $('meta[property="og:url"]').attr("content", krUrl);
+  if ($('meta[property="og:url"]').length) {
+    $('meta[property="og:url"]').attr("content", krUrl);
+  } else {
+    $("head").append(`<meta property="og:url" content="${krUrl}">`);
+  }
 
-  // og:locale
-  $('meta[property="og:locale"]').attr("content", "ko_KR");
+  // og:locale → ko_KR
+  if ($('meta[property="og:locale"]').length) {
+    $('meta[property="og:locale"]').attr("content", "ko_KR");
+  } else {
+    $("head").append('<meta property="og:locale" content="ko_KR">');
+  }
 
   // og:locale:alternate
   $('meta[property="og:locale:alternate"]').remove();
   $("head").append('<meta property="og:locale:alternate" content="en_US">');
-
-  // lang attribute on <html>
-  $("html").attr("lang", "ko");
-
-  // charset
-  if (!$('meta[charset]').length) {
-    $("head").prepend('<meta charset="UTF-8">');
-  }
 }
 
 /**
- * Apply translations back to the DOM.
+ * Apply translations back to DOM nodes.
  */
 function applyTranslations($, nodes, translations) {
   nodes.forEach((node, i) => {
@@ -315,7 +336,6 @@ function applyTranslations($, nodes, translations) {
     if (node.type === "attr") {
       $el.attr(node.attr, translated);
     } else {
-      // Replace only the direct text nodes, preserving child elements
       $el.contents().each((_, n) => {
         if (n.type === "text" && n.data.trim()) {
           n.data = n.data.replace(node.text.trim(), translated);
@@ -342,40 +362,30 @@ async function localizeFile(filename) {
   const html = fs.readFileSync(srcPath, "utf8");
   const $ = cheerio.load(html, { decodeEntities: false });
 
-  // 1. Collect translatable text
   const nodes = collectTextNodes($);
   log(`  Found ${nodes.length} translatable nodes`);
 
   if (!DRY_RUN && nodes.length > 0) {
-    // 2. Translate in batches
     const texts = nodes.map((n) => n.text);
     const allTranslations = [];
 
     for (let i = 0; i < texts.length; i += BATCH_SIZE) {
       const batch = texts.slice(i, i + BATCH_SIZE);
-      log(`  Translating batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(texts.length / BATCH_SIZE)} (${batch.length} strings)...`);
+      log(`  Batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(texts.length / BATCH_SIZE)} (${batch.length} strings)...`);
       const translated = await translateBatch(batch);
       allTranslations.push(...translated);
       if (i + BATCH_SIZE < texts.length) await sleep(DELAY_MS);
     }
 
-    // 3. Apply translations
     applyTranslations($, nodes, allTranslations);
   }
 
-  // 4. Fix internal links
   fixInternalLinks($);
-
-  // 5. Update SEO tags
   updateSeoTags($, filename);
 
   if (!DRY_RUN) {
-    // Ensure /kr dir exists
     if (!fs.existsSync(KR_DIR)) fs.mkdirSync(KR_DIR, { recursive: true });
-
-    // Write output
-    const output = $.html();
-    fs.writeFileSync(destPath, output, "utf8");
+    fs.writeFileSync(destPath, $.html(), "utf8");
     log(`  ✓ Written: kr/${filename}`);
   } else {
     log(`  [DRY RUN] Would write: kr/${filename}`);
@@ -385,10 +395,10 @@ async function localizeFile(filename) {
 }
 
 /**
- * Get all root .html files.
+ * Get all root .html files, optionally filtering to only missing ones.
  */
 function getRootHtmlFiles() {
-  return fs
+  const allFiles = fs
     .readdirSync(ROOT_DIR)
     .filter(
       (f) =>
@@ -397,6 +407,17 @@ function getRootHtmlFiles() {
         fs.statSync(path.join(ROOT_DIR, f)).isFile()
     )
     .sort();
+
+  if (MISSING_ONLY) {
+    const existing = new Set(
+      fs.existsSync(KR_DIR)
+        ? fs.readdirSync(KR_DIR).filter((f) => f.endsWith(".html"))
+        : []
+    );
+    return allFiles.filter((f) => !existing.has(f));
+  }
+
+  return allFiles;
 }
 
 // ── main ───────────────────────────────────────────────────────────────────
@@ -405,7 +426,6 @@ async function main() {
 
   if (!ANTHROPIC_API_KEY && !DRY_RUN) {
     console.error("ERROR: ANTHROPIC_API_KEY environment variable not set.");
-    console.error("Export it: export ANTHROPIC_API_KEY=sk-ant-...");
     process.exit(1);
   }
 
@@ -420,21 +440,18 @@ async function main() {
     log(`Single file mode: ${TARGET_FILE}`);
   } else if (ALL) {
     files = getRootHtmlFiles();
-    log(`All files mode: ${files.length} files found`);
+    log(`${MISSING_ONLY ? "Missing-only" : "All files"} mode: ${files.length} files to process`);
   } else {
-    // Default: show help
     console.log(`
 Usage:
-  node localize-kr.js --all                    Localize all root HTML files
-  node localize-kr.js --file index.html        Localize a single file
-  node localize-kr.js --all --dry-run          Dry run (no writes, no API calls)
+  node localize-kr.js --all               Localize all root HTML files
+  node localize-kr.js --missing           Localize only files not yet in /kr/
+  node localize-kr.js --file index.html   Localize a single file
+  node localize-kr.js --all --dry-run     Dry run (no writes, no API calls)
 
 Environment:
-  ANTHROPIC_API_KEY=sk-ant-...                 Required (unless --dry-run)
-  SITE_ROOT=/path/to/repo                      Default: current directory
-
-Example:
-  ANTHROPIC_API_KEY=sk-ant-xxx SITE_ROOT=/home/user/dananghotelguide node localize-kr.js --all
+  ANTHROPIC_API_KEY=sk-ant-...            Required (unless --dry-run)
+  SITE_ROOT=/path/to/repo                 Default: current directory
 `);
     process.exit(0);
   }
@@ -449,11 +466,9 @@ Example:
       log(`  ERROR on ${file}: ${err.message}`);
       results.failed.push(file);
     }
-    // Small pause between files
     await sleep(200);
   }
 
-  // Summary
   console.log("\n" + "=".repeat(60));
   console.log(`✅ Successfully localized (${results.success.length}):`);
   results.success.forEach((f) => console.log(`   kr/${f}`));
