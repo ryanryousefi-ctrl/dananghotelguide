@@ -11,7 +11,7 @@ KR_DIR="$REPO/kr"
 LOG="$REPO/translate-parallel.log"
 N_PARALLEL=2
 MAX_RETRIES=3
-GITHUB_TOKEN="REDACTED"
+GITHUB_TOKEN="${GITHUB_TOKEN:-}"  # set via environment, e.g. export GITHUB_TOKEN=...
 
 mkdir -p "$KR_DIR"
 echo "=== Parallel translation started at $(date) ===" >> "$LOG"
