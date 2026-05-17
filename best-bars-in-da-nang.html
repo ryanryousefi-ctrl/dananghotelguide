@@ -295,6 +295,7 @@ a{text-decoration:none;color:inherit}
   .footer-grid{grid-template-columns:1fr}
 }
 </style>
+<link rel="stylesheet" href="premium.css">
 </head>
 <body>
 
@@ -353,7 +354,7 @@ a{text-decoration:none;color:inherit}
 </nav>
 
 <!-- ─── HERO ─────────────────────────────────────────────── -->
-<header class="guide-hero">
+<header class="guide-hero cinematic">
   <div class="guide-hero-bg" aria-hidden="true"></div>
   <div class="guide-hero-inner">
     <p class="guide-hero-label">Bar &amp; Nightlife Guide · 2026</p>
@@ -394,6 +395,21 @@ a{text-decoration:none;color:inherit}
       </div>
       <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=bars-atf&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels →</a>
     </div>
+
+    <div class="atmosphere-block">
+  <div class="atmosphere-eyebrow">What It Actually Feels Like</div>
+  <div class="atmosphere-heading">Da Nang's Bar Scene in 2026</div>
+  <p class="atmosphere-body">The bar scene here has quietly matured into something real. <strong>Vietnamese bartenders trained in Singapore and Bangkok</strong> have come back and opened cocktail bars that actually impress. The rooftop views are legitimate — Sky36 on the 36th floor isn't a marketing claim, the Han River and coastline really do stretch out below you. The craft beer is brewed in-city at 7 Bridges. The hidden bars are actually hidden. What you won't find is a tourist strip: this city's nightlife is distributed, local, and better for it.</p>
+</div>
+
+<div class="best-for-strip">
+  <span class="best-for-badge">🥂 Date nights</span>
+  <span class="best-for-badge">🍺 Craft beer</span>
+  <span class="best-for-badge coral">🌇 Rooftop views</span>
+  <span class="best-for-badge gold">🕵️ Hidden speakeasies</span>
+  <span class="best-for-badge">🎵 Live music</span>
+  <span class="best-for-badge coral">🏖️ Beach clubs</span>
+</div>
 
     <!-- ─── DRINKING CULTURE ─── -->
     <h2>Drinking Culture in Da Nang</h2>
@@ -926,6 +942,21 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
 
+    <div class="authority-strip">
+  <div class="authority-item">
+    <span class="authority-badge insight">Local Insight</span>
+    <span class="authority-text"><strong>The cocktail quality gap is closing fast.</strong> Three years ago, Da Nang's best cocktail was a well-made Negroni at Waterfront. Now The Craftsman, Tê Mixology, and Firgun House are producing menus that would hold up in any serious bar city. Order from the seasonal menu, not the classics list.</span>
+  </div>
+  <div class="authority-item">
+    <span class="authority-badge mistake">Tourist Mistake</span>
+    <span class="authority-text"><strong>Going to Sky36 expecting a local vibe.</strong> Sky36 is a hotel rooftop bar with tourist prices and a tourist crowd. It's worth visiting once for the view — but if you want genuine Da Nang bar culture, head to An Thượng or the hidden bar district. The real city is down there.</span>
+  </div>
+  <div class="authority-item">
+    <span class="authority-badge worth">Worth the Extra Money?</span>
+    <span class="authority-text"><strong>Yes, for The Craftsman cocktails.</strong> At 280,000–320,000 VND per drink (~$11–13), The Craftsman is the most expensive bar in this guide. It's also the best cocktail in the city. Order from the bartender's recommendation, not the menu.</span>
+  </div>
+</div>
+
     <!-- ─── HIDDEN BARS ─── -->
     <div class="hidden-bar-section" id="hidden-bars">
       <div class="hidden-bar-section-label">Secret Spots · Local Knowledge Required</div>
@@ -1022,6 +1053,16 @@ a{text-decoration:none;color:inherit}
         <tr><td><strong>Black Wolf</strong></td><td>Hidden / Dark Bar</td><td>City Centre</td><td>$$$</td></tr>
       </tbody>
     </table>
+
+    <div class="decision-section">
+  <div class="decision-section-label">Still Deciding</div>
+  <div class="decision-section-title">Which bar area suits <em>your night?</em></div>
+  <div class="decision-section-sub">Rooftops for views, An Thượng for late nights, cocktail bars for serious drinks, hidden bars for adventure.</div>
+  <div class="decision-section-actions">
+    <a href="da-nang-nightlife-guide.html" class="decision-btn primary">Full Nightlife Guide →</a>
+    <a href="where-to-stay-in-da-nang.html" class="decision-btn outline">Hotels Near the Action</a>
+  </div>
+</div>
 
   </article>
 
@@ -1143,6 +1184,27 @@ a{text-decoration:none;color:inherit}
     </div>
   </div>
 </footer>
+
+<div class="mobile-cta-bar" aria-hidden="true">
+  <div class="mobile-cta-bar-text">
+    <strong>Da Nang's 25 best bars</strong>
+    Find a hotel nearby
+  </div>
+  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=bars-mobilecta&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" class="mobile-cta-bar-btn">Search Hotels →</a>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('.prem-faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=this.closest('.prem-faq-item');
+      var isOpen=item.classList.contains('open');
+      document.querySelectorAll('.prem-faq-item.open').forEach(function(el){el.classList.remove('open');});
+      if(!isOpen)item.classList.add('open');
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
