@@ -1079,6 +1079,105 @@ h1.hero-h1 em{font-style:italic}
 
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     TRIP TYPE ROUTER
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="section trip-router-section" aria-labelledby="trip-router-heading">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:2.5rem">
+      <p class="section-label">Trip Planning</p>
+      <h2 class="section-heading" id="trip-router-heading" style="text-align:center">What Kind of Da Nang Trip <em>Are You Planning?</em></h2>
+      <p style="font-size:.95rem;color:var(--ink-muted);max-width:50ch;margin:.6rem auto 0;line-height:1.7">Pick your trip type below and go straight to the guide that matters most.</p>
+    </div>
+    <div class="trip-router-grid" role="list" aria-label="Trip type guides">
+
+      <a href="da-nang-first-time-visitors.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">✈️</div>
+        <div class="tr-label">First Time in Da Nang</div>
+        <div class="tr-desc">What to know before you arrive, which area to base yourself, and what to skip.</div>
+        <span class="tr-link">Start here →</span>
+      </a>
+
+      <a href="da-nang-beach-hotels.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">🏖️</div>
+        <div class="tr-label">Beach Vacation</div>
+        <div class="tr-desc">My Khe or Non Nuoc? Here's which stretch suits you and which hotels sit directly on sand.</div>
+        <span class="tr-link">Beach hotels →</span>
+      </a>
+
+      <a href="luxury-hotels-da-nang.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">🌟</div>
+        <div class="tr-label">Luxury Resort Stay</div>
+        <div class="tr-desc">InterContinental, Hyatt, Sheraton, Pullman. Which one actually delivers at your budget.</div>
+        <span class="tr-link">Luxury guide →</span>
+      </a>
+
+      <a href="best-budget-hotels-in-da-nang.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">💰</div>
+        <div class="tr-label">Budget Travel</div>
+        <div class="tr-desc">Under $50/night options that don't feel like a mistake. With honest warnings on what to avoid.</div>
+        <span class="tr-link">Budget picks →</span>
+      </a>
+
+      <a href="family-hotels-da-nang.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">👨‍👩‍👧</div>
+        <div class="tr-label">Family Trip</div>
+        <div class="tr-desc">Kids pools, connected rooms, safe beach access, and resorts with actual children's programming.</div>
+        <span class="tr-link">Family hotels →</span>
+      </a>
+
+      <a href="kr/index.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">🇰🇷</div>
+        <div class="tr-label">Korean-Friendly Hotels</div>
+        <div class="tr-desc">한국어 가이드. Korean-speaking areas, flights from Seoul/Busan, and the An Thuong food strip.</div>
+        <span class="tr-link">한국어 가이드 →</span>
+      </a>
+
+      <a href="best-bars-in-da-nang.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">🍸</div>
+        <div class="tr-label">Nightlife &amp; Bars</div>
+        <div class="tr-desc">An Thuong after dark, rooftop bars, craft beer, and the actual late-night options in Da Nang.</div>
+        <span class="tr-link">Bar guide →</span>
+      </a>
+
+      <a href="da-nang-itinerary.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">📅</div>
+        <div class="tr-label">3-Day Itinerary</div>
+        <div class="tr-desc">Marble Mountains, Hoi An, Ba Na Hills, My Khe beach. A practical 3-day plan that actually works.</div>
+        <span class="tr-link">See itinerary →</span>
+      </a>
+
+      <a href="da-nang-digital-nomad-guide.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">💻</div>
+        <div class="tr-label">Long Stay / Digital Nomad</div>
+        <div class="tr-desc">Monthly rentals, co-working spaces, visa reality, and where to base yourself for 30+ days.</div>
+        <span class="tr-link">Nomad guide →</span>
+      </a>
+
+      <a href="da-nang-vs-hoi-an.html" class="tr-card" role="listitem">
+        <div class="tr-icon" aria-hidden="true">🗺️</div>
+        <div class="tr-label">Da Nang vs Hoi An</div>
+        <div class="tr-desc">Can't decide where to base? Side-by-side comparison of what each city actually offers.</div>
+        <span class="tr-link">Compare now →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.trip-router-section{background:var(--sand,#F6F1E9)}
+.trip-router-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.tr-card{display:flex;flex-direction:column;gap:.4rem;background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:16px;padding:1.4rem 1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;cursor:pointer}
+.tr-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.1);transform:translateY(-2px)}
+.tr-icon{font-size:1.6rem;margin-bottom:.25rem}
+.tr-label{font-family:var(--font-serif);font-size:1.05rem;color:var(--ocean-deep,#0D3535);line-height:1.25;font-weight:400}
+.tr-desc{font-size:.82rem;color:var(--ink-muted,#666);line-height:1.6;flex:1}
+.tr-link{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.25rem}
+@media(max-width:600px){.trip-router-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.trip-router-grid{grid-template-columns:1fr}}
+</style>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      WHERE TO STAY, Neighborhood Guide
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="neighborhoods-section" aria-labelledby="neighborhoods-heading">
@@ -1163,6 +1262,194 @@ h1.hero-h1 em{font-style:italic}
         </div><!-- /neighborhood-grid -->
   </div><!-- /neighborhoods-inner -->
 </section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     MOST POPULAR RIGHT NOW
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="section popular-now-section" aria-labelledby="popular-now-heading">
+  <div class="section-inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+      <div>
+        <p class="section-label">Most Read</p>
+        <h2 class="section-heading" id="popular-now-heading">Most Popular <em>Right Now</em></h2>
+      </div>
+      <a href="guides.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0">All guides →</a>
+    </div>
+    <div class="popular-now-grid" role="list">
+
+      <a href="best-hotels-in-da-nang.html" class="pn-card pn-card--featured" role="listitem">
+        <div class="pn-rank">01</div>
+        <div class="pn-body">
+          <div class="pn-cat">Hotels · 2026</div>
+          <div class="pn-title">Best Hotels in Da Nang</div>
+          <div class="pn-desc">The complete curated list, luxury to budget, ranked by value and location. Updated May 2026.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="where-to-stay-in-da-nang.html" class="pn-card pn-card--featured" role="listitem">
+        <div class="pn-rank">02</div>
+        <div class="pn-body">
+          <div class="pn-cat">Area Guide</div>
+          <div class="pn-title">Where to Stay in Da Nang</div>
+          <div class="pn-desc">My Khe vs Non Nuoc vs Han River. Which area is right for your trip type.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="dining.html" class="pn-card" role="listitem">
+        <div class="pn-rank">03</div>
+        <div class="pn-body">
+          <div class="pn-cat">MICHELIN Guide</div>
+          <div class="pn-title">Da Nang Restaurants</div>
+          <div class="pn-desc">One MICHELIN Star, 20 Bib Gourmand, 43 total listings.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="best-budget-hotels-in-da-nang.html" class="pn-card" role="listitem">
+        <div class="pn-rank">04</div>
+        <div class="pn-body">
+          <div class="pn-cat">Budget</div>
+          <div class="pn-title">Best Budget Hotels</div>
+          <div class="pn-desc">Under $50/night picks that actually hold up on arrival.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="da-nang-vs-hoi-an.html" class="pn-card" role="listitem">
+        <div class="pn-rank">05</div>
+        <div class="pn-body">
+          <div class="pn-cat">Comparison</div>
+          <div class="pn-title">Da Nang vs Hoi An</div>
+          <div class="pn-desc">Where to base yourself when you have limited nights.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="best-bars-in-da-nang.html" class="pn-card" role="listitem">
+        <div class="pn-rank">06</div>
+        <div class="pn-body">
+          <div class="pn-cat">Nightlife</div>
+          <div class="pn-title">Best Bars in Da Nang 2026</div>
+          <div class="pn-desc">Rooftop bars, craft beer, An Thuong after dark. Ranked by quality.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="best-time-to-visit-da-nang.html" class="pn-card" role="listitem">
+        <div class="pn-rank">07</div>
+        <div class="pn-body">
+          <div class="pn-cat">Timing</div>
+          <div class="pn-title">Best Time to Visit</div>
+          <div class="pn-desc">Month-by-month weather, crowds, prices. What the guides don't tell you.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+      <a href="da-nang-first-time-visitors.html" class="pn-card" role="listitem">
+        <div class="pn-rank">08</div>
+        <div class="pn-body">
+          <div class="pn-cat">First Visit</div>
+          <div class="pn-title">First-Time Visitor Guide</div>
+          <div class="pn-desc">What to know before you land. Practical, no filler.</div>
+        </div>
+        <span class="pn-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     LOCAL PICKS THIS MONTH
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="section local-picks-section" aria-labelledby="local-picks-heading">
+  <div class="section-inner">
+    <div style="margin-bottom:2rem">
+      <p class="section-label">May 2026 · Shoulder Season</p>
+      <h2 class="section-heading" id="local-picks-heading">Local Picks <em>This Month</em></h2>
+      <p style="font-size:.9rem;color:var(--ink-muted);max-width:55ch;line-height:1.7;margin-top:.4rem">May is a good time to visit. DIFF fireworks festival runs through late May. Beach weather is consistent. Hotels are 15–25% cheaper than peak July.</p>
+    </div>
+    <div class="local-picks-grid" role="list">
+
+      <div class="lp-card lp-card--highlight" role="listitem">
+        <div class="lp-tag">Happening Now</div>
+        <div class="lp-title">DIFF Fireworks Festival</div>
+        <div class="lp-body">The Da Nang International Fireworks Festival runs on weekend evenings through late May. Viewing is best from the Han River embankment. Hotels within walking distance of Dragon Bridge fill fast. <strong>Book a riverside hotel if this is your focus.</strong></div>
+        <a href="da-nang-riverfront-hotels.html" class="lp-link">Riverside hotel picks →</a>
+      </div>
+
+      <div class="lp-card" role="listitem">
+        <div class="lp-tag">Current Conditions</div>
+        <div class="lp-title">Best Beach Access Hotels</div>
+        <div class="lp-body">May sea conditions are reliable. Sheraton Grand and Radisson Blu offer the most direct My Khe access without crossing a road. Pullman is quieter at this time of year.</div>
+        <a href="da-nang-beach-hotels.html" class="lp-link">Beach hotel guide →</a>
+      </div>
+
+      <div class="lp-card" role="listitem">
+        <div class="lp-tag">Hot Weather Tip</div>
+        <div class="lp-title">Best Café Escapes from the Heat</div>
+        <div class="lp-body">May afternoons hit 33–36°C. The An Thuong cafe strip has the highest density of air-conditioned spots. Avoid walking the beach between 11am and 4pm. Plan outdoor time for mornings.</div>
+        <a href="best-cafes-da-nang.html" class="lp-link">Best cafes in Da Nang →</a>
+      </div>
+
+      <div class="lp-card" role="listitem">
+        <div class="lp-tag">Quiet Areas</div>
+        <div class="lp-title">Less Crowded Beach Options</div>
+        <div class="lp-body">The northern stretch of My Khe above Pullman is significantly quieter than the main strip. Non Nuoc remains low-density. If avoiding crowds matters, stay north of the main hotel cluster.</div>
+        <a href="where-to-stay-in-da-nang.html" class="lp-link">Area breakdown →</a>
+      </div>
+
+      <div class="lp-card" role="listitem">
+        <div class="lp-tag">Practical Note</div>
+        <div class="lp-title">Grab Availability This Month</div>
+        <div class="lp-body">During DIFF weekend evenings, Grab surges citywide around Dragon Bridge. The 10pm–11pm post-show window is the hardest. Either book your ride before the show ends or walk if your hotel is close.</div>
+        <a href="da-nang-transport-guide.html" class="lp-link">Transport guide →</a>
+      </div>
+
+      <div class="lp-card" role="listitem">
+        <div class="lp-tag">Nightlife</div>
+        <div class="lp-title">Current An Thuong Hotspots</div>
+        <div class="lp-body">The An Thuong bar strip runs best Thursday to Saturday. Most venues open around 6pm and run until 1–2am. The rooftop terrace spots get crowded by 8:30pm on weekends, arrive earlier for a good table.</div>
+        <a href="best-bars-in-da-nang.html" class="lp-link">Bar guide →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Most Popular */
+.popular-now-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.pn-card{display:flex;align-items:center;gap:1rem;border:1px solid rgba(0,0,0,.07);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;color:inherit;background:#fff;transition:box-shadow .18s,background .18s}
+.pn-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.09);background:var(--sand,#F6F1E9)}
+.pn-card--featured{border-color:var(--ocean,#1B5C5C);border-width:1.5px}
+.pn-rank{font-family:var(--font-serif);font-size:1.4rem;color:rgba(0,0,0,.12);min-width:2rem;text-align:center;flex-shrink:0}
+.pn-card--featured .pn-rank{color:var(--ocean,#1B5C5C);opacity:.5}
+.pn-body{flex:1;min-width:0}
+.pn-cat{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ocean,#1B5C5C);font-weight:600;margin-bottom:.2rem}
+.pn-title{font-size:.95rem;font-weight:600;color:var(--ocean-deep,#0D3535);line-height:1.3}
+.pn-desc{font-size:.78rem;color:var(--ink-muted,#666);line-height:1.5;margin-top:.2rem}
+.pn-arrow{color:var(--coral,#C8604A);font-size:1rem;flex-shrink:0}
+@media(max-width:640px){.popular-now-grid{grid-template-columns:1fr}}
+
+/* Local Picks */
+.local-picks-section{background:var(--ocean-deep,#0D3535)}
+.local-picks-section .section-label{color:rgba(255,255,255,.35)}
+.local-picks-section .section-heading{color:#fff}
+.local-picks-section .section-heading em{color:rgba(255,255,255,.6)}
+.local-picks-section p{color:rgba(255,255,255,.55)}
+.local-picks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.lp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;color:#fff}
+.lp-card--highlight{border-color:var(--coral,#C8604A);background:rgba(200,96,74,.08)}
+.lp-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--coral,#C8604A);margin-bottom:.5rem}
+.lp-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:.5rem;line-height:1.3}
+.lp-body{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65}
+.lp-link{display:inline-block;margin-top:.9rem;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.2);transition:color .15s}
+.lp-link:hover{color:#fff}
+@media(max-width:640px){.local-picks-grid{grid-template-columns:1fr}}
+</style>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      PLAN YOUR TRIP GUIDES HUB
@@ -1474,12 +1761,67 @@ h1.hero-h1 em{font-style:italic}
 </section>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     POPULAR GUIDES, Internal Linking
+     WHERE I'D STAY + HOTEL STRIPS
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="section wid-stay-section" aria-labelledby="wid-stay-heading">
+  <div class="section-inner">
+    <div class="wid-layout">
+      <div class="wid-editorial">
+        <p class="section-label">Local Perspective</p>
+        <h2 class="section-heading" id="wid-stay-heading">Where I'd <em>Stay in Da Nang</em></h2>
+        <div class="wid-quote-block">
+          <p>For a first visit of 4–5 nights, I'd base myself on northern My Khe. You're two minutes from the water, everything worth eating is walkable, and Grab gets you anywhere else in 15 minutes. The northern stretch above Pullman is quieter than the main strip but still connected.</p>
+          <p style="margin-top:.75rem">If nightlife or the fireworks festival are the focus, I'd shift to somewhere near An Thuong or look at a Han River hotel for the DIFF weekend. If the whole point is resort relaxation with no agenda, Hyatt Regency at Non Nuoc delivers better beach-to-pool ratio than anything on the main strip.</p>
+          <p style="margin-top:.75rem">The one thing I'd avoid: staying too far south on Non Nuoc without a plan for getting around. Without a scooter, you'll Grab everywhere and the costs add up.</p>
+          <cite class="wid-cite">— Ryan Yousefi, Da Nang Hotel Guide editor, resident since 2021</cite>
+        </div>
+        <a href="where-to-stay-in-da-nang.html" class="wid-cta">Full area guide with maps →</a>
+      </div>
+
+      <div class="wid-hotel-strip">
+        <div class="wid-strip-title">Quick Hotel Picks by Traveler Type</div>
+
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=index-wid-hyatt&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhyatt-regency-danang-resort-and-spa.html%3Faid%3D1784897" class="wid-hotel-card affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+          <div class="wid-hotel-fit">Best overall</div>
+          <div class="wid-hotel-name">Hyatt Regency Danang</div>
+          <div class="wid-hotel-why">Non Nuoc Beach · 5-star · $150–280/night. Best value luxury on the quieter southern stretch. Large pools, direct beach access.</div>
+          <span class="wid-hotel-btn">Check rates →</span>
+        </a>
+
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=index-wid-sheraton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fsheraton-grand-danang-resort.html%3Faid%3D1784897" class="wid-hotel-card affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+          <div class="wid-hotel-fit">Best for walkability</div>
+          <div class="wid-hotel-name">Sheraton Grand Danang</div>
+          <div class="wid-hotel-why">My Khe Beach · 5-star · $150–260/night. On the main strip, walkable to An Thuong restaurants and beach bars. Good for first-timers.</div>
+          <span class="wid-hotel-btn">Check rates →</span>
+        </a>
+
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=index-wid-pullman&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fpullman-danang-beach-resort.html%3Faid%3D1784897" class="wid-hotel-card affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+          <div class="wid-hotel-fit">Best value 5-star</div>
+          <div class="wid-hotel-name">Pullman Danang Beach Resort</div>
+          <div class="wid-hotel-why">My Khe North · 5-star · $120–220/night. Quieter end of the strip, large pool, better pricing than comparable properties.</div>
+          <span class="wid-hotel-btn">Check rates →</span>
+        </a>
+
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=index-wid-alacarte&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fa-la-carte-da-nang-beach.html%3Faid%3D1784897" class="wid-hotel-card affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+          <div class="wid-hotel-fit">Best mid-range pick</div>
+          <div class="wid-hotel-name">A La Carte Da Nang Beach</div>
+          <div class="wid-hotel-why">My Khe · 4-star · $70–120/night. Rooftop pool, beachside location, strong value for what you get on the strip.</div>
+          <span class="wid-hotel-btn">Check rates →</span>
+        </a>
+
+        <a href="best-hotels-in-da-nang.html" class="wid-see-all">See all hotel picks with full comparisons →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     POPULAR GUIDES, Internal Linking — visual card grid
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="section links-section" aria-labelledby="links-heading">
   <div class="section-inner">
     <p class="section-label">Quick Access</p>
-    <h2 class="section-heading" id="links-heading">Popular <em>Da Nang Guides</em></h2>
+    <h2 class="section-heading" id="links-heading">All <em>Da Nang Guides</em></h2>
     <nav class="links-grid" aria-label="Popular Da Nang travel guides">
       <a href="best-hotels-in-da-nang.html" class="link-pill"><span>Best Hotels in Da Nang</span><span class="link-pill-arrow">→</span></a>
       <a href="where-to-stay-in-da-nang.html" class="link-pill"><span>Where to Stay in Da Nang</span><span class="link-pill-arrow">→</span></a>
@@ -1487,22 +1829,43 @@ h1.hero-h1 em{font-style:italic}
       <a href="da-nang-beach-hotels.html" class="link-pill"><span>Beachfront Hotels</span><span class="link-pill-arrow">→</span></a>
       <a href="da-nang-riverfront-hotels.html" class="link-pill"><span>Riverside Hotels Da Nang</span><span class="link-pill-arrow">→</span></a>
       <a href="da-nang-weather-by-month.html" class="link-pill"><span>Da Nang Hotel Prices by Month</span><span class="link-pill-arrow">→</span></a>
-      <a href="where-to-stay-in-da-nang.html" class="link-pill"><span>Best Areas for First Time Visitors</span><span class="link-pill-arrow">→</span></a>
+      <a href="da-nang-first-time-visitors.html" class="link-pill"><span>First-Time Visitor Guide</span><span class="link-pill-arrow">→</span></a>
       <a href="family-hotels-da-nang.html" class="link-pill"><span>Family Hotels &amp; Resorts</span><span class="link-pill-arrow">→</span></a>
       <a href="boutique-hotels-da-nang.html" class="link-pill"><span>Boutique Hotels Da Nang</span><span class="link-pill-arrow">→</span></a>
       <a href="best-time-to-visit-da-nang.html" class="link-pill"><span>Best Time to Visit Da Nang</span><span class="link-pill-arrow">→</span></a>
+      <a href="da-nang-budget-guide.html" class="link-pill"><span>Da Nang Budget Guide</span><span class="link-pill-arrow">→</span></a>
+      <a href="da-nang-digital-nomad-guide.html" class="link-pill"><span>Digital Nomad Guide</span><span class="link-pill-arrow">→</span></a>
+      <a href="dining.html" class="link-pill"><span>MICHELIN Da Nang Dining Guide</span><span class="link-pill-arrow">→</span></a>
+      <a href="da-nang-vs-hoi-an.html" class="link-pill"><span>Da Nang vs Hoi An</span><span class="link-pill-arrow">→</span></a>
+      <a href="best-bars-in-da-nang.html" class="link-pill"><span>Best Bars in Da Nang 2026</span><span class="link-pill-arrow">→</span></a>
+      <a href="da-nang-itinerary.html" class="link-pill"><span>Da Nang 3-Day Itinerary</span><span class="link-pill-arrow">→</span></a>
       <a href="four-points-sheraton-da-nang.html" class="link-pill"><span>Four Points Sheraton Review</span><span class="link-pill-arrow">→</span></a>
       <a href="tms-hotel-da-nang.html" class="link-pill"><span>TMS Hotel Da Nang Review</span><span class="link-pill-arrow">→</span></a>
-      <a href="muong-thanh-luxury-da-nang.html" class="link-pill"><span>Muong Thanh Luxury Review</span><span class="link-pill-arrow">→</span></a>
       <a href="hilton-da-nang.html" class="link-pill"><span>Hilton Garden Inn Review</span><span class="link-pill-arrow">→</span></a>
       <a href="a-la-carte-da-nang.html" class="link-pill"><span>A La Carte Da Nang Review</span><span class="link-pill-arrow">→</span></a>
-      <a href="wyndham-soleil-da-nang.html" class="link-pill"><span>Wyndham Soleil Review</span><span class="link-pill-arrow">→</span></a>
-      <a href="brilliant-hotel-da-nang.html" class="link-pill"><span>Brilliant Hotel Da Nang Review</span><span class="link-pill-arrow">→</span></a>
-      <a href="grand-mercure-da-nang.html" class="link-pill"><span>Grand Mercure Da Nang Review</span><span class="link-pill-arrow">→</span></a>
       <a href="hotel-reviews.html" class="link-pill"><span>All Da Nang Hotel Reviews</span><span class="link-pill-arrow">→</span></a>
+      <a href="kr/index.html" class="link-pill" hreflang="ko"><span>한국어 가이드 (Korean Guide)</span><span class="link-pill-arrow">→</span></a>
     </nav>
   </div>
 </section>
+
+<style>
+/* Where I'd Stay */
+.wid-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.wid-quote-block p{font-size:.93rem;color:var(--ink-soft,#444);line-height:1.75}
+.wid-cite{display:block;margin-top:1rem;font-size:.78rem;color:var(--ink-muted,#666);font-style:normal}
+.wid-cta{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.25rem;font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px}
+.wid-strip-title{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ink-muted,#666);margin-bottom:1rem}
+.wid-hotel-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1rem 1.1rem;margin-bottom:.75rem;text-decoration:none;color:inherit;background:#fff;transition:box-shadow .18s}
+.wid-hotel-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.wid-hotel-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean)}
+.wid-hotel-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep)}
+.wid-hotel-why{font-size:.8rem;color:var(--ink-muted,#666);line-height:1.55}
+.wid-hotel-btn{font-size:.75rem;font-weight:700;color:var(--coral);margin-top:.1rem}
+.wid-see-all{display:block;text-align:center;font-size:.82rem;font-weight:700;color:var(--ocean);border:1px solid rgba(27,92,92,.2);border-radius:8px;padding:.65rem 1rem;transition:background .15s}
+.wid-see-all:hover{background:var(--sand)}
+@media(max-width:768px){.wid-layout{grid-template-columns:1fr}}
+</style>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FIND HOTELS, Booking widget

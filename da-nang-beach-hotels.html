@@ -3458,6 +3458,65 @@ a{text-decoration:none;color:inherit}
       </div>
     </section>
 
+    <!-- ── LOCAL PERSPECTIVE + HOTEL STRIP ── -->
+    <style>
+    .wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
+    .wid-block-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
+    .wid-block-title{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ocean-deep,#0D3535);margin-bottom:1rem;font-weight:400}
+    .wid-block p{font-size:.9rem;color:#444;line-height:1.75;margin-bottom:.6rem}
+    .wid-block cite{font-size:.76rem;color:#888;font-style:normal;display:block;margin-top:.75rem}
+    .hotel-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+    .hs-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.1rem;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .18s}
+    .hs-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09)}
+    .hs-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+    .hs-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep,#0D3535);margin:.15rem 0}
+    .hs-why{font-size:.8rem;color:#666;line-height:1.55;flex:1}
+    .hs-btn{font-size:.76rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.5rem}
+    .local-reality{background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.75rem 2rem;margin:2.5rem 0}
+    .local-reality-title{font-family:var(--font-serif,serif);font-size:1.1rem;color:#fff;margin-bottom:1rem;font-weight:400}
+    .local-reality ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
+    .local-reality li{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;padding-left:1.25rem;position:relative}
+    .local-reality li::before{content:'→';position:absolute;left:0;color:var(--coral,#C8604A)}
+    .next-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+    .ns-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.25rem;background:var(--sand,#F6F1E9);text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s}
+    .ns-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09);transform:translateY(-2px)}
+    .ns-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+    .ns-title{font-family:var(--font-serif,serif);font-size:.98rem;color:var(--ocean-deep,#0D3535);margin:.2rem 0;font-weight:400}
+    .ns-desc{font-size:.78rem;color:#666;line-height:1.5;flex:1}
+    .ns-arrow{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.4rem}
+    @media(max-width:640px){.hotel-strip,.next-steps-grid{grid-template-columns:1fr}}
+    </style>
+
+    <div class="wid-block">
+      <div class="wid-block-label">Local Perspective</div>
+      <div class="wid-block-title">Where I'd Stay for Beach Access</div>
+      <p>For actual beach access, the distinction matters more than people expect. "Beachfront" on a booking site can mean anything from stepping off a hotel terrace onto sand to crossing a road and walking 8 minutes. The Sheraton Grand and Radisson Blu are true beachfront — direct sand access with no road crossing.</p>
+      <p>Pullman sits at the quieter north end of My Khe. You still get beach access but the stretch in front is less busy than the central strip during peak season. If you're visiting in July or August, this matters.</p>
+      <p>Hyatt Regency is Non Nuoc, not My Khe. Non Nuoc is a separate stretch of beach 8km south. Quieter, less foot traffic, but no walkable restaurant scene — you'll Grab in and out for meals.</p>
+      <cite>— Ryan Yousefi, editor, resident since 2021</cite>
+    </div>
+
+    <div class="hotel-strip">
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=beach-strip-sheraton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fsheraton-grand-danang-resort.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">Most Direct Sand Access</span>
+        <span class="hs-name">Sheraton Grand Danang</span>
+        <span class="hs-why">Steps from My Khe sand, no road crossing, walkable to An Thuong restaurants.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=beach-strip-pullman&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fpullman-danang-beach-resort.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">Quieter North End</span>
+        <span class="hs-name">Pullman Danang Beach Resort</span>
+        <span class="hs-why">Northern My Khe strip, less crowded beach section, large pool, better value than central hotels.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=beach-strip-hyatt&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhyatt-regency-danang-resort-and-spa.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">Resort Beach · Non Nuoc</span>
+        <span class="hs-name">Hyatt Regency Danang</span>
+        <span class="hs-why">Private quieter beach at Non Nuoc, 5-star facilities, best pool-to-guest ratio of any Da Nang resort.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+    </div>
+
     <!-- ── MAP SECTION ── -->
     <section id="map" aria-labelledby="map-h">
       <span class="section-label">Interactive Map</span>
@@ -4007,6 +4066,17 @@ a{text-decoration:none;color:inherit}
       </div>
     </section>
 
+    <div class="local-reality">
+      <div class="local-reality-title">What to Know About Da Nang's Beaches</div>
+      <ul>
+        <li>My Khe and Non Nuoc are separate beaches 8km apart. They're not interchangeable.</li>
+        <li>Peak season (July–August) makes the main My Khe strip noticeably busy. Morning swims before 8am are significantly quieter.</li>
+        <li>"Beachfront" in booking descriptions often means within 5 minutes walk — not direct sand access. Check Google Maps satellite view before booking.</li>
+        <li>Jellyfish appear occasionally in March and April. The beach flags (green/red) are reliable indicators of swimming conditions.</li>
+        <li>The northern My Khe strip above Pullman has fewer sunbed vendors and day-trippers than the central section.</li>
+      </ul>
+    </div>
+
     <!-- ── BOOKING TIPS ── -->
     <section id="tips" aria-labelledby="tips-h">
       <span class="section-label">Booking Guide</span>
@@ -4039,6 +4109,27 @@ a{text-decoration:none;color:inherit}
       <div class="faq-item"><details><summary>How far are the Non Nuoc resorts from Da Nang city centre?</summary><div class="faq-answer">Non Nuoc is about 13km south of the city centre, 20–25 minutes by Grab, depending on traffic. It's not close, but it's not a big deal either once you adjust to using Grab for everything. Most guests staying down there just factor in the ride. Hoi An is another 20 minutes further south, which actually makes Non Nuoc a reasonable base if you're splitting time between Da Nang and Hoi An, you're already halfway there.</div></details></div>
       <div class="faq-item"><details><summary>Which Da Nang beach hotel is best for families?</summary><div class="faq-answer">Hyatt Regency Da Nang is the strongest family resort overall, six hectares, four pools, a dedicated kids' club, and the calmest water on the southern stretch. For Non Nuoc, the Marriott also has a solid kids' programme and more space than most. Premier Village works well for families who want private outdoor space, every villa has its own pool, so you're not competing with anyone. If budget is a factor, the Pullman offers the most complete family resort experience on the strip without climbing to the very top of the price range.</div></details></div>
     </section>
+
+    <div class="next-steps-grid">
+      <a class="ns-card" href="where-to-stay-in-da-nang.html">
+        <span class="ns-label">Next Step</span>
+        <span class="ns-title">Which area of Da Nang?</span>
+        <span class="ns-desc">My Khe vs Non Nuoc vs Han River — which suits your trip</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+      <a class="ns-card" href="luxury-hotels-da-nang.html">
+        <span class="ns-label">Upgrade</span>
+        <span class="ns-title">Luxury Beach Resorts</span>
+        <span class="ns-desc">InterContinental, Hyatt, Sheraton — compared in detail</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+      <a class="ns-card" href="best-budget-hotels-in-da-nang.html">
+        <span class="ns-label">Save Money</span>
+        <span class="ns-title">Budget Beach Hotels</span>
+        <span class="ns-desc">Under $60/night options with real beach access</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+    </div>
 
   </article>
 

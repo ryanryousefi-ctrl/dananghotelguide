@@ -424,6 +424,65 @@ a{text-decoration:none;color:inherit}
       <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">The bar scene is denser than it looks. Most of the best spots are within a 10-minute walk of each other.</figcaption>
     </figure>
 
+    <!-- ── LOCAL PERSPECTIVE + HOTEL STRIP ── -->
+    <style>
+    .wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
+    .wid-block-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
+    .wid-block-title{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ocean-deep,#0D3535);margin-bottom:1rem;font-weight:400}
+    .wid-block p{font-size:.9rem;color:#444;line-height:1.75;margin-bottom:.6rem}
+    .wid-block cite{font-size:.76rem;color:#888;font-style:normal;display:block;margin-top:.75rem}
+    .hotel-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+    .hs-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.1rem;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .18s}
+    .hs-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09)}
+    .hs-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+    .hs-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep,#0D3535);margin:.15rem 0}
+    .hs-why{font-size:.8rem;color:#666;line-height:1.55;flex:1}
+    .hs-btn{font-size:.76rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.5rem}
+    .local-reality{background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.75rem 2rem;margin:2.5rem 0}
+    .local-reality-title{font-family:var(--font-serif,serif);font-size:1.1rem;color:#fff;margin-bottom:1rem;font-weight:400}
+    .local-reality ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
+    .local-reality li{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;padding-left:1.25rem;position:relative}
+    .local-reality li::before{content:'→';position:absolute;left:0;color:var(--coral,#C8604A)}
+    .next-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+    .ns-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.25rem;background:var(--sand,#F6F1E9);text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s}
+    .ns-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09);transform:translateY(-2px)}
+    .ns-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+    .ns-title{font-family:var(--font-serif,serif);font-size:.98rem;color:var(--ocean-deep,#0D3535);margin:.2rem 0;font-weight:400}
+    .ns-desc{font-size:.78rem;color:#666;line-height:1.5;flex:1}
+    .ns-arrow{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.4rem}
+    @media(max-width:640px){.hotel-strip,.next-steps-grid{grid-template-columns:1fr}}
+    </style>
+
+    <div class="wid-block">
+      <div class="wid-block-label">Local Perspective</div>
+      <div class="wid-block-title">Where to Stay if Nightlife Matters</div>
+      <p>An Thuong Street is Da Nang's best bar strip — it's walkable from most My Khe hotels within a 10-minute walk. The Sheraton, Radisson Blu, and Pullman are all within reasonable walking distance for a night out.</p>
+      <p>The Han River bar scene is different. More rooftop clubs, louder music, later nights. If that's what you want, a riverfront hotel within walking distance of Dragon Bridge makes sense. The Novotel Han River is the most practical option.</p>
+      <p>Be realistic about DIFF weekends (Sat/Sun fireworks festival in late April–May). Grab surges badly after the show ends around 10pm. If you're riverfront that night, walk back. If you're at a beach hotel, leave before or wait until 11pm.</p>
+      <cite>— Ryan Yousefi, editor, resident since 2021</cite>
+    </div>
+
+    <div class="hotel-strip">
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=bars-strip-sheraton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fsheraton-grand-danang-resort.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">My Khe · An Thuong Access</span>
+        <span class="hs-name">Sheraton Grand Danang</span>
+        <span class="hs-why">On My Khe, 8–10 min walk to An Thuong bar strip. Rooftop bar on-site. Good base for beach-to-bars evenings.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=bars-strip-novotel&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fnovotel-premier-han-river-danang.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">Han River · Late Night Scene</span>
+        <span class="hs-name">Novotel Danang Premier Han River</span>
+        <span class="hs-why">Central riverfront position, walkable to Dragon Bridge clubs and Bach Dang waterfront bars.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=bars-strip-alacarte&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fa-la-carte-da-nang-beach.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <span class="hs-fit">Budget · Bar Strip Proximity</span>
+        <span class="hs-name">A La Carte Da Nang Beach</span>
+        <span class="hs-why">My Khe beach position, rooftop bar, walkable to An Thuong at night. Reasonable price.</span>
+        <span class="hs-btn">Check rates →</span>
+      </a>
+    </div>
+
     <!-- ─── DRINKING CULTURE ─── -->
     <h2>Drinking Culture in Da Nang</h2>
 
@@ -1098,6 +1157,38 @@ a{text-decoration:none;color:inherit}
     <a href="where-to-stay-in-da-nang.html" class="decision-btn outline">Hotels Near the Action</a>
   </div>
 </div>
+
+    <div class="local-reality">
+      <div class="local-reality-title">Da Nang Nightlife: What to Actually Expect</div>
+      <ul>
+        <li>An Thuong is lively from Thursday to Saturday. Sunday to Wednesday is much quieter — some bars are closed.</li>
+        <li>The peak hours are 8pm–midnight. Most bars wind down by 1–2am.</li>
+        <li>Da Nang is not Bangkok or Bali for nightlife. Expect a good bar scene, not a club scene.</li>
+        <li>Grab is reliable until about 11:30pm. After that, availability drops. Have the app ready before you leave.</li>
+        <li>DIFF fireworks weekends (April–May) bring a surge in visitors. The riverfront becomes gridlocked by 10pm.</li>
+      </ul>
+    </div>
+
+    <div class="next-steps-grid">
+      <a class="ns-card" href="best-cafes-da-nang.html">
+        <span class="ns-label">Daytime</span>
+        <span class="ns-title">Best Cafes in Da Nang</span>
+        <span class="ns-desc">Daytime spots in An Thuong and beyond</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+      <a class="ns-card" href="dining.html">
+        <span class="ns-label">Dining</span>
+        <span class="ns-title">MICHELIN Dining Guide</span>
+        <span class="ns-desc">43 MICHELIN-recognised restaurants in Da Nang</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+      <a class="ns-card" href="best-hotels-in-da-nang.html">
+        <span class="ns-label">Stay</span>
+        <span class="ns-title">Find a Hotel Near the Action</span>
+        <span class="ns-desc">Hotels ranked by location and value</span>
+        <span class="ns-arrow">Read guide →</span>
+      </a>
+    </div>
 
   </article>
 

@@ -358,6 +358,33 @@ a{text-decoration:none;color:inherit}
   .hero-meta span{font-size:.68rem;padding:4px 9px}
 }
 
+/* ── CONVERSION BLOCKS ───────────────────────────────────── */
+.wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
+.wid-block-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
+.wid-block-title{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ocean-deep,#0D3535);margin-bottom:1rem;font-weight:400}
+.wid-block p{font-size:.9rem;color:#444;line-height:1.75;margin-bottom:.6rem}
+.wid-block cite{font-size:.76rem;color:#888;font-style:normal;display:block;margin-top:.75rem}
+.hotel-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.hs-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.1rem;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .18s}
+.hs-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09)}
+.hs-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+.hs-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep,#0D3535);margin:.15rem 0}
+.hs-why{font-size:.8rem;color:#666;line-height:1.55;flex:1}
+.hs-btn{font-size:.76rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.5rem}
+.local-reality{background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.75rem 2rem;margin:2.5rem 0}
+.local-reality-title{font-family:var(--font-serif,serif);font-size:1.1rem;color:#fff;margin-bottom:1rem;font-weight:400}
+.local-reality ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
+.local-reality li{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;padding-left:1.25rem;position:relative}
+.local-reality li::before{content:'→';position:absolute;left:0;color:var(--coral,#C8604A)}
+.next-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+.ns-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.25rem;background:var(--sand,#F6F1E9);text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s}
+.ns-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09);transform:translateY(-2px)}
+.ns-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+.ns-title{font-family:var(--font-serif,serif);font-size:.98rem;color:var(--ocean-deep,#0D3535);margin:.2rem 0;font-weight:400}
+.ns-desc{font-size:.78rem;color:#666;line-height:1.5;flex:1}
+.ns-arrow{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.4rem}
+@media(max-width:640px){.hotel-strip,.next-steps-grid{grid-template-columns:1fr}}
+
 </style>
 
   <!-- AWIN AFFILIATE HELPER -->
@@ -576,6 +603,52 @@ a{text-decoration:none;color:inherit}
       </div>
     </section>
 
+    <!-- ─── LOCAL PERSPECTIVE ───────────────────────────────── -->
+    <div class="wid-block">
+      <div class="wid-block-label">Local Perspective</div>
+      <div class="wid-block-title">Where I'd Stay with Kids in Da Nang</div>
+      <p>With young kids, the resort vs location tradeoff tips decisively toward resort. Mikazuki has the most complete children's water park infrastructure of any Da Nang resort. If your kids are at an age where they'll spend most of the trip in a pool or waterpark, Mikazuki is worth the distance from the city.</p>
+      <p>For families who want resort facilities but also want to eat out and explore: Hyatt Regency at Non Nuoc is the better balance. Kids pool, direct beach access, good on-site food, and it's a 15-minute Grab to the city.</p>
+      <p>If you need a family room in a beach hotel without the full resort price, Sheraton Grand has connecting rooms and is directly on My Khe with the An Thuong food street nearby — which matters when you have a picky eater.</p>
+      <cite>— Ryan Yousefi, editor, resident since 2021</cite>
+    </div>
+
+    <!-- ─── BEST FAMILY HOTEL PICKS ──────────────────────────── -->
+    <p style="font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ocean);margin-bottom:.25rem">Best Family Hotel Picks</p>
+    <div class="hotel-strip">
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=family-strip-mikazuki&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fmikazuki-japanese-resorts-spa.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <div class="hs-fit">Best for Kids · Waterpark</div>
+        <div class="hs-name">Mikazuki Japanese Resorts &amp; Spa</div>
+        <div class="hs-why">On-site waterpark access, Japanese-themed resort, good for families with young children who want to stay in.</div>
+        <div class="hs-btn">Check availability →</div>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=family-strip-hyatt&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhyatt-regency-danang-resort-and-spa.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <div class="hs-fit">Best Overall Family Resort</div>
+        <div class="hs-name">Hyatt Regency Danang</div>
+        <div class="hs-why">Kids pool, direct Non Nuoc beach, 5-star family service, 15 min from city. Strong choice for families wanting resort + occasional excursions.</div>
+        <div class="hs-btn">Check availability →</div>
+      </a>
+      <a class="hs-card" href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=family-strip-sheraton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fsheraton-grand-danang-resort.html%3Faid%3D1784897" target="_blank" rel="nofollow noopener sponsored">
+        <div class="hs-fit">Best for Walkability</div>
+        <div class="hs-name">Sheraton Grand Danang</div>
+        <div class="hs-why">My Khe beachfront, connecting rooms available, walkable to An Thuong restaurants. Best if you want to explore beyond the hotel.</div>
+        <div class="hs-btn">Check availability →</div>
+      </a>
+    </div>
+
+    <!-- ─── LOCAL REALITY ────────────────────────────────────── -->
+    <div class="local-reality">
+      <div class="local-reality-title">Travelling to Da Nang with Children — Practical Notes</div>
+      <ul>
+        <li>Mikazuki's waterpark has age/height restrictions on some slides. Check before arriving with very small children.</li>
+        <li>Da Nang's beach flags are reliable. Green = safe to swim. Red = do not enter the water. This matters more than what the hotel tells you.</li>
+        <li>The beach at Non Nuoc (Hyatt area) tends to have smaller waves than central My Khe — slightly more predictable for young swimmers.</li>
+        <li>Most 4–5 star resorts offer children's menus and can accommodate dietary restrictions with notice.</li>
+        <li>Grab works well for family groups. A standard car seats 3–4 passengers comfortably. Book Grab 7-seater for larger families.</li>
+        <li>Consider a mid-trip day at Ba Na Hills Sun World — it's a full day out that kids tend to enjoy, 30 min from the city.</li>
+      </ul>
+    </div>
+
     <!-- ─── MIKAZUKI ───────────────────────────────────────── -->
     <section id="mikazuki" aria-labelledby="mikazuki-h">
       <span class="section-label">Best for Families · Full Waterpark</span>
@@ -780,6 +853,33 @@ a{text-decoration:none;color:inherit}
       <a href="da-nang-with-teenagers.html" class="hero-chip">Da Nang with Kids</a>
       <a href="best-time-to-visit-da-nang.html" class="hero-chip">Best Time to Visit</a>
       <a href="guides.html" class="hero-chip">All Guides</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── NEXT STEPS ───────────────────────────────────────── -->
+<section style="background:var(--white);padding:2rem var(--gutter)">
+  <div style="max-width:var(--max);margin:0 auto">
+    <p style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean);margin-bottom:.5rem">Where to Go Next</p>
+    <div class="next-steps-grid">
+      <a class="ns-card" href="da-nang-first-time-visitors.html">
+        <div class="ns-label">Guide</div>
+        <div class="ns-title">First-Time Visitor Guide</div>
+        <div class="ns-desc">Practical intro to Da Nang before you land</div>
+        <div class="ns-arrow">Read guide →</div>
+      </a>
+      <a class="ns-card" href="da-nang-budget-guide.html">
+        <div class="ns-label">Guide</div>
+        <div class="ns-title">Family Budget Guide</div>
+        <div class="ns-desc">What things cost and how to plan spending</div>
+        <div class="ns-arrow">Read guide →</div>
+      </a>
+      <a class="ns-card" href="where-to-stay-in-da-nang.html">
+        <div class="ns-label">Guide</div>
+        <div class="ns-title">Which Area for Families?</div>
+        <div class="ns-desc">My Khe vs Non Nuoc vs city centre with kids</div>
+        <div class="ns-arrow">Read guide →</div>
+      </a>
     </div>
   </div>
 </section>
