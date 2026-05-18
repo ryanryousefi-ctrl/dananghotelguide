@@ -304,6 +304,18 @@ a{text-decoration:none;color:inherit}
   gtag('js', new Date());
   gtag('config', 'G-0T1H4G2N80');
 </script>
+<style class="author-trust-css">
+.author-trust-block{display:flex;align-items:flex-start;gap:1rem;background:var(--sand,#F6F1E9);border:1px solid rgba(0,0,0,.07);border-radius:14px;padding:1.1rem 1.25rem;margin:1.75rem 0}
+.atb-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(0,0,0,.08)}
+.atb-body{flex:1;min-width:0}
+.atb-name{font-size:.82rem;font-weight:700;color:var(--ocean-deep,#0D3535);margin-bottom:.35rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.atb-badge{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean,#1B5C5C);font-weight:600;opacity:.7}
+.atb-bio{font-size:.78rem;color:var(--ink-muted,#666);line-height:1.7;margin:0 0 .4rem}
+.atb-meta{font-size:.7rem;color:var(--ink-muted,#666);opacity:.8}
+.atb-link{color:var(--ocean,#1B5C5C);font-weight:600}
+.atb-link:hover{text-decoration:underline}
+@media(max-width:500px){.author-trust-block{flex-direction:column;gap:.75rem}.atb-avatar{width:38px;height:38px}}
+</style>
 </head>
 <body>
 
@@ -383,12 +395,14 @@ a{text-decoration:none;color:inherit}
   <!-- BODY -->
   <article class="guide-body">
 
-    <div class="author-box">
-      <img class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi, Editor" width="52" height="52" loading="lazy">
-      <div>
-        <div class="author-name">Ryan Yousefi</div>
-        <div class="author-role">Editor · Da Nang Hotel Guide · Based in Da Nang since 2022</div>
-      </div>
+    <div class="author-trust-block" role="complementary" aria-label="About the author">
+  <img class="atb-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi, editor of Da Nang Hotel Guide" width="52" height="52" loading="lazy">
+  <div class="atb-body">
+    <div class="atb-name">Ryan Yousefi <span class="atb-badge">Da Nang Hotel Guide</span></div>
+    <p class="atb-bio">Written from Da Nang by Ryan Yousefi, an American living in the city and building practical hotel and travel guides based on local experience, neighborhood context, and current traveler needs. Focus: Da Nang, Hoi An, and Central Vietnam. Recommendations prioritize location, walkability, value, and practical trip planning.</p>
+    <div class="atb-meta">Updated 2026 &nbsp;&middot;&nbsp; Based in Da Nang since 2021 &nbsp;&middot;&nbsp; <a href="about.html" class="atb-link">About this guide</a></div>
+  </div>
+</div>
       <div class="author-updated">Last updated<br>May 2026</div>
     </div>
 

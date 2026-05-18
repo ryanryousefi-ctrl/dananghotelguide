@@ -105,6 +105,18 @@ a{color:inherit;text-decoration:none}
   .hotel-card-header{flex-direction:column}
 }
 </style>
+<style class="author-trust-css">
+.author-trust-block{display:flex;align-items:flex-start;gap:1rem;background:var(--sand,#F6F1E9);border:1px solid rgba(0,0,0,.07);border-radius:14px;padding:1.1rem 1.25rem;margin:1.75rem 0}
+.atb-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(0,0,0,.08)}
+.atb-body{flex:1;min-width:0}
+.atb-name{font-size:.82rem;font-weight:700;color:var(--ocean-deep,#0D3535);margin-bottom:.35rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.atb-badge{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ocean,#1B5C5C);font-weight:600;opacity:.7}
+.atb-bio{font-size:.78rem;color:var(--ink-muted,#666);line-height:1.7;margin:0 0 .4rem}
+.atb-meta{font-size:.7rem;color:var(--ink-muted,#666);opacity:.8}
+.atb-link{color:var(--ocean,#1B5C5C);font-weight:600}
+.atb-link:hover{text-decoration:underline}
+@media(max-width:500px){.author-trust-block{flex-direction:column;gap:.75rem}.atb-avatar{width:38px;height:38px}}
+</style>
 </head>
 <body>
 
@@ -122,6 +134,16 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <div class="page-wrap">
+
+<div class="author-trust-block" role="complementary" aria-label="작성자 소개">
+  <img class="atb-avatar" src="../images/ryan-yousefi.jpg" alt="Ryan Yousefi, 다낭 호텔 가이드 편집자" width="52" height="52" loading="lazy">
+  <div class="atb-body">
+    <div class="atb-name">Ryan Yousefi <span class="atb-badge">Da Nang Hotel Guide</span></div>
+    <p class="atb-bio">다낭에 거주하는 미국인 작가 Ryan Yousefi가 직접 씁니다. 현지 생활 경험을 바탕으로 호텔, 지역별 숙소, 실용적인 여행 정보를 정리합니다. 다낭, 호이안, 중부 베트남 전문. 추천 기준: 위치, 도보 편의성, 가성비, 실질적인 여행 계획.</p>
+    <div class="atb-meta">2026년 업데이트 &nbsp;&middot;&nbsp; 다낭 거주 2021년부터 &nbsp;&middot;&nbsp; <a href="../about.html" class="atb-link">가이드 소개</a></div>
+  </div>
+</div>
+
 
   <div class="page-hero">
     <p class="page-hero-kicker">다낭 호텔 추천 · 2026 업데이트</p>
