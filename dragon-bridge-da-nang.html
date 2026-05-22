@@ -287,6 +287,12 @@ a{text-decoration:none;color:inherit}
 .footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35)}
 .footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
 
+/* ── SECTION IMAGES ─────────────────────────────────── */
+.section-img-wrap{margin:1.6rem 0;border-radius:12px;overflow:hidden;}
+.section-img-wrap img{width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s ease;}
+.section-img-wrap:hover img{transform:scale(1.025);}
+.img-caption{font-size:.72rem;color:var(--ink-muted,#888);padding:.5rem .8rem;text-align:right;font-style:italic;}
+
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media(max-width:1024px){
   .guide-layout{grid-template-columns:1fr;gap:2rem}
@@ -463,6 +469,11 @@ a{text-decoration:none;color:inherit}
 
     <h3>Holidays</h3>
     <p>On Tết, National Day (September 2), and Liberation Day (April 30), they sometimes add extra shows or extend the performance. Crowds are dramatically larger. If you're visiting during a major holiday, add an extra hour to your arrival time and keep your expectations flexible.</p>
+
+    <div class="section-img-wrap">
+      <img src="images/guides-b64-22.jpg" alt="Thuan Phuoc suspension bridge at night with purple lighting over Han River" loading="lazy" width="1200" height="800">
+      <p class="img-caption">The Thuan Phuoc Bridge frames the Han River's western approach — worth a walk across after dark.</p>
+    </div>
 
     <!-- SECTION 2 -->
     <h2 id="viewing-spots">The Right Way to Do Dragon Bridge Night</h2>
