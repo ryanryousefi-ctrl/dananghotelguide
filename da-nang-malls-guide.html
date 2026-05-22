@@ -111,9 +111,11 @@ a{text-decoration:none;color:inherit}
 .author-name{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:2px}
 .author-role{font-size:.75rem;color:var(--ink-muted)}
 .author-updated{margin-left:auto;flex-shrink:0;font-size:.7rem;color:var(--ink-muted);text-align:right;line-height:1.6}
-.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.88rem}
-.data-table th{background:var(--ocean-deep);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.75rem 1rem;text-align:left}
+.data-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-lg);border:1px solid var(--sand-dark);margin:1.5rem 0}
+.data-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:500px}
+.data-table th{background:var(--ocean-deep);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.75rem 1rem;text-align:left;white-space:nowrap}
 .data-table td{padding:.75rem 1rem;border-bottom:1px solid var(--sand-dark);color:var(--ink-soft);vertical-align:top;line-height:1.5}
+.data-table tr:last-child td{border-bottom:none}
 .data-table tr:nth-child(even) td{background:rgba(246,241,233,.5)}
 .data-table td:first-child{font-weight:600;color:var(--ink)}
 .highlight-box{background:var(--ocean-pale);border:1px solid rgba(27,92,92,.15);border-left:3px solid var(--ocean);border-radius:var(--r-md);padding:1.2rem 1.4rem;margin:1.5rem 0}
@@ -181,10 +183,10 @@ a{text-decoration:none;color:inherit}
 .tag-entertainment{background:rgba(255,150,100,.2);color:#ff9664}
 
 .mall-meta-row{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--sand-dark);background:rgba(246,241,233,.5)}
-.mall-meta-cell{padding:.7rem 1rem;border-right:1px solid var(--sand-dark)}
+.mall-meta-cell{padding:.7rem 1rem;border-right:1px solid var(--sand-dark);min-width:0;overflow:hidden}
 .mall-meta-cell:last-child{border-right:none}
 .mall-meta-label{font-size:.57rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.2rem}
-.mall-meta-val{font-size:.82rem;font-weight:700;color:var(--ink);line-height:1.3}
+.mall-meta-val{font-size:.82rem;font-weight:700;color:var(--ink);line-height:1.3;word-break:break-word}
 
 .mall-body{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;padding:1.4rem 1.5rem}
 .mall-section{display:flex;flex-direction:column;gap:.4rem}
@@ -231,9 +233,11 @@ a{text-decoration:none;color:inherit}
 .dining-card p:last-child{margin:0}
 
 /* Traveller table */
-.traveller-table{width:100%;border-collapse:collapse;font-size:.85rem;margin:1.5rem 0}
-.traveller-table th{background:var(--ocean-deep);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 1rem;text-align:left}
+.traveller-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-lg);border:1px solid var(--sand-dark);margin:1.5rem 0}
+.traveller-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:500px}
+.traveller-table th{background:var(--ocean-deep);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 1rem;text-align:left;white-space:nowrap}
 .traveller-table td{padding:.85rem 1rem;border-bottom:1px solid var(--sand-dark);color:var(--ink-soft);line-height:1.45;vertical-align:top}
+.traveller-table tr:last-child td{border-bottom:none}
 .traveller-table tr:nth-child(even) td{background:rgba(246,241,233,.4)}
 .traveller-table td:first-child{font-weight:700;color:var(--ink)}
 .traveller-table td:nth-child(2){font-weight:600;color:var(--ocean)}
@@ -244,9 +248,16 @@ a{text-decoration:none;color:inherit}
 .tip-block-title{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.5rem}
 .tip-block p{font-size:.83rem;line-height:1.65;color:var(--ink-soft);margin:0}
 
+@media(max-width:900px){
+  .mall-meta-row{grid-template-columns:1fr 1fr 1fr}
+  .mall-meta-cell:nth-child(4),.mall-meta-cell:nth-child(5){border-top:1px solid var(--sand-dark)}
+  .buy-grid{grid-template-columns:1fr 1fr}
+  .tips-3col{grid-template-columns:1fr 1fr}
+}
 @media(max-width:768px){
   .mall-meta-row{grid-template-columns:1fr 1fr}
   .mall-meta-cell:nth-child(5){border-right:none}
+  .mall-meta-cell:nth-child(3),.mall-meta-cell:nth-child(4),.mall-meta-cell:nth-child(5){border-top:1px solid var(--sand-dark)}
   .mall-body{grid-template-columns:1fr}
   .mall-full{grid-column:1}
   .mall-card-header{grid-template-columns:1fr}
@@ -257,7 +268,10 @@ a{text-decoration:none;color:inherit}
   .tips-3col{grid-template-columns:1fr}
 }
 @media(max-width:480px){
+  .mall-meta-row{grid-template-columns:1fr 1fr}
   .buy-grid{grid-template-columns:1fr}
+  .mall-meta-val{font-size:.75rem}
+  .mall-meta-label{font-size:.52rem}
 }
 
 /* ── SECTION IMAGES ───────────────────────────────────── */
@@ -852,6 +866,7 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <h2>Best Mall by Traveller Type</h2>
+    <div class="traveller-table-wrap">
     <table class="traveller-table">
       <thead><tr><th>Traveller Type</th><th>Best Mall</th><th>Why</th></tr></thead>
       <tbody>
@@ -864,6 +879,7 @@ a{text-decoration:none;color:inherit}
         <tr><td>Food-focused visitors</td><td>Lotte Mart + Helio</td><td>Lotte Mart for the best local food product shopping. Helio Center's outdoor food court for the most animated eating environment with the widest street food variety under one roof.</td></tr>
       </tbody>
     </table>
+    </div><!-- /traveller-table-wrap -->
 
     <h2>Practical Tips</h2>
     <div class="tips-3col">
