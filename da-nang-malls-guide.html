@@ -133,8 +133,8 @@ a{text-decoration:none;color:inherit}
 .sidebar-stat{display:flex;flex-direction:column;gap:.6rem}
 .sidebar-stat-row{display:flex;justify-content:space-between;align-items:baseline;padding:.5rem 0;border-bottom:1px solid var(--sand-mid);font-size:.82rem}
 .sidebar-stat-row:last-child{border-bottom:none}
-.sidebar-stat-label{color:var(--ink-muted)}
-.sidebar-stat-value{font-weight:700;color:var(--ink)}
+.sidebar-stat-label{color:var(--ink-muted);flex-shrink:0;padding-right:.5rem}
+.sidebar-stat-value{font-weight:700;color:var(--ink);text-align:right;word-break:break-word}
 .sidebar-cta{background:var(--ocean-deep);border-radius:var(--r-xl);padding:1.4rem;text-align:center}
 .sidebar-cta p{font-size:.82rem;color:rgba(255,255,255,.6);margin-bottom:1rem;line-height:1.5}
 .sidebar-cta a{display:block;background:var(--coral);color:#fff;font-size:.82rem;font-weight:700;padding:.75rem 1rem;border-radius:100px;transition:background .18s}
@@ -273,6 +273,17 @@ a{text-decoration:none;color:inherit}
   .mall-meta-val{font-size:.75rem}
   .mall-meta-label{font-size:.52rem}
 }
+
+/* ── PLAN BAND ──────────────────────────────────────────── */
+.plan-band{background:var(--ocean-deep);padding:clamp(2rem,4vw,3.5rem) var(--gutter)}
+.plan-band-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.plan-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:1.4rem 1.5rem}
+.plan-item-icon{font-size:1.4rem;margin-bottom:.6rem}
+.plan-item-title{font-family:var(--font-serif);font-size:1rem;color:#fff;line-height:1.3;margin-bottom:.5rem}
+.plan-item-title a{color:var(--coral-light);text-decoration:underline;text-decoration-color:rgba(224,122,98,.4)}
+.plan-item-desc{font-size:.83rem;color:rgba(255,255,255,.6);line-height:1.65}
+.plan-item-desc a{color:var(--coral-light);font-weight:700;text-decoration:none}
+@media(max-width:768px){.plan-band-inner{grid-template-columns:1fr}}
 
 /* ── SECTION IMAGES ───────────────────────────────────── */
 .section-img-wrap{margin:1.6rem 0;border-radius:12px;overflow:hidden;}
@@ -980,8 +991,8 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="plan-item">
       <div class="plan-item-icon">🏨</div>
-      <div class="plan-item-title">Browse hotels by location <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=malls-cta&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored" style="color:var(--coral-light);font-weight:600">malls-cta</a></div>
-      <div class="plan-item-desc">Browse Da Nang Hotels →</div>
+      <div class="plan-item-title">Book near the malls you'll use most</div>
+      <div class="plan-item-desc">Your hotel's location determines your mall access. Pick based on what matters to you: beach proximity, city centre walkability, or resort seclusion. <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=malls-cta&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored">Browse Da Nang Hotels →</a></div>
     </div>
   </div>
 </section>
