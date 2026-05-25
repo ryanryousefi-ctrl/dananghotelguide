@@ -166,6 +166,20 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}#mobileStickyBar{display:flex!important;}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Da Nang First-Time Travel Guide 2026 — Everything You Need to Know","description":"Complete first-timer guide to Da Nang 2026. When to go, where to stay, how to get around, what to eat, top 5 things to do, biggest mistakes, day trips, money and SIM.","url":"https://www.dananghotelguide.com/da-nang-first-time-travel-guide.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -316,6 +330,11 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>Cooler and occasionally rainy, with December being one of the wetter months. Temperatures drop to 18-24C (64-75F) at night. Christmas and New Year see prices spike. February (around Tet) sees the city transform with decorations and then go quiet as locals leave for the holidays - a strange but interesting time to visit. By mid-February the weather is improving and crowds are thinning.</p>
   </div>
 
+  <div class="local-callout">
+    <div class="local-callout-label">My Honest Take</div>
+    Da Nang surprised me when I first arrived. I expected a beach city. I found a city with a beach - the distinction matters. It has proper infrastructure, good food, a genuine expat community, and one of the best value propositions in Southeast Asia for anyone who wants both urban convenience and direct ocean access.
+  </div>
+
   <div class="page-section" id="where-to-stay">
     <h2>Where to Stay in <em>Da Nang</em></h2>
     <p>The core choice for first-timers is beach vs city. The answer for most people is beach, but there are trade-offs worth understanding.</p>
@@ -331,6 +350,12 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 
     <div class="info-box">
       <p><strong>Booking tip:</strong> Book accommodation with free cancellation where possible - Da Nang's weather variability (especially September-November) means trip adjustments are not uncommon. Booking.com has the widest selection and most reliable cancellation policies for Da Nang properties at all budget levels.</p>
+    </div>
+
+    <div class="vibe-bar">
+      <span class="vibe-pill green">My Khe Beach: Best for beach access, most hotel variety</span>
+      <span class="vibe-pill green">Non Nuoc: Quieter, more resort-like, further from city</span>
+      <span class="vibe-pill gold">City Centre/Han River: Urban energy, beach is a taxi away</span>
     </div>
   </div>
 
@@ -351,6 +376,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>Renting a motorbike opens up Da Nang significantly - Son Tra Peninsula coastal road, the Hai Van Pass, and beachside exploration all work better on your own schedule. Rental runs $6-10 per day. Requires a valid driving license (international permit recommended). Good option for visitors staying a week or more who are comfortable in traffic.</p>
   </div>
 
+  <img class="scenic-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&h=240&fit=crop&q=75" alt="Da Nang Dragon Bridge night Han River atmospheric evening" loading="lazy" width="900" height="240">
+
   <div class="page-section" id="what-to-eat">
     <h2>What to Eat in <em>Da Nang</em></h2>
     <p>Da Nang is in central Vietnam - the food is distinct from northern Vietnamese cuisine (Hanoi) and southern (Ho Chi Minh City). The regional specialties are genuinely worth seeking out.</p>
@@ -361,6 +388,11 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>Bun cha ca - fish cake noodle soup unique to Da Nang. Light broth with fish cakes, noodles, and vegetables. 30,000-50,000 VND. Find it at local breakfast stalls and lunch spots.</p>
     <p>Banh mi - Vietnam's French-influenced sandwich. Da Nang's version is excellent. Look for well-reviewed spots with queues of locals. 20,000-30,000 VND for a fully loaded banh mi.</p>
     <p>Ca phe sua da - Vietnamese iced coffee with sweetened condensed milk. Order this everywhere. 15,000-25,000 VND at street cafes. This is one of the genuinely transformative food experiences of Vietnam.</p>
+
+    <div class="local-callout">
+      <div class="local-callout-label">What Surprised Me</div>
+      The local food scene is genuinely excellent at every price point. Mi quang at 7am from a plastic-stool shop costs $1.50. The banh mi here rivals anything in Vietnam. And the coffee culture - ca phe da with condensed milk over ice - becomes a ritual within 48 hours.
+    </div>
 
     <h3>Where to Eat</h3>
     <p>For the most authentic and cheapest food: local stalls on side streets, the Con Market perimeter in the evenings, and small family restaurants away from the main beach strip. For a mid-range experience with English menus: An Thuong strip and the streets immediately behind the beach. For a nice dinner: beachfront restaurants along Vo Nguyen Giap Street or the Han River area for atmosphere.</p>
@@ -384,6 +416,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <h3>5. Museum of Cham Sculpture</h3>
     <p>One of the best museums in Vietnam, housing the world's largest collection of Cham sculpture. Da Nang's location as the heart of the former Cham Kingdom makes this collection uniquely important. An hour well spent. Entry 60,000 VND. Located in central Da Nang, 20-25 minutes by Grab from the beach.</p>
   </div>
+
+  <div class="pull-quote">"Most people who visit Da Nang for the first time plan three nights. Most of them extend. The city has a way of quietly convincing you to stay."</div>
 
   <div class="page-section" id="day-trips">
     <h2>Day Trip Logistics from <em>Da Nang</em></h2>
@@ -422,6 +456,11 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 
     <h3>Not Getting a SIM at the Airport</h3>
     <p>Walking past the SIM stalls at arrivals and planning to sort it later is a bad plan. Without data you cannot book a Grab from the airport, which means you either pay significantly more for a hotel transfer or navigate an unfamiliar taxi situation. The SIM stall takes five minutes and fixes this problem entirely.</p>
+
+    <div class="warn-callout">
+      <div class="local-callout-label">Tourist Trap Warning</div>
+      The restaurants directly facing Dragon Bridge and the tourist cafes near the Han River Market are priced for visitors, not value. Walk one block back from any tourist-heavy street and prices drop 50%.
+    </div>
 
     <h3>Eating Only on the Beach Strip</h3>
     <p>Restaurants on Vo Nguyen Giap (the beachfront road) and immediately adjacent charge tourist prices. One block inland and prices drop 40-60% for the same quality food. Walk to An Thuong for a better price-to-quality ratio, or take a Grab two kilometres for genuinely local eating at street stall prices.</p>

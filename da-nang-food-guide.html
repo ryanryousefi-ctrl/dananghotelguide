@@ -160,6 +160,20 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}#mobileStickyBar{display:flex!important;}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Da Nang Food Guide 2026 — What to Eat and Where","description":"The best food in Da Nang 2026. Local dishes to try, where to eat them, restaurant areas, and honest advice from a local resident.","url":"https://www.dananghotelguide.com/da-nang-food-guide.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -297,6 +311,11 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>Mi quang is the dish Da Nang takes most seriously. Thick, flat, turmeric-yellow noodles served with pork, shrimp, quail eggs, peanuts, and fresh herbs in a small amount of concentrated broth. It is not a soup - the broth is a rich sauce that coats the noodles rather than filling the bowl. You mix everything together, add the crunchy rice crackers on top, and eat immediately.</p>
     <p>You will find mi quang shops on almost every block in residential areas. The best ones are the most basic-looking - plastic stools, no menu, one item served all morning. Expect to pay 35,000-50,000 VND (around $1.40-2) for a full bowl.</p>
 
+    <div class="local-callout">
+      <div class="local-callout-label">What Surprised Me</div>
+      Mi quang is nothing like the noodle soups most visitors expect. There is barely any liquid. The broth is more of a thick dressing that coats the noodles. First-timers often stare at it confused. Then they mix it, add the cracker on top, and immediately understand.
+    </div>
+
     <h3>Bun Cha Ca - Fish Cake Noodle Soup</h3>
     <p>Less famous internationally than mi quang but arguably more popular day-to-day among locals. A clear broth with rice vermicelli noodles and grilled fish cakes - the cakes are the point, made from fresh local fish and grilled until slightly charred on the outside. The broth is light and fragrant. It is a breakfast and lunch dish, rarely served at dinner. Price: 30,000-45,000 VND.</p>
 
@@ -305,6 +324,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 
     <h3>Banh Mi</h3>
     <p>Da Nang's banh mi is not as famous as Hoi An's (Banh Mi Phuong gets all the press, 30 kilometres south), but the local version is excellent and far less crowded. The baguette here has a thinner, crispier crust than in the south. Good banh mi shops open from 6am and sell out before noon. Price: 15,000-25,000 VND for a full sandwich.</p>
+
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&h=240&fit=crop&q=75" alt="Vietnamese street food banh mi fresh ingredients Da Nang" loading="lazy" width="900" height="240">
 
     <h3>Fresh Seafood</h3>
     <p>Da Nang sits on the ocean and takes that seriously. The My Khe beach strip has dozens of seafood restaurants where you choose from tanks or display cases - crab, mantis shrimp, scallops, clams, fish - and it gets cooked to order. Quality is high and prices are reasonable compared to tourist-facing seafood in Bangkok or Phuket. Go at dinner, go with a group, and point at whatever looks freshest.</p>
@@ -320,12 +341,22 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
   <div class="page-section" id="where-to-eat">
     <h2>Where to Eat in <em>Da Nang</em></h2>
 
+    <div class="vibe-bar">
+      <span class="vibe-pill green">Con Market: Best local breakfast, 5am-10am</span>
+      <span class="vibe-pill green">An Thuong: Best dinner variety, 6pm-midnight</span>
+      <span class="vibe-pill gold">My Khe strip: Fresh seafood, evening only</span>
+      <span class="vibe-pill gold">Bach Dang riverside: Atmosphere, average food</span>
+      <span class="vibe-pill red">Resort restaurants: Convenient, overpriced</span>
+    </div>
+
     <h3>Con Market Area - Best for Local Breakfast</h3>
     <p>Con Market (Cho Con) is a working market in the city centre that has been feeding Da Nang residents for decades. The food stalls on the surrounding streets and inside the market building serve banh mi, bun cha ca, and mi quang starting at 5:30am. Tables spill onto the pavement. Nobody speaks English. The food is excellent and costs 30,000-50,000 VND per dish. Go hungry, point at what looks good, and eat fast - it is bustling, not leisurely.</p>
 
     <h3>An Thuong - Best for Variety and Evening Dining</h3>
     <p>The area around Nguyen Van Thoai and the An Thuong neighbourhood near My Khe beach is where most visitors end up for dinner, and it is a reasonable choice. You will find Vietnamese restaurants, pizza, burgers, craft beer bars, and a range of quality from very good to mediocre tourist traps. The best approach is to walk two blocks off the main strip to find restaurants that rely on repeat customers rather than foot traffic.</p>
     <p>An Thuong is not where you find the best local food - that is at Con Market and in residential side streets. But it is genuinely the best concentration of reliable, varied, comfortable dining for people who want a sit-down dinner with a beer.</p>
+
+    <div class="pull-quote">"Con Market at 7am is one of the best meals you will have in Vietnam. Plastic stool, steam rising off the bowl, $1.50. The resort breakfast across town costs $35 and is objectively worse."</div>
 
     <h3>Bach Dang Riverside - Atmosphere Over Food</h3>
     <p>The riverside strip along Bach Dang has cafes and restaurants with views of the Han River and the Dragon Bridge. The food and coffee are fine - not exceptional - but the setting is pleasant in the evening, particularly around Dragon Bridge fire show time (9pm on weekends). Use it for drinks and a light meal, not as your primary eating destination.</p>
@@ -366,6 +397,12 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <h3>Third-Wave Specialty Coffee</h3>
     <p>An Thuong and the streets around My Khe have a growing specialty coffee scene - pour-over, siphon, well-sourced single origins, the works. If you care about coffee quality beyond the traditional ca phe da, you will find it here. Prices are still reasonable by Western standards: 50,000-90,000 VND ($2-3.60) for a specialty cup.</p>
     <p>For a curated list of the best cafes, see the <a href="best-cafes-da-nang.html" style="color:var(--ocean)">best cafes in Da Nang guide</a>.</p>
+
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?w=900&h=240&fit=crop&q=75" alt="Vietnamese iced coffee ca phe da condensed milk Da Nang cafe" loading="lazy" width="900" height="240">
+    <div class="gold-callout">
+      <div class="local-callout-label">Morning vs Night Vibes</div>
+      Da Nang food operates on Vietnamese time. Breakfast spots peak at 6:30am and are genuinely winding down by 9:30am. If you want the best mi quang, set an alarm. If you want the seafood grills at My Khe, arrive by 7pm - the freshest fish is gone by 8:30pm.
+    </div>
   </div>
 
   <div class="page-section" id="night-eating">
@@ -375,6 +412,11 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>A seasonal night market operates Thursday through Sunday near the Dragon Bridge and Bach Dang riverside area. Street food stalls, snacks, drinks, and some craft goods. It is small by Southeast Asian night market standards - think a few dozen stalls rather than a vast market. Useful for an evening walk and cheap snacks; not a destination in itself. More detail in the <a href="best-night-markets-da-nang.html" style="color:var(--ocean)">Da Nang night markets guide</a>.</p>
     <h3>My Khe Grilled Seafood Strip</h3>
     <p>The most consistently good night eating option. The My Khe beach restaurants are set up specifically for evening seafood grilling - the entire operation is outdoor, communal, and lively without being chaotic. Tables fill from 6:30pm onwards. Order seafood, beer, and whatever vegetables they are grilling and expect to spend 200,000-400,000 VND per person for a solid meal.</p>
+    <div class="warn-callout">
+      <div class="local-callout-label">Tourist Trap Warning</div>
+      The brightly lit "Vietnamese restaurant" signs near Dragon Bridge that show pictures of every dish and have English-speaking hosts out front are tourist traps. The food is fine. The price is not. Walk one street back and spend a third of the money on better food.
+    </div>
+
     <h3>Com Dem - Night Rice Shops</h3>
     <p>A handful of com dem (night rice) shops in residential areas serve hot Vietnamese food through midnight or later. These are local institutions - not tourist-facing at all, cash only, ordered by pointing. If your hotel staff knows where the nearest good com dem is, go there. It is the real late-night Da Nang.</p>
   </div>
