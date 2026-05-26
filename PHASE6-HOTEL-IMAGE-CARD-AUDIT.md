@@ -1,6 +1,7 @@
 # Phase 6 — Sitewide Hotel Image Card Audit
 
-**Completed:** 2026-05-26
+**Phase 6 Initial:** 2026-05-26
+**Final QA Pass:** 2026-05-26
 **Scope:** All HTML pages using hotel-card ranking patterns
 
 ---
@@ -147,8 +148,22 @@ For pages with `padding:1.75rem` hotel-cards:
 
 ---
 
+## Final QA Pass — Additional Pages Fixed (2026-05-26)
+
+| Page | Fix Applied |
+|------|------------|
+| `da-nang-vs-hanoi.html` | Added Sheraton Grand image (Da Nang pick) + Hoan Kiem Lake fallback (Sofitel Metropole Hanoi pick) |
+| `da-nang-vs-ho-chi-minh-city.html` | Added InterContinental image (Da Nang pick) + HCMC skyline fallback (Park Hyatt Saigon pick) |
+| `da-nang-vs-nha-trang.html` | Added Muong Thanh, Caro Hotel, Grand Mercure images (all 3 top-pick-cards) |
+| `da-nang-with-teenagers.html` | Added 120x90px thumbnails to 3 horizontal flex hotel-cards: Sheraton, A La Carte, Muong Thanh |
+
+**Final QA result: ZERO text-only hotel cards remain across the entire site.**
+
+---
+
 ## Remaining Recommendations
 
 1. Add hotel exterior photos for: TIA Wellness Resort, Fusion Maia Da Nang, Fusion Suites Da Nang, TMS Hotel Da Nang Beach
-2. Consider adding Naman Retreat to `images/hotels/` directory for consistency
-3. The `hs-card` / hotel-strip cards (small inline cards) remain text-only by design — these are compact 2-per-row affiliate CTA cards, not ranking cards. Adding images would require a layout redesign. Flag for future consideration.
+2. Replace fallback images on `da-nang-vs-hanoi.html` (Sofitel Metropole) and `da-nang-vs-ho-chi-minh-city.html` (Park Hyatt Saigon) when real hotel photos are available
+3. Consider adding Naman Retreat to `images/hotels/` directory for consistency
+4. The `hs-card` / hotel-strip cards (small inline cards) remain text-only by design — these are compact 2-per-row affiliate CTA cards, not ranking cards. Adding images would require a layout redesign. Flag for future consideration.
