@@ -157,6 +157,11 @@ a{text-decoration:none;color:inherit}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+.cmp-visual-duel{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 2.5rem}
+.cmp-visual-card{position:relative;border-radius:var(--r-lg,14px);overflow:hidden;aspect-ratio:4/3}
+.cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
+.cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
+@media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"TIA Wellness vs Naman Retreat Da Nang 2026 — Spa Resort Compared","description":"TIA Wellness Resort vs Naman Retreat Da Nang: the two best wellness resorts in central Vietnam. Pricing, spa quality, beach, villas compared by a local.","url":"https://www.dananghotelguide.com/tia-wellness-vs-naman-retreat-da-nang.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -277,6 +282,17 @@ a{text-decoration:none;color:inherit}
 </section>
 
 <div class="cmp-body">
+<div class="cmp-visual-duel">
+  <!-- TODO: Replace fallback with real TIA Wellness Resort image -->
+  <div class="cmp-visual-card">
+    <img src="images/hotels/my-khe-beach-da-nang.webp" alt="TIA Wellness Resort Da Nang on My Khe Beach" loading="lazy">
+    <div class="cmp-visual-label">TIA Wellness Resort</div>
+  </div>
+  <div class="cmp-visual-card">
+    <img src="images/review-naman-retreat-da-nang-exterior.jpg" alt="Naman Retreat Da Nang beachfront villa" loading="lazy">
+    <div class="cmp-visual-label">Naman Retreat</div>
+  </div>
+</div>
   <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
     <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
     <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>

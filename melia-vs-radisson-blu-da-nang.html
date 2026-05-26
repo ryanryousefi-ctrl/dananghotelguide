@@ -611,6 +611,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .cmp-table tr:nth-child(even) td{background:var(--sand)}
     .tick{color:var(--ocean);font-weight:700}
     .cross{color:var(--coral);font-weight:700}
+.cmp-visual-duel{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 2.5rem}
+.cmp-visual-card{position:relative;border-radius:var(--r-lg,14px);overflow:hidden;aspect-ratio:4/3}
+.cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
+.cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
+@media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Melia vs Radisson Blu Danang 2026, Which Is Better?","description":"Melia Danang Beach Resort vs Radisson Blu Resort Danang compared for 2026.","url":"https://dananghotelguide.com/melia-vs-radisson-blu-da-nang.html","datePublished":"2026-04-12","dateModified":"2026-04-12","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"}}
@@ -729,6 +734,16 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 </section>
 
 <div class="cmp-body">
+<div class="cmp-visual-duel">
+  <div class="cmp-visual-card">
+    <img src="images/hotels/melia-da-nang.jpg" alt="Melia Danang Beach Resort exterior" loading="lazy">
+    <div class="cmp-visual-label">Melia Danang Beach Resort</div>
+  </div>
+  <div class="cmp-visual-card">
+    <img src="images/hotels/radisson-blu-da-nang.jpg" alt="Radisson Blu Danang hotel exterior" loading="lazy">
+    <div class="cmp-visual-label">Radisson Blu Danang</div>
+  </div>
+</div>
 
   <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
     <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>

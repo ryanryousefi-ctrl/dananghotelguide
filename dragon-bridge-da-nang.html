@@ -313,6 +313,8 @@ a{text-decoration:none;color:inherit}
 @media(max-width:480px){
   .footer-grid{grid-template-columns:1fr}
 }
+.hotel-card-thumb{width:120px;height:90px;object-fit:cover;border-radius:10px;flex-shrink:0;margin-right:0}
+.hotel-card-top-img{width:100%;height:160px;object-fit:cover;border-radius:var(--r-lg,12px);display:block;margin-bottom:.9rem}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -560,6 +562,8 @@ a{text-decoration:none;color:inherit}
     <div class="hotel-tier">
       <span class="hotel-tier-label">Mid-Range</span>
       <div class="hotel-card">
+        <!-- TODO: Replace fallback with real Calix Hotel Da Nang image -->
+        <img class="hotel-card-top-img" src="images/hotels/son-tra-peninsula-da-nang.jpg" alt="Calix Hotel Da Nang near Dragon Bridge" loading="lazy">
         <div class="hotel-card-header">
           <div class="hotel-card-name">Calix Hotel Da Nang</div>
           <span class="hotel-card-dist">~4 min walk</span>
@@ -572,6 +576,8 @@ a{text-decoration:none;color:inherit}
     <div class="hotel-tier">
       <span class="hotel-tier-label">Budget</span>
       <div class="hotel-card">
+        <!-- TODO: Replace fallback with real Son Tra District guesthouse image -->
+        <img class="hotel-card-top-img" src="images/hotels/son-tra-peninsula-da-nang.jpg" alt="Son Tra District Da Nang guesthouses near Dragon Bridge" loading="lazy">
         <div class="hotel-card-header">
           <div class="hotel-card-name">Son Tra District Guesthouses</div>
           <span class="hotel-card-dist">2–5 min walk</span>
