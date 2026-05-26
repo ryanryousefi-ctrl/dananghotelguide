@@ -606,1167 +606,1006 @@ a{text-decoration:none;color:inherit}
   </div>
 </header>
 
-<section class="section" style="background:var(--sand)">
-  <div class="section-inner">
-    <p class="section-label">Essential guides</p>
-    <h2 class="section-heading">Plan your trip <em>right</em></h2>
-    
-    <div class="guide-hub-grid">
-      <a href="da-nang-hotel-prices-by-month.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-35.jpg" alt="Da Nang beach and city skyline aerial view hotel price guide" width="500" height="160" loading="eager">
+
+<!-- ═══════════════════════════════════════════════════════════
+     JUMP NAVIGATION
+═══════════════════════════════════════════════════════════ -->
+<style>
+/* Jump nav */
+.jump-nav{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:.9rem var(--gutter)}
+.jump-nav-inner{max-width:var(--max);margin:0 auto}
+.jump-nav-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
+.jump-pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.jump-pill{
+  display:inline-block;
+  padding:6px 13px;
+  background:var(--sand);
+  border:1px solid var(--sand-dark);
+  border-radius:100px;
+  font-size:.75rem;font-weight:600;
+  color:var(--ink-soft);
+  transition:background .15s,color .15s,border-color .15s;
+  white-space:nowrap;
+  text-decoration:none;
+}
+.jump-pill:hover{background:var(--ocean-pale);color:var(--ocean);border-color:rgba(27,92,92,.25)}
+
+/* Guide sections */
+.guide-section{padding:clamp(2.8rem,5vw,4.5rem) var(--gutter)}
+.guide-section-inner{max-width:var(--max);margin:0 auto}
+.gs-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean);margin-bottom:.4rem;display:flex;align-items:center;gap:8px}
+.gs-label::before{content:'';display:block;width:14px;height:2px;background:var(--ocean);border-radius:1px}
+.gs-heading{font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.2rem);color:var(--ink);line-height:1.1;letter-spacing:-.03em;margin-bottom:.5rem}
+.gs-heading em{font-style:italic;color:var(--ocean)}
+.gs-intro{font-size:.9rem;color:var(--ink-muted);line-height:1.7;max-width:660px;margin-bottom:2rem}
+
+/* Guide card grid */
+.ghg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.ghg-2{grid-template-columns:repeat(2,1fr)}
+.ghg-4{grid-template-columns:repeat(4,1fr)}
+
+/* Guide cards */
+.ghc{background:var(--white);border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.ghc:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.ghc-img{width:100%;height:150px;object-fit:cover;display:block;transition:transform .5s}
+.ghc:hover .ghc-img{transform:scale(1.04)}
+.ghc-body{padding:1.2rem 1.3rem;flex:1;display:flex;flex-direction:column}
+.ghc-cat{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.3rem}
+.ghc-title{font-family:var(--font-serif);font-size:1rem;color:var(--ink);line-height:1.25;margin-bottom:.4rem;letter-spacing:-.01em}
+.ghc-desc{font-size:.79rem;color:var(--ink-muted);line-height:1.65;flex:1;margin-bottom:.8rem}
+.ghc-read{display:inline-flex;align-items:center;gap:4px;font-size:.77rem;font-weight:700;color:var(--ocean);margin-top:auto;transition:gap .15s}
+.ghc:hover .ghc-read{gap:7px}
+
+/* Badge */
+.ghc-badge{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ocean-pale);color:var(--ocean);border-radius:4px;padding:2px 7px;margin-bottom:.5rem}
+.ghc-badge.coral{background:rgba(200,96,74,.1);color:var(--coral)}
+
+/* Section alternating bg */
+.gs-alt{background:var(--white)}
+.gs-sand{background:var(--sand)}
+
+/* Divider */
+.gs-divider{height:1px;background:var(--sand-dark);max-width:var(--max);margin:0 auto}
+
+/* Responsive */
+@media(max-width:900px){.ghg{grid-template-columns:repeat(2,1fr)}.ghg-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ghg,.ghg-2,.ghg-4{grid-template-columns:1fr}}
+@media(max-width:640px){.jump-pill{font-size:.7rem;padding:5px 11px}}
+</style>
+
+<nav class="jump-nav" aria-label="Jump to section">
+  <div class="jump-nav-inner">
+    <p class="jump-nav-label">Jump to</p>
+    <div class="jump-pills">
+      <a class="jump-pill" href="#start-here">Start Here</a>
+      <a class="jump-pill" href="#hotels-areas">Hotels &amp; Areas</a>
+      <a class="jump-pill" href="#trip-planning">Trip Planning</a>
+      <a class="jump-pill" href="#itineraries">Itineraries</a>
+      <a class="jump-pill" href="#families">Families</a>
+      <a class="jump-pill" href="#food-nightlife">Food &amp; Nightlife</a>
+      <a class="jump-pill" href="#beaches-weather">Beaches &amp; Weather</a>
+      <a class="jump-pill" href="#transportation">Transportation</a>
+      <a class="jump-pill" href="#hotel-comparisons">Hotel Comparisons</a>
+      <a class="jump-pill" href="#destination-comparisons">Destination vs.</a>
+      <a class="jump-pill" href="#hoi-an">Hoi An</a>
+      <a class="jump-pill" href="#practical-tips">Practical Tips</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     START HERE
+═══════════════════════════════════════════════════════════ -->
+<section id="start-here" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Begin your research</p>
+    <h2 class="gs-heading">Start <em>here</em></h2>
+    <p class="gs-intro">New to Da Nang? These are the guides to read first — where to stay, when to go, how long to spend, and what first-timers get wrong.</p>
+    <div class="ghg">
+
+      <a href="da-nang-first-time-visitors.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-09.jpg" alt="Da Nang aerial cityscape Han River Dragon Bridge" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Price Index · Data Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotel Prices by Month</h3>
-          <p class="ghc-desc">Da Nang hotel prices month by month, high season peaks, low season deals, and the best months to book for value. 2026 price index.</p>
-          <span class="ghc-read">View price index →</span>
+          <div class="ghc-badge coral">First-timers</div>
+          <div class="ghc-cat">Complete Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang for First-Time Visitors</h3>
+          <p class="ghc-desc">Visas, best areas, what to eat, how to get around, safety, weather, how many days. The full first-timer brief.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="best-hotels-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-36.jpg" alt="Da Nang My Khe Beach aerial view best hotels guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Definitive Guide · 2026</div>
-          <h3 class="ghc-title">Best Hotels in Da Nang</h3>
-          <p class="ghc-desc">The complete breakdown, every top hotel ranked across luxury, beachfront, boutique, family, and budget. Start here.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      
       <a href="where-to-stay-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=320&fit=crop&q=75" alt="Where to stay Da Nang neighbourhood" loading="lazy" width="500" height="160">
+        <img class="ghc-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Where to stay Da Nang neighbourhood guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Neighbourhood Guide</div>
+          <div class="ghc-badge coral">Start here</div>
+          <div class="ghc-cat">Neighbourhood Guide · 2026</div>
           <h3 class="ghc-title">Where to Stay in Da Nang</h3>
-          <p class="ghc-desc">My Khe, Son Tra, Han River, Non Nuoc, each area mapped with pros, cons, and the right traveller for each.</p>
+          <p class="ghc-desc">My Khe, Son Tra, Han River, Non Nuoc — each area mapped with pros, cons, and the right traveller for each.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
-      
+
       <a href="best-time-to-visit-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-00.jpg" alt="Vietnam fishing bay with turquoise water, best time to visit Da Nang" loading="lazy" width="500" height="160">
+        <img class="ghc-img" src="images/guides-b64-00.jpg" alt="Vietnam fishing bay turquoise water best time to visit Da Nang" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Climate &amp; Timing</div>
+          <div class="ghc-cat">Climate &amp; Timing · 2026</div>
           <h3 class="ghc-title">Best Time to Visit Da Nang</h3>
           <p class="ghc-desc">When to go for beach weather, when to go for value, and when to avoid the rains. Month-by-month breakdown.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
-      
-      <a href="da-nang-weather-by-month.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-18.jpg" alt="Da Nang city skyline aerial view weather guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Weather Data · All 12 Months</div>
-          <h3 class="ghc-title">Da Nang Weather by Month</h3>
-          <p class="ghc-desc">Temperature, rainfall, sea conditions, and humidity for every month. No fluff, just accurate VNMHA data.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      
-      <a href="dining.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=320&fit=crop&q=75" alt="Da Nang dining Michelin restaurants" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">MICHELIN Guide · 43 Restaurants</div>
-          <h3 class="ghc-title">Da Nang Dining Guide</h3>
-          <p class="ghc-desc">One MICHELIN Star, 20 Bib Gourmand, and the best street food spots by neighbourhood, mì Quảng to fresh seafood.</p>
-          <span class="ghc-read">Explore dining →</span>
-        </div>
-      </a>
 
-      <a href="best-bars-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&h=320&fit=crop&q=75" alt="Best bars in Da Nang rooftop cocktails nightlife" loading="lazy" width="500" height="160">
+      <a href="how-many-days-in-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-19.jpg" alt="Da Nang city Han River aerial how many days" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Nightlife Guide · 25 Bars</div>
-          <h3 class="ghc-title">Best Bars in Da Nang (2026)</h3>
-          <p class="ghc-desc">Rooftop bars, craft beer taprooms, cocktail lounges, live music pubs, and 7 hidden speakeasies, ranked by category with prices and area breakdowns.</p>
-          <span class="ghc-read">Explore bars →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-nightlife-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&h=320&fit=crop&q=75" alt="Da Nang Dragon Bridge at night Han River" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">After-Dark Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Nightlife Guide</h3>
-          <p class="ghc-desc">Dragon Bridge fire show, rooftop bars, hidden speakeasies, live music, and how to get home safely. Everything after dark in Da Nang.</p>
-          <span class="ghc-read">Read nightlife guide →</span>
-        </div>
-      </a>
-      
-      <a href="da-nang-itinerary.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-19.jpg" alt="Da Nang city panorama Han River aerial view 3-day itinerary" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Itinerary · Editorial Guide</div>
-          <h3 class="ghc-title">3-Day Da Nang Itinerary (2026)</h3>
-          <p class="ghc-desc">A balanced three-day plan, Marble Mountains, My Khe Beach, Son Tra Peninsula, Han River dining, and a full Hoi An day trip. Structured by morning, afternoon, and evening.</p>
-          <span class="ghc-read">Read itinerary →</span>
-        </div>
-      </a>
-      
-      <a href="da-nang-transport-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-02.jpg" alt="Two Grab drivers on motorbikes, Da Nang transport guide 2026" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide · Transport</div>
-          <h3 class="ghc-title">Da Nang Transport Guide</h3>
-          <p class="ghc-desc">Airport transfers, Grab pricing, motorbike hire, day trips to Hoi An and Hue, and when to rent vs ride-hail. Current pricing ranges included.</p>
-          <span class="ghc-read">Explore transport →</span>
-        </div>
-      </a>
-      
-      <a href="da-nang-digital-nomad-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&h=320&fit=crop&q=75" alt="Café with laptop and coffee in Da Nang beachside neighbourhood" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide · Remote Work</div>
-          <h3 class="ghc-title">Digital Nomad Guide to Da Nang</h3>
-          <p class="ghc-desc">Best neighbourhoods for remote workers, co-working spaces, café culture, SIM cards, cost of living, visa options, and seasonal working conditions.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      <a href="how-to-live-in-da-nang-under-1000-a-month.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-20.jpg" alt="Da Nang city night traffic light trails cost of living guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Cost of Living · Long Stay</div>
-          <h3 class="ghc-title">How to Live in Da Nang Under $1,000 a Month</h3>
-          <p class="ghc-desc">Honest breakdown of rent, food, transport, cafes, gyms, and the real tradeoffs of budget living, without the nomad hype.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      <a href="best-hotels-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=320&fit=crop&q=75" alt="25 best hotels Da Nang ranked list beachfront resort pool" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Guide · Rankings</div>
-          <h3 class="ghc-title">25 Best Hotels in Da Nang (2026 Rankings)</h3>
-          <p class="ghc-desc">A comprehensive ranking of 25 top-rated hotels in Da Nang, including beachfront resorts, luxury stays, boutique hotels, and value picks.</p>
-          <span class="ghc-read">Read the full list →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-itinerary.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-03.jpg" alt="Things to do in Da Nang 2026, Marble Mountains cave interior" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Itinerary · Activity Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Itinerary 2026, Top Things to Do</h3>
-          <p class="ghc-desc">Marble Mountains, Ba Na Hills, Son Tra Peninsula, My Khe Beach, Dragon Bridge, Hoi An day trip, and more. Structured 2-day and 3-day itinerary plans.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="ba-na-hills-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-04.jpg" alt="Ba Na Hills Golden Bridge Da Nang aerial view hands" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Excursion Guide · Full Day</div>
-          <h3 class="ghc-title">Ba Na Hills: Golden Bridge, Tickets &amp; Tips (2026)</h3>
-          <p class="ghc-desc">Complete Ba Na Hills visitor guide, ticket prices, cable car info, Golden Bridge timing strategy, crowd avoidance, and an honest verdict on whether it's worth the trip.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="marble-mountains-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-05.jpg" alt="Marble Mountains Da Nang cave interior with light shafts and Buddha shrines" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Visitor Guide · Half Day</div>
-          <h3 class="ghc-title">Marble Mountains Da Nang: Complete Visitor Guide (2026)</h3>
-          <p class="ghc-desc">Entrance fees, elevator cost, cave highlights, temple etiquette, climbing difficulty, photography tips, and the optimal route through all five limestone karsts.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-vs-hoi-an.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-06.jpg" alt="Da Nang vs Hoi An comparison, Lady Buddha Son Tra Peninsula aerial view" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Analytical Comparison · 2026</div>
-          <h3 class="ghc-title">Da Nang vs Hoi An: Where Should You Stay? (2026)</h3>
-          <p class="ghc-desc">8-category comparison across beach quality, hotel prices, walkability, food, nightlife, crowds, and transport. Clear verdicts for families, couples, backpackers, luxury travellers, and digital nomads.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-vs-nha-trang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="Vietnam beach aerial view Da Nang vs Nha Trang comparison" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Analytical Comparison · 2026</div>
-          <h3 class="ghc-title">Da Nang vs Nha Trang: Which Vietnam Beach Destination? (2026)</h3>
-          <p class="ghc-desc">Two of Vietnam's top beach cities compared on resorts, beaches, cost, and what actually matters for your trip.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-vs-ho-chi-minh-city.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-16.jpg" alt="Da Nang vs Ho Chi Minh City, beach city versus Vietnam's New York" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">City Comparison · Vietnam · 2026</div>
-          <h3 class="ghc-title">Da Nang vs Ho Chi Minh City (2026)</h3>
-          <p class="ghc-desc">Vietnam's beach city vs Vietnam's New York, compared across beaches, food, cost, nightlife, families, and digital nomads. Pros and cons of each with top hotel picks.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-vs-hanoi.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-17.jpg" alt="Da Nang vs Hanoi, coastal resort versus Vietnam's thousand-year capital" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">City Comparison · Vietnam · 2026</div>
-          <h3 class="ghc-title">Da Nang vs Hanoi (2026)</h3>
-          <p class="ghc-desc">Miami vs Washington D.C., Da Nang's beach coast versus Hanoi's Old Quarter, Hoan Kiem Lake, and 1,000 years of capital history. Pros, cons, and top hotel picks for each.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-airport-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-07.jpg" alt="Da Nang Dragon Bridge, Da Nang International Airport guide DAD" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Airport Guide · DAD</div>
-          <h3 class="ghc-title">Da Nang Airport Guide (DAD) 2026: Arrivals, Taxi, SIM &amp; Transport</h3>
-          <p class="ghc-desc">Complete arrival guide, Grab vs taxi pricing, SIM card counters, currency exchange, luggage storage, airport lounges, and transport times to My Khe, Son Tra, Marble Mountains, and Hoi An.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-budget-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-08.jpg" alt="Street food pho bowl Da Nang budget guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Budget Guide · 2026 Prices</div>
-          <h3 class="ghc-title">How Much Does a Trip to Da Nang Cost? Full 2026 Budget Breakdown</h3>
-          <p class="ghc-desc">Real daily budgets for backpackers ($35–50), mid-range ($80–150), and luxury ($200–500+). Covers accommodation, food, transport, activities, and a 7-night sample itinerary with costs.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      <a href="da-nang-hotel-prices.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-37.jpg" alt="Da Nang beach city aerial night view hotel prices" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Prices · Budget Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotel Prices by Month</h3>
-          <p class="ghc-desc">What hotels actually cost in Da Nang, peak season vs. shoulder, cheapest months to book, and what to expect at every budget level.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="best-budget-hotels-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=320&fit=crop&q=75" alt="Budget hotel pool Da Nang beach" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Budget Hotels · Value Picks · 2026</div>
-          <h3 class="ghc-title">Best Budget Hotels in Da Nang: Cheap Hotels That Still Feel Good</h3>
-          <p class="ghc-desc">Honest picks for Da Nang hotels under $50, by beach, by area, and by what actually matters. No grim rooms, no false economy. Real value at every price point.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-first-time-visitors.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-09.jpg" alt="Da Nang aerial cityscape Han River Dragon Bridge, first time visitors guide" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">First-Time Visitor Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang for First-Time Visitors: What to Know Before You Go</h3>
-          <p class="ghc-desc">Visas, best areas to stay, what to eat, how to get around, safety, weather by month, how many days you need, and honest expectations. The complete first-timer's briefing.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="best-cafes-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-10.jpg" alt="Vietnamese street food café Da Nang, best cafes guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Local Coffee Guide · 2026</div>
-          <h3 class="ghc-title">Best Cafes in Da Nang for Coffee &amp; Remote Work (2026)</h3>
-          <p class="ghc-desc">8 Da Nang cafes reviewed, specialty roasters, work-friendly spots, rooftop views, and beach cafes. Includes Wi-Fi ratings, best drinks to order, and a complete guide to Vietnamese coffee.</p>
+          <div class="ghc-cat">Trip Planning</div>
+          <h3 class="ghc-title">How Many Days in Da Nang?</h3>
+          <p class="ghc-desc">3, 5, or 7 days — what you can realistically see at each length. Includes Hoi An and Hue day-trip guidance.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="da-nang-travel-mistakes.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-11.jpg" alt="Da Nang city aerial, common tourist mistakes guide 2026" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-11.jpg" alt="Da Nang city aerial common tourist mistakes guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
           <div class="ghc-cat">Local Intelligence · 2026</div>
-          <h3 class="ghc-title">15 Mistakes Tourists Make in Da Nang (And How to Avoid Them)</h3>
-          <p class="ghc-desc">Wrong hotel location, late Ba Na Hills arrival, ignoring beach flags, transport overcharging, peak season pricing errors, 15 avoidable mistakes with local fixes from an editor based in Da Nang since 2022.</p>
+          <h3 class="ghc-title">15 Mistakes Tourists Make in Da Nang</h3>
+          <p class="ghc-desc">Wrong hotel location, late Ba Na Hills, ignoring beach flags, transport overcharging — avoidable mistakes with local fixes.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="da-nang-7-day-itinerary.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-12.jpg" alt="Marble Mountains cave Da Nang, 7 day itinerary guide 2026" width="500" height="160" loading="lazy">
+      <a href="is-da-nang-walkable.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-transport-guide-082e11be.jpg" alt="Da Nang streets walkability guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Complete Itinerary · 2026</div>
-          <h3 class="ghc-title">7 Days in Da Nang &amp; Hoi An: The Balanced Itinerary Guide</h3>
-          <p class="ghc-desc">Day-by-day plans for beach, Ba Na Hills, Marble Mountains, Son Tra, Hoi An, and Hue with morning/afternoon/evening breakdowns, dining picks, hotel area advice, and a full 7-day sample budget.</p>
+          <div class="ghc-cat">Practical Guide</div>
+          <h3 class="ghc-title">Is Da Nang Walkable?</h3>
+          <p class="ghc-desc">Honest answer by neighbourhood. My Khe vs city centre vs Son Tra — what you can walk and what you can't.</p>
           <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hoi-an-markets-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-13.jpg" alt="Vietnamese street food market Da Nang Hoi An markets guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Markets Guide · Da Nang &amp; Hoi An</div>
-          <h3 class="ghc-title">Da Nang &amp; Hoi An Markets: Han Market, Con Market &amp; Night Market Guide (2026)</h3>
-          <p class="ghc-desc">Full comparison of 5 markets, Han vs Con, Hoi An Night Market, what to buy, bargaining tips, food hygiene, safety, and which market matches your travel style.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-malls-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-14.jpg" alt="Da Nang city aerial, shopping malls guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Shopping Guide · Da Nang · 2026</div>
-          <h3 class="ghc-title">Best Shopping Malls in Da Nang (2026 Guide &amp; Full Comparison)</h3>
-          <p class="ghc-desc">Vincom Plaza, Lotte Mart, Helio Center, Indochina Riverside, and Big C reviewed, with a full comparison table, what to buy, dining picks, and which mall suits your travel style.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-grocery-store-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-21.jpg" alt="Vietnamese street food cooking Da Nang grocery and food guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Grocery Guide · Da Nang · 2026</div>
-          <h3 class="ghc-title">Da Nang Grocery Store Guide (2026): Where to Shop, Save, and Stock Up</h3>
-          <p class="ghc-desc">Full Market, Jollymart, Winmart, Moonmilk, MegaMart, and Lotte Mart compared, fresh produce, imported goods, bulk buying, price levels, and which store suits your needs.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-    <a href="da-nang-visa-run-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-15.jpg" alt="Da Nang International Airport, Visa Run Guide 2026" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Visa &amp; Entry · Da Nang · 2026</div>
-          <h3 class="ghc-title">Visa Runs in Da Nang (2026 Complete Guide)</h3>
-          <p class="ghc-desc">Vietnam e-visa rules, visa exemption countries, Lao Bao border runs, Bangkok &amp; KL flight runs, Lynn Visa Da Nang, step-by-step checklist and FAQ.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="dragon-bridge-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-22.jpg" alt="Thuan Phuoc Bridge Da Nang illuminated at night Han River" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Night Life · Attraction Guide · 2026</div>
-          <h3 class="ghc-title">Dragon Bridge Da Nang: Fire &amp; Water Show Guide 2026</h3>
-          <p class="ghc-desc">Show times (Fri, Sat &amp; Sun 9 PM), best viewing spots, Son Tra Night Market tips, east-bank hotels, and everything you need for show night.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="dragon-bridge-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-23.jpg" alt="Dragon Bridge Da Nang orange glow reflected in Han River at night" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Night Life · Attraction Guide · 2026</div>
-          <h3 class="ghc-title">Dragon Bridge Da Nang: Fire Show Guide 2026</h3>
-          <p class="ghc-desc">Show times (Fri, Sat &amp; Sun 9 PM), best viewing spots, Son Tra Night Market tips, east-bank hotel recommendations, and everything you need for show night.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-24.jpg" alt="Da Nang Han River fishing boats where to stay neighbourhood guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Neighbourhood Guide · Where to Stay · 2026</div>
-          <h3 class="ghc-title">Where to Stay in Da Nang, A Local's Guide (2026)</h3>
-          <p class="ghc-desc">My Khe Beach, An Thuong, Han River, Son Tra, Non Nuoc, honest neighbourhood-by-neighbourhood breakdown to help you pick the right base for your trip.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-guide-for-korean-travelers.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-25.jpg" alt="Hai Van Pass Da Nang scenic mountain road Korean traveller guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Korean Travelers · 다낭 여행 가이드 · 2026</div>
-          <h3 class="ghc-title">Da Nang Travel Guide for Korean Visitors</h3>
-          <p class="ghc-desc">Essential tips, hotels, food, and travel advice for Korean tourists visiting Da Nang and Hoi An, including Korean restaurants, best areas, and day trips.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-guide-for-australian-travelers.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-26.jpg" alt="Da Nang beach dramatic sunset Australian travellers guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Australian Travelers · Flights &amp; Costs · 2026</div>
-          <h3 class="ghc-title">Da Nang Travel Guide for Australians</h3>
-          <p class="ghc-desc">Flights from Sydney, Melbourne &amp; Brisbane, costs in AUD, best hotels, beaches, and a Da Nang vs Bali comparison, the complete 2026 guide for Australian visitors.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-guide-for-russian-travelers.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-27.jpg" alt="Da Nang Han River fishing boats Russian travellers guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Russian Travelers · Budget Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Travel Guide for Russian Visitors</h3>
-          <p class="ghc-desc">Budget hotels, flights from Moscow, costs, beaches, 45-day visa-free entry, and top things to do in Da Nang and Hoi An, the 2026 guide for Russian tourists.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="my-khe-beach-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-28.jpg" alt="My Khe Beach Da Nang dramatic sunset wide sandy beach" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Beach Guide · My Khe · 2026</div>
-          <h3 class="ghc-title">My Khe Beach Da Nang: Complete Local Guide</h3>
-          <p class="ghc-desc">Swimming conditions by month, flag safety system, best stretches, rip current advice, and the hotels with the best direct sand access on Da Nang's main beach.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-      <a href="non-nuoc-beach-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1596895111956-bf1cf0599ce5?w=500&h=320&fit=crop&q=75" alt="Non Nuoc Beach Da Nang resort coastline with clear water" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Beach Guide · Non Nuoc · 2026</div>
-          <h3 class="ghc-title">Non Nuoc Beach Da Nang: Complete Local Guide</h3>
-          <p class="ghc-desc">Calmer water, wider sand, and Da Nang's entire luxury resort cluster, Hyatt, Marriott, Pullman, Sheraton, Melia, Radisson Blu. Who Non Nuoc is actually for and which resort is worth it.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="living-in-da-nang-expat-guide.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-29.jpg" alt="Da Nang specialty coffee cafe espresso machine expat guide 2026" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Expat Guide · Cost of Living · 2026</div>
-          <h3 class="ghc-title">Living in Da Nang as an Expat: Cost of Living 2026</h3>
-          <p class="ghc-desc">Rent, healthcare, international schools, banking, visa options, and monthly budget breakdowns for three lifestyle tiers, from an editor based in Da Nang since 2022.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="son-tra-peninsula-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-30.jpg" alt="Lady Buddha statue Son Tra Peninsula Da Nang white marble" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Attraction Guide · Son Tra · 2026</div>
-          <h3 class="ghc-title">Son Tra Peninsula Da Nang: Complete Guide (2026)</h3>
-          <p class="ghc-desc">Lady Buddha, Red-shanked Douc langur spotting, Ban Co Peak sunrise, driving circuit, hidden beaches, the full visitor guide to Monkey Mountain.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-with-teenagers.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&h=320&fit=crop&q=75" alt="Surfing lesson on beach, Da Nang with teenagers family guide 2026" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Family Guide · Teens · 2026</div>
-          <h3 class="ghc-title">Da Nang with Teenagers: Activities, Hotels &amp; Honest Advice</h3>
-          <p class="ghc-desc">Surf lessons, Ba Na Hills, Cham Islands, motorbike food tours, what actually works for teens aged 13–18, what to skip, and the best family hotels on My Khe.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-vs-phu-quoc.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1540202403-b7abd6747a18?w=500&h=320&fit=crop&q=75" alt="Tropical beach comparison, Da Nang vs Phu Quoc Vietnam 2026" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Comparison Guide · Vietnam · 2026</div>
-          <h3 class="ghc-title">Da Nang vs Phu Quoc: Which Should You Visit? (2026)</h3>
-          <p class="ghc-desc">8-category comparison across beach quality, weather timing, activities, hotel prices, and food. Clear verdicts for beach purists, families, first-timers, and repeat visitors.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="hyatt-vs-marriott-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-38.jpg" alt="Da Nang Non Nuoc Beach aerial Hyatt vs Marriott hotel comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Hyatt Regency vs Marriott Resort Da Nang</h3>
-          <p class="ghc-desc">Both on Non Nuoc Beach, both five-star, but one is built for families and one for couples. Side-by-side comparison with a clear verdict.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="pullman-vs-sheraton-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=160&fit=crop&q=75" alt="Pullman Danang vs Sheraton Grand resort pool" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Pullman vs Sheraton Grand Danang</h3>
-          <p class="ghc-desc">Same price bracket, same beach, but different strengths. Pullman for value and city access, Sheraton for facilities and Bonvoy members.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="melia-vs-radisson-blu-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=160&fit=crop&q=75" alt="Melia Danang Beach Resort pool" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Melia vs Radisson Blu Danang</h3>
-          <p class="ghc-desc">The two most underrated five-stars on Non Nuoc, and the ones that offer the best value. Honest comparison with a clear verdict on which to book.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="furama-vs-pullman-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&h=160&fit=crop&q=75" alt="Furama Resort Danang vs Pullman beachfront" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · My Khe vs Non Nuoc · 2026</div>
-          <h3 class="ghc-title">Furama Resort vs Pullman Danang</h3>
-          <p class="ghc-desc">Character resort vs modern hotel, and the My Khe vs Non Nuoc question answered directly. Which you prefer says a lot about how you travel.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="hyatt-regency-vs-furama-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=160&fit=crop&q=75" alt="Hyatt Regency Da Nang vs Furama Resort pool comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc vs My Khe · 2026</div>
-          <h3 class="ghc-title">Hyatt Regency vs Furama Resort Da Nang</h3>
-          <p class="ghc-desc">Non Nuoc's polished Hyatt versus My Khe's characterful original. Same price tier, which beach and which vibe suits your trip?</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=160&fit=crop&q=75" alt="Sheraton Grand Da Nang vs Hyatt Regency Non Nuoc beach" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Luxury · 2026</div>
-          <h3 class="ghc-title">Sheraton Grand vs Hyatt Regency Da Nang</h3>
-          <p class="ghc-desc">Two of Non Nuoc's top luxury resorts, same beach, similar price, but Sheraton's dramatic pools versus Hyatt's Camp Hyatt kids programme.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="melia-vs-hyatt-regency-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-35.jpg" alt="Da Nang Non Nuoc Beach aerial Melia vs Hyatt hotel comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Melia Da Nang vs Hyatt Regency</h3>
-          <p class="ghc-desc">Melia is often 30% cheaper with an adults-only Level floor. Hyatt has 5 pools and Camp Hyatt. Which is the smarter booking for your trip?</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="novotel-vs-hilton-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1578559284894-4a3e17bb30b9?w=500&h=160&fit=crop&q=75" alt="Novotel Danang Premier Han River vs Hilton Da Nang" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Han River · 2026</div>
-          <h3 class="ghc-title">Novotel Danang Premier vs Hilton Da Nang</h3>
-          <p class="ghc-desc">Two popular Han River hotels compared, Accor ALL vs Hilton Honors, rooftop sky bar vs rooftop infinity pool, and which is closer to Dragon Bridge.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="tms-hotel-vs-sala-danang-beach.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="TMS Hotel Da Nang Beach vs Sala Danang Beach Hotel My Khe" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · My Khe Beach · 2026</div>
-          <h3 class="ghc-title">TMS Hotel vs Sala Danang Beach</h3>
-          <p class="ghc-desc">Two mid-market My Khe hotels, TMS brings proven consistency for families, Sala brings boutique design for couples. Same beach, different experience.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="mandila-beach-vs-stella-maris-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="Mandila Beach Hotel vs Stella Maris Da Nang My Khe" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · My Khe Beach · 2026</div>
-          <h3 class="ghc-title">Mandila Beach vs Stella Maris Da Nang</h3>
-          <p class="ghc-desc">Mandila is the family-suitable beachfront with a ground-level pool. Stella Maris has a rooftop pool and a boutique feel better suited to couples.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-      <a href="arbora-luxury-collection-da-nang.html" class="ghc">
-        <img class="ghc-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEuAlgDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAgABAwQFBgcI/8QARxAAAgEDAwEFBQUGBAQEBgMAAQIDAAQRBRIhMQYTIkFRFGFxgZEjMqGxwQcVQlJi0TNy4fAWJJLxNHOCwiVDU2ODoheTsv/EABkBAQEBAQEBAAAAAAAAAAAAAAEAAgMEBf/EACsRAAMAAgIDAAEDBAIDAQAAAAABEQISAyETMUFRBCJhFHGh8DKxgZHB4f/aAAwDAQACEQMRAD8A73bS20eKWK+pT5gO2ltosUsVUgNtPiixSxUIOKbFHtpYopAYpYqTFLbVSAxSxR7aW2qlCPFLFSYpYqoQjxSxUm2lsqowjxS21Jt5p9o9KKMpFtp8VJtpbaqUI8UttSbaW2ilCPbT7aPbT7aqUI9tLFSbafbRRhHiltqTbSxVSI9tPto9tPtqGAbaWKPFPiiiBtpYo8U+KKQGKW2jxT4oogbafFFinxRRAxT4ottOFqogYp8Ue2n20UoABUicDFLbT4oYroIYPlmkUXyFIcUQ5rJukew0+w1KKcDnNVCEfdt6UttS5owRijY1qivinC1PsHUYpAUbFqRBTRbPfUnd8Z5psEGqhIDspwOKcCiAoFIHbRgetPjinx76KPobHup9tP0pxg0GhbMim2UXQ8U6/SougQvNFg0QOPfTk5qIACipAU+PfQEBpwKfFPioRsUWKfFLGaBGpwKILTgUCMBRBcU4FFiikNSogKVVE5LbSxUm2livp0+cR4pYqTFLFVIjxSxUmKWKKQGKWKPFLbQIOKbFSbaWKhA20sUeKWKKMI8U+KPFLFJkDFPRY5pYqIDFLFHilioYDilii20+2iiDiljFFiliogeKVFtp9tBAfKnxRbafbUQGKWKPbSxVSAxS21JiltoowDbS20e2nxRRgGKWKPFPiqkBilij20+2iiBiltqTHupYoowDbT4o8UsVUQcU+KfFEBRSAAotop9tFtGKzRgAWnAogKfqKqMBxT4OKfFPighgKLFICiA4obFDYohxT+VLFFEINzTlFbzxQYohWf7Gr+RNHtPBzTAVICMUXXoar+S1/BHmixTmM54oijL1FVRRgbaW2jAANSgbh0oeQ6kaRlucgVL7OT5jHuplXmpQSB1wKw2zSSKzLgkelLFWfCQR5nzxULIQehIrSYNAAUYUGmxRDIPFQCKjypYqVXyfEM0mCnkcUU1ANtOBRBTR7CRRSIwKICi2Gi2H0qIACixRbacCogQKVSYpVEclinwKLilxX0aeCA491LA9KLilwaqUGwPSmwKPFLbVUUYO0U2KPFLFVRQDbSxR4pYqpRgYpYo8UsVUoBilijxSxVRgGKWKPFLFFIDFPiixT4qIDFLFHiligQMU+KLFLFBA4p8UWKWKhBxTYo8U+KCAxSxR4pYqpA4pYo9tLbRRgGKcCj20sVUYNtFLFPinxWRBxSxRYp6qQOKWKILzT7aqUAp9tHtpAYoowHbT4oqWKKagOKfFPT4oIHFKjApwKiAxT4o8UgKigIFFinxRYoowYCnFLBHlSAoqIc8+VLFPikM0GhsUQHvpUsUMQhmi3GhBohisQ0JcZqdCAOlRDFSqM1lighz5U4hB6k04olznmsmiNo9nIzTK5PG2rBKgYNRLhOhFaTBocxrjLDmgKJ5ZqQyZ4xSIyKiI1QZ91SKqikEoscUNkkGAhwcUfhz92olFFmsmgxEM8E0YjBGKFDUymqjERiBfU0QgUVJkU+4VVlERtCNvHWlUopU0IjiCKbFHiltFfSp88jxT05xS4oEcc0+DTA0Wc0CNilinx76fFVCA4pYotvNPikgMUsUeKWKQgGKWKdjQZNFKBhc0/d+lCtSA1h5M6LFAFSKWKMk+dIClZUy8YBilijxSxWqEBwKWKLFLFZbFJA4p8UWKWKqUBxS20eKWKqUBxSxRYpYoog4pYoqVVIHFPiixS20UgcUsUeKWKqMAxT4oqVFGDYpUVLFFEaljNFin21UgNppwKLFPQQO2nxT0qqQ2KfFPSoojYp6fFLFAiHWiBHpTYp/hWWjSYWAehIpFD5c0lyTUq5zis+jS7IcUsVMVBNIR5PHNWwQi20QWphbsVzx8KAoVOCKrSjBxTgUW2nxVSgwHNFgikPdTjcPOgUOrFTzzRjB91MCD1pwVHnWTSC2g+Zo1iGcgg1HvU+dGCvmxookxTcuCBn1qJR5USyBR1zQSTDpmii0EdvpSxVfvueak79MedIEoohjzFQCYZ61L3i4zmpgTDbRqRUCyIepou8QHg8UG0WVC0W0eoqoZQOhofaSDWRLwWlVT2rI460qiOTpUs+6lg19KngFjNILT0se+ikPgUgKbFFVSFinApYpVUYLFGenShFPk0UoCTzwKbNSbvUUOATwKqUBwKfA9KRFNVSg+B5CnApqWRig16HJ9acDzoQaMHFS6J9j4pYpE0sVNgsRYFLAouKY+6qjELFLFLkUt2OtVLUWKXn0p8ilmiksRsUsUXlTZxRRgsUsUsmkDmmhBYpU6jccYoijAZIo2GMCnxRY91LGOtVRQHFPinApbSPKilGNilinpVUhUqVPVSgqVIUqKIqfFKnoowbFPSpYopQVOM0sUgcVl5Q0lR9p8xSC0QY09Z2NajDg1Ip5oQKMLmpskhwN1SAYbioyu3kUlfmsU3C0rYFM6hhzUQY5zUmc1im4CYl8jigKY6HNT7QR1qIrtrSyMvEHbimIomZvQ/ShGTzg1rYzqLBNLu2I6U/PkDn4USlsdCPlRRgPdZ88UzIV6HNSAE+6kUINFGELK45FRtuIq3sJFNjaOlIFAswPNEHJqyY8nO2hESHqMU0iAswpxKfOpjb56GnWAdGopQiExFGs5qT2ZR76E24B4qEcTZpCTNN3DeVIREdaCgXJ+6aVOiEGlRRhhAUQHPNGyAdKHpX0DwoLA+NLb7qFW8qkUisU6QSxrnmk0JHK8ipBiiyB0rOw6lXmnzRzEAg+tR7lrdpmQMEelMT6cUQKsOODQYoELypUOTTlqiEeKA8mj3DHNPtzSgZDg0+aJsA4ocqelQCyPWm7zBokh38g/KnNuMdTmhtGkhB80Wc+dRtGV6Gg3FetA+i0Fx76fp5VXWcjg0ay5Pi6VoySFvLFMTxR7BUbYHU4oZIFn20hLyKiYgnrTZrDNploTDGKEyAmq3NOvXmjpCWwQelOq+Ko42FEz+nSs0S0gFSdV6ZqmsuB1qVZ9o9aw6bQfdkc0LDHWnE+eootwYc1UoRd4FNF7QmOaEgZ6VG8fXHSqogyy54ps1Bkg9KLJrSyZnVEwUsaW0g0CybaRmwfUe+rYNQ8UQFNG4f3e6jYcZAqeRLEHFFj3UIbxYYYqQMBVS1B20+2pVVXHFFsGOlZ2RrRkGKfbR45p8U0pANvFMFIqYKaWPUVmiRk4pCSpNgPlim7lcUChK4I604KjyFRtHtPFMASawzZY3gjiluIFBg0iTWTRW1bVodI017y4DsiELhBkknoK4rVO3s0+g3ndlLK4cFYgrkyKMjBz64zzWv8AtAuxZdj57g87JosDbu53elePxTanqQu79GiS1gCG7eaQbthbog8246AHAFYaeTiNppKs7Ts60svcyTG4nUqeO84Jwepbg9aTRXAkIWS6CjgZZiawTqumW0kCTT3y22C2YIJmUqS207l92K1dP7SdkbaQzXt1qptUTMhkhnTAxgYLdfER0rzZcb9noXIkSzLeCM7ZLnPPRmqf91anj/Euf+tqx37ZdiS6GPVL/h9zfZTNlc9OvpU//FnY601uMz6hft3YZJ4tkzjcQOevkc9Kz4szXlxOz7Fx3FjcaiLt5TkRld5LfzV1yahAzKgfLMcAbTXAdj9V03XTrEukzzmCNowveBlI4PHi+B+tbtnZx22tpMbuS5eeQERtKQsGD0C55yPd5Zrtx5ZYrVnDPFZPZHVbznj6UzMTxRsUYehqMrluK9dPNCaJA4wevrRtanyqGMEMOavLICvvopQpi1cck4pGLB61aJLHAoWj9QKqJUIKmm5q2EwORkUxjyeBQRXX4VIFBqcQmnMYAz0x61ERBEHnSpmZMcUqoVOc3ZFRs4FQlmApiW8q+hTxwPdzmiEhqE7j7qcUMUS98RTGc+RoCox1pghJ4xQNHLk9abfSKGh7tj0BpoQMSkGjEx9ah7p/SgIYeRpqDtFsSA+VHuBANcVqnbMWF9c2SWbtLC2zvC4xnjnGKzbzt9qSiMWltYxs6ZJl3vg/AEVh5pdG1i2ej7hWLrXauz0S7S2mhnkd0DjuwMYyR5n3Vw0nbbW5E5njQgc90gUfLz/Gu1gn0m70m0lvtKju5nVFaSU72yx55IzjnpXl5v1XiS6f+Dtx8Dz9Mox9ube5u4oksZwZHVMs6jGTj9a71+zs65KzxnHqCK5C1t+y8k8Ui6KYXx3ilSeMNgdD7s106dsbd4GmJYLuK4MXP3tvkfWvK/17vSZ1/pmUY5tpznBqcXIYAEZxVaK60WdwqXbqWBIyD5HB8vWpobaG6XfZ3SSJkjJPocH8a9K/WcOXtw4vh5MfgZbccjpS2oRUgsbkjC7G+Z/tXKdotH7SS6ruslnNsI1GIpgozznjI91b/qeKdZL/ANguPJ/DpisS9eM04iHUc1T/AGfWF9aS341iKRd4j2e0MGB+9nGSfdRT280c74jlA3E8A461h/qsbEK4G/pd3EDBqKTJzzms8tIQSHfA/qroNXt4YLqNYk2l4g5A6ZrrhzLNyGc+J4GO3Bpg2KmaEuxABz8KBoHU4Kn6V0bMoENThqbuznoacRsT0P0rIhBz5UXenGKj7tx5H6U4U+h+lZbNILec1Ir0AQk9DWDqnaJrC7lgSMlo2x4iAPyrGWUNY406dTmpFOK4PSu1Wp6j2lgsiyLAyOzBE54XI5rtbdmNsGYszFiOR7hWN1dTejlLOQaRAqMFvQ/SiAbrg/SmoIMV91Nto8sP4T9KXOeh+lNQRgFAR0oTFjyqwFGPumn4poQrCNlORU6Ek8ijAFSAAjihsUiNowenFD3ZBqU8HFOBVSgCgg0YJp8U4HvxQ4SpGRzmjU0sjPrRrGp55rNRqMfvPUdKTOCOlH7OGGVOR76jMRHBzUmidBJyOKWWpxEc9akCDzqpQDG7gnFGsIHPWiEYNO0ZXpzWWzSQIANMVUDpS6GgYk1Eebfth1e4t7Cz0qGBGgvAZpZDnKbGXaB7iWry+0Cewyu90zyLIndWgIxJ4vExHXjwgf5jXe/tp2+36NukK4hmwo/j8SVwVgM6fcqlmQxki3XZUEQ+I7Vz5bjk+/ZTj7J+j0Kxk7VLbaVcadp2nPAntCRxzXjIzOxYuCAMDbggHzqK913tP2ktHs7rQtMkCI7rGt2z7thG7ORxgAn5UVpY6dLpNu9z2+vNMuYy+II72KNQdzDeFPPi6+/NBp2jaNlTbftDuIpZFkWSVr6Ju5GeTxjG48c+tefo7Gbbp2mFpLY2/Y3TwsRcMwuSOQST8auXF12t/e1utr2a08v3LCCZptu5Ni5JPqRg8/Ks+8hvbUXLRftLlkw7qu2/Rd65IyTnzHlQ6it4L5DB2+lgQIT3ftKqYTtGFAz8vlWmqwXo7bsdJqd2dSbWrGO1nBiZVgmMm7r4v9K2bD2I6yDZ2kkMgk/5iUxYEpzwdxPrn7vzrlv2dNqFrZas8WrLrEySRgO8obanIAG08HknFdjCL5tXtVu1g7kNi27vc7KM87ucJxj1zWEozTdRvkHNJSQan7lj1pxAfSvWoeRgB+MUavg9aLuQaLuamVHWYijE59M0Ii4o40x1oEJX3HkYqF9wY9cVYA99PtqIpO8g4U1WeSbnOTWsYlNCYVPlUmTRimWUHnNKtf2RW/hpU7GYchnimNFsB86QiJ6GvbTz9kZGTQ7al2kH+9M5+Bx6VUgNvvogKESKT6UYZehzVSg2SaNW2mhz6U1ZfZpE4fNEQu055NV1bFGZK5s2jyPtRx2w1QD/AOv/AO0VymqNeTX8VvbStGfDllxkKTz1rq+0+D2w1Q//AH//AGiuN1pbd9UjFyT3XgJAQtu8XTAofoV7LliJYbuWF7iSfCg7nPmfhXqNva3z6EJ4pJ0SKGF4QmGDtkhgVI8vCa8q0/uReTC3iMMewYUps/CvQzDavp6yG82yCO3LxkP9mcSBW4GOQev9FeP9R2lT08PTcLt8b7TOyen38Uxa/mHdyQmJT3e1jkkYzznNO1zcw9nLe8ea3VpWVe5aI5Y7+SCDx1qLUZoU7D6RFHqq2UgLKl205jEwLZxnrzzweuM1YNzH/wAKwxQ6tvugRuK3QUHLnBOTzkZ+OK8nX4PRX+Sg2sXFpo6XyWsTyCJW2EMAS8rDrn1Unpx76tRX7WGiW2sXVpKsEqlMxMG8RkOQMkHgmsu7h7Rm2tWstShdDEgYs0bLnvH39RjkbMfA4rT1Ke5TslpqGKO/uu/2yW7528kncNuB5fDip44sVm0Tx6tFDpkEgNyI1MbM6pkLkFhnByDgelSDXzp9pH399cQd/AgiYh8Mdh5HHT31lvcmLS5A+nIsj9yrQiRx3g2E9OQNv3c02u9zDa6S1xp73O+2Ro9kxBhyDlT4fwo8afwd2dHcdop4+7hXUmjk2kANkbjlV4yOeT+NHfdqLhNOuFW9hlkBdu5yu9lBYjA6+VZGv3ET3Vk00M0gEShGjdcDDKOnxxn4UtWNmna2Ayi4S4WNdjbRsC7eCTnIOOvXms+NdMNr8Mm07XapqdnLMB7OFnWAjaMknHPTpzUlz241btIwtblokNvFv7yENG7YOOSG/qq1b6lZy9nLtLm6GpTm8fupUYt3S5GFOQMY5HzrhbJrc3N37WHMQhP3E3EfaLjivau8WcfWSOnY6kIO+F1PgnAAuJM8fOo2udQ9iE3tNzkluBPJ5HHrVuCPRrzUYETQWYBnPddxsDj1xnyGPiajEnZ6y1W6hn7Pyzqq7Vg9n/weSfXzzXm1+Ho2+la3m1K4m2JdzgkKfFPJjkfGpFuL03a24ubkbiRuM8nkCf5vdVGCfRzp1wp02R9zb0kFoFZSH8OTnnAyPdnzob+30xobe8hsZLZJVYI3cff/AIWJ55zmnQNyw97qSlz7Rc4Rc83EnPP+annvL2Nd3t05ycBRcyZHvPi4p7/TtNLXHdaC6/a7dhh4UiLO3Gen8VRNpViLazk/dLHd3bsWt897lseR4z0zTqg2ZGNVuu73G8uiecj2iTjn/NzR/wDElzbQiVIllK9RM7uT8fFzVdbnszY9oLgT6LNcRMWSK29m4i5JA69c5FS/u7TX7NX12uikpvkZbkweKI44Gc9FOOcetaeC+md38KGli6u54rq5ntRA8TPtAK44yOScVa71cyeOEEFQPGDnJ+NYvZoWMrWi+xTtI0eGbu8q5wOmTg813+o2UC3UaHREilFmCfsovEA3MmBwG69OnlTzf8uw4n+3oxm7qKFXM1u5Yk4DjgfWoJGT2dJVkt9zR7z4wMcnyzXQR3GnG31mFezayYWR2YxRnuVwQCvlnJ/Cs3RIrCW40+GHSVuJHu/Ck0cY3kKSU69AMnzHSuSxX06vJlOIJPM8Zlt02sAGL9eMkdetCrqbxYhJCFwzE7weg+NbCWVubt8aKuRErD7OPG3J8fxI86qa/b6ZFpyCTSHtAbmfa8aIWPiIKHzwDwPLirVMtmh4Joo4TOskG7O0BnBA/Guw7AajJd292shgJ78Kvd4HG3rx15rmhqOm97pl5J2fEqqzIESCJRMQpGWA4wMg1s9iprSbtHfS2lkbFCwzCUVQp2joBxyMVrDGZJmc8tsWj0Ajw9aEORUBcnPNEGPrXuPDCwG3daJWx1qt32DRiUGss2iXvMNTk7gRUBYZzRhsLkVlj0EAFFGsoA60KuGHPWgZwD0ya5nQtR3a9M9KnMyuORWZuBGQBTpOVPJFA9GjuAyajEqseBVfvsjg0werZhqjQQ0RNVUmwPSpBOvrRQaJWAYYIqBkweKcyj1oGl9DSmB5H+2gOt/pGIQ/2M2XI+4N6c/PpXA2qSnRrl3uF9lEsYaALlpSTyQf6R5f1V3v7asPe6OzTbMQzYX+fxJx+tefaebRYZAsDPfl4+6kIbbGu7kHy8R2+/w8V2wMZHYLDA+nW0g7FX2owrz38dmjrsDk7Mk5yBxird8NPutJ9nk/Z7qdpkEllsY0aUZBCjacnHB+Arc0ew7Z3HZ+KTTNT0qC3zIDHNZPK2/e27xA9M5x6Cq+j33bvUtTjhj1DSPaQsvck2TKqleGzyc5GcVwtO3o4CW+7IWFnLBL2U1OOZWYF5LdMqcnC8nj0rWnvuzf76QP2JvriZEZX2WysJm2DL4PXB5+dX9V0jt1MLt7pNHfbM4bbZsdxDHxAemRmrslh21l1C3jtbjRwjxM0bm3Zii7FO1veRgfKltUlYa/YK50x21SS00eXQId8WYZYxDvOD09RXS2Pso11fZrt7iUy/bJJIW7k7uAoHA9OfSuc7MR6tbR6kmt+zXsrCIobVCgC88nd510ttM7avAr2TWSh/A5Kr7T4jk4A8WOvPTNYXs0zrcZogvvqDvBT95iu9Z54T7BRhR51X77PQiiWT31PINSfavpT7R6VGGHmaIMPWrYoOVxSA91NuogwPTFNCC5pxS59AaW4fCqkPmlSyKVNMnCd4aYyNjAOKhD5p99e884eWPrT4yOeKDfT5XGSaKWoyw7nwDTlWjbHlShkG/P51NI6t0Irm8mmdlimiHcacOaRxnrTYrdRzjQe8Y5ptwIpsU1ZZpM8q7TE/8AFup/+d/7RXI6pIY9XiKwJOzbAoYkBTu68V1faY57W6n/AOd/7RXKapk6pHi59mGF3SbwmBnnmsv0aXssWrSHUZzKE3bB93pXoFveRw2d1CLEtiG1MkpmwJQRJjA2nBXaRjOPEDXnlh3YvZu6nMyFBhy+/PuzXqFtb3n7lEhlKQtHAYBhOW8YfkjofDx7jXk5+sUd+L2yvrUFoewuh3N1a3D2jyF47dJRmNw2AeR093HPNFBp9tFoUmoQwThbpY4pF3ISoRzt6n3n/Yq5qX7z/wCDtKWxcS6ipfvg0aMrDd5ZGPp0poRqB0BjJEqTKygsIVYSeLxDpxj/ALV47/P+T0ox7hNLbs0BNHcrb91FkiJWYKJJNn8WOu7Ppx1qve6JMmjxalBqr2FhcrFHE7tIpTYz58KZ+8WX6Vo3qaumkqy6bBdTCFGERty2W71gw25A4GCPTJq5fzSJ2HsRPbRTSiYhrMMUAJbIOOSOPyqTf+wuipFJEujyJ+/DkNDsbvJBsPdk5P8Am4b5VFq0t0o00W2tx2ii2XvRJOB3/GQygj0pnnij06QHTyjs0LNEJGAkHdnH8Jxt5Xk+fyqTXnt+60pptPlut1rGIgkxHcAKQVIK/wC+vnSl/H/QFi6N+j26yX0SzZYsGePxJvG3HGfu8euaKYavHqqRzyW80CZDLhA5PPAxyB8Kn7QmAS2XtFrJLujXZIkgGBleCMfA/KqM82nXHae1cWtzHOYIjG+F2hCnhzg5Bx199SX+waUdPtw1tqkXsn7sSG5coGLnv2yp3Av65PT0rltMWaTUrjuGQSCEkBwCCNwyDn/fFehWEgfsnqKoDqKpfSK0zAgwcg7fHz4c4445rzqyMEd1eG4ieWNYclY8ZP2i468V6cW3izjkpkjopJdSgsUnS4tnnkZt8ZRDjlccZ+fyptR/eFxrRHttq0cjqZJu7XJOBzw3GM1PqbRa/qFoBo4tdobu93d9CByxPHkfrVS3tbaw15lOlSl7csSgMYVcgjz46nNc1/k6P/A9nHeSw3Kz3NrHsj+zARRu8Qz5/OrurRNDBZR2N5DcFQA+6NcJk7sA55wSayRBCNDV30+R05BkKx7iQwySPjkfPirWt31rcRWMEmjSW+1MK6bPEMDOec+VXbZekWLu41CDVpY4b2GWCRzIzpEnLFMFiNwHu+VQC91aW27t72ABEUQqI1AABzg+Lr76u2apbTXCvoglYS+PAjXLGE4x5Yxk/GsZ9OtZLOB/3SdoC+Ju7wSXxu+v4VKE6WtK08X11K2oSWsSR4aN0jTIbdjdyeABzxTm81Madqdh7fb+yLDK4XYnjPkAc9SBnio9GvdP0XXLtG0d7t9jIQpi7tfFngk4x16VXbSYrrQtS1KPS9sKGRmc7Nytwcg9cDpWvvZn+xk9mVuYYrSW31CBZO5JVGVPs/D1JJ/Ouyvbq/khsJRqyXMhhAmY93lCWYYGfLHp61wugJb3NrbwtprJugKmZCgLcDz+PPNej909m1tAdLikKadtV1dCGjDfeJ6bs/hRy/8AIeL0QacJWg1Z7jVEiOHCFSn2pIJwwHvA61SspL5YbRv3lFb3PfgiVTHiMHgtjOc/DjANamisIuzuvR/uvvIgJGlkmlTcoOTwcY8yB8BWDYapaWUtm8WivM3tIdVaSMEnB8PPkM1zXbNvo05rjUIrxe71ZH3hFkICdM8j1x51R1SXUpb+XZqFvND3rlGlVBwWzu/Uj1rUtNSF7LJ3ek4aO1WLMjpyAThuPPnGOvFZ2v8Acyaey3mlsqC7mGYin3sksvwz0qXvsn6L+uLHGIYtJ1KOWKMnw5RsDpxj1x9K2Oy++PWrktcJc+BCHTb12jIOPQ5rCv7R9EurCX93sJnH2bW7opGVzyfLA4+Zra7JXIve0OoTG1a1Z2G5CVweBgjbxjGPpTj01+CfpnYCQ+lP7QRUhCheajO08ACvVseaCFzjypd+x86AqPSm8NNAmE7VN7RhelVAQKMOvnWHDSLAuCByKAzknrU8FsJkBPHuqOe27lhg5B9axUbjBDZ86EtihKkDrzQ7iD0qInSQ1MHz1NVUBNSqcVliiyre80+ffUHegUJmyaz2TRaDUiTVcS++i3itYuPsxkvweXftk3G80jbD3h7mbxkf4fjTn59PnXDWJuzol2peOOy72Lvm3EOzZO3HuUbj7siu4/bDg3WlEy7AIpfD/P4k4/WuAsja+ySkzSPd707q3DeFl3eIkev3QD7zXfEwzp2bsYJdPj1TUriLdDIZnW4nXA3Huj4eORyTjnzprmLsCdIk/dWr3EF0VPfSd/Odqbhg+IY5OOlbdsvaOTSraSx7NxXVurl9zXscZ3CQlk2keRBHpWxZ6x2pK2xfsXbzBBIYo/3hG3eE5yD4eMDJ+VcG4djzyztuwfs2NQ7V3TSHeTtnm9+0YC/Cn1aLsgdTDHX7qJgv28ffScSYHTA4AOava3Lf3ntjz9iEhHtDF8XqeFw3I4GcZFasl7q1vqtuU7FpM/dSd3IbtF7xNi7m6ccYPPrWm+7/APQS6NP9kkWmm21ddO1BrmIyRlncs5Tg4HiHx6V20EdxHqcLTTidXfKKsYXuRnoT1PGOnpXO9lb66lutTk1bRhpcu6LbEjiUHr4vCOPStmx9ibV39iRklWT/AJksh8TbjjBPTnPSuV7pudHU5oJGG3rQgN60zR7h1rrTjBA46GpFlNRrHjzzRhay3WMhKJM+dFvPrUYWpFT31UIGJSOtGsmTQrGD61IqKPKmhCQOfKmZj1wKQC+lPxSAKuT1BpUeaVIHnilZBlHVx/Sc04JFeb6b2hu7g6iUtZrNWthNbPMmGDDGfiCOnWp7X9ojOzSGORYjnG8DIAOOM9T/AL8q9X9RhWjjo5T0MPSIz1zXGWnbfvBD3E4u5ZXBEfd7fD548hgZ8/I1g612s1M9wjNsuy72+7OFmTcCrkjzAPx4NYz/AFCxaS7NY8babPTwQuMdDUiycV5lo3a63tp5bPWdRcXEc5YtHk4xxtYE8AY6D4muzXtNpLyBRcMpYbhuQ8/CuuOSyVMvpw2t5zS7zFctfdtLS1do4LeSZgMhmOxT+tZDdqb3UUZZGWFCeBECOPeetabSVC1w9DEm5T6iqVxqtnaIWuLqNMeQbJ+g5rz2WYLAz5CRhSWd38utVE1OARxTQAGOVAwJGCw9a5eRv0jUSA1q5jvO0F9cxZMcsu5cjBxgDp8q5nVYgdRR3heZVVWCrjkg++tqeTvLmSTdnLZzVe4ILxHH8NdH6BFOyMklzLKYDApUDBxXpp1OzPZqPTZN6yLFEHZYA2Vcuy8k/wBLjjnivPweDxiu9hxLobF7e2Jght2RnDbpTl+OD5ev9VeT9R0kejh7bM3WbXS7zsjpltLNJFbwbbtZO4JZl3GNQQOgypq9ENHudAW0jkdntFiZiLc5VS7FCfTOMe6h1SR7PsrpVxHpkE095mOaBg4VFDkg5B8sVbjVIOyxvEtLdJ7kokseWLbVfA8+AN2a8tf+w9HRR1K6sJOxVlpQvhbLEe9S57uTcVZzgYA8yp/Wk8Elr2dhmXWTb286rHBO0rJ4ldt31/Gobm4d9HRDoMNxtijcIHfIUyPkD3Ltzn+utDVZkHYLR5JrLvYTcELapJtKHceclSSKJ/vRUTm5h0KMtq5RZdndSmcgMQDk/Mgnn0zUurXLDTNKSPVYbWdYFMjPKB7QuOCN3X5VWm1BLzs6ts1pKsdiYsQ95t3BlLcHbzjJH+8VB2gmgjttHF1YTXQ9jQwbJx9gCCSpG2pY/wADS1O2rItvHd6qnfh3YK0qY7syDYMdc7Tt9akmj1aDWVikurcqmQ0TGPvGbnyADAe4UXaOWAX1ks1u8rdypTu5QAoymMjHwPyNSa5NBN2xSaazme5mAYTqV2BSOAQPMDjrVP4/wCM3ff2mkzxez+wRzXHeOqIyiVjjJOSeuPwri9NMzX94LeVYZTCQGcAg+NeOeK7bSdONvous31m5uYZ7t0lEybDEQVDBeTkAj3da4rSLxbLWJ7k2xuu5TeIgcZIkXHNenF/tcOTX7lTo9IKQSK2s60E8LDlkTkkeoxjGc0TSR3HaNg+tJLYPId0gZGZgB1yBzzx8qfVEuO11/awTadHbOmShWUEY4JB491VrUSaT2iO3Tomnt5MDdKAhJHQcc+ZrlL/c6/8ARVae+w8c2p/YLkJtKYIJ6cj3DNNN7Wxt5F1NGXGH3hML6DOPI1fu9QuJtH7x9NQxytKwHeDK5dSR09enxqrdajNFYQaW9gGgJXwrKDtOdw4xkE59a0m/wZaRYe4kGqSezavssyxCsskbfw4zkDHl8gaTyMbNUg1gPIEUlAUYKQ3QjHoauQS3GlR+zR6bBP7LM8W7verFGJ5x5A4+IrGsO0MmhHcmlo73qBELyDjHn0+eDQk36FtL2aWhJYOLs6rrEURZgsaoyAsD1OMfCsiefVkttQRNaK2bK4RBs2yL6dM9Kt6XaS65rd0YdPFvcKTKWMoABDeRx680V52kuX7P32mHRohFGskbP33jyWOWxjpnPHurSt6ByHM9mpI44rZ4NYEcywElXZdsXA9RxiuvvLmFf3abHWoJAYV9qInQFXyRgcY6eVch2atpporSOW0jeGWHapWTxNkDGeOPWu2udGbTJoLSWKMuLYSIxk6rnbjOPvedXLNg47DZ1YWfs91BpeqyNK0Q+yVwdzfxAgqf6aw7OAvpkRk1ZRfi4UOyFcrF5v8Ad9a1tI1O5nl1u/t7CON40ZZftyGAHi8Jx1qloF3eQ6ips7FBJdzG3d533csd58vd1rgqjs4w7aezinm7zXQG2DbiVQS4PC9PniqczXB1lTcauRp7XJbMrKAYyxy3TriktkZr5ljjjmMSq5xLnYDzs6dcfnUnarVprywiS9tkm9lmkTuIZQpBBIBYY6HacH40/eg+F7tFJFPIn7m1Vp0Uk5LBxj1HHr1rU7Lhf+IboR3Yu49qbXyCR4RkHj1z9ay+y2qXcWoW2n2unQGTMiq8ku4IWUMwPHoox8a1rYNu1+4kt1trpZYlYxuSOVHQ8cf2oVTSJtNNnXFCfKnEajqa4iK5lhYPFK6EejGtK27QXCNi5+1X1Aww/vXqPNsjoHjYv6LRJbKxNU49Ws3APfgD0IOaddcgjfwxSsn8wA/Krv4Nx+mnFY5XxEE0PsoBYDHpRQahBcrmKVW9R0YfEVL3hxweK5tv6dUl8GhdowFOM1YkjEsXi61EJV8xzUqyLsJJGB51hs0RW4ERIZQT61YmgjnjK7QGPIbHSsm912wtTtRjNJ6Rcj69KyJO1N/4hDHFED0JG4j68VtYZM5PkxXRsujQyFGGCKYAseASaoQ9pYp41W/gZZB/8yIZH0rZsdRtrlPsZo3I67eD9OtTTx9occscvTKmwk8nFOY8HrWnLCk4yw2sP4hWeUZDhlIoTFoDafWnw3rR4pDpVUZPMP2uqfadLPc94RDL4v8A6fjTn59PnXEae1ydLukjtlERmh7y6OCY23HYBnnnxH04Ga7j9r2TLpp78RgQy5X+fxpx+vyrgrJUbS7hnvCUEiAWoAPeZPib14GB791enA5ZHoNnDqRt9OtoO2s2nRzifdGqwbUZWPiw3PjJz+VQWMmuCfuou28xdI5GRysAEZyMkfHJHPrWFc2ukSmwlm7NXl3Eme9kjsGkBj3HC5HmF4x5VsWlz2Dht1kuOxl7FbqHExOmsnejPhUHdzg4OPdXB+jsK/se0IiuSe3feHvHGP8AlxvGfvZz59anudM1T2yF07c9xDJESQBDmHCLtTk588fKuM1WPsZcpcSWOj6jDE0xZGFgfAu77mc491al0/YyHV0a87P3ssm1+8X2JiJCVXxA55wcn51Ndkn0dz2L9sgg1WSfVH1d17ra8yqpCjPA2E+fPPNdXE076nbe1xxqEY+zFWLErnnI8uMHn1rjf2dT6JLBq76PZSaXCrQ94rxmHLDOep54/OuxtSo1H7G7a5DSfaqzg9z4jgKB9OfSuX02b5PpS60JdQeBQtJu6D6V0xa+nFp/CYKcUttRCXzBqprOvW+h2S3d4Slvu2lx5Hy488+6s2sZDRA+NSLn0NZdlr0eoW1lPbIzx3cQnBA+4hGcsegPljrV83sSxkyMqAdSxAA+JqAsAnzpy+2uUHbnTx2gOlNuVhwzkgCNwcFXPl5EHzz5VjzftIitbqD2uHuoHuBA580UkhXYeWSPIkY9OlKQU9EWTPTrTFyDnArDiu5rnV5ljbbbW4KE5H2kmeceeB0z659KurMynBqCl/vsjGKVZWpXk0Fnus2ge6BBEEjgNKvmF5646Uqey6PmSDWL2/uLZJ4ZJZkO2QRuFZx0B54U9AfwxVuCCS505LIPBJcZZYyzkhm3fxEefw64qvb392JN0M8cUkkYaTdGJMsfI568Y+vuqpqt1CJz7RFCRFGudpx4sk7hjyP/ALvnWGq4lBSS9le5tYbe7a3v9SkjMQLM0TAiQnoE29eOpx+VaGjSW8txDaWEe+YQuwZ+RISo8C56HBPPkSKxo4rSW5JuraOMylsPGCCV5XPv593lmtSOeWxkiijjh2Q27IkxJ3Bu6LeEcDkit5Jvr6WOWNrL+lzWmqRYdSChHtBeNRJGQcBsnr7wc8/Gpru/sO/gg092YQlWYb/tVIYDKgfd645PQ1z6azDLdPeh4le53mXBPJYYIxjjPXHPWrttGJ9LluLS4ZGMiOzAYMik7cHPOQcef6UR4+/RltfDXuNR23ki3cSRruK71bduI5wenu6HPNSwXbTW+9bcQx8lWaQLvGeNoPJ/7nyqnqbaXbXi2lyXnhEm5XjbbJIQOcsBj1qCx1R9Pt2WJYYkyxD7wx2sOcD+E+XHqTWlyvVQzomzN7Q3l+zSW0kqqJIvGIjlCmehJ69PTrRQar+7XMV4oZSgw6A+PP3SWP8AD7gMeVPqUkV3GuoXOUaRVAIU+PAwFA6+flWdp92LeRFNugwAFQodxwRn4/A+Yrss6qYncOksbgahb2zQhjJdLvjjxkkZxR3KtG0auMOoKkHyIPNVezd1Laajd3k1oZGiiOWUYZBuzlR5evHUA0cd1Pczy3V6yg7CrdAobHAx6+vvrP8AUN56zo1pFSYHwnmuujgv1t5ZP3kFt5Ftu5iN3s7khXBO3PG44P8A6c1xXfBEYyZUAehJ56cedbY7XaZbTR22uC5tLV0iVbizIly0YYjcpxxhznBrXP3EjfF17Ol1iK8bsZoQt9VNpMjsZb32rYJl3HKhs8+tTRQ30fZ5nbVEdZO72SNcNgEOQ2MHkt9KDVrvQJuwelNc3mrQaZA+IW9iUSuWAYHbn7pB6+6mutX0S17EPPFcanJZRSRq6tAiuT4XUgEkAEEZxXi1cPRsjMlg1Yxq8PaFY2NshBF5g5EjF2HPRhgZ89pqxNLqTaHCINWUOsqH2ozpt287xuPXLY/Tzrldf1S0msEnhuZbaOALHaEACdm5YNnoFILZ+GKzLftCZoYrCK4jt7KcmQDDBYzwCqgZLMDzzx6VrVyz/AbI9CWTU1sZQ+qoyM8RicXEYCnu+QR15bxDPHHpU+r+0iDTmttRW0/5WPvS8sYE7Y+8M88geXNV7k6BY9n0u7651buVkSKURwRgl1iG1gCfu7X656+VXO0NxoKafpT6jPrAh4t4Ejih3LtXgNzjGHz1zzihY2DSbVjPHc2iRX8cGYl7xWdBv8S8gdehI+dZsUurxalDFeavbs6oDLDviyzYJyAOcHg+lVe1Gs6JeSWE0F5qEstyrwxw90m5Qr4dSQ2QfBweeK5S/wBW029uLSO4u9Qlmkt07yUBMPGPDGuBghtuMjpx8alj1/8AgbHQC81u30+6XUo4rWFroGLuFRVkB822nqffWRpWn6gwmuobe5ZZsxo8EJfjPPiBx/2qTW72dezItTGot3uYVyBht6nw48iORmgs4rrTtPSyEqyjTZXZVIO1nmYNlsYLAAHANd7cDM/ci9d2mpw2NtJCmqpPDH9tM0bRh348QIPHnU1tZX8VwWuE1m8RxucvAd2dvQc84ODn3VajvL299osrxoGUQlo3jjKFWAYgccFTtwR7+Kv2d/e6nZRas3sMXfIX3yw/wr4c8dOBya4vL9tOixe0MBLC9j0oW8sWrnUDKzL9jtUphSMDPXhs/KqcGj9oJL6aSVtVECxfYRR2uPtBjG4kk46nj3Vvydo1jEN5bXFlcXguDbHulO1lZcZ2ngdcZHXI9K2HjurKXFvJYKu9gQYG5GfP/Snyaqz2Wjycvo4yz0zUUvpZZP3tcp3v2qyQkvg5JBw3+xVaHSO0kcMrXHt7qrZTEDKEXnjJPHlXWXFzM+uNpkCR908S3pXbnJ27QMnnGWPyxWpb22oMVgmS0aBhjwLtKnHUY9/l51Pk17/JLjb/APBxj6fqj6gZ7SXXLe0kAICIckEc8jrmqn7k1aK5Z5/bpEdWMa3ETKAQCRznjp1+tb0XafTxpRutTYxywJ3MQiCA7U4yNwOT+P4UwvYtU7K6ndLcSs0KHup2KiXDIVOSgC9SMcA8HNbeTsaMJfUzhNG1A3WoXE8F41q8sbyRJkokS4Hy+nrxXZu0/tcUqahPLA8asd03JXkAg45Gce7iuR7OaRbS35imllWKKylQlQpO0ckY9ea2bnURa3yWFsbm5KRrbgO6IQiHdtUDP44zzTm030WLi7Os9osre01dpbqUE7xbneQqkep+nX0rMtHMuk2ha/ke6N0C7RycbMZwD/MeT68VXuIr260drmOGRrXUbiVHjDqHDFVYkZ6DB4+dVY9Qs45IdPtbueB4XDlpgq9221k9/OGP4GuesVNvNGvBOJdUbvNRmMa8Y70nny+Xniq2oTvFFdZ1NkQSubdmfcGTnKgY4I86m1aK10G4uJrO4nndApOwCSL7o5LZ6c/WoLS2F69u9pIJu8WUn2wju2LEuQiKCSSd3PBHnxVL6B5Eepaj9hpgt9RaN5gu+VZ+Dt4ZjxkDJPxxXZaJvGha0fa3vPtosNI+5h4RwSfr864BrCw/eIfR5LhoYPtQiRqeWYltu44OMevT4V0x1BU0C6gElwst6oaIOw+0ZWBJfIBGF4zmuW3aRd900lG4/eUN1xnrSV98BmBDRqcFlORXnh1bUtP1H/m5YkjcHaN4YhfMcelNddp9OvLf2aC5eEd2xYtzzxjGPyr1pX0cGz0mzvobobIpo5ArbWKtnafQ+lTtPFHKR3oTHo3J+Ved6KLGxs0ZNYmte/G5u7tmZmPmcjqfnR6tq2k2iDuL28e5yNsztjK/+X1X4kn8alX6Jrrs76PUbdn/AMVXw20snkffU9vqhXVUs1neGZ87MNkOAK8use0F3Ko7mBMQebsI9+RyeSct0591Ufb9R1CS3uR3wg0+Ul5SdjxpgeHg+vAx1+dTyy9MzF8PWn7X+yyKz3h2sCSWYAAeuD1+VZNn20k1jUWidXa3L7VO4kjnAJHTFcTK0s1ozj/lpJgE9onYCSQkY4GN3PkBj31oWUVjZbWOo3KlMDAtHc5Hv86tvqFJvpna6trllo1otxMsrx525jTPPvPQCpY9StLuwaWFmMhQMqEeMfEeXrXmt5rZvIrotKzKoAiMoKo4yc5HBHlyOnNVLLVbqfUTNJLHBsQRQ90WkXaeCV6849aXmzOh6PY3ubh1eXKynKlj0wPLjirhuFDAo/PkQea5WWHSzYq0HaKWKcEEvPbvGpGBwMkg+VY13r89s6WsV4Cjpw+Gy+SfpjHn6+dWPIyy4zvZ9bktgr+0Sk7toxIc5of+I7xOWv5UdRuOZDgD15/WvP0vjYWIZleWGNyww+9wT1Y5I935YqKbtJY6zdTWsG+DwqFmPPejHOVHTzpeb/5JdGdPjZ6in7QmtEQXMMd36snBHxI4rUse2AuULPZ5B5GzkLkgKD68nrXlXtbWlgJO+jgtg5STHjccjBZcHaM++qGt6pGAdtxqMu0Fsx5TdzkEYAA9fPFYf7u5Dom8erTT7ba++p3Vt7fGrTIrog3Y7vJXkenTHvzWPptxbmzkC2o9pkZXSdx9xVblevmSM/5apLosGoTwrDqEt9fTxK0olGO7kJzs3DqcCpbUyzXk1rcTTRohC8Iq856EdR0pWcF4v6ejW3aPtBpmmWMFrcaDFb3TSFTdyOrFskseDjaTwPiKt3UXa46YY7ptBkjCPOgQy8HG47s+WAcY88VwN/oWnalf2s0ms2cMVsBGwmueSFPlgcH5dawtS1eeG8On2GuT3wfMRZDIECAgjaD5Y4z/AHo0Om89ncyTdpodLltRaaIIlcgriUknJ5H1zVrUx2na/hfZpDqsRMbuZDsQIvBx0JGPpXGTaHdXrR2+j6xNqczg96kZcKhwP4j1PPkOPWtTVeyXaYXj3yx3C28jnEbzgnkceHP++KHPaZJ9SHb9lZrjSbfU49XFqzXDKFNkxwRg7id3n0rUudeSwubxrSzvIpgkkvesqmEsqs4Lc5xkHHvPvrhNIvbrsbp/stxC4e6cESXqLKu1eMqCTgc5Pyrpb3X7i9fUYBe6bNZPauIkhgzI5MRwAw893H4VhK9mmzQuf2vaTaWMR7t7i92qZYgNip6889P1rlNZ/aPq2pRgq5hiWUsjW+5No6Ybnxf76Vw+pkW+qW8jJt72JnYSeHAUHPT4YwfWns9U76yQpH9qGByn3Fx5EkeldMcV7ODy+HUz/tL1lb2C5Wcz3vChB9zjg+Aeo5+NP2i1q51SBpLSN7eyePfMBLmEH3Kc56Z4A56Vyrypf3skOXY4DJAowp8j08/PFVZNTMhnCvFGjEZhC5ZiDwPfWljX+0Nouz03s12nHZfS4JxMblnARrTDjuD0yo5DLx6g546VT7W/tMvtSsjaPavDH3jSBourL/Crg8EDrXB2t/d3sxhhlZJXGQudoOB5VmzM7hoH7wqrHcACT6jxGtLBXsNmzT0yWbVL24uYJ447pI+8eKYghlHBZB6jPTnpWxf67FqFhFBeXkl6G4h9oU74yCON/DbT/KcjpjB5rkrZbg3QkXbGe6ACngYyRx7/APWpLNZb+9Fu+wx3BKZ2ZXjkYPXg4oa7tE9L0Ttlf2t4Tp1tbb7g+DMwPddAeNvIx6nPvNdPpf7TpWuIotRhhcNwe78Ljnlj7gPQeVeenSpXtO6Z40uoVb7UEdQOnAHl0z18qrXV/aiUiU2PtoVWDb8tICOCM46+h/CvNi6+jeSaXZ2/aD9omnvqdzEuk2UtjMGBmK99cSHAwNpICZwPM4xSryee8jiuWkfdC28sFwGOfPrSr1rFo400W7qz0CWbuWuCuCXZd3IH3crjA9Kq3ywSxS3yWbTzyIqxkp3mwgDLEenoapafq0ttA/sUm5ppNveKxXxe74V0L3McmqPpffSSIi4hmPO/gNtYefX6V53+xnTHGo5qKWSKdDKyMxjG3AYEYPmMYArTuJzZ2BmW33jeQSRuDDnkeuQTisW5h9nmla5CxhyXikgyQ64+7z5EEcH6irEry6npSRrM3dqxKwq27JCjGff1rq0nGc7HC5Fp0GpTt3V3cWrrx3fdAoMDkZzg49ff8KsWUd/HMtiZ47gE7UeMjBGQcN6HIH1qjZyW8eibZ4ftV6ornnnhTjzPXrWppdk40GbVFiS1dZAkCgsfECNxPqTn8K55vVRnTHGvoqX8OotI02y6htYsDYwwwboWx1/DyqrbS2D3pidxI6oT3mwgrx90+/yrXgiv5LGa+imdbtZe5nR+e8z91vj5UcFlJqUZjv4IrOZM7Lpj3auD724Pl8M1Y53oni0SRacgspY1WKVByqOScYPJyTwPQdTWHMY5J5UtJ5I7d2JTu2IBPAPHXOa6V9MktNNitbLVtNJBwwa+U5XB6+XnWRpmh3WlxOw1SxM5AORcocHnoc+WcjjrWscXGwa9FvRpLfSNLuLqa+naaVjHHC5G9wOmAeQDnqfKqbtaXim/eJmViW7oYyh6kAdPU464pk0REdJnvbZpBIpbFyGZhuzycc+VX4bezs0YrdAEDeEjmTczZPGSMdD1NZfE7V7N7dQzL25tZ4Lf2WCQvDnu0ZtqqT55z14BrP1GC1n1RGjaJFlVcBSzwiXA3HccHr14xnPNdNcWehW57uJZ7wMoIlF/HHyeo2lM8VZs9Js9UKR22lf4KYbGoRgNgHnleDzk/Dyru8Vipic137Ioe0F3Z9mzYTy2k8eVaIC1Q934QD5YOQOG68Glf6nZ3/Zy1jCRJLGoTKeLcAAMlTxn+oDPGM4GK6Ls5+zBe0DPbm3uEhiTeA96o25PkBEfP19a4q60e3ErPCJ4wrhRbywlpQT/AA7gB0OfIZrhrPp1bfoxX1RjcoqW6IEO1XbxAAHkEfH1rSknkstEsowIQYy1wAcHcp2Aknrg4b3ClqFjazq5sdFvhJbw7rmSaYIN27BKjGSORx1qO0SOSKDdp8Dq7BCWnOWIXAGB0BJH0rrqZxp1naO4vY+z0UntjSHu0YmRgyEFAOFIyTgg+oHnV3VbvUNV7OQxXMsMNsZMoVUIXACrtAYAkg4PHNcnc6h7UQ9zNG0dsI1MUHVQEIwAQPIdfPFdNHqb6xaJHLaXkqwsJUndyRjaASBnjAHT3GuCw1SOtrKGp2Cy6uUubppooJ+IyyrMzbyqhSFDEenz+NR3ujjTO0ylbK17mSOFkHfmbesi7gdx4yeR6fWug0G5XWtdtJtddu9t7j7AFQCQxJxgenpjzPmRWf2ruLSC5lS6V4Jw8NvbiM4DRRptD4PPUdPeKJ8L5Rtej025te4jhlS6SWPkhhGoBywAzjpSv1hsNPun01VjXfBw5zyNxbGTyfQfStKftHbXdqlvbWS3EkrmSViAWfK4IUE8HOeT8q53tReGB47KJAxkAabcyhQB90YB8JGTmnFNRfAya9mtos8899ObmcTSsp3bTnbiJ+DgYB591BPbXOpdidGsrW49nkj3OzEuNwLNx4Rz8K6HsOnZ+20aQNZvBJdsfaZXv/DuZeSBjjOWwD6VlQ6++maMmn6day3VzYl8yq2UQ5bHHVuGB44rTxnoVlfZz17YS6NoJV7qP2p7iMxyZfKAbsnawAPl7+K3dNi1+7guJ52d+8lKNIzEAn+YAZx8PU0MWqWmvaXB+/b14AbgSRyCDvDK4OFXYOQCeM12idqtJ0/sday2WlSzKvVJFi71vPnpk80tbBdXUcXqC3kmqXEDyhLyTSFi37mXDFsBuBkeVYtnoHaK31iyUaq7M0gI3NOVGCDzkfD61612w1zTYeylrdOkUDPLEcpGN4XGSOBux8K5Vu3NgsTzMwVNrdyRL3hc44JUHI6Zx15qyuPSVFR+2cquhzajbpMWQi2ecd024AyFlwTxjHXg9a1X05rPRb6ynENsDB3n2bcO2R08vlmsLQry208XZNzfyy3BwD3LGM5POc9D0591bOpa/pGvwajb3MskMduhWJTLt3uCefX0qyrysMppIy+y8VquoXj3bYVbKfcecK3hweOvnV/VtYsP3UiWKh2imaV2gTBlBJwCxGcAc88da5GDVJ7KOWOFbcDuzCyxzcOp9w/Hnn8wfUFHeLNEolYhtiHAKny5zj/SnRt+jHk66Ojn7VpqlgmnyWcQsxK1w0Sk8sVC9fTjpVaylVnEbRQR20qhSvc8BjnY2c5A4/8A2rCWK4lMht4vC5wz94qsPlXU9m+zGsa/FJLaBJzbsvepO6qrZB2jHGRkdPdS+OK/CWV9lztbZ3jWRX2xu7JXKW8REDDYOrDqBxx8ea5yw1OS1e2e3EkXeRvFJIFPhBBV29zY8Pwp9Z02/t9ZaxumiElr4pCJcxpjxbc5IHwHrUEYuJra0sWKwx94XlD8BgSPl68DA6URJQnWzs7a/to+z+qaoAfa4XghtolYfcU4z8w/Q9Tmuen1+WTTmsYn220UrSor/wA2PuqSOOfXpkjnioZLW/ht4EtY7g7blwJUO3EYYDDj1OK53EaagxvY5ERX+2jPLE5zz6ClcVVJ5v0bUVnLcXSzXRjkEjMq7eQmP4c9OM54PnVI6cbaS4uNpiTOAzjeQenBHy5PrSt7sxRWss4+zuZpDLEfCMEDBAPmCePhXpHZax03UdIsVuWmKxaWJisUpRQ4eQk9RzhV+gpaeKbYJJuHCwuVtI5I42wTju0XncR156jA8uM5q5HaWl7LGt7BdSNjHeMmNv8A081duLddP1WxiWSdLYRr3iFshlDcj4Y8qi1PVdC1OS3m0C1u9OQLiSKZ2LBg3qT5qR+NS/g1PyaB0HS/ZFkWzuZkiU94ohbGzzwSMA4zyaoWljDe66qWneW1iwCLGrAM0bMACSPPJyPlWrrH7mOky/u+8ubi4EsSSRtcuVVGHiO0nnkEe75VzLajcWWpwOYCikLlWBIyjbguDzt6D51zxuSZrKYl0PZaUjSss8g3YVWjUKw8mY9cn3Z5pS60kpb2SNg6YZe8KZx8vh51m6jqksrXjG6jhNzvdgw8OSclU9AT+lYD30kOBGqCXaFeaQksx65HoBgCumHHezk82vR2lklndM7ySz7S29u6kiVuf8x/Ssq+ng9veDT7ow2iEZO3JVSQSMjhjgHpj9a5ttUmWMrGyxl2yWRuW4AJJ+VWbPU7y3EhQtHiJiwOc8Djrx1Irb42Z3+HQR9oYLkkSrbXkYVlVJmaJlJwTgjg9POr1q2l6hPCZ1ltYgAGKuJ4wQc44XI/OuFt7lJtShluceF1YkJnKg5PA+FblrOrW99Il0zKsuYSrMoKljyF+nWtPDFIccmzW1LS7SWFlttXEwZsktaygn0AyvvwMYrFsbNZQ6yRdzNuALEYMq+hHTPn5VtxvDeXht+8kAcKA7OQEHOWPyzROtjZLaDTr1niLKzY52ufvAAADkcfCuLq/ajppeyO5nsotCjUWjI8bYLMmwkY5GfPn8KyTqt1KkkUcqmF0yzOwzj5/Ty9a76LVdLvrfVk0++u5LqwijV2mHg5kC+BTkdMg/KtIoB2d9rF5dLL4gQNuPuqRxj1Jrlu4tkaXHfTOBFvZaZDJJ3jtGkhYtH95SFDbfd7vlRWRvL4S3Qiju7gDftBG7dkFc456eVUe1V2813ZbX2ks2WXA52rg48+KzNDmnhvGdZCQTuJL4BHP1NehcV7OLzdOonttTgALWo3HLgKGxnPTpXNJA5vys8LKsjhGZcgLz93nqcj6c16vp9zp952RuI7iO3munsZY4HkZcrIZScLnocH3VymsaNb97YSWtsqhW7ycRMGDNuGc+nA8qL3DpKqUdNhbU2tgsoRmiBEZICuOjH68V09v2NvZ7Yxd7plumGwz3Eascjzzkn3Vl2l57XD3Z0eCxeAhY1VlK7Q2c88k46/AVKbi1/eFqz2SFoLkvLP3anvE2YAB+Irj2vR0STKb2v7onZJ7a89pQcFGi7rPl4hnPwqvJ207R2i+y2ep3qpyNqHK7fl0+Boe1F5LLb2YtERGRnaRg4Jx7sHmsMa87M6GQOyqMNt2knzOfjiumOLfbRxzeriZTaU3Goqsxk2R8HcoXaM+grbPaOXRY7aOGPT7q3IOwG3LAeuST88GsK6ug6GVZDG8x2sWPDf7zirWlTwQw3DTfb26KGljzwwHkPn6V0yT9swnOjrEuvarw3d4sNnvUDatqbZGA6qPeTkE8nrVCTRra5uGlisI4gT/Fd7xj0AxxUuta3+9tMtTHpd3a26mSSN5ZFYMC+G6ejHFaOiSRtp0DCKPvPag7BiOBg8nPl0rLcVh1WKbhiXFtcwxo4Xu4YVIVpCgwOBhRnOecdPOr152U1OeySWKeELNtKIkqtvOcYAVvrn31Lqtvby61cyR2rRRmQMZFQbcLtzjnzIJrT0jU4bO97P2semLIjXUclxI4XdCS3RT6ZIJFYby6aNaYq046a0uIlu4LpRFdCYWwJXkEjPyJ9fLJq/JZvY2cKrDIjWz90pKEYIHnxwSQa2bLQUn1qWC9thbiEmbE5wDknH1HA+FZ2sRpajU7W3XbD3wEOfFuwM+7PTFK/c4DWqo/73gNshkikMs6sN7rkY9Pj0PNZt1byXkC96kaTxg91JHk488Y6jz9cVBJeSPGTM/OceEbTnHr8utDExtyGlZXQ9EB5Hr+dGOCx7RjLLb2UZp5HgeCVS4jyCwYtlvcc8AedKh1K9065fA3vIjACSPkH3Ee6lXoXSOLA7MI2laot1e6XdXCwK5ih4wZCuATk4A681euL260rtHfTTQFN04MTEDCuuAMe4jKn4j0rsYuwuiSXUckmoX8oidWeJrZQWIOSAQeh+tQax2Ai1HUZ7yL2sQSytISwXwgnJ/wB+6uLyxyyuR3WOaXR5lcXL287o8a8szEeSZYnA+tbujTRRyuEkQuEOUUY4wOa6m5/ZzDKZGSG9mlMmNyhcHI44J6fPPNHp/wCzea0vEuY0nJKFTGXjJHuIz14ro88MkY8WSZzcMVjo9xFNBPM8kwJnefbyx67QOnXqea7bQYdKm0uKae/a2tUmVEVlLFupOAM5PDH5H1FBqHZOa5kQ2Fjc2hAwwLxyggdWB6gevWq2l6Q/79t5HvjM0M6K8LDCtg4wSOg94rjyZYZRs6YLLF9GNf8AaKRbOBdOupYhHJsZcECdB9xz9Bx5VXj1jUb2yne7vLq4aMhY9znwA9cV3L9gtVUsmHQqxQnnkevI/Kqtp2Fv2upEju7lAyEMJFwDyOAdvu8q1jljiuiayb7OYUZRm9slIX+utO1sQ2iyX5lMwVu6SISkSSOW42jz4rpF/Z9fbNr3LpkY3CQH8MfrVZuw9/ZzM9u1xezgeDvFEUanHXduOfkK1nmp0Cxa+HIos4Ikk79oVO1ichVbkjJ/9Jo75JlaIo8oMh/hYkdTj9K6O27Hdpod8PdxpZt4gnfKW7zbgP4fIDI9ea15Owd7csjzX3s4KbdituCnrkVl8iorFz0cTdW0ts9147jEVwiAZJwpBJAywz5f7NDb69qlnobCy1G9tS8pj4fw5PByDwAQo591dhH2MubRXZtQiudoOQUJJHvGevPl7qqf8HXcsjOt86RMwde7AwQCePF1FW6+jq/iOeTtBr1tJcxQ3l40jKMMrryvXHTGen41Y0439pdxWs6SySSNyp8LhDnjJ6AHmuvg7PRxrJm7a3xt3KmSfPBz8j8K0NEi7MWcV7FqgSaM7TI80R2jjgcDnkj51jZZKG412ea3Uk89zcxDSH7qZiG+3dXAJHmSVHOOg+VXrG1lttStIZbQwWm9wBuL7MZ9Tk52nr5g+ldPqthoOpWg1TRreO2tZBhYjFjLZIHXpnirGh2lhp+vzxa7DJNaTRqUaZfsYWXb02k4yGPP9J9a1sn0Z1yXZyet3CS6dbabIiAoEMiyIrvKAoOd+dy4z5cEGlo6z+GKxTv5e6iOUAZXKhicktgcEDnI4x1rsu0PZfSO0TRXXZieKA9JZQr43DAHDEdAPKs2DsRrUCSK+sht4xuiLx49+A3Wp5YyGZnbCHs5dzzRPc3Nhc5imRpbjY251wfCVB8uOgrL1fQ4NcvpJ0N/IYXLGcQHChugKNgnoMEH5HFaydhNTFo6L2gurfJHhV2YHHu3Yo4+wd1blxHr1ye8xuCkoDjpnxc0rRMy/I1IY3ZzTG0W71C6jv8AItIGSd5LdwInI/iA6YPHXrVH93XM12by9ljvbSWLvneK3WLMe7Gd7ISAGOM+vnXVnsPfqkoj1i5YTf4gV+H/AM3i5+dUL7sRriWgjtLy4lBGwxyTBE2ZzjhjkZ8q6J8aMTl9QoXVxp91phtI7dIEB3I6yhjkZwcY54PxzWPLa2TQEiEiQIrF0eXcdxPH3veMjyxk9a2/+A9eFsEhSNZA/wB6S5BG35c0p+wnaAFu72sBgKFuAM+/rxThlxf2J+ZfDPnt7EJIqaesKruYlbqR2BySNp3np0xzn50rOLT5L2FHgu7pyVbYbn7w81GV5OPInjzrVtP2fay0bC6mCN/Dtnz9anH7PtUUgrcEEdD31O3EyXmXsyHYJo89mxiiN0weJc7yYznb4iSxzwMjAGOhqstrpWnXgeO1j2sgaNy27xjngHHRuOvlW4f2e6ycf/EUGOB4icUbfs61CRIkmvopu7JYGQZJz7qHlxr+SWPI/aOQe4WwulMUVyQhO6QovD45wCPI5HX31RvNT9oUK4tu+cDdI8IWUefL55+ld+/7Nn7sfawoQcllwOPpVf8A/jaY7s3NuW6q5UMSPf76vJgaeGZwOnTaRHc77wq4dT4cEhTxg5Fa0mo6E5aTZC0rLjPXB+ZrqW/ZuxiQB4N6jBYIvNQS/svmkTC3Cp71iT9TUuXFg+PNHI6LIljfSyXG2VGidBgA8kDB/CvQD2m7O/vWDUrhbeK09nmg2Nb5DS+Ag4A644zisxv2dXVhbxpEGnJ5eTu0XGPUg/7xVuLsHeiMRSPO0asWBRYxnPHm/XAHlXPJ45ezolmjz+5vbaSZHjM0gVQNqoeCRzXY6Z2m0my0NdPm0uW4uVjUbxF0H3uvnxV+X9m0chGU1GUeguYVoF7E3kHTS9QkSPIBNxHkjGAMBc1ZPDIEs0YtprsqxSCO1nC3E2DuUZB8Jz7q5m8h1abUptQhgljDP3mADke7p7q9Bg7PXsdwY/3PeF0KyYW5X3jPKe7pip17JXUzE/uy9jCjO06gu8/Bdo+taXIsfQPBs8uvIdRnuraXUZJiFhA3uo9+B+VdP2QuLjVLAGUyRxx3sUOyMvtEZY7sDJrpD2M1GSLEmmzqvQhrwEnnPkmfOoh2LuBdZisr7IBHdrMy4465IANWXKmoC42nSW7tY5dfSK2knaydZCwMrjo3HXnpQazpFjDHYPaYUSACUiUkeWepqOHsTLPPIlzY36KOhJDY+RxWjH2F06AKsh1GTYP8CDuy/wCZrlt2jo0+1DCjsN0gJRjsUs3iPHB/WuSudSupomMtsVlEbFVCvjO8Y658ua9IHY+xXvGim1aCQKSouLRQCfIEqfxxWRBpGotdj26zIRcgskv3uPUnjmuqyS+M55LI839sufDHLaBo2YMQcrz7vrWnZ2UGqXBgitQzupIKz8nHGMY6+6vS07J6RdWQe4vrm3LdYyyuVPxWgtew3ZiwuIrmO/nEsLiRC4JIYeYBxW1yr4mY8eR5pfdm7u0G51MCRDH2wKgk89SKpBV7u4xsP2RO5TkfeWvYdX7HaHq0fe3GqC4bqETYhJPzHPvNZ9r+zjs/3YkbUXt3ZcFWkTOPTryKXyr8D4sjyXbiIyxB9yHg5OOvNW7fWLmH2RGt4LmNAVKyRlguT6jFey6L+yrs7cNNPHqbmZX2ExlSCduVzz1PNWrj9l2jPpCavPqUpCRrIVXAjAJxnjg84rL5U/hLjyR5vpdxPepesruGV1Cxp0UHqMelXLCOeQRpcs8bksHXcF2kFcfhXXt2a0EwGL98zqvohVfyFAOyHZ0hm9vu5G/m3ZxWG17SOqThzwnvtKjv59OuriCYYQbWHjXdnBGOema2L/ULy4ltIF1W7uFks55JVL7sSK+1B0448qvp2b7OqmH/AHhP6HvmH6VY07sRoutJMIr+a2aOTuu6MveEkjw7icYyeOPWucNU8d1y/km2XFwDI0dzcLzzgKygD8KzIb6dJgynauQCAOvrXtth+zWKTQVvHnt7i4jEj+zx23eDcOWUEnPv+Va0VholrCrSW8m8Dkex+HPuytdlyr1Dj4m+6cF2O7QaLp/ZzUotZjja8bAiQw72IDA8cccCtSTXezsmuz3kS20VvLDHtR1QYIbxDb5HFaWva9a6XbI9lpIum3bTnThtRfjtGfdWPcdv7eNVI7NnGMlpbOMKfcMKcfOuTTeVns3dVGyvb6ho8t3pqLPFIbdZElYR5D5wFJOPdVySTTxZTxvLb98reA8c4xwD59DUFn+0W3lZg2jWKE+FFW1UEn1LFcfIVr2Xau3u7qBbjTPZjPkoYrKGZcA8k8Ag0Nx9knfTPKtRg1H2vdbDunAbau4KcliRjy9KzIrLUwd08De4uMD619Gvo0UuGbUEdGw232OLaR8KjudFsrlRHLNA0eOALNAD7uD+ddVyoHwtngc+mzy3ggMEwC4VWdSqggep6D+9Rmzv7a4KPasyqw5RCVPzFe7Q9j9LMapuQqv3VdOn/wC1Wn7G2MqgLKiEfxBevxBPNK5eg8TPBprLWRdgBbgwI3hUPuwuc9M1u6NaX094jyWkinuHUl12gN5cn5V6pN2PjjkWVL2IADDIIFUN69WxWTf9mNSjmC2WnW13CwJV5xHlGzx0blfxofJV6FYNOnN/ugy9m1JmjW4WQbhyThcE81px6dZw29wLi4ssyRkKGIzkgfjwa3YOzOovph7+20q3uc4I68eoPI+tZGt6P+6rCa9vLfTnhRgW2KrMcnGeMHz61ytR07XZh6TDDZaxaR3KRzwxnEvA2jKEAkH3g1y+s3Uo7QTSxwiNSjbWK8Y8RAz6ZNdC1zbS3tyY7ayMHs6kpKvCkMwPn97LD69K6O20HT7qIXFt2fu5M8d8kYYMRwTzj8q3sk6YaeSh5oLi/g8LWhcFVJbHAJHBBHxqeJNXeYr+6p1Ujl0RmVfXnB5rvrfQ7GfUFt202+W4b7iupUnHz/Kr2qdl/wB0RRM9heHe5RBBc5DNjODhs07oFgzzT/hnV7qfv7XTDEjgHLKVbI46EcH8aVdpN2X7RtZi8l0FUTOSEuGOFz14bJPlzSrL5X+Q0/g9Ai0sx3hlSaYARFQWkBwTwfLOSPOoptJU2s9uHldZh5sBt9wIAIqzp8WpX6iaTTIbG0aPvI7i5u1VXBAwAoO7n4dPpUeryx6TLCLmOOXvULAozqBz6kc0+HI6+XEkttMtkhXvmeZxJ3252zh8Yzxj8ffViPTbONtzq0rAEAvIxwDkY64xg4x6VjnVPbmWDTbTu5m6EzAg/wDUAPxp/brm1c285Vphw4EiOQT0Hh86PE/Qvkx903IrDT4pC8dtGrFNhPXw+nPl7qkht7O3bMVvDCfVUArnoNTuZZ9iCN2PIUtt6eeatiW/AZ3tIViC7nkaQlcYyCSD5+XrQ8WvZbJm53i8gMePLOKHep43H/qrOeW5t5dk+nA94PC6z4T3cnz4PGflVGfU1t7h45IRGYzhl3A/iDWlhk1UG+JusI2BBY/EHmgEEI57yQ+8sTWKNYtwhYW3Q9C5OaBtcsw6v7ODg5KiU+VOmQb4m1NDHJHgTzIfWN8H8az10/vI9lxPOu3KgrPkkZJGeOvNUE1+0DgNaSHH3QsvT3dKM67pjEIba4j96zAsD8CMGjx5MvJiizcaRBO7ypLcCYksmZTsDHnp6ZA4FXLe0igtFiMQfby3GeTySMn1zWbBrWkRysXM03TCkqMceeGqaLXtLkdkSzuZJNx2LBMM7OPI5rL4skaXLiHJAJ7uBbezhSEO63BZOfCBgDHTJPn5VLb2UMayGS0hUlzjaOq54z76hu7+BbKO6i76KFiR3lwylW/ykYz51AmpQyQtKk7OobbvEZ2E+m7Pvo8ef4HyY/k0PZ7XoLSI/wDopdxaZH/KR/8ARVM3biOKR9wSX7jY+9/l9flUDa9Yo+yW87lvMSDYfxIpWGfxA88fyaXc2hIxbRE/5BTG2tDnNpF8dtVY9Vtrq4WK2m9p3cKAVyfxqfcxmRDFK+5Q4KYJIPTHkf8At61a5WFtjKGLW0x/gKPmaf2e3TkRL8yf71TvdT0+0JjlkkSdQRtLAjcMcH+XGfMfrUX73097V5UmBCAbjvU7c/jT48wXJgaOLcciMD4E04eAfwP8t1Z63kTCMok570ZQrtIYeRpor5ng9pZxHb5C5cqHzjONuc0ePIfJgaiyw5ACSDPHINU7W5u5IYWlhCszvvAyNi5O3r59KrNq0UYz3u9OuUx094zxU0es2LqAZGBPmSv5Zo8WTLy4/ks3Nw/ssncELMB4dwJ8/wC2aC1aU26m5bvJcDdhto9/GagfWtOglCvNkuCqkAEE+XlxRrexzRloIpXVcgsAMHjPHyBo0aFZpkilmuWi2OE6rJuJHTp1yP8AWne1knt2WOeSB+gLckH1HPI+NV4dShuJNsTEkc43LnHzqUXsGzdI0yemADmlceZPkwY6WccduLSa8cyuhzsfYSOhIHOOTyfU07WMc1oIO+laHg/f6/P/AGKqSXdlJdRymWYlFI3BOB4gefTpSbUbaFduZvAo4K4IH6U6ZhvhDQFuAxYuzE88tSlj7yLYk8kTZ6qazo7+MsUkWVTnHBGR8qNbmNHUyTo0Q5YKdrfQ1ePIvJiwF0653yFtTlfdgA4OeM8Z3dOaksbO5tDMWvfae8ffh1x8s59OBVxNR0Ypgy3KuOc5B/Sha508rldSZWPQyRjB+hzU+LMvJgThsuCzKo2Lwi458zyTnJo9yDoxOfUDiqaXNqFPealFu8gkbEfjUTXkQYD2yLHrtOT8qPHkPkx/JZhtY4b2W5aZ3eVVQ7sbQFzgAAe81OfZu/Exgi70DaH2jdj0z6c1RNzE2AlypPmT0+VE93CicTMXx6AD86NGW+JfEsfPhGfjSZ0ZcKWX+pfL61nxX8LHnLkn+FsfpUy3tsJtrQSsCOgf9cVasdkSusjA4vJVz6Rrx+Fc83Yqxl1WW/ub+/kmuMiQBwoIPlwOMe6tqTUrRWdRazhh0+0yPyqub32iaHEZjCkkjcTnjA8uOtLwbRnbH6bdtstLSK2iMndxKFG9ixI95PWk8hbkOy1iRTdzHIkcjbmdny+W5PxqZb0GVFyzKAMndgnj4VLBk88TS3HzctQsAx8QVseq5qJb21ULuiGQMEs7DP0qRdRswpPs0Leh3P8A3rXiZny4leewjmIbvJUK9NjEAfLNZmm6LdaZeP8A80JrN2Y93ICWX0w2SfjW2dTgIwlpAAeQ2W/vUYv0Jy1qoB9Dn9afHl6LyYmfqOnWYtJpI7NHkA3hY3IZmHw6moDaxaHYRXSWlzeTxow7iK4dkztLHCs2ACVHlwSK1vbN9zs7mFIQhO47gxbPTg9MUnuPs3ISBW5AwW9OtZ8bNeXEaziIsovaArylcsdo8+cfLOPlTSpEiFkjZ2/lViM/XilHcn2Pxxx99xlssRUQljMwd/EShU7SMdfeKNMi8mIUBhuoIpo0zHIocHlTgjI4607aVp7hs26+I5YF2Gfxo0ngjDBoHx1BMmD+VRwXVmLZVMJLBQC4lYHP0xSsckW+JXj7M6RFgRwSxqHMgRbmQLuIwTt3Y6GrY02zCbVWVB5bZX4/GoGng42SzL6g4NITxngTS9ecqP7065BvgTfuyDPE90P/AM7VFJo1tLxJLcP/AJpTS9pjOT3sh5x5CiS5t+VdpSceTAY+PFKxzDfAgPZzTSADExwc/f8A9Kl/c1sudk92g9FnIohIpyQ/B/qo8xleZV3eveeX0qmZb4FZ9EjY8X18PjMTUL9n0Y/+Ouz8ZK0PsyqcMCB4mD5B/DiiU2Lx/aSurE/zdfwq1zLfAyDoixnIv7n4ls1LHYOuNt/MQPXFaLw2Mgx7YyEnqWGQPh50KwWsf3tQiIx/N/pTpmW+JEkc6j/xbn4qKkUzj/52fkKcC0Bw18q+8c/hio9Q1HSrGJWWeSTJO7x52jGegFXizZeXFEp3MuGSNx71H9qgktYZF5s7csOmY1x+VZsGvS3VzCtrpYuraUviSO9VmAUZOFwMkDnHXFantVswicB9kyLIhU8FWGQQfOp8WePsFy4Mp3WkwzxBVtowS6sw2oARkEj7vniihh1UapLLJcym3OSiblyuQowOOBkE/OrBuLfJw8h58yAfypku4Dv8UmU65bH6VjRm98TN1Wx1m6juzbX1xHLIYzAWkVhHgYbj389KltR2mRe7kv4+72oj+ZfaG8WRjbyRx54rSdo4wCWkI82U7gfoKJHtpCuDc+//AE4p0yZb4lDSpe1ERkj1O+tLmEs43LERIylQAPvYGCCfM8mlWmnsTtJukuowuDh06/DjmlV48i8mJwja5ePJ3rySuxULnYvHGPyA6VUl1G4lI71rqTyDFgSKzRqFu0h5lJQcFlP06VG2oLHIuHmI6njI+hr62qPj7/ybAuAQOJpD0PGfrTRzkLtW3Of6x0rJ/e6sMIrBR6x5P1o49Yw5Pe3G0DoY81aluaZaUDf3ZGB4QpHWphdTpBsEDiNsEhnIH0/0rJ/fLF/EHMZ65QA0aar3cxEaSsGPvoeF9oln/Jo+0sE2Mcw9Qu8gL8ulPvAchcgEdVfIPyFVP3nbS4D97u8/B0ofbE3Fo0d8+QByKNR2L4zsOx245OX6fWn70AYdo/iSKyZtQhVlzAzN6lTn5ZpLdwlSxV93krLVoW5qs5GBhAB8aFmG3IwAPWss3pUYAkkzzgDGPrQ+3KEwIZCfPzNGg7l/vlUNtCAnzC/ripIpfAG7xeehDDI/CsgXY3HEEqc9SenyopryCPKi2kZuGyTgg06lsbi6jtGDKjBfLbkfXFOs0L+JioYcYU8D5HisP94bSxMD4b7vup1u274tJH/0g9PcMUalubLT71DhlQDoygZHzxQtcnb4O7bB5LAHJ+NZo1PExzDKnpwRmjW9DRkmJyT5Bz199Wpb00o7q4jIYrsK8hk4pe3zZDytM5AG1ieg8hWfHfSRkI0DLn+UngUXt7LLuELvxg5B5o1HYuNqO8ghZCc8hgfzoWvWkbBVto46nNVPb9ww1rIT6BSRUct4XP2VsyjzDIcZ+tWobFw3kmNoIAB6Nk/jRfvBimMO+D5HpWZJfPvJ7p1Hmu2pDeSFS8aHAGMbRn86tRWZq289qcmczjGMd2ob9amaawWIlFuXfIb7QBVwM8cdM1hi6utpLRkjjrikJJ35Jkjz6Ac1h8Vdo+WfDYgucYYoA4bOADtI8gRn/vVpLmDapNrJJ5FhMRn8KxFjkYHMjH1yKdO+TJYO3vAxU+JMvKzTLJ3rMsciZ6eLoPTNMGbPg3ISeoY5NZ266XnLkt0OAM1JuvQuMrgDgkc1PjTULyGgZpBuBLEMu05Gcima7m3FlmYE4yAMdKzJDek4LkZ81IFOpuQoG52I99C4cfwh82X8mkNQvCjL7XOEPBBkOPpmmEofxNJuJ6nzrPJuF3ZjfBHmAar7bsrnvJE92K0uJL0Z8j+m4jYIw55/36VL3jr4e95z0ODn8OKwVkvFGBJIccdBzUqyX5BCyL7/AAkVaF5DVy7sd0JHvBH1pBAOi+fPiyaze+1LH/iPMHAAA/CpfarxmwV3D+Lj8qtA3NFNwO4oCPeead5yHVdwI/qHI+BzWaZZ3we9+90Cnp8cU4nugSquQPcAatB8hoCQZ5QsfUUW5t2YyOfIsVIqis1zz9o2fTHPx61F/wA2jYWZuOAC+P0o0Lc1FErnDOyMOclutHlkYESBio6DmspnnxubYC3Vh1oI5Lpcd0cnzI/2KtCWZupc4Yq7EMOeUNFHciRPBgsOBkEA1hRtqRR8MWI89zbfpUkc+oQjasiIBztcHH1zVoO7N5ZZt2CikZ5OcAUmlCbt6ANxyDnP1rBkvL9It7hQR0YOf71FHql7LkZVh6M3l6VahudKZ3V8d2+D5ZHH1pB5lbB+zGOCw6/KsWO5njIUxpuGCFY9fxpPqNyxytugUA5yeM0ajsbneuRy/I6gjn+9DvcLiN2X/MhrHjvbzaWFsAPerf3pzeXpYF4ucjGB4fzFWo7moZZg3Mm3nPAzx7+OKaWQxqHN2oycHnG6sl7u57wyTRIQfXBwKYsH3GSKF1wMZXkH5Vahuaj7iu4M4A5ztOKSzzAeEsegy3SsxFSNhss4gOp8TD8OlJBcK5K29u5JwSXOR7uKzqb3NR55Cw8O7PPIxioxduR90DPoQfrg1ReZvuhY8A/dBwaJZiUYGNFbzGf186ViZeReNzNjgL6dMkGjWa7A5WMjzrMIkyMptUdSG5/KmZ4pcKU3f1M3Q06hsayzTKcCOM4z0p2mm4+xQf5WxWVu7tcqVJx1zxTpLsYMEU5GSQeaNR2Nb2u7DDFtGFx/vy5p/wB8TMoDwkZyM4BIrJSeWVsooOOoUE4qVri5Yri3ABP8Sk5q1LY0EvHlfwJEwHmw5qXeVPMMJIGeQ2aypp5mzmNc/wBAOadbjwj/AJaXeeM7DTqOxpvIZY8SW6OB1wp4qJriLeyJbZYcENkf3zVRdQlQbe7dWxhWII/OpReEjdK5j287dpOffxTA2JrZobYsY7KODxbwykg5PGenXyqT24OQFMfdxgKq5xwPIDyqublmHEsR3ee0jn59aEy3BYKI4XH82SD9McURFsy00srHd9koA8jk/jQ+1bRlmTIOCpNVo5JEmMmUYfdHOSPdxTvqT7wEt5JOedoq1RbMtJdxl9iu+4jgKeD8OKk7+RXwmGA6AuP161nR3+6Vu8tJgf4WCk/25qyHDy+DJz5lyv5CiItmWxfOQoYKGbjCknHxPlSqn3jpu8ET543d5n5ZxSphbM4GRsZxLAPUEk/SgwOsm1dv8RGD8s03dIpDBmI8gVIJ+WKiZl3qpkJYfzKD1r1nAnaaHH+HvxwPH+go1nkOzuU2+o8JJ/GoEkliwCiEepAH0Gakt3MjHJUBTnBwMe81ETSTSlRvlRCM4UFQSPeOaQdiPvqze4gY+GKJQG8UkUMmOQUJwPjzUSS25k7wvBG4BypbH60dESteKMBVcqOp3jP0qRNjQ73udvqGPI+YNZ8k1kZM96mTwShz+tEChQ7ELf1bdx/OqBSwcyh3iYkjhXd+fiBmg76RssyJlOpLj9DTCEYDZ4I4wu38qYxohKsiKPUg/qahJBKZR4pIwAf5lopJjHwJIyCP5s1XQJ1EMbDqNoHP4UicnJU7f8oagQWvJIzzKhXz8Oc/PFEmpISw3ruI4YJ/s1XyxdsNHGPL7M5qdLkrwViPvaPk/kKBJre5wTliNxznd/pUkzQ94fENuPvOf95qA3hzlVgPkOOaSXUiLs7ojz+zQn8aoFD73SzuDuvqQCaKOS0kIEMkQ5HUsKjS8wxDW87DyynP50hLHtJkDgD+BowCPnmqFS1I6AkiZFb+bGagWY96dzux/wDLHPHlk1BJsAQJHLuPPhQECj7xCmzDKD1JixmqFSYTKsnitpdp9cD8qjaRmlzGO7DDjrn8TTGeVVwuAvlmMN+GaW6TO9pIsEfdEe3P41QAnuCFYPIvxyTTLMuftJVyDxny94qJ4pHcKzqq+QUfrTezvnapULxznFXQ9lpb4RuAHLh/4mHT6VIbuMR+PB9So/Hmqns5yPtFP+Uf60SWyplVZF55BY8/jR0XZO97G+F35A43Ff8AeanMkmPBKF9GPFUpIBF4gjn3/eHyHSnTfzlQw64zimIOy0u5GLCQMx4Oc0/tYi4eWMtjOAeTUCCQAD2bfj+In/Wj3Qk4wyOvUBqCJJLhEywf7Qjwqen96naVXVVLOueCM44qhJJECo+0kz6EjH4U+4KwxJGpPlvP9qoVLbRpHH4ZMc/zHn45qoC7O2JTux584ojIYfEHG3r4TzURuYW4YfPB/wC1Qk/evGmHJcnyLedSREsg3DB5B55AqiXtZHxsIHqVOP8ASpe6tjjadvHBAAqDssZ3kAuykHCgtgnFTH2gjxd57hnFVGue7G1mkJAGXBAJo01FFUblaTnjIJxURYRp1XKbgQefUVNHcE+M/e88rkGq37z3ybe4bYOAcU4mVlVo4pQM87ckH6iiCWk2E8vlj1VQRxSMm0Bi+zHG4N1/CqpuFR9wilXHwH14ofa4s+GFmyPF4gMn86INLi32w7TLnPGX5oJbyQ7iJFC5wfLH4VEl3E7EraygYyD5GhM5LnEQBPkx6fWqFSZZpSMyzptPI8eCPyqQIxZHH2ygYHRhUA2SNk25fjAAxz86jCIpOdPKcnxbicmgjQEz52BGCrz4WIoku5tpVhJGOoJzj8RWfJOHhA9jR0U/xSE5okexVlU2qIT0AUiqFS691k/e2herHjB+lWVkHdHxyMMfwgc+/kCso3FhGTiGLA9GPHv6UpbjTgOY4hnnJY4qhU1WurfcD3oLKOmeP9aiuLlFUNGO8PoCAB+tZqewM+9RGpI6plvzpwtvK5BDqqjjPIP5VQqzVlvLaO3Pd92mOpYhj86rHULRQWbYWYZDpGQB8c1XEEKx/wCLIATnaAD+IpNFCqMSWdVHQoc/WiDWSLc2jxD7eNGJz4WwfmAKiHs06OBdjr91Xx//AKoQLJ8AJvbpsUc/WnezgLOzQzIQOgXIHwpHsl9ktni8ZTpyWw340ibVWCGVCvXjjp7qi9niVAqMwYjoV8Q+Qqq0cKSKkh3Hy8GD9RUDLpurVWJMo8XGdpBPzp0ubQqXSVtx49BVeO2tgSVG4+e3qPWiiWNtwiC5J5znBqLsnF3Bs8OC+MYZcE+vupRmFhltsRHURyrVZ7UImRbpnqArEZP0ou6QhO9TaxH8LZANUAtx3MMZ/wAVueQu4HP0p1S1kA3yOg6gbhjPyx+dUe5tiw3xkkcBgSDVhYrcycRsvl1PNA9lqKa1Byt1kJ4SCxxx86mS5izI4uQV/lK4z+HSs6W0hyT3QJ/hyzUSW0DZBiYsBg7T/eqD2a8NzDJISJon2nGFx/age6tk3BYnLMeiuc594/tWUlraiT/BkQqMBgwPywKla2t+5KrcgnPAYkVQqy9HPHt3yYTjGD/DUZntnmIe5ZHUZBSbAbP+/SqkVgz8tsYZzuWQj8MUS6ed3jEKDPJ3NmkOy7GImf8A8VJ4hnxS7sf2qW3eMyFRcowJxkHac/M8/SqP7ugVg0j7uOGC4/GmFhbu26Nd5UefGD9aCNRkj7zaxDHpkv8A7xUY06MqZQgD84zIBge481nSWlwCpRk6dGLLn6UaW93HIrgQ7s8hWP8AeoTUjgjEe5gIiBnIkwD8elKqUYuGDDu8kjzY5HzzSoE8/F7EHyVbb6CM0BvoN33Tt96kVbe3iONke35ZquyHODjI9VFemnOApfQ94ckkeQLgVYW/UbUhyfPlgfyqqrMpyYEYeq4FTLMrADuCfdjP5VFA5bmViQ8qY6ceXyzQBoxw0ayH1MZqQOo57lyPdHjFSibaAFhI9Cyj8qqUK7SFMBI42YnjK9Kn7+XYA+Av8qPiomuVAO4KCfNR0NQGePJy07k+QjyPwFBQsxyqoYv0POd+SKXtdmoJURHHU5BNVdm7AVHT08K/kRTJhX27kJ/qCA1ETnVbRSWEik+mKR1LPRd48tgqMyJjJAyfQDP5VC8feNwZmUjnDdfpQXZMb6LpJEYifWp4p4jH9kpz7l3A1QUCA5VdynqGYn86k7+DKqQ+TwNshA/OoS6sMTHPjRj/ACx4qbuFKYRsjrhxn581SjG4HbIpHTDkkfnUqMUYgLCM9TuYVEWvZl3htzISP4D/ALxQPhcRidgAc4L7qj74K2PsxxyVGR9KQmh+93qehBXHFRdE8YAfcziQnjaSMClIHeQEBo9vJy3X8KiMtqqlgqLn+Xmo/a40ICu494BFRFoqQ2AzKT6H/Sh7rvF2ksVHTn86rHU4FHMnT5k1Imp2+PDjn0GKi6JBDtOAmfUEZpwu3CliFx7qhN/bY3knOfLmj9qiYZaQYPQFcUwCZZxuJR92DyNwOKMzDvBlWjUemAPzquLy27s7yqn1DZNRR3tqXHeHIByCciiDS6xjmIGSfeWyPxNIxgyEnBK+ed1VTqdvIuCq5zxtXOaQ1BQvgQKPM7CM/SoOi1sCjJHXyGBQNIQ210Qg+nJ/CqzajEh+6+SeT4sfpRfvCEjDOcHgAIf71EW0BXLKznPlijXcxHeLgfCqHtS/dE8w58owaje+wWK3UjAeZbaPlxURpFVVvAyA+metRNCwJGR/0kg/jVFNWmCcHvB/SwqX95B4vHbv18xnP0qLoM74cZKFfchokuyVADKq5OB3TZoJNRZol2RugHy/MUI1VBtV97Y55kGai6LaTFv4c46bVOfxNGJXyQdiAfzD+xqr7ZDIwO4g+QZiR+dNJPahT3rZbrwWA/HNBF9C7LgTqhP8uTn6jipG3xsBJNkAZO8HP1BrLWaF142hcdN5JxUpuo0wVcrgcHOc/hURc9tjQD7ePHmpdhRR39vNwZ4smqaX0IQK8wZQehAJ+tF+8LfPCM58iqDH51EX2WF0JFyvI6h8VC9qjplZzx6vkfnVJ51LhktycDpIH5qN7qdhujt4VPplj+FA9Gl3YijCS75Fx03gD8KjWOFZjKkjRtnPB/U1RW8lVgXhjTHXYGFWxeMI/EEYefhfn61EXCMuj+FgBjknOPlUm2JgxeKRm6kq3BrON1blgzRoCfIBiQPrUAuoZJComdSOgCf3oI0QtqcgII933t5xn5UamIt4Lrwj+EHyrEkaRHLEd4pHB2Lz86H2pMbXsB06gDNMCm+QjDAdefNy36UaRMobbMCAOiMR8uTWCXRtpELJj+Hu1z+VS7pAg3gLj+YLj9KBNYGJJN3fSq548/781J38LArJLGM8DL81km8buCVRGYjjHT9aUMzNl1iizgc7OhqI2VeOIZSdU4xjjH1zQ/Z8yG5OPdITn186zsXLKGaNef6eB8qjhS5V2Kd0QR0KYohqmlNJalBl3fnPMg/vVcXtqhIYkuedrSA/maj/AOZDcwwkeeDz+VEyb0BaJVPoVH51ESLd20o3NhMeHwlefjUq3UWSqFto8jgj9azRA6sSIISp64P+tMEAY5smDDoVIJ/GqIKzUW5IiJWEYHocH8jRR3khx9iTx97cMD5YFYziTcPHNH7jGP0o41cZAuifPD5qhVm0WYqMujefDYxQJNBE5Z3jDnnBfHFZ0QkwFwjr14GaMSMCqPE+w9ABj50QaaguWP3FRl9GdcEUcc8aSAvHEjEcqJF/vWIVE0h2xYJ/mj61MLiZfCsKoqjADxE1QqbedyFgGZc9d44oUwu7FxtHqyqcfhWK1zegchQPLw7R9DTtez875Y3j/l7vOPwqhU2SlxJys7jn+EDFO3eRKDMI24wSV/QCsMXd3v2wk+P03AD8etSPdXyMvfTPDzx4wAR+dUKo1yUaIPiIIeRwaRZmxtiAAP8A8td36Vly3k8gGJe+x5CXAqCa9njcFYZw2OCCxH1FUKm9IzI+DGQegJPPypC5MaHxgY82Ax8PWucF3dAMWGxuPEzSY+po01acJuWaMMPDgsDn38imFsbo1B5EIWRXYeWCMfDNKsGXWtSXaC8RVvJWB4+Q4pUQtjne9dcgRBmIzgE/oaBZJ8cQE/X+9TILpC2UWMAdcUYklYESPu56HH6V2CEMc0wyBAQfh0+tDPdSttLQtIR0K/6GrRkcrtZdw9MGmEeeVQJnngCooVo5Z8Z9jcj+qQ1MssxTuzbbQfVtwH1FPtZWJLceZA5pK8jEquGUf0kZqKEf26naBGq45CgDPzzTRb3fkJH8JTzUpjlZOIyGHOen5044yO8T/KcZqKEckbI3gnC+fOTiqrXEzOSJhJ8UfirwZjkIsfHwpy0jYyEz9aChni8lhyHnUj+UFv7VIl5IyqFmQg/D8cgVYMROT3cZz0Pd9KEHw7NqMc9NnFRQYSI7jLxMw64amw5+73uD5DmiQJn7ikjyC/pUonYZbpjr4OaihWEUu3ADEeY6Y+tSx28oODI23/fmKcXUhbguR8P9KLvZS3LMR6HjFRQYoIXH/MMPLzNRzKA2/MjgenA/P9Ksb5nTasqg/WgJdGBZ0OP6etJQpmW0clTHIp9TnH4VJCqAjMKn3rhqsd85GQkbfPP4U/fyg82+/wB+MVUIQiSMMQ2FB6EoeKjZEEu7vkGfRf8ASrbTs48VswP1oTgcqXPljANVKFZUUtn2g5PkR/pUq2ybhvdRnpgAVKszqcbGwKMOX/hH/qA4/CqlCBoYCPGenlgn8KXscIXhGwem1QD+lWQPDyobHTioN6B8SxLz0xnP0xRShAbSPB2wyk+pIz+dOtsmzDju18wWGKuJKRwOB6qucUDtk53ZI64A/tVS1IooF2EwyAgdfHuBpd1KpIMec8g+tTd6NpcR5I92DRLLKF8K4+J/1qpQrxwSMMtbxnPHAOalFonXZMpx1Bo2lJ+9Ip+eaY3GMDxk+qrVRiEbSJ1xvIPmWA4ohZqE2x92R8P9aHvHZPC7nno3/am9odODk+/mgogjA4TakKn3YH5VELZlYB4Ijn14qeO57wEMSDjyOKkRkUAlm9eSDj8aigS2cDQ4McfPkPED+VObS2jTaF2jr1IAoZLhEQESs3+Vc1CkskjeGWXB9V4/KooiyNPtiytsVv8ALJTm1gQszQDGeu8CoS/i/wAWYtjyTj8qmXjnvpvflQP0oKIJTbMTt7tcepzmiRrdpCU7rI9CFqLvB5d5IB9fyqVfGinMyfFenzqGErDaoYqwB8s5FQ71SXcBtHkSQR+dSB1GQJ9o89z4zS7078q8ZHqrE0UoEzkR/eVT/wDbQ/2NRrHdyNuSckHn/DA/SphdugPIcemCp+pND3jygMYGC+Q7wGooSiKcqhYbT6jGDRmzWUHezKDz938qpzFNvHtEfHRUzSt7iGFQhuZY/cVwahJW062xxNN7sHOflUqxwQxhZJWP/mD/AL0UVwH5juBKc9GUCnd5sf4Ix6hgaChXltNPnJIdR67uKKKzCFRbrbvxnDHOfoaXesx2sqBc/wAQP6GpB9l4zCDjoVj/ANaqUQ0kMiqpa3hH+WTH5iigMjHA4Hn9qpH04oluTGTuZow3JBGBUEt1GJQWlHH8uKihcG5Vy0JbHmoz+RqF5j90QzDPkIzxTJNIyZQsw8j0/Kl3s0ikEll/zn+1RAxtGZjvZoz58AZ+hqx4UwWkUr5HcPzqBQ4jOUHxILUjJlQNw6c+EigiVfZix3yMueGGc/lR7YyoAOQOhYf6VXZZSAyy7AP6Qf1qPE6glpy270wP1qEtPKmDkZHoAOflUSzwRj7VXTzwU4/KoRHJtDtNIFH8zbs07MYwCZZGHpvH61ASJdWMhwNh58+DTrIkXI3lc+Tnj5VE0CybSTIrHzxn8qLuVi4yj589n+lQ9k5v4E6uUJ8ieaddQspp9pcfPH61B36gjxFT6BBijFzGjjcuS3RgoH5GojQ7+IuBHkL5kNj9KlWWMhlkAwDgZ5/EVnvZgqJopnVvQN/c00Ftcjcy3BX1JUH9TQJeihhjYhbcjz4Zv1FC7oX8cFyWzw2Cw/Oqf/xJSxSVJDjglR0+lHHcSgkXUEbE9SoOagLTJGvSPJ9Mf7FCYd3It4h8gT9cUk7plwrqB1wSDRB4NwG+MZ/lGCfpioSIJ4zwp/oYkL8uKePuipea2t1A4J3D+1DL7PHKS4nx7i5xTm7hUeCV3P8AK8uB9Dg1EI+wFdqFUcj+EA4+eKVCzJc4VrdQfUgHPzyaVRHDLNdyDmUjHpz+fSkZJ0/jdSOcllFZZ1AZ8UW9fQmmGpoW2rbRkejDNeg5UvPNIZAz3YweucH8qnjv0jzueST3+L8sVnHVGQBO6Q+7GBRLqDYJ7mIfBcGoqaTaxIV2pDIx+B/Wgj1S4UsBFIoPTGOPxqo06zR7iCR5j1p0MKLkQoM9CBk/jVCL0UpckvGw95QGpGuA4CEuP/xkZ/GqQvGKkA8eYIHNMbtQMCMZPnjFUIumQkYaaVc+fn+WajUxjCmZsDz3YP4iqyzO5IVUDepp3aQKSSgx57ATRCLT9wxGxySD1Df60HflQeMgfxHB/HNVBdjldzlh7gBUImmBzvYg8gFun4VFTR724kkzG2ST/DEp/HNPLd3K8gpj+qIfo1UBLJIGBRSRycuSKER8HEUSHrkZqKmpDeySj7edF/yr/qalFyina0isD6tWSM4G9UPu5NWPDxtUKG8gKoNLntKtnAi93+80K3xVukbD0UdPxqgkwWXJVfkgqU37fdC8+uaoVNT2xWUbQB8KjSfkh5R7skVk+3SZO1QPiaMXE7jIZePIrVCpqG52thnhI9+45+dSGWPAYbNx9D/esUyybuSB58DFOLrDg859elRU1HuoQ3Q8deB/eklzGWO6Mnz5C81mNdEYy7/QEfjRC4DDpx5cDNRU0TdQqRu8Oeg3D+9Ol14vDJFt9PETWQ17tbBGceqj86Mapu47rnoMHFECmzuQtlmXB6ZOCaZhb4w2QT5nJFZUdwGPEYB8+TUqTSEfZ7U+WahpbzbpnLRZP8qkmiWSAHHdBnzjI/1qss9wgJZkb/04pNcMyjciEH3VEWXuLOI5ZFz67f8ASmj1CzJIRM+9RVEyIOqhfgoqUQtIud+c+XSiFTSE0GOF6+oxRbwBwq497cVlCBkOOPfyT+dOwGCdgbHrVBpoTXUEZwXjTyyTRLOoXCAS5/lb8his4TDAXulORnk5pmvEhk2CNVz5qg/vVApoq8MkhJhkH9RAGPrU3e2pwBLnjkKcEfSsVZElOVGCPMqM1ZzKBv70nbz0xVBpNJfWnebUadiPVmH6VYiuYZR4nwB6s2fmcVnveSoQ7Ec8cDmo1vZppSmMjOMM5NUCm2ZrRU3e0spzjBfiijNtImdwI/zmsc7B1hTePNeKaG5jZ9rRc+87vzog02fZ7VmJySB/Kwb86aKO3A8Kd8D5jZms8MrZAjTj1zQugZvuLkeYJWqCapEUajNuwU87cAj65pi9uTiSOdB5ADisZZEmlaNlYlTzlv1oiqpjb3i844kNUKm2klpkbJGUj0bFWDPFjGDn1JFYDL4AxdwDzwxJP1ojKykDe7BeME8UQqbbLG3JBwOoUg5oYzCsgMffbv5cg/rWIbx9p4A9+OaMTTEBg2cjkMaoVN55OcFpAT5d3j8RQbdwBiDbh/OjcVis8rRKyvhvU5NSiSZxkS7T5jHBohU0XkkUFXmjz6d036VW9onQ7Y5LYj+rcPzqLfcrj7f3fdFRy3sgyxkLEcZMYzURcWecHxtECf5WNI3LgHvO/wD/AOsEH51mLeTOvOzB/pANGJJ1A3SZHTjg0wKaSagqIQ6ycdCV/tUnt0LncoYgDk8Y/Osxb3Z/AzEjzc0pNR7pfuMvrtbP5iiDTSNzaswVWY+7aTzUmFc4aYn3NHmsQ6q7cYZvTJH9qQ1Tja0QYjqckVQqbQkiiHhkh46+HH5UwhVn3LDAcj72SKzReuQCqKpY8HOcfWp4ZblskuhHzBoKlsKInJTu959+aZ5JtwGY4wfMkk1VE4kZ1MSkDzbmgjvECkqjL5eFsVEXFnjMm0vG59Q5P4UEgdifs7llB5JkG0fKoEvAihShYH1apElJXCxsvPAExA/Kki3EZljZklABHR8ED6VOjyuMGaDIHkprOcBvEVJY8ctn9Ka3C7fsy0YPmGJ/DOKBNIvdgbhHGTnkqWH40DXbKAHQ5znaQ3P4VX28+Jt2fPGPyNN9sxIWd8D+E4xQJMZreRhmziBP9WP7U/cbnUrEkeem0g/jmqgt7ndwYyDxyTn8qHbdbsZjyOeWbikDRKDuTugBIPlkflUG9+87xIywz075sD5Gq5t7qRBi4Kc9AeKX7vu2cg3jDA5IJ5+VRF5rmXG5bZkx5oiuBSqp+7JVBJvH6emaVHQ9n//Z" alt="Arbora Luxury Collection Resort Da Nang beachfront render" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">New Opening · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Arbora Luxury Collection Resort Da Nang</h3>
-          <p class="ghc-desc">Da Nang's most anticipated 2026 hotel opening, Marriott's Luxury Collection brand debuts on Non Nuoc Beach with 220 rooms, 12 villas, and a distinctive dining lineup.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-fireworks-festival-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?w=500&h=320&fit=crop&q=75" alt="Da Nang International Fireworks Festival complete guide" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Events &amp; Festivals · Complete Guide · 2026</div>
-          <h3 class="ghc-title">Da Nang Fireworks Festival: Complete Guide</h3>
-          <p class="ghc-desc">Schedule, tickets, best viewing spots, where to stay, transport, food, and practical tips for experiencing DIFF, the biggest event on Da Nang's calendar.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-fireworks-festival-hotels.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?w=500&h=320&fit=crop&q=75" alt="Fireworks over Da Nang Han River at night" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Festival Guide · Hotels · 2026</div>
-          <h3 class="ghc-title">Best Hotels for the Da Nang Fireworks Festival</h3>
-          <p class="ghc-desc">Where to stay for DIFF, the best riverside hotels with rooftop bars, river-view rooms, and private balconies for watching the fireworks.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="tia-wellness-vs-naman-retreat-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&h=160&fit=crop&q=75" alt="TIA Wellness Resort vs Naman Retreat Da Nang spa comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Wellness · 2026</div>
-          <h3 class="ghc-title">TIA Wellness Resort vs Naman Retreat Da Nang</h3>
-          <p class="ghc-desc">Da Nang's two adults-only wellness resorts compared. TIA is all-inclusive spa; Naman Retreat is design-led with private villas. Clear verdict on which suits your trip.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="pullman-vs-hyatt-regency-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=160&fit=crop&q=75" alt="Pullman Danang Beach Resort vs Hyatt Regency comparison pool" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · My Khe vs Non Nuoc · 2026</div>
-          <h3 class="ghc-title">Pullman Da Nang vs Hyatt Regency: Which to Book?</h3>
-          <p class="ghc-desc">Pullman sits on central My Khe; Hyatt Regency is 20 minutes south on quieter Non Nuoc. Different beaches, different vibes. Honest verdict based on who you are.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="intercontinental-vs-furama-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=160&fit=crop&q=75" alt="InterContinental Sun Peninsula Da Nang clifftop resort aerial" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Luxury · 2026</div>
-          <h3 class="ghc-title">InterContinental Sun Peninsula vs Furama Resort Da Nang</h3>
-          <p class="ghc-desc">Clifftop drama vs classic beach resort. IC is Da Nang's most theatrical hotel; Furama is the established garden-and-sea favourite. Side-by-side with a clear verdict.</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="marriott-vs-sheraton-da-nang.html" class="ghc">
-        <img class="ghc-img" src="images/guides-b64-38.jpg" alt="Marriott Resort vs Sheraton Grand Da Nang Non Nuoc Beach comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Hotel Comparison · Non Nuoc Beach · 2026</div>
-          <h3 class="ghc-title">Marriott Resort vs Sheraton Grand Da Nang</h3>
-          <p class="ghc-desc">Two neighbouring five-stars on Non Nuoc Beach, one under Marriott Bonvoy and one part of the Sheraton collection. Which is worth the price difference?</p>
-          <span class="ghc-read">Read comparison →</span>
-        </div>
-      </a>
-
-      <a href="beachfront-vs-city-hotels-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="Da Nang beachfront hotel vs city hotel comparison" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Comparison &middot; Location &middot; 2026</div>
-          <h3 class="ghc-title">Beachfront vs City Hotels in Da Nang: Full Comparison</h3>
-          <p class="ghc-desc">Full comparison table: price, walkability, beach access, noise, and verdict by traveler type. Who should choose beachfront, who should choose city, and why the answer is not obvious.</p>
-          <span class="ghc-read">Read comparison &rarr;</span>
         </div>
       </a>
 
     </div>
+  </div>
+</section>
 
-    <div style="margin-top:3.5rem">
-      <p class="section-label" style="margin-bottom:.6rem">Hotel category guides</p>
-      <h2 class="section-heading" style="margin-bottom:1.5rem">Find the right hotel <em>for your trip</em></h2>
-      <div class="guide-hub-grid">
+<div class="gs-divider"></div>
 
-      <a href="best-family-resort-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1540541338537-55a5b72e9e29?w=500&h=160&fit=crop&q=75" alt="Family resort swimming pool Da Nang kids waterslide" loading="lazy" width="500" height="160">
+<!-- ═══════════════════════════════════════════════════════════
+     HOTELS & AREAS
+═══════════════════════════════════════════════════════════ -->
+<section id="hotels-areas" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">Accommodation</p>
+    <h2 class="gs-heading">Hotels <em>&amp; areas</em></h2>
+    <p class="gs-intro">Every major hotel category and area guide — from the best luxury resorts on My Khe to budget picks in the city centre. Start with the overview, then drill into your category.</p>
+    <div class="ghg">
+
+      <a href="best-hotels-in-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-36.jpg" alt="Da Nang My Khe Beach aerial view best hotels guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Category Guide · Family · 2026</div>
-          <h3 class="ghc-title">Best Family Resorts in Da Nang (2026)</h3>
-          <p class="ghc-desc">Five resorts ranked for families with children: kids clubs, waterparks, pool safety, beach access, and connecting rooms. Honest picks with clear verdicts by age group.</p>
+          <div class="ghc-badge coral">Start here</div>
+          <div class="ghc-cat">Definitive Guide · 2026</div>
+          <h3 class="ghc-title">Best Hotels in Da Nang</h3>
+          <p class="ghc-desc">Every top hotel ranked across luxury, beachfront, boutique, family, and budget. The complete overview.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="best-luxury-resort-couples-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=500&h=160&fit=crop&q=75" alt="Luxury resort couples infinity pool Da Nang sunset" loading="lazy" width="500" height="160">
+      <a href="luxury-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Luxury resort pool Da Nang" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Category Guide · Couples · Luxury · 2026</div>
-          <h3 class="ghc-title">Best Luxury Resorts for Couples in Da Nang</h3>
-          <p class="ghc-desc">Five resorts ranked for couples: private pool villas, spa access, romantic dining, and seclusion. Led by the InterContinental Sun Peninsula with honest trade-off notes.</p>
+          <div class="ghc-cat">Hotel Category · 2026</div>
+          <h3 class="ghc-title">Luxury Hotels in Da Nang</h3>
+          <p class="ghc-desc">InterContinental, Naman Retreat, Pullman, Premier Village — the full luxury shortlist with honest verdicts.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="best-beach-hotel-under-100-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="My Khe Beach Da Nang affordable hotel" loading="lazy" width="500" height="160">
+      <a href="family-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Da Nang family beach resort pools" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Budget Guide · Beach Hotels · 2026</div>
-          <h3 class="ghc-title">Best Da Nang Beach Hotels Under $100/Night</h3>
-          <p class="ghc-desc">Five honest picks on or near My Khe Beach under $100. What beach-adjacent actually means, when to book, and why A La Carte is the best value in the category.</p>
+          <div class="ghc-cat">Hotel Category · Families</div>
+          <h3 class="ghc-title">Best Family Hotels in Da Nang</h3>
+          <p class="ghc-desc">Pools, kids clubs, connecting rooms, and beachfront access — ranked for families with children of all ages.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-beach-hotels.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang beach hotels My Khe aerial" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Category · Beach</div>
+          <h3 class="ghc-title">Da Nang Beach Hotels</h3>
+          <p class="ghc-desc">True beachfront properties on My Khe and Non Nuoc — what "beach access" actually means in Da Nang.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-budget-hotels-in-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-08.jpg" alt="Budget hotel pool Da Nang beach" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Category · Budget</div>
+          <h3 class="ghc-title">Best Budget Hotels in Da Nang</h3>
+          <p class="ghc-desc">Honest picks under $50 — by beach, by area, and by what actually matters. No grim rooms, no false economy.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="boutique-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/boutique-hotels-da-nang-b64-02.webp" alt="Da Nang boutique hotel An Thuong neighbourhood" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Category · Boutique</div>
+          <h3 class="ghc-title">Boutique Hotels in Da Nang</h3>
+          <p class="ghc-desc">Small, characterful stays in An Thuong and My Khe — for travellers who don't want a resort experience.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-hotels-near-my-khe-beach.html" class="ghc">
+        <img class="ghc-img" src="images/hotels/my-khe-beach-da-nang.webp" alt="My Khe Beach Da Nang hotels aerial view" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · My Khe</div>
+          <h3 class="ghc-title">Best Hotels Near My Khe Beach</h3>
+          <p class="ghc-desc">The main beach strip ranked — true beachfront vs close-to-beach, and which end of the strip to choose.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-han-river-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-riverfront-hotels-4846dbff.webp" alt="Han River Da Nang hotels Dragon Bridge view" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · Han River</div>
+          <h3 class="ghc-title">Best Han River Hotels in Da Nang</h3>
+          <p class="ghc-desc">City-side hotels with river and Dragon Bridge views — right for business travellers and city explorers.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-hotels-an-thuong-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/boutique-hotels-da-nang-b64-02.webp" alt="An Thuong neighbourhood Da Nang hotels" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · An Thuong</div>
+          <h3 class="ghc-title">Best Hotels in An Thuong</h3>
+          <p class="ghc-desc">Da Nang's expat village — walking distance to the beach, best restaurant scene, bar street. The neighbourhood for independent travellers.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-quiet-areas-hotels.html" class="ghc">
+        <img class="ghc-img" src="images/hotels/son-tra-peninsula-da-nang.jpg" alt="Quiet areas Da Nang hotels Son Tra" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · Quiet Zones</div>
+          <h3 class="ghc-title">Quietest Areas to Stay in Da Nang</h3>
+          <p class="ghc-desc">Son Tra Peninsula, Non Nuoc, and the southern strip — what you sacrifice and gain by escaping the main tourist drag.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-areas-da-nang-families.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-7b719019.webp" alt="Da Nang family-friendly areas beach" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · Families</div>
+          <h3 class="ghc-title">Best Areas in Da Nang for Families</h3>
+          <p class="ghc-desc">Which part of My Khe has the safest beach, the best family restaurants, and the easiest logistics for kids.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-first-time-visitors-area-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-09.jpg" alt="Da Nang first time visitors area guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · First-Timers</div>
+          <h3 class="ghc-title">Da Nang for First-Timers: Where to Stay</h3>
+          <p class="ghc-desc">Area-by-area breakdown specifically for first visits — where the best trade-off between access, beach, and price sits.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SPECIAL HOTEL FEATURES
+═══════════════════════════════════════════════════════════ -->
+<section id="hotel-features" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Amenity guides</p>
+    <h2 class="gs-heading">Hotels with <em>specific features</em></h2>
+    <p class="gs-intro">Looking for a rooftop pool, lazy river, private beach, or kids club? These guides cut straight to the properties that actually deliver.</p>
+    <div class="ghg ghg-4">
+
+      <a href="da-nang-hotels-rooftop-pool.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-79e68188.jpg" alt="Da Nang rooftop pool hotels" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide</div>
+          <h3 class="ghc-title">Hotels with Rooftop Pools</h3>
+          <p class="ghc-desc">Ranked by view quality and pool size — not just "has a rooftop pool" but which ones are worth it.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hotels-infinity-pool.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Da Nang infinity pool hotels sea view" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide</div>
+          <h3 class="ghc-title">Hotels with Infinity Pools</h3>
+          <p class="ghc-desc">Cliff-edge and sea-view infinity pools — sorted by view quality and whether they actually face the right direction.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hotels-private-beach.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang hotels with private beach access" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide</div>
+          <h3 class="ghc-title">Hotels with Private Beach Access</h3>
+          <p class="ghc-desc">What "private beach" actually means in Vietnam — all beaches are public. Honest guide to managed beach sections.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="da-nang-hotels-with-lazy-river.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=160&fit=crop&q=75" alt="Lazy river pool at Da Nang resort waterpark" loading="lazy" width="500" height="160">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Da Nang hotels with lazy river pool" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide · Pools · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Lazy River (Honest Guide)</h3>
-          <p class="ghc-desc">Only the Hyatt Regency has a true lazy river in Da Nang. This guide explains the difference, lists waterpark hotels, and helps you pick the right pool setup for your trip.</p>
+          <div class="ghc-cat">Amenity Guide · Families</div>
+          <h3 class="ghc-title">Hotels with Lazy River</h3>
+          <p class="ghc-desc">A short list of Da Nang properties that actually have a lazy river — not just a long pool.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="da-nang-hotels-rooftop-pool.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&h=160&fit=crop&q=75" alt="Rooftop infinity pool Da Nang skyline view" loading="lazy" width="500" height="160">
+      <a href="da-nang-hotels-spa-packages.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Da Nang spa hotel packages" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide · Rooftop Pools · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Rooftop Pools (Ranked)</h3>
-          <p class="ghc-desc">Five hotels with genuine rooftop or high-rise pools ranked by view quality and what you actually get. A La Carte leads; IC Sun Peninsula is in a category of its own.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotels-near-airport.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=160&fit=crop&q=75" alt="Da Nang airport terminal with mountains in background" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide · Airport · 2026</div>
-          <h3 class="ghc-title">Hotels Near Da Nang Airport: What You Should Know</h3>
-          <p class="ghc-desc">Da Nang airport is 10–25 minutes from every hotel in the city. This guide explains why "near the airport" is near-meaningless here, and which areas to actually stay in.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-adults-only-hotels.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&h=160&fit=crop&q=75" alt="Adults-only spa resort pool Da Nang peaceful atmosphere" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Category Guide · Adults-Only · 2026</div>
-          <h3 class="ghc-title">Adults-Only Hotels in Da Nang (2026)</h3>
-          <p class="ghc-desc">TIA Wellness, Naman Retreat, Melia, and IC Sun Peninsula ranked for adults who want peace and quiet. The honest truth about what "adults-only" actually means here.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-honeymoon-hotels.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=500&h=160&fit=crop&q=75" alt="Romantic resort beach sunset Da Nang honeymoon" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Category Guide · Honeymoon · 2026</div>
-          <h3 class="ghc-title">Best Honeymoon Hotels in Da Nang (2026)</h3>
-          <p class="ghc-desc">InterContinental, Naman Retreat, TIA Wellness, Fusion Maia, and Premier Village ranked for honeymooners. The honest case for and against Da Nang as a honeymoon destination.</p>
+          <div class="ghc-cat">Amenity Guide · Spa</div>
+          <h3 class="ghc-title">Hotels with Spa Packages</h3>
+          <p class="ghc-desc">Which Da Nang resorts include spa credits or packages worth booking — and which are overpriced add-ons.</p>
           <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="da-nang-hotels-private-pool-villa.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=500&h=160&fit=crop&q=75" alt="Private pool villa Da Nang resort plunge pool garden" loading="lazy" width="500" height="160">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Da Nang private pool villa hotels" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide · Private Villas · 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Private Pool Villas</h3>
-          <p class="ghc-desc">Naman Retreat, Premier Village, InterContinental, TIA Wellness, and Fusion Maia compared. The important distinction between plunge pools and full swimming pools explained.</p>
+          <div class="ghc-cat">Amenity Guide · Luxury</div>
+          <h3 class="ghc-title">Hotels with Private Pool Villas</h3>
+          <p class="ghc-desc">Naman, InterContinental, Premier Village — the full rundown on Da Nang pool villa options and honest prices.</p>
           <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="best-resort-breakfast-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=500&h=160&fit=crop&q=75" alt="Luxury hotel breakfast buffet spread Da Nang resort" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide · Hotel Breakfast · 2026</div>
-          <h3 class="ghc-title">Best Hotel Breakfast in Da Nang — Worth the Upgrade?</h3>
-          <p class="ghc-desc">Which Da Nang hotels have genuinely exceptional breakfast spreads, when inclusion is worth it, and when you should skip it and eat local instead. Honest verdicts by property.</p>
-          <span class="ghc-read">Read guide →</span>
-        </div>
-      </a>
-
-      </div>
-    </div>
-
-    <div style="margin-top:3.5rem">
-      <p class="section-label" style="margin-bottom:.6rem">Area guides</p>
-      <h2 class="section-heading" style="margin-bottom:1.5rem">Where to stay in <em>each neighbourhood</em></h2>
-      <div class="guide-hub-grid">
-
-      <a href="best-hotels-near-my-khe-beach.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="My Khe Beach Da Nang morning light" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; My Khe &middot; 2026</div>
-          <h3 class="ghc-title">Best Hotels Near My Khe Beach, Da Nang</h3>
-          <p class="ghc-desc">Which stretch of My Khe to stay on, walkability to An Thuong restaurants, noise reality, and honest hotel picks by zone and budget.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="best-han-river-hotels-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=160&fit=crop&q=75" alt="Han River Da Nang bridge city skyline at night" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; Han River &middot; 2026</div>
-          <h3 class="ghc-title">Best Han River Hotels in Da Nang</h3>
-          <p class="ghc-desc">Da Nang's most walkable area. Dragon Bridge, night market, Con Market - all on foot. The honest guide to Han River hotels vs beach hotels, with a full comparison table.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="best-areas-da-nang-families.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1540541338537-55a5b72e9e29?w=500&h=160&fit=crop&q=75" alt="Family resort pool Da Nang children waterpark" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; Families &middot; 2026</div>
-          <h3 class="ghc-title">Best Areas in Da Nang for Families</h3>
-          <p class="ghc-desc">Non Nuoc vs My Khe vs Han River for families. Age-based recommendations table, beach safety notes, and why city center hotels are usually the wrong call for families with young kids.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-first-time-visitors-area-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&h=160&fit=crop&q=75" alt="Da Nang city beach ocean view first time visitor" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; First-Timers &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang for First-Time Visitors: Where to Stay</h3>
-          <p class="ghc-desc">The direct answer: central My Khe. Why not Non Nuoc on your first trip, the 3-day framework, and the common area mistakes first-timers make.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="best-hotels-an-thuong-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&h=160&fit=crop&q=75" alt="An Thuong restaurant street Da Nang expat area" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; An Thuong &middot; 2026</div>
-          <h3 class="ghc-title">Best Hotels in An Thuong, Da Nang</h3>
-          <p class="ghc-desc">Da Nang's expat and tourist restaurant strip. Honest guide to the area's noise reality, boutique hotel picks, and why An Thuong suits some travelers better than resort zones.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-quiet-areas-hotels.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=500&h=160&fit=crop&q=75" alt="Quiet beach Da Nang peaceful resort no crowds" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Area Guide &middot; Quiet Zones &middot; 2026</div>
-          <h3 class="ghc-title">Quietest Areas to Stay in Da Nang</h3>
-          <p class="ghc-desc">5 zones ranked by noise level: Non Nuoc resort end, Son Tra, inland An Thuong, and city center compared. DIFF festival noise warning and which months to avoid.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      </div>
-    </div>
-
-    <div style="margin-top:3.5rem">
-      <p class="section-label" style="margin-bottom:.6rem">Facility guides</p>
-      <h2 class="section-heading" style="margin-bottom:1.5rem">Find hotels with <em>the right amenities</em></h2>
-      <div class="guide-hub-grid">
-
-      <a href="da-nang-hotels-infinity-pool.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&h=160&fit=crop&q=75" alt="Infinity pool Da Nang ocean view cliff" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide &middot; Infinity Pools &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Infinity Pools (2026)</h3>
-          <p class="ghc-desc">True infinity pools vs hotels that just use the term in marketing. InterContinental, A La Carte, Naman Retreat, and Hyatt Regency ranked honestly.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotels-private-beach.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="Private beach resort Da Nang sun loungers" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide &middot; Private Beach &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Private Beach Access</h3>
-          <p class="ghc-desc">What "private beach" actually means in Vietnam - all beaches are public by law. Honest guide to managed beach sections, sun lounger setups, and which hotels do it best.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotels-spa-packages.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&h=160&fit=crop&q=75" alt="Spa resort pool Da Nang relaxation wellness" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide &middot; Spa &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Spa Packages (2026)</h3>
-          <p class="ghc-desc">Three spa models compared: all-inclusive wellness resorts (TIA, Fusion Maia), dedicated spa programs (Naman, IC), and hotels with good day spas. Honest costs and what's included.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotels-connecting-rooms.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1540541338537-55a5b72e9e29?w=500&h=160&fit=crop&q=75" alt="Family hotel connecting rooms Da Nang resort" loading="lazy" width="500" height="160">
-        <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide &middot; Family &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Connecting Rooms</h3>
-          <p class="ghc-desc">Which hotels reliably configure connecting rooms, the 4-step booking process to maximize success, peak season warnings, and villa alternatives for groups who need space.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
         </div>
       </a>
 
       <a href="da-nang-hotels-kids-club.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1540541338537-55a5b72e9e29?w=500&h=160&fit=crop&q=75" alt="Kids club pool resort Da Nang children activity" loading="lazy" width="500" height="160">
+        <img class="ghc-img" src="images/family-hotels-da-nang-7b719019.webp" alt="Da Nang hotels with kids clubs" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Facilities Guide &middot; Kids Clubs &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Hotels with Kids Clubs (2026)</h3>
-          <p class="ghc-desc">5 hotels ranked: Camp Hyatt leads, Sheraton Grand has the best mix of kids club + waterpark, Mikazuki is the pure waterpark option. Honest comparison of what Da Nang kids clubs actually deliver.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Amenity Guide · Families</div>
+          <h3 class="ghc-title">Hotels with Kids Clubs</h3>
+          <p class="ghc-desc">Which properties have a real kids club with programming — not just a room with toys.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      </div>
+      <a href="da-nang-hotels-connecting-rooms.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Da Nang hotels with connecting rooms families" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide · Families</div>
+          <h3 class="ghc-title">Hotels with Connecting Rooms</h3>
+          <p class="ghc-desc">For families that need two rooms with a shared door — the properties that actually offer this in Da Nang.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
     </div>
-
-    <div style="margin-top:3.5rem">
-      <p class="section-label" style="margin-bottom:.6rem">Hoi An guides</p>
-      <h2 class="section-heading" style="margin-bottom:1.5rem">Plan your <em>Hoi An stay</em></h2>
-      <div class="guide-hub-grid">
-
-        <a href="hoi-an.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-39.jpg" alt="Hoi An Ancient Town Old Town street cyclos and silk lanterns" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Hoi An Hub &middot; 2026</div>
-            <h3 class="ghc-title">Hoi An Travel Guide &mdash; Start Here</h3>
-            <p class="ghc-desc">The complete hub for Hoi An: where to stay, how to get there, best beaches, Old Town tips, and all our Hoi An guides in one place.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="where-to-stay-in-hoi-an.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-40.jpg" alt="Women in ao dai with bicycle outside Hoi An Old Town lantern shop" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Neighbourhood Guide &middot; Hoi An</div>
-            <h3 class="ghc-title">Where to Stay in Hoi An</h3>
-            <p class="ghc-desc">Ancient Town, Riverside, An Bang Beach, Cua Dai, and countryside villas compared. Which area suits your trip?</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="best-hotels-in-hoi-an.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-41.jpg" alt="Hoi An Thu Bon river aerial night view with lantern boats best hotels 2026" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Hotel Ranking &middot; 2026</div>
-            <h3 class="ghc-title">Best Hotels in Hoi An</h3>
-            <p class="ghc-desc">The definitive ranked list, top boutiques, beach resorts, heritage hotels, and best-value guesthouses across all price points.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="best-value-hotels-hoi-an.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-33.jpg" alt="Hoi An Thu Bon river boats best value hotels guide" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Value Guide &middot; Hoi An</div>
-            <h3 class="ghc-title">Best Value Hotels in Hoi An</h3>
-            <p class="ghc-desc">Where your money actually goes furthest in Hoi An &mdash; 8 hotels compared across quality, location, and price. No inflated picks.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="hoi-an-old-town-hotels.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-42.jpg" alt="Hoi An silk lantern shop ao dai woman Old Town hotels guide" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Old Town Hotels &middot; Hoi An</div>
-            <h3 class="ghc-title">Old Town Hotels: How Close is Close Enough?</h3>
-            <p class="ghc-desc">Hotels within 5, 10, 15, and 20 minutes of the Ancient Town mapped and compared. 8 properties reviewed honestly.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="an-bang-beach-hotels.html" class="ghc">
-          <img class="ghc-img" src="images/guides-b64-43.jpg" alt="Woman in ao dai holding lanterns on Hoi An river at sunset" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Beach Guide &middot; Hoi An</div>
-            <h3 class="ghc-title">An Bang Beach Hotels &mdash; Hoi An's Best Beach</h3>
-            <p class="ghc-desc">Is An Bang worth staying at over the Old Town? Beach conditions, hotel options, and transport reality &mdash; honestly covered.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="da-nang-airport-to-hoi-an.html" class="ghc">
-          <img class="ghc-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=160&fit=crop&q=75" alt="Da Nang Airport transport to Hoi An" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Transport Guide &middot; 2026</div>
-            <h3 class="ghc-title">Da Nang Airport to Hoi An</h3>
-            <p class="ghc-desc">Grab, private car, metered taxi, and shared shuttle compared. Real costs, journey times, and when each option makes sense.</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-        <a href="is-hoi-an-cheaper-than-da-nang.html" class="ghc">
-          <img class="ghc-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&h=160&fit=crop&q=75" alt="Hoi An vs Da Nang cost comparison" width="500" height="160" loading="lazy">
-          <div class="ghc-body">
-            <div class="ghc-cat">Cost Comparison &middot; 2026</div>
-            <h3 class="ghc-title">Is Hoi An Cheaper Than Da Nang?</h3>
-            <p class="ghc-desc">Hotels, food, transport, beach access, and daily spend compared honestly. Which city is actually better value in 2026?</p>
-            <span class="ghc-read">Read guide &rarr;</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-
   </div>
 </section>
 
+<div class="gs-divider"></div>
 
-<!-- Phase 4 Planning & Trip Guides Section -->
-<section style="background:var(--white);padding:3rem 0">
-  <div style="max-width:1160px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)">
-    <p class="section-label" style="margin-bottom:.6rem">Trip planning guides</p>
-    <h2 class="section-heading" style="margin-bottom:1.5rem">Plan your <em>Da Nang trip</em></h2>
-    <div class="guide-hub-grid">
+<!-- ═══════════════════════════════════════════════════════════
+     TRIP PLANNING
+═══════════════════════════════════════════════════════════ -->
+<section id="trip-planning" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">Before you book</p>
+    <h2 class="gs-heading">Trip <em>planning</em></h2>
+    <p class="gs-intro">Budget, timing, weather, packing, and money. Everything you need to plan the logistics before you arrive.</p>
+    <div class="ghg">
 
-      <a href="da-nang-first-time-travel-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=160&fit=crop&q=75" alt="Da Nang My Khe Beach first-time visitor guide 2026" width="500" height="160" loading="lazy">
+      <a href="da-nang-budget-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-08.jpg" alt="Street food pho bowl Da Nang budget guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">First-Timer Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang First-Time Travel Guide</h3>
-          <p class="ghc-desc">Everything a first-timer needs: when to go, where to stay, how to get around, what to eat, and the most common mistakes to avoid.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Budget Guide · 2026 Prices</div>
+          <h3 class="ghc-title">How Much Does a Trip to Da Nang Cost?</h3>
+          <p class="ghc-desc">Real daily budgets for backpackers ($35–50), mid-range ($80–150), and luxury ($200–500+). 7-night sample costs included.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="how-many-days-in-da-nang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=160&fit=crop&q=75" alt="Da Nang panoramic view how many days trip planning" width="500" height="160" loading="lazy">
+      <a href="da-nang-hotel-prices-by-month.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-35.jpg" alt="Da Nang hotel price index by month guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Trip Planning &middot; 2026</div>
-          <h3 class="ghc-title">How Many Days in Da Nang?</h3>
-          <p class="ghc-desc">Honest breakdown of what you can do in 2, 3, 5, and 7 days. Includes Hoi An day trip logistics and which days to dedicate to Ba Na Hills.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Price Index · 2026</div>
+          <h3 class="ghc-title">Da Nang Hotel Prices by Month</h3>
+          <p class="ghc-desc">Month-by-month hotel pricing, peak season peaks, low season deals, and the best months to book for value.</p>
+          <span class="ghc-read">View price index →</span>
         </div>
       </a>
 
-      <a href="da-nang-3-day-itinerary.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&h=160&fit=crop&q=75" alt="Da Nang Dragon Bridge night 3-day itinerary" width="500" height="160" loading="lazy">
+      <a href="da-nang-weather-by-month.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-18.jpg" alt="Da Nang city skyline aerial view weather guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Itinerary &middot; 2026</div>
-          <h3 class="ghc-title">3-Day Da Nang Itinerary (2026)</h3>
-          <p class="ghc-desc">A locally-written 3-day plan covering My Khe Beach, Marble Mountains, Son Tra, Dragon Bridge, and a Hoi An day trip — timed and practical.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-5-day-itinerary.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1536599018102-9f803c140091?w=500&h=160&fit=crop&q=75" alt="Ba Na Hills Golden Bridge Da Nang 5-day itinerary" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Itinerary &middot; 2026</div>
-          <h3 class="ghc-title">5-Day Da Nang Itinerary (2026)</h3>
-          <p class="ghc-desc">Five full days covering the beach, Ba Na Hills, Hoi An, Hue day trip, and Son Tra Peninsula. Day-by-day schedule with Grab times and costs.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
-        </div>
-      </a>
-
-      <a href="da-nang-tourist-mistakes.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500&h=160&fit=crop&q=75" alt="Da Nang Han River tourist mistakes to avoid guide" width="500" height="160" loading="lazy">
-        <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Tourist Mistakes to Avoid</h3>
-          <p class="ghc-desc">15 mistakes most first-timers make — from booking the wrong zone to over-tipping to visiting Ba Na Hills on a weekend. Local knowledge that saves real money.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Weather Data · All 12 Months</div>
+          <h3 class="ghc-title">Da Nang Weather by Month</h3>
+          <p class="ghc-desc">Temperature, rainfall, sea conditions, and humidity for every month. Accurate VNMHA data, no fluff.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="rainy-season-da-nang-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1527482937786-6608f6e14c15?w=500&h=160&fit=crop&q=75" alt="Rainy season monsoon weather Da Nang Vietnam October November" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-00.jpg" alt="Da Nang rainy season guide October November" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Weather Guide &middot; 2026</div>
-          <h3 class="ghc-title">Rainy Season in Da Nang — Honest Guide</h3>
-          <p class="ghc-desc">What October–November actually looks like. Which activities still work, which hotels give the best wet-season discounts, and whether you should cancel.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Seasonal Guide</div>
+          <h3 class="ghc-title">Rainy Season in Da Nang</h3>
+          <p class="ghc-desc">October and November are wet — but how wet, what it actually means for your trip, and when to avoid vs when to go anyway.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="is-da-nang-walkable.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=500&h=160&fit=crop&q=75" alt="Da Nang beach promenade pedestrian walkability guide" width="500" height="160" loading="lazy">
+      <a href="what-to-pack-for-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-02.jpg" alt="Da Nang packing guide clothes and essentials" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide &middot; 2026</div>
-          <h3 class="ghc-title">Is Da Nang Walkable?</h3>
-          <p class="ghc-desc">Honest zone-by-zone walkability scores. My Khe Beach strip is very walkable; the city is not. What you actually need Grab for and what you can cover on foot.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Practical Guide</div>
+          <h3 class="ghc-title">What to Pack for Da Nang</h3>
+          <p class="ghc-desc">A no-nonsense packing list by season — beach gear, temple dress code, and what you can easily buy there.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
-      <a href="da-nang-with-kids-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&h=160&fit=crop&q=75" alt="Family beach holiday Da Nang with kids waterpark resort" width="500" height="160" loading="lazy">
+      <a href="da-nang-money-exchange-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-21.jpg" alt="Da Nang money exchange currency guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Family Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang with Kids — Complete Family Guide</h3>
-          <p class="ghc-desc">Ba Na Hills, Mikazuki waterpark, beach safety, kid-friendly restaurants, and the logistics of doing Da Nang with children of different ages.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Practical Guide · Finance</div>
+          <h3 class="ghc-title">Da Nang Money &amp; Currency Exchange</h3>
+          <p class="ghc-desc">Where to exchange currency, ATM fees, best rates, and whether to bring USD or exchange on arrival.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
     </div>
+  </div>
+</section>
 
-    <p class="section-label" style="margin-bottom:.6rem;margin-top:3rem">Transport &amp; logistics</p>
-    <h2 class="section-heading" style="margin-bottom:1.5rem">Getting around <em>Da Nang</em></h2>
-    <div class="guide-hub-grid">
+<div class="gs-divider"></div>
 
-      <a href="da-nang-grab-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&h=160&fit=crop&q=75" alt="Grab motorbike taxi Vietnam Da Nang transport guide" width="500" height="160" loading="lazy">
+<!-- ═══════════════════════════════════════════════════════════
+     ITINERARIES
+═══════════════════════════════════════════════════════════ -->
+<section id="itineraries" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Day-by-day plans</p>
+    <h2 class="gs-heading"><em>Itineraries</em> for every trip length</h2>
+    <p class="gs-intro">Structured day-by-day plans covering beach time, Ba Na Hills, Marble Mountains, Son Tra, and Hoi An. Pick the length that fits your trip.</p>
+    <div class="ghg ghg-4">
+
+      <a href="da-nang-3-day-itinerary.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-19.jpg" alt="Da Nang 3 day itinerary Han River aerial" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Transport Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Grab Guide — Everything You Need to Know</h3>
-          <p class="ghc-desc">How Grab works in Da Nang, GrabCar vs GrabBike, common routes and prices, airport pickup zones, and tips for avoiding surge pricing.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Itinerary · 3 Days</div>
+          <h3 class="ghc-title">3-Day Da Nang Itinerary</h3>
+          <p class="ghc-desc">The essentials in 3 days — Marble Mountains, My Khe Beach, Dragon Bridge, and a Hoi An half-day.</p>
+          <span class="ghc-read">Read itinerary →</span>
         </div>
       </a>
 
-      <a href="da-nang-sim-card-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1512428813834-c294be4c7e42?w=500&h=160&fit=crop&q=75" alt="SIM card phone Vietnam Da Nang travel data guide" width="500" height="160" loading="lazy">
+      <a href="da-nang-5-day-itinerary.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-03.jpg" alt="Da Nang 5 day itinerary things to do" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Practical Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang SIM Card Guide 2026</h3>
-          <p class="ghc-desc">Viettel vs Mobifone vs Vietnamobile, where to buy, airport vs city prices, eSIM options, and how to get data working before you land.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Itinerary · 5 Days</div>
+          <h3 class="ghc-title">5-Day Da Nang Itinerary</h3>
+          <p class="ghc-desc">The balanced itinerary — beach days, Ba Na Hills, Hoi An full day, Son Tra, and some breathing room.</p>
+          <span class="ghc-read">Read itinerary →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-7-day-itinerary.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-12.jpg" alt="Marble Mountains cave Da Nang 7 day itinerary" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Itinerary · 7 Days</div>
+          <h3 class="ghc-title">7 Days in Da Nang &amp; Hoi An</h3>
+          <p class="ghc-desc">Full week with Hue day trip, complete Hoi An visit, two beach days, and structured morning/evening plans.</p>
+          <span class="ghc-read">Read itinerary →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-itinerary.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-04.jpg" alt="Ba Na Hills Golden Bridge Da Nang itinerary" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Activity Guide · 2026</div>
+          <h3 class="ghc-title">Things to Do in Da Nang</h3>
+          <p class="ghc-desc">Marble Mountains, Ba Na Hills, Son Tra, My Khe, Dragon Bridge, Hoi An day trip — all the key activities ranked.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FAMILIES
+═══════════════════════════════════════════════════════════ -->
+<section id="families" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">Travelling with children</p>
+    <h2 class="gs-heading">Da Nang with <em>families</em></h2>
+    <p class="gs-intro">Hotels with kids clubs, connecting rooms, lazy rivers, and the best beach sections for young children. All written for parents, not just travellers.</p>
+    <div class="ghg">
+
+      <a href="da-nang-with-kids-guide.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Da Nang with kids family guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-badge coral">Start here</div>
+          <div class="ghc-cat">Complete Guide · Families</div>
+          <h3 class="ghc-title">Da Nang with Kids — Complete Family Guide</h3>
+          <p class="ghc-desc">Beach safety, family hotel picks, activities for all ages, Ba Na Hills logistics, and what to skip with young children.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="family-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-7b719019.webp" alt="Best family hotels Da Nang beach resorts" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Guide · Families</div>
+          <h3 class="ghc-title">Best Family Hotels in Da Nang</h3>
+          <p class="ghc-desc">Resorts ranked specifically for families — pools, kids clubs, beach access, connecting rooms, and honest price-vs-value assessments.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-with-teenagers.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-22.jpg" alt="Da Nang activities teenagers nightlife" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Guide · Teenagers</div>
+          <h3 class="ghc-title">Da Nang with Teenagers</h3>
+          <p class="ghc-desc">Activities, hotels, and honest advice for trips with teens — what they'll actually enjoy vs what bores them.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hotels-kids-club.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Da Nang hotels with kids clubs" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide · Families</div>
+          <h3 class="ghc-title">Hotels with Kids Clubs</h3>
+          <p class="ghc-desc">Which properties have a real kids club with programming — not just a room with toys and a television.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hotels-connecting-rooms.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-7b719019.webp" alt="Da Nang hotels connecting rooms families" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Amenity Guide · Families</div>
+          <h3 class="ghc-title">Hotels with Connecting Rooms</h3>
+          <p class="ghc-desc">Da Nang properties that actually offer connecting rooms — with honest notes on quality and availability.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-areas-da-nang-families.html" class="ghc">
+        <img class="ghc-img" src="images/family-hotels-da-nang-74b58637.webp" alt="Best areas Da Nang for families" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · Families</div>
+          <h3 class="ghc-title">Best Areas in Da Nang for Families</h3>
+          <p class="ghc-desc">Which part of My Khe has the safest beach, best family restaurants, and easiest logistics with kids.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOD & NIGHTLIFE
+═══════════════════════════════════════════════════════════ -->
+<section id="food-nightlife" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Eat, drink, explore</p>
+    <h2 class="gs-heading">Food <em>&amp; nightlife</em></h2>
+    <p class="gs-intro">Michelin-starred spots, mì Quảng street food, craft beer bars, rooftop cocktails, and the Dragon Bridge fire show. Da Nang's food and after-dark scene ranked honestly.</p>
+    <div class="ghg">
+
+      <a href="da-nang-food-guide.html" class="ghc">
+        <img class="ghc-img" src="images/dining-dining-00-00.webp" alt="Da Nang food guide Vietnamese dishes" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-badge coral">Start here</div>
+          <div class="ghc-cat">Food Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang Food Guide</h3>
+          <p class="ghc-desc">What to eat, where to eat it, and which dishes are worth tracking down — mì Quảng, bún chả cá, bánh mì, and more.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="dining.html" class="ghc">
+        <img class="ghc-img" src="images/dining-dining-03-03.jpg" alt="Da Nang dining Michelin restaurants" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">MICHELIN Guide · 43 Restaurants</div>
+          <h3 class="ghc-title">Da Nang Dining Guide</h3>
+          <p class="ghc-desc">One MICHELIN Star, 20 Bib Gourmand, and the best spots by neighbourhood — from fine dining to street food.</p>
+          <span class="ghc-read">Explore dining →</span>
+        </div>
+      </a>
+
+      <a href="best-cafes-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-10.jpg" alt="Vietnamese street food café Da Nang best cafes guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Café Guide · 2026</div>
+          <h3 class="ghc-title">Best Cafes in Da Nang</h3>
+          <p class="ghc-desc">Specialty roasters, work-friendly spots, rooftop views, and beach cafes — with Wi-Fi ratings and a Vietnamese coffee primer.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-bars-in-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-22.jpg" alt="Best bars Da Nang rooftop cocktails nightlife" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Nightlife Guide · 25 Bars</div>
+          <h3 class="ghc-title">Best Bars in Da Nang</h3>
+          <p class="ghc-desc">Rooftop bars, craft beer taprooms, cocktail lounges, live music pubs, and 7 hidden speakeasies ranked by category.</p>
+          <span class="ghc-read">Explore bars →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-nightlife-guide.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-riverfront-hotels-4846dbff.webp" alt="Da Nang Dragon Bridge at night Han River" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">After-Dark Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang Nightlife Guide</h3>
+          <p class="ghc-desc">Dragon Bridge fire show, rooftop bars, hidden speakeasies, live music, and how to get home safely.</p>
+          <span class="ghc-read">Read nightlife guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-hoi-an-markets-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-13.jpg" alt="Vietnamese street food market Da Nang Hoi An" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Markets Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang &amp; Hoi An Markets Guide</h3>
+          <p class="ghc-desc">Han vs Con Market, Hoi An Night Market, bargaining tips, food hygiene, and which market suits your travel style.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BEACHES & WEATHER
+═══════════════════════════════════════════════════════════ -->
+<section id="beaches-weather" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">Sun, sea, and seasons</p>
+    <h2 class="gs-heading">Beaches <em>&amp; weather</em></h2>
+    <p class="gs-intro">My Khe, Non Nuoc, An Bang — the beaches compared. Plus the full weather picture for every month so you can plan around the rains.</p>
+    <div class="ghg ghg-4">
+
+      <a href="my-khe-beach-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/hotels/my-khe-beach-da-nang.webp" alt="My Khe Beach Da Nang complete local guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Beach Guide · My Khe</div>
+          <h3 class="ghc-title">My Khe Beach: Complete Local Guide</h3>
+          <p class="ghc-desc">The main beach strip — safe swimming zones, beach clubs, flag system, best sections, and when to visit.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="non-nuoc-beach-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Non Nuoc Beach Da Nang quieter southern beach" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Beach Guide · Non Nuoc</div>
+          <h3 class="ghc-title">Non Nuoc Beach: Complete Local Guide</h3>
+          <p class="ghc-desc">Da Nang's quieter southern beach near the Marble Mountains — less crowded than My Khe, with a different vibe.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-time-to-visit-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-00.jpg" alt="Best time to visit Da Nang weather guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Climate Guide · 2026</div>
+          <h3 class="ghc-title">Best Time to Visit Da Nang</h3>
+          <p class="ghc-desc">March–September for beach weather. October–November are the rains. Month-by-month breakdown with crowd levels.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-weather-by-month.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-18.jpg" alt="Da Nang weather by month temperature rainfall data" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Weather Data · 12 Months</div>
+          <h3 class="ghc-title">Da Nang Weather by Month</h3>
+          <p class="ghc-desc">Temperature, rainfall, sea conditions, and humidity for every month — accurate VNMHA data, no fluff.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TRANSPORTATION
+═══════════════════════════════════════════════════════════ -->
+<section id="transportation" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Getting around</p>
+    <h2 class="gs-heading"><em>Transportation</em> &amp; logistics</h2>
+    <p class="gs-intro">Airport transfers, Grab pricing, getting to Hoi An, and the SIM card you need. All the logistics so you're not figuring it out on arrival.</p>
+    <div class="ghg">
+
+      <a href="da-nang-airport-guide.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-airport-guide-0f06b247.jpg" alt="Da Nang International Airport guide DAD arrivals" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-badge coral">Read first</div>
+          <div class="ghc-cat">Airport Guide · DAD · 2026</div>
+          <h3 class="ghc-title">Da Nang Airport Guide (DAD)</h3>
+          <p class="ghc-desc">Arrivals, Grab vs taxi pricing, SIM cards, currency exchange, lounges, and transport times to My Khe, Son Tra, and Hoi An.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-transport-guide.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-transport-guide-082e11be.jpg" alt="Da Nang transport guide Grab motorbike" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Transport Guide · 2026</div>
+          <h3 class="ghc-title">Da Nang Transport Guide</h3>
+          <p class="ghc-desc">Grab pricing, motorbike hire, day trips to Hoi An and Hue, and when to rent vs ride-hail. Current pricing ranges.</p>
+          <span class="ghc-read">Explore transport →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-grab-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-02.jpg" alt="Grab driver Da Nang motorbike transport guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Practical Guide · Grab</div>
+          <h3 class="ghc-title">Da Nang Grab Guide</h3>
+          <p class="ghc-desc">How Grab works in Da Nang, fare estimates, airport pickup logistics, and whether GrabBike or GrabCar makes sense for your trip.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="da-nang-airport-to-my-khe.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&h=160&fit=crop&q=75" alt="Da Nang airport arrivals terminal transport to My Khe Beach" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/da-nang-airport-guide-0f06b247.jpg" alt="Da Nang airport to My Khe Beach transfer guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Transport Guide &middot; 2026</div>
+          <div class="ghc-cat">Transfer Guide · My Khe</div>
           <h3 class="ghc-title">Da Nang Airport to My Khe Beach</h3>
-          <p class="ghc-desc">All options for getting from Da Nang Airport (DAD) to My Khe Beach — Grab, taxi, bus. Journey times, costs, and which option makes sense for your situation.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <p class="ghc-desc">Grab, taxi, or hotel pickup? Cost, time, and best options for getting from DAD to My Khe Beach.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
       <a href="da-nang-airport-to-hoi-an.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=500&h=160&fit=crop&q=75" alt="Road trip from Da Nang airport to Hoi An Ancient Town transport" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/best-hotels-in-hoi-an-e25abed6.jpg" alt="Da Nang airport to Hoi An transfer guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Transport Guide &middot; 2026</div>
+          <div class="ghc-cat">Transfer Guide · Hoi An</div>
           <h3 class="ghc-title">Da Nang Airport to Hoi An</h3>
-          <p class="ghc-desc">Grab, private car, metered taxi, and shared shuttle compared. Real costs, journey times, and when each option makes sense.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <p class="ghc-desc">Private transfer vs Grab vs shared van — the real cost and time comparison for getting to Hoi An from DAD.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-sim-card-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-21.jpg" alt="Da Nang SIM card guide Viettel Vinaphone" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Practical Guide · Connectivity</div>
+          <h3 class="ghc-title">Da Nang SIM Card Guide 2026</h3>
+          <p class="ghc-desc">Which SIM to buy at the airport, Viettel vs Vinaphone vs Vietnamobile, costs, and how to set it up.</p>
+          <span class="ghc-read">Read guide →</span>
         </div>
       </a>
 
     </div>
+  </div>
+</section>
 
-    <p class="section-label" style="margin-bottom:.6rem;margin-top:3rem">Destination comparisons</p>
-    <h2 class="section-heading" style="margin-bottom:1.5rem">Da Nang <em>vs the alternatives</em></h2>
-    <div class="guide-hub-grid">
+<div class="gs-divider"></div>
 
-      <a href="da-nang-vs-phuket.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=500&h=160&fit=crop&q=75" alt="Phuket vs Da Nang beach comparison Thailand Vietnam" width="500" height="160" loading="lazy">
+<!-- ═══════════════════════════════════════════════════════════
+     HOTEL COMPARISONS
+═══════════════════════════════════════════════════════════ -->
+<section id="hotel-comparisons" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">Head-to-head hotel decisions</p>
+    <h2 class="gs-heading">Hotel <em>comparisons</em></h2>
+    <p class="gs-intro">Decided between two resorts? These head-to-head guides give a clear verdict on which hotel wins for each type of traveller — no hedging.</p>
+    <div class="ghg">
+
+      <a href="hyatt-vs-marriott-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Hyatt Regency vs Marriott Resort Da Nang comparison" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Destination Comparison &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang vs Phuket — Which Should You Choose?</h3>
-          <p class="ghc-desc">Beach quality, hotel value, costs, nightlife, and day trip options honestly compared. Which wins for your specific trip?</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Hotel Comparison</div>
+          <h3 class="ghc-title">Hyatt Regency vs Marriott Resort</h3>
+          <p class="ghc-desc">Da Nang's two most-compared My Khe resorts — the honest verdict on pool, beach, rooms, and value.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
-      <a href="da-nang-vs-bali.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&h=160&fit=crop&q=75" alt="Bali vs Da Nang tropical beach comparison Indonesia Vietnam" width="500" height="160" loading="lazy">
+      <a href="intercontinental-vs-hyatt-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="InterContinental vs Hyatt Regency Da Nang comparison" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Destination Comparison &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang vs Bali — Honest Comparison</h3>
-          <p class="ghc-desc">Costs, beach quality, hotel value, culture, crowds, and food compared. Who wins depends on what you're optimizing for.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Hotel Comparison · Luxury</div>
+          <h3 class="ghc-title">InterContinental vs Hyatt Regency</h3>
+          <p class="ghc-desc">Son Tra clifftop vs My Khe beachfront — two very different luxury experiences compared directly.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
+
+      <a href="pullman-vs-sheraton-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-79e68188.jpg" alt="Pullman vs Sheraton Grand Da Nang comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison</div>
+          <h3 class="ghc-title">Pullman vs Sheraton Grand Da Nang</h3>
+          <p class="ghc-desc">Both on My Khe, both 5-star — the key differences in room quality, pool size, and beach setup.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="marriott-vs-sheraton-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Marriott vs Sheraton Grand Da Nang comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison</div>
+          <h3 class="ghc-title">Marriott Resort vs Sheraton Grand</h3>
+          <p class="ghc-desc">Two 5-stars on the same beach strip, both Marriott brands — what actually differentiates them.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="melia-vs-hyatt-regency-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Melia Da Nang vs Hyatt Regency comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison</div>
+          <h3 class="ghc-title">Melia Da Nang vs Hyatt Regency</h3>
+          <p class="ghc-desc">Non Nuoc vs My Khe — which resort location suits your trip better, and which hotel wins overall.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="tia-wellness-vs-naman-retreat-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="TIA Wellness vs Naman Retreat Da Nang wellness comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison · Wellness</div>
+          <h3 class="ghc-title">TIA Wellness vs Naman Retreat</h3>
+          <p class="ghc-desc">Da Nang's two premium wellness resorts — adults-only seclusion vs family-friendly nature. Which fits your trip.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="furama-vs-pullman-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-79e68188.jpg" alt="Furama Resort vs Pullman Da Nang comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison</div>
+          <h3 class="ghc-title">Furama Resort vs Pullman Da Nang</h3>
+          <p class="ghc-desc">An established resort that dominated Da Nang for 20 years vs the newer upstart. Which is better in 2026.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="novotel-vs-hilton-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-riverfront-hotels-4e319610.jpg" alt="Novotel Da Nang vs Hilton Da Nang comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Comparison · Han River</div>
+          <h3 class="ghc-title">Novotel Da Nang vs Hilton Da Nang</h3>
+          <p class="ghc-desc">Two mid-upper options on the Han River — city-side vs beach-adjacent, and which one represents better value.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="beachfront-vs-city-hotels-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Beachfront vs city hotels Da Nang comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Category Comparison</div>
+          <h3 class="ghc-title">Beachfront vs City Hotels in Da Nang</h3>
+          <p class="ghc-desc">The full trade-off: beach access and pool views vs city convenience and Han River dining. Which is right for your trip.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DESTINATION COMPARISONS
+═══════════════════════════════════════════════════════════ -->
+<section id="destination-comparisons" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">Da Nang vs the alternatives</p>
+    <h2 class="gs-heading">Destination <em>comparisons</em></h2>
+    <p class="gs-intro">Deciding between Da Nang and another destination? These guides compare directly across beaches, cost, hotels, food, and nightlife — with a clear verdict for each traveller type.</p>
+    <div class="ghg ghg-4">
 
       <a href="da-nang-vs-hoi-an.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=160&fit=crop&q=75" alt="Hoi An Ancient Town lanterns versus Da Nang beach where to stay" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-06.jpg" alt="Da Nang vs Hoi An comparison guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">City Comparison &middot; Vietnam &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang vs Hoi An — Where Should You Stay?</h3>
-          <p class="ghc-desc">The definitive comparison. Beach access, hotel value, crowd levels, day trip logistics. Most people should stay in Da Nang and day-trip Hoi An.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Destination Comparison · Vietnam</div>
+          <h3 class="ghc-title">Da Nang vs Hoi An</h3>
+          <p class="ghc-desc">8-category comparison — beach, price, walkability, food, nightlife, families, couples, and digital nomads. Clear verdicts.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
       <a href="da-nang-vs-nha-trang.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=160&fit=crop&q=75" alt="Vietnam beach Da Nang vs Nha Trang comparison" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-16.jpg" alt="Da Nang vs Nha Trang Vietnam beach destinations" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">City Comparison &middot; Vietnam &middot; 2026</div>
+          <div class="ghc-cat">Destination Comparison · Vietnam</div>
           <h3 class="ghc-title">Da Nang vs Nha Trang</h3>
-          <p class="ghc-desc">Two of Vietnam's main beach cities compared on safety, hotel quality, beaches, food, and value. Da Nang wins on almost every metric.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <p class="ghc-desc">Vietnam's two major beach cities compared on resorts, beaches, cost, and who each destination suits best.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
       <a href="da-nang-vs-phu-quoc.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1586016413664-864c0dd76f53?w=500&h=160&fit=crop&q=75" alt="Phu Quoc island beach Vietnam vs Da Nang comparison" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-17.jpg" alt="Da Nang vs Phu Quoc island comparison" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Destination Comparison &middot; Vietnam &middot; 2026</div>
+          <div class="ghc-cat">Destination Comparison · Vietnam</div>
           <h3 class="ghc-title">Da Nang vs Phu Quoc</h3>
-          <p class="ghc-desc">Beach isolation vs city access. Phu Quoc has better sand; Da Nang has better value, more activities, and two UNESCO World Heritage sites nearby.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <p class="ghc-desc">Mainland city beach vs tropical island — the honest comparison for beach quality, resort value, and getting there.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
       <a href="da-nang-vs-hanoi.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1553571395-7d2e37e98951?w=500&h=160&fit=crop&q=75" alt="Hanoi old quarter Vietnam vs Da Nang beach holiday comparison" width="500" height="160" loading="lazy">
+        <img class="ghc-img" src="images/guides-b64-17.jpg" alt="Da Nang vs Hanoi comparison Vietnam" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">City Comparison &middot; Vietnam &middot; 2026</div>
+          <div class="ghc-cat">Destination Comparison · Vietnam</div>
           <h3 class="ghc-title">Da Nang vs Hanoi</h3>
-          <p class="ghc-desc">Beach holiday vs cultural city break. Different trips entirely — here's how to decide which belongs in your Vietnam itinerary.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <p class="ghc-desc">Beach resort coast vs Vietnam's 1,000-year capital — who each city suits and when to choose which.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
-    </div>
-
-    <p class="section-label" style="margin-bottom:.6rem;margin-top:3rem">Food &amp; experiences</p>
-    <h2 class="section-heading" style="margin-bottom:1.5rem">Eat, explore, <em>experience Da Nang</em></h2>
-    <div class="guide-hub-grid">
-
-      <a href="da-nang-food-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=160&fit=crop&q=75" alt="Vietnamese street food pho banh mi Da Nang food guide" width="500" height="160" loading="lazy">
+      <a href="da-nang-vs-ho-chi-minh-city.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-16.jpg" alt="Da Nang vs Ho Chi Minh City comparison" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Food Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang Food Guide — What and Where to Eat</h3>
-          <p class="ghc-desc">Mi Quang, banh mi Phuong, banh xeo, fresh seafood, and the best local spots vs tourist restaurants. A local's honest guide to eating in Da Nang.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Destination Comparison · Vietnam</div>
+          <h3 class="ghc-title">Da Nang vs Ho Chi Minh City</h3>
+          <p class="ghc-desc">Beach city vs Vietnam's urban giant — compared on nightlife, food, cost, families, and digital nomad suitability.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
-      <a href="da-nang-with-kids-guide.html" class="ghc">
-        <img class="ghc-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&h=160&fit=crop&q=75" alt="Family holiday beach Da Nang kids waterpark resort guide" width="500" height="160" loading="lazy">
+      <a href="da-nang-vs-bali.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Da Nang vs Bali comparison guide" width="500" height="150" loading="lazy">
         <div class="ghc-body">
-          <div class="ghc-cat">Family Guide &middot; 2026</div>
-          <h3 class="ghc-title">Da Nang with Kids</h3>
-          <p class="ghc-desc">Waterparks, Ba Na Hills, beach safety, kids clubs, and family restaurant picks. Complete guide for traveling to Da Nang with children.</p>
-          <span class="ghc-read">Read guide &rarr;</span>
+          <div class="ghc-cat">Destination Comparison · Regional</div>
+          <h3 class="ghc-title">Da Nang vs Bali</h3>
+          <p class="ghc-desc">Vietnam's leading beach city vs Bali — an honest comparison on resort quality, cost, crowds, and digital nomad infrastructure.</p>
+          <span class="ghc-read">Read comparison →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-vs-phuket.html" class="ghc">
+        <img class="ghc-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Da Nang vs Phuket comparison guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Destination Comparison · Regional</div>
+          <h3 class="ghc-title">Da Nang vs Phuket</h3>
+          <p class="ghc-desc">Southeast Asia's two most-Googled beach destinations compared — price, beach quality, resort value, and who wins for each traveller type.</p>
+          <span class="ghc-read">Read comparison →</span>
         </div>
       </a>
 
@@ -1774,25 +1613,159 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- seo-related-guides -->
-<section style="background:var(--sand,#F6F1E9);padding:2rem 0;margin-top:2rem">
-  <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
-    <p style="font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-muted,#666);margin:0 0 .75rem;font-weight:600">Related Guides</p>
-    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.5rem .75rem;font-size:.93rem;line-height:1.9">
-        <li><a href="best-hotels-in-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Best Hotels in Da Nang</a></li>
-        <li><a href="where-to-stay-in-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Where to Stay in Da Nang</a></li>
-        <li><a href="da-nang-beach-hotels.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Da Nang Beach Hotels</a></li>
-        <li><a href="hotel-reviews.html" style="color:var(--ocean);text-decoration:none;font-weight:500">All Hotel Reviews</a></li>
-        <li><a href="four-points-sheraton-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Four Points Sheraton Review</a></li>
-        <li><a href="tms-hotel-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">TMS Hotel Review</a></li>
-        <li><a href="muong-thanh-luxury-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Muong Thanh Review</a></li>
-        <li><a href="a-la-carte-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">A La Carte Review</a></li>
-        <li><a href="wyndham-soleil-da-nang.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Wyndham Soleil Review</a></li>
-        <li><a href="da-nang-budget-guide.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Da Nang Budget Guide</a></li>
-        <li><a href="hotels.html" style="color:var(--ocean);text-decoration:none;font-weight:500">Da Nang Hotels Hub</a></li>
-    </ul>
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOI AN
+═══════════════════════════════════════════════════════════ -->
+<section id="hoi-an" class="guide-section gs-alt">
+  <div class="guide-section-inner">
+    <p class="gs-label">30 minutes south</p>
+    <h2 class="gs-heading">Hoi An <em>guides</em></h2>
+    <p class="gs-intro">Most Da Nang visitors spend at least a day in Hoi An. These guides cover where to stay, what hotels are worth the price premium, and how to get there from Da Nang airport.</p>
+    <div class="ghg">
+
+      <a href="hoi-an.html" class="ghc">
+        <img class="ghc-img" src="images/best-hotels-in-hoi-an-ea87d5cc.jpg" alt="Hoi An Old Town lanterns travel guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-badge coral">Start here</div>
+          <div class="ghc-cat">Destination Guide · Hoi An</div>
+          <h3 class="ghc-title">Hoi An Travel Guide</h3>
+          <p class="ghc-desc">The complete overview — Old Town, An Bang Beach, tailors, night market, and how much time you actually need.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="best-hotels-in-hoi-an.html" class="ghc">
+        <img class="ghc-img" src="images/best-hotels-in-hoi-an-e25abed6.jpg" alt="Best hotels in Hoi An old town and beach" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Hotel Guide · Hoi An</div>
+          <h3 class="ghc-title">Best Hotels in Hoi An</h3>
+          <p class="ghc-desc">Old Town vs An Bang Beach vs resort strip — ranked for couples, families, and solo travellers.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="where-to-stay-in-hoi-an.html" class="ghc">
+        <img class="ghc-img" src="images/best-hotels-in-hoi-an-ea87d5cc.jpg" alt="Where to stay in Hoi An area guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Area Guide · Hoi An</div>
+          <h3 class="ghc-title">Where to Stay in Hoi An</h3>
+          <p class="ghc-desc">Old Town walking distance vs resort strip vs An Bang Beach — what the trade-offs are and which suits your trip.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="an-bang-beach-hotels.html" class="ghc">
+        <img class="ghc-img" src="images/best-hotels-in-hoi-an-e25abed6.jpg" alt="An Bang Beach hotels Hoi An" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Beach Guide · An Bang</div>
+          <h3 class="ghc-title">An Bang Beach Hotels</h3>
+          <p class="ghc-desc">Hoi An's best beach — quieter than My Khe, with a genuine local vibe. Best hotels and beach clubs ranked.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="is-hoi-an-cheaper-than-da-nang.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-06.jpg" alt="Is Hoi An cheaper than Da Nang cost comparison" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Cost Comparison · 2026</div>
+          <h3 class="ghc-title">Is Hoi An Cheaper Than Da Nang?</h3>
+          <p class="ghc-desc">The honest price comparison — accommodation, food, tours, and overall daily budget for each destination.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-airport-to-hoi-an.html" class="ghc">
+        <img class="ghc-img" src="images/da-nang-transport-guide-082e11be.jpg" alt="Da Nang airport to Hoi An transfer guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Transfer Guide · Hoi An</div>
+          <h3 class="ghc-title">Da Nang Airport to Hoi An</h3>
+          <p class="ghc-desc">Private transfer vs Grab vs shared van — the real cost and time comparison for the 45-minute journey.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>
+
+<div class="gs-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PRACTICAL TIPS
+═══════════════════════════════════════════════════════════ -->
+<section id="practical-tips" class="guide-section gs-sand">
+  <div class="guide-section-inner">
+    <p class="gs-label">On the ground</p>
+    <h2 class="gs-heading">Practical <em>tips</em></h2>
+    <p class="gs-intro">Visas, SIM cards, shopping, working remotely, and what to do if you want to stay longer. Everything operational that travel blogs forget to cover properly.</p>
+    <div class="ghg">
+
+      <a href="da-nang-visa-run-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-15.jpg" alt="Da Nang International Airport Visa Run Guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Visa &amp; Entry · 2026</div>
+          <h3 class="ghc-title">Visa Runs in Da Nang</h3>
+          <p class="ghc-desc">Vietnam e-visa, exemption countries, Lao Bao border runs, Bangkok &amp; KL flight runs, step-by-step checklist.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-sim-card-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-21.jpg" alt="Da Nang SIM card guide 2026" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Practical Guide · SIM</div>
+          <h3 class="ghc-title">Da Nang SIM Card Guide 2026</h3>
+          <p class="ghc-desc">Which SIM to buy, Viettel vs Vinaphone, airport vs city costs, and eSIM options for 2026.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-malls-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-14.jpg" alt="Da Nang shopping malls guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Shopping Guide · 2026</div>
+          <h3 class="ghc-title">Best Shopping Malls in Da Nang</h3>
+          <p class="ghc-desc">Vincom Plaza, Lotte Mart, Helio Center, and Big C reviewed — what to buy and which mall suits your trip.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-grocery-store-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-21.jpg" alt="Da Nang grocery stores guide" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Practical Guide · Groceries</div>
+          <h3 class="ghc-title">Da Nang Grocery Store Guide</h3>
+          <p class="ghc-desc">Full Market, Jollymart, Winmart, and Lotte Mart compared — fresh produce, imported goods, and price levels.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="da-nang-digital-nomad-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-10.jpg" alt="Digital nomad guide Da Nang co-working café" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Practical Guide · Remote Work</div>
+          <h3 class="ghc-title">Digital Nomad Guide to Da Nang</h3>
+          <p class="ghc-desc">Best neighbourhoods for remote work, co-working spaces, café culture, SIM cards, cost of living, and visa options.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+      <a href="living-in-da-nang-expat-guide.html" class="ghc">
+        <img class="ghc-img" src="images/guides-b64-20.jpg" alt="Living in Da Nang expat guide cost of living" width="500" height="150" loading="lazy">
+        <div class="ghc-body">
+          <div class="ghc-cat">Expat Guide · Long Stay</div>
+          <h3 class="ghc-title">Living in Da Nang as an Expat</h3>
+          <p class="ghc-desc">Cost of living, apartment rentals, healthcare, expat community, schools, and the honest trade-offs of long-term life in Da Nang.</p>
+          <span class="ghc-read">Read guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
