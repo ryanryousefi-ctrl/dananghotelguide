@@ -221,6 +221,20 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.traveller-grid{grid-template-columns:1fr}.pros-cons-grid{grid-template-columns:1fr}.cmp-grid{grid-template-columns:1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'\25b8 ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -375,6 +389,8 @@ a{text-decoration:none;color:inherit}
     <p class="guide-photo-caption">Ho Chi Minh City and the Saigon River, District 1's skyline, the economic heartbeat of Vietnam.</p>
   </div>
 
+  <div class="local-callout"><div class="local-callout-label">Local Tip</div>Ho Chi Minh City is a megacity of 10 million people. Da Nang is a beach city of 1.2 million. The comparison only works if you're deciding between them for a Vietnam trip - and for most first-timers, the answer depends entirely on whether you want urban energy or beach relaxation.</div>
+
   <!-- Comparison Table -->
   <div class="cmp-section" id="comparison">
     <h2>Side-by-Side <em>Comparison</em></h2>
@@ -416,9 +432,12 @@ a{text-decoration:none;color:inherit}
     <p class="guide-photo-caption">HCMC's outdoor life is urban by nature, Districts 1 through 4 offer the Mekong Delta at arm's length, rooftop bars, and city parks. No ocean required.</p>
   </div>
 
+  <p class="pull-quote">Ho Chi Minh City doesn't have a beach. Vung Tau is 2 hours away by ferry and not worth the trip unless you have a specific reason. For a beach holiday paired with Vietnam, Da Nang isn't competing with Saigon - it's the only logical choice.</p>
+
   <!-- Food -->
   <div class="cmp-section" id="food">
     <h2>Food &amp; <em>Dining</em></h2>
+    <div class="vibe-bar"><span class="vibe-pill green">HCMC: Widest variety</span><span class="vibe-pill green">Da Nang: Better seafood</span><span class="vibe-pill gold">HCMC: Nightlife</span><span class="vibe-pill">Da Nang: Quieter, walkable</span></div>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Da Nang's Food Scene</h3>
@@ -470,6 +489,8 @@ a{text-decoration:none;color:inherit}
     <img class="guide-photo" src="images/guide-hcmc-theatre.jpg" alt="The Municipal Theatre of Ho Chi Minh City, French colonial architecture in the heart of District 1" loading="lazy">
     <p class="guide-photo-caption">Ho Chi Minh City at night, a city that runs 24/7. The scale and energy are genuinely different from any other destination in Vietnam.</p>
   </div>
+
+  <div class="warn-callout"><div class="local-callout-label">Watch Out</div>Ho Chi Minh City's hotel pricing is inconsistent - a cheap-looking rack rate often excludes taxes and service charges that add 20-25%. Da Nang pricing tends to be more transparent, particularly at beach resorts. Read the fine print before assuming a Saigon hotel is cheaper.</div>
 
   <!-- Pros & Cons -->
   <div class="cmp-section" id="pros-cons">

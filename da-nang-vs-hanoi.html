@@ -221,6 +221,20 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.traveller-grid{grid-template-columns:1fr}.pros-cons-grid{grid-template-columns:1fr}.cmp-grid{grid-template-columns:1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'\25b8 ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -376,6 +390,8 @@ a{text-decoration:none;color:inherit}
     <p class="guide-photo-caption">Hoan Kiem Lake at the heart of Hanoi's Old Quarter, the Ngoc Son Temple and the legendary restored sword. One of the most recognisable images in Vietnam.</p>
   </div>
 
+  <div class="local-callout"><div class="local-callout-label">Local Tip</div>I've spent significant time in both cities. Hanoi wins on history and atmosphere - the Old Quarter in the early morning is genuinely beautiful. Da Nang wins on livability: clean, warm, beach 10 minutes away, no traffic chaos. They're solving for completely different things.</div>
+
   <!-- Comparison Table -->
   <div class="cmp-section" id="comparison">
     <h2>Side-by-Side <em>Comparison</em></h2>
@@ -410,6 +426,7 @@ a{text-decoration:none;color:inherit}
   <!-- Beach -->
   <div class="cmp-section" id="beach">
     <h2>Beach &amp; <em>Outdoors</em></h2>
+    <div class="vibe-bar"><span class="vibe-pill green">Da Nang: My Khe Beach</span><span class="vibe-pill red">Hanoi: No beach</span><span class="vibe-pill green">Da Nang: Day trips to Hoi An</span><span class="vibe-pill gold">Hanoi: Halong Bay 4hr away</span></div>
     <p>Da Nang wins this category by default. Hanoi is an inland city, the nearest beach is Ha Long Bay (3.5 hours by road), which is more accurately a limestone karst bay for boat cruising than a beach destination. The nearest proper swimming beach from Hanoi requires a full-day or overnight trip.</p>
     <p>Da Nang's 35km of coastline runs directly through the city. My Khe Beach has good infrastructure, consistent clean water from February through September, and reliable south-facing exposure that makes for long afternoon sun. Non Nuoc Beach (10km south) is quieter with better resort concentration. Son Tra Peninsula adds sea turtle spotting, jungle hiking, and private cove swimming that doesn't exist within a day trip of Hanoi.</p>
     <p>If outdoor beach time is any part of what you want from Vietnam, this is not a close comparison. For nature in the north, Hanoi's access to Ha Long Bay, Ninh Binh, and the rice terrace highlands of Sapa represents something genuinely different, impressive, but not interchangeable with a beach holiday.</p>
@@ -490,6 +507,8 @@ a{text-decoration:none;color:inherit}
     </table>
     <p>These two cities are remarkably similar in cost at most budget levels. Street food and local dining are effectively identical. The biggest practical difference is that Hanoi's access to Ha Long Bay is significantly cheaper than booking the same cruise from Da Nang, the overland distance makes it a day trip option from Hanoi that doesn't exist from Da Nang without a flight.</p>
   </div>
+
+  <p class="pull-quote">Da Nang is cheaper than Hanoi for accommodation - the hotel supply is newer and the market more competitive. Food costs are roughly equivalent if you eat local. Where Hanoi pulls ahead is on things to do: the museum circuit alone could fill a week.</p>
 
   <!-- Pros & Cons -->
   <div class="cmp-section" id="pros-cons">
@@ -631,6 +650,8 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
   </div>
+
+  <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>The most common itinerary error: trying to do both Hanoi and Da Nang on a 7-night trip. You'll spend 3 of those 7 nights in transit. Pick one, do it properly. Hanoi needs 4+ days; Da Nang with Hoi An needs 4+ days. They're both worth a full trip, not a rushed half-trip.</div>
 
   <!-- Final Verdict -->
   <div class="cmp-verdict" id="verdict">

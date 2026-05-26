@@ -3267,6 +3267,20 @@ a{text-decoration:none;color:inherit}
 .booking-button,.hotel-book-btn,.hc-btn,.hub-cat-book,.hotel-pick-btn,.hotel-btn,.boutique-btn,.hbtn{
   display:inline-flex;align-items:center;gap:6px
 }
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 <meta name="robots" content="index, follow">
 <script type="application/ld+json">
@@ -3479,6 +3493,8 @@ a{text-decoration:none;color:inherit}
       </div>
     </section>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>The real split on Da Nang's beach strip is Central My Khe vs. Non Nuoc. Central My Khe puts you within walking distance of An Thuong restaurant street and the Han River scene. Non Nuoc is quieter, newer resorts, better for long beach days without wanting to explore the city. Both have good sand and calm water in dry season.</div>
+
     <!-- ── LOCAL PERSPECTIVE + HOTEL STRIP ── -->
     <style>
     .wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
@@ -3615,6 +3631,7 @@ a{text-decoration:none;color:inherit}
     <section id="north-mykhe" aria-labelledby="nmk-h">
       <span class="section-label">Zone 1</span>
       <h2 class="section-heading" id="nmk-h">North My Khe <em>Beach Hotels</em></h2>
+      <div class="vibe-bar"><span class="vibe-pill">North My Khe: Budget-mid range</span><span class="vibe-pill green">Central My Khe: Most walkable</span><span class="vibe-pill gold">South My Khe/Non Nuoc: Luxury resorts</span><span class="vibe-pill green">Son Tra: Ultra-secluded</span></div>
       <p class="section-intro">This end of the strip gets overlooked and it probably shouldn't. The beach is less crowded, the noise drops off noticeably at night, and the prices are better. You're a short Grab ride from the An Thuong dining scene, maybe 10 minutes, so it's not like you're marooned. If you don't need to be in the middle of everything, the northern stretch is genuinely worth considering.</p>
       <div class="section-img-wrap">
         <img src="images/da-nang-beach-hotels-a2c685c6.webp" loading="lazy" alt="North My Khe Beach Da Nang aerial view looking inland at the city tower skyline" width="1200" height="380">
@@ -3959,6 +3976,8 @@ a{text-decoration:none;color:inherit}
       </div>
     </section>
 
+    <p class="pull-quote">The Non Nuoc stretch — from the Hyatt south to the InterContinental — is one of the best resort corridors in Southeast Asia. Wide beach, calm water, 5-star infrastructure at prices that would get you a 3-star in Bali. It's genuinely underpriced relative to comparable destinations.</p>
+
     <!-- ── SECTION 4: NON NUOC & SON TRA ── -->
     <section id="nonnuoc-sontra" aria-labelledby="nn-h">
       <span class="section-label">Zone 4</span>
@@ -4132,6 +4151,7 @@ a{text-decoration:none;color:inherit}
     <section id="tips" aria-labelledby="tips-h">
       <span class="section-label">Booking Guide</span>
       <h2 class="section-heading" id="tips-h">Beach Hotel <em>Booking Tips</em></h2>
+      <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Best value windows for Da Nang beach hotels: late February to mid-April (dry season established, before school holidays), and October-November if you don't mind some rain. January-August represents peak to shoulder, June-August is the highest-demand period. Booking 3-4 weeks ahead in shoulder season often unlocks the same rooms at 20-30% less.</div>
       <div class="prose">
         <p><strong>Book 6–8 weeks ahead for July–August.</strong> Da Nang's peak beach season lines up with Vietnamese school holidays and a lot of domestic tourism. The good beachfront properties on My Khe fill up weeks in advance during this window, and rates spike 40–60% above what you'd pay in shoulder season. Non Nuoc has more inventory but still tightens up for the July peak. If you're coming in summer and you have a specific hotel in mind, don't wait.</p>
         <p><strong>March to June is the sweet spot.</strong> The beach is at its best, calm water, consistent sun, minimal rain, and prices haven't hit peak-season levels yet. This is the window when the properties you actually want are accessible at prices that make sense. See the <a href="best-time-to-visit-da-nang.html">seasonal guide</a> for month-by-month detail.</p>

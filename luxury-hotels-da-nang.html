@@ -1065,6 +1065,20 @@ a{text-decoration:none;color:inherit}
 .booking-button,.hotel-book-btn,.hc-btn,.hub-cat-book,.hotel-pick-btn,.hotel-btn,.boutique-btn,.hbtn{
   display:inline-flex;align-items:center;gap:6px
 }
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
   <!-- =====================================================
        AWIN AFFILIATE HELPER  awinmid=18119  awinaffid=2788028
@@ -1403,10 +1417,14 @@ a{text-decoration:none;color:inherit}
       <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=luxury-hotels-mid&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fdest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:#C8604A;color:#fff;font-size:.88rem;font-weight:700;padding:11px 22px;border-radius:100px;white-space:nowrap;text-decoration:none">Check Prices &rarr;</a>
     </div>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>Da Nang's luxury market punches well above its size. The InterContinental Sun Peninsula is legitimately world-class — it's won awards that put it alongside properties in Maldives and Bali at a meaningfully lower price point. That's the core argument for Da Nang luxury travel: the quality ceiling is very high and the price floor is lower than comparable Asian beach destinations.</div>
+
     <!-- SECTION 1: ULTRA LUXURY -->
     <section id="ultra" aria-labelledby="ultra-h">
       <span class="section-label">Ultra Luxury · Son Tra &amp; Non Nuoc</span>
       <h2 class="section-heading" id="ultra-h">Ultra Luxury Resorts, <em>Iconic Properties</em></h2>
+      <div class="vibe-bar"><span class="vibe-pill green">Non Nuoc: Resort coast</span><span class="vibe-pill green">Son Tra: Secluded bluff</span><span class="vibe-pill">My Khe: Urban beach</span><span class="vibe-pill gold">Peak season: Jan-May</span></div>
+      <img class="scenic-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&h=240&fit=crop&q=75" alt="Luxury resort infinity pool overlooking Da Nang coastline" width="900" height="240" loading="lazy">
       <p class="section-intro">These are the flagships. Private bays, jungle hillsides, designer villas, spa programs that would cost triple in Bali. They appear on the same global shortlists as properties in Paris and Tokyo, and they're priced well below what comparable resorts charge elsewhere in the region.</p>
     </section>
 
@@ -1874,6 +1892,8 @@ a{text-decoration:none;color:inherit}
         <p>Combine the <a href="where-to-stay-in-da-nang.html">neighbourhood guide</a> with this luxury list to match your preferred setting, jungle, beachfront, or city river, before choosing a property. See also <a href="da-nang-beach-hotels.html">Da Nang beach hotels</a> for properties across all budgets on My Khe and Non Nuoc.</p>
       </div>
     </section>
+
+    <p class="pull-quote">A beachfront 5-star in Da Nang costs $150-300/night in shoulder season. The equivalent in Bali or Phuket runs $250-500. For the price gap, you get the same beach quality, similar resort infrastructure, and no crowds. The math is not subtle.</p>
 
     <div class="cta-block">
       <h3>Compare all <em>Da Nang luxury hotels</em></h3>

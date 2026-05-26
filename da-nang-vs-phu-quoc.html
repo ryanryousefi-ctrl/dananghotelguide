@@ -215,6 +215,20 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1024px){.article-hero-inner{grid-template-columns:1fr}.hero-cta-box{display:none}.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}.plan-band-inner{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}.verdict-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.plan-band-inner{grid-template-columns:1fr}.comparison-table{font-size:.78rem}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'\25b8 ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -337,6 +351,8 @@ a{text-decoration:none;color:inherit}
       <p>Timing. Da Nang and Phu Quoc have opposite monsoon seasons, if your travel window is November to January, Phu Quoc is the clear winner (Da Nang is in its roughest weather window). If you're travelling March to September, Da Nang is excellent and Phu Quoc is in or approaching its rainy season. Check your travel dates first, then apply everything else in this guide.</p>
     </div>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>Phu Quoc and Da Nang are solving for different things. Phu Quoc is a resort island - you go there to sit on a beautiful beach and not much else. Da Nang is a city with a good beach - you can do the beach, day-trip to Hoi An, eat your way through An Thuong, and not run out of things to do.</div>
+
     <h2>Side-by-Side Comparison</h2>
 
     <table class="comparison-table">
@@ -402,6 +418,8 @@ a{text-decoration:none;color:inherit}
     <p>My Khe in Da Nang is an excellent urban beach, wide, clean, well-managed, and with better swimming infrastructure (lifeguards, flag system, beach facilities) than most of Phu Quoc's coastline. But it's an urban beach. You can see the city from it. The sand is golden rather than white. The water is typically a blue-green rather than turquoise. It's objectively a different category.</p>
     <p>If beach aesthetics are the primary metric of your trip, Phu Quoc wins. If you want a beach that's also well-managed and convenient to everything else, My Khe holds its own well.</p>
 
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=240&fit=crop&q=75" alt="Comparing beach quality between Da Nang and Phu Quoc" width="900" height="240" loading="lazy">
+
     <h2>Weather: The Deciding Factor for Many</h2>
     <p>Vietnam's geography means Da Nang and Phu Quoc experience their monsoons at opposite times of year:</p>
     <ul>
@@ -412,6 +430,8 @@ a{text-decoration:none;color:inherit}
     </ul>
     <p>This means if you're visiting Vietnam in December or January, Da Nang's beach is genuinely problematic for swimming. Phu Quoc in December is at its very best. Conversely, Phu Quoc in July is rough and wet while Da Nang is flat, hot, and perfect.</p>
 
+    <p class="pull-quote">Phu Quoc's dry season and Da Nang's dry season don't perfectly overlap. If your dates fall November-March, Phu Quoc wins on weather. April-September, Da Nang wins. This isn't a minor consideration - it can shift the entire calculus.</p>
+
     <h2>Activities Beyond the Beach</h2>
     <p>This is Da Nang's most significant advantage over Phu Quoc, and it's a large one.</p>
     <p><strong>Da Nang's day trip network</strong> is extraordinary: Hoi An Ancient Town (UNESCO) is 30 minutes by taxi; My Son Sanctuary (Cham ruins, UNESCO) is 70 minutes; <a href="ba-na-hills-guide.html">Ba Na Hills</a> takes a full day; Marble Mountains is 30 minutes; Hue's Imperial City is 2.5 hours by car or train. Each of these is a meaningful attraction in its own right. You can spend 10 days based in Da Nang and genuinely not run out of things to do.</p>
@@ -420,6 +440,8 @@ a{text-decoration:none;color:inherit}
     <h2>Price Comparison</h2>
     <p>Da Nang is generally the more affordable option for accommodation. Phu Quoc's hotel market is dominated by large resort operators (Vinpearl, Premier Village, JW Marriott, Regent) whose pricing reflects resort economics, fewer budget or mid-range options near the best beaches. Da Nang's My Khe strip has genuinely good 4-star properties from $55–70/night; the equivalent beach access on Phu Quoc typically starts $20–40 higher at comparable standard.</p>
     <p>Food costs are broadly similar between the two destinations in the local restaurant market. Transport within Phu Quoc is more expensive (the island is larger relative to its taxi infrastructure, and motorbike rental is the main practical option in many areas).</p>
+
+    <div class="warn-callout"><div class="local-callout-label">Watch Out</div>Phu Quoc resort prices jumped significantly after the casino opened in 2020 and during the post-COVID tourism surge. A mid-range Phu Quoc beach hotel in peak season now costs the same as a Da Nang 5-star. The 'Phu Quoc is cheaper' narrative is outdated.</div>
 
     <h2>Verdicts by Traveller Type</h2>
 

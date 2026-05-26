@@ -221,6 +221,20 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.traveller-grid{grid-template-columns:1fr}.pros-cons-grid{grid-template-columns:1fr}.cmp-grid{grid-template-columns:1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'\25b8 ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -378,6 +392,8 @@ a{text-decoration:none;color:inherit}
     <p>Da Nang has been on a remarkable run. The Korean wave, flights from Seoul, Busan, and Incheon filling My Khe resorts year-round, Korean restaurants and convenience stores lining An Thuong, Korean-Vietnamese families becoming a fixture of the city, drove enormous investment in the city's hospitality and services sector. Nha Trang is earlier in that same curve, and the agent of change this time is Russian.</p>
   </div>
 
+  <div class="local-callout"><div class="local-callout-label">Local Tip</div>Nha Trang got overbuilt fast. Between 2016-2020 the city added enormous amounts of hotel capacity, mostly marketed to Russian and Korean package tourists. The result is a beach strip that feels more like a resort corridor than a city. Da Nang has the same beach quality with more genuine city life around it.</div>
+
   <!-- Comparison Table -->
   <div class="cmp-section" id="comparison">
     <h2>Side-by-Side <em>Comparison</em></h2>
@@ -416,6 +432,8 @@ a{text-decoration:none;color:inherit}
     <p>Nha Trang's Tran Phu Beach is a compact 7km crescent with genuinely striking natural beauty, the bay backdrop, the offshore islands, the curve of the shoreline. On a clear morning it is legitimately one of the most photogenic beach settings in Southeast Asia. The issues are crowd density in high season, water quality that varies more than Da Nang's, and a beach promenade that can feel hectic and vendor-heavy.</p>
     <p>Nha Trang also has a significant advantage Da Nang doesn't: island-hopping. Vinpearl Island, Hon Mun for snorkelling, and the outer islands via boat tours are a genuine draw that Da Nang cannot match. If you want water-based activities beyond the main beach, snorkelling, island day trips, boat excursions, Nha Trang is more interesting.</p>
   </div>
+
+  <p class="pull-quote">My Khe Beach is better than Nha Trang Beach. Wider, cleaner, less developed. I'd say that even if I didn't live here - the infrastructure gap is real and has widened every year since 2018.</p>
 
   <!-- Tourism Waves -->
   <div class="cmp-section" id="tourism-waves">
@@ -460,6 +478,8 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
   </div>
+
+  <div class="vibe-bar"><span class="vibe-pill green">Da Nang: International hospital</span><span class="vibe-pill green">Da Nang: Direct flights from Asia</span><span class="vibe-pill red">Nha Trang: Limited medical care</span><span class="vibe-pill gold">Nha Trang: Budget prices</span></div>
 
   <!-- Food -->
   <div class="cmp-section" id="food">
@@ -511,6 +531,8 @@ a{text-decoration:none;color:inherit}
     </table>
     <p>The two cities are broadly similar on cost, with Nha Trang offering a slight edge at the budget end because of its longer backpacker history and larger supply of cheap accommodation. Da Nang's luxury product is better value, the big-brand resorts deliver a more polished experience for the price. Street food and daily expenses are essentially the same in both cities.</p>
   </div>
+
+  <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Nha Trang is genuinely cheaper than Da Nang, particularly for accommodation. If budget is the primary driver and beach quality is secondary, it can make sense. But the gap has narrowed - Da Nang's mid-range market ($40-80/night) competes well with Nha Trang's equivalent tier.</div>
 
   <!-- Pros & Cons -->
   <div class="cmp-section" id="pros-cons">
