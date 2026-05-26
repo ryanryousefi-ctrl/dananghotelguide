@@ -1,7 +1,7 @@
 /*
- * cta-polish.css — Phase 8 Premium CTA Redesign (white button update)
- * Sitewide override layer for all booking/affiliate CTA button classes.
- * Loaded after per-page styles; uses !important to override inline page CSS.
+ * cta-polish.css — Phase 8 Premium CTA Redesign (white button system)
+ * Sitewide override layer targeting NAMED button classes only.
+ * NO attribute selectors — those break plain inline affiliate text links.
  * NEVER modify affiliate links, hrefs, tracking params, or button destinations.
  */
 
@@ -18,9 +18,10 @@
 }
 
 /* ─── MASTER WHITE BUTTON RESET ───────────────────────────────────────────── */
-/* Every booking/affiliate CTA class gets white background, dark teal text.   */
+/* All named CTA/booking button classes — NO href attribute selectors.         */
 
 .nav-stays-btn,
+.mobile-stays-btn,
 .verdict-book-btn,
 .btn-book,
 .cta-block-btn,
@@ -32,17 +33,29 @@
 .boutique-btn,
 .hbtn,
 .hc-btn,
+.hft-btn,
 .sidebar-cta-btn,
+.sidebar-cta,
 .booking-button,
 .sc-book-btn,
 .price-check-btn,
 .mobile-cta-bar-btn,
+.hero-cta-btn,
+.hw-cta,
+.dt-cta,
+.ct-cta,
+.rv-card-cta,
+.tc-card-cta,
+.hotel-price-cta,
+.hotel-pick-btn,
+.hotel-card-book,
+.cmp-link-btn,
+.aff-callout-btn,
+.guide-link-btn,
 .premium-cta-primary,
 .premium-booking-btn,
 .premium-cta-secondary,
-.premium-hero-cta,
-a[href*="booking.com"],
-a[href*="awin1.com"] {
+.premium-hero-cta {
   background: var(--cta-bg, #ffffff) !important;
   color: var(--cta-text, #073f3d) !important;
   border: 1px solid var(--cta-border, rgba(7,63,61,.18)) !important;
@@ -53,9 +66,10 @@ a[href*="awin1.com"] {
   letter-spacing: .012em !important;
 }
 
-/* ─── SHARED HOVER STATE ──────────────────────────────────────────────────── */
+/* ─── SHARED HOVER ────────────────────────────────────────────────────────── */
 
 .nav-stays-btn:hover,
+.mobile-stays-btn:hover,
 .verdict-book-btn:hover,
 .btn-book:hover,
 .cta-block-btn:hover,
@@ -67,18 +81,30 @@ a[href*="awin1.com"] {
 .boutique-btn:hover,
 .hbtn:hover,
 .hc-btn:hover,
+.hft-btn:hover,
 .sidebar-cta-btn:hover,
+.sidebar-cta:hover,
 .booking-button:hover,
 .sc-book-btn:hover,
 .price-check-btn:hover,
 .mobile-cta-bar-btn:hover,
 .mobile-cta-bar-btn:active,
+.hero-cta-btn:hover,
+.hw-cta:hover,
+.dt-cta:hover,
+.ct-cta:hover,
+.rv-card-cta:hover,
+.tc-card-cta:hover,
+.hotel-price-cta:hover,
+.hotel-pick-btn:hover,
+.hotel-card-book:hover,
+.cmp-link-btn:hover,
+.aff-callout-btn:hover,
+.guide-link-btn:hover,
 .premium-cta-primary:hover,
 .premium-booking-btn:hover,
 .premium-cta-secondary:hover,
-.premium-hero-cta:hover,
-a[href*="booking.com"]:hover,
-a[href*="awin1.com"]:hover {
+.premium-hero-cta:hover {
   background: #f5fafa !important;
   color: var(--cta-text, #073f3d) !important;
   border-color: rgba(7,63,61,.32) !important;
@@ -89,7 +115,7 @@ a[href*="awin1.com"]:hover {
 
 /* ─── PER-CLASS SIZING & SHAPE ────────────────────────────────────────────── */
 
-/* Nav button — pill, compact */
+/* Nav / top-of-page pill */
 .nav-stays-btn {
   border-radius: var(--cta-radius-pill) !important;
   padding: 9px 18px !important;
@@ -102,7 +128,16 @@ nav .nav-stays-btn,
   padding: 9px 18px !important;
 }
 
-/* Verdict/comparison — pill, slightly larger */
+/* Mobile nav booking bar */
+.mobile-stays-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 20px !important;
+  font-size: .82rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Verdict/comparison page — pill, slightly larger */
 .verdict-book-btn {
   border-radius: var(--cta-radius-pill) !important;
   padding: 13px 26px !important;
@@ -134,7 +169,8 @@ nav .nav-stays-btn,
 }
 
 /* Hotel card CTA */
-.hotel-card-cta {
+.hotel-card-cta,
+.hotel-card-book {
   border-radius: var(--cta-radius-pill) !important;
   padding: 10px 20px !important;
   font-size: .83rem !important;
@@ -144,7 +180,8 @@ nav .nav-stays-btn,
 .hotel-book-btn,
 .hotel-btn,
 .boutique-btn,
-.hbtn {
+.hbtn,
+.hft-btn {
   border-radius: var(--cta-radius-pill) !important;
   padding: 10px 18px !important;
   font-size: .82rem !important;
@@ -157,7 +194,8 @@ nav .nav-stays-btn,
 }
 
 /* Sidebar — block, full width, rounded rect */
-.sidebar-cta-btn {
+.sidebar-cta-btn,
+.sidebar-cta {
   border-radius: var(--cta-radius-md) !important;
   padding: 12px 16px !important;
   font-size: .85rem !important;
@@ -165,7 +203,7 @@ nav .nav-stays-btn,
   text-align: center !important;
 }
 
-/* Scorecard full-width button */
+/* Scorecard full-width */
 .sc-book-btn {
   border-radius: var(--cta-radius-md) !important;
   padding: 14px 16px !important;
@@ -186,14 +224,64 @@ nav .nav-stays-btn,
   font-size: .85rem !important;
 }
 
-/* Hero CTA — largest */
-.premium-hero-cta {
+/* Hero CTA */
+.hero-cta-btn {
   border-radius: var(--cta-radius-pill) !important;
-  padding: 16px 36px !important;
-  font-size: 1rem !important;
+  padding: 13px 28px !important;
+  font-size: .9rem !important;
 }
 
-/* Premium utility sizes */
+/* Table check-prices link — compact, fits table cell */
+.dt-cta,
+.ct-cta {
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+  font-size: .78rem !important;
+  white-space: nowrap !important;
+  display: inline-block !important;
+}
+
+/* Hotel widget / within-content CTA */
+.hw-cta {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 9px 18px !important;
+  font-size: .82rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Review card / vibe card CTAs */
+.rv-card-cta,
+.tc-card-cta {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 18px !important;
+  font-size: .82rem !important;
+}
+
+/* Hotel price CTA, pick button */
+.hotel-price-cta,
+.hotel-pick-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 20px !important;
+  font-size: .83rem !important;
+}
+
+/* Comparison link buttons */
+.cmp-link-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 11px 22px !important;
+  font-size: .86rem !important;
+}
+
+/* Affiliate callout, guide link */
+.aff-callout-btn,
+.guide-link-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 20px !important;
+  font-size: .84rem !important;
+}
+
+/* Premium utility */
 .premium-cta-primary,
 .premium-booking-btn {
   border-radius: var(--cta-radius-pill) !important;
@@ -207,8 +295,13 @@ nav .nav-stays-btn,
   font-size: .88rem !important;
 }
 
-/* ─── HOTEL SCORE BUTTON — inline text link ───────────────────────────────── */
-/* .hs-btn is a text link inside a score widget, not a filled button          */
+.premium-hero-cta {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 16px 36px !important;
+  font-size: 1rem !important;
+}
+
+/* ─── HOTEL SCORE BUTTON — inline text link, not a box ───────────────────── */
 
 .hs-btn {
   background: transparent !important;
@@ -233,9 +326,10 @@ nav .nav-stays-btn,
   text-decoration-color: rgba(7,63,61,.7) !important;
   transform: none !important;
   box-shadow: none !important;
+  border: none !important;
 }
 
-/* ─── DECISION BUTTONS (premium.css pages) ────────────────────────────────── */
+/* ─── DECISION BUTTONS ────────────────────────────────────────────────────── */
 
 .decision-btn {
   font-weight: 800 !important;
@@ -331,7 +425,8 @@ nav .nav-stays-btn,
     font-size: .9rem !important;
   }
 
-  .sidebar-cta-btn {
+  .sidebar-cta-btn,
+  .sidebar-cta {
     padding: 13px 16px !important;
     font-size: .88rem !important;
   }
@@ -341,7 +436,8 @@ nav .nav-stays-btn,
     min-height: 44px !important;
   }
 
-  .hotel-card-cta {
+  .hotel-card-cta,
+  .hotel-card-book {
     padding: 11px 18px !important;
     min-height: 42px !important;
   }
