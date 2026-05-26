@@ -261,12 +261,7 @@ a{text-decoration:none;color:inherit}
 .footer-legal-links a:hover{color:rgba(255,255,255,.75)}
 
 /* ─── HERO ───────────────────────────────────────────────── */
-.guide-hero{
-  position:relative;overflow:hidden;
-  background:var(--ocean-deep);
-  min-height:380px;
-  display:flex;align-items:flex-end;
-}
+.guide-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.guide-hero::before{content:"";position:absolute;inset:0;background-image:url("images/da-nang-beach-hotels-30b63280.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.guide-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.guide-hero>*{position:relative;z-index:2}
 .guide-hero-img{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
@@ -441,6 +436,8 @@ a{text-decoration:none;color:inherit}
 @media(max-width:480px){
   .footer-grid{grid-template-columns:1fr}
 }
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -710,6 +707,8 @@ a{text-decoration:none;color:inherit}
     <img class="section-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&h=394&fit=crop&q=80" alt="Luxury resort pool Da Nang Vietnam" width="900" height="394" loading="lazy">
     <p class="section-img-caption">Da Nang's beachfront resorts offer excellent facilities at prices well below comparable properties in Bali or Thailand.</p>
 
+    <p class="pull-quote">"For Australians, Da Nang is the answer to a simple question: where can you go for under $200/day all-in, with a beach that rivals Queensland, direct flights from Sydney and Melbourne, and food that makes you forget home?"</p>
+
     <h2>Hotels Australians Tend to Choose</h2>
 
     <p>These are the five properties that come up most often when Australians research Da Nang. For a full comparison, see our <a href="best-hotels-in-da-nang.html">Best Hotels in Da Nang guide</a>.</p>
@@ -837,6 +836,8 @@ a{text-decoration:none;color:inherit}
     <!-- SECTION 8, DA NANG VS BALI -->
     <img class="section-img" src="https://images.unsplash.com/photo-1540202404-d0c7fe46a087?w=900&h=394&fit=crop&q=80" alt="Da Nang beach coastline aerial view" width="900" height="394" loading="lazy">
     <p class="section-img-caption">Da Nang's coastline, a less-crowded, more affordable alternative to Bali that's winning over Australian travelers.</p>
+
+    <img class="scenic-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang scenic view travel guide" loading="lazy" width="900" height="240">
 
     <h2>Da Nang vs Bali for Australians</h2>
 

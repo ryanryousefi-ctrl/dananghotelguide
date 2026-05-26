@@ -262,12 +262,7 @@ a{text-decoration:none;color:inherit}
 .footer-legal-links a:hover{color:rgba(255,255,255,.75)}
 
 /* ─── HERO ───────────────────────────────────────────────── */
-.guide-hero{
-  position:relative;overflow:hidden;
-  background:var(--ocean-deep);
-  min-height:380px;
-  display:flex;align-items:flex-end;
-}
+.guide-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.guide-hero::before{content:"";position:absolute;inset:0;background-image:url("images/da-nang-beach-hotels-30b63280.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.guide-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.guide-hero>*{position:relative;z-index:2}
 .guide-hero-img{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
@@ -425,6 +420,8 @@ a{text-decoration:none;color:inherit}
 @media(max-width:480px){
   .footer-grid{grid-template-columns:1fr}
 }
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -727,6 +724,8 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- SECTION 5 -->
+    <p class="pull-quote">"다낭은 한국인 여행자에게 최고의 단기 해외여행지 중 하나입니다. 직항 4시간 30분, 환율 우위, 맑은 해변, 그리고 합리적인 가격의 5성급 리조트. 왜 인기 있는지 이해하기 어렵지 않습니다."</p>
+
     <h2>Things Koreans Should Know Before Visiting</h2>
 
     <h3>Currency</h3>
@@ -768,6 +767,8 @@ a{text-decoration:none;color:inherit}
     <p>The Han River promenade comes alive at night, particularly around weekends when the Dragon Bridge fire-and-water show runs on Saturday and Sunday evenings. See our <a href="dragon-bridge-da-nang.html">Dragon Bridge guide</a> for viewing tips. The riverside stretch also has rooftop bars, live music venues, and night cruise options, see our <a href="han-river-night-cruise-da-nang.html">Da Nang night cruise guide</a> for details.</p>
 
     <!-- SECTION 7 -->
+    <img class="scenic-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang Vietnam travel guide" loading="lazy" width="900" height="240">
+
     <h2>Day Trips Koreans Love</h2>
 
     <h3>Hoi An Ancient Town</h3>

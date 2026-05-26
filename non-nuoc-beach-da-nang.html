@@ -95,7 +95,7 @@ a{text-decoration:none;color:inherit}
 .breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
 
 /* ARTICLE HERO */
-.article-hero{background:var(--ocean-deep);color:#fff;padding:clamp(3rem,6vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem)}
+.article-hero{background:var(--ocean-deep);color:#fff;padding:clamp(3rem,6vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);position:relative;overflow:hidden}.article-hero::before{content:"";position:absolute;inset:0;background-image:url("images/luxury-hotels-da-nang-5c163732.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.article-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.article-hero>*{position:relative;z-index:2}
 .article-hero-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:center}
 .article-hero-cat{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.8rem;display:flex;align-items:center;gap:8px}
 .article-hero-cat::before{content:'';display:block;width:16px;height:2px;background:var(--coral-light);border-radius:1px}
@@ -227,6 +227,8 @@ a{text-decoration:none;color:inherit}
 @media(max-width:1024px){.article-hero-inner{grid-template-columns:1fr}.hero-cta-box{display:none}.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -550,6 +552,8 @@ a{text-decoration:none;color:inherit}
       <strong>Hotel range:</strong> $120–$500/night (five-star resorts only)</p>
     </div>
 
+    <p class="pull-quote">"Non Nuoc Beach is the quieter, more exclusive southern stretch of Da Nang's coastline — where the InterContinental Sun Peninsula, Premier Village, and Naman Retreat sit. No street food vendors, no beach clubs with speakers. Just the South China Sea and 5-star service."</p>
+
     <h2 id="who-non-nuoc-is-for">Who Non Nuoc Is Actually For</h2>
     <p>To be direct about it: Non Nuoc is a resort-holiday beach. It's not a base for exploring a city. There's almost nothing within walking distance except the resort restaurants and a strip of beach. If you want to go out for dinner, you're calling a Grab. If you want street food at midnight, you're out of luck.</p>
     <p>That's not a criticism, it's just what it is. Non Nuoc suits you if:</p>
@@ -564,6 +568,8 @@ a{text-decoration:none;color:inherit}
     <p>For a full breakdown of all Da Nang areas, see the <a href="where-to-stay-in-da-nang.html">Where to Stay in Da Nang</a> guide. For all beachfront options across both beaches, see <a href="da-nang-beach-hotels.html">Da Nang Beach Hotels</a>.</p>
 
     <h2 id="faq">Frequently Asked Questions</h2>
+
+    <img class="scenic-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Da Nang Vietnam travel" loading="lazy" width="900" height="240">
 
     <h3>Is Non Nuoc Beach or My Khe Beach better?</h3>
     <p>Depends entirely on what you want. My Khe is better for eating out, walkability, and mid-range hotels. Non Nuoc is better for luxury resorts, calmer water, and proper decompression. If you're going to a five-star and planning to stay put, Non Nuoc is the right call. If you're doing a city trip with a beach component, My Khe gives you more options.</p>

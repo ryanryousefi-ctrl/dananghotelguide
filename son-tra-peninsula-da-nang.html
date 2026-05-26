@@ -88,7 +88,7 @@ a{text-decoration:none;color:inherit}
 .breadcrumb a{color:var(--ocean);transition:opacity .15s}
 .breadcrumb a:hover{opacity:.7}
 .breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
-.article-hero{background:var(--ocean-deep);color:#fff;padding:clamp(3rem,6vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem)}
+.article-hero{background:var(--ocean-deep);color:#fff;padding:clamp(3rem,6vw,5rem) var(--gutter) clamp(2.5rem,5vw,4rem);position:relative;overflow:hidden}.article-hero::before{content:"";position:absolute;inset:0;background-image:url("images/hotels/son-tra-peninsula-da-nang.jpg");background-size:cover;background-position:center;opacity:.45;z-index:0}.article-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.article-hero>*{position:relative;z-index:2}
 .article-hero-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:3rem;align-items:center}
 .article-hero-cat{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.8rem;display:flex;align-items:center;gap:8px}
 .article-hero-cat::before{content:'';display:block;width:16px;height:2px;background:var(--coral-light);border-radius:1px}

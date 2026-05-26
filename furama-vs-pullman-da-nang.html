@@ -584,9 +584,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 .cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
 .cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
 @media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
   <style>
-    .cmp-hero{background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center}
+    .cmp-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.cmp-hero::before{content:"";position:absolute;inset:0;background-image:url("images/luxury-hotels-da-nang-5c163732.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.cmp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.cmp-hero>*{position:relative;z-index:2}
     .cmp-hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:1rem;font-weight:600}
     .cmp-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem}
     .cmp-hero h1 em{font-style:italic;color:var(--coral-light)}
@@ -826,6 +828,8 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 
   <div class="cmp-section" id="amenities">
+    <p class="pull-quote">"Furama Resort vs Pullman Da Nang Beach Resort is a comparison between the pioneer and the modernist. Furama opened in 1997 and set the standard for Da Nang luxury. Pullman opened in 2016 with a more contemporary aesthetic. Both remain strong at their respective price points."</p>
+
     <h2>Amenities &amp; <em>Facilities</em></h2>
     <table class="cmp-table">
       <thead><tr><th>Amenity</th><th>Furama Resort Danang</th><th>Pullman Danang Beach Resort</th></tr></thead>
@@ -847,7 +851,9 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     <h2>Who Each Hotel <em>Is Best For</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
-        <h3>Choose Furama Resort Danang if&hellip;</h3>
+        <img class="scenic-img" src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Da Nang Vietnam travel" loading="lazy" width="900" height="240">
+
+    <h3>Choose Furama Resort Danang if&hellip;</h3>
         <ul>
           <li>You value character and atmosphere over modernity</li>
           <li>The lagoon pool and mature gardens appeal to you</li>

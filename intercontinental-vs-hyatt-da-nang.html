@@ -122,7 +122,7 @@ img{display:block;max-width:100%}
 .breadcrumb a{color:var(--ocean)}
 
 /* ── PAGE HERO ── */
-.cmp-hero{background:var(--ocean-deep);padding:3.5rem 0 3rem;color:#fff}
+.cmp-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.cmp-hero::before{content:"";position:absolute;inset:0;background-image:url("images/luxury-hotels-da-nang-79e68188.jpg");background-size:cover;background-position:center;opacity:.45;z-index:0}.cmp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.cmp-hero>*{position:relative;z-index:2}
 .cmp-hero-inner{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 .cmp-eyebrow{font-size:.73rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-bottom:.85rem;font-weight:600}
 .cmp-hero h1{font-family:var(--font-serif);font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:.9rem}
@@ -216,6 +216,8 @@ img{display:block;max-width:100%}
 .cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
 .cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
 @media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
 
   <script type="application/ld+json">
@@ -531,7 +533,9 @@ img{display:block;max-width:100%}
     </div>
 
     <div class="cmp-section">
-      <h2>Rooms &amp; <em>Suites</em></h2>
+      <p class="pull-quote">"InterContinental Sun Peninsula vs Hyatt Regency is the clearest luxury decision in Da Nang. The InterContinental is more exclusive, more dramatic, more cinematic — cliffside, private beach, architectural icon. The Hyatt is more beach-resort, more family-friendly, more accessible. Both justify their rate."</p>
+
+    <h2>Rooms &amp; <em>Suites</em></h2>
       
       <p>InterContinental rooms start at 65 sqm for a Garden View Room and go up through Panoramic Ocean Villas and the Heavenly Penthouse. Every room benefits from the setting, even a standard room has forested hillside or ocean views. The design is rich and theatrical: dark wood, Vietnamese motifs, Bensley's signature maximalism. Plunge pools appear from Club category upward.</p>
       <p>Hyatt Regency standard rooms start at 58 sqm, generous, clean, and well-configured. Villa categories include private plunge pools and direct garden access. The design is resort-conventional: pleasant, functional, and unlikely to generate Instagram content. The Club Rooms unlock rooftop lounge access, which is the single most worthwhile upgrade in this price tier, sundowners with ocean views across Non Nuoc are exceptional.</p>
@@ -547,7 +551,9 @@ img{display:block;max-width:100%}
     </div>
 
     <div class="cmp-section">
-      <h2>Who Each Hotel is <em>Best For</em></h2>
+      <img class="scenic-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Da Nang Vietnam travel" loading="lazy" width="900" height="240">
+
+    <h2>Who Each Hotel is <em>Best For</em></h2>
       
       <p><strong>Choose the InterContinental if:</strong> you are on a honeymoon, celebrating an anniversary, travelling as a couple, want total immersion, value extraordinary design and dining over pure beach access, and won't regret paying the premium.</p>
       <p><strong>Choose the Hyatt Regency if:</strong> you are travelling with children, want better beach access, prefer a more accessible price point, or need the operational reliability of a large resort rather than the personality of a smaller one. The value-per-dollar is also meaningfully better.</p>

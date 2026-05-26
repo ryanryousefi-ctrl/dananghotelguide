@@ -250,7 +250,7 @@ a{text-decoration:none;color:inherit}
 .footer-legal-links a:hover{color:rgba(255,255,255,.75)}
 
 /* ─── HERO ───────────────────────────────────────────────── */
-.guide-hero{position:relative;overflow:hidden;background:var(--ocean-deep);min-height:380px;display:flex;align-items:flex-end}
+.guide-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.guide-hero::before{content:"";position:absolute;inset:0;background-image:url("images/da-nang-beach-hotels-30b63280.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.guide-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.guide-hero>*{position:relative;z-index:2}
 .guide-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
 .guide-hero-content{position:relative;z-index:2;padding:clamp(2.5rem,5vw,4rem) var(--gutter);max-width:var(--max);margin:0 auto;width:100%}
 .guide-kicker{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.9rem}
@@ -327,6 +327,8 @@ a{text-decoration:none;color:inherit}
 @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.article-sidebar{position:static}}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -664,6 +666,8 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- SECTION 5 -->
+    <p class="pull-quote">"Da Nang has become one of Southeast Asia's most popular destinations for Russian travelers — direct flights from Moscow and Vladivostok, warm weather year-round, and some of the best-value beachfront accommodation in the region."</p>
+
     <h2>Food Russian Travelers Should Try</h2>
 
     <img class="section-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&h=394&fit=crop&q=80" alt="Vietnamese seafood restaurant Da Nang" width="900" height="394" loading="lazy">
@@ -734,6 +738,8 @@ a{text-decoration:none;color:inherit}
     <p>A forested mountain peninsula 10 km north of the city centre, offering jungle drives, wildlife (including rare douc langurs), viewpoints over Da Nang Bay, and the Linh Ung Pagoda with its 67-metre Lady Buddha. Hire a motorbike for the morning or take a Grab to the summit. The peninsula also hosts the InterContinental resort for travelers who want a more secluded beach experience.</p>
 
     <!-- SECTION 8 -->
+    <img class="scenic-img" src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang scenic view travel guide" loading="lazy" width="900" height="240">
+
     <h2>Cost of Travel in Da Nang</h2>
 
     <p>Da Nang is one of Southeast Asia's best-value beach destinations. The table below gives approximate daily cost ranges in USD.</p>
