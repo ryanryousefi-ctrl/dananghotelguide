@@ -1,244 +1,100 @@
 /*
- * cta-polish.css — Phase 8 Premium CTA Redesign
- * Sitewide override layer for all booking/CTA button classes.
- * Loaded after per-page styles; uses specificity to override inline CSS.
+ * cta-polish.css — Phase 8 Premium CTA Redesign (white button update)
+ * Sitewide override layer for all booking/affiliate CTA button classes.
+ * Loaded after per-page styles; uses !important to override inline page CSS.
  * NEVER modify affiliate links, hrefs, tracking params, or button destinations.
  */
 
-/* ─── CSS Custom Properties (fallbacks if root vars not set) ──────────────── */
+/* ─── Shared white-button variables ───────────────────────────────────────── */
 :root {
-  --cta-coral:        #C8604A;
-  --cta-coral-dark:   #b05240;
-  --cta-coral-light:  #d97561;
-  --cta-ocean:        #1B5C5C;
-  --cta-ocean-dark:   #134444;
-  --cta-ocean-light:  #226e6e;
-  --cta-shadow-coral: 0 4px 16px rgba(200,96,74,.32), 0 1px 4px rgba(0,0,0,.12);
-  --cta-shadow-ocean: 0 4px 16px rgba(27,92,92,.28), 0 1px 4px rgba(0,0,0,.10);
-  --cta-shadow-hover: 0 8px 24px rgba(200,96,74,.38), 0 2px 8px rgba(0,0,0,.14);
-  --cta-transition:   background .2s ease, transform .18s ease, box-shadow .2s ease;
+  --cta-bg:           #ffffff;
+  --cta-text:         #073f3d;
+  --cta-border:       rgba(7, 63, 61, 0.18);
+  --cta-shadow:       0 2px 8px rgba(7,63,61,.10), 0 1px 3px rgba(0,0,0,.07);
+  --cta-shadow-hover: 0 8px 22px rgba(7,63,61,.16), 0 2px 6px rgba(0,0,0,.09);
+  --cta-transition:   background .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   --cta-radius-pill:  100px;
   --cta-radius-md:    10px;
 }
 
-/* ─── PRIMARY CORAL CTAs ──────────────────────────────────────────────────── */
-/* Classes: .nav-stays-btn, .sc-book-btn, .verdict-book-btn, .btn-book,
-            .cta-block-btn, .cta-box-btn, .cta-band-btn, .hero-cta,
-            .hotel-card-cta (coral variant) */
+/* ─── MASTER WHITE BUTTON RESET ───────────────────────────────────────────── */
+/* Every booking/affiliate CTA class gets white background, dark teal text.   */
 
 .nav-stays-btn,
 .verdict-book-btn,
 .btn-book,
 .cta-block-btn,
 .cta-box-btn,
-.cta-band-btn {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  letter-spacing: .015em;
-  box-shadow: var(--cta-shadow-coral) !important;
-  transition: var(--cta-transition) !important;
+.cta-band-btn,
+.hotel-card-cta,
+.hotel-book-btn,
+.hotel-btn,
+.boutique-btn,
+.hbtn,
+.hc-btn,
+.sidebar-cta-btn,
+.booking-button,
+.sc-book-btn,
+.price-check-btn,
+.mobile-cta-bar-btn,
+.premium-cta-primary,
+.premium-booking-btn,
+.premium-cta-secondary,
+.premium-hero-cta,
+a[href*="booking.com"],
+a[href*="awin1.com"] {
+  background: var(--cta-bg, #ffffff) !important;
+  color: var(--cta-text, #073f3d) !important;
+  border: 1px solid var(--cta-border, rgba(7,63,61,.18)) !important;
+  box-shadow: var(--cta-shadow) !important;
+  font-weight: 800 !important;
   text-decoration: none !important;
-  border: none !important;
+  transition: var(--cta-transition) !important;
+  letter-spacing: .012em !important;
 }
+
+/* ─── SHARED HOVER STATE ──────────────────────────────────────────────────── */
 
 .nav-stays-btn:hover,
 .verdict-book-btn:hover,
 .btn-book:hover,
 .cta-block-btn:hover,
 .cta-box-btn:hover,
-.cta-band-btn:hover {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--cta-shadow-hover) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* Verdict/comparison page booking buttons — slightly larger */
-.verdict-book-btn {
-  padding: 13px 26px !important;
-  font-size: .9rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-}
-
-.verdict-book-btn:hover {
-  transform: translateY(-2px) scale(1.01) !important;
-}
-
-/* Standard inline book buttons */
-.btn-book {
-  padding: 11px 24px !important;
-  font-size: .87rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-}
-
-/* CTA block/band — full-width section buttons */
-.cta-block-btn {
-  padding: 13px 30px !important;
-  font-size: .92rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-}
-
-.cta-box-btn {
-  padding: 12px 26px !important;
-  font-size: .88rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-}
-
-/* ─── HOTEL CARD CTAs ─────────────────────────────────────────────────────── */
-/* .hotel-card-cta appears in coral AND ocean variants per page */
-
-.hotel-card-cta {
-  font-weight: 700 !important;
-  letter-spacing: .01em !important;
-  padding: 10px 20px !important;
-  font-size: .83rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-  box-shadow: 0 3px 10px rgba(0,0,0,.14) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-}
-
-.hotel-card-cta:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 18px rgba(0,0,0,.18) !important;
-  text-decoration: none !important;
-}
-
-/* ─── OCEAN/SECONDARY CTAs ────────────────────────────────────────────────── */
-/* Classes: .hotel-book-btn, .hotel-btn, .boutique-btn, .hbtn, .hc-btn,
-            .sidebar-cta-btn, .booking-button */
-
-.hotel-book-btn,
-.hotel-btn,
-.boutique-btn,
-.hbtn,
-.hc-btn {
-  background: var(--cta-ocean, #1B5C5C) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  letter-spacing: .01em !important;
-  box-shadow: var(--cta-shadow-ocean) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  border: none !important;
-}
-
+.cta-band-btn:hover,
+.hotel-card-cta:hover,
 .hotel-book-btn:hover,
 .hotel-btn:hover,
 .boutique-btn:hover,
 .hbtn:hover,
-.hc-btn:hover {
-  background: var(--cta-ocean-light, #226e6e) !important;
+.hc-btn:hover,
+.sidebar-cta-btn:hover,
+.booking-button:hover,
+.sc-book-btn:hover,
+.price-check-btn:hover,
+.mobile-cta-bar-btn:hover,
+.mobile-cta-bar-btn:active,
+.premium-cta-primary:hover,
+.premium-booking-btn:hover,
+.premium-cta-secondary:hover,
+.premium-hero-cta:hover,
+a[href*="booking.com"]:hover,
+a[href*="awin1.com"]:hover {
+  background: #f5fafa !important;
+  color: var(--cta-text, #073f3d) !important;
+  border-color: rgba(7,63,61,.32) !important;
+  box-shadow: var(--cta-shadow-hover) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(27,92,92,.34), 0 2px 8px rgba(0,0,0,.12) !important;
-  color: #fff !important;
   text-decoration: none !important;
 }
 
-.hotel-book-btn {
-  padding: 10px 16px !important;
-  font-size: .8rem !important;
-  border-radius: var(--cta-radius-pill) !important;
-}
+/* ─── PER-CLASS SIZING & SHAPE ────────────────────────────────────────────── */
 
-.hc-btn {
+/* Nav button — pill, compact */
+.nav-stays-btn {
+  border-radius: var(--cta-radius-pill) !important;
   padding: 9px 18px !important;
   font-size: .8rem !important;
-  border-radius: var(--cta-radius-pill) !important;
 }
-
-/* Sidebar CTA — block-level, full width */
-.sidebar-cta-btn {
-  background: var(--cta-ocean, #1B5C5C) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  font-size: .85rem !important;
-  padding: 12px 16px !important;
-  border-radius: var(--cta-radius-md) !important;
-  box-shadow: var(--cta-shadow-ocean) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  display: block !important;
-  text-align: center !important;
-  letter-spacing: .01em;
-}
-
-.sidebar-cta-btn:hover {
-  background: var(--cta-ocean-light, #226e6e) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 20px rgba(27,92,92,.32) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* Generic .booking-button */
-.booking-button {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  letter-spacing: .012em !important;
-  box-shadow: var(--cta-shadow-coral) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.booking-button:hover {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--cta-shadow-hover) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* ─── SCORECARD BOOK BUTTON ───────────────────────────────────────────────── */
-/* .sc-book-btn — full-width comparison scorecard CTA */
-
-.sc-book-btn {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  font-size: .9rem !important;
-  letter-spacing: .012em !important;
-  padding: 14px 16px !important;
-  border-radius: 10px !important;
-  box-shadow: var(--cta-shadow-coral) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.sc-book-btn:hover {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--cta-shadow-hover) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* ─── HOTEL SCORE BUTTON ──────────────────────────────────────────────────── */
-/* .hs-btn — inline text CTA within hotel score cards */
-
-.hs-btn {
-  font-weight: 700 !important;
-  font-size: .8rem !important;
-  color: var(--cta-coral, #C8604A) !important;
-  text-decoration: underline !important;
-  text-underline-offset: 2px !important;
-  transition: color .18s ease !important;
-  letter-spacing: .01em !important;
-}
-
-.hs-btn:hover {
-  color: var(--cta-coral-dark, #b05240) !important;
-  text-decoration: underline !important;
-}
-
-/* ─── NAV STAYS BUTTON ────────────────────────────────────────────────────── */
-/* .nav-stays-btn already overridden in PRIMARY CORAL block above */
-/* Extra specificity for nav context */
 
 nav .nav-stays-btn,
 .sticky-nav .nav-stays-btn {
@@ -246,164 +102,203 @@ nav .nav-stays-btn,
   padding: 9px 18px !important;
 }
 
-/* ─── PRICE CHECK BUTTONS (premium.css pages) ─────────────────────────────── */
+/* Verdict/comparison — pill, slightly larger */
+.verdict-book-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 13px 26px !important;
+  font-size: .9rem !important;
+}
 
+.verdict-book-btn:hover {
+  transform: translateY(-2px) scale(1.01) !important;
+}
+
+/* Standard inline book */
+.btn-book {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 11px 24px !important;
+  font-size: .87rem !important;
+}
+
+/* CTA section block */
+.cta-block-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 13px 30px !important;
+  font-size: .92rem !important;
+}
+
+.cta-box-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 12px 26px !important;
+  font-size: .88rem !important;
+}
+
+/* Hotel card CTA */
+.hotel-card-cta {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 20px !important;
+  font-size: .83rem !important;
+}
+
+/* Hotel book / secondary hotel buttons */
+.hotel-book-btn,
+.hotel-btn,
+.boutique-btn,
+.hbtn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 10px 18px !important;
+  font-size: .82rem !important;
+}
+
+.hc-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 9px 18px !important;
+  font-size: .8rem !important;
+}
+
+/* Sidebar — block, full width, rounded rect */
+.sidebar-cta-btn {
+  border-radius: var(--cta-radius-md) !important;
+  padding: 12px 16px !important;
+  font-size: .85rem !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+/* Scorecard full-width button */
+.sc-book-btn {
+  border-radius: var(--cta-radius-md) !important;
+  padding: 14px 16px !important;
+  font-size: .9rem !important;
+}
+
+/* Price check */
 .price-check-btn {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  font-size: .85rem !important;
-  letter-spacing: .015em !important;
+  border-radius: var(--cta-radius-pill) !important;
   padding: 12px 24px !important;
-  border-radius: var(--cta-radius-pill) !important;
-  box-shadow: var(--cta-shadow-coral) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.price-check-btn:hover {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: var(--cta-shadow-hover) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-/* ─── MOBILE CTA BAR ──────────────────────────────────────────────────────── */
-
-.mobile-cta-bar-btn {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  font-weight: 700 !important;
   font-size: .85rem !important;
-  letter-spacing: .015em !important;
-  padding: 12px 20px !important;
-  border-radius: var(--cta-radius-pill) !important;
-  box-shadow: 0 3px 12px rgba(200,96,74,.3) !important;
-  transition: var(--cta-transition) !important;
-  text-decoration: none !important;
-  border: none !important;
 }
 
-.mobile-cta-bar-btn:hover,
-.mobile-cta-bar-btn:active {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 5px 16px rgba(200,96,74,.38) !important;
-  color: #fff !important;
+/* Mobile CTA bar */
+.mobile-cta-bar-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 12px 20px !important;
+  font-size: .85rem !important;
+}
+
+/* Hero CTA — largest */
+.premium-hero-cta {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 16px 36px !important;
+  font-size: 1rem !important;
+}
+
+/* Premium utility sizes */
+.premium-cta-primary,
+.premium-booking-btn {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 13px 28px !important;
+  font-size: .9rem !important;
+}
+
+.premium-cta-secondary {
+  border-radius: var(--cta-radius-pill) !important;
+  padding: 12px 26px !important;
+  font-size: .88rem !important;
+}
+
+/* ─── HOTEL SCORE BUTTON — inline text link ───────────────────────────────── */
+/* .hs-btn is a text link inside a score widget, not a filled button          */
+
+.hs-btn {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--cta-text, #073f3d) !important;
+  font-weight: 700 !important;
+  font-size: .8rem !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+  text-decoration-color: rgba(7,63,61,.4) !important;
+  transition: color .18s ease, text-decoration-color .18s ease !important;
+  letter-spacing: .01em !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.hs-btn:hover {
+  background: transparent !important;
+  color: #0a5452 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(7,63,61,.7) !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 /* ─── DECISION BUTTONS (premium.css pages) ────────────────────────────────── */
 
 .decision-btn {
-  font-weight: 700 !important;
-  letter-spacing: .015em !important;
+  font-weight: 800 !important;
+  letter-spacing: .012em !important;
   transition: var(--cta-transition) !important;
 }
 
 .decision-btn.primary,
-.decision-btn.coral {
-  background: var(--cta-coral, #C8604A) !important;
-  color: #fff !important;
-  box-shadow: var(--cta-shadow-coral) !important;
+.decision-btn.coral,
+.decision-btn.outline {
+  background: var(--cta-bg, #ffffff) !important;
+  color: var(--cta-text, #073f3d) !important;
+  border: 1px solid var(--cta-border, rgba(7,63,61,.18)) !important;
+  box-shadow: var(--cta-shadow) !important;
 }
 
 .decision-btn.primary:hover,
-.decision-btn.coral:hover {
-  background: var(--cta-coral-dark, #b05240) !important;
-  transform: translateY(-2px) !important;
+.decision-btn.coral:hover,
+.decision-btn.outline:hover {
+  background: #f5fafa !important;
+  border-color: rgba(7,63,61,.32) !important;
   box-shadow: var(--cta-shadow-hover) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* ─── PREMIUM REUSABLE CLASSES ────────────────────────────────────────────── */
-/* New utility classes for future pages and upgrades */
 
 .premium-cta {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   font-family: inherit;
-  font-weight: 700;
-  letter-spacing: .015em;
+  font-weight: 800;
+  letter-spacing: .012em;
   text-decoration: none;
-  border: none;
   cursor: pointer;
   transition: var(--cta-transition);
   white-space: nowrap;
 }
 
-.premium-cta-primary,
-.premium-booking-btn {
-  background: var(--cta-coral, #C8604A);
-  color: #fff;
-  padding: 13px 28px;
-  font-size: .9rem;
-  border-radius: var(--cta-radius-pill);
-  box-shadow: var(--cta-shadow-coral);
-}
-
-.premium-cta-primary:hover,
-.premium-booking-btn:hover {
-  background: var(--cta-coral-dark, #b05240);
-  transform: translateY(-2px);
-  box-shadow: var(--cta-shadow-hover);
-  color: #fff;
-  text-decoration: none;
-}
-
-.premium-cta-secondary {
-  background: var(--cta-ocean, #1B5C5C);
-  color: #fff;
-  padding: 12px 26px;
-  font-size: .88rem;
-  border-radius: var(--cta-radius-pill);
-  box-shadow: var(--cta-shadow-ocean);
-}
-
-.premium-cta-secondary:hover {
-  background: var(--cta-ocean-light, #226e6e);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(27,92,92,.34);
-  color: #fff;
-  text-decoration: none;
-}
-
 .premium-inline-cta {
-  background: transparent;
-  color: var(--cta-coral, #C8604A);
-  padding: 0;
-  font-size: inherit;
-  border-radius: 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  box-shadow: none;
+  background: transparent !important;
+  color: var(--cta-text, #073f3d) !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  border-radius: 0 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  font-weight: 700 !important;
+  transform: none !important;
 }
 
 .premium-inline-cta:hover {
-  color: var(--cta-coral-dark, #b05240);
-  text-decoration: underline;
+  background: transparent !important;
+  color: #0a5452 !important;
+  text-decoration: underline !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
-.premium-hero-cta {
-  background: var(--cta-coral, #C8604A);
-  color: #fff;
-  padding: 16px 36px;
-  font-size: 1rem;
-  border-radius: var(--cta-radius-pill);
-  box-shadow: 0 6px 24px rgba(200,96,74,.4), 0 2px 8px rgba(0,0,0,.15);
-  letter-spacing: .02em;
-}
-
-.premium-hero-cta:hover {
-  background: var(--cta-coral-dark, #b05240);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 32px rgba(200,96,74,.45), 0 4px 12px rgba(0,0,0,.16);
-  color: #fff;
-  text-decoration: none;
-}
-
-/* ─── ACTIVE / FOCUS STATES (accessibility) ───────────────────────────────── */
+/* ─── FOCUS / ACCESSIBILITY ───────────────────────────────────────────────── */
 
 .nav-stays-btn:focus-visible,
 .verdict-book-btn:focus-visible,
@@ -417,7 +312,7 @@ nav .nav-stays-btn,
 .hotel-card-cta:focus-visible,
 .premium-cta-primary:focus-visible,
 .premium-booking-btn:focus-visible {
-  outline: 3px solid rgba(200,96,74,.6) !important;
+  outline: 3px solid rgba(7,63,61,.45) !important;
   outline-offset: 3px !important;
 }
 
@@ -451,7 +346,6 @@ nav .nav-stays-btn,
     min-height: 42px !important;
   }
 
-  /* Reduce hover transforms on touch — they don't apply but keep for consistency */
   .premium-hero-cta {
     padding: 15px 28px !important;
     font-size: .95rem !important;
