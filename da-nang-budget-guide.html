@@ -232,6 +232,20 @@ a{text-decoration:none;color:inherit}
 .section-img-wrap img{width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s ease;}
 .section-img-wrap:hover img{transform:scale(1.025);}
 .img-caption{font-size:.72rem;color:var(--ink-muted,#888);padding:.5rem .8rem;text-align:right;font-style:italic;}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 <meta name="robots" content="index, follow">
 <!-- Google tag (gtag.js) -->
@@ -384,7 +398,10 @@ a{text-decoration:none;color:inherit}
       <p class="img-caption">Da Nang's street food scene is one of Southeast Asia's most underrated — and easiest on the wallet.</p>
     </div>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>My real daily spend in Da Nang as a resident runs 400,000-600,000 VND ($16-24 USD) — that's three local meals, Grab rides, and coffee. Tourists spend more because they gravitate to tourist-priced restaurants. The gap between local and tourist pricing here is real but easy to close.</div>
+
     <h2>Accommodation Costs</h2>
+    <div class="vibe-bar"><span class="vibe-pill green">Hostel/Budget: $10-25/night</span><span class="vibe-pill green">Mid-range: $40-90/night</span><span class="vibe-pill gold">Luxury resort: $150-350/night</span><span class="vibe-pill red">High season: +30-50%</span></div>
     <div class="cost-category">
       <div class="cost-cat-header">
         <span class="cost-cat-name">🏨 Hotels & Accommodation</span>
@@ -449,6 +466,8 @@ a{text-decoration:none;color:inherit}
 
     <div class="highlight-box"><p><strong>Food cost reality:</strong> A day of eating entirely at local spots, breakfast bánh mì, lunch mì Quảng, dinner pho with a local beer, costs under 200,000 VND (USD 8) and the food is excellent. Moving to tourist-strip restaurants doubles or triples this without a proportional quality gain. The best food in Da Nang is consistently at the cheapest end of the price range.</p><p style="margin-top:.75rem;"><strong>Timing matters:</strong> Local breakfast spots are best between 6am and 9am. Lunch spots peak from 11am to 1pm and many close by 2pm. If you arrive at a plastic-stool shop at 3pm expecting fresh mì Quảng, you will often find empty pots. Plan eating times like a local, not like a tourist on a flexible schedule.</p></div>
 
+    <p class="pull-quote">A bowl of Mi Quang at a local spot costs 35,000-50,000 VND. The same dish at a restaurant with English menus costs 80,000-120,000 VND. Both are good. The difference is about $2. Over 7 days, eating local saves you $30-50 — enough for an extra night.</p>
+
     <h2>Transport Costs</h2>
     <div class="cost-category">
       <div class="cost-cat-header">
@@ -500,6 +519,8 @@ a{text-decoration:none;color:inherit}
         </table>
       </div>
     </div>
+
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Ba Na Hills is the biggest single splurge at ~850,000 VND ($34) for the cable car and Golden Bridge entry. Book online for a small discount. Every other major sight in Da Nang — beaches, Dragon Bridge, Marble Mountains, Son Tra — is free or under 40,000 VND.</div>
 
     <h2>Sample 7-Night Budget: Mid-Range Traveller</h2>
     <p>A realistic 7-night Da Nang trip for one person, mid-range 3-star hotel on the My Khe strip, mix of local and tourist restaurants, Grab for most transport, with the major day trips included.</p>
@@ -605,6 +626,8 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
     </div>
+
+    <div class="warn-callout"><div class="local-callout-label">Watch Out</div>The biggest budget mistake in Da Nang: booking a My Khe Beach hotel, then spending every meal at beach restaurants charging tourist prices. Walk two blocks inland to An Thuong Street and prices drop 40-60%. You're not compromising on quality — you're eating where the expats eat.</div>
 
     <div class="highlight-box"><p>
       → <a href="da-nang-hotel-prices-by-month.html"><strong>Hotel Price Index</strong></a>, month-by-month hotel pricing across all tiers.<br>

@@ -220,6 +220,20 @@ a{text-decoration:none;color:inherit}
   .transport-grid,.info-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
 }
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -358,6 +372,8 @@ a{text-decoration:none;color:inherit}
       <p class="img-caption">Grab is the fastest and cheapest option from the airport — the official taxi queue is slower and pricier.</p>
     </div>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>Da Nang Airport is compact — international arrivals, SIM kiosks, and the Grab pickup zone are all within a 5-minute walk of each other. If you've flown through Bangkok or Kuala Lumpur, this will feel surprisingly simple.</div>
+
     <h2>Step-by-Step: Landing to Grab in Under an Hour</h2>
     <p>On a smooth day, you'll be in a car heading to your hotel within 30–40 minutes of touching down. Here's exactly what happens:</p>
 
@@ -369,6 +385,8 @@ a{text-decoration:none;color:inherit}
       <div class="step-row"><div class="step-num">5</div><div class="step-content"><div class="step-title">Currency, Change a small amount, nothing more</div><div class="step-desc">Exchange counters are in the arrivals hall but the rates aren't great (2–4% worse than the city). Change just enough for your first few hours, 500,000 to 1,000,000 VND is plenty. Vietcombank and BIDV ATMs are also in the hall if you'd rather withdraw. Do your real currency exchange at a city-centre office later.</div></div></div>
       <div class="step-row"><div class="step-num">6</div><div class="step-content"><div class="step-title">Grab, Cross the street, ignore everyone else</div><div class="step-desc">Open Grab, enter your hotel address, and walk straight through the terminal exit. The Grab and ride-hailing pickup zone is directly across the street, clearly signed, about a 30-second walk. Your driver's plate and car colour show in the app. Match them up before you get in anything. And if anyone inside the terminal approaches you offering a ride before you even get outside? Walk past them. More on this below.</div></div></div>
     </div>
+
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1436491865332-7a61d2539077?w=900&h=240&fit=crop&q=75" alt="Da Nang International Airport terminal exterior" width="900" height="240" loading="lazy">
 
     <h2>The Only Transport Advice You Actually Need</h2>
 
@@ -432,6 +450,8 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
 
+    <div class="warn-callout"><div class="local-callout-label">Watch Out</div>Taxi touts inside and outside arrivals will approach you immediately after you exit customs. Prices are non-negotiable and always higher than Grab. The legitimate Grab pickup zone is at the far left of the ground floor — ignore anyone who approaches you before you reach it.</div>
+
     <h2>Grab Pricing: Airport to Key Areas</h2>
     <p>These are real-world estimates as of 2026. Prices can vary slightly by car type (GrabCar vs GrabCar Plus) and surge conditions, but these numbers are what you should expect on a normal day.</p>
     <table class="distance-table">
@@ -473,11 +493,15 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
 
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Viettel and Vinaphone both have kiosks in international arrivals. Get a 10-day or 30-day data SIM for 150,000-250,000 VND ($6-10). They'll set it up for you on the spot. Without a working SIM, you can't call a Grab — and airport WiFi is unreliable.</div>
+
     <h2>Currency Exchange</h2>
     <p>The Vietnamese Dong (VND) isn't convertible outside Vietnam, so you'll need to get some on arrival. Two options in the arrivals hall:</p>
     <p><strong>Exchange counters:</strong> Convenient, open for all flights, but rates run 2–4% below the mid-market rate. Change just enough to get you through the first day, 500,000 to 1,000,000 VND covers your Grab, a meal, and incidentals without burning money on bad rates.</p>
     <p><strong>ATMs:</strong> Vietcombank and BIDV machines in the arrivals hall give better effective rates for most international cards, with fees of around 33,000–44,000 VND per transaction. Your home bank's foreign transaction fee applies separately. Withdrawal limits are typically 3,000,000–5,000,000 VND per transaction.</p>
     <div class="highlight-box"><p><strong>Best approach:</strong> Grab just enough at the airport ATM for your first 24 hours. Once you're settled, find a Vietcombank or BIDV branch or a reputable exchange office on the tourist strip for better rates. And whatever you do, don't exchange currency at your hotel, they consistently offer the worst rates of anyone in the city.</p></div>
+
+    <p class="pull-quote">The airport exchange rate is fine. Don't wait for a 'better' rate in the city — the difference on $500 is maybe $5, and you'll need cash immediately for SIM cards and Grab if you're paying cash.</p>
 
     <h2>Luggage Storage</h2>
     <p>Airport-operated luggage storage is available in both the arrivals and departures areas, running approximately 30,000–50,000 VND per bag per day, with lockers in small and large sizes. Most useful if you're landing and heading straight to Hoi An for the day before checking in, drop your bags here and travel light.</p>

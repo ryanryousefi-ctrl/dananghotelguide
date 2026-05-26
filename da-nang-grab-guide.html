@@ -166,6 +166,20 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}#mobileStickyBar{display:flex!important;}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Da Nang Grab Guide 2026 — Prices, Tips, and How It Works","description":"Everything you need to know about using Grab in Da Nang 2026. Prices, how to book, airport rides, tips, and when to take a taxi instead.","url":"https://www.dananghotelguide.com/da-nang-grab-guide.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -306,6 +320,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <div class="info-box">
       <p><strong>Download before you land:</strong> The app is free on iOS and Android. Create your account and add a payment method at home. Vietnamese phone numbers are not required - you can register with an international number. Having it ready before you clear customs saves time and removes one stress point from arrival.</p>
     </div>
+
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>The app defaults to your GPS location, which is fine most of the time. At the airport, pin yourself to the official taxi rank near Door 3 — if you drop the pin inside the terminal Grab drivers can't reach you.</div>
   </div>
 
   <div class="page-section" id="prices">
@@ -382,10 +398,19 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <div class="warn-box">
       <p><strong>DIFF surge warning:</strong> During DIFF fireworks nights the entire Han River area becomes a traffic and surge pricing nightmare. If you are staying near My Khe and want to watch the fireworks from the river area, plan to walk or budget $20+ for a round-trip GrabCar. It is not worth trying to grab a bike home in the crowd immediately after the show ends.</p>
     </div>
+
+    <div class="warn-callout"><div class="local-callout-label">Watch Out</div>If the app quotes over 200,000 VND for a short city trip, close and reopen the app in 5 minutes. Surge pricing clears fast once the rush passes. Accepting surge gets you nowhere faster.</div>
   </div>
 
   <div class="page-section" id="grabcar-vs-grabbike">
     <h2><em>GrabCar vs GrabBike</em> - When to Use Each</h2>
+
+    <div class="vibe-bar">
+  <span class="vibe-pill green">Solo traveler: GrabBike</span>
+  <span class="vibe-pill green">With luggage: GrabCar</span>
+  <span class="vibe-pill">Group of 3+: GrabCar XL</span>
+  <span class="vibe-pill gold">Late night: GrabCar only</span>
+</div>
 
     <h3>GrabBike</h3>
     <p>GrabBike is a motorbike taxi. One passenger, light luggage only. The driver provides a helmet. It is faster in traffic because motorbikes filter through congestion that cars sit in. It is also significantly cheaper - around half the GrabCar price for the same route.</p>
@@ -427,6 +452,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <div class="info-box">
       <p><strong>Late arrivals:</strong> Grab works at all hours at Da Nang airport, but driver availability after midnight is thinner. If you land after 1am, be prepared for a possible 10-15 minute wait. Metered taxis are always queued outside arrivals - Vinasun and Mai Linh are both legitimate and metered.</p>
     </div>
+
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>The airport Grab pickup zone moved in 2024. Exit arrivals, walk past the taxi rank, and look for the blue Grab sign at the far left of the pickup area. It's a 3-minute walk from the terminal exit.</div>
   </div>
 
   <div class="page-section" id="alternatives">
@@ -453,6 +480,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>The one situation where I skip Grab entirely is late-night DIFF. After the fireworks end, the Han River area sees a surge of people all trying to book rides simultaneously. Prices triple. I walk a kilometre away from the crowd first, then book - prices are usually back to normal within 15 minutes of clearing the main area.</p>
     <p>If you are going to Hoi An for a day trip, Grab works fine for the outbound journey. Getting back is trickier - Grab availability in Hoi An's old town is lower, and surge pricing is common in the late afternoon. Consider booking a return private transfer from your hotel, or accept that the Grab home may cost $15-20 on a busy day.</p>
   </div>
+
+  <p class="pull-quote">Grab isn't just convenient — it's how you learn where things are. After two weeks of Grab rides, you'll have a mental map of Da Nang that no guidebook gives you.</p>
 
 </div>
 </main>

@@ -293,6 +293,20 @@ a{text-decoration:none;color:inherit}
   .aff-callout{flex-direction:column;align-items:flex-start}
   .climate-mini{grid-template-columns:repeat(2,1fr)}
 }
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -389,6 +403,8 @@ a{text-decoration:none;color:inherit}
     <p>December and January are transitional — the monsoon has cleared but the sea is still settling, leaving a cooler, occasionally overcast city that works for cultural tourism but not beach holidays. The gap between the "best" month (March: 22mm average rainfall) and the "worst" month (October: 620mm) is not rhetorical — it represents a genuine difference in what's possible on any given day.</p>
     <p>This guide is based on VNMHA long-term climate averages and reflects actual visitor conditions rather than promotional messaging. For monthly detail, see the <a href="da-nang-weather-by-month.html">Da Nang weather by month guide</a>.</p>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>I've lived here through 5 full weather cycles. The simple version: February-May is the sweet spot — warm, dry, not yet brutally hot. March and April are genuinely perfect beach weather. June-August is hot and humid but the beach is still good. September-November is rainy season — expect afternoon downpours and occasionally real storms.</div>
+
     <!-- AFFILIATE CALLOUT 1 -->
     <div class="aff-callout">
       <div class="aff-callout-text">
@@ -400,6 +416,13 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <h2 id="best-months">Best Months to Visit Da Nang</h2>
+
+    <div class="vibe-bar">
+      <span class="vibe-pill green">Mar-May: Prime season</span>
+      <span class="vibe-pill green">Jun-Aug: Hot but good</span>
+      <span class="vibe-pill red">Sep-Nov: Rainy/storms</span>
+      <span class="vibe-pill gold">Dec-Feb: Cool &amp; dry</span>
+    </div>
 
     <div class="table-wrap">
       <table class="data-table season-table">
@@ -443,6 +466,8 @@ a{text-decoration:none;color:inherit}
       <p>Hoi An, 30 minutes south and a common day trip from Da Nang, has the same seasonal pattern. The Fireworks Festival in late April–June brings large crowds to the <a href="da-nang-riverfront-hotels.html">Han River</a> on competition evenings. If you're planning to attend, book accommodation in Da Nang or Hoi An well ahead of the competition dates.</p>
     </div>
 
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1533130061673-d130b1e1ab0c?w=900&h=240&fit=crop&q=75" alt="Da Nang beach in dry season, clear skies and calm water" width="900" height="240" loading="lazy">
+
     <h2 id="rainy">Rainy Season: September through November</h2>
 
     <p>The northeast monsoon arrives in September, driven by weather patterns that drop 280mm of rain over the month — a threefold increase from August's 100mm. October is the peak: 620mm in 31 days, more than London receives in an entire year. November improves in its second half but remains unreliable. Beach swimming is unsafe during red-flag periods; the ocean is rough and the flags are taken seriously by hotels and lifeguards.</p>
@@ -466,6 +491,8 @@ a{text-decoration:none;color:inherit}
         <p class="area-desc">Shoulder season pricing (15–25% below peak), best beach conditions of the year, no school holiday crowds. The sweet spot for most visitors.</p>
       </div>
     </div>
+
+    <p class="pull-quote">October is the cheapest month in Da Nang. Hotels run 30-40% below peak rates. The trade-off is real — it rains, sometimes heavily. But if you can handle an afternoon downpour and plan indoor activities, the value is exceptional.</p>
 
     <h2 id="beach">Best Time for Da Nang Beaches</h2>
 
@@ -492,6 +519,8 @@ a{text-decoration:none;color:inherit}
       <div class="info-box-label">🗓️ Festival booking note</div>
       <p>The Da Nang International Fireworks Festival draws large crowds on competition evenings. Hotels in the riverside area and near the Han Bridge fill weeks in advance on event nights. If you're planning to attend, book Da Nang accommodation alongside securing tickets, not afterwards.</p>
     </div>
+
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>The Da Nang International Fireworks Festival runs annually in April-June (usually 3-4 competition nights over several weeks). If your dates overlap, staying near the Han River gives you a view from your hotel. Book 6-8 weeks ahead if the festival dates are confirmed — rooms near the river sell out.</div>
 
     <h2 id="monthly">Month-by-Month Breakdown</h2>
 

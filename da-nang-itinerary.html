@@ -260,6 +260,20 @@ a{text-decoration:none;color:inherit}
 .faq-item summary::after{content:'+';font-size:1.2rem;color:var(--ocean);flex-shrink:0;transition:transform .2s;font-weight:300}
 .faq-item details[open] summary::after{transform:rotate(45deg)}
 .faq-answer{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.8rem 0 .4rem;max-width:70ch}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -355,6 +369,8 @@ a{text-decoration:none;color:inherit}
     <p>The three days below are how I'd lay it out for a friend arriving fresh: Day 1 is the beach and the river, your arrival day if you fly in before noon. Day 2 is the Marble Mountains in the morning and Son Tra Peninsula in the afternoon, the two things that separate Da Nang from every other beach city in Vietnam. Day 3 is <a href="da-nang-vs-hoi-an.html">Hoi An</a>, which deserves its own entry entirely. If you score a fourth day, <a href="ba-na-hills-guide.html">Ba Na Hills</a>, the French colonial hillstation with the Golden Bridge, slides in perfectly between Days 2 and 3.</p>
     <p><strong>When to come:</strong> February through August is the sweet spot. Dry, warm, beachable. October especially can be rough, the northeast monsoon hits hard, Hoi An floods, and the Marble Mountains get slippery. Check the <a href="best-time-to-visit-da-nang.html">full weather guide</a> or the <a href="da-nang-budget-guide.html">Da Nang budget guide</a> if you're booking outside the dry season.</p>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>Three days is enough to get the shape of Da Nang without rushing. You'll hit the beach, do one day trip to Hoi An, and see enough of the city to know if you want to come back. It won't feel rushed if you don't overschedule — this isn't a city that rewards cramming.</div>
+
     <!-- DAY 1 -->
     <hr class="section-rule">
     <div class="day-label">Day 1</div>
@@ -385,6 +401,8 @@ a{text-decoration:none;color:inherit}
       <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=dn-itinerary-atf&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" class="aff-callout-btn" target="_blank" rel="nofollow noopener sponsored">Search Hotels →</a>
     </div>
 
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1552465610-ae6f3b61e1b8?w=900&h=240&fit=crop&q=75" alt="Dragon Bridge Da Nang at night with lights reflecting on the Han River" width="900" height="240" loading="lazy">
+
     <!-- DAY 2 -->
     <hr class="section-rule">
     <div class="day-label">Day 2</div>
@@ -405,6 +423,8 @@ a{text-decoration:none;color:inherit}
       <div class="callout-label">Day 2 Logistics</div>
       <p>Marble Mountains to Son Tra: Grab takes 35 minutes and costs around $5. You can also hire a motorbike ($8–12/day) and combine both stops in a single loop, Marble Mountains in the morning, back through the city, up Son Tra in the afternoon. See the <a href="da-nang-transport-guide.html">transport guide</a> for motorbike hire options and the Son Tra road conditions.</p>
     </div>
+
+    <p class="pull-quote">Marble Mountains at 7:30am is completely different from Marble Mountains at 11am. Go early — the light is better, the temperature is lower, and you won't be sharing it with tour buses.</p>
 
     <!-- DAY 3 -->
     <hr class="section-rule">
@@ -440,8 +460,11 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- PRACTICAL TIPS -->
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Grab to Hoi An costs roughly 250,000-350,000 VND one-way. A private car transfer runs 400,000-600,000 VND. The difference isn't worth it unless you're going in a group of 4+. Book a Grab for 7:30am — beat the heat and the cruise ship day-trippers by a significant margin.</div>
+
     <hr class="section-rule">
     <h2 id="tips">Before You Go</h2>
+    <div class="warn-callout"><div class="local-callout-label">Watch Out</div>Don't try to walk between Da Nang's main sights. Marble Mountains, the beach, and the city center are 5-15km apart. Grab is cheap and reliable — use it. The one thing worth walking is the My Khe beachfront itself: flat, paved, and shaded early morning.</div>
     <p><strong>Currency.</strong> Vietnam Dong (VND). ATMs are widely available on My Khe Beach road and throughout Hải Châu district. Most tourist restaurants accept USD and card. Street food and markets are cash-only. Daily budget: $40–60 covers accommodation (mid-range), three meals, and transport if you use Grab throughout.</p>
     <p><strong>SIM card.</strong> Buy a Viettel or Vietnamobile SIM at Da Nang Airport arrivals, 30-day data plans cost $5–8. Grab requires a local or registered SIM for payment in some configurations; having a local number avoids friction. See the <a href="da-nang-digital-nomad-guide.html">digital nomad guide</a> for SIM card options and carrier comparison.</p>
     <p><strong>Transport.</strong> Grab (Vietnam's Uber equivalent) is reliable, cheap, and works from the airport. Motorbike hire ($8–12/day) makes Day 2 significantly more flexible. Hoi An is best done with a pre-arranged driver rather than Grab, as surge pricing on the return can make it expensive. Full breakdown in the <a href="da-nang-transport-guide.html">transport guide</a>.</p>

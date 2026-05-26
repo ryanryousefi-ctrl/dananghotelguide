@@ -979,6 +979,8 @@ td strong{color:var(--ink)}
   </div>
 </div>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>The main decision point is beach vs. city. My Khe Beach hotels have both - you're on the sand AND 10 minutes from restaurants, bars, and the An Thuong strip. That's why most first-time visitors should default there. The other areas are for specific use cases.</div>
+
     <!-- Quick Answer Box -->
     <div class="qa-box">
       <div class="qa-box-label">Featured Answer</div>
@@ -1199,6 +1201,8 @@ td strong{color:var(--ink)}
 
       <p>Browse the full range: <a href="da-nang-beach-hotels.html">Beachfront Hotels in Da Nang →</a></p>
     </div>
+
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1506905411685-11ad4ddce1e1?w=900&h=240&fit=crop&q=75" alt="My Khe Beach Da Nang stretching along the coast" width="900" height="240" loading="lazy">
 
     <!-- AN THUONG -->
     <div class="area-card" id="an-thuong">
@@ -1493,6 +1497,7 @@ td strong{color:var(--ink)}
     <!-- WHERE NOT TO STAY -->
     <div class="prose">
       <h2>Where <em>Not</em> to Stay in Da Nang</h2>
+      <div class="warn-callout"><div class="local-callout-label">Watch Out</div>The airport area and Da Nang city center (far from the beach, near the train station) look convenient on maps but put you 20-30 minutes from the beach with nothing notable nearby. Several hotels in these zones rank well on Booking.com purely on price. Don't confuse cheap with good value.</div>
       <p>
         Most of Da Nang is fine. It's not a city with dangerous no-go zones or notoriously tourist-unfriendly areas. But there are a few pockets where staying will cost you time and convenience without any compensating upside.
       </p>
@@ -1889,6 +1894,7 @@ td strong{color:var(--ink)}
     <div class="reality-check">
       <div class="reality-check-label">Local Perspective</div>
       <h2>The Local Reality Check</h2>
+      <p class="pull-quote">I live in An Thuong. Most expats who stay more than a week end up here. The beach is a 5-minute walk, there are 40 restaurants within walking distance, and you don't need a Grab for dinner. But it's not pretty - it's a working neighbourhood with scooters and noise. Some people love it, some hate it.</p>
       <div class="reality-items">
         <div class="reality-item">
           <div class="reality-item-area">My Khe</div>
@@ -2047,6 +2053,8 @@ td strong{color:var(--ink)}
     <div class="prose">
       <h2>Booking Tips: <em>When to Book & What to Expect</em></h2>
     </div>
+
+    <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>Book beachfront hotels 3-4 weeks ahead for December-January and March-May. The calendar in Da Nang is driven by weather windows - when conditions are good, rooms go fast. Outside those peaks, you can often find the same room at 30-40% less by booking 3-5 days ahead.</div>
 
     <div class="season-grid">
       <div class="season-card peak">
@@ -2618,6 +2626,20 @@ document.addEventListener('DOMContentLoaded', function () {
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 </style>
 <script>
 (function(){

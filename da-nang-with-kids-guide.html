@@ -164,6 +164,20 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}#mobileStickyBar{display:flex!important;}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+.local-callout{background:var(--ocean-pale,#EAF4F4);border-left:4px solid var(--ocean,#1B5C5C);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.local-callout-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem}
+.local-callout-label::before{content:'▸ ';color:var(--coral,#C8604A)}
+.warn-callout{background:#fff8f3;border-left:4px solid var(--coral,#C8604A);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.warn-callout .local-callout-label{color:var(--coral,#C8604A)}
+.gold-callout{background:#fffbf0;border-left:4px solid var(--gold,#B8901E);border-radius:0 12px 12px 0;padding:1.1rem 1.4rem;margin:1.75rem 0;font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75}
+.gold-callout .local-callout-label{color:var(--gold,#B8901E)}
+.pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
+.scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
+.vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
+.vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+.vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
+.vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
   </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Da Nang with Kids — Complete Family Travel Guide 2026","description":"Da Nang with kids in 2026. Beach safety, family resorts, kids clubs, activities, food, transport, and honest advice for families with children.","url":"https://www.dananghotelguide.com/da-nang-with-kids-guide.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -302,6 +316,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p>The Non Nuoc resort zone south of the city (around the Ngu Hanh Son / Marble Mountains area) is the strongest base for families with young children. The beach is marginally calmer and shallower than My Khe. The resort concentration is high - Premier Village, Vinpearl, Hyatt Regency, Furama, and a dozen other major properties are all here. Most of them have dedicated kids clubs, multiple pools, and family room categories.</p>
     <p>The trade-off is that Non Nuoc is a resort zone rather than a real neighbourhood. Getting anywhere outside the resort requires a car or taxi. But for families where the resort is the destination - beach, pool, kids club, occasional day trip - this is the right base. See the <a href="family-hotels-da-nang.html" style="color:var(--ocean)">family hotels guide</a> for specific properties.</p>
 
+    <div class="local-callout"><div class="local-callout-label">Local Tip</div>I've seen families book My Khe hotels because the photos look great, then spend a week hauling strollers across busy roads to reach the beach. Non Nuoc costs the same and puts you 50 meters from the sand. Unless your kids are teenagers, book Non Nuoc.</div>
+
     <h3>My Khe - Better for Older Kids and Teens</h3>
     <p>The main My Khe strip from the city southward is more lively - restaurants, beach activity rentals, street food, and proximity to the city centre. Good for families with older children (10+) who want more than the resort bubble. The An Thuong restaurant area is walking distance from most hotels here, and the Dragon Bridge fire show is a short taxi ride.</p>
     <p>The beach at central My Khe is fine but busier and the surf can be more active than Non Nuoc. Still safe during green and yellow flag conditions - just less sheltered.</p>
@@ -326,11 +342,15 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     </div>
   </div>
 
+  <div class="warn-callout"><div class="local-callout-label">Watch Out</div>The red flag system is strictly enforced. If the flag is red, lifeguards will not let your kids in the water. Build in flexibility - there's always the hotel pool.</div>
+
   <div class="page-section" id="activities">
     <h2>Activities <em>for Kids in Da Nang</em></h2>
 
     <h3>Ba Na Hills - Best Family Day Out</h3>
     <p>Ba Na Hills is the standout family activity in the Da Nang area. The cable car (one of the longest in the world) is the first attraction - children love the gondola ride up through cloud forest. At the top: Fantasy Park (an indoor amusement area with rides and games, included in ticket price), the Golden Bridge held up by two giant stone hands (iconic photo), French Village architecture, and gardens. Full day required. Book tickets in advance in peak season. See the <a href="ba-na-hills-guide.html" style="color:var(--ocean)">Ba Na Hills guide</a> for timing and tips.</p>
+
+    <img class="scenic-img" src="https://images.unsplash.com/photo-1506905411685-11ad4ddce1e1?w=900&h=240&fit=crop&q=75" alt="Cable car ascending through cloud forest to mountain summit, Ba Na Hills Da Nang" width="900" height="240" loading="lazy">
 
     <h3>Dragon Bridge Fire Show</h3>
     <p>The Dragon Bridge breathes fire and water at 9pm on Saturday and Sunday nights. It is free, visible from the riverside embankment, lasts about 15 minutes, and children are reliably impressed by it. Arrive by 8:30pm for a good viewing spot. Late for toddlers - a Sunday afternoon riverside walk for younger children is more practical.</p>
@@ -354,6 +374,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
     <p><strong>Food safety with children:</strong> Stick to cooked food initially while bodies adjust. Bottled or filtered water only - do not give children tap water. Ice at established restaurants is fine (filtered water). Market stalls and street food are generally safe but introduce gradually rather than all at once.</p>
   </div>
 
+  <p class="pull-quote">Da Nang is one of the easiest cities in Southeast Asia to travel with kids - the beaches are calm, the food is cheap, and nobody's going to judge you for ordering plain rice.</p>
+
   <div class="page-section" id="transport">
     <h2>Getting Around <em>with Kids</em></h2>
     <p><strong>Grab XL:</strong> The standard solution for families. Grab (Vietnam's Uber equivalent) has an XL option that fits 4-5 people with luggage. Download the app before arrival. Grab taxis are air-conditioned, metered, and reliable. Cost for Non Nuoc to city: around 150,000-200,000 VND ($6-8).</p>
@@ -372,6 +394,13 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 
   <div class="page-section" id="by-age">
     <h2>Da Nang <em>by Age Group</em></h2>
+
+    <div class="vibe-bar">
+      <span class="vibe-pill green">Toddlers: Non Nuoc</span>
+      <span class="vibe-pill green">Ages 5-10: Ba Na Hills</span>
+      <span class="vibe-pill">Teens: Any Beach Hotel</span>
+      <span class="vibe-pill red">All Ages: Avoid City Hotels</span>
+    </div>
 
     <div class="age-card">
       <h3>Toddlers and Under-5s</h3>
