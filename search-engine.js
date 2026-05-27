@@ -278,12 +278,16 @@ window.runSearch = function(query) {
     if(s>0) scored.push({item:window.SI[i],score:s});
   }
   scored.sort(function(a,b){return b.score-a.score;});
-  return scored.map(function(r){return r.item;});
+  return scored.map(function(r){
+    var it = r.item;
+    // Expose both compact (t/u/c/e) and legacy (title/url/cat/excerpt) field names
+    return {t:it.t,u:it.u,c:it.c,e:it.e,p:it.p,k:it.k,title:it.t,url:it.u,cat:it.c,excerpt:it.e};
+  });
 };
 
-// Also expose as SEARCH_INDEX for backward compat
+// Expose as SEARCH_INDEX for backward compat (both field naming conventions)
 window.SEARCH_INDEX = window.SI.map(function(e){
-  return {title:e.t,url:e.u,cat:e.c,excerpt:e.e};
+  return {t:e.t,u:e.u,c:e.c,e:e.e,p:e.p,title:e.t,url:e.u,cat:e.c,excerpt:e.e};
 });
 
 })();
