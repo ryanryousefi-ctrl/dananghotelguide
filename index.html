@@ -810,6 +810,7 @@ h1.hero-h1 em{font-style:italic}
 </script>
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
+<link rel="stylesheet" href="phase10_5.css">
 </head>
 <body>
 
@@ -1081,6 +1082,14 @@ h1.hero-h1 em{font-style:italic}
   </div>
 </nav>
 
+<!-- Phase 10.5: Stat bar -->
+<div class="p5-stat-bar">
+  <div class="p5-stat-item"><div class="p5-stat-num">110+</div><div class="p5-stat-label">Hotels reviewed</div></div>
+  <div class="p5-stat-item"><div class="p5-stat-num">5</div><div class="p5-stat-label">Distinct areas</div></div>
+  <div class="p5-stat-item"><div class="p5-stat-num">30km</div><div class="p5-stat-label">of coastline</div></div>
+  <div class="p5-stat-item"><div class="p5-stat-num">$60</div><div class="p5-stat-label">Beach hotel from</div></div>
+  <div class="p5-stat-item"><div class="p5-stat-num">Independent</div><div class="p5-stat-label">No paid placements</div></div>
+</div>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      TRIP TYPE ROUTER — Editorial image cards
@@ -1502,367 +1511,82 @@ h1.hero-h1 em{font-style:italic}
   </div>
 </div>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     MOST POPULAR RIGHT NOW
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="section popular-now-section" aria-labelledby="popular-now-heading">
-  <div class="section-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+<!-- Phase 10.5: Magazine editorial grid replacing Popular/Local/StartHere/Plan/Seasonal -->
+<section class="p5-mag-section">
+  <div class="p5-mag-inner">
+    <div class="p5-mag-header">
       <div>
-        <p class="section-label">Most Read</p>
-        <h2 class="section-heading" id="popular-now-heading">Most Popular <em>Right Now</em></h2>
+        <p class="section-label" style="margin-bottom:.5rem">Explore Da Nang</p>
+        <h2 class="p5-mag-title">Where to <em>Start</em></h2>
       </div>
-      <a href="guides.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0">All guides →</a>
+      <a href="guides.html" class="p5-mag-all">All guides</a>
     </div>
-    <div class="popular-now-grid" role="list">
-
-      <a href="best-hotels-in-da-nang.html" class="pn-card pn-card--featured" role="listitem">
-        <div class="pn-rank">01</div>
-        <div class="pn-body">
-          <div class="pn-cat">Hotels · 2026</div>
-          <div class="pn-title">Best Hotels in Da Nang</div>
-          <div class="pn-desc">The complete curated list, luxury to budget, ranked by value and location. Updated May 2026.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="where-to-stay-in-da-nang.html" class="pn-card pn-card--featured" role="listitem">
-        <div class="pn-rank">02</div>
-        <div class="pn-body">
-          <div class="pn-cat">Area Guide</div>
-          <div class="pn-title">Where to Stay in Da Nang</div>
-          <div class="pn-desc">My Khe vs Non Nuoc vs Han River. Which area is right for your trip type.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="dining.html" class="pn-card" role="listitem">
-        <div class="pn-rank">03</div>
-        <div class="pn-body">
-          <div class="pn-cat">MICHELIN Guide</div>
-          <div class="pn-title">Da Nang Restaurants</div>
-          <div class="pn-desc">One MICHELIN Star, 20 Bib Gourmand, 43 total listings.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="best-budget-hotels-in-da-nang.html" class="pn-card" role="listitem">
-        <div class="pn-rank">04</div>
-        <div class="pn-body">
-          <div class="pn-cat">Budget</div>
-          <div class="pn-title">Best Budget Hotels</div>
-          <div class="pn-desc">Under $50/night picks that actually hold up on arrival.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="da-nang-vs-hoi-an.html" class="pn-card" role="listitem">
-        <div class="pn-rank">05</div>
-        <div class="pn-body">
-          <div class="pn-cat">Comparison</div>
-          <div class="pn-title">Da Nang vs Hoi An</div>
-          <div class="pn-desc">Where to base yourself when you have limited nights.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="best-bars-in-da-nang.html" class="pn-card" role="listitem">
-        <div class="pn-rank">06</div>
-        <div class="pn-body">
-          <div class="pn-cat">Nightlife</div>
-          <div class="pn-title">Best Bars in Da Nang 2026</div>
-          <div class="pn-desc">Rooftop bars, craft beer, An Thuong after dark. Ranked by quality.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="best-time-to-visit-da-nang.html" class="pn-card" role="listitem">
-        <div class="pn-rank">07</div>
-        <div class="pn-body">
-          <div class="pn-cat">Timing</div>
-          <div class="pn-title">Best Time to Visit</div>
-          <div class="pn-desc">Month-by-month weather, crowds, prices. What the guides don't tell you.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-      <a href="da-nang-first-time-visitors.html" class="pn-card" role="listitem">
-        <div class="pn-rank">08</div>
-        <div class="pn-body">
-          <div class="pn-cat">First Visit</div>
-          <div class="pn-title">First-Time Visitor Guide</div>
-          <div class="pn-desc">What to know before you land. Practical, no filler.</div>
-        </div>
-        <span class="pn-arrow">→</span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     LOCAL PICKS THIS MONTH
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="section local-picks-section" aria-labelledby="local-picks-heading">
-  <div class="section-inner">
-    <div style="margin-bottom:2rem">
-      <p class="section-label">May 2026 · Shoulder Season</p>
-      <h2 class="section-heading" id="local-picks-heading">Local Picks <em>This Month</em></h2>
-      <p style="font-size:.9rem;color:var(--ink-muted);max-width:55ch;line-height:1.7;margin-top:.4rem">May is a good time to visit. DIFF fireworks festival runs through late May. Beach weather is consistent. Hotels are 15–25% cheaper than peak July.</p>
-    </div>
-    <div class="local-picks-grid" role="list">
-
-      <div class="lp-card lp-card--highlight" role="listitem">
-        <div class="lp-tag">Happening Now</div>
-        <div class="lp-title">DIFF Fireworks Festival</div>
-        <div class="lp-body">The Da Nang International Fireworks Festival runs on weekend evenings through late May. Viewing is best from the Han River embankment. Hotels within walking distance of Dragon Bridge fill fast. <strong>Book a riverside hotel if this is your focus.</strong></div>
-        <a href="da-nang-riverfront-hotels.html" class="lp-link">Riverside hotel picks →</a>
-      </div>
-
-      <div class="lp-card" role="listitem">
-        <div class="lp-tag">Current Conditions</div>
-        <div class="lp-title">Best Beach Access Hotels</div>
-        <div class="lp-body">May sea conditions are reliable. Sheraton Grand and Radisson Blu offer the most direct My Khe access without crossing a road. Pullman is quieter at this time of year.</div>
-        <a href="da-nang-beach-hotels.html" class="lp-link">Beach hotel guide →</a>
-      </div>
-
-      <div class="lp-card" role="listitem">
-        <div class="lp-tag">Hot Weather Tip</div>
-        <div class="lp-title">Best Café Escapes from the Heat</div>
-        <div class="lp-body">May afternoons hit 33–36°C. The An Thuong cafe strip has the highest density of air-conditioned spots. Avoid walking the beach between 11am and 4pm. Plan outdoor time for mornings.</div>
-        <a href="best-cafes-da-nang.html" class="lp-link">Best cafes in Da Nang →</a>
-      </div>
-
-      <div class="lp-card" role="listitem">
-        <div class="lp-tag">Quiet Areas</div>
-        <div class="lp-title">Less Crowded Beach Options</div>
-        <div class="lp-body">The northern stretch of My Khe above Pullman is significantly quieter than the main strip. Non Nuoc remains low-density. If avoiding crowds matters, stay north of the main hotel cluster.</div>
-        <a href="where-to-stay-in-da-nang.html" class="lp-link">Area breakdown →</a>
-      </div>
-
-      <div class="lp-card" role="listitem">
-        <div class="lp-tag">Practical Note</div>
-        <div class="lp-title">Grab Availability This Month</div>
-        <div class="lp-body">During DIFF weekend evenings, Grab surges citywide around Dragon Bridge. The 10pm–11pm post-show window is the hardest. Either book your ride before the show ends or walk if your hotel is close.</div>
-        <a href="da-nang-transport-guide.html" class="lp-link">Transport guide →</a>
-      </div>
-
-      <div class="lp-card" role="listitem">
-        <div class="lp-tag">Nightlife</div>
-        <div class="lp-title">Current An Thuong Hotspots</div>
-        <div class="lp-body">The An Thuong bar strip runs best Thursday to Saturday. Most venues open around 6pm and run until 1–2am. The rooftop terrace spots get crowded by 8:30pm on weekends, arrive earlier for a good table.</div>
-        <a href="best-bars-in-da-nang.html" class="lp-link">Bar guide →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-/* Most Popular */
-.popular-now-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.pn-card{display:flex;align-items:center;gap:1rem;border:1px solid rgba(0,0,0,.07);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;color:inherit;background:#fff;transition:box-shadow .18s,background .18s}
-.pn-card:hover{box-shadow:0 6px 22px rgba(0,0,0,.09);background:var(--sand,#F6F1E9)}
-.pn-card--featured{border-color:var(--ocean,#1B5C5C);border-width:1.5px}
-.pn-rank{font-family:var(--font-serif);font-size:1.4rem;color:rgba(0,0,0,.12);min-width:2rem;text-align:center;flex-shrink:0}
-.pn-card--featured .pn-rank{color:var(--ocean,#1B5C5C);opacity:.5}
-.pn-body{flex:1;min-width:0}
-.pn-cat{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ocean,#1B5C5C);font-weight:600;margin-bottom:.2rem}
-.pn-title{font-size:.95rem;font-weight:600;color:var(--ocean-deep,#0D3535);line-height:1.3}
-.pn-desc{font-size:.78rem;color:var(--ink-muted,#666);line-height:1.5;margin-top:.2rem}
-.pn-arrow{color:var(--coral,#C8604A);font-size:1rem;flex-shrink:0}
-@media(max-width:640px){.popular-now-grid{grid-template-columns:1fr}}
-
-/* Local Picks */
-.local-picks-section{background:var(--ocean-deep,#0D3535)}
-.local-picks-section .section-label{color:rgba(255,255,255,.35)}
-.local-picks-section .section-heading{color:#fff}
-.local-picks-section .section-heading em{color:rgba(255,255,255,.6)}
-.local-picks-section p{color:rgba(255,255,255,.55)}
-.local-picks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-.lp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;color:#fff}
-.lp-card--highlight{border-color:var(--coral,#C8604A);background:rgba(200,96,74,.08)}
-.lp-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--coral,#C8604A);margin-bottom:.5rem}
-.lp-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:.5rem;line-height:1.3}
-.lp-body{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.65}
-.lp-link{display:inline-block;margin-top:.9rem;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.55);border-bottom:1px solid rgba(255,255,255,.2);transition:color .15s}
-.lp-link:hover{color:#fff}
-@media(max-width:640px){.local-picks-grid{grid-template-columns:1fr}}
-</style>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     START HERE — Trip planning hub
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section style="background:var(--ocean-deep,#0D3535);padding:clamp(2.5rem,5vw,4rem) var(--gutter,1.5rem)">
-  <div style="max-width:760px;margin:0 auto;text-align:center">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.75rem">First Time in Da Nang?</p>
-    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:#fff;line-height:1.15;letter-spacing:-.025em;margin-bottom:1rem;font-weight:700">Start Here: Plan Your Trip in 5 Minutes</h2>
-    <p style="font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:2rem">I've been living in Da Nang since 2022. These are the six questions I get asked most often — answered honestly, without the usual travel blog padding.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;text-align:left">
-      <a href="where-to-stay-in-da-nang.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Start Here</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">Which area should I stay in?</div>
-      </a>
-      <a href="best-hotels-in-da-nang.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Top Picks</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">What are the best hotels?</div>
-      </a>
-      <a href="best-time-to-visit-da-nang.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Timing</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">When is the best time to visit?</div>
-      </a>
-      <a href="da-nang-itinerary.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Itinerary</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">3-day Da Nang itinerary</div>
-      </a>
-      <a href="da-nang-vs-hoi-an.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Comparison</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">Da Nang vs Hoi An — which to base in?</div>
-      </a>
-      <a href="da-nang-budget-guide.html" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.07)'">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-light,#E07A62);margin-bottom:.4rem">Budget</div>
-        <div style="font-size:.92rem;font-weight:600;color:#fff;line-height:1.35">How much does Da Nang cost?</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     PLAN YOUR TRIP GUIDES HUB
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="section guides-section" aria-labelledby="guides-heading">
-  <div class="section-inner">
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:0">
-      <div>
-        <p class="section-label">Trip Planning</p>
-        <h2 class="section-heading" id="guides-heading">Plan Your Trip <em>to Da Nang</em></h2>
-      </div>
-      <a href="guides.html" style="font-size:.85rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px;white-space:nowrap;flex-shrink:0">All guides →</a>
-    </div>
-    <div class="guide-grid" role="list" style="margin-top:2.5rem">
-
-      <a href="where-to-stay-in-da-nang.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-beach-hotels-064608a4.jpg" alt="Da Nang beach hotels and My Khe neighbourhood" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Neighbourhood Guide</div>
-          <h3 class="guide-title">Where to Stay in Da Nang</h3>
-          <p class="guide-desc">My Khe, Son Tra, Han River, Non Nuoc, each area mapped and compared honestly.</p>
-          <span class="guide-read">Read guide →</span>
+    <div class="p5-mag-grid">
+      <!-- Feature card: Where to Stay — big, 2 rows -->
+      <a href="where-to-stay-in-da-nang.html" class="p5-mc-feature">
+        <img src="images/da-nang-beach-hotels-8bc40b10.webp" alt="Where to stay in Da Nang — beach hotels on My Khe" width="600" height="800" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">Area Guide</span>
+          <div class="p5-mc-title">Where to Stay in Da Nang</div>
+          <div class="p5-mc-desc">My Khe vs Han River vs Son Tra. Which area is right for your trip and budget?</div>
+          <span class="p5-mc-link">Read guide →</span>
         </div>
       </a>
-
-      <a href="best-hotels-in-da-nang.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/best-hotels-in-da-nang-05b3bf80.jpg" alt="Best hotels in Da Nang beachfront view" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Definitive Guide · 2026</div>
-          <h3 class="guide-title">Best Hotels in Da Nang</h3>
-          <p class="guide-desc">Complete breakdown, luxury, mid-range, and budget picks across every neighbourhood.</p>
-          <span class="guide-read">Read guide →</span>
+      <!-- Small card 1 -->
+      <a href="best-hotels-in-da-nang.html" class="p5-mc-small">
+        <img src="images/luxury-hotels-da-nang-5c163732.webp" alt="Best hotels in Da Nang 2026" width="400" height="300" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">Top Picks</span>
+          <div class="p5-mc-title">Best Hotels 2026</div>
+          <div class="p5-mc-desc">Ranked by local experience, not stars or sponsorship.</div>
+          <span class="p5-mc-link">See rankings →</span>
         </div>
       </a>
-
-      <a href="best-time-to-visit-da-nang.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-weather-by-month-22ab344f.webp" alt="Da Nang weather and beach conditions by month" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Climate &amp; Timing</div>
-          <h3 class="guide-title">Best Time to Visit Da Nang</h3>
-          <p class="guide-desc">Month-by-month breakdown of weather, beach conditions, crowds, and best pricing windows.</p>
-          <span class="guide-read">Read guide →</span>
+      <!-- Small card 2 -->
+      <a href="da-nang-first-time-visitors.html" class="p5-mc-small">
+        <img src="images/da-nang-beach-hotels-5c163732.webp" alt="Da Nang first time visitors guide" width="400" height="300" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">First Visit</span>
+          <div class="p5-mc-title">First Time in Da Nang</div>
+          <div class="p5-mc-desc">Common mistakes, area picks, and what to book first.</div>
+          <span class="p5-mc-link">Start here →</span>
         </div>
       </a>
-
-      <a href="da-nang-weather-by-month.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-hotel-prices-by-month-ce6439df.jpg" alt="Da Nang beach coastline with clear water and white sand" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Weather Data · All 12 Months</div>
-          <h3 class="guide-title">Da Nang Hotel Prices by Month</h3>
-          <p class="guide-desc">Temperature, rainfall, and pricing patterns for every month, no fluff, just accurate data.</p>
-          <span class="guide-read">Read guide →</span>
+      <!-- Small card 3 -->
+      <a href="luxury-hotels-da-nang.html" class="p5-mc-small">
+        <img src="images/luxury-hotels-da-nang-8bc40b10.webp" alt="Luxury resorts Da Nang" width="400" height="300" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">Luxury</span>
+          <div class="p5-mc-title">5-Star Luxury Resorts</div>
+          <div class="p5-mc-desc">InterContinental, Hyatt, Marriott — honest reviews.</div>
+          <span class="p5-mc-link">View resorts →</span>
         </div>
       </a>
-
-      <a href="dining.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/dining-79e68188.jpg" alt="Da Nang restaurant dining guide" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">MICHELIN Guide · 43 Restaurants</div>
-          <h3 class="guide-title">Da Nang Restaurants Guide</h3>
-          <p class="guide-desc">One MICHELIN Star, one Green Star, 20 Bib Gourmand, and the best street food by neighbourhood.</p>
-          <span class="guide-read">Explore dining →</span>
+      <!-- Small card 4 -->
+      <a href="family-hotels-da-nang.html" class="p5-mc-small">
+        <img src="images/family-hotels-da-nang-74b58637.webp" alt="Family hotels Da Nang" width="400" height="300" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">Families</span>
+          <div class="p5-mc-title">Best Family Resorts</div>
+          <div class="p5-mc-desc">Pools, beach access, rooms that actually fit families.</div>
+          <span class="p5-mc-link">View resorts →</span>
         </div>
       </a>
-
-      <a href="best-bars-in-da-nang.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-riverfront-hotels-4e319610.jpg" alt="Da Nang Han River nightlife and rooftop bars" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Nightlife Guide · 25 Bars</div>
-          <h3 class="guide-title">Best Bars in Da Nang 2026</h3>
-          <p class="guide-desc">Rooftop bars, craft beer taprooms, hidden speakeasies, and live music venues, ranked by category with prices.</p>
-          <span class="guide-read">Explore bars →</span>
+      <!-- Small card 5 -->
+      <a href="da-nang-vs-hoi-an.html" class="p5-mc-small">
+        <img src="images/dragon-bridge-da-nang-323fd6e7.webp" alt="Da Nang vs Hoi An comparison" width="400" height="300" loading="lazy">
+        <div class="p5-mc-overlay"></div>
+        <div class="p5-mc-body">
+          <span class="p5-mc-pill">Comparison</span>
+          <div class="p5-mc-title">Da Nang vs Hoi An</div>
+          <div class="p5-mc-desc">Where to sleep if you want both cities on one trip.</div>
+          <span class="p5-mc-link">Compare →</span>
         </div>
-      </a>
-
-      <a href="guides.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-beach-hotels-878568b0.jpg" alt="Da Nang My Khe Beach aerial view" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">First Timer Advice</div>
-          <h3 class="guide-title">Is Da Nang Worth Visiting?</h3>
-          <p class="guide-desc">Honest assessment, who Da Nang is best for, what to manage expectations on, and what visitors love most.</p>
-          <span class="guide-read">Read guide →</span>
-        </div>
-      </a>
-
-      <a href="da-nang-hotels-map.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/da-nang-hotels-map-79e68188.jpg" alt="Da Nang hotel zones map by neighbourhood" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">Interactive Map</div>
-          <h3 class="guide-title">Da Nang Hotels Map</h3>
-          <p class="guide-desc">Explore our interactive Da Nang hotels map, every hotel plotted by neighbourhood, price, and rating.</p>
-          <span class="guide-read">Open map →</span>
-        </div>
-      </a>
-
-      <a href="hotel-reviews.html" class="guide-card" role="listitem">
-        <div class="guide-thumb"><img src="images/hotel-reviews-064608a4.jpg" alt="Da Nang hotel reviews and ratings" loading="lazy" width="800" height="400"></div>
-        <div class="guide-body">
-          <div class="guide-cat">24 Hotels Reviewed</div>
-          <h3 class="guide-title">Da Nang Hotel Reviews</h3>
-          <p class="guide-desc">Detailed reviews of individual properties, from Hilton Garden Inn to InterContinental Sun Peninsula.</p>
-          <span class="guide-read">Browse reviews →</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     SEASONAL GUIDES & DIFF
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section style="background:var(--sand,#F6F1E9);padding:clamp(2rem,4vw,3.5rem) var(--gutter,1.5rem)">
-  <div style="max-width:900px;margin:0 auto">
-    <p style="font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.5rem">Plan Around the Calendar</p>
-    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--ink,#1C1C1A);letter-spacing:-.025em;margin-bottom:.5rem;font-weight:700">Seasonal Guides & Special Events</h2>
-    <p style="font-size:.9rem;color:var(--ink-muted,#7A7A70);margin-bottom:1.75rem;line-height:1.7">Da Nang changes month to month. The DIFF fireworks festival alone shifts hotel prices 40–60% on peak nights. Here's how to plan around the calendar.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem">
-      <a href="da-nang-fireworks-festival-hotels.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.3rem;display:block;text-decoration:none">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral,#C8604A);margin-bottom:.4rem">DIFF 2026</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--ink,#1C1C1A);margin-bottom:.3rem;line-height:1.3;font-weight:600">Best Hotels for Fireworks Views</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.5">Dragon Bridge views, Han River rooms, and rooftop bars during the festival.</div>
-      </a>
-      <a href="best-time-to-visit-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.3rem;display:block;text-decoration:none">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">When to Visit</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--ink,#1C1C1A);margin-bottom:.3rem;line-height:1.3;font-weight:600">Best Time to Visit Da Nang</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.5">Month-by-month breakdown: beach season, monsoon timing, and when prices drop.</div>
-      </a>
-      <a href="da-nang-weather-by-month.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.3rem;display:block;text-decoration:none">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">Weather Data</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--ink,#1C1C1A);margin-bottom:.3rem;line-height:1.3;font-weight:600">Da Nang Weather by Month</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.5">Temperature, rainfall, and sea conditions for all 12 months.</div>
-      </a>
-      <a href="da-nang-hotel-prices-by-month.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.3rem;display:block;text-decoration:none">
-        <div style="font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">Pricing</div>
-        <div style="font-family:'Playfair Display',Georgia,serif;font-size:1rem;color:var(--ink,#1C1C1A);margin-bottom:.3rem;line-height:1.3;font-weight:600">Hotel Prices by Month</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.5">When rates peak, when they drop, and the sweet spots for value.</div>
       </a>
     </div>
   </div>
@@ -2445,6 +2169,30 @@ h1.hero-h1 em{font-style:italic}
 @media(max-width:768px){.wid-layout{grid-template-columns:1fr}}
 </style>
 
+<!-- Phase 10.5: Atmospheric split editorial -->
+<section class="p5-atm-section">
+  <div class="p5-atm-inner">
+    <div class="p5-atm-text">
+      <p class="p5-atm-eyebrow">My Khe Beach · Da Nang</p>
+      <h2 class="p5-atm-heading">30 kilometres of sand.<br><em>One honest guide.</em></h2>
+      <div class="p5-atm-pull">The beach opens at 5am. The swimmers arrive at 5:10. By 7am it is full. Nobody tells you that before you book the 8am hotel checkout.</div>
+      <p class="p5-atm-body">My Khe is not just a beach. It is the anchor for your entire Da Nang trip. The hotel you choose relative to this strip changes everything: your morning routine, your food options, your noise levels at night, your transport costs, your distance to Hoi An.</p>
+      <a href="where-to-stay-in-da-nang.html" class="p5-atm-cta">Read the area guide →</a>
+    </div>
+    <div class="p5-atm-images">
+      <div class="p5-atm-img-main">
+        <img src="images/da-nang-beach-hotels-5c163732.webp" alt="My Khe Beach Da Nang at sunrise" width="700" height="400" loading="lazy">
+      </div>
+      <div class="p5-atm-img-small">
+        <img src="images/da-nang-beach-hotels-30b63280.webp" alt="Da Nang beachfront hotels" width="340" height="255" loading="lazy">
+      </div>
+      <div class="p5-atm-img-small">
+        <img src="images/luxury-hotels-da-nang-ea87d5cc.jpg" alt="Da Nang luxury resort pool" width="340" height="255" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      FIND HOTELS, Booking widget
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
@@ -2513,235 +2261,208 @@ h1.hero-h1 em{font-style:italic}
 </section>
 
 
-<!-- Hotel Category Grid -->
-<section style="padding:clamp(3rem,6vw,5rem) var(--gutter);background:#fff">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);margin-bottom:.5rem">Browse by Category</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:2rem">Find Your <em style="font-style:italic;color:var(--ocean)">Ideal Hotel</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;">
-      <a href="luxury-hotels-da-nang.html" style="background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">★</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">5-Star Luxury</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.6)">InterContinental, Hyatt &amp; more</div>
+<!-- Phase 10.5: Premium hotel strip replacing Hotel Category Grid -->
+<section class="p5-hotel-strip">
+  <div class="p5-hotel-strip-inner">
+    <div class="p5-strip-header">
+      <div>
+        <p class="section-label">Top Picks &middot; 2026</p>
+        <h2 class="p5-strip-title">Most Booked Hotels <em>Right Now</em></h2>
+      </div>
+      <a href="best-hotels-in-da-nang.html" class="p5-strip-all">See all hotels</a>
+    </div>
+    <div class="p5-hotel-row">
+      <!-- InterContinental -->
+      <a href="intercontinental-da-nang.html" class="p5-hc">
+        <div class="p5-hc-img">
+          <img src="images/review-intercontinental-da-nang-exterior.jpg" alt="InterContinental Da Nang Sun Peninsula Resort" width="400" height="300" loading="lazy">
+          <span class="p5-hc-badge">Editor's #1</span>
+        </div>
+        <div class="p5-hc-body">
+          <div class="p5-hc-stars">★★★★★</div>
+          <div class="p5-hc-name">InterContinental Sun Peninsula</div>
+          <div class="p5-hc-area">Son Tra Peninsula · Cliffside</div>
+          <span class="p5-hc-tag">Best in Da Nang</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hp-hstrip-ic&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fintercontinental-danang-sun-peninsula-resort.html%3Faid%3D1784897" class="p5-hc-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check rates</a>
+        </div>
       </a>
-      <a href="family-hotels-da-nang.html" style="background:var(--coral,#C8604A);color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">🏊</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">Family Resorts</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.7)">Kids clubs, lazy rivers, waterparks</div>
+      <!-- Hyatt -->
+      <a href="hyatt-regency-da-nang.html" class="p5-hc">
+        <div class="p5-hc-img">
+          <img src="images/review-hyatt-regency-da-nang-exterior.jpg" alt="Hyatt Regency Da Nang Resort" width="400" height="300" loading="lazy">
+          <span class="p5-hc-badge p5-hc-badge--ocean">Best Value</span>
+        </div>
+        <div class="p5-hc-body">
+          <div class="p5-hc-stars">★★★★★</div>
+          <div class="p5-hc-name">Hyatt Regency Da Nang</div>
+          <div class="p5-hc-area">My Khe Beach · Direct beach access</div>
+          <span class="p5-hc-tag">Best overall value</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hp-hstrip-hyatt&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhyatt-regency-danang-resort-and-spa.html%3Faid%3D1784897" class="p5-hc-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check rates</a>
+        </div>
       </a>
-      <a href="da-nang-beach-hotels.html" style="background:var(--ocean,#1B5C5C);color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">🏖</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">Beachfront Hotels</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.7)">My Khe &amp; Non Nuoc Beach</div>
+      <!-- A La Carte -->
+      <a href="a-la-carte-da-nang.html" class="p5-hc">
+        <div class="p5-hc-img">
+          <img src="images/luxury-hotels-da-nang-79e68188.jpg" alt="A La Carte Da Nang Beach hotel" width="400" height="300" loading="lazy">
+        </div>
+        <div class="p5-hc-body">
+          <div class="p5-hc-stars">★★★★</div>
+          <div class="p5-hc-name">A La Carte Da Nang Beach</div>
+          <div class="p5-hc-area">My Khe Beach · Rooftop pool</div>
+          <span class="p5-hc-tag">Best mid-range beach</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hp-hstrip-alacarte&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fa-la-carte-da-nang-beach.html%3Faid%3D1784897" class="p5-hc-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check rates</a>
+        </div>
       </a>
-      <a href="boutique-hotels-da-nang.html" style="background:#4A6741;color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">◆</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">Boutique Hotels</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.7)">Character, design &amp; local style</div>
-      </a>
-      <a href="best-budget-hotels-in-da-nang.html" style="background:#5A3E28;color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">💡</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">Budget Picks</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.7)">Best value under $80/night</div>
-      </a>
-      <a href="da-nang-riverfront-hotels.html" style="background:#2A4A6A;color:#fff;border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:1.3rem;margin-bottom:.6rem">🌉</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;margin-bottom:.3rem">Han River Hotels</div>
-        <div style="font-size:.76rem;color:rgba(255,255,255,.7)">Dragon Bridge views &amp; city life</div>
+      <!-- Sheraton -->
+      <a href="four-points-sheraton-da-nang.html" class="p5-hc">
+        <div class="p5-hc-img">
+          <img src="images/review-four-points-sheraton-da-nang-exterior.jpg" alt="Four Points by Sheraton Da Nang" width="400" height="300" loading="lazy">
+        </div>
+        <div class="p5-hc-body">
+          <div class="p5-hc-stars">★★★★</div>
+          <div class="p5-hc-name">Four Points by Sheraton</div>
+          <div class="p5-hc-area">My Khe Beach · Beachfront</div>
+          <span class="p5-hc-tag">Best affordable beach</span>
+          <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hp-hstrip-sheraton&ued=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Ffour-points-by-sheraton-da-nang.html%3Faid%3D1784897" class="p5-hc-cta affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check rates</a>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Top Comparisons -->
-<section style="padding:clamp(3rem,6vw,5rem) var(--gutter);background:var(--sand,#F6F1E9)">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.5rem">Side-by-Side</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem">Hotel <em style="font-style:italic;color:var(--ocean,#1B5C5C)">Comparisons</em></h2>
-    <p style="font-size:.95rem;color:var(--ink-soft,#3C3C38);max-width:52ch;margin-bottom:2rem;line-height:1.7">The hotels that get compared most. Side-by-side analysis of location, facilities, value, and who each suits.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.85rem;">
-      <a href="intercontinental-vs-hyatt-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">InterContinental vs Hyatt</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Clifftop seclusion vs beach resort</div></div>
-      </a>
-      <a href="hyatt-regency-vs-furama-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">Hyatt Regency vs Furama</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Modern resort vs garden classic</div></div>
-      </a>
-      <a href="marriott-vs-sheraton-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">Marriott vs Sheraton Grand</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Both Bonvoy, very different vibes</div></div>
-      </a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">Sheraton Grand vs Hyatt</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Family waterpark vs lazy river resort</div></div>
-      </a>
-      <a href="furama-vs-pullman-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">Furama vs Pullman</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Non Nuoc character vs My Khe access</div></div>
-      </a>
-      <a href="tia-wellness-vs-naman-retreat-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;display:flex;align-items:center;gap:.9rem;">
-        <div style="width:36px;height:36px;background:var(--ocean-pale,#EAF4F4);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem;font-weight:700;color:var(--ocean,#1B5C5C)">vs</div>
-        <div><div style="font-size:.85rem;font-weight:600;color:var(--ink)">TIA Wellness vs Naman Retreat</div><div style="font-size:.73rem;color:var(--ink-muted,#7A7A70);margin-top:.1rem">Adults-only spa vs villa wellness</div></div>
-      </a>
+<!-- Phase 10.5: Comparison cards replacing Top Comparisons inline section -->
+<section class="p5-cmp-section">
+  <div class="p5-cmp-inner">
+    <div class="p5-cmp-header">
+      <p class="p5-cmp-eyebrow">Side-by-side</p>
+      <h2 class="p5-cmp-heading">Hotel <em>Comparisons</em></h2>
     </div>
-    <div style="margin-top:1.25rem;text-align:center;"><a href="hotel-reviews.html" style="font-size:.83rem;font-weight:600;color:var(--ocean,#1B5C5C);text-decoration:underline;text-underline-offset:3px">See all hotel reviews →</a></div>
-  </div>
-</section>
-
-<!-- Traveler Type Section -->
-<section style="padding:clamp(3rem,6vw,5rem) var(--gutter);background:#fff">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.5rem">Who Are You Travelling As?</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:2rem">Find the Right <em style="font-style:italic;color:var(--ocean,#1B5C5C)">Starting Point</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
-      <a href="da-nang-first-time-visitors.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">First Time Here</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">First-Timer's Guide</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">Where to stay, what to do, what to skip - for first trips only.</div>
+    <div class="p5-cmp-grid">
+      <a href="intercontinental-vs-hyatt-da-nang.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">InterContinental vs Hyatt</div><div class="p5-cmp-desc">Clifftop seclusion vs beach resort. For couples and honeymooners.</div></div>
       </a>
-      <a href="best-family-resort-da-nang.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral,#C8604A);margin-bottom:.4rem">With Kids</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">Best Family Resorts</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">Kids clubs, lazy rivers, waterparks - the full family picture.</div>
+      <a href="da-nang-vs-hoi-an.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">Da Nang vs Hoi An</div><div class="p5-cmp-desc">Where to sleep if you want both cities covered on one trip.</div></div>
       </a>
-      <a href="best-luxury-resort-couples-da-nang.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">Couples &amp; Honeymoon</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">Best Couples Resorts</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">IC, Naman, TIA - ranked for romance and privacy.</div>
+      <a href="beachfront-vs-city-hotels-da-nang.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">Beach vs City Hotels</div><div class="p5-cmp-desc">My Khe beach hotels vs Han River city hotels. Location trade-offs.</div></div>
       </a>
-      <a href="da-nang-digital-nomad-guide.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted,#7A7A70);margin-bottom:.4rem">Remote Work</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">Digital Nomad Guide</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">Co-working, cafes, neighbourhoods for longer stays.</div>
+      <a href="luxury-vs-budget-da-nang.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">Luxury vs Budget</div><div class="p5-cmp-desc">When the resort is worth it. When the mid-range beats it.</div></div>
       </a>
-      <a href="da-nang-budget-guide.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.4rem">Budget Travel</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">Budget Guide</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">Daily costs, cheap eats, budget hotels - what $50/day buys.</div>
+      <a href="hyatt-vs-marriott-da-nang.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">Hyatt vs Marriott</div><div class="p5-cmp-desc">Two 5-star beach resorts. Different personalities, same strip.</div></div>
       </a>
-      <a href="luxury-hotels-da-nang.html" style="background:var(--sand,#F6F1E9);border:1px solid var(--sand-dark,#D9CDBB);border-radius:14px;padding:1.25rem 1.4rem;text-decoration:none;display:block;">
-        <div style="font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold,#B8901E);margin-bottom:.4rem">Luxury Travel</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:var(--ink);margin-bottom:.4rem">Luxury Hotel Guide</div>
-        <div style="font-size:.78rem;color:var(--ink-muted,#7A7A70);line-height:1.55">5-star resorts ranked with honest trade-offs and local context.</div>
+      <a href="non-nuoc-vs-my-khe.html" class="p5-cmp-card">
+        <div class="p5-cmp-vs">vs</div>
+        <div class="p5-cmp-body"><div class="p5-cmp-name">Non Nuoc vs My Khe</div><div class="p5-cmp-desc">Quiet resort strip vs buzzing beach town. Which area suits you.</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Area Guide Strip -->
-<section style="padding:clamp(3rem,6vw,5rem) var(--gutter);background:var(--ocean-deep)">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.5rem">Where to Stay</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem">Da Nang <em style="font-style:italic;color:var(--coral-light,#E07A62)">Neighbourhood Guide</em></h2>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.55);max-width:52ch;margin-bottom:2rem;line-height:1.7">Each area has a completely different feel. Pick the right base before you book.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
-      <a href="best-hotels-near-my-khe-beach.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">My Khe Beach</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">Central My Khe</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">Best for first-timers. Beach access + An Thuong restaurants. Sweet spot for most stays.</div>
+<!-- Phase 10.5: Area guide replacing inline Area Guide Strip -->
+<section class="p5-area-section">
+  <div class="p5-area-inner">
+    <div class="p5-area-header">
+      <p class="p5-area-eyebrow">Where to Stay</p>
+      <h2 class="p5-area-heading">Da Nang <em>Neighbourhood Guide</em></h2>
+    </div>
+    <div class="p5-area-grid">
+      <a href="best-hotels-near-my-khe-beach.html" class="p5-area-card">
+        <div class="p5-area-vibe">Best for most visitors</div>
+        <div class="p5-area-name">Central My Khe</div>
+        <div class="p5-area-desc">Beach access + An Thuong restaurants. Sweet spot for first trips and families.</div>
+        <span class="p5-area-link">Explore →</span>
       </a>
-      <a href="best-han-river-hotels-da-nang.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">Han River</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">City Centre</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">Most walkable. Dragon Bridge, markets, restaurants. 15 min to beach. Better value than beach hotels.</div>
+      <a href="best-han-river-hotels-da-nang.html" class="p5-area-card">
+        <div class="p5-area-vibe">City &amp; Nightlife</div>
+        <div class="p5-area-name">Han River</div>
+        <div class="p5-area-desc">Dragon Bridge views, rooftop bars, city energy. 10min to the beach.</div>
+        <span class="p5-area-link">Explore →</span>
       </a>
-      <a href="non-nuoc-beach-da-nang.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">Non Nuoc Beach</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">Resort Zone</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">Hyatt, Sheraton, Furama, Naman. Calmer beach, resort scale. Best for families and resort-style trips.</div>
+      <a href="best-resorts-son-tra-peninsula.html" class="p5-area-card">
+        <div class="p5-area-vibe">Seclusion &amp; Luxury</div>
+        <div class="p5-area-name">Son Tra Peninsula</div>
+        <div class="p5-area-desc">InterContinental territory. Clifftop jungle resort. For couples and honeymooners.</div>
+        <span class="p5-area-link">Explore →</span>
       </a>
-      <a href="best-hotels-an-thuong-da-nang.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">An Thuong</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">Foreigner Quarter</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">1 block from beach. Best restaurant strip in Da Nang. Boutique hotels from $45. Best for independent travelers.</div>
+      <a href="best-hotels-an-thuong-da-nang.html" class="p5-area-card">
+        <div class="p5-area-vibe">Cafes &amp; Nightlife</div>
+        <div class="p5-area-name">An Thuong Village</div>
+        <div class="p5-area-desc">The expat and nomad strip. Cafes, bars, local restaurants, walkable.</div>
+        <span class="p5-area-link">Explore →</span>
       </a>
-      <a href="da-nang-quiet-areas-hotels.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">Son Tra / Quiet</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">Retreat &amp; Peace</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">IC Sun Peninsula, TIA Wellness, Naman Retreat. Most isolated, quietest. For couples and wellness stays.</div>
-      </a>
-      <a href="where-to-stay-in-da-nang.html" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;text-decoration:none;display:block;transition:background .18s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral-light,#E07A62);margin-bottom:.5rem">Full Guide</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1rem;color:#fff;margin-bottom:.4rem">Where to Stay Guide</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.55">Complete neighbourhood breakdown with maps, hotel picks, and side-by-side comparisons for every travel style.</div>
+      <a href="an-bang-beach-hotels.html" class="p5-area-card">
+        <div class="p5-area-vibe">Quieter &amp; Cheaper</div>
+        <div class="p5-area-name">Non Nuoc / Hoi An side</div>
+        <div class="p5-area-desc">Emptier beach, resort clusters, 30min to Hoi An Old Town.</div>
+        <span class="p5-area-link">Explore →</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Quick Planning Tools -->
-<section style="padding:clamp(3rem,6vw,5rem) var(--gutter);background:var(--sand,#F6F1E9)">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean,#1B5C5C);margin-bottom:.5rem">Trip Planning</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem">Everything Else You Need to <em style="font-style:italic;color:var(--ocean,#1B5C5C)">Plan Your Trip</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;margin-top:2rem;">
-      <a href="best-time-to-visit-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">When to Go</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Best Time to Visit Da Nang</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">March-September for beach. Avoid Oct-Nov typhoon season. DIFF festival in June-July adds 40-60% to hotel prices.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the seasonal guide →</div>
+<!-- Phase 10.5: Discovery rail replacing Quick Planning Tools -->
+<section class="p5-discovery">
+  <div class="p5-discovery-inner">
+    <div class="p5-discovery-header">
+      <h2 class="p5-disc-title">Keep <em>Exploring</em></h2>
+      <a href="guides.html" class="p5-strip-all">All guides</a>
+    </div>
+    <div class="p5-disc-track">
+      <a href="best-time-to-visit-da-nang.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/da-nang-weather-by-month-22ab344f.webp" alt="Best time to visit Da Nang" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">When to Go</div><div class="p5-disc-name">Best Time to Visit</div></div>
       </a>
-      <a href="da-nang-transport-guide.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Getting Around</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Da Nang Transport Guide</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Grab is the default. Airport to My Khe $4-6. Airport to Non Nuoc $6-9. Motorbike rental from $6/day if you're comfortable.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the transport guide →</div>
+      <a href="da-nang-itinerary.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/dragon-bridge-da-nang-323fd6e7.webp" alt="Da Nang 3-day itinerary" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Itinerary</div><div class="p5-disc-name">3-Day Da Nang Itinerary</div></div>
       </a>
-      <a href="da-nang-airport-guide.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Arrival</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Da Nang Airport Guide</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Grab pickup, SIM cards, currency exchange, ATMs, and what to expect on arrival. Small airport — straightforward process.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the arrival guide →</div>
+      <a href="da-nang-transport-guide.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/da-nang-transport-guide-8c98784a.webp" alt="Getting around Da Nang" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Getting Around</div><div class="p5-disc-name">Da Nang Transport Guide</div></div>
       </a>
-      <a href="da-nang-itinerary.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral,#C8604A);margin-bottom:.6rem">Itinerary</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">3-Day Da Nang Itinerary</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Day 1: My Khe + An Thuong. Day 2: Marble Mountains + Non Nuoc. Day 3: Dragon Bridge + Con Market + Han River cruise.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--coral,#C8604A)">See the 3-day plan →</div>
+      <a href="da-nang-first-time-visitors.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/da-nang-beach-hotels-8bc40b10.webp" alt="Da Nang first time visitors guide" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">First Timers</div><div class="p5-disc-name">Complete First Visit Guide</div></div>
       </a>
-      <a href="da-nang-travel-mistakes.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Avoid These</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Common Da Nang Mistakes</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Booking Non Nuoc when you want city access. Staying city-side when you want a beach holiday. Swimming at red-flag beaches.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the mistakes guide →</div>
+      <a href="da-nang-budget-guide.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/boutique-hotels-da-nang-b64-02.webp" alt="Da Nang budget travel guide" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Budget Travel</div><div class="p5-disc-name">Da Nang Budget Guide</div></div>
       </a>
-      <a href="da-nang-hotel-prices-by-month.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold,#B8901E);margin-bottom:.6rem">Pricing</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Hotel Prices by Month</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">What Da Nang hotels actually cost Jan-Dec. Peak months, shoulder value windows, and how DIFF affects pricing across all categories.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--gold,#B8901E)">See prices by month →</div>
+      <a href="da-nang-digital-nomad-guide.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/best-cafes-da-nang-ae3e0cf6.jpg" alt="Da Nang digital nomad guide" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Long Stay</div><div class="p5-disc-name">Digital Nomad Guide</div></div>
       </a>
-      <a href="how-many-days-in-da-nang.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Trip Length</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">How Many Days in Da Nang?</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">2 days is too few. 3 is the minimum. 5 is ideal. What you can realistically cover at each duration, including day trips.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the trip length guide →</div>
+      <a href="dining.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/dining-dining-00-00.webp" alt="Da Nang dining guide" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Food &amp; Drink</div><div class="p5-disc-name">Da Nang Dining Guide</div></div>
       </a>
-      <a href="da-nang-3-day-itinerary.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral,#C8604A);margin-bottom:.6rem">Itinerary</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">3-Day Da Nang Itinerary (2026)</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Timed day-by-day plan: My Khe Beach, Marble Mountains, Son Tra, Dragon Bridge, and a Hoi An day trip included.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--coral,#C8604A)">See the 3-day plan →</div>
+      <a href="things-to-do-in-da-nang.html" class="p5-disc-card">
+        <div class="p5-disc-img"><img src="images/han-river-night-cruise-da-nang-bg-63ba8196.jpg" alt="Things to do in Da Nang" width="260" height="195" loading="lazy"></div>
+        <div class="p5-disc-body"><div class="p5-disc-cat">Experiences</div><div class="p5-disc-name">Things to Do</div></div>
       </a>
-      <a href="da-nang-5-day-itinerary.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--coral,#C8604A);margin-bottom:.6rem">Itinerary</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">5-Day Da Nang Itinerary (2026)</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Five days with Ba Na Hills, Hue, Hoi An, Son Tra, and the beach. Full schedule with Grab times and what to eat each day.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--coral,#C8604A)">See the 5-day plan →</div>
-      </a>
-      <a href="rainy-season-da-nang-guide.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Weather</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Rainy Season in Da Nang</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">Oct-Nov is the wet season. What it actually looks like, what still works, and whether you should postpone your trip.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the rainy season guide →</div>
-      </a>
-      <a href="da-nang-grab-guide.html" style="background:#fff;border:1px solid var(--sand-dark,#D9CDBB);border-radius:16px;padding:1.5rem;text-decoration:none;display:block;">
-        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.6rem">Transport</div>
-        <div style="font-family:'Instrument Serif',Georgia,serif;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem">Da Nang Grab Guide</div>
-        <div style="font-size:.82rem;color:var(--ink-soft,#3C3C38);line-height:1.65">How Grab works in Da Nang, common routes and prices, airport pickup zones, and how to avoid surge pricing during DIFF.</div>
-        <div style="margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--ocean,#1B5C5C)">Read the Grab guide →</div>
-      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Phase 10.5: Cinematic final planning CTA -->
+<section class="p5-final-cta">
+  <div class="p5-final-cta-bg" style="background-image:url('images/da-nang-beach-hotels-677d433c.avif')" role="presentation" aria-hidden="true"></div>
+  <div class="p5-final-cta-overlay" aria-hidden="true"></div>
+  <div class="p5-final-cta-content">
+    <p class="p5-final-kicker">Ready to plan your trip?</p>
+    <h2 class="p5-final-heading">Find Your Perfect <em>Da Nang Hotel</em></h2>
+    <p class="p5-final-sub">110+ hotels reviewed. Honest picks for every budget, area, and travel style. No paid placements.</p>
+    <div class="p5-final-actions">
+      <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=index-finalcta&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fdest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897" class="p5-final-btn-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search All Hotels</a>
+      <a href="best-hotels-in-da-nang.html" class="p5-final-btn-ghost">See curated picks →</a>
     </div>
   </div>
 </section>

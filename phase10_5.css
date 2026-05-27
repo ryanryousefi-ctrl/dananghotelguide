@@ -1,0 +1,1204 @@
+/*
+ * phase10_5.css — Homepage Cinematic Redesign (Phase 10.5)
+ * Applied only to index.html via inline <link> in head.
+ * Overrides section spacing, card systems, and visual hierarchy.
+ * NEVER modifies affiliate links, hrefs, or tracking parameters.
+ */
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --p5-ocean:   #073f3d;
+  --p5-ocean2:  #0a2e2c;
+  --p5-coral:   #c8604a;
+  --p5-sand:    #f4f0e8;
+  --p5-sand2:   #edeae2;
+  --p5-white:   #ffffff;
+  --p5-ink:     #111111;
+  --p5-ink2:    #333333;
+  --p5-muted:   #777777;
+  --p5-serif:   'Instrument Serif', Georgia, serif;
+  --p5-sans:    'Satoshi', system-ui, sans-serif;
+  --p5-max:     1200px;
+  --p5-gut:     clamp(1.25rem, 5vw, 3rem);
+  --p5-r:       12px;
+  --p5-r-lg:    20px;
+  --p5-shadow:  0 2px 12px rgba(0,0,0,.08), 0 6px 24px rgba(0,0,0,.06);
+  --p5-shadow-hover: 0 8px 32px rgba(0,0,0,.15), 0 2px 8px rgba(0,0,0,.08);
+}
+
+/* ─── SECTION SPACING COMPRESSION ──────────────────────── */
+/* Reduce the brutal 7rem section padding throughout */
+.section {
+  padding: clamp(2.5rem,5vw,4.5rem) var(--gutter) !important;
+}
+.trip-router-section {
+  padding: clamp(2.5rem,5vw,4rem) var(--p5-gut) !important;
+}
+.neighborhoods-section {
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut) !important;
+}
+.featured-carousel-section {
+  padding: clamp(2rem,4vw,3.5rem) 0 !important;
+}
+.editors-picks-section {
+  padding: clamp(2.5rem,5vw,4rem) var(--p5-gut) !important;
+}
+.pathways-section {
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut) !important;
+}
+.map-section {
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut) !important;
+}
+
+/* ─── QUICK-BROWSE STRIP — make it bold & opinionated ──── */
+.quick-browse {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: none !important;
+}
+.qb-inner {
+  padding: 0 var(--p5-gut) !important;
+  gap: 0 !important;
+}
+.qb-item {
+  color: rgba(255,255,255,.45) !important;
+  font-size: .7rem !important;
+  letter-spacing: .1em !important;
+  height: 48px !important;
+  padding: 0 4px !important;
+  margin-right: clamp(16px,2.5vw,28px) !important;
+  border-bottom-color: transparent !important;
+}
+.qb-item:hover { color: #fff !important; }
+.qb-item.active {
+  color: #fff !important;
+  border-bottom-color: var(--p5-coral) !important;
+}
+.qb-sep { background: rgba(255,255,255,.1) !important; }
+
+/* ─── TRIP ROUTER — upgrade to editorial magazine style ── */
+.trip-router-section {
+  background: var(--p5-white) !important;
+}
+.tr-inner { max-width: var(--p5-max) !important; }
+.tr-header { max-width: 700px !important; margin-bottom: 2rem !important; }
+.tr-header .section-heading {
+  font-size: clamp(1.8rem,3.5vw,2.8rem) !important;
+  margin-bottom: .5rem !important;
+}
+.tr-header .section-label { margin-bottom: .5rem !important; }
+
+/* Featured large pair — make them taller and more cinematic */
+.tr-featured { gap: 1rem !important; margin-bottom: 1rem !important; }
+.tr-feat-card {
+  min-height: clamp(280px,32vw,400px) !important;
+  border-radius: var(--p5-r-lg) !important;
+}
+.tr-feat-title {
+  font-size: clamp(1.4rem,2.5vw,1.9rem) !important;
+  margin-bottom: .5rem !important;
+}
+.tr-feat-desc { max-width: 42ch !important; }
+
+/* Secondary grid cards — reduce height, tighter spacing */
+.tr-grid {
+  gap: .85rem !important;
+  grid-template-columns: repeat(3,1fr) !important;
+}
+@media (max-width: 900px) {
+  .tr-grid { grid-template-columns: repeat(2,1fr) !important; }
+}
+@media (max-width: 580px) {
+  .tr-grid { grid-template-columns: 1fr 1fr !important; }
+  .tr-featured { grid-template-columns: 1fr !important; }
+}
+
+/* ─── NEIGHBORHOODS — make the image cards taller ────────── */
+.neighborhood-grid {
+  margin-top: 1.5rem !important;
+  gap: 2px !important;
+}
+.nbhd-card { aspect-ratio: 2/3 !important; }
+.nbhd-name { font-size: 1.1rem !important; }
+
+/* ─── CINEMATIC BREAK — taller, more dramatic ────────────── */
+.cin-break {
+  height: clamp(360px,52vw,620px) !important;
+}
+.cin-break-body {
+  padding: clamp(2rem,5vw,4rem) var(--p5-gut) !important;
+}
+.cin-break-headline {
+  font-size: clamp(2rem,4.5vw,3.6rem) !important;
+  text-shadow: 0 2px 20px rgba(0,0,0,.5) !important;
+}
+
+/* ─── FEATURED CAROUSEL — tighter, bigger cards ─────────── */
+.featured-carousel-header { margin-bottom: 1.5rem !important; }
+.fc-card {
+  flex: 0 0 clamp(300px,36vw,420px) !important;
+  aspect-ratio: 3/4 !important;
+}
+.fc-title { font-size: 1.5rem !important; }
+
+/* ─── EDITORS PICKS — make EP cards larger ───────────────── */
+.editors-picks-inner { max-width: var(--p5-max) !important; }
+.ep-grid { gap: 1rem !important; }
+.ep-card-img { aspect-ratio: 16/10 !important; }
+.ep-card-body { padding: 1.4rem !important; }
+.ep-card-title { font-size: 1.2rem !important; }
+
+/* ─── DESTINATION STORYTELLING — richer layouts ──────────── */
+.dst-section { overflow: hidden !important; }
+.dst-grid {
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: clamp(2.5rem,5vw,5rem) !important;
+}
+.dst-heading { font-size: clamp(1.8rem,3.5vw,3rem) !important; }
+.dst-pull {
+  border-left-width: 4px !important;
+  font-size: clamp(1rem,1.8vw,1.3rem) !important;
+  margin: 1.5rem 0 !important;
+}
+.dst-img-wrap {
+  border-radius: var(--p5-r-lg) !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4) !important;
+}
+
+/* ─── PATHWAYS — taller cards ────────────────────────────── */
+.pw-grid { gap: 1rem !important; }
+.pw-card { aspect-ratio: 2/3 !important; }
+.pw-card-title { font-size: 1.3rem !important; }
+
+/* ─── POPULAR NOW & LOCAL PICKS — tighten up ─────────────── */
+.popular-now-section,
+.local-picks-section {
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut) !important;
+}
+
+/* ─── MAP SECTION — more compact ─────────────────────────── */
+.map-section { background: var(--p5-sand) !important; }
+.map-section-inner { max-width: var(--p5-max) !important; }
+.map-layout {
+  margin-top: 1.5rem !important;
+  gap: 2rem !important;
+}
+
+/* ─── INTRO SECTION — premium editorial layout ───────────── */
+.intro-section { background: var(--p5-white) !important; }
+.intro-grid { gap: clamp(2rem,5vw,5rem) !important; }
+.intro-prose p { font-size: 1rem !important; line-height: 1.9 !important; }
+
+/* ─── TRUST SECTION — tighten spacing ───────────────────── */
+.trust-section { padding: clamp(2.5rem,5vw,4rem) var(--p5-gut) !important; }
+.trust-pillar { padding: 1.75rem !important; }
+
+/* ─── LINKS SECTION — smaller, more compact ─────────────── */
+.links-section {
+  padding: clamp(2rem,4vw,3rem) var(--p5-gut) !important;
+  background: var(--p5-sand) !important;
+}
+.links-section .section-heading {
+  font-size: clamp(1.5rem,3vw,2.2rem) !important;
+}
+.link-pill { font-size: .79rem !important; padding: .9rem 1.1rem !important; }
+
+/* ─── BOOKING SECTION — strip and simplify ───────────────── */
+.booking-section {
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut) !important;
+  background: var(--p5-white) !important;
+}
+.booking-layout { gap: 3rem !important; }
+
+/* ─── WID-STAY SECTION ───────────────────────────────────── */
+.wid-stay-section {
+  background: var(--p5-white) !important;
+}
+
+/* ─── MOOD QUOTE — make it tighter ──────────────────────── */
+.mood-quote { padding: clamp(2.5rem,5vw,4rem) var(--p5-gut) !important; }
+.mood-quote-text { font-size: clamp(1.2rem,2.5vw,1.8rem) !important; }
+
+/* ─── BOOKING BAND — bold ────────────────────────────────── */
+.booking-band {
+  padding: clamp(2.5rem,5vw,4rem) var(--p5-gut) !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   HOMEPAGE-EXCLUSIVE VISUAL SYSTEMS
+   Injected HTML sections that replace weak existing ones
+   ════════════════════════════════════════════════════════════ */
+
+/* ─── IMMERSIVE STAT BAR (below hero) ───────────────────── */
+.p5-stat-bar {
+  background: var(--p5-ocean);
+  padding: 0 var(--p5-gut);
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.p5-stat-bar::-webkit-scrollbar { display: none; }
+.p5-stat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.1rem 2.5rem 1.1rem 0;
+  margin-right: 2.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255,255,255,.1);
+  padding-right: 2.5rem;
+}
+.p5-stat-item:last-child { border-right: none; }
+.p5-stat-num {
+  font-family: var(--p5-serif);
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.p5-stat-label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-top: 3px;
+}
+
+/* ─── MAGAZINE HERO EDITORIAL BLOCK ─────────────────────── */
+.p5-editorial-hero {
+  background: var(--p5-ocean2);
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: clamp(380px,48vw,560px);
+  overflow: hidden;
+}
+.p5-eh-image {
+  position: relative;
+  overflow: hidden;
+}
+.p5-eh-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.p5-eh-image:hover img { transform: scale(1.04); }
+.p5-eh-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, var(--p5-ocean2) 100%);
+  z-index: 1;
+}
+.p5-eh-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem,5vw,5rem) clamp(2rem,4vw,4rem);
+}
+.p5-eh-label {
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--p5-coral);
+  margin-bottom: .9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.p5-eh-label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--p5-coral);
+}
+.p5-eh-title {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.8rem,3.5vw,3rem);
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  margin-bottom: 1rem;
+}
+.p5-eh-title em { font-style: italic; color: rgba(255,255,255,.7); }
+.p5-eh-desc {
+  font-size: .92rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+  max-width: 42ch;
+}
+.p5-eh-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--p5-coral);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: background .18s, transform .18s, box-shadow .18s;
+  text-decoration: none;
+}
+.p5-eh-cta:hover {
+  background: #d97050;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200,96,74,.4);
+  text-decoration: none;
+}
+.p5-eh-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: transparent;
+  color: rgba(255,255,255,.65);
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,.2);
+  border-radius: 100px;
+  transition: background .18s, border-color .18s, color .18s;
+  text-decoration: none;
+  margin-left: .75rem;
+}
+.p5-eh-cta-ghost:hover {
+  border-color: rgba(255,255,255,.5);
+  color: #fff;
+  background: rgba(255,255,255,.07);
+  text-decoration: none;
+}
+.p5-eh-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; }
+
+@media (max-width: 768px) {
+  .p5-editorial-hero { grid-template-columns: 1fr; }
+  .p5-eh-image { height: 220px; position: relative; }
+  .p5-eh-image img { position: absolute; }
+  .p5-eh-image-overlay { background: linear-gradient(to top, var(--p5-ocean2) 0%, transparent 60%); }
+}
+
+/* ─── MAGAZINE GRID — 3-column editorial feature block ──── */
+.p5-mag-section {
+  background: var(--p5-sand);
+  padding: clamp(2.5rem,5vw,4.5rem) var(--p5-gut);
+}
+.p5-mag-inner { max-width: var(--p5-max); margin: 0 auto; }
+.p5-mag-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.p5-mag-title {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.7rem,3.2vw,2.6rem);
+  color: var(--p5-ink);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+.p5-mag-title em { font-style: italic; color: var(--p5-ocean); }
+.p5-mag-all {
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--p5-ocean);
+  border-bottom: 1.5px solid var(--p5-ocean);
+  padding-bottom: 2px;
+  transition: opacity .15s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.p5-mag-all:hover { opacity: .7; }
+.p5-mag-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+/* Feature card — large, spans 1 column, 2 rows */
+.p5-mc-feature {
+  grid-row: 1 / 3;
+  position: relative;
+  border-radius: var(--p5-r-lg);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #fff;
+}
+.p5-mc-feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+.p5-mc-feature:hover img { transform: scale(1.04); }
+.p5-mc-feature .p5-mc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.3) 50%, transparent 100%);
+  transition: opacity .3s;
+}
+.p5-mc-feature:hover .p5-mc-overlay { opacity: .85; }
+.p5-mc-body {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1.6rem;
+}
+.p5-mc-pill {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: var(--p5-coral);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: .65rem;
+}
+.p5-mc-title {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.2rem,2.2vw,1.6rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin-bottom: .4rem;
+  color: #fff;
+}
+.p5-mc-desc {
+  font-size: .8rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.6;
+  margin-bottom: .9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.p5-mc-link {
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1.5px solid rgba(255,255,255,.35);
+  padding-bottom: 1px;
+  transition: gap .15s, border-color .15s;
+}
+.p5-mc-feature:hover .p5-mc-link { gap: 9px; border-color: #fff; }
+/* Small cards */
+.p5-mc-small {
+  position: relative;
+  border-radius: var(--p5-r);
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #fff;
+}
+.p5-mc-small img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.p5-mc-small:hover img { transform: scale(1.04); }
+.p5-mc-small .p5-mc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.2) 60%, transparent 100%);
+}
+.p5-mc-small .p5-mc-body { padding: 1rem 1.1rem; }
+.p5-mc-small .p5-mc-title { font-size: 1rem; }
+.p5-mc-small .p5-mc-desc { -webkit-line-clamp: 2; }
+@media (max-width: 900px) {
+  .p5-mag-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .p5-mc-feature { grid-row: auto; aspect-ratio: 16/10; }
+}
+@media (max-width: 560px) {
+  .p5-mag-grid { grid-template-columns: 1fr; }
+  .p5-mc-feature { aspect-ratio: 4/3; }
+  .p5-mc-small { aspect-ratio: 16/9; }
+}
+
+/* ─── PREMIUM HOTEL STRIP ─────────────────────────────────── */
+.p5-hotel-strip {
+  background: var(--p5-white);
+  padding: clamp(2.5rem,5vw,4rem) var(--p5-gut);
+}
+.p5-hotel-strip-inner { max-width: var(--p5-max); margin: 0 auto; }
+.p5-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.p5-strip-title {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.5rem,2.8vw,2.2rem);
+  color: var(--p5-ink);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+}
+.p5-strip-title em { font-style: italic; color: var(--p5-ocean); }
+.p5-strip-all {
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--p5-ocean);
+  border-bottom: 1.5px solid var(--p5-ocean);
+  padding-bottom: 2px;
+  text-decoration: none;
+  transition: opacity .15s;
+  white-space: nowrap;
+}
+.p5-strip-all:hover { opacity: .7; }
+.p5-hotel-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.p5-hc {
+  background: var(--p5-white);
+  border: 1.5px solid rgba(0,0,0,.08);
+  border-radius: var(--p5-r-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--p5-ink);
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+  display: flex;
+  flex-direction: column;
+}
+.p5-hc:hover {
+  box-shadow: var(--p5-shadow-hover);
+  transform: translateY(-4px);
+  border-color: rgba(0,0,0,.15);
+}
+.p5-hc-img {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.p5-hc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.p5-hc:hover .p5-hc-img img { transform: scale(1.04); }
+.p5-hc-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--p5-coral);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  z-index: 1;
+}
+.p5-hc-badge--ocean { background: var(--p5-ocean); }
+.p5-hc-body { padding: 1.1rem 1.15rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.p5-hc-stars { font-size: .7rem; color: #c8a050; margin-bottom: .35rem; letter-spacing: .05em; }
+.p5-hc-name {
+  font-family: var(--p5-serif);
+  font-size: 1rem;
+  color: var(--p5-ink);
+  line-height: 1.2;
+  letter-spacing: -.015em;
+  margin-bottom: .3rem;
+}
+.p5-hc-area {
+  font-size: .72rem;
+  color: var(--p5-muted);
+  margin-bottom: .6rem;
+}
+.p5-hc-tag {
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--p5-ocean);
+  background: rgba(7,63,61,.07);
+  border-radius: 100px;
+  padding: 2px 9px;
+  display: inline-block;
+  margin-bottom: auto;
+}
+.p5-hc-cta {
+  display: block;
+  margin-top: .9rem;
+  padding: 9px 14px;
+  background: var(--p5-ocean);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  text-align: center;
+  transition: background .15s;
+}
+.p5-hc:hover .p5-hc-cta { background: #0a5452; }
+@media (max-width: 960px) {
+  .p5-hotel-row { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 520px) {
+  .p5-hotel-row { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .p5-hc-body { padding: .8rem .9rem 1rem; }
+  .p5-hc-name { font-size: .9rem; }
+}
+
+/* ─── ATMOSPHERE SPLIT — editorial storytelling block ────── */
+.p5-atm-section {
+  background: var(--p5-ocean);
+  padding: clamp(3rem,6vw,5.5rem) var(--p5-gut);
+  overflow: hidden;
+}
+.p5-atm-inner {
+  max-width: var(--p5-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem,6vw,6rem);
+  align-items: center;
+}
+.p5-atm-text {}
+.p5-atm-eyebrow {
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.p5-atm-eyebrow::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--p5-coral);
+}
+.p5-atm-heading {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.8rem,3.5vw,3rem);
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  margin-bottom: 1rem;
+}
+.p5-atm-heading em { font-style: italic; color: rgba(255,255,255,.65); }
+.p5-atm-pull {
+  border-left: 3px solid var(--p5-coral);
+  padding: .6rem 0 .6rem 1.2rem;
+  font-family: var(--p5-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem,1.8vw,1.3rem);
+  color: rgba(255,255,255,.75);
+  line-height: 1.6;
+  margin: 1.2rem 0 1.4rem;
+}
+.p5-atm-body {
+  font-size: .92rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.85;
+  margin-bottom: 1.6rem;
+}
+.p5-atm-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  background: rgba(255,255,255,.1);
+  border: 1.5px solid rgba(255,255,255,.2);
+  color: #fff;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: background .18s, border-color .18s;
+  text-decoration: none;
+}
+.p5-atm-cta:hover { background: rgba(255,255,255,.17); border-color: rgba(255,255,255,.4); text-decoration: none; }
+.p5-atm-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: .6rem;
+}
+.p5-atm-img-main {
+  grid-column: 1 / 3;
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: var(--p5-r);
+  overflow: hidden;
+}
+.p5-atm-img-small {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: var(--p5-r);
+  overflow: hidden;
+}
+.p5-atm-img-main img,
+.p5-atm-img-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+.p5-atm-images:hover .p5-atm-img-main img { transform: scale(1.03); }
+@media (max-width: 768px) {
+  .p5-atm-inner { grid-template-columns: 1fr; }
+  .p5-atm-images { order: -1; }
+}
+
+/* ─── DISCOVERY RAIL — horizontal scroll discovery section ─ */
+.p5-discovery {
+  background: var(--p5-white);
+  padding: clamp(2rem,4vw,3.5rem) var(--p5-gut);
+}
+.p5-discovery-inner { max-width: var(--p5-max); margin: 0 auto; }
+.p5-discovery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.p5-disc-title {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.3rem,2.5vw,2rem);
+  color: var(--p5-ink);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+}
+.p5-disc-title em { font-style: italic; color: var(--p5-ocean); }
+.p5-disc-track {
+  display: flex;
+  gap: .75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin: 0 calc(var(--p5-gut) * -1);
+  padding: 0 var(--p5-gut) .5rem;
+}
+.p5-disc-track::-webkit-scrollbar { display: none; }
+.p5-disc-card {
+  flex: 0 0 clamp(200px,28vw,260px);
+  scroll-snap-align: start;
+  border-radius: var(--p5-r);
+  background: var(--p5-sand);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--p5-ink);
+  transition: box-shadow .22s, transform .22s;
+  display: flex;
+  flex-direction: column;
+}
+.p5-disc-card:hover { box-shadow: var(--p5-shadow-hover); transform: translateY(-3px); }
+.p5-disc-img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+.p5-disc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.p5-disc-card:hover .p5-disc-img img { transform: scale(1.04); }
+.p5-disc-body { padding: .9rem 1rem 1.1rem; flex: 1; }
+.p5-disc-cat {
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--p5-coral);
+  margin-bottom: .35rem;
+}
+.p5-disc-name {
+  font-family: var(--p5-serif);
+  font-size: .98rem;
+  color: var(--p5-ink);
+  line-height: 1.25;
+  letter-spacing: -.015em;
+}
+
+/* ─── COMPARISON CARDS — bold horizontal list ────────────── */
+.p5-cmp-section {
+  background: var(--p5-sand2);
+  padding: clamp(2.5rem,5vw,4rem) var(--p5-gut);
+}
+.p5-cmp-inner { max-width: var(--p5-max); margin: 0 auto; }
+.p5-cmp-header { margin-bottom: 1.5rem; }
+.p5-cmp-eyebrow {
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--p5-coral);
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.p5-cmp-eyebrow::before { content: ''; display: block; width: 20px; height: 2px; background: var(--p5-coral); }
+.p5-cmp-heading {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.6rem,3vw,2.4rem);
+  color: var(--p5-ink);
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+.p5-cmp-heading em { font-style: italic; color: var(--p5-ocean); }
+.p5-cmp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .85rem;
+}
+.p5-cmp-card {
+  background: var(--p5-white);
+  border-radius: var(--p5-r);
+  padding: 1.3rem 1.4rem 1.5rem;
+  text-decoration: none;
+  color: var(--p5-ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: box-shadow .22s, transform .22s;
+  border: 1.5px solid rgba(0,0,0,.07);
+}
+.p5-cmp-card:hover {
+  box-shadow: var(--p5-shadow-hover);
+  transform: translateY(-3px);
+  border-color: rgba(7,63,61,.15);
+}
+.p5-cmp-vs {
+  width: 36px;
+  height: 36px;
+  background: var(--p5-ocean);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  letter-spacing: .02em;
+}
+.p5-cmp-body {}
+.p5-cmp-name {
+  font-size: .88rem;
+  font-weight: 800;
+  color: var(--p5-ink);
+  margin-bottom: .25rem;
+  line-height: 1.3;
+}
+.p5-cmp-desc {
+  font-size: .75rem;
+  color: var(--p5-muted);
+  line-height: 1.55;
+}
+@media (max-width: 768px) {
+  .p5-cmp-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .p5-cmp-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── AREA GUIDE GRID — bold visual area cards ───────────── */
+.p5-area-section {
+  background: var(--p5-ocean2);
+  padding: clamp(2.5rem,5vw,4.5rem) var(--p5-gut);
+}
+.p5-area-inner { max-width: var(--p5-max); margin: 0 auto; }
+.p5-area-header { margin-bottom: 1.75rem; }
+.p5-area-eyebrow {
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: .5rem;
+}
+.p5-area-heading {
+  font-family: var(--p5-serif);
+  font-size: clamp(1.7rem,3.2vw,2.6rem);
+  color: #fff;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+.p5-area-heading em { font-style: italic; color: rgba(255,255,255,.65); }
+.p5-area-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .75rem;
+}
+.p5-area-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--p5-r);
+  padding: 1.25rem 1.1rem 1.4rem;
+  text-decoration: none;
+  display: block;
+  transition: background .18s, border-color .18s, transform .18s;
+}
+.p5-area-card:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.25);
+  transform: translateY(-3px);
+}
+.p5-area-name {
+  font-family: var(--p5-serif);
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: .4rem;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+.p5-area-vibe {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--p5-coral);
+  margin-bottom: .5rem;
+}
+.p5-area-desc {
+  font-size: .76rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.6;
+}
+.p5-area-link {
+  display: block;
+  margin-top: .9rem;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  transition: color .15s;
+}
+.p5-area-card:hover .p5-area-link { color: #fff; }
+@media (max-width: 960px) {
+  .p5-area-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .p5-area-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─── FINAL PLANNING CTA — cinematic close ───────────────── */
+.p5-final-cta {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem,9vw,7rem) var(--p5-gut);
+  text-align: center;
+}
+.p5-final-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.35);
+}
+.p5-final-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7,63,61,.7) 0%, rgba(0,0,0,.7) 100%);
+}
+.p5-final-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.p5-final-kicker {
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 1rem;
+}
+.p5-final-heading {
+  font-family: var(--p5-serif);
+  font-size: clamp(2.2rem,5vw,4rem);
+  color: #fff;
+  line-height: 1.06;
+  letter-spacing: -.04em;
+  margin-bottom: 1rem;
+}
+.p5-final-heading em { font-style: italic; color: rgba(255,255,255,.65); }
+.p5-final-sub {
+  font-size: .97rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+.p5-final-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.p5-final-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 34px;
+  background: var(--p5-coral);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: background .18s, transform .18s, box-shadow .18s;
+  text-decoration: none;
+}
+.p5-final-btn-primary:hover {
+  background: #d97050;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(200,96,74,.45);
+  text-decoration: none;
+  color: #fff;
+}
+.p5-final-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  background: transparent;
+  color: rgba(255,255,255,.7);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,.25);
+  border-radius: 100px;
+  transition: background .18s, border-color .18s, color .18s;
+  text-decoration: none;
+}
+.p5-final-btn-ghost:hover {
+  border-color: rgba(255,255,255,.6);
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  text-decoration: none;
+}
+
+/* ─── CATEGORY PILL ROW (above existing grids) ───────────── */
+.p5-cat-row {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.p5-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--p5-white);
+  border: 1.5px solid rgba(7,63,61,.15);
+  border-radius: 100px;
+  font-size: .74rem;
+  font-weight: 700;
+  color: var(--p5-ocean);
+  text-decoration: none;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.p5-cat-pill:hover {
+  background: var(--p5-ocean);
+  border-color: var(--p5-ocean);
+  color: #fff;
+}
+
+/* ─── SECTION LABEL REFINEMENT ───────────────────────────── */
+.section-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: .62rem !important;
+  letter-spacing: .2em !important;
+  font-weight: 800 !important;
+}
+
+/* ─── INLINE SECTION UPGRADES — override weak inline styles ─ */
+/* Hotel Category Grid section */
+[class=""] > div[style*="grid-template-columns:repeat(auto-fit,minmax(180px"] {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+}
+
+/* ─── REMOVE EXCESSIVE SECTION GAPS ─────────────────────── */
+/* Eliminate double-spacing between consecutive same-bg sections */
+.popular-now-section + .local-picks-section {
+  padding-top: 0 !important;
+}
+
+/* ─── MOBILE REFINEMENTS ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .p5-editorial-hero { min-height: unset !important; }
+  .p5-mag-section,
+  .p5-hotel-strip,
+  .p5-atm-section,
+  .p5-discovery,
+  .p5-cmp-section,
+  .p5-area-section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .p5-disc-card { flex: 0 0 clamp(180px,65vw,240px); }
+  .p5-stat-bar { padding: 0 1.25rem; }
+  .p5-stat-item { padding: 1rem 1.5rem 1rem 0; margin-right: 1.5rem; }
+  .p5-stat-num { font-size: 1.1rem; }
+  .p5-hotel-row { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .p5-area-grid { grid-template-columns: 1fr 1fr !important; }
+  .p5-final-heading { font-size: clamp(1.9rem,9vw,3rem) !important; }
+}
