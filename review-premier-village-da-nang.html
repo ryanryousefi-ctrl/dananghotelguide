@@ -763,6 +763,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -831,18 +832,21 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 </div>
 
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
   <div class="search-hint" id="searchHint">
-    <button class="sh-pill" data-q="luxury hotels">Luxury hotels</button>
-    <button class="sh-pill" data-q="beachfront">Beachfront</button>
-    <button class="sh-pill" data-q="best time to visit">Best time to visit</button>
-    <button class="sh-pill" data-q="where to stay">Where to stay</button>
-    <button class="sh-pill" data-q="family">Family-friendly</button>
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
   </div>
 </div>
 
@@ -1156,31 +1160,6 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   })();
   </script>
 <script>
-window.SEARCH_INDEX = [
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget. 20 hotels reviewed."},
-  {title:"Where to Stay in Da Nang: Area Guide",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared. Who each area suits, pros and cons, and top hotel picks per zone."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang from $160/night. Son Tra and My Khe properties."},
-  {title:"Da Nang Beach Hotels",url:"da-nang-beach-hotels.html",cat:"Hotel Category",excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access. Covers all budgets from boutique guesthouses to full-service resorts."},
-  {title:"Family Hotels in Da Nang",url:"family-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Family-friendly resorts with kids clubs, waterparks, and connecting rooms. Best picks for travelling families visiting Da Nang."},
-  {title:"Boutique Hotels in Da Nang",url:"boutique-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Small-scale boutique hotels in Da Nang's An Thuong neighbourhood and beyond. Character, design, and personal service from $45/night."},
-  {title:"Best Time to Visit Da Nang",url:"best-time-to-visit-da-nang.html",cat:"Travel Guide",excerpt:"Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August. Best value window and when to avoid the rains."},
-  {title:"Da Nang Weather by Month",url:"da-nang-weather-by-month.html",cat:"Climate Guide",excerpt:"Temperature, rainfall, sea conditions, and humidity data for all 12 months. Complete weather data for Da Nang, Vietnam from VNMHA records."},
-  {title:"Hotels Hub, All Da Nang Hotels",url:"hotels.html",cat:"Hotels",excerpt:"Browse all Da Nang hotel categories, luxury, beachfront, boutique, family, and budget. Our curated hub for finding the right property for your trip."},
-  {title:"Where to Stay Hub",url:"where-to-stay-in-da-nang.html",cat:"Area Guide",excerpt:"Neighbourhood overview for Da Nang. Compare My Khe Beach, Son Tra Peninsula, Han River, and the city centre to find your ideal base."},
-  {title:"Da Nang Guides Hub",url:"guides.html",cat:"Travel Guides",excerpt:"Itineraries, transport guides, first-timer advice, and practical tips for visiting Da Nang. Curated by local experts."},
-  {title:"About Da Nang Hotel Guide & Editorial Policy",url:"about.html",cat:"About",excerpt:"How we select and rank hotels, our editorial methodology, team background, and affiliate disclosure. Independent since 2021."}
-];
-
-function runSearch(query) {
-  if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item =>
-    item.title.toLowerCase().includes(q) ||
-    item.excerpt.toLowerCase().includes(q) ||
-    item.cat.toLowerCase().includes(q)
-  );
-}
-
 (function() {
   // ── Hamburger / mobile menu ──────────────────────────
   var ham = document.getElementById('navHamburger');

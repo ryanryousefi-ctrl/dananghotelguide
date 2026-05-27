@@ -290,6 +290,7 @@ img{display:block;max-width:100%}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 
@@ -787,27 +788,6 @@ img{display:block;max-width:100%}
 </footer>
 
 <script>
-window.SEARCH_INDEX = [
-  { title:"Best Hotels in Da Nang (2026 Guide)", url:"best-hotels-in-da-nang.html", cat:"Hotels Guide", excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget." },
-  { title:"Where to Stay in Da Nang: Area Guide", url:"where-to-stay-in-da-nang.html", cat:"Neighbourhood Guide", excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared." },
-  { title:"Luxury Hotels in Da Nang", url:"luxury-hotels-da-nang.html", cat:"Hotel Category", excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang." },
-  { title:"Da Nang Beach Hotels", url:"da-nang-beach-hotels.html", cat:"Hotel Category", excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access." },
-  { title:"Da Nang MICHELIN Guide Restaurants", url:"dining.html", cat:"Dining Guide", excerpt:"Da Nang's MICHELIN Guide 2025, 1 Star, 1 Green Star, 20 Bib Gourmand, 22 Selected restaurants." },
-  { title:"Best Cafes in Da Nang", url:"best-cafes-da-nang.html", cat:"Coffee Guide", excerpt:"Five locally vetted Da Nang cafes for specialty coffee and remote work, O2o, Puna, Indigo, Àla, and XLIII." },
-  { title:"Best Time to Visit Da Nang", url:"best-time-to-visit-da-nang.html", cat:"Travel Guide", excerpt:"Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August." },
-  { title:"Da Nang Weather by Month", url:"da-nang-weather-by-month.html", cat:"Climate Guide", excerpt:"Temperature, rainfall, sea conditions, and humidity data for all 12 months." }
-];
-
-function runSearch(query) {
-  if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item =>
-    item.title.toLowerCase().includes(q) ||
-    item.excerpt.toLowerCase().includes(q) ||
-    item.cat.toLowerCase().includes(q)
-  );
-}
-
 (function() {
   var ham  = document.getElementById('navHamburger');
   var mob  = document.getElementById('mobileMenu');

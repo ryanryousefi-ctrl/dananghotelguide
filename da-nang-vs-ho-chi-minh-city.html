@@ -247,6 +247,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -320,11 +321,14 @@ a{text-decoration:none;color:inherit}
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
   <div class="search-hint" id="searchHint">
-    <button class="sh-pill" data-q="luxury hotels">Luxury hotels</button>
-    <button class="sh-pill" data-q="beachfront">Beachfront</button>
-    <button class="sh-pill" data-q="best time to visit">Best time to visit</button>
-    <button class="sh-pill" data-q="where to stay">Where to stay</button>
-    <button class="sh-pill" data-q="family">Family-friendly</button>
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
   </div>
 </div>
 
@@ -762,23 +766,6 @@ a{text-decoration:none;color:inherit}
 </footer>
 
 <script>
-window.SEARCH_INDEX = [
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget."},
-  {title:"Where to Stay in Da Nang: Area Guide",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared. Who each area suits, pros and cons, and top hotel picks per zone."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang from $160/night."},
-  {title:"Da Nang vs Hoi An: Where Should You Stay?",url:"da-nang-vs-hoi-an.html",cat:"Comparison Guide",excerpt:"8-category comparison across beach quality, hotel prices, walkability, food, nightlife, crowds, and transport. Clear verdicts for all traveller types."},
-  {title:"Da Nang vs Ho Chi Minh City 2026",url:"da-nang-vs-ho-chi-minh-city.html",cat:"Comparison Guide",excerpt:"Da Nang vs HCMC compared, beach vs city, cost, food, nightlife, families, digital nomads. Clear verdicts with top hotel picks."},
-  {title:"Da Nang vs Hanoi 2026",url:"da-nang-vs-hanoi.html",cat:"Comparison Guide",excerpt:"Da Nang vs Hanoi compared, beach vs capital, Old Quarter vs My Khe, four seasons vs tropical. Clear verdict for every traveller type."},
-  {title:"Best Time to Visit Da Nang",url:"best-time-to-visit-da-nang.html",cat:"Travel Guide",excerpt:"Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August."},
-  {title:"About Da Nang Hotel Guide & Editorial Policy",url:"about.html",cat:"About",excerpt:"How we select and rank hotels, our editorial methodology, team background, and affiliate disclosure. Independent since 2021."}
-];
-function runSearch(query){
-  if(!query||query.length<2)return[];
-  var q=query.toLowerCase();
-  return window.SEARCH_INDEX.filter(function(item){
-    return item.title.toLowerCase().includes(q)||item.excerpt.toLowerCase().includes(q)||item.cat.toLowerCase().includes(q);
-  });
-}
 (function(){
   var ham=document.getElementById('navHamburger');
   var mob=document.getElementById('mobileMenu');

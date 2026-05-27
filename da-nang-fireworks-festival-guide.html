@@ -304,6 +304,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 
@@ -395,7 +396,7 @@ a{text-decoration:none;color:inherit}
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
   <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
@@ -1024,14 +1025,6 @@ a{text-decoration:none;color:inherit}
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-window.SEARCH_INDEX=[
-  {title:"Da Nang Fireworks Festival Guide",url:"da-nang-fireworks-festival-guide.html",cat:"Festival Guide",excerpt:"Complete guide to DIFF 2026, schedule, tickets, where to watch, best hotels, getting there, food and practical tips for the Da Nang International Fireworks Festival."},
-  {title:"Best Hotels for Da Nang Fireworks Festival",url:"da-nang-fireworks-festival-hotels.html",cat:"Festival Hotels",excerpt:"The best hotels for watching DIFF, Novotel Premier, Melia Vinpearl, Hilton, Wink, Four Points, Brilliant. Rooftop bars and river-view rooms."},
-  {title:"Best Hotels in Da Nang",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang across every neighbourhood and budget."},
-  {title:"Da Nang Riverside Hotels",url:"da-nang-riverfront-hotels.html",cat:"Hotel Category",excerpt:"Best riverside hotels along Da Nang's Han River."},
-  {title:"Where to Stay in Da Nang",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood compared."},
-  {title:"Hoi An Travel Guide",url:"hoi-an.html",cat:"Destination Guide",excerpt:"Complete guide to visiting Hoi An from Da Nang, hotels, transport, Old Town, An Bang Beach."}
-];
 function runSearch(q){if(!q||q.length<2)return[];var ql=q.toLowerCase();return window.SEARCH_INDEX.filter(function(i){return i.title.toLowerCase().includes(ql)||i.excerpt.toLowerCase().includes(ql)||i.cat.toLowerCase().includes(ql)});}
 (function(){
   var ham=document.getElementById('navHamburger');

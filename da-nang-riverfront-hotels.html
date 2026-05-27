@@ -411,6 +411,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -485,7 +486,7 @@ a{text-decoration:none;color:inherit}
 </div>
 
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
@@ -1196,25 +1197,6 @@ a{text-decoration:none;color:inherit}
 </footer>
 
 <script>
-window.SEARCH_INDEX = [
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget."},
-  {title:"Da Nang Riverside Hotels, Hàn River Guide",url:"da-nang-riverfront-hotels.html",cat:"Hotel Category",excerpt:"Best riverside hotels along Da Nang's Hàn River, WINK, Melia Vinpearl, Caro Hotel, Haian Riverfront, and more. Dragon Bridge views, rooftop pools, walkable location."},
-  {title:"Where to Stay in Da Nang: Area Guide",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared. Who each area suits, pros and cons, and top hotel picks per zone."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang. Son Tra and My Khe properties."},
-  {title:"Da Nang Beach Hotels",url:"da-nang-beach-hotels.html",cat:"Hotel Category",excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access. Covers all budgets from boutique guesthouses to full-service resorts."},
-  {title:"Family Hotels in Da Nang",url:"family-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Family-friendly resorts with kids clubs, waterparks, and connecting rooms. Best picks for travelling families visiting Da Nang."},
-  {title:"Boutique Hotels in Da Nang",url:"boutique-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Small-scale boutique hotels in Da Nang's An Thuong neighbourhood and beyond. Character, design, and personal service from $45/night."},
-  {title:"Best Time to Visit Da Nang",url:"best-time-to-visit-da-nang.html",cat:"Travel Guide",excerpt:"Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August."}
-];
-
-function runSearch(query) {
-  if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item => {
-    return (item.title.toLowerCase().includes(q) || item.excerpt.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q));
-  });
-}
-
 (function() {
   var ham = document.getElementById('navHamburger');
   var mob = document.getElementById('mobileMenu');

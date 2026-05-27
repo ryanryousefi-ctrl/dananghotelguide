@@ -177,6 +177,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -237,7 +238,7 @@ a{text-decoration:none;color:inherit}
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
   <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
@@ -501,13 +502,6 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <script>
-window.SEARCH_INDEX=[
-  {title:"Da Nang Hotels with Connecting Rooms 2026",url:"da-nang-hotels-connecting-rooms.html",cat:"Facilities Guide",excerpt:"Sheraton Grand, Hyatt Regency, Furama, Melia, Marriott - Da Nang hotels with connecting rooms and family suites for families and groups."},
-  {title:"Family Hotels Da Nang",url:"family-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Best family hotels and resorts in Da Nang with kids clubs, family pools, and connecting rooms."},
-  {title:"Best Family Resort Da Nang",url:"best-family-resort-da-nang.html",cat:"Hotels Guide",excerpt:"The best Da Nang resorts for families in 2026, ranked by family facilities, beach access, and value."},
-  {title:"Hyatt Regency Da Nang",url:"hyatt-regency-da-nang.html",cat:"Hotel Review",excerpt:"Full review of Hyatt Regency Da Nang Resort - six pools, Non Nuoc Beach, and the best family resort setup in Da Nang."},
-  {title:"Where to Stay in Da Nang",url:"where-to-stay-in-da-nang.html",cat:"Area Guide",excerpt:"The different areas of Da Nang for hotels - My Khe, Non Nuoc, city centre - compared by type of traveller."}
-];
 function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return window.SEARCH_INDEX.filter(function(i){return i.title.toLowerCase().includes(lq)||i.excerpt.toLowerCase().includes(lq)||i.cat.toLowerCase().includes(lq)});}
 (function(){
   var ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu'),overlay=document.getElementById('searchOverlay');

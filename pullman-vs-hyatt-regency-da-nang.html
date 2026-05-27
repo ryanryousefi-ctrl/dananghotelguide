@@ -183,6 +183,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -243,16 +244,19 @@ a{text-decoration:none;color:inherit}
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
   <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
   <div class="search-hint" id="searchHint">
-    <button class="sh-pill" data-q="luxury hotels">Luxury hotels</button>
-    <button class="sh-pill" data-q="beachfront">Beachfront</button>
-    <button class="sh-pill" data-q="best time to visit">Best time to visit</button>
-    <button class="sh-pill" data-q="where to stay">Where to stay</button>
-    <button class="sh-pill" data-q="family">Family-friendly</button>
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
   </div>
 </div>
 
@@ -515,14 +519,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </footer>
 <script>
-window.SEARCH_INDEX=[
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Hyatt Regency, the best luxury and five-star resorts in Da Nang."},
-  {title:"Family Hotels in Da Nang",url:"family-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Family-friendly resorts with kids clubs, waterparks, and connecting rooms."},
-  {title:"Pullman vs Hyatt Regency Da Nang",url:"pullman-vs-hyatt-regency-da-nang.html",cat:"Comparison",excerpt:"Pullman Da Nang Beach Resort vs Hyatt Regency Da Nang compared - My Khe city access vs Non Nuoc resort scale."},
-  {title:"My Khe Beach Guide",url:"my-khe-beach-da-nang.html",cat:"Area Guide",excerpt:"My Khe Beach hotels, access, swimming safety, and what to expect from Da Nang's main beach."},
-  {title:"Non Nuoc Beach Guide",url:"non-nuoc-beach-da-nang.html",cat:"Area Guide",excerpt:"Non Nuoc Beach hotels, resort strip south of Da Nang, closer to Hoi An."}
-];
 function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return window.SEARCH_INDEX.filter(function(i){return i.title.toLowerCase().includes(lq)||i.excerpt.toLowerCase().includes(lq)||i.cat.toLowerCase().includes(lq)});}
 (function(){
   var ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu'),overlay=document.getElementById('searchOverlay');

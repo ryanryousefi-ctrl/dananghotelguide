@@ -177,6 +177,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -237,7 +238,7 @@ a{text-decoration:none;color:inherit}
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
   <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
@@ -495,13 +496,6 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <script>
-window.SEARCH_INDEX=[
-  {title:"Da Nang Hotels with Private Beach 2026",url:"da-nang-hotels-private-beach.html",cat:"Facilities Guide",excerpt:"Which Da Nang hotels actually have a private beach? Hyatt Regency, Naman Retreat, Furama, Sheraton Grand - honest comparison."},
-  {title:"Da Nang Beach Hotels",url:"da-nang-beach-hotels.html",cat:"Hotel Category",excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access."},
-  {title:"Non Nuoc Beach Da Nang",url:"non-nuoc-beach-da-nang.html",cat:"Area Guide",excerpt:"Non Nuoc Beach hotels, swimming conditions, and why it's quieter than My Khe Beach."},
-  {title:"Hyatt Regency Da Nang",url:"hyatt-regency-da-nang.html",cat:"Hotel Review",excerpt:"Full review of Hyatt Regency Da Nang Resort and Spa - the best-managed beach in Da Nang."},
-  {title:"Luxury Hotels Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"The best luxury hotels and resorts in Da Nang for 2026."}
-];
 function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return window.SEARCH_INDEX.filter(function(i){return i.title.toLowerCase().includes(lq)||i.excerpt.toLowerCase().includes(lq)||i.cat.toLowerCase().includes(lq)});}
 (function(){
   var ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu'),overlay=document.getElementById('searchOverlay');

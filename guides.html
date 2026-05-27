@@ -500,6 +500,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -563,18 +564,21 @@ a{text-decoration:none;color:inherit}
   <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
   <div class="search-input-wrap">
     <input type="search" class="search-input" id="searchInput"
-      placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+      placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
   <div class="search-hint" id="searchHint">
-    <button class="sh-pill" data-q="luxury hotels">Luxury hotels</button>
-    <button class="sh-pill" data-q="beachfront">Beachfront</button>
-    <button class="sh-pill" data-q="best time to visit">Best time to visit</button>
-    <button class="sh-pill" data-q="where to stay">Where to stay</button>
-    <button class="sh-pill" data-q="family">Family-friendly</button>
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
   </div>
 </div>
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -1826,180 +1830,6 @@ a{text-decoration:none;color:inherit}
 </footer>
 <script>
 
-window.SEARCH_INDEX = [
-  {
-    title: "Best Shopping Malls in Da Nang (2026 Guide & Full Comparison)",
-    url: "da-nang-malls-guide.html",
-    cat: "Shopping Guide",
-    excerpt: "Vincom Plaza, Lotte Mart, Helio Center, Indochina Riverside, and Big C reviewed, comparison table, what to buy, mall dining, and best mall by traveller type."
-  },
-  {
-    title: "Da Nang Grocery Store Guide (2026): Where to Shop, Save, and Stock Up",
-    url: "da-nang-grocery-store-guide.html",
-    cat: "Grocery Guide",
-    excerpt: "Full Market, Jollymart, Winmart, Moonmilk, MegaMart, and Lotte Mart compared, fresh produce, imported goods, bulk buying, price levels, and which store suits your needs."
-  },
-  {
-    title: "Da Nang & Hoi An Markets: Han Market, Con Market & Night Market Guide (2026)",
-    url: "da-nang-hoi-an-markets-guide.html",
-    cat: "Markets Guide",
-    excerpt: "Complete guide to Da Nang and Hoi An markets, Han vs Con Market, Hoi An Night Market, what to buy, bargaining tips, safety, and which market suits your travel style."
-  },
-  {
-    title: "15 Mistakes Tourists Make in Da Nang (And How to Avoid Them)",
-    url: "da-nang-travel-mistakes.html",
-    cat: "Local Intelligence",
-    excerpt: "The 15 most common Da Nang travel mistakes, wrong hotel location, Ba Na Hills timing, beach flag errors, transport overcharging, monsoon swim conditions, and 10 more with local fixes."
-  },
-  {
-    title: "7 Days in Da Nang & Hoi An: The Balanced Itinerary Guide (2026)",
-    url: "da-nang-7-day-itinerary.html",
-    cat: "Itinerary Guide",
-    excerpt: "Complete 7-day Da Nang itinerary, day-by-day plans for My Khe Beach, Marble Mountains, Ba Na Hills, Son Tra, Hoi An, and Hue with budgets, dining picks, and seasonal advice."
-  },
-  {
-    title: "Da Nang for First-Time Visitors: What to Know Before You Go (2026)",
-    url: "da-nang-first-time-visitors.html",
-    cat: "First-Time Guide",
-    excerpt: "Visas, best areas to stay, what to eat, transport, safety, weather, and how many days you need in Da Nang. The complete briefing for first-time visitors."
-  },
-  {
-    title: "Best Cafes in Da Nang for Coffee & Remote Work (2026)",
-    url: "best-cafes-da-nang.html",
-    cat: "Local Guide",
-    excerpt: "8 Da Nang cafes reviewed, specialty roasters, remote work spots, rooftop views, and beach cafes. Wi-Fi ratings, what to order, and a guide to Vietnamese coffee culture."
-  },
-  {
-    title: "How Much Does a Trip to Da Nang Cost? Full 2026 Budget Breakdown",
-    url: "da-nang-budget-guide.html",
-    cat: "Budget Guide",
-    excerpt: "Real 2026 Da Nang daily budgets, backpacker $35–50, mid-range $80–150, luxury $200–500+. Covers hotels, street food, Grab fares, Ba Na Hills costs, and a full 7-night sample budget."
-  },
-  {
-    title: "Da Nang Airport Guide (DAD) 2026: Arrivals, Taxi, SIM & Transport",
-    url: "da-nang-airport-guide.html",
-    cat: "Airport Guide",
-    excerpt: "Complete Da Nang Airport guide, arrival process, Grab vs taxi pricing, SIM cards, currency exchange, luggage storage, lounges, transport to My Khe, Son Tra, Marble Mountains, and Hoi An."
-  },
-  {
-    title: "Marble Mountains Da Nang: Complete Visitor Guide (2026)",
-    url: "marble-mountains-da-nang.html",
-    cat: "Visitor Guide",
-    excerpt: "Entrance fees, elevator cost, cave highlights, temple etiquette, climbing difficulty, photography tips, and recommended route through the Marble Mountains near Da Nang."
-  },
-  {
-    title: "Da Nang vs Hoi An: Where Should You Stay? (2026)",
-    url: "da-nang-vs-hoi-an.html",
-    cat: "Comparison Guide",
-    excerpt: "8-category comparison of Da Nang and Hoi An across beach, prices, walkability, food, nightlife, crowds, and transport. Clear verdicts for families, couples, backpackers, luxury travellers, and digital nomads."
-  },
-  {
-    title: "Da Nang Itinerary 2026, Top Things to Do",
-    url: "da-nang-itinerary.html",
-    cat: "Itinerary · Activity Guide",
-    excerpt: "Structured 2-day and 3-day Da Nang itinerary plans, Marble Mountains, Ba Na Hills, Son Tra Peninsula, My Khe Beach, Dragon Bridge, Cham Museum, and a Hoi An day trip."
-  },
-  {
-    title: "Ba Na Hills Guide: Golden Bridge, Tickets & Tips (2026)",
-    url: "ba-na-hills-guide.html",
-    cat: "Excursion Guide",
-    excerpt: "Complete Ba Na Hills visitor guide, ticket prices, cable car details, Golden Bridge timing strategy, crowd avoidance calendar, hotel recommendations, and honest verdict by traveller type."
-  },
-  {
-    title: "Da Nang Hotel Prices by Month (2026 Price Index)",
-    url: "da-nang-hotel-prices-by-month.html",
-    cat: "Price Guide",
-    excerpt: "Manually compiled monthly hotel price index for Da Nang. 3-star, 4-star, and 5-star rates for all 12 months. Peak vs. low season savings analysis, year-over-year trends, and booking timing guide."
-  },
-  {
-    title: "Best Hotels in Da Nang (2026 Guide)",
-    url: "best-hotels-in-da-nang.html",
-    cat: "Hotels Guide",
-    excerpt: "The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget. 20 hotels reviewed."
-  },
-  {
-    title: "Where to Stay in Da Nang: Area Guide",
-    url: "where-to-stay-in-da-nang.html",
-    cat: "Neighbourhood Guide",
-    excerpt: "My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared. Who each area suits, pros and cons, and top hotel picks per zone."
-  },
-  {
-    title: "Luxury Hotels in Da Nang",
-    url: "luxury-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang from $160/night. Son Tra and My Khe properties."
-  },
-  {
-    title: "Da Nang Beach Hotels",
-    url: "da-nang-beach-hotels.html",
-    cat: "Hotel Category",
-    excerpt: "Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access. Covers all budgets from boutique guesthouses to full-service resorts."
-  },
-  {
-    title: "Family Hotels in Da Nang",
-    url: "family-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "Family-friendly resorts with kids clubs, waterparks, and connecting rooms. Best picks for travelling families visiting Da Nang."
-  },
-  {
-    title: "Boutique Hotels in Da Nang",
-    url: "boutique-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "Small-scale boutique hotels in Da Nang's An Thuong neighbourhood and beyond. Character, design, and personal service from $45/night."
-  },
-  {
-    title: "Best Time to Visit Da Nang",
-    url: "best-time-to-visit-da-nang.html",
-    cat: "Travel Guide",
-    excerpt: "Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August. Best value window and when to avoid the rains."
-  },
-  {
-    title: "Da Nang Weather by Month",
-    url: "da-nang-weather-by-month.html",
-    cat: "Climate Guide",
-    excerpt: "Temperature, rainfall, sea conditions, and humidity data for all 12 months. Complete weather data for Da Nang, Vietnam from VNMHA records."
-  },
-  {
-    title: "Hotels Hub, All Da Nang Hotels",
-    url: "hotels.html",
-    cat: "Hotels",
-    excerpt: "Browse all Da Nang hotel categories, luxury, beachfront, boutique, family, and budget. Our curated hub for finding the right property for your trip."
-  },
-  {
-    title: "Where to Stay Hub",
-    url: "where-to-stay-in-da-nang.html",
-    cat: "Area Guide",
-    excerpt: "Neighbourhood overview for Da Nang. Compare My Khe Beach, Son Tra Peninsula, Han River, and the city centre to find your ideal base."
-  },
-  {
-    title: "Da Nang Guides Hub",
-    url: "guides.html",
-    cat: "Travel Guides",
-    excerpt: "Itineraries, transport guides, first-timer advice, and practical tips for visiting Da Nang. Curated by local experts."
-  },
-  {
-    title: "About Da Nang Hotel Guide | Founded by Ryan Yousefi",
-    url: "about.html",
-    cat: "About",
-    excerpt: "Da Nang Hotel Guide is founded and run by Ryan Yousefi, an award-winning American journalist based in Da Nang since 2022."
-  }
-,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
-        ];
-
-function runSearch(query) {
-  if (!query || query.length < 2) return [,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
         ];
   const q = query.toLowerCase();
   return window.SEARCH_INDEX.filter(item => {

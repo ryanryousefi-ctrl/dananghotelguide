@@ -389,6 +389,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 
@@ -465,7 +466,7 @@ a{text-decoration:none;color:inherit}
 </div>
 
   <div class="search-input-wrap">
-    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
@@ -1073,18 +1074,6 @@ a{text-decoration:none;color:inherit}
 </footer>
 
 <script>
-window.SEARCH_INDEX = [
-  {title:"Best Hotels for Da Nang Fireworks Festival",url:"da-nang-fireworks-festival-hotels.html",cat:"Festival Guide",excerpt:"The best hotels for watching DIFF - Novotel Premier, Melia Vinpearl, Hilton, Wink, Four Points, Brilliant. Rooftop bars and river-view rooms for the Da Nang International Fireworks Festival."},
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang across every neighbourhood and budget."},
-  {title:"Da Nang Riverside Hotels",url:"da-nang-riverfront-hotels.html",cat:"Hotel Category",excerpt:"Best riverside hotels along Da Nang's Han River - WINK, Melia Vinpearl, Brilliant, Novotel and more."},
-  {title:"Where to Stay in Da Nang",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre - each Da Nang neighbourhood compared."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"The best luxury and five-star hotels in Da Nang."}
-];
-function runSearch(query) {
-  if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item => item.title.toLowerCase().includes(q) || item.excerpt.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q));
-}
 (function() {
   var ham = document.getElementById('navHamburger');
   var mob = document.getElementById('mobileMenu');

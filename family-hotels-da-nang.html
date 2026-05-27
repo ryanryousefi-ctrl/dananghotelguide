@@ -437,6 +437,7 @@ a{text-decoration:none;color:inherit}
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<script src="search-engine.js"></script>
 </head>
 <body>
 
@@ -445,7 +446,7 @@ a{text-decoration:none;color:inherit}
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">&#x2715;</button>
   <p class="search-overlay-label">Search the guide</p>
   <div class="search-input-wrap">
-    <input class="search-input" id="searchInput" type="search" placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+    <input class="search-input" id="searchInput" type="search" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
     <button class="search-submit-icon" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
   </div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox"></div>
@@ -1088,24 +1089,6 @@ a{text-decoration:none;color:inherit}
 </footer>
 
 <script>
-window.SEARCH_INDEX = [
-  {title:"Best Hotels in Da Nang (2026 Guide)",url:"best-hotels-in-da-nang.html",cat:"Hotels Guide",excerpt:"The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget."},
-  {title:"Luxury Hotels in Da Nang",url:"luxury-hotels-da-nang.html",cat:"Hotel Category",excerpt:"InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang from $160/night."},
-  {title:"Da Nang Beach Hotels",url:"da-nang-beach-hotels.html",cat:"Hotel Category",excerpt:"Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access. Covers all budgets from boutique guesthouses to full-service resorts."},
-  {title:"Family Hotels in Da Nang",url:"family-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Family-friendly resorts with kids clubs, waterparks, and connecting rooms. Best picks for travelling families visiting Da Nang."},
-  {title:"Boutique Hotels in Da Nang",url:"boutique-hotels-da-nang.html",cat:"Hotel Category",excerpt:"Small-scale boutique hotels in Da Nang's An Thuong neighbourhood and beyond. Character, design, and personal service from $45/night."},
-  {title:"Where to Stay in Da Nang: Area Guide",url:"where-to-stay-in-da-nang.html",cat:"Neighbourhood Guide",excerpt:"My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared."},
-  {title:"Da Nang with Kids",url:"da-nang-guide-for-kids.html",cat:"Travel Guide",excerpt:"Family travel guide to Da Nang covering Ba Na Hills, Marble Mountains, family beaches, and kid-friendly dining."},
-  {title:"Best Time to Visit Da Nang",url:"best-time-to-visit-da-nang.html",cat:"Travel Guide",excerpt:"Month-by-month guide to Da Nang weather, beach conditions, and crowds. Dry season runs February–August."},
-  {title:"Da Nang Guides Hub",url:"guides.html",cat:"Travel Guides",excerpt:"Itineraries, transport guides, first-timer advice, and practical tips for visiting Da Nang."}
-];
-function runSearch(query) {
-  if (!query || query.length < 2) return [];
-  var q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(function(item){
-    return item.title.toLowerCase().includes(q) || item.excerpt.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q);
-  });
-}
 </script>
 
 <script>
