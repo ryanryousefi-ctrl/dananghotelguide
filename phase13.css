@@ -48,6 +48,206 @@
 .p5-atm-section { display: none !important; }
 
 /* ══════════════════════════════════════════════════════════
+   QUICK-ANSWER SECTIONS — kill dead white voids
+   These sections have giant padding but tiny content boxes
+   ══════════════════════════════════════════════════════════ */
+
+/* Collapse the section padding so quick-answer boxes sit tight */
+#quick-answer.section,
+section#quick-answer {
+  padding: clamp(1.5rem,3vw,2.5rem) var(--gutter, 1.5rem) !important;
+}
+
+/* Make the heading tighter */
+#quick-answer .section-heading {
+  font-size: clamp(1.2rem,2.2vw,1.6rem) !important;
+  margin-bottom: .75rem !important;
+}
+#quick-answer .section-label { margin-bottom: .25rem; }
+
+/* Quick-answer box: make it visually strong, not a pale ghost */
+.quick-answer {
+  background: var(--ocean-deep, #0D3535) !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: 14px !important;
+  padding: 1.4rem 1.75rem !important;
+  margin: .75rem 0 0 !important;
+}
+.quick-answer,
+.quick-answer p,
+.quick-answer strong {
+  color: rgba(255,255,255,.85) !important;
+}
+.quick-answer strong { color: #fff !important; font-weight: 700; }
+.quick-answer .qa-label,
+.quick-answer .quick-answer-label {
+  font-size: .6rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  color: var(--coral, #C8604A) !important;
+  margin-bottom: .65rem !important;
+}
+.quick-answer .qa-text { font-size: .88rem; line-height: 1.75; }
+
+/* Prose paragraph immediately after quick-answer box — compress */
+#quick-answer .prose,
+#quick-answer div[class~="prose"] {
+  margin-top: .75rem !important;
+}
+#quick-answer .prose p {
+  font-size: .88rem;
+  color: var(--ink-soft, #444);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PHASE 12 EP CARDS — now use proper img tags
+   phase10.css already styles ep-card-img-wrap + ep-card-img correctly,
+   but needs 3-column grid for the inner-page EP sections
+   ══════════════════════════════════════════════════════════ */
+
+/* Inner page EP sections (phase 12 injection) — force 3-col grid */
+.editors-picks-section .ep-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+/* EP section background + spacing */
+.editors-picks-section {
+  background: var(--sand, #F8F8F8) !important;
+  padding: clamp(2.5rem,5vw,4rem) var(--gutter, 1.5rem) !important;
+}
+.editors-picks-section .ep-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Header labels */
+.editors-picks-section .ep-eyebrow {
+  display: block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--coral, #C8604A);
+  margin-bottom: .5rem;
+}
+.editors-picks-section .ep-headline {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.5rem,2.8vw,2.2rem);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  color: var(--ink, #111);
+  margin: 0 0 .5rem;
+}
+.editors-picks-section .ep-sub {
+  font-size: .88rem;
+  color: var(--ink-muted, #666);
+}
+.editors-picks-section .ep-header { margin-bottom: 1.75rem; }
+
+/* Card: use ep-card-img-wrap (now has proper img tags) */
+.editors-picks-section .ep-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.07);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  transition: box-shadow .22s, transform .22s;
+}
+.editors-picks-section .ep-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+  transform: translateY(-3px);
+}
+.editors-picks-section .ep-card-img-wrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.editors-picks-section .ep-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.editors-picks-section .ep-card:hover .ep-card-img { transform: scale(1.04); }
+.editors-picks-section .ep-card-body {
+  padding: 1rem 1.15rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.editors-picks-section .ep-card-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1rem;
+  color: var(--ocean-deep, #0D3535);
+  line-height: 1.2;
+  margin-bottom: .3rem;
+}
+.editors-picks-section .ep-card-desc {
+  font-size: .8rem;
+  color: var(--ink-muted, #666);
+  line-height: 1.6;
+  flex: 1;
+}
+.editors-picks-section .ep-card-ctas {
+  display: flex;
+  gap: .6rem;
+  margin-top: .85rem;
+}
+.editors-picks-section .ep-cta-primary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ocean, #1B5C5C);
+  color: #fff;
+  font-size: .73rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background .15s;
+  text-align: center;
+}
+.editors-picks-section .ep-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
+.editors-picks-section .ep-cta-ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(27,92,92,.25);
+  color: var(--ocean, #1B5C5C);
+  font-size: .73rem;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all .15s;
+  text-align: center;
+}
+.editors-picks-section .ep-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; border-color: var(--ocean); }
+
+/* EP badge system */
+.ep-badge {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: .55rem;
+}
+.ep-badge-coral { background: var(--coral, #C8604A); color: #fff; }
+.ep-badge-ocean { background: var(--ocean, #1B5C5C); color: #fff; }
+
+@media (max-width: 768px) {
+  .editors-picks-section .ep-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ══════════════════════════════════════════════════════════
    AREA CARDS — Add image thumbnails to the dark ocean grid
    Each card gets a photo strip at top, text below
    ══════════════════════════════════════════════════════════ */
@@ -552,142 +752,7 @@
   letter-spacing: -.015em;
 }
 
-/* ══════════════════════════════════════════════════════════
-   EDITOR'S PICKS — Phase 12 injected EP sections
-   These use ep-card-img as a div with background-image,
-   which phase10.css treats as <img> (object-fit). Fix:
-   ══════════════════════════════════════════════════════════ */
-
-/* Phase 12 EP: ep-grid layout */
-.editors-picks-section .ep-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-/* Phase 12 EP: card structure */
-.editors-picks-section .ep-card {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,.08);
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  transition: box-shadow .22s, transform .22s;
-}
-.editors-picks-section .ep-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,.1);
-  transform: translateY(-3px);
-}
-/* Make ep-card-img div (background-image style) display correctly */
-.editors-picks-section .ep-card-img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--ocean-deep, #0D3535);
-  flex-shrink: 0;
-  transition: transform .5s ease;
-  overflow: hidden;
-}
-.editors-picks-section .ep-card:hover .ep-card-img {
-  transform: scale(1.04);
-}
-.editors-picks-section .ep-card-body {
-  padding: 1rem 1.15rem 1.2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-/* Badges */
-.ep-badge {
-  display: inline-block;
-  font-size: .58rem;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 100px;
-  margin-bottom: .55rem;
-}
-.ep-badge-coral { background: var(--coral, #C8604A); color: #fff; }
-.ep-badge-ocean { background: var(--ocean, #1B5C5C); color: #fff; }
-.editors-picks-section .ep-card-name {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: 1rem;
-  color: var(--ocean-deep, #0D3535);
-  line-height: 1.2;
-  margin-bottom: .3rem;
-}
-.editors-picks-section .ep-card-desc {
-  font-size: .8rem;
-  color: var(--ink-muted, #666);
-  line-height: 1.6;
-  flex: 1;
-}
-.editors-picks-section .ep-card-ctas {
-  display: flex;
-  gap: .6rem;
-  margin-top: .85rem;
-}
-.editors-picks-section .ep-cta-primary {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--ocean, #1B5C5C);
-  color: #fff;
-  font-size: .73rem;
-  font-weight: 700;
-  padding: 7px 12px;
-  border-radius: 100px;
-  text-decoration: none;
-  transition: background .15s;
-  text-align: center;
-}
-.editors-picks-section .ep-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
-.editors-picks-section .ep-cta-ghost {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1.5px solid rgba(27,92,92,.25);
-  color: var(--ocean, #1B5C5C);
-  font-size: .73rem;
-  font-weight: 700;
-  padding: 7px 12px;
-  border-radius: 100px;
-  text-decoration: none;
-  transition: all .15s;
-  text-align: center;
-}
-.editors-picks-section .ep-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; }
-/* EP section header */
-.editors-picks-section .ep-inner { max-width: 1200px; margin: 0 auto; padding: clamp(2.5rem,5vw,4rem) clamp(1.25rem,5vw,3rem); }
-.editors-picks-section .ep-header { margin-bottom: 1.75rem; }
-.editors-picks-section .ep-eyebrow {
-  display: block;
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--coral, #C8604A);
-  margin-bottom: .5rem;
-}
-.editors-picks-section .ep-headline {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  letter-spacing: -.025em;
-  line-height: 1.1;
-  color: var(--ink, #111);
-}
-.editors-picks-section .ep-headline em { font-style: italic; color: var(--ocean, #1B5C5C); }
-.editors-picks-section .ep-sub {
-  font-size: .88rem;
-  color: var(--ink-muted, #666);
-  margin-top: .5rem;
-}
-@media (max-width: 768px) {
-  .editors-picks-section .ep-grid { grid-template-columns: 1fr; }
-}
+/* (EP card system now handled in the block above) */
 
 /* ══════════════════════════════════════════════════════════
    MOBILE — Aggressive improvements
