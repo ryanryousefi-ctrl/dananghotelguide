@@ -5,491 +5,28 @@
          crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Search Da Nang Hotel Guide, Hotels & Travel Info</title>
-<meta name="description" content="Search Da Nang Hotel Guide for hotel reviews, neighbourhood guides, weather data, dining, and Da Nang travel tips. Find exactly what you need.">
+<title>Search Da Nang Hotel Guide — 170+ Guides & Hotel Reviews</title>
+<meta name="description" content="Search 170+ Da Nang guides, hotel reviews, area guides, and travel tips. Find the best hotels, where to stay, itineraries, and local advice instantly.">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="canonical" href="https://www.dananghotelguide.com/search.html">
 <link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/search.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Open Graph -->
-<meta property="og:title" content="Search Da Nang Hotel Guide, Hotels & Travel Info">
-<meta property="og:description" content="Search Da Nang Hotel Guide for hotel reviews, neighbourhood guides, weather data, dining, and Da Nang travel tips. Find exactly what you need.">
+<meta property="og:title" content="Search Da Nang Hotel Guide — 170+ Guides & Hotel Reviews">
+<meta property="og:description" content="Search 170+ Da Nang guides, hotel reviews, area guides, and travel tips.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dananghotelguide.com/search.html">
 <meta property="og:image" content="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=630&fit=crop&auto=format">
-
-<meta name="twitter:description" content="Search Da Nang Hotel Guide for hotel reviews, neighbourhood guides, weather data, dining, and Da Nang travel tips. Find exactly what you need.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Search Da Nang Hotel Guide, Hotels & Travel Info">
+<meta name="twitter:title" content="Search Da Nang Hotel Guide — 170+ Guides & Hotel Reviews">
+<meta name="twitter:description" content="Search 170+ Da Nang guides, hotel reviews, area guides, and travel tips.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=630&fit=crop&auto=format">
-<!-- Affiliate Config: replace 1784897 with your aid= value -->
-
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com","description":"The independent guide to hotels, dining, and travel in Da Nang, Vietnam.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dananghotelguide.com/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dananghotelguide.com/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com","logo":"https://dananghotelguide.com/logo.png","sameAs":[],"contactPoint":{"@type":"ContactPoint","contactType":"editorial","email":"hello@dananghotelguide.com"}}
-</script>
-<style>
-
-/* ─── RESET & BASE ──────────────────────────────────────── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --sand:        #F6F1E9;
-  --sand-mid:    #EDE5D8;
-  --sand-dark:   #D9CDBB;
-  --white:       #FFFFFF;
-  --ocean:       #1B5C5C;
-  --ocean-light: #217070;
-  --ocean-deep:  #0D3535;
-  --ocean-pale:  #EAF4F4;
-  --coral:       #C8604A;
-  --coral-light: #E07A62;
-  --ink:         #1A1A18;
-  --ink-soft:    #3C3C38;
-  --ink-muted:   #7A7A70;
-  --gold:        #B8901E;
-  --font-serif:  'Instrument Serif', Georgia, serif;
-  --font-sans:   'Satoshi', system-ui, sans-serif;
-  --max:         1160px;
-  --gutter:      clamp(1.25rem, 5vw, 3rem);
-  --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px;
-  --shadow-card:  0 2px 12px rgba(26,26,24,.07), 0 1px 3px rgba(26,26,24,.05);
-  --shadow-hover: 0 8px 32px rgba(26,26,24,.12), 0 2px 8px rgba(26,26,24,.07);
-  --ease: cubic-bezier(.4,0,.2,1);
-}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
-::selection{background:var(--ocean);color:#fff}
-img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-
-/* ─── SITE NAV ──────────────────────────────────────────── */
-.site-nav{
-  position:sticky;top:0;z-index:500;
-  height:64px;
-  background:rgba(13,53,53,.97);
-  backdrop-filter:blur(18px) saturate(180%);
-  -webkit-backdrop-filter:blur(18px) saturate(180%);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  display:flex;align-items:center;
-  padding:0 var(--gutter);
-  gap:0;
-}
-.nav-logo{
-  font-family:var(--font-serif);font-size:1.35rem;
-  color:#fff;letter-spacing:-.01em;flex-shrink:0;
-  margin-right:clamp(1rem,3vw,2.5rem);
-}
-.nav-logo em{font-style:italic;color:var(--coral-light)}
-
-/* Desktop links */
-.nav-links{
-  display:flex;align-items:center;gap:0;flex:1;
-}
-.nav-link{
-  position:relative;
-  padding:8px 13px;
-  border-radius:8px;
-  font-size:.82rem;font-weight:600;
-  color:rgba(255,255,255,.5);
-  transition:color .18s,background .18s;
-  white-space:nowrap;
-}
-.nav-link:hover{color:#fff;background:rgba(255,255,255,.07)}
-.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
-
-/* Hotels dropdown */
-.nav-dropdown{
-  position:relative;
-}
-.nav-dropdown-toggle::after{
-  content:'';display:inline-block;
-  width:6px;height:6px;
-  border-right:1.5px solid currentColor;
-  border-bottom:1.5px solid currentColor;
-  transform:rotate(45deg) translateY(-2px);
-  margin-left:5px;
-  transition:transform .2s;
-}
-.nav-dropdown:hover .nav-dropdown-toggle::after,
-.nav-dropdown-toggle[aria-expanded="true"]::after{
-  transform:rotate(-135deg) translateY(-2px);
-}
-.nav-dropdown-menu{
-  position:absolute;top:calc(100% + 8px);left:0;
-  min-width:200px;
-  background:var(--ocean-deep);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--r-lg);
-  padding:.5rem;
-  opacity:0;visibility:hidden;
-  transform:translateY(-6px);
-  transition:opacity .2s,visibility .2s,transform .2s;
-  box-shadow:0 16px 40px rgba(0,0,0,.4);
-  z-index:600;
-}
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-menu:focus-within{
-  opacity:1;visibility:visible;transform:translateY(0);
-}
-.nav-dropdown-item{
-  display:flex;align-items:center;gap:8px;
-  padding:8px 12px;
-  font-size:.82rem;font-weight:500;
-  color:rgba(255,255,255,.55);
-  border-radius:var(--r-md);
-  transition:color .15s,background .15s;
-}
-.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
-.nav-dropdown-item .di-icon{
-  font-size:.9rem;width:20px;text-align:center;flex-shrink:0;
-}
-
-/* Right side of nav */
-.nav-right{
-  display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;
-}
-
-/* Search icon button */
-.nav-search-btn{
-  display:flex;align-items:center;justify-content:center;
-  width:36px;height:36px;
-  border:none;cursor:pointer;
-  background:rgba(255,255,255,.08);
-  border-radius:50%;
-  color:rgba(255,255,255,.6);
-  transition:background .18s,color .18s;
-}
-.nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
-.nav-search-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
-
-/* Search overlay */
-.search-overlay{
-  position:fixed;inset:0;z-index:900;
-  background:rgba(13,53,53,.95);
-  backdrop-filter:blur(24px);
-  display:flex;flex-direction:column;align-items:center;
-  padding:clamp(4rem,10vh,7rem) var(--gutter) 2rem;
-  opacity:0;visibility:hidden;
-  transition:opacity .25s,visibility .25s;
-}
-.search-overlay.open{opacity:1;visibility:visible}
-.search-close{
-  position:absolute;top:1.5rem;right:var(--gutter);
-  background:rgba(255,255,255,.1);
-  border:none;cursor:pointer;
-  color:rgba(255,255,255,.7);
-  width:40px;height:40px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;transition:background .18s,color .18s;
-}
-.search-close:hover{background:rgba(255,255,255,.18);color:#fff}
-.search-overlay-label{
-  font-size:.7rem;font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:rgba(255,255,255,.4);
-  margin-bottom:1.2rem;
-}
-.search-input-wrap{
-  position:relative;width:100%;max-width:680px;margin-bottom:2rem;
-}
-.search-input{
-  width:100%;
-  background:rgba(255,255,255,.08);
-  border:2px solid rgba(255,255,255,.15);
-  border-radius:var(--r-xl);
-  padding:18px 60px 18px 24px;
-  font-family:var(--font-serif);
-  font-size:clamp(1.2rem,2.5vw,1.8rem);
-  color:#fff;
-  outline:none;
-  transition:border-color .2s,background .2s;
-}
-.search-input::placeholder{color:rgba(255,255,255,.3)}
-.search-input:focus{
-  border-color:rgba(255,255,255,.45);
-  background:rgba(255,255,255,.12);
-}
-.search-submit-icon{
-  position:absolute;right:20px;top:50%;transform:translateY(-50%);
-  background:none;border:none;cursor:pointer;
-  color:rgba(255,255,255,.5);
-}
-.search-submit-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
-.search-results-inline{
-  width:100%;max-width:680px;
-  display:flex;flex-direction:column;gap:.5rem;
-  max-height:50vh;overflow-y:auto;
-}
-.sri{
-  display:flex;gap:12px;align-items:flex-start;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:var(--r-lg);
-  padding:14px 18px;
-  cursor:pointer;
-  transition:background .15s;
-  text-decoration:none;color:inherit;
-}
-.sri:hover{background:rgba(255,255,255,.11)}
-.sri-cat{
-  font-size:.65rem;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--coral-light);
-  white-space:nowrap;margin-top:2px;
-}
-.sri-body{flex:1;min-width:0}
-.sri-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:3px}
-.sri-excerpt{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.5;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.search-no-results{color:rgba(255,255,255,.45);font-size:.9rem;padding:1rem 0}
-.search-hint{
-  margin-top:1.5rem;
-  display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;
-}
-.sh-pill{
-  padding:6px 14px;background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.5);
-  cursor:pointer;transition:background .15s,color .15s;
-}
-.sh-pill:hover{background:rgba(255,255,255,.13);color:#fff}
-
-/* "Search Stays" CTA */
-.nav-stays-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:8px 16px;
-  background:var(--coral);color:#fff;
-  font-size:.78rem;font-weight:700;
-  border-radius:100px;white-space:nowrap;
-  transition:background .18s,transform .15s;
-  border:none;cursor:pointer;
-  text-decoration:none;
-}
-.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
-
-/* Hamburger */
-.nav-hamburger{
-  display:none;
-  flex-direction:column;justify-content:center;
-  gap:5px;
-  width:40px;height:40px;
-  background:rgba(255,255,255,.08);
-  border:none;cursor:pointer;
-  border-radius:var(--r-sm);
-  padding:10px;
-  margin-left:8px;
-}
-.nav-hamburger span{
-  display:block;height:1.5px;background:#fff;
-  border-radius:2px;
-  transition:transform .25s,opacity .25s;
-}
-.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.nav-hamburger.open span:nth-child(2){opacity:0}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-
-/* Mobile drawer */
-.mobile-menu{
-  position:fixed;inset:0;z-index:450;
-  background:var(--ocean-deep);
-  transform:translateX(100%);
-  transition:transform .3s var(--ease);
-  display:flex;flex-direction:column;
-  padding:calc(64px + 1.5rem) var(--gutter) 2rem;
-  overflow-y:auto;
-}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-nav-link{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 0;
-  font-size:1.1rem;font-weight:600;
-  color:rgba(255,255,255,.75);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  transition:color .15s;
-}
-.mobile-nav-link:hover{color:#fff}
-.mobile-nav-link.active{color:var(--coral-light)}
-.mobile-dropdown-items{
-  padding-left:1rem;
-  max-height:0;overflow:hidden;
-  transition:max-height .3s var(--ease);
-}
-.mobile-dropdown-items.open{max-height:500px}
-.mobile-sub-link{
-  display:block;padding:10px 0;
-  font-size:.9rem;color:rgba(255,255,255,.5);
-  border-bottom:1px solid rgba(255,255,255,.04);
-  transition:color .15s;
-}
-.mobile-sub-link:hover{color:#fff}
-.mobile-stays-btn{
-  display:block;
-  margin-top:2rem;padding:15px;
-  background:var(--coral);color:#fff;
-  text-align:center;font-size:.95rem;font-weight:700;
-  border-radius:var(--r-xl);
-}
-
-/* ─── BREADCRUMB ─────────────────────────────────────────── */
-.breadcrumb{
-  background:var(--white);
-  border-bottom:1px solid var(--sand-dark);
-  padding:10px var(--gutter);
-}
-.breadcrumb ol{
-  max-width:var(--max);margin:0 auto;
-  list-style:none;display:flex;flex-wrap:wrap;
-  align-items:center;gap:4px;
-  font-size:.76rem;color:var(--ink-muted);
-}
-.breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
-.breadcrumb a{color:var(--ocean);transition:opacity .15s}
-.breadcrumb a:hover{opacity:.7}
-.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
-
-/* ─── FOOTER ─────────────────────────────────────────────── */
-.site-footer{
-  background:var(--ink);
-  color:rgba(255,255,255,.32);
-  padding:clamp(3rem,6vw,5rem) var(--gutter) 0;
-}
-.footer-inner{max-width:var(--max);margin:0 auto}
-.footer-grid{
-  display:grid;
-  grid-template-columns:2.2fr 1fr 1fr 1fr;
-  gap:clamp(1.5rem,3vw,3rem);
-  padding-bottom:2.5rem;
-  border-bottom:1px solid rgba(255,255,255,.07);
-}
-.footer-brand{
-  font-family:var(--font-serif);font-size:1.35rem;
-  color:#fff;display:block;margin-bottom:.5rem;
-}
-.footer-brand em{font-style:italic;color:var(--coral-light)}
-.footer-brand-desc{
-  font-size:.8rem;line-height:1.75;
-  max-width:240px;margin-bottom:1.4rem;
-}
-.footer-disclosure-box{
-  font-size:.72rem;line-height:1.7;
-  color:rgba(255,255,255,.22);
-  background:rgba(255,255,255,.03);
-  padding:.75rem 1rem;
-  border-radius:var(--r-sm);
-  border:1px solid rgba(255,255,255,.06);
-}
-.footer-col-title{
-  font-size:.67rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:.12em;
-  color:rgba(255,255,255,.4);
-  margin-bottom:1rem;
-}
-.footer-col a{
-  display:block;font-size:.82rem;
-  color:rgba(255,255,255,.32);
-  padding:3px 0;transition:color .18s;
-}
-.footer-col a:hover{color:rgba(255,255,255,.75)}
-.footer-bottom{
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:.8rem;
-  padding:1.8rem 0;
-  font-size:.72rem;
-}
-.footer-legal{
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:1.5rem 0 2rem;
-  display:flex;justify-content:space-between;
-  flex-wrap:wrap;align-items:center;
-  gap:1rem;
-}
-.footer-legal-text{
-  font-size:.7rem;line-height:1.7;
-  color:rgba(255,255,255,.25);
-  max-width:60ch;
-}
-.footer-legal-links{
-  display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;
-  flex-shrink:0;
-}
-.footer-legal-links a{
-  font-size:.72rem;color:rgba(255,255,255,.35);
-  transition:color .15s;
-}
-.footer-legal-links a:hover{color:rgba(255,255,255,.75)}
-.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
-
-/* ─── SECTION UTILITIES ──────────────────────────────────── */
-.section{padding:clamp(3.5rem,7vw,6rem) var(--gutter)}
-.section-inner{max-width:var(--max);margin:0 auto}
-.section-label{
-  font-size:.68rem;font-weight:700;text-transform:uppercase;
-  letter-spacing:.15em;color:var(--ocean);
-  margin-bottom:.6rem;display:flex;align-items:center;gap:8px;
-}
-.section-label::before{content:'';display:block;width:16px;height:2px;background:var(--ocean);border-radius:1px}
-.section-heading{
-  font-family:var(--font-serif);
-  font-size:clamp(1.8rem,3.5vw,2.8rem);
-  color:var(--ink);line-height:1.1;letter-spacing:-.03em;
-  margin-bottom:.8rem;
-}
-.section-heading em{font-style:italic;color:var(--ocean)}
-
-/* Author box */
-.author-box{
-  display:flex;align-items:center;gap:14px;
-  padding:1.2rem 1.5rem;
-  background:var(--sand);
-  border-radius:var(--r-lg);
-  border:1px solid var(--sand-dark);
-  margin:2rem 0;
-}
-.author-avatar{
-  width:52px;height:52px;border-radius:50%;
-  object-fit:cover;flex-shrink:0;
-  background:var(--sand-dark);
-  border:2px solid var(--sand-dark);
-}
-.author-name{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:2px}
-.author-role{font-size:.75rem;color:var(--ink-muted)}
-.author-updated{
-  margin-left:auto;flex-shrink:0;
-  font-size:.7rem;color:var(--ink-muted);
-  text-align:right;line-height:1.6;
-}
-
-/* ─── ANIMATIONS ─────────────────────────────────────────── */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(14px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.fade-up{animation:fadeUp .6s var(--ease) both}
-.fu1{animation-delay:.08s}.fu2{animation-delay:.18s}
-.fu3{animation-delay:.28s}.fu4{animation-delay:.38s}
-.fu5{animation-delay:.5s}
-
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
-@media(max-width:1024px){
-  .footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:768px){
-  .nav-links{display:none}
-  .nav-hamburger{display:flex}
-  .nav-stays-btn span.btn-text{display:none}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
-}
-@media(max-width:480px){
-  .footer-grid{grid-template-columns:1fr}
-  .footer-legal{flex-direction:column;align-items:flex-start}
-}
-
-</style>
-<meta name="robots" content="noindex,follow">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Search Da Nang Hotel Guide, Hotels, Guides & Dining","url":"https://dananghotelguide.com/search.html","datePublished":"2024-01-01","dateModified":"2026-03-01","publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"author":{"@type":"Organization","name":"Da Nang Hotel Guide"}}
+{"@context":"https://schema.org","@type":"WebPage","name":"Search Da Nang Hotel Guide","url":"https://dananghotelguide.com/search.html","dateModified":"2026-05-27","publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"}}
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -499,29 +36,238 @@ a{text-decoration:none;color:inherit}
   gtag('js', new Date());
   gtag('config', 'G-0T1H4G2N80');
 </script>
+<meta name="robots" content="noindex,follow">
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;
+  --white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;
+  --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
+  --coral:#C8604A;--coral-light:#E07A62;
+  --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --gold:#B8901E;
+  --font-serif:'Instrument Serif',Georgia,serif;
+  --font-sans:'Satoshi',system-ui,sans-serif;
+  --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
+  --r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;
+  --shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);
+  --shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
+::selection{background:var(--ocean);color:#fff}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+.site-nav{position:sticky;top:0;z-index:500;height:64px;background:rgba(13,53,53,.97);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;padding:0 var(--gutter);gap:0}
+.nav-logo{font-family:var(--font-serif);font-size:1.35rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1rem,3vw,2.5rem)}
+.nav-logo em{font-style:italic;color:var(--coral-light)}
+.nav-links{display:flex;align-items:center;gap:0;flex:1}
+.nav-link{position:relative;padding:8px 13px;border-radius:8px;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.5);transition:color .18s,background .18s;white-space:nowrap}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:5px;transition:transform .2s}
+.nav-dropdown:hover .nav-dropdown-toggle::after,.nav-dropdown-toggle[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--ocean-deep);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:.5rem;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,visibility .2s,transform .2s;box-shadow:0 16px 40px rgba(0,0,0,.4);z-index:600}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown-menu:focus-within{opacity:1;visibility:visible;transform:translateY(0)}
+.nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.55);border-radius:var(--r-md);transition:color .15s,background .15s}
+.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-dropdown-item .di-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+.nav-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;cursor:pointer;background:rgba(255,255,255,.08);border-radius:50%;color:rgba(255,255,255,.6);transition:background .18s,color .18s}
+.nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
+.nav-search-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--coral);color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s,transform .15s;border:none;cursor:pointer;text-decoration:none}
+.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:var(--r-sm);padding:10px;margin-left:8px}
+.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:450;background:var(--ocean-deep);transform:translateX(100%);transition:transform .3s var(--ease);display:flex;flex-direction:column;padding:calc(64px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.mobile-nav-link:hover{color:#fff}
+.mobile-nav-link.active{color:var(--coral-light)}
+.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
+.mobile-dropdown-items.open{max-height:500px}
+.mobile-sub-link{display:block;padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s}
+.mobile-sub-link:hover{color:#fff}
+.mobile-stays-btn{display:block;margin-top:2rem;padding:15px;background:var(--coral);color:#fff;text-align:center;font-size:.95rem;font-weight:700;border-radius:var(--r-xl)}
+
+/* SEARCH OVERLAY */
+.search-overlay{position:fixed;inset:0;z-index:900;background:rgba(13,53,53,.97);backdrop-filter:blur(24px);display:flex;flex-direction:column;align-items:center;padding:clamp(4rem,10vh,7rem) var(--gutter) 2rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;overflow-y:auto}
+.search-overlay.open{opacity:1;visibility:visible}
+.search-close{position:absolute;top:1.5rem;right:var(--gutter);background:rgba(255,255,255,.1);border:none;cursor:pointer;color:rgba(255,255,255,.7);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:background .18s,color .18s}
+.search-close:hover{background:rgba(255,255,255,.18);color:#fff}
+.search-overlay-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.2rem}
+.search-input-wrap{position:relative;width:100%;max-width:720px;margin-bottom:1.5rem}
+.search-input{width:100%;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);border-radius:var(--r-xl);padding:18px 60px 18px 24px;font-family:var(--font-serif);font-size:clamp(1.2rem,2.5vw,1.8rem);color:#fff;outline:none;transition:border-color .2s,background .2s}
+.search-input::placeholder{color:rgba(255,255,255,.3)}
+.search-input:focus{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.12)}
+.search-submit-icon{position:absolute;right:20px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.5)}
+.search-submit-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* Overlay: discovery panel (shown before typing) */
+.search-discovery{width:100%;max-width:720px}
+.search-disc-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.8rem}
+.disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:1.5rem}
+.disc-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:.75rem 1rem;transition:background .15s}
+.disc-item:hover{background:rgba(255,255,255,.11)}
+.disc-cat{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-light);margin-bottom:3px}
+.disc-title{font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.4;font-family:var(--font-serif)}
+
+/* Overlay: popular pills */
+.search-hint{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-top:.75rem}
+.sh-pill{padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.5);cursor:pointer;transition:background .15s,color .15s}
+.sh-pill:hover,.sh-pill.active{background:rgba(255,255,255,.15);color:#fff}
+
+/* Overlay: results */
+.search-results-inline{width:100%;max-width:720px;display:flex;flex-direction:column;gap:.5rem;max-height:55vh;overflow-y:auto}
+.sri{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:14px 18px;cursor:pointer;transition:background .15s;text-decoration:none;color:inherit}
+.sri:hover,.sri.focused{background:rgba(255,255,255,.12)}
+.sri-cat{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-light);white-space:nowrap;margin-top:2px;min-width:85px}
+.sri-body{flex:1;min-width:0}
+.sri-title{font-family:var(--font-serif);font-size:1.02rem;color:#fff;margin-bottom:3px}
+.sri-excerpt{font-size:.78rem;color:rgba(255,255,255,.42);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.search-no-results{color:rgba(255,255,255,.45);font-size:.9rem;padding:1rem 0}
+.search-count-label{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:.06em;margin-bottom:.5rem;width:100%;max-width:720px}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:10px var(--gutter)}
+.breadcrumb ol{max-width:var(--max);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted)}
+.breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
+.breadcrumb a{color:var(--ocean);transition:opacity .15s}
+.breadcrumb a:hover{opacity:.7}
+.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
+
+/* SEARCH PAGE */
+.search-page-hero{background:var(--ocean-deep);padding:clamp(3rem,7vw,5rem) var(--gutter) clamp(2rem,4vw,3rem);text-align:center}
+.sph-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.8rem}
+.sph-heading{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);color:#fff;letter-spacing:-.03em;margin-bottom:.5rem}
+.sph-heading em{font-style:italic;color:var(--coral-light)}
+.sph-sub{font-size:.9rem;color:rgba(255,255,255,.45);margin-bottom:2rem}
+.sph-form{display:flex;gap:0;max-width:640px;margin:0 auto;position:relative}
+.sph-input{flex:1;border:2px solid rgba(255,255,255,.15);border-right:none;border-radius:var(--r-xl) 0 0 var(--r-xl);padding:16px 22px;font-family:var(--font-sans);font-size:1rem;background:rgba(255,255,255,.08);color:#fff;outline:none;transition:border-color .2s,background .2s}
+.sph-input::placeholder{color:rgba(255,255,255,.3)}
+.sph-input:focus{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.12)}
+.sph-btn{padding:16px 24px;background:var(--coral);color:#fff;border:none;cursor:pointer;border-radius:0 var(--r-xl) var(--r-xl) 0;font-size:.9rem;font-weight:700;transition:background .18s;white-space:nowrap}
+.sph-btn:hover{background:var(--coral-light)}
+.sph-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.2rem}
+.sph-pill{padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.5);cursor:pointer;transition:background .15s,color .15s}
+.sph-pill:hover{background:rgba(255,255,255,.15);color:#fff}
+
+/* RESULTS SECTION */
+.search-results-section{max-width:var(--max);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) var(--gutter)}
+.sr-count{font-size:.82rem;color:var(--ink-muted);margin-bottom:1.5rem}
+.sr-count strong{color:var(--ink)}
+.sr-list{display:flex;flex-direction:column;gap:.75rem}
+.sr-item{display:flex;gap:0;align-items:stretch;background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);overflow:hidden;transition:border-color .18s,box-shadow .18s,transform .15s}
+.sr-item:hover{border-color:var(--ocean-pale);box-shadow:var(--shadow-card);transform:translateY(-1px)}
+.sr-accent{width:4px;flex-shrink:0}
+.sr-accent.cat-hotels{background:var(--ocean)}
+.sr-accent.cat-guide{background:var(--coral)}
+.sr-accent.cat-review{background:var(--gold)}
+.sr-accent.cat-area{background:#4A90A4}
+.sr-accent.cat-beach{background:#2BA0B0}
+.sr-accent.cat-hoi-an{background:#7C5CBF}
+.sr-accent.cat-itinerary{background:#E07A62}
+.sr-accent.cat-compare{background:#3A8C6E}
+.sr-accent.cat-other{background:var(--sand-dark)}
+.sr-body{flex:1;padding:1.1rem 1.3rem}
+.sr-meta{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.sr-cat-badge{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);background:var(--ocean-pale);padding:2px 8px;border-radius:100px}
+.sr-title{font-family:var(--font-serif);font-size:1.08rem;color:var(--ink);margin-bottom:.3rem;transition:color .15s}
+.sr-item:hover .sr-title{color:var(--ocean)}
+.sr-excerpt{font-size:.82rem;color:var(--ink-muted);line-height:1.6;margin-bottom:.5rem}
+.sr-cta{font-size:.75rem;font-weight:700;color:var(--ocean);display:inline-flex;align-items:center;gap:4px}
+
+/* DISCOVERY SECTION (before search) */
+.search-discovery-section{max-width:var(--max);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) var(--gutter)}
+.sds-heading{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,2rem);color:var(--ink);letter-spacing:-.02em;margin-bottom:.4rem}
+.sds-sub{font-size:.85rem;color:var(--ink-muted);margin-bottom:2rem}
+.sds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem}
+.sds-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.2rem 1.3rem;transition:border-color .18s,box-shadow .18s,transform .15s;display:block}
+.sds-card:hover{border-color:var(--ocean-pale);box-shadow:var(--shadow-card);transform:translateY(-2px)}
+.sds-card-cat{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.4rem}
+.sds-card-title{font-family:var(--font-serif);font-size:1rem;color:var(--ink);line-height:1.35;margin-bottom:.4rem}
+.sds-card-excerpt{font-size:.78rem;color:var(--ink-muted);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sds-popular-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.75rem}
+.sds-popular-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.sds-pill{padding:7px 16px;background:var(--sand);border:1px solid var(--sand-dark);border-radius:100px;font-size:.8rem;color:var(--ink-muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.sds-pill:hover{background:var(--ocean-pale);color:var(--ocean);border-color:var(--ocean-pale)}
+
+/* EMPTY STATE */
+.sr-empty{padding:3.5rem 0;text-align:center}
+.sr-empty-icon{font-size:2.5rem;margin-bottom:1rem;opacity:.3}
+.sr-empty-h{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:.4rem}
+.sr-empty-p{font-size:.88rem;color:var(--ink-muted);margin-bottom:1.5rem}
+.sr-empty-pills{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+
+/* FOOTER */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
+.footer-inner{max-width:var(--max);margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem}
+.footer-brand em{font-style:italic;color:var(--coral-light)}
+.footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem}
+.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.06)}
+.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s}
+.footer-col a:hover{color:rgba(255,255,255,.75)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.8rem 0;font-size:.72rem}
+.footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem}
+.footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch}
+.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0}
+.footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35);transition:color .15s}
+.footer-legal-links a:hover{color:rgba(255,255,255,.75)}
+.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .4s var(--ease) both}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-stays-btn span.btn-text{display:none}
+  .disc-grid{grid-template-columns:repeat(2,1fr)}
+  .sds-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
+}
+@media(max-width:480px){
+  .disc-grid{grid-template-columns:1fr}
+  .sds-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-legal{flex-direction:column;align-items:flex-start}
+}
+</style>
 </head>
 <body>
+
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-logo">Da Nang <em>Hotel Guide</em></a>
   <div class="nav-links" role="list">
-      <a href="index.html" class="nav-link">Home</a>
-      <div class="nav-dropdown">
-        <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
-        <div class="nav-dropdown-menu" role="menu">
-          <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
-          <a href="da-nang-beach-hotels.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">🏖</span>Beachfront</a>
-          <a href="luxury-hotels-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span class="di-icon">✦</span>Luxury</a>
-          <a href="family-hotels-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span class="di-icon">👨‍👩‍👧</span>Family</a>
-          <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">◈</span>Boutique</a>
-        </div>
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">&#9733;</span>Best Hotels</a>
+        <a href="da-nang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">&#9733;</span>Beachfront</a>
+        <a href="luxury-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">&#9733;</span>Luxury</a>
+        <a href="family-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">&#9733;</span>Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">&#9733;</span>Boutique</a>
       </div>
-      <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
-      <a href="dining.html" class="nav-link">Dining</a>
-      <a href="guides.html" class="nav-link">Guides</a>
-      <a href="hotel-reviews.html" class="nav-link">Hotel Reviews</a>
+    </div>
+    <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
+    <a href="dining.html" class="nav-link">Dining</a>
+    <a href="guides.html" class="nav-link">Guides</a>
+    <a href="hotel-reviews.html" class="nav-link">Hotel Reviews</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
@@ -529,7 +275,7 @@ a{text-decoration:none;color:inherit}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk1&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk1&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897%26lang%3Den-us" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <span class="btn-text">Search Stays</span>
     </a>
@@ -539,13 +285,10 @@ a{text-decoration:none;color:inherit}
   </div>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="index.html" class="mobile-nav-link">Home</a>
   <div>
-    <a href="hotels.html" class="mobile-nav-link" id="mobileHotelsToggle">
-      Hotels <span style="font-size:.8rem;opacity:.5">▾</span>
-    </a>
+    <a href="hotels.html" class="mobile-nav-link" id="mobileHotelsToggle">Hotels <span style="font-size:.8rem;opacity:.5">&#9662;</span></a>
     <div class="mobile-dropdown-items" id="mobileHotelsSub">
       <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
       <a href="da-nang-beach-hotels.html" class="mobile-sub-link">Beachfront Hotels</a>
@@ -560,168 +303,162 @@ a{text-decoration:none;color:inherit}
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk2&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk2&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897%26lang%3Den-us" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &#8594;</a>
 </div>
 
 <!-- Search overlay -->
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
-  <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
-  <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
+  <button class="search-close" id="searchCloseBtn" aria-label="Close search">&#10005;</button>
+  <p class="search-overlay-label">Search 170+ Da Nang guides &amp; hotel reviews</p>
   <div class="search-input-wrap">
     <input type="search" class="search-input" id="searchInput"
-      placeholder="Hotels, areas, guides…" autocomplete="off" spellcheck="false">
+      placeholder="Hotels, areas, Hoi An, itinerary&#8230;" autocomplete="off" spellcheck="false" aria-label="Search">
     <button class="search-submit-icon" aria-label="Search">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
   </div>
+  <div id="searchCountLabel" class="search-count-label" style="display:none"></div>
   <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
-  <div class="search-hint" id="searchHint">
-    <button class="sh-pill" data-q="luxury hotels">Luxury hotels</button>
-    <button class="sh-pill" data-q="beachfront">Beachfront</button>
-    <button class="sh-pill" data-q="best time to visit">Best time to visit</button>
-    <button class="sh-pill" data-q="where to stay">Where to stay</button>
-    <button class="sh-pill" data-q="family">Family-friendly</button>
-  </div>
-</div>
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <ol><li><span aria-current="page">Home</span></li><li><span aria-current="page">Search</span></li></ol>
-</nav>
-
-<style>
-.search-page-wrap{max-width:760px;margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--gutter)}
-.search-page-h1{font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--ink);letter-spacing:-.03em;margin-bottom:.5rem}
-.search-page-form{display:flex;gap:0;margin:1.8rem 0 2.5rem;position:relative}
-.search-page-input{
-  flex:1;
-  border:2px solid var(--sand-dark);
-  border-right:none;
-  border-radius:var(--r-xl) 0 0 var(--r-xl);
-  padding:14px 20px;
-  font-family:var(--font-sans);font-size:1rem;
-  background:var(--white);color:var(--ink);
-  outline:none;transition:border-color .2s;
-}
-.search-page-input:focus{border-color:var(--ocean)}
-.search-page-btn{
-  padding:14px 22px;
-  background:var(--ocean);color:#fff;
-  border:none;cursor:pointer;
-  border-radius:0 var(--r-xl) var(--r-xl) 0;
-  font-size:.88rem;font-weight:700;
-  transition:background .18s;
-  white-space:nowrap;
-}
-.search-page-btn:hover{background:var(--ocean-light)}
-.search-results-list{display:flex;flex-direction:column;gap:.75rem}
-.srl-item{
-  display:flex;gap:12px;align-items:flex-start;
-  background:var(--white);border:1px solid var(--sand-dark);
-  border-radius:var(--r-lg);padding:1.2rem 1.4rem;
-  transition:border-color .18s,box-shadow .18s;
-}
-.srl-item:hover{border-color:var(--ocean-pale);box-shadow:var(--shadow-card)}
-.srl-cat{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);white-space:nowrap;margin-top:2px;min-width:90px}
-.srl-body{flex:1}
-.srl-title{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);margin-bottom:.3rem}
-.srl-excerpt{font-size:.82rem;color:var(--ink-muted);line-height:1.6;margin-bottom:.5rem}
-.srl-link{font-size:.78rem;font-weight:700;color:var(--ocean)}
-.search-empty{padding:3rem 0;text-align:center;color:var(--ink-muted)}
-.search-hints-title{font-size:.78rem;font-weight:600;color:var(--ink-muted);margin-bottom:.8rem}
-.search-hints{display:flex;flex-wrap:wrap;gap:.5rem}
-.shp{padding:6px 14px;background:var(--sand);border:1px solid var(--sand-dark);border-radius:100px;font-size:.78rem;color:var(--ink-muted);cursor:pointer;transition:background .15s,color .15s}
-.shp:hover{background:var(--ocean-pale);color:var(--ocean);border-color:var(--ocean-pale)}
-.results-count{font-size:.8rem;color:var(--ink-muted);margin-bottom:1.2rem}
-</style>
-
-<div class="search-page-wrap">
-  <h1 class="search-page-h1">Search <em style="font-style:italic;color:var(--ocean)">Da Nang Hotel Guide</em></h1>
-  <p style="color:var(--ink-muted);font-size:.9rem">Search guides, hotel lists, area pages, and dining resources.</p>
-  
-  <form class="search-page-form" id="searchPageForm" role="search">
-    <input type="search" class="search-page-input" id="searchPageInput" 
-      placeholder="Hotels, areas, guides, dining…" autocomplete="off" aria-label="Search Da Nang Hotel Guide">
-    <button type="submit" class="search-page-btn">Search</button>
-  </form>
-  
-  <div id="searchPageResults"></div>
-  
-  <div id="searchPageHints">
-    <p class="search-hints-title">Popular searches</p>
-    <div class="search-hints">
-      <button class="shp" data-q="luxury hotels">Luxury hotels</button>
-      <button class="shp" data-q="beachfront">Beachfront hotels</button>
-      <button class="shp" data-q="best time to visit">Best time to visit</button>
-      <button class="shp" data-q="family">Family resorts</button>
-      <button class="shp" data-q="boutique">Boutique hotels</button>
-      <button class="shp" data-q="where to stay">Where to stay</button>
-      <button class="shp" data-q="weather">Weather data</button>
-      <button class="shp" data-q="dining">Dining guide</button>
+  <div id="searchDiscovery" class="search-discovery">
+    <p class="search-disc-label">Trending guides</p>
+    <div class="disc-grid">
+      <a href="index.html" class="disc-item">
+        <div class="disc-cat">Homepage</div>
+        <div class="disc-title">Da Nang Hotels 2026 — Best Picks, Honest Reviews & Local Advice</div>
+      </a>
+      <a href="best-hotels-in-da-nang.html" class="disc-item">
+        <div class="disc-cat">Hotels Hub</div>
+        <div class="disc-title">25 Best Hotels in Da Nang 2026 — Ranked by a Local Expat</div>
+      </a>
+      <a href="where-to-stay-in-da-nang.html" class="disc-item">
+        <div class="disc-cat">Area Guide</div>
+        <div class="disc-title">Where to Stay in Da Nang: Best Areas for Every Traveler</div>
+      </a>
+      <a href="luxury-hotels-da-nang.html" class="disc-item">
+        <div class="disc-cat">Luxury Hotels</div>
+        <div class="disc-title">Best Luxury Hotels in Da Nang 2026 — 5-Star Resorts Ranked</div>
+      </a>
+      <a href="da-nang-beach-hotels.html" class="disc-item">
+        <div class="disc-cat">Beach & Coastal</div>
+        <div class="disc-title">Best Beach Hotels in Da Nang 2026 — My Khe & Non Nuoc</div>
+      </a>
+      <a href="family-hotels-da-nang.html" class="disc-item">
+        <div class="disc-cat">Family Travel</div>
+        <div class="disc-title">Best Family Hotels in Da Nang 2026 — Kids Clubs, Pools & Honest Picks</div>
+      </a>
+    </div>
+    <div class="search-hint" id="searchHint">
+      <button class="sh-pill" data-q="best hotels">Best Hotels</button>
+      <button class="sh-pill" data-q="where to stay">Where to Stay</button>
+      <button class="sh-pill" data-q="luxury">Luxury Resorts</button>
+      <button class="sh-pill" data-q="family">Family Hotels</button>
+      <button class="sh-pill" data-q="hoi an">Hoi An</button>
+      <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+      <button class="sh-pill" data-q="itinerary">Itinerary</button>
+      <button class="sh-pill" data-q="budget">Budget</button>
     </div>
   </div>
 </div>
 
-<script>
-(function() {
-  var input = document.getElementById('searchPageInput');
-  var results = document.getElementById('searchPageResults');
-  var hints = document.getElementById('searchPageHints');
-  var form = document.getElementById('searchPageForm');
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li><span aria-current="page">Search</span></li>
+  </ol>
+</nav>
 
-  function renderResults(q) {
-    if (!q || q.length < 2) {
-      results.innerHTML = '';
-      if (hints) hints.style.display = '';
-      return;
-    }
-    if (hints) hints.style.display = 'none';
-    var hits = window.runSearch ? runSearch(q) : [];
-    if (!hits.length) {
-      results.innerHTML = '<div class="search-empty"><p>No results for <strong>"' + q + '"</strong></p><p style="font-size:.85rem;margin-top:.5rem">Try a different search term, or <a href="guides.html" style="color:var(--ocean)">browse all guides</a>.</p></div>';
-      return;
-    }
-    results.innerHTML = '<p class="results-count">' + hits.length + ' result' + (hits.length !== 1 ? 's' : '') + ' for "' + q + '"</p>' +
-      '<div class="search-results-list">' +
-      hits.map(function(item) {
-        return '<a class="srl-item" href="' + item.url + '">' +
-          '<div class="srl-cat">' + item.cat + '</div>' +
-          '<div class="srl-body">' +
-            '<div class="srl-title">' + item.title + '</div>' +
-            '<div class="srl-excerpt">' + item.excerpt + '</div>' +
-            '<span class="srl-link">Read more →</span>' +
-          '</div>' +
-        '</a>';
-      }).join('') +
-      '</div>';
-  }
+<div class="search-page-hero">
+  <p class="sph-eyebrow">Da Nang Hotel Guide</p>
+  <h1 class="sph-heading">Search <em>170+ guides</em> &amp; reviews</h1>
+  <p class="sph-sub">Hotels, areas, itineraries, dining, and local advice &#8212; all indexed.</p>
+  <form class="sph-form" id="searchPageForm" role="search">
+    <input type="search" class="sph-input" id="searchPageInput"
+      placeholder="Hotels, areas, Hoi An, itinerary&#8230;" autocomplete="off" aria-label="Search Da Nang Hotel Guide">
+    <button type="submit" class="sph-btn">Search</button>
+  </form>
+  <div class="sph-pills" id="sphPills">
+    <button class="sph-pill" data-q="best hotels">Best Hotels</button>
+    <button class="sph-pill" data-q="where to stay">Where to Stay</button>
+    <button class="sph-pill" data-q="luxury">Luxury Resorts</button>
+    <button class="sph-pill" data-q="family">Family Hotels</button>
+    <button class="sph-pill" data-q="hoi an">Hoi An</button>
+    <button class="sph-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sph-pill" data-q="3 day itinerary">3-Day Itinerary</button>
+    <button class="sph-pill" data-q="first time">First-Time Visitor</button>
+  </div>
+</div>
 
-  // Restore query from URL
-  var params = new URLSearchParams(window.location.search);
-  var urlQ = params.get('q') || '';
-  if (urlQ && input) {
-    input.value = urlQ;
-    renderResults(urlQ);
-  }
+<div id="searchPageResultsSection" style="display:none">
+  <div class="search-results-section">
+    <div id="srCount" class="sr-count"></div>
+    <div id="srList" class="sr-list"></div>
+  </div>
+</div>
 
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var q = input.value.trim();
-      history.replaceState(null, '', '?q=' + encodeURIComponent(q));
-      renderResults(q);
-    });
-  }
-  if (input) {
-    input.addEventListener('input', function() { renderResults(this.value.trim()); });
-  }
-
-  // Hint pills
-  document.querySelectorAll('.shp').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      if (input) { input.value = this.dataset.q; renderResults(this.dataset.q); }
-    });
-  });
-})();
-</script>
+<div id="searchDiscoverySection">
+  <div class="search-discovery-section">
+    <h2 class="sds-heading">Start with the <em style="font-style:italic;color:var(--ocean)">essential guides</em></h2>
+    <p class="sds-sub">The most useful pages for planning a Da Nang trip.</p>
+    <div class="sds-grid">
+      <a href="index.html" class="sds-card">
+        <div class="sds-card-cat">Homepage</div>
+        <div class="sds-card-title">Da Nang Hotels 2026 — Best Picks, Honest Reviews & Local Advice</div>
+        <div class="sds-card-excerpt">Da Nang hotels ranked by a local who lives here. Luxury resorts, beach hotels, budget picks — honest reviews, real prices, no paid placements. Updated 2026.</div>
+      </a>
+      <a href="best-hotels-in-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Hotels Hub</div>
+        <div class="sds-card-title">25 Best Hotels in Da Nang 2026 — Ranked by a Local Expat</div>
+        <div class="sds-card-excerpt">Da Nang's 25 best hotels for 2026, ranked honestly by a local who lives here. Beach resorts, luxury picks, budget gems — with real prices and zero paid place...</div>
+      </a>
+      <a href="where-to-stay-in-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Area Guide</div>
+        <div class="sds-card-title">Where to Stay in Da Nang: Best Areas for Every Traveler</div>
+        <div class="sds-card-excerpt">Not sure where to stay in Da Nang? Compare My Khe Beach, Han River, An Thuong, Non Nuoc, Son Tra, and Hoi An by travel style, budget, and hotel type.</div>
+      </a>
+      <a href="luxury-hotels-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Luxury Hotels</div>
+        <div class="sds-card-title">Best Luxury Hotels in Da Nang 2026 — 5-Star Resorts Ranked</div>
+        <div class="sds-card-excerpt">InterContinental, Hyatt Regency, Sheraton Grand, Fusion Maia — Da Nang's best 5-star resorts ranked by a local. Real prices, honest trade-offs, updated 2026.</div>
+      </a>
+      <a href="da-nang-beach-hotels.html" class="sds-card">
+        <div class="sds-card-cat">Beach & Coastal</div>
+        <div class="sds-card-title">Best Beach Hotels in Da Nang 2026 — My Khe & Non Nuoc</div>
+        <div class="sds-card-excerpt">The best beachfront hotels on My Khe and Non Nuoc Beach, ranked by a local. Direct sand access, honest trade-offs, prices from $40/night. Updated 2026.</div>
+      </a>
+      <a href="family-hotels-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Family Travel</div>
+        <div class="sds-card-title">Best Family Hotels in Da Nang 2026 — Kids Clubs, Pools & Honest Picks</div>
+        <div class="sds-card-excerpt">The best family resorts in Da Nang for 2026: Sheraton Grand, Hyatt Regency, Mikazuki. Kids clubs, waterparks, connecting rooms — honest picks from a local da...</div>
+      </a>
+      <a href="boutique-hotels-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Boutique Hotels</div>
+        <div class="sds-card-title">Best Boutique Hotels in Da Nang 2026 — Small, Local & Worth It</div>
+        <div class="sds-card-excerpt">Da Nang's best boutique hotels in An Thuong and My Khe. Character, design, and local personality from $45/night. Honest picks, no cookie-cutter chains.</div>
+      </a>
+      <a href="da-nang-first-time-visitors.html" class="sds-card">
+        <div class="sds-card-cat">Guide</div>
+        <div class="sds-card-title">Da Nang for First-Time Visitors 2026 — Start Here</div>
+        <div class="sds-card-excerpt">First trip to Da Nang? A local's guide covering where to stay, what to see, how to get around, and the mistakes that are easy to avoid. Updated 2026.</div>
+      </a>
+      <a href="best-time-to-visit-da-nang.html" class="sds-card">
+        <div class="sds-card-cat">Weather & Timing</div>
+        <div class="sds-card-title">Best Time to Visit Da Nang 2026, When to Go?</div>
+        <div class="sds-card-excerpt">Best time to visit Da Nang 2026: dry season Feb–Aug, cheapest rates Apr–May & Sep–Oct, busiest Jun–Aug. Monthly weather, prices, and crowd levels explained.</div>
+      </a>
+    </div>
+    <p class="sds-popular-label">Popular searches</p>
+    <div class="sds-popular-pills" id="sdsPopular">
+      <button class="sds-pill" data-q="best hotels">Best Hotels</button>
+      <button class="sds-pill" data-q="where to stay">Where to Stay</button>
+      <button class="sds-pill" data-q="luxury">Luxury Resorts</button>
+      <button class="sds-pill" data-q="family">Family Hotels</button>
+      <button class="sds-pill" data-q="hoi an">Hoi An</button>
+      <button class="sds-pill" data-q="beach hotels">Beach Hotels</button>
+      <button class="sds-pill" data-q="itinerary">3-Day Itinerary</button>
+      <button class="sds-pill" data-q="first time">First-Time Visitor</button>
+    </div>
+  </div>
+</div>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -730,7 +467,7 @@ a{text-decoration:none;color:inherit}
         <a href="index.html" class="footer-brand">Da Nang <em>Hotel Guide</em></a>
         <p class="footer-brand-desc">The independent guide to hotels, neighbourhoods, and travel in Da Nang, Vietnam. Locally maintained since 2021.</p>
         <div class="footer-disclosure-box">
-          <strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links go to Booking.com and Airbnb. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.
+          <strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links go to Booking.com. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.
         </div>
       </div>
       <div class="footer-col">
@@ -752,129 +489,390 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Site</div>
-        <a href="about.html">About & Editorial</a>
+        <a href="about.html">About &amp; Editorial</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk3&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Book via Booking.com ↗</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=search-lk3&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D-3730689%26dest_type%3Dcity%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Book via Booking.com &#8599;</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Da Nang Hotel Guide · Da Nang, Vietnam</span>
-      <span>Prices indicative · Weather data: VNMHA long-term averages</span>
+      <span>&#169; 2026 Da Nang Hotel Guide &#183; Da Nang, Vietnam</span>
+      <span>Prices indicative &#183; Weather data: VNMHA long-term averages</span>
     </div>
     <div class="footer-legal">
       <p class="footer-legal-text">
         Da Nang Hotel Guide earns a commission when you make a booking through our Booking.com links, at no extra cost to you. This never influences editorial rankings or recommendations. All hotel rates quoted are indicative mid-season prices; live availability and pricing may differ. Booking.com is a registered trademark of Booking.com B.V.
       </p>
       <nav class="footer-legal-links" aria-label="Legal">
-        <a href="privacy.html">Privacy</a>
-        <span class="sep">·</span>
-        <a href="terms.html">Terms</a>
-        <span class="sep">·</span>
-        <a href="contact.html">Contact</a>
-        <span class="sep">·</span>
+        <a href="privacy.html">Privacy</a><span class="sep">&#183;</span>
+        <a href="terms.html">Terms</a><span class="sep">&#183;</span>
+        <a href="contact.html">Contact</a><span class="sep">&#183;</span>
         <a href="about.html">Editorial Policy</a>
       </nav>
     </div>
   </div>
 </footer>
-<script>
 
+<aside class="shr-bar" aria-label="Share this page">
+  <span class="shr-label">Share</span>
+  <a class="shr-btn" id="shr-x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+  <a class="shr-btn" id="shr-fb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  <a class="shr-btn" id="shr-wa" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+</aside>
+<style>
+.shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#0D3535;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Satoshi',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
+.shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s}
+.shr-btn:hover{background:#C8604A;color:#fff;transform:scale(1.1)}
+.shr-btn svg{width:16px;height:16px;fill:currentColor}
+@media(max-width:900px){.shr-bar{display:none}}
+</style>
+
+<script>
 window.SEARCH_INDEX = [
-  {
-    title: "Best Hotels in Da Nang (2026 Guide)",
-    url: "best-hotels-in-da-nang.html",
-    cat: "Hotels Guide",
-    excerpt: "The definitive guide to the best hotels in Da Nang, luxury resorts, boutique stays, and beachfront picks across every neighbourhood and budget. 20 hotels reviewed."
-  },
-  {
-    title: "Where to Stay in Da Nang: Area Guide",
-    url: "where-to-stay-in-da-nang.html",
-    cat: "Neighbourhood Guide",
-    excerpt: "My Khe, Son Tra, Han River, City Centre, each Da Nang neighbourhood mapped and compared. Who each area suits, pros and cons, and top hotel picks per zone."
-  },
-  {
-    title: "Luxury Hotels in Da Nang",
-    url: "luxury-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "InterContinental Sun Peninsula, Sheraton Grand, Four Points, the best luxury and five-star resorts in Da Nang from $160/night. Son Tra and My Khe properties."
-  },
-  {
-    title: "Da Nang Beach Hotels",
-    url: "da-nang-beach-hotels.html",
-    cat: "Hotel Category",
-    excerpt: "Best beachfront hotels on My Khe and Non Nuoc beaches with direct sand access. Covers all budgets from boutique guesthouses to full-service resorts."
-  },
-  {
-    title: "Family Hotels in Da Nang",
-    url: "family-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "Family-friendly resorts with kids clubs, waterparks, and connecting rooms. Best picks for travelling families visiting Da Nang."
-  },
-  {
-    title: "Boutique Hotels in Da Nang",
-    url: "boutique-hotels-da-nang.html",
-    cat: "Hotel Category",
-    excerpt: "Small-scale boutique hotels in Da Nang's An Thuong neighbourhood and beyond. Character, design, and personal service from $45/night."
-  },
-  {
-    title: "Best Time to Visit Da Nang",
-    url: "best-time-to-visit-da-nang.html",
-    cat: "Travel Guide",
-    excerpt: "Month-by-month guide to Da Nang's weather, beach conditions, and crowds. Dry season runs February–August. Best value window and when to avoid the rains."
-  },
-  {
-    title: "Da Nang Weather by Month",
-    url: "da-nang-weather-by-month.html",
-    cat: "Climate Guide",
-    excerpt: "Temperature, rainfall, sea conditions, and humidity data for all 12 months. Complete weather data for Da Nang, Vietnam from VNMHA records."
-  },
-  {
-    title: "Hotels Hub, All Da Nang Hotels",
-    url: "hotels.html",
-    cat: "Hotels",
-    excerpt: "Browse all Da Nang hotel categories, luxury, beachfront, boutique, family, and budget. Our curated hub for finding the right property for your trip."
-  },
-  {
-    title: "Where to Stay Hub",
-    url: "where-to-stay-in-da-nang.html",
-    cat: "Area Guide",
-    excerpt: "Neighbourhood overview for Da Nang. Compare My Khe Beach, Son Tra Peninsula, Han River, and the city centre to find your ideal base."
-  },
-  {
-    title: "Da Nang Guides Hub",
-    url: "guides.html",
-    cat: "Travel Guides",
-    excerpt: "Itineraries, transport guides, first-timer advice, and practical tips for visiting Da Nang. Curated by local experts."
-  },
-  {
-    title: "About Da Nang Hotel Guide & Editorial Policy",
-    url: "about.html",
-    cat: "About",
-    excerpt: "How we select and rank hotels, our editorial methodology, team background, and affiliate disclosure. Independent since 2021."
-  }
+  {t:'Da Nang Hotels 2026 — Best Picks, Honest Reviews & Local Advice',u:'index.html',c:'Homepage',e:'Da Nang hotels ranked by a local who lives here. Luxury resorts, beach hotels, budget picks — honest reviews, real prices, no paid placements. Updated 2026.',p:100},
+  {t:'25 Best Hotels in Da Nang 2026 — Ranked by a Local Expat',u:'best-hotels-in-da-nang.html',c:'Hotels Hub',e:'Da Nang\'s 25 best hotels for 2026, ranked honestly by a local who lives here. Beach resorts, luxury picks, budget gems — with real prices and zero paid place...',p:99},
+  {t:'Where to Stay in Da Nang: Best Areas for Every Traveler',u:'where-to-stay-in-da-nang.html',c:'Area Guide',e:'Not sure where to stay in Da Nang? Compare My Khe Beach, Han River, An Thuong, Non Nuoc, Son Tra, and Hoi An by travel style, budget, and hotel type.',p:98},
+  {t:'Best Luxury Hotels in Da Nang 2026 — 5-Star Resorts Ranked',u:'luxury-hotels-da-nang.html',c:'Luxury Hotels',e:'InterContinental, Hyatt Regency, Sheraton Grand, Fusion Maia — Da Nang\'s best 5-star resorts ranked by a local. Real prices, honest trade-offs, updated 2026.',p:97},
+  {t:'Best Beach Hotels in Da Nang 2026 — My Khe & Non Nuoc',u:'da-nang-beach-hotels.html',c:'Beach & Coastal',e:'The best beachfront hotels on My Khe and Non Nuoc Beach, ranked by a local. Direct sand access, honest trade-offs, prices from $40/night. Updated 2026.',p:96},
+  {t:'Best Family Hotels in Da Nang 2026 — Kids Clubs, Pools & Honest Picks',u:'family-hotels-da-nang.html',c:'Family Travel',e:'The best family resorts in Da Nang for 2026: Sheraton Grand, Hyatt Regency, Mikazuki. Kids clubs, waterparks, connecting rooms — honest picks from a local da...',p:95},
+  {t:'Best Boutique Hotels in Da Nang 2026 — Small, Local & Worth It',u:'boutique-hotels-da-nang.html',c:'Boutique Hotels',e:'Da Nang\'s best boutique hotels in An Thuong and My Khe. Character, design, and local personality from $45/night. Honest picks, no cookie-cutter chains.',p:94},
+  {t:'Da Nang for First-Time Visitors 2026 — Start Here',u:'da-nang-first-time-visitors.html',c:'Guide',e:'First trip to Da Nang? A local\'s guide covering where to stay, what to see, how to get around, and the mistakes that are easy to avoid. Updated 2026.',p:93},
+  {t:'Best Time to Visit Da Nang 2026, When to Go?',u:'best-time-to-visit-da-nang.html',c:'Weather & Timing',e:'Best time to visit Da Nang 2026: dry season Feb–Aug, cheapest rates Apr–May & Sep–Oct, busiest Jun–Aug. Monthly weather, prices, and crowd levels explained.',p:92},
+  {t:'3-Day Da Nang Itinerary 2026 — Local\'s Guide to Every Day',u:'da-nang-itinerary.html',c:'Itinerary',e:'The best 3-day Da Nang itinerary, written by a local expat. Beach, Marble Mountains, Hoi An day trip, Dragon Bridge — all timed and practical.',p:91},
+  {t:'Da Nang 3-Day Itinerary 2026 — Day-by-Day Guide',u:'da-nang-3-day-itinerary.html',c:'Itinerary',e:'The best 3-day Da Nang itinerary for 2026. Day-by-day breakdown with timing, what to skip, and honest advice from a local resident.',p:90},
+  {t:'Hoi An Travel Guide 2026 — A Local\'s Complete Overview',u:'hoi-an.html',c:'Hoi An Guide',e:'Hoi An in 2026: the Ancient Town, An Bang Beach, where to stay, day-trip logistics from Da Nang, and honest advice from someone who visits regularly.',p:89},
+  {t:'Where to Stay in Hoi An 2026, Best Areas Explained',u:'where-to-stay-in-hoi-an.html',c:'Hoi An Guide',e:'Where to stay in Hoi An in 2026, Ancient Town, riverside, An Bang Beach, Cua Dai, or countryside? Detailed area guide with hotel picks, pros, cons, and hones...',p:88},
+  {t:'Best Hotels in Hoi An 2026, Ancient Town to Beach',u:'best-hotels-in-hoi-an.html',c:'Hoi An Guide',e:'The best hotels in Hoi An for 2026, from Ancient Town boutiques to An Bang beach resorts. Independently curated with real prices and local advice.',p:87},
+  {t:'Da Nang vs Hoi An 2026 — Which City Should You Base In?',u:'da-nang-vs-hoi-an.html',c:'Comparison Guide',e:'Da Nang or Hoi An — where should you stay in 2026? An honest local comparison: beach, hotel value, nightlife, costs, and day-trip logistics.',p:86},
+  {t:'Da Nang Dining Guide: Where to Eat Near the Best Hotel Areas',u:'dining.html',c:'Dining & Nightlife',e:'Explore where to eat in Da Nang by hotel area, My Khe Beach, An Thuong, Han River, Dragon Bridge, and resort districts. MICHELIN-listed and local picks.',p:85},
+  {t:'Best Things to Do in Da Nang 2026 — A Local\'s Pick List',u:'things-to-do-in-da-nang.html',c:'Travel Guide',e:'The best things to do in Da Nang in 2026, ranked honestly. Beach, Dragon Bridge, Marble Mountains, Ba Na Hills, Hoi An day trips — and what to skip.',p:84},
+  {t:'Da Nang Transport Guide 2026 — Getting Around Like a Local',u:'da-nang-transport-guide.html',c:'Transport Guide',e:'How to get around Da Nang in 2026: Grab, motorbike hire, airport transfers, Hoi An trips. Honest transport guide from a local expat.',p:83},
+  {t:'Da Nang Budget Guide 2026 — Real Costs from a Local',u:'da-nang-budget-guide.html',c:'Budget Travel',e:'What Da Nang actually costs in 2026: hotels, food, transport, activities. Budget breakdown for every traveler type from a local who lives here.',p:82},
+  {t:'Best Budget Hotels in Da Nang: Cheap Hotels That Still Feel Good',u:'best-budget-hotels-in-da-nang.html',c:'Budget Travel',e:'Find the best budget hotels in Da Nang by area, traveler type, and real value. Compare cheap beach hotels, riverfront stays, under-$50 options, and budget ho...',p:81},
+  {t:'Da Nang Digital Nomad Guide 2026 — A Local\'s Honest Take',u:'da-nang-digital-nomad-guide.html',c:'Long Stay',e:'Da Nang as a digital nomad base in 2026: internet speeds, coworking spaces, visa options, cost of living, and the neighbourhoods that actually work.',p:80},
+  {t:'Da Nang Weather by Month: Best and Worst Times to Visit Da Nang',u:'da-nang-weather-by-month.html',c:'Weather & Timing',e:'Plan your trip with a month-by-month Da Nang weather guide covering heat, rain, beach conditions, crowds, and hotel booking tips.',p:79},
+  {t:'InterContinental Danang Sun Peninsula — Full Review 2026',u:'review-intercontinental-da-nang.html',c:'Hotel Review',e:'Full review of the InterContinental Danang Sun Peninsula Resort. Bill Bensley\'s clifftop masterpiece, from $350/night. Who it\'s worth it for, and who it isn\'t.',p:78},
+  {t:'Hyatt Regency Da Nang Resort — Full Review 2026',u:'review-hyatt-regency-da-nang.html',c:'Hotel Review',e:'Full Hyatt Regency Da Nang review 2026. 6 pools, lazy river, Non Nuoc beachfront. Best family resort in Da Nang? Honest assessment with real prices.',p:77},
+  {t:'Sheraton Grand Da Nang Resort — Full Review 2026',u:'review-sheraton-grand-da-nang.html',c:'Hotel Review',e:'Full Sheraton Grand Da Nang review. Best family water complex in the city, 785 rooms, direct beachfront. Who it suits and what the trade-offs are.',p:76},
+  {t:'Naman Retreat Da Nang — Full Review 2026',u:'review-naman-retreat-da-nang.html',c:'Hotel Review',e:'Full Naman Retreat Da Nang review 2026. Bamboo architecture, spa, quiet beach between My Khe and Hoi An. Best couples/honeymoon resort in Da Nang?',p:75},
+  {t:'InterContinental vs Hyatt Da Nang 2026 — Which to Book?',u:'intercontinental-vs-hyatt-da-nang.html',c:'Comparison Guide',e:'InterContinental Sun Peninsula vs Hyatt Regency Da Nang: honest comparison of location, pools, value, and who each resort suits. Local verdict included.',p:74},
+  {t:'My Khe Beach Da Nang: Local Guide 2026, Best Stretch?',u:'my-khe-beach-da-nang.html',c:'Beach & Coastal',e:'My Khe Beach Da Nang guide 2026, best stretch to stay on, swimming safety by month, rip current warning, and the top hotels for each section of the beach.',p:73},
+  {t:'Best Hotels Near My Khe Beach Da Nang 2026 — Local Area Guide',u:'best-hotels-near-my-khe-beach.html',c:'Beach & Coastal',e:'The best hotels near My Khe Beach in Da Nang 2026. Which stretch to stay on, what\'s walkable, noise levels, and honest picks from budget to luxury.',p:72},
+  {t:'Best Han River Hotels in Da Nang 2026 — Views, Location, Honest Picks',u:'best-han-river-hotels-da-nang.html',c:'Attractions',e:'Best hotels on the Han River in Da Nang 2026. Dragon Bridge views, city walkability, rooftop bars, and why some travelers prefer the river over the beach.',p:71},
+  {t:'Best Resorts on Son Tra Peninsula Da Nang 2026',u:'best-resorts-son-tra-peninsula.html',c:'Attractions',e:'The best resorts on Son Tra Peninsula for 2026, InterContinental, Premier Village, and Naman Retreat compared. Clifftop villas from $200/night.',p:70},
+  {t:'Best Honeymoon Hotels in Da Nang 2026 — Romantic Picks',u:'da-nang-honeymoon-hotels.html',c:'Romance Travel',e:'Best honeymoon hotels in Da Nang 2026. InterContinental Sun Peninsula, Naman Retreat, TIA Wellness, and romantic resorts with privacy, spa access, and beach ...',p:69},
+  {t:'Best Family Resort in Da Nang 2026 — Honest Picks by a Local',u:'best-family-resort-da-nang.html',c:'Family Travel',e:'The best family resorts in Da Nang for 2026. Hyatt Regency, Sheraton Grand, Mikazuki — kids clubs, pools, beach safety and value all assessed honestly.',p:68},
+  {t:'Best Luxury Resort for Couples in Da Nang 2026 — Local Picks',u:'best-luxury-resort-couples-da-nang.html',c:'Luxury Hotels',e:'The best luxury resorts for couples in Da Nang in 2026. InterContinental, Naman Retreat, TIA Wellness, Fusion Maia — ranked by a local who knows them all.',p:67},
+  {t:'Da Nang Travel Guides 2026, Hotels & Neighbourhoods',u:'guides.html',c:'Travel Guide',e:'Complete Da Nang travel guides for 2026, best hotels by area, where to stay, weather, dining, and practical tips. All updated by a local expat.',p:66},
+  {t:'All Hotels in Da Nang 2026, By Area & Category',u:'hotels.html',c:'Hotels Hub',e:'Browse every hotel category in Da Nang for 2026, luxury resorts, beach hotels, boutique stays, and family picks. 110+ properties reviewed by area.',p:65},
+  {t:'Da Nang Hotel Reviews 2026, Honest Independent Ratings',u:'hotel-reviews.html',c:'Hotel Reviews',e:'Honest, independent reviews of 24 Da Nang hotels for 2026. Local expat perspective, no sponsored content. InterContinental to budget beach hotels.',p:64},
+  {t:'Da Nang 5-Day Itinerary 2026 — The Complete Plan',u:'da-nang-5-day-itinerary.html',c:'Itinerary',e:'The ideal 5-day Da Nang itinerary for 2026. Cover the beach, day trips to Hoi An and Hue, Ba Na Hills, and the city without rushing.',p:63},
+  {t:'7 Days in Da Nang & Hoi An: Itinerary Guide 2026',u:'da-nang-7-day-itinerary.html',c:'Itinerary',e:'The best 7-day Da Nang itinerary for 2026, day-by-day plans for beach, Ba Na Hills, Marble Mountains, Son Tra, Hoi An, and Hue. Make every day count.',p:62},
+  {t:'Da Nang Airport Guide 2026, Arrivals, Grab & Tips',u:'da-nang-airport-guide.html',c:'Transport Guide',e:'Da Nang Airport (DAD) guide for 2026. Grab costs $4–5, taxis $5–7, avoid overcharging. Arrivals, departures, and the fastest way into the city.',p:61},
+  {t:'Best Hotels for Da Nang Fireworks Festival 2026 (DIFF)',u:'da-nang-fireworks-festival-hotels.html',c:'Events Guide',e:'Best hotels to watch DIFF 2026 fireworks from Da Nang. Dragon Bridge view rooms, riverside towers, rooftop bars — book early, prices spike in June.',p:60},
+  {t:'A La Carte Da Nang Beach Hotel Review (2026)',u:'a-la-carte-da-nang.html',c:'Guide',e:'A La Carte Da Nang review 2026: best overall value on My Khe Beach, rooftop infinity pool bar, apartment-style rooms. From $70/night. Full honest review.',p:30},
+  {t:'About Da Nang Hotel Guide — Local Expat Reviews Since 2022',u:'about.html',c:'Site',e:'Da Nang Hotel Guide is written by Ryan Yousefi, an American living in Da Nang since 2022. How we review hotels, our editorial standards, and why we built this.',p:30},
+  {t:'An Bang Beach Hotels Hoi An 2026, Best Stays Near the Beach',u:'an-bang-beach-hotels.html',c:'Beach & Coastal',e:'The best hotels near An Bang Beach in Hoi An for 2026. Beach conditions, transport to Old Town, and honest hotel picks for An Bang and nearby Cua Dai.',p:30},
+  {t:'Arbora Luxury Collection Da Nang, Opening Guide 2026',u:'arbora-luxury-collection-da-nang.html',c:'Luxury Hotels',e:'Arbora Luxury Collection Resort opening on Non Nuoc Beach in 2026. Location, Bonvoy rates, dining, and what to expect from Da Nang\'s newest Marriott property.',p:30},
+  {t:'Azura Da Nang Review, Han River Boutique (2026)',u:'azura-da-nang.html',c:'Guide',e:'Azura Da Nang Hotel review 2026: contemporary boutique near the Han River, more character than the big brands for less money. From $65/night. Worth it?',p:30},
+  {t:'Ba Na Hills 2026: Is It Worth It? Honest Visitor Guide',u:'ba-na-hills-guide.html',c:'Travel Guide',e:'Honest Ba Na Hills guide for 2026. The Golden Bridge, what it\'s really like, how to avoid peak crowds, ticket prices, and whether it\'s worth a full day.',p:30},
+  {t:'Beachfront vs City Hotels in Da Nang — Which Is Right for You?',u:'beachfront-vs-city-hotels-da-nang.html',c:'Comparison Guide',e:'Should you stay at a beachfront hotel or a city hotel in Da Nang? Honest comparison of My Khe/Non Nuoc beach hotels vs Han River city hotels with clear verdi...',p:30},
+  {t:'Best Areas in Da Nang for Families 2026 — Where to Stay with Kids',u:'best-areas-da-nang-families.html',c:'Area Guide',e:'Where to stay in Da Nang with kids in 2026. Non Nuoc vs My Khe for families, resort vs city hotel, and the honest pros and cons of each area with children.',p:30},
+  {t:'25 Best Bars in Da Nang 2026 — Rooftops to Hidden Spots',u:'best-bars-in-da-nang.html',c:'Dining & Nightlife',e:'Da Nang\'s 25 best bars in 2026: rooftop venues, craft beer taprooms, cocktail bars, beach clubs. Ranked by a local with no sponsored picks.',p:30},
+  {t:'Best Da Nang Beach Hotels Under $100 (2026) — Honest Picks',u:'best-beach-hotel-under-100-da-nang.html',c:'Beach & Coastal',e:'Da Nang beach hotels under $100 per night in 2026. A La Carte, Fusion Suites, Muong Thanh — what you actually get at this price point. No fluff.',p:30},
+  {t:'Best Cafes in Da Nang 2026 — An Thuong & Beyond',u:'best-cafes-da-nang.html',c:'Dining & Nightlife',e:'The best cafes in Da Nang in 2026: specialty coffee, working cafes, rooftop spots, and local favourites in An Thuong and across the city. Local picks only.',p:30},
+  {t:'Best Hotels in An Thuong Da Nang 2026 — The Neighborhood Guide',u:'best-hotels-an-thuong-da-nang.html',c:'Guide',e:'An Thuong is Da Nang\'s best neighborhood for independent travelers. 1 block from My Khe Beach, best restaurant strip, boutique hotels from $45/night. Full gu...',p:30},
+  {t:'Best Night Markets in Da Nang 2026 — Han Market, Con Market, and Beyond',u:'best-night-markets-da-nang.html',c:'Dining & Nightlife',e:'Best night markets in Da Nang 2026. Con Market, Son Tra Night Market, An Thuong food strip, Han Market, helipad area - hours, what to buy, what to avoid, neg...',p:30},
+  {t:'Best Hotel Breakfast in Da Nang 2026 — Worth the Upgrade?',u:'best-resort-breakfast-da-nang.html',c:'Hotel Feature',e:'Which Da Nang hotels have the best breakfast spreads in 2026? InterContinental, Hyatt Regency, Sheraton, Naman Retreat reviewed honestly. Is breakfast includ...',p:30},
+  {t:'Best Shopping in Da Nang 2026 — Markets, Malls, and What to Buy',u:'best-shopping-da-nang.html',c:'Guide',e:'Best shopping in Da Nang 2026. Con Market and Han Market for tailors and silk, Vincom Plaza, An Thuong boutiques, local coffee to bring home, custom tailorin...',p:30},
+  {t:'Best Value Hotels in Hoi An 2026, Most for Your Money',u:'best-value-hotels-hoi-an.html',c:'Hoi An Guide',e:'The best value hotels in Hoi An for 2026, boutique pools, great locations, and genuine comfort without paying luxury rates. Honest picks from $45/night.',p:30},
+  {t:'Brilliant Hotel Da Nang Review, Best Budget Pick? (2026)',u:'brilliant-hotel-da-nang.html',c:'Guide',e:'Brilliant Hotel Da Nang review 2026: best budget option near Dragon Bridge and Han Market. Beachfront location, rooftop pool. From $40/night. Honest rating.',p:30},
+  {t:'Adults-Only Hotels in Da Nang 2026 — No Kids, No Noise',u:'da-nang-adults-only-hotels.html',c:'Romance Travel',e:'The best adults-only hotels and resorts in Da Nang for 2026. TIA Wellness, Naman Retreat, Melia, and options that deliver genuine peace and quiet.',p:30},
+  {t:'Da Nang Airport to Hoi An, Transport Guide 2026',u:'da-nang-airport-to-hoi-an.html',c:'Hoi An Guide',e:'How to get from Da Nang Airport to Hoi An in 2026, Grab, private car, taxi, and shuttle options compared. Real costs, timings, and practical tips for every t...',p:30},
+  {t:'Da Nang Airport to My Khe Beach — Getting There (2026)',u:'da-nang-airport-to-my-khe.html',c:'Transport Guide',e:'How to get from Da Nang airport to My Khe Beach 2026. Grab, taxi, and transfer options with current prices and travel times.',p:30},
+  {t:'Da Nang Fireworks Festival 2026 (DIFF), Dates & Guide',u:'da-nang-fireworks-festival-diff-2026.html',c:'Events Guide',e:'DIFF 2026 returns May 30 – July 11 with 10 international teams and Sky AR technology. Dates, ticket prices, and what to expect from Da Nang\'s biggest event.',p:30},
+  {t:'Da Nang Fireworks Festival 2026 — Complete DIFF Guide',u:'da-nang-fireworks-festival-guide.html',c:'Travel Guide',e:'Everything about DIFF 2026: dates, best viewing spots, how to get tickets, where to stay, and what it\'s actually like from someone who was there.',p:30},
+  {t:'Da Nang First-Time Travel Guide 2026 — Everything You Need to Know',u:'da-nang-first-time-travel-guide.html',c:'Travel Guide',e:'Complete first-timer guide to Da Nang 2026. When to go, where to stay, how to get around, what to eat, top 5 things to do, biggest mistakes, day trips to Hoi...',p:30},
+  {t:'Best Area to Stay in Da Nang for First-Time Visitors 2026',u:'da-nang-first-time-visitors-area-guide.html',c:'Area Guide',e:'Where should first-time visitors to Da Nang stay? Central My Khe Beach is the answer. Here\'s why, with honest alternatives and what to avoid booking first time.',p:30},
+  {t:'Da Nang Food Guide 2026 — What to Eat and Where',u:'da-nang-food-guide.html',c:'Dining & Nightlife',e:'The best food in Da Nang 2026. Local dishes to try, where to eat them, restaurant areas, and honest advice from a local resident.',p:30},
+  {t:'Da Nang Grab Guide 2026 — Prices, Tips, and How It Works',u:'da-nang-grab-guide.html',c:'Transport Guide',e:'Everything you need to know about using Grab in Da Nang 2026. Prices, how to book, airport rides, tips, and when to take a taxi instead.',p:30},
+  {t:'Da Nang Grocery Store Guide 2026: Where to Shop, Save, and Stock Up',u:'da-nang-grocery-store-guide.html',c:'Travel Guide',e:'The best grocery stores in Da Nang 2026, Full Market, Jollymart, Winmart, Moonmilk, MegaMart, and Lotte Mart compared. Fresh produce, imported goods, bulk bu...',p:30},
+  {t:'Da Nang Guide for Australians 2026, Flights & Tips',u:'da-nang-guide-for-australian-travelers.html',c:'Travel Guide',e:'Complete Da Nang guide for Australians in 2026, flights from Sydney, Melbourne & Brisbane, costs in AUD, visa requirements, and the best hotels to book.',p:30},
+  {t:'Da Nang Travel Guide for Korean Visitors 2026',u:'da-nang-guide-for-korean-travelers.html',c:'Travel Guide',e:'Da Nang guide for Korean travellers 2026: direct flights from Seoul & Busan, Korean restaurants in An Thuong, best beach hotels, and what to do in 5–7 days.',p:30},
+  {t:'Da Nang Travel Guide for Russian Visitors 2026',u:'da-nang-guide-for-russian-travelers.html',c:'Travel Guide',e:'Da Nang guide for Russian tourists 2026, direct flights from Moscow, budget hotels, costs, beaches, visa info, and top things to do. Updated April 2026.',p:30},
+  {t:'Da Nang & Hoi An Markets Guide 2026, What to Buy',u:'da-nang-hoi-an-markets-guide.html',c:'Dining & Nightlife',e:'Da Nang and Hoi An markets guide 2026, Han Market vs Con Market, Hoi An Night Market, what to buy, bargaining advice, and what to avoid. Local guide.',p:30},
+  {t:'Da Nang Hotel Prices by Month: Cheapest and Most Expensive Times to Visit',u:'da-nang-hotel-prices-by-month.html',c:'Guide',e:'Compare Da Nang hotel prices month by month, beach season, rainy season, fireworks season, and the best-value times to book.',p:30},
+  {t:'Da Nang Hotel Prices: What You\'ll Really Pay in 2026',u:'da-nang-hotel-prices.html',c:'Guide',e:'See what hotels in Da Nang actually cost by area, season, and travel style, from budget beach stays to luxury resorts.',p:30},
+  {t:'Da Nang Hotels with Connecting Rooms 2026 — For Families and Groups',u:'da-nang-hotels-connecting-rooms.html',c:'Guide',e:'Which Da Nang hotels have connecting rooms or family suites in 2026? Sheraton Grand, Hyatt Regency, Furama, and others with honest room configuration details.',p:30},
+  {t:'Da Nang Hotels with Infinity Pools 2026 — Best Views Ranked',u:'da-nang-hotels-infinity-pool.html',c:'Hotel Feature',e:'Best infinity pool hotels in Da Nang 2026. InterContinental\'s cliff infinity pool vs A La Carte\'s rooftop vs Hyatt Regency\'s beachfront pools. Ranked by view...',p:30},
+  {t:'Da Nang Hotels with Kids Clubs 2026 — Ranked for Families',u:'da-nang-hotels-kids-club.html',c:'Family Travel',e:'Which Da Nang hotels have the best kids clubs in 2026? Hyatt Regency, Sheraton Grand, Furama, and Mikazuki compared honestly for age ranges, hours, and what\'...',p:30},
+  {t:'Da Nang Hotels Map 2026, Find Hotels by Location',u:'da-nang-hotels-map.html',c:'Area Guide',e:'Interactive Da Nang hotel map for 2026, browse hotels by neighbourhood: My Khe Beach, Han River, Son Tra, and Non Nuoc. Find the right area fast.',p:30},
+  {t:'Hotels Near Da Nang Airport 2026 — What to Actually Know',u:'da-nang-hotels-near-airport.html',c:'Transport Guide',e:'Hotels near Da Nang Airport in 2026. The airport is central — most city hotels are 10-15 minutes away. Which ones are closest and what that actually means.',p:30},
+  {t:'Da Nang Hotels with Private Beach 2026 — Which Really Has One?',u:'da-nang-hotels-private-beach.html',c:'Beach & Coastal',e:'Which Da Nang hotels actually have a private beach in 2026? The honest answer is complicated. This guide explains what private beach means here and which hot...',p:30},
+  {t:'Da Nang Hotels with Private Pool Villas 2026 — Honest Picks',u:'da-nang-hotels-private-pool-villa.html',c:'Hotel Feature',e:'Hotels and resorts with private pool villas in Da Nang 2026. Naman Retreat, Premier Village, InterContinental, TIA Wellness — what you actually get at each p...',p:30},
+  {t:'Da Nang Hotels with Rooftop Pool 2026 — Best Views Ranked',u:'da-nang-hotels-rooftop-pool.html',c:'Hotel Feature',e:'Best Da Nang hotels with rooftop pools in 2026. A La Carte, Azura, Brilliant Hotel, Wyndham Soleil — ranked for views, pool quality, and value.',p:30},
+  {t:'Da Nang Hotels with Spa Packages 2026 — All-Inclusive and Day Spa Picks',u:'da-nang-hotels-spa-packages.html',c:'Hotel Feature',e:'Best spa hotels in Da Nang 2026. TIA Wellness all-inclusive spa, Naman Spa at Naman Retreat, Fusion Maia daily treatments — compared honestly for couples and...',p:30},
+  {t:'Da Nang Hotels with Lazy River &amp; Water Parks 2026',u:'da-nang-hotels-with-lazy-river.html',c:'Hotel Feature',e:'Da Nang hotels with lazy rivers and water parks in 2026. Hyatt Regency, Sheraton Grand, Mikazuki — which have the best water facilities for families.',p:30},
+  {t:'Da Nang Malls Guide: Best Shopping Centers Near Da Nang Hotels',u:'da-nang-malls-guide.html',c:'Travel Guide',e:'Find the best malls and shopping centers in Da Nang, plus which hotel areas are most convenient for shopping, dining, and rainy days.',p:30},
+  {t:'Da Nang Money Exchange Guide 2026 — ATMs, Cash, and Where to Exchange',u:'da-nang-money-exchange-guide.html',c:'Travel Guide',e:'Where to exchange money in Da Nang 2026. Best rates at gold shops on Hung Vuong St, ATM fees, cash vs card, VND denominations, airport exchange vs city, and ...',p:30},
+  {t:'Da Nang Nightlife Guide 2026 — Bars, Clubs & Dragon Bridge',u:'da-nang-nightlife-guide.html',c:'Travel Guide',e:'Da Nang\'s nightlife in 2026: the best bars, rooftops, Dragon Bridge fire show, and where to go depending on your night. Local expat guide, updated.',p:30},
+  {t:'Quietest Areas to Stay in Da Nang 2026 — Peaceful Hotels Guide',u:'da-nang-quiet-areas-hotels.html',c:'Area Guide',e:'Where to stay in Da Nang if you want peace and quiet. Non Nuoc, Son Tra, northern My Khe, and which hotels are genuinely away from noise. Honest guide.',p:30},
+  {t:'Best Riverside Hotels in Da Nang 2026, Han River Views',u:'da-nang-riverfront-hotels.html',c:'Guide',e:'Best Han River hotels in Da Nang for 2026, rooftop pool views of Dragon Bridge, central location. Top city hotel picks from $60/night.',p:30},
+  {t:'Da Nang SIM Card Guide 2026 — Best Options and Where to Buy',u:'da-nang-sim-card-guide.html',c:'Travel Guide',e:'Best SIM cards for tourists in Da Nang 2026. Viettel, Vietnamobile, eSIM options. Where to buy, prices, and which plan works best.',p:30},
+  {t:'10 Da Nang Tourist Mistakes (What Most Visitors Get Wrong)',u:'da-nang-tourist-mistakes.html',c:'Guide',e:'The 10 most common mistakes tourists make in Da Nang — hotel location, beach conditions, transport, food, and timing mistakes that ruin trips.',p:30},
+  {t:'Da Nang Travel Budget Guide 2026 — What Everything Costs',u:'da-nang-travel-budget-guide.html',c:'Budget Travel',e:'Exact costs for a trip to Da Nang in 2026. Daily budgets for backpackers, mid-range, and luxury travellers — accommodation, food, transport, and activities b...',p:30},
+  {t:'15 Mistakes Tourists Make in Da Nang (2026 Advice)',u:'da-nang-travel-mistakes.html',c:'Guide',e:'The 15 most common Da Nang tourist mistakes for 2026, wrong hotel location, Ba Na Hills timing, beach flag errors, taxi scams. A local expat\'s survival guide.',p:30},
+  {t:'Best Da Nang Videos 2026, Travel, Food & Beaches',u:'da-nang-videos.html',c:'Content',e:'The best YouTube videos about Da Nang in 2026, travel guides, street food tours, beach walks, and drone footage. Curated for visitors planning their trip.',p:30},
+  {t:'Vietnam Visa & Visa Runs from Da Nang (2026 Guide)',u:'da-nang-visa-run-guide.html',c:'Travel Guide',e:'Vietnam e-visa and visa run guide from Da Nang for 2026. E-visa costs $25, Lao Bao border details, flight runs, and what expats actually do. Updated rules.',p:30},
+  {t:'Da Nang vs Bali: Which is Better? (2026 Honest Guide)',u:'da-nang-vs-bali.html',c:'Comparison Guide',e:'Da Nang vs Bali 2026 — beaches, culture, hotels, costs, and which destination suits your trip. An honest comparison from a Da Nang local.',p:30},
+  {t:'Da Nang vs Hanoi 2026, Beach vs Capital City?',u:'da-nang-vs-hanoi.html',c:'Comparison Guide',e:'Da Nang vs Hanoi compared for 2026, coast vs capital, costs, families, Old Quarter vs My Khe Beach, and weather. Clear verdict for your Vietnam itinerary.',p:30},
+  {t:'Da Nang vs Ho Chi Minh City 2026, Which to Visit?',u:'da-nang-vs-ho-chi-minh-city.html',c:'Comparison Guide',e:'Da Nang vs Ho Chi Minh City compared for 2026, beach vs city energy, costs, food, families, nightlife. Which Vietnam destination is right for your trip?',p:30},
+  {t:'Da Nang vs Nha Trang 2026 — Which Beach City Wins?',u:'da-nang-vs-nha-trang.html',c:'Comparison Guide',e:'Da Nang vs Nha Trang: which Vietnamese beach city is better for your trip? Honest comparison of hotels, beaches, costs, and what each destination does well.',p:30},
+  {t:'Da Nang vs Phu Quoc 2026 — Beach Holiday Comparison',u:'da-nang-vs-phu-quoc.html',c:'Comparison Guide',e:'Da Nang vs Phu Quoc island: beaches, resorts, costs, crowds, and practicality. Honest comparison from a local to help you choose the right destination.',p:30},
+  {t:'Da Nang vs Phuket: Which Beach Destination? (2026)',u:'da-nang-vs-phuket.html',c:'Comparison Guide',e:'Da Nang vs Phuket 2026 comparison. Beaches, hotels, costs, weather, families, couples, and digital nomads. Which is better for your trip?',p:30},
+  {t:'Da Nang with Kids — Complete Family Travel Guide 2026',u:'da-nang-with-kids-guide.html',c:'Family Travel',e:'Da Nang with kids in 2026. Beach safety, family resorts, kids clubs, activities, food, transport, and honest advice for families with children.',p:30},
+  {t:'Da Nang with Teenagers, Activities & Hotels (2026)',u:'da-nang-with-teenagers.html',c:'Family Travel',e:'Da Nang with teenagers guide for 2026, Ba Na Hills, surf lessons, watersports, safe beaches, teen-friendly restaurants. Best hotels for teen facilities.',p:30},
+  {t:'Dragon Bridge Da Nang: Fire Show Guide 2026',u:'dragon-bridge-da-nang.html',c:'Attractions',e:'Dragon Bridge Da Nang fire & water show 2026: Fri, Sat & Sun at 9 PM, free to watch. Best viewing spots, arrival times, nearby restaurants, and insider tips.',p:30},
+  {t:'Four Points by Sheraton Danang Review (2026)',u:'four-points-sheraton-da-nang.html',c:'Guide',e:'Four Points by Sheraton Danang review 2026: reliable 4-star on My Khe Beach, strong breakfast, from $80/night. Worth it vs better-value alternatives?',p:30},
+  {t:'Furama Resort Da Nang Review 2026 — Still Worth It?',u:'furama-resort-da-nang.html',c:'Guide',e:'Furama Resort Da Nang 2026: Da Nang\'s original luxury resort. 20-year track record, lush gardens, great value 5-star. Honest review of its current state.',p:30},
+  {t:'Furama vs Pullman Da Nang 2026 — Which Family Resort Wins?',u:'furama-vs-pullman-da-nang.html',c:'Comparison Guide',e:'Furama Resort vs Pullman Da Nang Beach: comparing two of the best value beach resorts for families in 2026. Local honest comparison with clear verdict.',p:30},
+  {t:'Fusion Suites Da Nang Review, All-Inclusive? (2026)',u:'fusion-suites-da-nang.html',c:'Guide',e:'Fusion Suites Da Nang review 2026: all-suite beachfront hotel with spa-inclusive daily breakfast. From $95/night, the most unusual value in Da Nang.',p:30},
+  {t:'Grand Mercure Da Nang Review, Han River Views (2026)',u:'grand-mercure-da-nang.html',c:'Guide',e:'Grand Mercure Da Nang review 2026: spacious suites with Han River views, central location. From $90/night, Accor\'s best value property in Da Nang.',p:30},
+  {t:'Han River Night Cruise Da Nang 2026, Dragon Bridge',u:'han-river-night-cruise-da-nang.html',c:'Attractions',e:'Han River night cruise Da Nang guide 2026. Prices from $12, dock locations, Dragon Bridge views, and whether the cruise is actually worth booking. Honest ver...',p:30},
+  {t:'Hoi An for First-Time Visitors 2026, Complete Guide',u:'hoi-an-first-time-visitors.html',c:'Hoi An Guide',e:'Everything first-time visitors need before arriving in Hoi An, where to stay, Ancient Town reality check, what to eat, tailors, day trips. Honest 2026 guide.',p:30},
+  {t:'Hoi An Old Town Hotels 2026, Best Places to Stay Near Ancient Town',u:'hoi-an-old-town-hotels.html',c:'Hoi An Guide',e:'The best hotels near Hoi An\'s Old Town and Ancient Town in 2026. What walkable actually means, who should stay here, and honest hotel reviews for the area.',p:30},
+  {t:'How Many Days in Da Nang? (Honest 2026 Guide)',u:'how-many-days-in-da-nang.html',c:'Guide',e:'How many days do you need in Da Nang? 2, 3, 5, or 7 days - what you can actually do and see in each timeframe. Honest local advice.',p:30},
+  {t:'How to Live in Da Nang Under $1,000 a Month: Real Cost Guide',u:'how-to-live-in-da-nang-under-1000-a-month.html',c:'Budget Travel',e:'Can you live in Da Nang for under $1,000 a month? This practical local guide breaks down rent, food, transport, cafes, gyms, utilities, and the tradeoffs of ...',p:30},
+  {t:'Hyatt Regency Da Nang Review 2026 — Is It Worth It?',u:'hyatt-regency-da-nang.html',c:'Guide',e:'Hyatt Regency Da Nang review 2026: 6 pools, lazy river, Non Nuoc beachfront. Best for families. Honest assessment of what it delivers vs the price.',p:30},
+  {t:'Hyatt Regency vs Furama Da Nang 2026 — Worth the Price Gap?',u:'hyatt-regency-vs-furama-da-nang.html',c:'Comparison Guide',e:'Hyatt Regency vs Furama Resort Da Nang: is the Hyatt worth the extra spend? Honest comparison of facilities, beach, value, and who each suits best.',p:30},
+  {t:'Hyatt Regency vs Marriott Da Nang 2026, Which Wins?',u:'hyatt-vs-marriott-da-nang.html',c:'Comparison Guide',e:'Hyatt Regency Danang vs Da Nang Marriott Resort compared side-by-side for 2026. Pools, rooms, beach access, value, and a clear verdict on which resort to book.',p:30},
+  {t:'InterContinental Danang Sun Peninsula Review 2026',u:'intercontinental-da-nang.html',c:'Guide',e:'Honest InterContinental Danang review from a local: Bill Bensley\'s clifftop resort from $350/night. Who it\'s perfect for, and who should look elsewhere.',p:30},
+  {t:'InterContinental vs Furama Da Nang 2026 — Which Luxury Resort?',u:'intercontinental-vs-furama-da-nang.html',c:'Comparison Guide',e:'InterContinental Sun Peninsula vs Furama Resort Da Nang: dramatic clifftop seclusion vs mature garden luxury. Which suits your trip? Local verdict.',p:30},
+  {t:'Is Da Nang Walkable? (Honest 2026 Guide)',u:'is-da-nang-walkable.html',c:'Area Guide',e:'Is Da Nang walkable? Honest answer: it depends heavily on where you stay. Han River area is walkable. Non Nuoc resort zone is not. Full breakdown.',p:30},
+  {t:'Is Hoi An Cheaper Than Da Nang?, Honest 2026 Cost Comparison',u:'is-hoi-an-cheaper-than-da-nang.html',c:'Hoi An Guide',e:'Is Hoi An cheaper than Da Nang in 2026? Honest comparison of hotels, food, transport, and daily costs to help you decide where to stay and how to budget.',p:30},
+  {t:'Living in Da Nang 2026 — Expat Cost of Living & Real Advice',u:'living-in-da-nang-expat-guide.html',c:'Long Stay',e:'Living in Da Nang as an expat: real costs for 2026, rent, food, healthcare, visas, and what it\'s actually like day-to-day from an American who lives here.',p:30},
+  {t:'Mandila Beach vs Stella Maris Da Nang 2026, My Khe Hotels',u:'mandila-beach-vs-stella-maris-da-nang.html',c:'Comparison Guide',e:'Mandila Beach Hotel Da Nang vs Stella Maris Da Nang compared for 2026. Two beachfront My Khe hotels at the upper-mid price tier, amenities, rooms, and which ...',p:30},
+  {t:'Marble Mountains Da Nang 2026 — Worth Visiting? Honest Guide',u:'marble-mountains-da-nang.html',c:'Attractions',e:'Is the Marble Mountains worth your time in 2026? Honest guide: what to see, how long to spend, best time to visit, and how to avoid the crowds.',p:30},
+  {t:'Da Nang Marriott Resort & Spa Review (2026)',u:'marriott-resort-da-nang.html',c:'Guide',e:'Da Nang Marriott Resort & Spa review 2026: luxury villas and Quan Spa on Non Nuoc Beach. Bonvoy earning from $175/night. Worth it vs. the Sheraton?',p:30},
+  {t:'Marriott vs Sheraton Grand Da Nang 2026 — Side-by-Side',u:'marriott-vs-sheraton-da-nang.html',c:'Comparison Guide',e:'Marriott Resort vs Sheraton Grand Da Nang: both on Non Nuoc Beach, both Bonvoy properties. Which is right for your family or couple\'s trip? Local comparison.',p:30},
+  {t:'Melia Da Nang Beach Review 2026 — My Khe Beachfront',u:'melia-da-nang.html',c:'Guide',e:'Melia Da Nang review 2026: directly on My Khe Beach, Spanish brand reliability, strong pool. Honest assessment of value vs competing hotels at this price.',p:30},
+  {t:'Melia Vinpearl Da Nang Review, City Hotel (2026)',u:'melia-vinpearl-da-nang.html',c:'Guide',e:'Melia Vinpearl Da Nang review 2026: Han River city-center hotel next to Vincom Mall. Large rooms, rooftop pool, from $80/night. Best city hotel in Da Nang?',p:30},
+  {t:'Melia vs Hyatt Regency Da Nang 2026 — Beach Resort Compared',u:'melia-vs-hyatt-regency-da-nang.html',c:'Comparison Guide',e:'Melia Da Nang Beach vs Hyatt Regency: honest comparison of two of Da Nang\'s most popular resorts. Price, pool, beach access, and who each suits best.',p:30},
+  {t:'Melia vs Radisson Blu Danang 2026, Which Is Better?',u:'melia-vs-radisson-blu-da-nang.html',c:'Comparison Guide',e:'Melia Danang vs Radisson Blu Danang compared for 2026, two underrated 5-stars on Non Nuoc Beach. Honest verdict on which is better value before you book.',p:30},
+  {t:'Mikazuki Japanese Resort Da Nang Review (2026)',u:'mikazuki-da-nang.html',c:'Guide',e:'Mikazuki Japanese Resorts & Spa Da Nang review 2026: Japanese onsen, waterpark, infinity pool. From $130/night, the most resort-complete property in Da Nang.',p:30},
+  {t:'Muong Thanh Luxury Da Nang Review (2026)',u:'muong-thanh-luxury-da-nang.html',c:'Luxury Hotels',e:'Muong Thanh Luxury Da Nang review 2026: Vietnamese-owned 5-star on My Khe Beach, large rooms from $55/night. Is it Da Nang\'s best value beachfront hotel?',p:30},
+  {t:'Naman Retreat Da Nang Review 2026 — Romantic & Quiet',u:'naman-retreat-da-nang.html',c:'Guide',e:'Naman Retreat Da Nang 2026: the best couples resort between My Khe and Hoi An. Bamboo architecture, spa, quiet beach. Honest review from a local.',p:30},
+  {t:'Da Nang Travel News 2026, Latest Flights & Updates',u:'news.html',c:'Content',e:'Latest Da Nang travel news for 2026, new flight routes, tourism developments, fireworks festival dates, and hotel openings. Updated by a local expat.',p:30},
+  {t:'Non Nuoc Beach Da Nang, Complete Guide 2026',u:'non-nuoc-beach-da-nang.html',c:'Beach & Coastal',e:'Non Nuoc Beach Da Nang guide 2026: calmer waves, wider sand, fewer crowds, and Da Nang\'s best 5-star resorts. Is it actually the better beach to base yourself?',p:30},
+  {t:'Novotel Danang Premier Han River Review (2026)',u:'novotel-da-nang-han-river.html',c:'Attractions',e:'Novotel Danang Premier Han River review 2026: best-value city hotel in Da Nang. Rooftop pool, Dragon Bridge views, from $75/night. Is it worth booking?',p:30},
+  {t:'Novotel vs Hilton Da Nang 2026 — Han River Hotel Showdown',u:'novotel-vs-hilton-da-nang.html',c:'Comparison Guide',e:'Novotel Han River vs Hilton Da Nang: the two best city-centre hotels compared honestly. Dragon Bridge views, rooftop bars, value — which wins in 2026?',p:30},
+  {t:'Premier Village Danang Resort Review (2026)',u:'premier-village-da-nang.html',c:'Guide',e:'Premier Village Danang review 2026: all-villa resort on Son Tra Peninsula, private pools, family villas from $200/night. Is the premium worth it?',p:30},
+  {t:'Pullman Da Nang Beach Resort Review 2026',u:'pullman-da-nang.html',c:'Guide',e:'Pullman Da Nang Beach Resort 2026: northern My Khe, large pool, quieter stretch of beach. Honest review — who it\'s best for and what to expect.',p:30},
+  {t:'Pullman vs Hyatt Regency Da Nang 2026 — My Khe vs Non Nuoc',u:'pullman-vs-hyatt-regency-da-nang.html',c:'Comparison Guide',e:'Pullman Da Nang Beach Resort vs Hyatt Regency Da Nang: My Khe proximity vs Non Nuoc resort scale. Which fits your trip better? Local comparison.',p:30},
+  {t:'Pullman vs Sheraton Grand Da Nang 2026 — Compared Honestly',u:'pullman-vs-sheraton-da-nang.html',c:'Comparison Guide',e:'Pullman Da Nang Beach vs Sheraton Grand: price, pool, beach quality and who each hotel suits. Honest local comparison for 2026.',p:30},
+  {t:'Radisson Blu Resort Danang Review, Worth It? (2026)',u:'radisson-blu-da-nang.html',c:'Guide',e:'Radisson Blu Resort Danang review 2026: stylish Non Nuoc beachfront resort from $100/night. Consistently underrated, one of Da Nang\'s best value 5-stars.',p:30},
+  {t:'Da Nang in the Rainy Season — What to Expect (2026)',u:'rainy-season-da-nang-guide.html',c:'Weather & Timing',e:'What is Da Nang like during the rainy season? October-December weather reality, what\'s still possible, and whether it\'s worth visiting.',p:30},
+  {t:'A La Carte Da Nang Beach — Full Review 2026',u:'review-a-la-carte-da-nang.html',c:'Hotel Review',e:'Full A La Carte Da Nang review 2026. Best value on My Khe Beach — rooftop infinity pool bar, apartment-style rooms from $70/night. Worth booking?',p:30},
+  {t:'Azura Da Nang Hotel, Full Review 2026',u:'review-azura-da-nang.html',c:'Hotel Review',e:'Azura Da Nang Hotel full review 2026: Han River boutique with more character than the big brands for less money. From $65/night, complete honest rating.',p:30},
+  {t:'Brilliant Hotel Da Nang — Full Review 2026',u:'review-brilliant-hotel-da-nang.html',c:'Hotel Review',e:'Full Brilliant Hotel Da Nang review 2026. Budget-friendly riverfront with rooftop pool, walking distance to Han Market. Best affordable city hotel?',p:30},
+  {t:'Four Points by Sheraton Danang, Full Review 2026',u:'review-four-points-sheraton-da-nang.html',c:'Hotel Review',e:'Four Points by Sheraton Danang full review 2026: reliable 4-star on My Khe Beach, strong breakfast, from $80/night. Worth it vs better-value alternatives?',p:30},
+  {t:'Furama Resort Da Nang — Full Review 2026',u:'review-furama-resort-da-nang.html',c:'Hotel Review',e:'Full Furama Resort Da Nang review 2026. Da Nang\'s original 5-star, 20-year track record, lush gardens. Still worth it? Honest assessment for 2026.',p:30},
+  {t:'Fusion Suites Da Nang Beach, Full Review 2026',u:'review-fusion-suites-da-nang.html',c:'Hotel Review',e:'Fusion Suites Da Nang full review 2026: all-suite beachfront with spa-inclusive twice-daily breakfast. From $95/night, the most unusual value in Da Nang.',p:30},
+  {t:'Grand Mercure Da Nang — Full Hotel Review 2026',u:'review-grand-mercure-da-nang.html',c:'Hotel Review',e:'Full Grand Mercure Da Nang review 2026. Riverfront serviced apartments, strong value for longer stays. Best for families or digital nomads staying a week+.',p:30},
+  {t:'Hilton Da Nang — Full Hotel Review 2026',u:'review-hilton-da-nang.html',c:'Hotel Review',e:'Full Hilton Da Nang review 2026. Riverfront, rooftop pool, business-class reliability. The best 5-star city hotel on the Han River? Honest assessment.',p:30},
+  {t:'Marriott Resort Da Nang — Full Review 2026',u:'review-marriott-resort-da-nang.html',c:'Hotel Review',e:'Full Marriott Resort & Spa Da Nang review. My Khe beachfront, massive pool, Bonvoy points. Who it suits best and what the honest trade-offs are in 2026.',p:30},
+  {t:'Melia Da Nang Beach — Full Hotel Review 2026',u:'review-melia-da-nang.html',c:'Hotel Review',e:'Full Melia Da Nang Beach review 2026. Directly on My Khe, Spanish brand reliability, strong pool. Worth the rates vs cheaper My Khe alternatives?',p:30},
+  {t:'Melia Vinpearl Da Nang, Full Review 2026',u:'review-melia-vinpearl-da-nang.html',c:'Hotel Review',e:'Melia Vinpearl Da Nang full review 2026: Han River city-center hotel next to Vincom Mall. Large rooms, rooftop pool, from $80/night. Best city hotel here?',p:30},
+  {t:'Mikazuki Japanese Resort Da Nang — Full Review 2026',u:'review-mikazuki-da-nang.html',c:'Hotel Review',e:'Full Mikazuki Da Nang review 2026. Japanese-themed resort with water park, private beach, and onsen. Best budget family resort in Da Nang? Honest verdict.',p:30},
+  {t:'Muong Thanh Luxury Da Nang — Full Review 2026',u:'review-muong-thanh-luxury-da-nang.html',c:'Hotel Review',e:'Full Muong Thanh Luxury Da Nang review 2026. Vietnam\'s largest chain delivers solid comfort at My Khe Beach for a strong price. Honest assessment.',p:30},
+  {t:'Novotel Da Nang Han River — Full Review 2026',u:'review-novotel-da-nang-han-river.html',c:'Hotel Review',e:'Full Novotel Da Nang Premier Han River review. Best Dragon Bridge views, Sky36 rooftop bar, city-centre location. Worth the premium? Honest verdict.',p:30},
+  {t:'Premier Village Da Nang Resort — Full Review 2026',u:'review-premier-village-da-nang.html',c:'Hotel Review',e:'Full Premier Village Da Nang review 2026. Private-pool villas on a headland, dramatic setting. The best villa resort in Da Nang? Honest local review.',p:30},
+  {t:'Pullman Da Nang Beach Resort — Full Review 2026',u:'review-pullman-da-nang.html',c:'Hotel Review',e:'Full Pullman Da Nang Beach Resort review 2026. Northern My Khe, large pool, quieter stretch of beach. Strong mid-luxury choice at competitive rates.',p:30},
+  {t:'Radisson Blu Resort Da Nang — Full Review 2026',u:'review-radisson-blu-da-nang.html',c:'Hotel Review',e:'Full Radisson Blu Resort Da Nang review. Son Tra Peninsula private beach, sea-view rooms, quieter than My Khe. Good alternative to the InterContinental?',p:30},
+  {t:'TIA Wellness Resort Da Nang — Full Review 2026',u:'review-tia-wellness-resort-da-nang.html',c:'Hotel Review',e:'Full TIA Wellness Resort Da Nang review 2026. Adults-only, all-inclusive spa resort on My Khe. Best couples and wellness retreat in Da Nang? Honest assessment.',p:30},
+  {t:'TMS Hotel Da Nang Beach — Full Review 2026',u:'review-tms-hotel-da-nang.html',c:'Hotel Review',e:'Full TMS Hotel Da Nang Beach review 2026. 40th-floor rooftop infinity pool, My Khe beachfront. Best mid-luxury option on the main strip?',p:30},
+  {t:'Wyndham Soleil Danang, Full Review 2026',u:'review-wyndham-soleil-da-nang.html',c:'Hotel Review',e:'Wyndham Soleil Danang full review 2026: My Khe Beach high-rise, apartment-style rooms with sea views. From $75/night, good for longer stays. Full review.',p:30},
+  {t:'Sheraton Grand Da Nang Review 2026 — Best Family Resort?',u:'sheraton-grand-da-nang.html',c:'Guide',e:'Sheraton Grand Da Nang 2026: Da Nang\'s top family water complex, 785 rooms, direct beachfront. Honest review of who it suits and who it doesn\'t.',p:30},
+  {t:'Sheraton vs Hyatt Regency Da Nang 2026 — Family Resort Showdown',u:'sheraton-vs-hyatt-regency-da-nang.html',c:'Comparison Guide',e:'Sheraton Grand vs Hyatt Regency Da Nang: pool complexes, beach quality, kids clubs. Which family resort wins in 2026? Honest local comparison.',p:30},
+  {t:'Silk Path Grand Resort Danang Review (2026)',u:'silk-path-grand-da-nang.html',c:'Guide',e:'Silk Path Grand Resort & Spa Danang review 2026: My Khe Beach spa resort from a Vietnamese brand. From $90/night, honest assessment of what you actually get.',p:30},
+  {t:'Son Tra Peninsula Da Nang: Complete Guide 2026',u:'son-tra-peninsula-da-nang.html',c:'Attractions',e:'Son Tra Peninsula Da Nang guide 2026, Monkey Mountain, Lady Buddha, hidden beaches, and the best resort hotels. Everything to know before you visit.',p:30},
+  {t:'TIA Wellness Resort Da Nang Review, Worth It? (2026)',u:'tia-wellness-resort-da-nang.html',c:'Guide',e:'TIA Wellness Resort Da Nang review 2026: all-inclusive wellness on Non Nuoc Beach, spa and yoga focus. From $160/night, is the concept worth the premium?',p:30},
+  {t:'TIA Wellness vs Naman Retreat Da Nang 2026 — Spa Resort Compared',u:'tia-wellness-vs-naman-retreat-da-nang.html',c:'Comparison Guide',e:'TIA Wellness Resort vs Naman Retreat Da Nang: the two best wellness resorts in central Vietnam. Pricing, spa quality, beach, villas compared by a local.',p:30},
+  {t:'TMS Hotel Da Nang Beach Review, Worth It? (2026)',u:'tms-hotel-da-nang.html',c:'Guide',e:'TMS Hotel Da Nang Beach review 2026: direct My Khe beachfront, rooftop pool, from $50/night. Is it Da Nang\'s best value for the location you actually want?',p:30},
+  {t:'TMS Hotel vs Sala Danang Beach 2026, My Khe Hotel Compared',u:'tms-hotel-vs-sala-danang-beach.html',c:'Comparison Guide',e:'TMS Hotel Da Nang Beach vs Sala Danang Beach Hotel compared for 2026. Two mid-upper My Khe Beach hotels side-by-side, amenities, location, value, and which t...',p:30},
+  {t:'Vinpearl Luxury Da Nang Review, Worth It? (2026)',u:'vinpearl-luxury-da-nang.html',c:'Luxury Hotels',e:'Vinpearl Luxury Da Nang review 2026: premium Vietnamese-brand resort on Non Nuoc Beach from $130/night. Worth it vs. international brands? Full verdict.',p:30},
+  {t:'What to Pack for Da Nang 2026 — The Practical Packing List',u:'what-to-pack-for-da-nang.html',c:'Practical Guide',e:'Practical packing list for Da Nang 2026. Seasonal packing for dry vs wet season, beach essentials, motorbike gear, power adapters, healthcare items, and what...',p:30},
+  {t:'Wyndham Soleil Danang Review, My Khe Beach (2026)',u:'wyndham-soleil-da-nang.html',c:'Guide',e:'Wyndham Soleil Danang review 2026: My Khe Beach high-rise with apartment-style rooms and sea views. From $75/night, good for longer stays. Full review.',p:30}
 ];
+
+// Category to accent class mapping
+var CAT_ACCENT = {
+  'Hotels Hub':'cat-hotels','Luxury Hotels':'cat-hotels','Boutique Hotels':'cat-hotels',
+  'Family Travel':'cat-hotels','Budget Travel':'cat-hotels','Romance Travel':'cat-hotels',
+  'Hotel Review':'cat-review','Hotel Reviews':'cat-review',
+  'Area Guide':'cat-area','Neighbourhood Guide':'cat-area',
+  'Beach & Coastal':'cat-beach',
+  'Hoi An Guide':'cat-hoi-an',
+  'Itinerary':'cat-itinerary',
+  'Comparison Guide':'cat-compare',
+  'Travel Guide':'cat-guide','Guide':'cat-guide','Transport Guide':'cat-guide',
+  'Weather & Timing':'cat-guide','Dining & Nightlife':'cat-guide',
+  'Long Stay':'cat-guide','Events Guide':'cat-guide','Attractions':'cat-guide'
+};
+
+// Synonym expansion
+var SYNONYMS = {
+  'beach': ['beach','my khe','non nuoc','beachfront','coastal','shoreline'],
+  'family': ['family','kids','children','kid','child','waterpark','kids club'],
+  'luxury': ['luxury','5-star','5 star','five star','resort','intercontinental','premium'],
+  'budget': ['budget','cheap','affordable','value','low cost','backpacker'],
+  'transport': ['transport','airport','grab','taxi','transfer','getting around','motorbike'],
+  'pool': ['pool','swimming','waterpark','splash'],
+  'couples': ['couples','couple','honeymoon','romantic','romance'],
+  'spa': ['spa','wellness','fusion maia','tia wellness','naman'],
+  'weather': ['weather','climate','rain','dry season','rainy season','monsoon','best time'],
+  'night': ['night','nightlife','bar','bars','rooftop','dragon bridge'],
+  'food': ['food','dining','restaurant','eat','cuisine','pho','banh mi'],
+  'hike': ['hike','hiking','monkey mountain','son tra','marble mountains','nature'],
+  'airport': ['airport','dad','da nang airport','arrival','departure','transfer'],
+  'korean': ['korean','korea','k-town','an thuong','korean town'],
+  'first time': ['first time','first trip','beginner','start here','first-time'],
+  'compare': ['compare','comparison','vs','versus','difference','which']
+};
+
+function expandQuery(q) {
+  var terms = [q];
+  var ql = q.toLowerCase();
+  for (var key in SYNONYMS) {
+    if (ql.indexOf(key) !== -1) {
+      SYNONYMS[key].forEach(function(s){ if (terms.indexOf(s) === -1) terms.push(s); });
+    }
+    SYNONYMS[key].forEach(function(syn) {
+      if (ql.indexOf(syn) !== -1 && terms.indexOf(key) === -1) terms.push(key);
+    });
+  }
+  return terms;
+}
+
+function scoreItem(item, terms) {
+  var tl = item.t.toLowerCase();
+  var el = item.e.toLowerCase();
+  var cl = item.c.toLowerCase();
+  var score = 0;
+  terms.forEach(function(term) {
+    var tl2 = term.toLowerCase();
+    if (tl.indexOf(tl2) === 0) score += 60;
+    else if (tl.indexOf(tl2) !== -1) score += 40;
+    if (cl.indexOf(tl2) !== -1) score += 15;
+    if (el.indexOf(tl2) !== -1) score += 10;
+  });
+  if (score > 0) score += item.p * 0.3;
+  return score;
+}
 
 function runSearch(query) {
   if (!query || query.length < 2) return [];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item => {
-    return (
-      item.title.toLowerCase().includes(q) ||
-      item.excerpt.toLowerCase().includes(q) ||
-      item.cat.toLowerCase().includes(q)
-    );
+  var terms = expandQuery(query.toLowerCase());
+  var results = [];
+  window.SEARCH_INDEX.forEach(function(item) {
+    var s = scoreItem(item, terms);
+    if (s > 0) results.push({item: item, score: s});
   });
+  results.sort(function(a,b){ return b.score - a.score; });
+  return results.map(function(r){ return r.item; });
 }
 
+function accentClass(cat) {
+  return CAT_ACCENT[cat] || 'cat-other';
+}
 
+// Search page logic
 (function() {
-  // ── Hamburger / mobile menu ──────────────────────────
+  var input = document.getElementById('searchPageInput');
+  var form = document.getElementById('searchPageForm');
+  var resultsSection = document.getElementById('searchPageResultsSection');
+  var discoverySection = document.getElementById('searchDiscoverySection');
+  var srCount = document.getElementById('srCount');
+  var srList = document.getElementById('srList');
+
+  function showResults(q) {
+    if (!q || q.length < 2) {
+      resultsSection.style.display = 'none';
+      discoverySection.style.display = '';
+      return;
+    }
+    var hits = runSearch(q);
+    discoverySection.style.display = 'none';
+    resultsSection.style.display = '';
+    if (!hits.length) {
+      srCount.innerHTML = 'No results for <strong>&ldquo;' + q + '&rdquo;</strong>';
+      srList.innerHTML = '<div class="sr-empty"><div class="sr-empty-icon">&#128269;</div><h2 class="sr-empty-h">No guides found</h2><p class="sr-empty-p">Try a broader term, or browse our popular guides below.</p><div class="sr-empty-pills"><button class="sds-pill" data-q="best hotels">Best Hotels</button><button class="sds-pill" data-q="where to stay">Where to Stay</button><button class="sds-pill" data-q="luxury">Luxury Resorts</button><button class="sds-pill" data-q="beach hotels">Beach Hotels</button></div></div>';
+      srList.querySelectorAll('.sds-pill').forEach(function(p){ p.addEventListener('click', function(){ input.value = this.dataset.q; showResults(this.dataset.q); history.replaceState(null,'','?q='+encodeURIComponent(this.dataset.q)); }); });
+      return;
+    }
+    srCount.innerHTML = '<strong>' + hits.length + '</strong> result' + (hits.length !== 1 ? 's' : '') + ' for <strong>&ldquo;' + q + '&rdquo;</strong>';
+    srList.innerHTML = hits.map(function(item) {
+      var ac = accentClass(item.c);
+      return '<a class="sr-item fade-up" href="' + item.u + '">' +
+        '<div class="sr-accent ' + ac + '"></div>' +
+        '<div class="sr-body">' +
+          '<div class="sr-meta"><span class="sr-cat-badge">' + item.c + '</span></div>' +
+          '<div class="sr-title">' + item.t + '</div>' +
+          '<div class="sr-excerpt">' + item.e + '</div>' +
+          '<span class="sr-cta">Read guide &#8594;</span>' +
+        '</div>' +
+      '</a>';
+    }).join('');
+  }
+
+  // Restore from URL
+  var params = new URLSearchParams(window.location.search);
+  var urlQ = params.get('q') || '';
+  if (urlQ && input) {
+    input.value = urlQ;
+    showResults(urlQ);
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var q = input.value.trim();
+      history.replaceState(null,'','?q='+encodeURIComponent(q));
+      showResults(q);
+    });
+  }
+  if (input) {
+    input.addEventListener('input', function() { showResults(this.value.trim()); });
+  }
+
+  // Popular pills on search page
+  document.querySelectorAll('.sph-pill,.sds-pill').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (input) {
+        input.value = this.dataset.q;
+        showResults(this.dataset.q);
+        history.replaceState(null,'','?q='+encodeURIComponent(this.dataset.q));
+        input.focus();
+      }
+    });
+  });
+})();
+
+// Nav + overlay logic
+(function() {
   var ham = document.getElementById('navHamburger');
   var mob = document.getElementById('mobileMenu');
   var overlay = document.getElementById('searchOverlay');
-  
+  var searchBtn = document.getElementById('searchOpenBtn');
+  var searchClose = document.getElementById('searchCloseBtn');
+  var searchInput = document.getElementById('searchInput');
+  var resultsInline = document.getElementById('searchResultsInline');
+  var discoveryPanel = document.getElementById('searchDiscovery');
+  var countLabel = document.getElementById('searchCountLabel');
+  var focusIndex = -1;
+
   if (ham && mob) {
     ham.addEventListener('click', function() {
       var open = mob.classList.toggle('open');
@@ -884,162 +882,138 @@ function runSearch(query) {
       document.body.style.overflow = open ? 'hidden' : '';
     });
   }
-
-  // Mobile Hotels sub-toggle
   var hotTgl = document.getElementById('mobileHotelsToggle');
   var hotSub = document.getElementById('mobileHotelsSub');
   if (hotTgl && hotSub) {
-    hotTgl.addEventListener('click', function(e) {
-      e.preventDefault();
-      hotSub.classList.toggle('open');
-    });
+    hotTgl.addEventListener('click', function(e) { e.preventDefault(); hotSub.classList.toggle('open'); });
   }
-
-  // Close mobile menu on link click
   if (mob) {
     mob.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
         mob.classList.remove('open');
-        if (ham) { ham.classList.remove('open'); ham.setAttribute('aria-expanded', 'false'); }
+        if (ham) { ham.classList.remove('open'); ham.setAttribute('aria-expanded','false'); }
         document.body.style.overflow = '';
       });
     });
   }
 
-  // ── Search overlay ────────────────────────────────────
-  var searchBtn  = document.getElementById('searchOpenBtn');
-  var searchClose = document.getElementById('searchCloseBtn');
-  var searchInput = document.getElementById('searchInput');
-  var results    = document.getElementById('searchResultsInline');
-  var hint       = document.getElementById('searchHint');
-
   function openSearch() {
     if (!overlay) return;
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    if (searchBtn) searchBtn.setAttribute('aria-expanded', 'true');
-    setTimeout(function() { if (searchInput) searchInput.focus(); }, 100);
+    if (searchBtn) searchBtn.setAttribute('aria-expanded','true');
+    setTimeout(function(){ if (searchInput) searchInput.focus(); }, 100);
   }
   function closeSearch() {
     if (!overlay) return;
     overlay.classList.remove('open');
     document.body.style.overflow = '';
-    if (searchBtn) searchBtn.setAttribute('aria-expanded', 'false');
+    if (searchBtn) searchBtn.setAttribute('aria-expanded','false');
     if (searchInput) searchInput.value = '';
-    if (results) results.innerHTML = '';
-    if (hint) hint.style.display = '';
+    if (resultsInline) resultsInline.innerHTML = '';
+    if (discoveryPanel) discoveryPanel.style.display = '';
+    if (countLabel) countLabel.style.display = 'none';
+    focusIndex = -1;
   }
-
   if (searchBtn) searchBtn.addEventListener('click', openSearch);
   if (searchClose) searchClose.addEventListener('click', closeSearch);
-  if (overlay) {
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) closeSearch();
-    });
-  }
+  if (overlay) overlay.addEventListener('click', function(e){ if (e.target === overlay) closeSearch(); });
 
-  // Keyboard: Escape closes search, / opens it
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeSearch();
     if (e.key === '/' && !overlay.classList.contains('open') && document.activeElement.tagName !== 'INPUT') {
-      e.preventDefault();
-      openSearch();
+      e.preventDefault(); openSearch();
+    }
+    if (overlay.classList.contains('open') && resultsInline) {
+      var items = resultsInline.querySelectorAll('.sri');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        focusIndex = Math.min(focusIndex + 1, items.length - 1);
+        items.forEach(function(it,i){ it.classList.toggle('focused', i === focusIndex); });
+        if (items[focusIndex]) items[focusIndex].scrollIntoView({block:'nearest'});
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        focusIndex = Math.max(focusIndex - 1, -1);
+        items.forEach(function(it,i){ it.classList.toggle('focused', i === focusIndex); });
+      } else if (e.key === 'Enter' && focusIndex >= 0 && items[focusIndex]) {
+        items[focusIndex].click(); closeSearch();
+      }
     }
   });
 
-  // Search input handler
-  if (searchInput && results) {
+  if (searchInput && resultsInline) {
     searchInput.addEventListener('input', function() {
       var q = this.value.trim();
+      focusIndex = -1;
       if (q.length < 2) {
-        results.innerHTML = '';
-        if (hint) hint.style.display = '';
+        resultsInline.innerHTML = '';
+        if (discoveryPanel) discoveryPanel.style.display = '';
+        if (countLabel) countLabel.style.display = 'none';
         return;
       }
-      if (hint) hint.style.display = 'none';
-      var hits = window.runSearch ? runSearch(q) : [];
+      if (discoveryPanel) discoveryPanel.style.display = 'none';
+      var hits = runSearch(q);
       if (!hits.length) {
-        results.innerHTML = '<p class="search-no-results">No results for "' + q + '", try a different term.</p>';
+        if (countLabel) countLabel.style.display = 'none';
+        resultsInline.innerHTML = '<p class="search-no-results">No results for &ldquo;' + q + '&rdquo; &#8212; try a different term.</p>';
         return;
       }
-      results.innerHTML = hits.slice(0, 8).map(function(item) {
-        return '<a class="sri" href="' + item.url + '" role="option">' +
-          '<div class="sri-cat">' + item.cat + '</div>' +
+      if (countLabel) {
+        countLabel.textContent = hits.length + ' result' + (hits.length !== 1 ? 's' : '');
+        countLabel.style.display = '';
+      }
+      resultsInline.innerHTML = hits.slice(0,10).map(function(item) {
+        return '<a class="sri" href="' + item.u + '" role="option">' +
+          '<div class="sri-cat">' + item.c + '</div>' +
           '<div class="sri-body">' +
-            '<div class="sri-title">' + item.title + '</div>' +
-            '<div class="sri-excerpt">' + item.excerpt + '</div>' +
+            '<div class="sri-title">' + item.t + '</div>' +
+            '<div class="sri-excerpt">' + item.e + '</div>' +
           '</div>' +
         '</a>';
       }).join('');
+      resultsInline.querySelectorAll('.sri').forEach(function(el) {
+        el.addEventListener('click', function(){ closeSearch(); });
+      });
     });
-    // Enter key → navigate to first result
     searchInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        var first = results.querySelector('.sri');
+      if (e.key === 'Enter' && focusIndex === -1) {
+        var first = resultsInline.querySelector('.sri');
         if (first) { first.click(); closeSearch(); }
       }
     });
   }
 
-  // Hint pill clicks
   if (overlay) {
     overlay.querySelectorAll('.sh-pill').forEach(function(pill) {
       pill.addEventListener('click', function() {
         if (searchInput) {
           searchInput.value = this.dataset.q;
           searchInput.dispatchEvent(new Event('input'));
+          searchInput.focus();
         }
       });
     });
   }
 
-  // ── Dropdown keyboard accessibility ─────────────────
   document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
-    toggle.addEventListener('click', function(e) {
-      // On click (not hover), toggle for keyboard users
+    toggle.addEventListener('click', function() {
       var menu = this.parentNode.querySelector('.nav-dropdown-menu');
       if (!menu) return;
       var expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', !expanded);
     });
   });
-
-  // Hero Ken Burns
-  var heroBg = document.getElementById('heroBg');
-  if (heroBg) requestAnimationFrame(function() { heroBg.classList.add('loaded'); });
 })();
 
-</script>
-
-<!-- Social Share Bar -->
-<aside class="shr-bar" aria-label="Share this page">
-  <span class="shr-label">Share</span>
-  <a class="shr-btn" id="shr-x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X / Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-  <a class="shr-btn" id="shr-fb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-  <a class="shr-btn" id="shr-rd" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Reddit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg></a>
-  <a class="shr-btn" id="shr-wa" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
-  <a class="shr-btn" id="shr-li" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-</aside>
-<style>
-.shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#0D3535;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
-.shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Satoshi',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
-.shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#C8604A;color:#fff;transform:scale(1.1)}
-.shr-btn svg{width:16px;height:16px;fill:currentColor}
-@media(max-width:1200px){.shr-bar{right:1rem}}
-@media(max-width:900px){.shr-bar{display:none}}
-</style>
-<script>
+// Share bar
 (function(){
   var u=encodeURIComponent(location.href);
   var m=document.querySelector('meta[property="og:title"]');
   var t=encodeURIComponent(m?m.content:document.title);
   var d=document;
-  d.getElementById('shr-x').href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
-  d.getElementById('shr-fb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
-  d.getElementById('shr-rd').href='https://www.reddit.com/submit?url='+u+'&title='+t;
-  d.getElementById('shr-wa').href='https://wa.me/?text='+t+'%20'+u;
-  d.getElementById('shr-li').href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
+  if(d.getElementById('shr-x')) d.getElementById('shr-x').href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
+  if(d.getElementById('shr-fb')) d.getElementById('shr-fb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
+  if(d.getElementById('shr-wa')) d.getElementById('shr-wa').href='https://wa.me/?text='+t+'%20'+u;
 })();
 </script>
 </body>
