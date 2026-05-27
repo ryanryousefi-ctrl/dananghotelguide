@@ -1,0 +1,709 @@
+/*
+ * phase13.css — Visual-First Destination Overhaul
+ * Sitewide: eliminates dead space, upgrades area cards with images,
+ * replaces text-heavy sections with visual modules, adds booking momentum.
+ * Applied to index.html and top category pages.
+ */
+
+/* ══════════════════════════════════════════════════════════
+   HOMEPAGE — SECTION HIDING & COMPRESSION
+   Remove dead space, text walls, duplicate sections
+   ══════════════════════════════════════════════════════════ */
+
+/* Compress intro text section — keep quick-facts, kill the wall */
+.intro-section .intro-prose p + p + p,
+.intro-section .intro-prose p + p + p + p { display: none; }
+.intro-section .intro-prose p:first-child {
+  font-size: .92rem;
+  line-height: 1.75;
+  color: var(--ink-soft, #444);
+}
+.intro-section { padding: clamp(2rem,4vw,3rem) var(--gutter) !important; }
+
+/* Trust section — make compact, remove emoji-only pillar layout */
+.trust-section { padding: clamp(1.75rem,3.5vw,2.5rem) var(--gutter) !important; }
+.trust-pillar { display: none; }
+.trust-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+}
+.trust-headline {
+  font-size: clamp(1.1rem,2vw,1.4rem) !important;
+  margin-bottom: .5rem !important;
+}
+.trust-editorial {
+  font-size: .85rem !important;
+  max-width: 68ch;
+}
+
+/* Links-section pill dump — visually upgrade */
+.links-section {
+  background: var(--off-white, #f8f8f8) !important;
+  padding: clamp(1.5rem,3vw,2.5rem) var(--gutter) !important;
+}
+.links-section .section-heading { font-size: clamp(1.1rem,2vw,1.4rem) !important; }
+
+/* Suppress the duplicate p5-atm-section (My Khe storytelling already exists in dst-section above) */
+.p5-atm-section { display: none !important; }
+
+/* ══════════════════════════════════════════════════════════
+   AREA CARDS — Add image thumbnails to the dark ocean grid
+   Each card gets a photo strip at top, text below
+   ══════════════════════════════════════════════════════════ */
+
+.p5-area-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.p5-area-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.p5-area-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+  display: block;
+}
+.p5-area-card:hover .p5-area-img img { transform: scale(1.06); }
+.p5-area-text {
+  padding: .9rem 1rem 1.1rem;
+}
+/* Reposition existing text children when .p5-area-text wrapper present */
+.p5-area-text .p5-area-vibe { margin-bottom: .35rem; }
+.p5-area-text .p5-area-name { font-size: .95rem; }
+.p5-area-text .p5-area-desc { font-size: .73rem; }
+.p5-area-text .p5-area-link { margin-top: .65rem; }
+
+/* ══════════════════════════════════════════════════════════
+   COMPARISON CARDS — Add image thumbnails
+   ══════════════════════════════════════════════════════════ */
+
+.p5-cmp-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+.p5-cmp-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.p5-cmp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+  display: block;
+}
+.p5-cmp-card:hover .p5-cmp-img img { transform: scale(1.05); }
+.p5-cmp-vs {
+  position: absolute !important;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.p5-cmp-img { position: relative; }
+.p5-cmp-body { padding: .9rem 1.1rem 1.1rem !important; }
+
+/* ══════════════════════════════════════════════════════════
+   WHERE I'D STAY — Replace text-only hotel cards with image cards
+   ══════════════════════════════════════════════════════════ */
+
+.wid-hotel-card {
+  padding: 0 !important;
+  overflow: hidden !important;
+  flex-direction: column !important;
+  border-radius: 14px !important;
+  margin-bottom: .75rem !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.07) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex !important;
+  transition: box-shadow .18s, transform .18s !important;
+}
+.wid-hotel-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.1) !important;
+  transform: translateY(-2px) !important;
+}
+.wid-hcard-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.wid-hcard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.wid-hotel-card:hover .wid-hcard-img img { transform: scale(1.04); }
+.wid-hcard-body {
+  padding: .85rem 1rem 1rem;
+}
+.wid-hotel-fit { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--ocean, #1B5C5C); margin-bottom: .2rem; }
+.wid-hotel-name { font-weight: 700; font-size: .9rem; color: var(--ocean-deep, #0D3535); margin-bottom: .2rem; }
+.wid-hotel-why { font-size: .76rem; color: var(--ink-muted, #666); line-height: 1.5; }
+.wid-hotel-btn { font-size: .73rem; font-weight: 700; color: var(--coral, #C8604A); margin-top: .4rem; display: block; }
+
+/* ══════════════════════════════════════════════════════════
+   HOTEL STRIP HEADER — section header fix
+   ══════════════════════════════════════════════════════════ */
+
+.p5-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+.p5-strip-title {
+  font-family: var(--p5-serif, 'Instrument Serif', serif);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+}
+.p5-strip-title em { font-style: italic; color: var(--ocean, #1B5C5C); }
+.p5-strip-all {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--ocean, #1B5C5C);
+  border-bottom: 1px solid rgba(27,92,92,.3);
+  padding-bottom: 1px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* ══════════════════════════════════════════════════════════
+   NEIGHBOURHOOD GRID — add images to existing card system
+   ══════════════════════════════════════════════════════════ */
+
+.neighborhood-card {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+.nbhd-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.nbhd-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.neighborhood-card:hover .nbhd-img-wrap img { transform: scale(1.04); }
+.nbhd-text-wrap { padding: 1rem 1.15rem 1.2rem; }
+
+/* ══════════════════════════════════════════════════════════
+   SITEWIDE — INNER PAGE IMPROVEMENTS
+   ══════════════════════════════════════════════════════════ */
+
+/* Visual hotel introduction block for category pages */
+.p13-hotel-intro {
+  background: var(--white, #fff);
+  padding: 0;
+}
+.p13-hotel-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 420px;
+}
+.p13-intro-img {
+  position: relative;
+  overflow: hidden;
+}
+.p13-intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.p13-intro-text {
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--ocean-deep, #0D3535);
+  color: #fff;
+}
+.p13-intro-eyebrow {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: .7rem;
+}
+.p13-intro-heading {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.p13-intro-heading em { font-style: italic; color: rgba(255,255,255,.65); }
+.p13-intro-body { font-size: .88rem; color: rgba(255,255,255,.55); line-height: 1.75; max-width: 44ch; }
+.p13-intro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1.5rem;
+  background: var(--coral, #C8604A);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.p13-intro-cta:hover { background: #b04d3a; }
+
+/* Quick-verdict visual card (replaces bland sand box) */
+.p13-verdict-strip {
+  background: var(--ocean-deep, #0D3535);
+  padding: clamp(2rem,4vw,3rem) var(--gutter, 1.5rem);
+}
+.p13-verdict-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.p13-vs-eyebrow {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: .8rem;
+}
+.p13-vs-heading {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.4rem,2.5vw,2rem);
+  color: #fff;
+  letter-spacing: -.025em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+.p13-vs-heading em { font-style: italic; color: rgba(255,255,255,.55); }
+.p13-vs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.p13-vs-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background .18s, border-color .18s, transform .18s;
+}
+.p13-vs-card:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.22);
+  transform: translateY(-3px);
+}
+.p13-vs-img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.p13-vs-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.p13-vs-card:hover .p13-vs-img img { transform: scale(1.05); }
+.p13-vs-body { padding: .9rem 1.1rem 1.1rem; flex: 1; display: flex; flex-direction: column; }
+.p13-vs-label { font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .3rem; }
+.p13-vs-name { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; color: #fff; line-height: 1.2; margin-bottom: .35rem; }
+.p13-vs-desc { font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.6; flex: 1; }
+.p13-vs-btn {
+  display: inline-block;
+  margin-top: .85rem;
+  font-size: .7rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding-bottom: 1px;
+  transition: color .15s, border-color .15s;
+}
+.p13-vs-card:hover .p13-vs-btn { color: #fff; border-color: rgba(255,255,255,.6); }
+
+/* Visual hotel grid — image-first hotel cards for inner pages */
+.p13-hotel-showcase {
+  padding: clamp(2.5rem,5vw,4rem) var(--gutter, 1.5rem);
+  background: var(--white, #fff);
+}
+.p13-showcase-inner { max-width: 1200px; margin: 0 auto; }
+.p13-showcase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.75rem;
+}
+.p13-showcase-heading {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.4rem,2.8vw,2rem);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+}
+.p13-showcase-heading em { font-style: italic; color: var(--ocean, #1B5C5C); }
+.p13-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.p13-hotel-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.07);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transition: box-shadow .22s, transform .22s;
+}
+.p13-hotel-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,.12);
+  transform: translateY(-4px);
+}
+.p13-hotel-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+.p13-hotel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+.p13-hotel-card:hover .p13-hotel-img img { transform: scale(1.05); }
+.p13-hotel-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--coral, #C8604A);
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.p13-hotel-body { padding: 1.1rem 1.2rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.p13-hotel-stars { font-size: .7rem; color: #c8a050; margin-bottom: .35rem; }
+.p13-hotel-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--ocean-deep, #0D3535);
+  line-height: 1.2;
+  margin-bottom: .25rem;
+}
+.p13-hotel-area { font-size: .72rem; color: var(--ink-muted, #666); margin-bottom: .5rem; }
+.p13-hotel-desc { font-size: .8rem; color: var(--ink-soft, #444); line-height: 1.6; flex: 1; }
+.p13-hotel-ctas { display: flex; gap: .6rem; margin-top: 1rem; }
+.p13-hotel-cta-primary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ocean, #1B5C5C);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background .15s;
+  text-align: center;
+}
+.p13-hotel-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
+.p13-hotel-cta-ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(27,92,92,.25);
+  color: var(--ocean, #1B5C5C);
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all .15s;
+  text-align: center;
+}
+.p13-hotel-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; border-color: var(--ocean, #1B5C5C); }
+
+/* Cinematic section separator — full-width image band */
+.p13-cin-band {
+  position: relative;
+  overflow: hidden;
+  height: clamp(200px, 30vw, 380px);
+}
+.p13-cin-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.p13-cin-band-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(7,63,61,.75) 0%, rgba(7,63,61,.3) 50%, transparent 100%);
+}
+.p13-cin-band-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem clamp(1.5rem, 5vw, 4rem);
+  max-width: 600px;
+}
+.p13-cin-band-eyebrow {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: .65rem;
+}
+.p13-cin-band-headline {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin-bottom: .75rem;
+}
+.p13-cin-band-headline em { font-style: italic; }
+.p13-cin-band-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: background .15s;
+  width: fit-content;
+}
+.p13-cin-band-cta:hover { background: rgba(255,255,255,.25); }
+
+/* ══════════════════════════════════════════════════════════
+   BOOKING BAND UPGRADES — make them more visual
+   ══════════════════════════════════════════════════════════ */
+
+.booking-band {
+  position: relative;
+}
+
+/* ══════════════════════════════════════════════════════════
+   VERDICT BLOCK IMPROVEMENTS — sitewide
+   ══════════════════════════════════════════════════════════ */
+
+.verdict-block { margin: 2.5rem 0; border-radius: 16px; overflow: hidden; }
+.verdict-block-label {
+  display: block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: .6rem;
+}
+.verdict-block-question {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -.015em;
+}
+
+/* ══════════════════════════════════════════════════════════
+   EDITOR'S PICKS — Phase 12 injected EP sections
+   These use ep-card-img as a div with background-image,
+   which phase10.css treats as <img> (object-fit). Fix:
+   ══════════════════════════════════════════════════════════ */
+
+/* Phase 12 EP: ep-grid layout */
+.editors-picks-section .ep-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+/* Phase 12 EP: card structure */
+.editors-picks-section .ep-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  transition: box-shadow .22s, transform .22s;
+}
+.editors-picks-section .ep-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.1);
+  transform: translateY(-3px);
+}
+/* Make ep-card-img div (background-image style) display correctly */
+.editors-picks-section .ep-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--ocean-deep, #0D3535);
+  flex-shrink: 0;
+  transition: transform .5s ease;
+  overflow: hidden;
+}
+.editors-picks-section .ep-card:hover .ep-card-img {
+  transform: scale(1.04);
+}
+.editors-picks-section .ep-card-body {
+  padding: 1rem 1.15rem 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* Badges */
+.ep-badge {
+  display: inline-block;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: .55rem;
+}
+.ep-badge-coral { background: var(--coral, #C8604A); color: #fff; }
+.ep-badge-ocean { background: var(--ocean, #1B5C5C); color: #fff; }
+.editors-picks-section .ep-card-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1rem;
+  color: var(--ocean-deep, #0D3535);
+  line-height: 1.2;
+  margin-bottom: .3rem;
+}
+.editors-picks-section .ep-card-desc {
+  font-size: .8rem;
+  color: var(--ink-muted, #666);
+  line-height: 1.6;
+  flex: 1;
+}
+.editors-picks-section .ep-card-ctas {
+  display: flex;
+  gap: .6rem;
+  margin-top: .85rem;
+}
+.editors-picks-section .ep-cta-primary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ocean, #1B5C5C);
+  color: #fff;
+  font-size: .73rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background .15s;
+  text-align: center;
+}
+.editors-picks-section .ep-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
+.editors-picks-section .ep-cta-ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(27,92,92,.25);
+  color: var(--ocean, #1B5C5C);
+  font-size: .73rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all .15s;
+  text-align: center;
+}
+.editors-picks-section .ep-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; }
+/* EP section header */
+.editors-picks-section .ep-inner { max-width: 1200px; margin: 0 auto; padding: clamp(2.5rem,5vw,4rem) clamp(1.25rem,5vw,3rem); }
+.editors-picks-section .ep-header { margin-bottom: 1.75rem; }
+.editors-picks-section .ep-eyebrow {
+  display: block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--coral, #C8604A);
+  margin-bottom: .5rem;
+}
+.editors-picks-section .ep-headline {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  letter-spacing: -.025em;
+  line-height: 1.1;
+  color: var(--ink, #111);
+}
+.editors-picks-section .ep-headline em { font-style: italic; color: var(--ocean, #1B5C5C); }
+.editors-picks-section .ep-sub {
+  font-size: .88rem;
+  color: var(--ink-muted, #666);
+  margin-top: .5rem;
+}
+@media (max-width: 768px) {
+  .editors-picks-section .ep-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE — Aggressive improvements
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .p13-vs-grid { grid-template-columns: 1fr 1fr; }
+  .p13-showcase-grid { grid-template-columns: 1fr; }
+  .p13-hotel-intro-grid { grid-template-columns: 1fr; }
+  .p13-intro-text { padding: 2rem 1.5rem; }
+  .p13-cin-band { height: clamp(180px, 45vw, 260px); }
+  .wid-layout { grid-template-columns: 1fr; }
+  .trust-pillar { display: none; }
+}
+
+@media (max-width: 480px) {
+  .p13-vs-grid { grid-template-columns: 1fr; }
+  .p5-area-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
