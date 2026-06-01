@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Review Methodology — Da Nang Hotel Guide</title>
+<meta name="description" content="How Da Nang Hotel Guide evaluates and ranks hotels. Scoring criteria including location, beach access, value, pools, family suitability, and walkability.">
+<link rel="canonical" href="https://www.dananghotelguide.com/hotel-review-methodology.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Hotel Review Methodology — Da Nang Hotel Guide">
+<meta property="og:description" content="How we evaluate and rank Da Nang hotels. Scoring criteria explained.">
+<meta property="og:url" content="https://www.dananghotelguide.com/hotel-review-methodology.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Hotel Review Methodology — Da Nang Hotel Guide","url":"https://dananghotelguide.com/hotel-review-methodology.html","dateModified":"2026-05-27","publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"author":{"@type":"Person","name":"Ryan Yousefi","url":"https://dananghotelguide.com/about.html"}}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0T1H4G2N80');
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sand:#F6F1E9;--sand-dark:#D9CDBB;--white:#fff;
+  --ocean:#1B5C5C;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
+  --coral:#C8604A;--coral-light:#E07A62;
+  --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --font-serif:'Instrument Serif',Georgia,serif;
+  --font-sans:'Satoshi',system-ui,sans-serif;
+  --max:760px;--gutter:clamp(1.25rem,5vw,2.5rem);
+  --r-sm:8px;--r-md:14px;--r-lg:20px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65}
+a{text-decoration:none;color:var(--ocean)}
+a:hover{text-decoration:underline}
+
+.site-nav{position:sticky;top:0;z-index:500;height:60px;background:rgba(13,53,53,.97);backdrop-filter:blur(18px);display:flex;align-items:center;padding:0 var(--gutter);gap:1rem}
+.nav-logo{font-family:var(--font-serif);font-size:1.25rem;color:#fff;text-decoration:none;white-space:nowrap}
+.nav-logo em{font-style:italic;color:var(--coral-light)}
+.nav-home{font-size:.8rem;color:rgba(255,255,255,.5);margin-left:auto}
+.nav-home:hover{color:#fff;text-decoration:none}
+
+.breadcrumb{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:10px var(--gutter)}
+.breadcrumb ol{max-width:var(--max);margin:0 auto;list-style:none;display:flex;gap:4px;font-size:.76rem;color:var(--ink-muted)}
+.breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
+.breadcrumb a{color:var(--ocean)}
+
+.page-wrap{max-width:var(--max);margin:0 auto;padding:clamp(2.5rem,5vw,4rem) var(--gutter) clamp(3rem,6vw,5rem)}
+
+.eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);margin-bottom:.75rem}
+h1{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:.75rem}
+h1 em{font-style:italic;color:var(--ocean)}
+.lead{font-size:1.05rem;color:var(--ink-soft);line-height:1.8;margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--sand-dark)}
+
+h2{font-family:var(--font-serif);font-size:1.45rem;color:var(--ink);margin:2.5rem 0 .75rem;letter-spacing:-.02em}
+h3{font-size:1rem;font-weight:700;color:var(--ink);margin:1.5rem 0 .4rem}
+p{font-size:.95rem;line-height:1.82;color:var(--ink-soft);margin-bottom:1rem}
+ul,ol{padding-left:1.5rem;margin-bottom:1rem}
+li{font-size:.95rem;line-height:1.75;color:var(--ink-soft);margin-bottom:.25rem}
+
+.criteria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin:1.5rem 0 2rem}
+.criterion{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.25rem 1.4rem}
+.criterion-name{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ocean);margin-bottom:.5rem}
+.criterion-desc{font-size:.88rem;line-height:1.7;color:var(--ink-soft);margin:0}
+
+.info-box{background:var(--ocean-pale);border-left:3px solid var(--ocean);border-radius:0 var(--r-md) var(--r-md) 0;padding:1.2rem 1.5rem;margin:2rem 0}
+.info-box p{margin:0;font-size:.9rem}
+
+.last-updated{font-size:.75rem;color:var(--ink-muted);margin-bottom:2rem}
+
+.site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:2.5rem var(--gutter);margin-top:4rem}
+.footer-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.75rem}
+.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.35);transition:color .15s}
+.footer-links a:hover{color:#fff;text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">Da Nang <em>Hotel Guide</em></a>
+  <a href="index.html" class="nav-home">← Back to site</a>
+</nav>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><span aria-current="page">Review Methodology</span></li>
+  </ol>
+</nav>
+
+<div class="page-wrap">
+
+  <p class="eyebrow">Da Nang Hotel Guide</p>
+  <h1>Hotel Review <em>Methodology</em></h1>
+  <p class="last-updated">Last updated: May 2026</p>
+
+  <p class="lead">This page explains how we research, evaluate, and rank hotels on Da Nang Hotel Guide. The criteria below reflect what actually matters when choosing a hotel in Da Nang — not generic five-star ratings, but the specific variables that determine whether a property is right for a given traveler type.</p>
+
+  <div class="info-box">
+    <p><strong>Independence note:</strong> Hotels do not pay to be reviewed or ranked on this site. We do not accept free stays in exchange for coverage. Affiliate commission from Booking.com has no influence on how hotels are ranked. Full details in our <a href="editorial-policy.html">Editorial Policy</a>.</p>
+  </div>
+
+  <h2>What We Assess</h2>
+
+  <div class="criteria-grid">
+    <div class="criterion">
+      <div class="criterion-name">Location Accuracy</div>
+      <p class="criterion-desc">We verify "beachfront" and proximity claims from maps and visitor data, not hotel marketing copy. The difference between direct sand access and "near the beach" matters significantly in Da Nang.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Beach Access Quality</div>
+      <p class="criterion-desc">Which stretch of beach? Is it swimmable year-round? Are there rip currents in certain seasons? Is the sand clean? Is there a road to cross?</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Pool Quality</div>
+      <p class="criterion-desc">Number of pools relative to room count, whether there are dedicated children's pools, pool size, and whether the pool gets overcrowded on weekends.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Current Value</div>
+      <p class="criterion-desc">Hotels are assessed at their current booking price, not their launch price or a historical average. A hotel's value rating reflects what it offers at what it currently costs.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Who It Suits</div>
+      <p class="criterion-desc">Every hotel review identifies the traveler types this property serves well — and the types for whom a different option would be better. No hotel is right for everyone.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Walkability</div>
+      <p class="criterion-desc">Can you walk to restaurants, cafes, and the beach without relying on Grab for every trip? Important for families and for travelers who prefer to explore on foot.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Family Suitability</div>
+      <p class="criterion-desc">Specific assessment for families: kids clubs, connecting rooms, waterpark facilities, children's menus, beach safety, and whether staff are genuinely equipped for young guests.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Honest Trade-offs</div>
+      <p class="criterion-desc">Every property has trade-offs. We identify them directly: road noise, limited parking, slow Wi-Fi, aggressive upselling, distant location from the city. These aren't buried.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Transport Distance</div>
+      <p class="criterion-desc">Realistic Grab costs and travel times from the hotel to the Dragon Bridge, Marble Mountains, and Da Nang Airport. "Convenient location" is quantified, not assumed.</p>
+    </div>
+    <div class="criterion">
+      <div class="criterion-name">Review Pattern Analysis</div>
+      <p class="criterion-desc">When we haven't personally visited a property, we analyze guest review patterns across multiple booking platforms to identify consistent strengths and persistent weaknesses.</p>
+    </div>
+  </div>
+
+  <h2>Our Rating Scale</h2>
+  <p>We don't use a numerical scoring system because a single number compresses too much information that varies by traveler type. Instead, each review provides:</p>
+  <ul>
+    <li>A clear verdict on who the hotel suits</li>
+    <li>Explicit identification of the hotel's best quality</li>
+    <li>Explicit identification of the trade-off that potential guests should know about</li>
+    <li>A comparison against similar properties at a similar price point</li>
+    <li>A direct answer to "should I book this?"</li>
+  </ul>
+
+  <h2>How Rankings Are Determined</h2>
+  <p>Category rankings (e.g. "Best Luxury Hotels in Da Nang") are ordered by overall quality and value within that category — not by commission rate. The top-ranked hotel in any category is the one we'd most confidently recommend to someone who fits that category's traveler profile.</p>
+  <p>Rankings are not static. A hotel that was ranked third last year may rank first this year after a renovation, or drop entirely after sustained quality decline. We review rankings annually at minimum and update when significant changes occur.</p>
+
+  <h2>What We Don't Do</h2>
+  <ul>
+    <li>We don't publish paid placement disguised as editorial ranking.</li>
+    <li>We don't rank a hotel higher because it offers a higher affiliate commission.</li>
+    <li>We don't accept or publish hotel-supplied photos as if they were editorial photography.</li>
+    <li>We don't reproduce press releases or marketing materials as independent review content.</li>
+    <li>We don't assign five stars to a property just because it's marketed as a five-star resort.</li>
+  </ul>
+
+  <h2>Personal Visits</h2>
+  <p>Ryan Yousefi has personally stayed at or inspected many of the properties on this site. Where a review is based on a personal stay, this is noted. Where a review is based on analysis of available data and review patterns without a personal stay, this is also noted. We believe in being transparent about the basis of our assessments.</p>
+
+  <h2>Questions About a Review?</h2>
+  <p>If you believe a review contains factual errors or outdated information, please contact us at <a href="mailto:dananghotelguide@gmail.com">dananghotelguide@gmail.com</a>. Include the page URL and the specific claim you're disputing. We investigate and correct verified errors promptly.</p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Da Nang Hotel Guide · Da Nang, Vietnam</span>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="editorial-policy.html">Editorial Policy</a>
+      <a href="hotel-review-methodology.html">Review Methodology</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
