@@ -772,3 +772,57 @@ section#quick-answer {
   .p13-vs-grid { grid-template-columns: 1fr; }
   .p5-area-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
+
+/* ── LOCAL PERSPECTIVE BLOCK ─────────────────────────────── */
+.local-perspective {
+  background: #F2F7F5;
+  border-left: 4px solid #1B5C5C;
+  border-radius: 0 12px 12px 0;
+  padding: 1.4rem 1.6rem;
+  margin: 2rem 0;
+  position: relative;
+}
+.local-perspective::before {
+  content: 'LOCAL PERSPECTIVE';
+  display: block;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #1B5C5C;
+  margin-bottom: .6rem;
+  opacity: .7;
+}
+.local-perspective p {
+  font-size: .93rem;
+  line-height: 1.75;
+  color: #2A2A26;
+  margin: 0;
+}
+.local-perspective strong {
+  color: #1B5C5C;
+}
+.local-reality {
+  background: #FDF6F0;
+  border-left: 4px solid #C8604A;
+  border-radius: 0 12px 12px 0;
+  padding: 1.4rem 1.6rem;
+  margin: 2rem 0;
+}
+.local-reality::before {
+  content: 'REALITY CHECK';
+  display: block;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #C8604A;
+  margin-bottom: .6rem;
+  opacity: .7;
+}
+.local-reality p {
+  font-size: .93rem;
+  line-height: 1.75;
+  color: #2A2A26;
+  margin: 0;
+}
