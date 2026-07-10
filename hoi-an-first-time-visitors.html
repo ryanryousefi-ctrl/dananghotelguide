@@ -323,27 +323,17 @@
 </style>
 
   <script>
-    (function() {
-      function generateBookingLink(destId, ref) {
-        var base = 'https://www.booking.com/searchresults.html';
-        var params = '?dest_id=' + destId + '&dest_type=city&aid=1784897';
-        if (ref) params += '&clickref=' + encodeURIComponent(ref);
-        return base + params;
-      }
-      window.generateBookingLink = generateBookingLink;
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.affiliate-link[data-booking-url]').forEach(function(el) {
-          var dest = el.getAttribute('data-booking-url');
-          var ref  = el.getAttribute('data-clickref') || '';
-          if (dest) {
-            el.href   = window.generateBookingLink(dest, ref);
-            el.target = '_blank';
-            el.rel    = 'nofollow sponsored noopener';
-          }
-        });
-      });
-    })();
-  </script>
+(function(){
+  document.querySelectorAll('a[data-booking-url]').forEach(function(el){
+    var dest = el.getAttribute('data-booking-url');
+    if(dest && dest.startsWith('http')){
+      el.href = dest;
+      el.target = '_blank';
+      el.rel = 'nofollow sponsored noopener';
+    }
+  });
+})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
 <script>
@@ -396,7 +386,7 @@
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hoi-an-first-time-visitors-bare&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHoi%2BAn%252C%2BVietnam%26dest_id%3D-3723930%26dest_type%3Dcity%26aid%3D1784897"
+    <a href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city"
        class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
       Search Hoi An Hotels
     </a>
@@ -440,7 +430,7 @@
   </div>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hoi-an-first-time-visitors-bare&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHoi%2BAn%252C%2BVietnam%26dest_id%3D-3723930%26dest_type%3Dcity%26aid%3D1784897"
+  <a href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city"
      class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Hoi An Hotels &rarr;</a>
 </div>
 
@@ -471,7 +461,7 @@
     <p style="font-weight:700;color:var(--ocean);font-size:.93rem;margin:0 0 .2rem;">Check prices for your dates in Da Nang</p>
     <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Live rates &middot; Free cancellation on most hotels &middot; Instant confirmation</p>
   </div>
-  <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hoi-an-first-time-visitor-atf&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%252C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26aid%3D1784897%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels &#8594;</a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels &#8594;</a>
 </div>
 
     <h1 class="article-h1 fade-up fu2">Hoi An for First-Time Visitors: 2026 Guide<br><em>(What Nobody Tells You)</em></h1>
@@ -496,10 +486,9 @@
         <span class="booking-cta-sub">Curated picks at every price point, Ancient Town boutiques to beachside resorts.</span>
       </div>
     </div>
-    <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hoi-an-first-time-visitors-bare&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHoi%2BAn%252C%2BVietnam%26dest_id%3D-3723930%26dest_type%3Dcity%26aid%3D1784897"
+    <a href="https://www.booking.com/searchresults.html?ss=Hoi+An%2C+Vietnam&dest_id=-3723930&dest_type=city" href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city"
        class="booking-cta-btn affiliate-link"
-       data-booking-url="-3723930"
-       data-clickref="first-time-guide-cta-bar"
+       data-booking-url="https://www.booking.com/searchresults.html?ss=Hoi+An%2C+Vietnam&dest_id=-3723930&dest_type=city"
        target="_blank" rel="nofollow noopener sponsored">
       Check Lowest Prices on Booking.com →
     </a>
@@ -801,7 +790,7 @@
         <div class="stat-box"><div class="stat-label">Ideal Stay</div><div class="stat-value">2–3 nights</div></div>
         <div class="stat-box"><div class="stat-label">Best Season</div><div class="stat-value">Feb–Apr</div></div>
       </div>
-      <a href="https://www.awin1.com/cread.php?awinmid=18119&awinaffid=2788028&clickref=hoi-an-first-time-visitors-bare&ued=https%3A%2F%2Fwww.booking.com%2Fsearchresults.html%3Fss%3DHoi%2BAn%252C%2BVietnam%26dest_id%3D-3723930%26dest_type%3Dcity%26aid%3D1784897"
+      <a href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city"
          class="sidebar-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
         Search Hoi An Hotels →
       </a>
@@ -894,5 +883,6 @@
   d.getElementById('shr-li').href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
 })();
 </script>
+  <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
 </body>
 </html>
