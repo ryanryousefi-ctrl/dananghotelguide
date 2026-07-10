@@ -181,8 +181,8 @@ a{text-decoration:none;color:inherit}
 /* ─── BAR CARDS ─────────────────────────────────────────── */
 .bar-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-xl);overflow:hidden;margin-bottom:1.5rem;transition:box-shadow .25s,transform .25s}
 .bar-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
-.bar-card-inner{display:flex;gap:0}
-.bar-card-img{width:180px;min-width:180px;object-fit:cover;display:block}
+.bar-card-inner{display:flex;gap:0;align-items:stretch}
+.bar-card-img{width:180px;min-width:180px;height:220px;object-fit:cover;display:block;flex-shrink:0}
 .bar-card-body{padding:1.2rem 1.4rem;flex:1}
 .bar-card-num{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.3rem}
 .bar-card-title{font-family:var(--font-serif);font-size:1.2rem;color:var(--ink);line-height:1.15;margin-bottom:.4rem}
@@ -198,7 +198,7 @@ a{text-decoration:none;color:inherit}
 .hidden-bar-section-label{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.5rem}
 .hidden-bar-section h2{font-family:var(--font-serif);font-size:1.75rem;color:#fff;line-height:1.1;letter-spacing:-.025em;margin-bottom:.75rem}
 .hidden-bar-section > p{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:1.5rem}
-.hidden-bar-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hidden-bar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
 .hidden-bar-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-lg);padding:1rem 1.2rem}
 .hidden-bar-item-name{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:.3rem}
 .hidden-bar-item-type{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.5rem}
@@ -284,8 +284,7 @@ a{text-decoration:none;color:inherit}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
   .bar-card-inner{flex-direction:column}
-  .bar-card-img{width:100%;height:180px}
-  .hidden-bar-grid{grid-template-columns:1fr}
+  .bar-card-img{width:100%;height:200px;min-width:unset}
   .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
 }
 @media(max-width:560px){
@@ -298,6 +297,33 @@ a{text-decoration:none;color:inherit}
 }
 .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.atmosphere-heading{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,2rem);color:var(--ink);line-height:1.15;letter-spacing:-.025em;margin:.4rem 0 .9rem}
+/* inline styles extracted from mid-body */
+.wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
+.wid-block-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
+.wid-block-title{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ocean-deep,#0D3535);margin-bottom:1rem;font-weight:400}
+.wid-block p{font-size:.9rem;color:#444;line-height:1.75;margin-bottom:.6rem}
+.wid-block cite{font-size:.76rem;color:#888;font-style:normal;display:block;margin-top:.75rem}
+.hotel-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.hs-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.1rem;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .18s}
+.hs-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09)}
+.hs-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+.hs-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep,#0D3535);margin:.15rem 0}
+.hs-why{font-size:.8rem;color:var(--ink-muted);line-height:1.55;flex:1}
+.hs-btn{font-size:.76rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.5rem}
+.local-reality{background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.75rem 2rem;margin:2.5rem 0}
+.local-reality-title{font-family:var(--font-serif,serif);font-size:1.1rem;color:#fff;margin-bottom:1rem;font-weight:400}
+.local-reality ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
+.local-reality li{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;padding-left:1.25rem;position:relative}
+.local-reality li::before{content:'→';position:absolute;left:0;color:var(--coral,#C8604A)}
+.next-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+.ns-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.25rem;background:var(--sand,#F6F1E9);text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s}
+.ns-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09);transform:translateY(-2px)}
+.ns-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
+.ns-title{font-family:var(--font-serif,serif);font-size:.98rem;color:var(--ocean-deep,#0D3535);margin:.2rem 0;font-weight:400}
+.ns-desc{font-size:.78rem;color:var(--ink-muted);line-height:1.5;flex:1}
+.ns-arrow{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.4rem}
+@media(max-width:640px){.hotel-strip,.next-steps-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="premium.css">
 <!-- Google tag (gtag.js) -->
@@ -409,9 +435,8 @@ a{text-decoration:none;color:inherit}
     <p class="atb-bio">Written from Da Nang by Ryan Yousefi, an American living in the city and building practical hotel and travel guides based on local experience, neighborhood context, and current traveler needs. Focus: Da Nang, Hoi An, and Central Vietnam. Recommendations prioritize location, walkability, value, and practical trip planning.</p>
     <div class="atb-meta">Updated 2026 &nbsp;&middot;&nbsp; Based in Da Nang since 2021 &nbsp;&middot;&nbsp; <a href="about.html" class="atb-link">About this guide</a></div>
   </div>
+  <div class="author-updated">Last updated<br>May 2026</div>
 </div>
-      <div class="author-updated">Last updated<br>May 2026</div>
-    </div>
 
     <p>Da Nang's bar scene has matured considerably since 2022. What was once a handful of expat pubs and one famous rooftop has become a layered mix of serious cocktail bars, craft beer taprooms, rooftop terraces, live music venues, and a growing number of hidden speakeasies that most tourists never find.</p>
 
@@ -442,38 +467,10 @@ a{text-decoration:none;color:inherit}
 
     <figure style="margin:1.5rem 0;">
       <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=900&h=500&fit=crop&q=75" alt="Da Nang bar street at night, the city's drinking scene" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">The bar scene is denser than it looks. Most of the best spots are within a 10-minute walk of each other.</figcaption>
+      <figcaption style="font-size:.8rem;color:var(--ink-muted);margin-top:.4rem;font-style:italic">The bar scene is denser than it looks. Most of the best spots are within a 10-minute walk of each other.</figcaption>
     </figure>
 
     <!-- ── LOCAL PERSPECTIVE + HOTEL STRIP ── -->
-    <style>
-    .wid-block{background:var(--sand,#F6F1E9);border-radius:16px;padding:1.75rem 2rem;margin:2rem 0;border-left:4px solid var(--ocean,#1B5C5C)}
-    .wid-block-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
-    .wid-block-title{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ocean-deep,#0D3535);margin-bottom:1rem;font-weight:400}
-    .wid-block p{font-size:.9rem;color:#444;line-height:1.75;margin-bottom:.6rem}
-    .wid-block cite{font-size:.76rem;color:#888;font-style:normal;display:block;margin-top:.75rem}
-    .hotel-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
-    .hs-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.1rem;background:#fff;text-decoration:none;color:inherit;transition:box-shadow .18s}
-    .hs-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09)}
-    .hs-fit{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
-    .hs-name{font-weight:700;font-size:.95rem;color:var(--ocean-deep,#0D3535);margin:.15rem 0}
-    .hs-why{font-size:.8rem;color:#666;line-height:1.55;flex:1}
-    .hs-btn{font-size:.76rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.5rem}
-    .local-reality{background:var(--ocean-deep,#0D3535);color:#fff;border-radius:16px;padding:1.75rem 2rem;margin:2.5rem 0}
-    .local-reality-title{font-family:var(--font-serif,serif);font-size:1.1rem;color:#fff;margin-bottom:1rem;font-weight:400}
-    .local-reality ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.65rem}
-    .local-reality li{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;padding-left:1.25rem;position:relative}
-    .local-reality li::before{content:'→';position:absolute;left:0;color:var(--coral,#C8604A)}
-    .next-steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
-    .ns-card{display:flex;flex-direction:column;gap:.3rem;border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.25rem;background:var(--sand,#F6F1E9);text-decoration:none;color:inherit;transition:box-shadow .18s,transform .18s}
-    .ns-card:hover{box-shadow:0 5px 18px rgba(0,0,0,.09);transform:translateY(-2px)}
-    .ns-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ocean,#1B5C5C)}
-    .ns-title{font-family:var(--font-serif,serif);font-size:.98rem;color:var(--ocean-deep,#0D3535);margin:.2rem 0;font-weight:400}
-    .ns-desc{font-size:.78rem;color:#666;line-height:1.5;flex:1}
-    .ns-arrow{font-size:.78rem;font-weight:700;color:var(--coral,#C8604A);margin-top:.4rem}
-    @media(max-width:640px){.hotel-strip,.next-steps-grid{grid-template-columns:1fr}}
-    </style>
-
     <div class="wid-block">
       <div class="wid-block-label">Local Perspective</div>
       <div class="wid-block-title">Where to Stay if Nightlife Matters</div>
@@ -605,7 +602,7 @@ a{text-decoration:none;color:inherit}
     </table>
 
     <!-- ─── ROOFTOP BARS ─── -->
-    <h2>Best Rooftop Bars in Da Nang</h2>
+    <h2 id="rooftop-bars">Best Rooftop Bars in Da Nang</h2>
 
     <p>Da Nang's hotel rooftops are genuinely good for the price point. The city's compact layout means views of the coast, the Han River, and the mountains are often available from the same terrace. The rooftop bars fill up fast on Friday and Saturday nights. Get there before 9pm if you want a good seat.</p>
 
@@ -680,11 +677,11 @@ a{text-decoration:none;color:inherit}
 
     <figure style="margin:1.5rem 0;">
       <img src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=900&h=500&fit=crop&q=75" alt="Cocktail bar Da Nang, craft drinks and bar atmosphere" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">The Craftsman and Waterfront both punch above their price point for cocktail quality.</figcaption>
+      <figcaption style="font-size:.8rem;color:var(--ink-muted);margin-top:.4rem;font-style:italic">The Craftsman and Waterfront both punch above their price point for cocktail quality.</figcaption>
     </figure>
 
     <!-- ─── COCKTAIL BARS ─── -->
-    <h2>Best Cocktail Bars in Da Nang</h2>
+    <h2 id="cocktail-bars">Best Cocktail Bars in Da Nang</h2>
 
     <p>Da Nang's cocktail bar scene has developed quickly. Several venues now employ bartenders trained at international competitions, and ingredient sourcing has improved significantly, local herbs, Vietnamese spirits, and housemade infusions appear across menus that would hold up in any major Asian city.</p>
 
@@ -757,7 +754,7 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- ─── CRAFT BEER ─── -->
-    <h2>Best Craft Beer Bars in Da Nang</h2>
+    <h2 id="craft-beer">Best Craft Beer Bars in Da Nang</h2>
 
     <p>Vietnam's craft beer movement started in Ho Chi Minh City but has taken firm hold in Da Nang. The local expat community has driven demand for quality draught, and several venues now rotate taps weekly with Vietnamese-brewed craft and regional imports.</p>
 
@@ -832,7 +829,7 @@ a{text-decoration:none;color:inherit}
     <!-- ─── LIVE MUSIC & PUBS ─── -->
     <p class="pull-quote">"Da Nang's bar scene is genuinely good for a city its size — An Thuong has a proper street of places, the Han River has rooftop options, and the Dragon Bridge weekend fire show is the best free entertainment in Southeast Asia."</p>
 
-    <h2>Best Live Music Bars &amp; Pubs</h2>
+    <h2 id="live-music">Best Live Music Bars &amp; Pubs</h2>
 
     <p>Da Nang has more live music than its size suggests. The scene ranges from touring Vietnamese acts at large venues to acoustic sets at neighbourhood bars and jam sessions at expat pubs. Most live music happens Thursday through Sunday. Weekends are noticeably busier than weekdays, especially at On The Radio, where river-view tables go fast after 8pm.</p>
 
@@ -905,13 +902,13 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- ─── BEACH & POOL ─── -->
-    <h2>Beach Bars &amp; Pool Clubs</h2>
+    <h2 id="beach-bars">Beach Bars &amp; Pool Clubs</h2>
 
     <p>Beach clubs are largely empty during rainy season (October to December). If you're visiting in that window, skip this section and head to An Thượng or the city centre instead. The rest of the year, late afternoon from around 4pm is the right time to arrive.</p>
 
     <figure style="margin:1.5rem 0;">
       <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&h=500&fit=crop&q=75" alt="Beach club sunset drink Da Nang, My Khe beach bars" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">Beach clubs are best enjoyed from 4pm for sunset. After 9pm, most wind down significantly.</figcaption>
+      <figcaption style="font-size:.8rem;color:var(--ink-muted);margin-top:.4rem;font-style:italic">Beach clubs are best enjoyed from 4pm for sunset. After 9pm, most wind down significantly.</figcaption>
     </figure>
 
     <!-- Card 13: Esco Beach Club -->
@@ -960,7 +957,7 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- ─── BUDGET / BACKPACKER ─── -->
-    <h2>Budget Bars &amp; Backpacker Favourites</h2>
+    <h2 id="budget-bars">Budget Bars &amp; Backpacker Favourites</h2>
 
     <!-- Card 15: Bamboo 2 Bar -->
     <div class="bar-card">
@@ -1069,7 +1066,7 @@ a{text-decoration:none;color:inherit}
 
     <figure style="margin:1.5rem 0;">
       <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=900&h=500&fit=crop&q=75" alt="Narrow alley entrance Da Nang, hidden bar discovery" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">Some of the best bars require a bit of navigation. Most aren't actually hidden, just off the main strip.</figcaption>
+      <figcaption style="font-size:.8rem;color:var(--ink-muted);margin-top:.4rem;font-style:italic">Some of the best bars require a bit of navigation. Most aren't actually hidden, just off the main strip.</figcaption>
     </figure>
 
     <!-- ─── HIDDEN BARS ─── -->
@@ -1119,7 +1116,7 @@ a{text-decoration:none;color:inherit}
 
     <figure style="margin:1.5rem 0;">
       <img src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?w=900&h=500&fit=crop&q=75" alt="Local sidewalk bar Da Nang, plastic chairs and street drinking culture" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">The cheapest and most local experience: bia hơi on plastic chairs. A full evening costs under $5.</figcaption>
+      <figcaption style="font-size:.8rem;color:var(--ink-muted);margin-top:.4rem;font-style:italic">The cheapest and most local experience: bia hơi on plastic chairs. A full evening costs under $5.</figcaption>
     </figure>
 
     <!-- ─── GETTING HOME SAFELY ─── -->
