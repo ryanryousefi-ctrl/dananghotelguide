@@ -230,6 +230,75 @@ a.booking-cta.booking-button {
   color: #ffffff;
   background: #003b94;
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+/* High-specificity selector: * .booking-com-button defeats .parent a rules */
+* .booking-com-button,
+a.booking-com-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
+  border-radius: 8px !important;
+  border: 0 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  color: #fff !important;
+}
+* .booking-com-button:hover,
+a.booking-com-button:hover,
+* .booking-com-button:focus,
+a.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
+}
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+  border-radius: 0 !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  * .booking-com-button,
+  a.booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
 
 <script type="application/ld+json">

@@ -48,7 +48,9 @@ BUTTON_CSS = """
 /* ═══════════════════════════════════════════════════════════════
    BOOKING.COM UNIFIED BUTTON — do not edit individual instances
    ═══════════════════════════════════════════════════════════════ */
-.booking-com-button {
+/* High-specificity selector: * .booking-com-button defeats .parent a rules */
+* .booking-com-button,
+a.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -68,12 +70,14 @@ BUTTON_CSS = """
   vertical-align: middle !important;
   transition: background 0.15s ease, box-shadow 0.15s ease !important;
   box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
-  /* Reset anything a parent container might impose */
   overflow: hidden !important;
   flex-shrink: 0 !important;
+  color: #fff !important;
 }
-.booking-com-button:hover,
-.booking-com-button:focus {
+* .booking-com-button:hover,
+a.booking-com-button:hover,
+* .booking-com-button:focus,
+a.booking-com-button:focus {
   background: #002e80 !important;
   box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
   text-decoration: none !important;
@@ -87,6 +91,7 @@ BUTTON_CSS = """
   object-fit: contain !important;
   flex: 0 0 auto !important;
   overflow: visible !important;
+  border-radius: 0 !important;
 }
 .booking-com-button__label {
   display: inline-block !important;
@@ -98,7 +103,8 @@ BUTTON_CSS = """
   font-family: inherit !important;
 }
 @media (max-width: 480px) {
-  .booking-com-button {
+  * .booking-com-button,
+  a.booking-com-button {
     width: 100% !important;
     min-width: 0 !important;
     max-width: 260px !important;
@@ -285,7 +291,8 @@ CSS_INJECT_END   = '/* ═══════════════════
 
 
 def inject_css(html: str) -> str:
-    """Inject button CSS. Replace if already present."""
+    """Inject button CSS. Replace existing block if found, else append."""
+    # Already has our new block — replace it
     if CSS_INJECT_START in html:
         html = re.sub(
             re.escape(CSS_INJECT_START) + r'.*?' + re.escape(CSS_INJECT_END),
@@ -295,17 +302,21 @@ def inject_css(html: str) -> str:
         )
         return html
 
-    # Also remove the old booking-cta CSS block if present
-    old_marker_start = '/* ── Booking.com unified CTA button'
-    old_marker_end   = '/* ── end Booking.com unified CTA button ── */'
-    if old_marker_start in html:
-        html = re.sub(
-            re.escape(old_marker_start) + r'.*?' + re.escape(old_marker_end),
-            BUTTON_CSS.strip(),
-            html,
-            flags=re.DOTALL
-        )
-        return html
+    # Has old booking-cta block with clear end marker — replace it
+    old_start = '/* ── Booking.com unified CTA button'
+    old_end_variants = [
+        '/* ── end Booking.com unified CTA button ── */',
+        '/* ─── end Booking.com',
+    ]
+    for old_end in old_end_variants:
+        if old_start in html and old_end in html:
+            html = re.sub(
+                re.escape(old_start) + r'.*?' + re.escape(old_end),
+                BUTTON_CSS.strip(),
+                html,
+                flags=re.DOTALL
+            )
+            return html
 
     # Find insertion point: before </head>
     head_pos = html.find('</head>')

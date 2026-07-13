@@ -7,7 +7,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const BASE = 'https://www.dananghotelguide.com';
+const BASE = process.env.AUDIT_BASE || 'http://localhost:9876';
 
 const TEST_PAGES = [
   { url: '/', label: 'Homepage' },
@@ -58,6 +58,11 @@ async function auditPage(page, url, label, viewport) {
 
   for (let i = 0; i < buttons.length; i++) {
     const btn = buttons[i];
+
+    // Skip hidden buttons (mobile menu, hidden sections)
+    const isVisible = await btn.isVisible();
+    if (!isVisible) continue;
+
     const box  = await btn.boundingBox();
     const styles = await btn.evaluate(el => {
       const cs = getComputedStyle(el);
