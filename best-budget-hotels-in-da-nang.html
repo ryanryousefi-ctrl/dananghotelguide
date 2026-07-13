@@ -318,51 +318,67 @@ a{text-decoration:none;color:inherit}
 @media(max-width:500px){.author-trust-block{flex-direction:column;gap:.75rem}.atb-avatar{width:38px;height:38px}}
 
 
-/* ── Booking.com unified CTA button ── */
-.booking-cta {
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  min-width: 200px !important;
-  height: 50px !important;
-  padding: 0 22px !important;
-  background: #003b94 !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
   border-radius: 8px !important;
+  border: 0 !important;
   text-decoration: none !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
   white-space: nowrap !important;
-  vertical-align: middle !important;
-  font-size: unset !important;
-  color: #ffffff !important;
-  border: none !important;
   cursor: pointer !important;
-}
-.booking-cta:hover {
-  background: #002f7a !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
-  color: #ffffff !important;
-}
-.booking-cta:active {
-  transform: translateY(0) !important;
-}
-.booking-cta__logo {
-  height: 20px !important;
-  width: auto !important;
-  display: block !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  /* Reset anything a parent container might impose */
+  overflow: hidden !important;
   flex-shrink: 0 !important;
 }
-.booking-cta__label {
-  font-family: inherit !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1 !important;
+.booking-com-button:hover,
+.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
 }
-/* ── end Booking.com unified CTA button ── */
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  .booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
@@ -399,7 +415,7 @@ a{text-decoration:none;color:inherit}
     <a href="hotel-reviews.html" class="nav-link">Reviews</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta nav-stays-btn" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -413,7 +429,7 @@ a{text-decoration:none;color:inherit}
   <a href="dining.html" class="mobile-nav-link">Dining</a>
   <a href="guides.html" class="mobile-nav-link">Guides</a>
   <a href="hotel-reviews.html" class="mobile-nav-link">Reviews</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
 </div>
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -440,7 +456,7 @@ a{text-decoration:none;color:inherit}
   </div>
 </header>
 <!-- Phase 11 -->
-<div class="booking-band"><div class="booking-band-inner"><div class="bb-text-group"><span class="bb-eyebrow">Budget Hotels</span><div class="bb-headline">Best Budget Hotels in Da Nang</div><p class="bb-sub">Browse from low to high price. Solid picks under $50/night.</p></div><div class="bb-cta-group"><a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a></div></div></div>
+<div class="booking-band"><div class="booking-band-inner"><div class="bb-text-group"><span class="bb-eyebrow">Budget Hotels</span><div class="bb-headline">Best Budget Hotels in Da Nang</div><p class="bb-sub">Browse from low to high price. Solid picks under $50/night.</p></div><div class="bb-cta-group"><a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a></div></div></div>
 
 
 <div class="guide-layout">
@@ -526,27 +542,9 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <div class="hotel-strip">
-      <a class="hs-card" href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=best-budget-hotels-in-da-nang--a-la-carte-da-nang-beach" target="_blank" rel="nofollow noopener sponsored">
-    <img src="images/hotels/a-la-carte-da-nang.jpg" alt="A La Carte Da Nang Beach" loading="lazy" style="width:calc(100% + 2.2rem);height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-1.1rem -1.1rem 0.75rem;display:block">
-        <span class="hs-fit">Best Value on the Strip</span>
-        <span class="hs-name">A La Carte Da Nang Beach</span>
-        <span class="hs-why">Rooftop pool, My Khe beachside position, 4-star feel at mid-range price. Under $100 most of the year.</span>
-        <span class="hs-btn">Check rates →</span>
-      </a>
-      <a class="hs-card" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=best-budget-hotels-in-da-nang--brilliant" target="_blank" rel="nofollow noopener sponsored">
-    <img src="images/hotels/brilliant-hotel-da-nang.jpg" alt="Brilliant Hotel Da Nang" loading="lazy" style="width:calc(100% + 2.2rem);height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-1.1rem -1.1rem 0.75rem;display:block">
-        <span class="hs-fit">Best City-Centre Budget</span>
-        <span class="hs-name">Brilliant Hotel Da Nang</span>
-        <span class="hs-why">Han River views, central location, under $60. Good for those prioritising city access over beach proximity.</span>
-        <span class="hs-btn">Check rates →</span>
-      </a>
-      <a class="hs-card" href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=best-budget-hotels-in-da-nang--wyndham-soleil-danang" target="_blank" rel="nofollow noopener sponsored">
-    <img src="images/hotels/wyndham-soleil-da-nang.jpg" alt="Wyndham Soleil Da Nang" loading="lazy" style="width:calc(100% + 2.2rem);height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-1.1rem -1.1rem 0.75rem;display:block">
-        <span class="hs-fit">Best Value 4-Star</span>
-        <span class="hs-name">Wyndham Soleil Da Nang</span>
-        <span class="hs-why">My Khe area, pool, honest 4-star facilities without the 5-star premium.</span>
-        <span class="hs-btn">Check rates →</span>
-      </a>
+      <a class="booking-com-button" href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=best-budget-hotels-in-da-nang--a-la-carte-da-nang-beach" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a class="booking-com-button" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=best-budget-hotels-in-da-nang--brilliant" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a class="booking-com-button" href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=best-budget-hotels-in-da-nang--wyndham-soleil-danang" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     </div>
 
     <!-- ─── MID-PAGE CTA ─────────────────────────────────────── -->

@@ -357,104 +357,67 @@ details[open] .faq-question::after{transform:rotate(-135deg) translateY(2px)}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
 
 
-/* ── Booking.com unified CTA button ────────────────────────────────── */
-.booking-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-width: 200px;
-  height: 50px;
-  padding: 0 22px;
-  background: #003b94;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.15s ease, transform 0.1s ease;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35);
-  white-space: nowrap;
-  vertical-align: middle;
-}
-.booking-cta:hover {
-  background: #002f7a;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,59,148,.45);
-}
-.booking-cta:active {
-  transform: translateY(0);
-}
-.booking-cta__logo {
-  height: 20px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-.booking-cta__label {
-  font-family: inherit;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.01em;
-  line-height: 1;
-}
-/* Override any conflicting old button styles for these class combos */
-a.booking-cta.hotel-book-btn,
-a.booking-cta.nav-stays-btn,
-a.booking-cta.mobile-stays-btn,
-a.booking-cta.verdict-book-btn,
-a.booking-cta.hft-btn,
-a.booking-cta.bb-cta-primary,
-a.booking-cta.sc-book-btn,
-a.booking-cta.booking-button {
-  color: #ffffff;
-  background: #003b94;
-}
-
-
-/* ── Booking.com unified CTA button ── */
-.booking-cta {
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  min-width: 200px !important;
-  height: 50px !important;
-  padding: 0 22px !important;
-  background: #003b94 !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
   border-radius: 8px !important;
+  border: 0 !important;
   text-decoration: none !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
   white-space: nowrap !important;
-  vertical-align: middle !important;
-  font-size: unset !important;
-  color: #ffffff !important;
-  border: none !important;
   cursor: pointer !important;
-}
-.booking-cta:hover {
-  background: #002f7a !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
-  color: #ffffff !important;
-}
-.booking-cta:active {
-  transform: translateY(0) !important;
-}
-.booking-cta__logo {
-  height: 20px !important;
-  width: auto !important;
-  display: block !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  /* Reset anything a parent container might impose */
+  overflow: hidden !important;
   flex-shrink: 0 !important;
 }
-.booking-cta__label {
-  font-family: inherit !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1 !important;
+.booking-com-button:hover,
+.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
 }
-/* ── end Booking.com unified CTA button ── */
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  .booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
 
 
@@ -511,7 +474,7 @@ a.booking-cta.booking-button {
   </div>
   <div class="nav-right">
     <a href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city&aid=1784897"
-       class="booking-cta nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+       class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -553,7 +516,7 @@ a.booking-cta.booking-button {
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
   <a href="https://www.booking.com/searchresults.html?ss=Hoi+An,+Vietnam&dest_id=-3723930&dest_type=city&aid=1784897"
-     class="booking-cta mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+     class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
 </div>
 
 <!-- ── BREADCRUMB ──────────────────────────────────────────── -->
@@ -635,7 +598,7 @@ a.booking-cta.booking-button {
       <p class="bb-sub">Every hotel here is independently assessed. Live rates from Booking.com.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.html?dest_id=-3723930&dest_type=city&aid=1784897" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+      <a href="https://www.booking.com/searchresults.html?dest_id=-3723930&dest_type=city&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
       <a href="where-to-stay-in-hoi-an.html" class="bb-cta-ghost">Where to stay in Hoi An</a>
     </div>
   </div>
@@ -702,8 +665,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$450&ndash;$900</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -712,8 +675,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$450&ndash;$900</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html?aid=1784897&sid=best-hotels-in-hoi-an--four-seasons-resort-the-nam-ha"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -757,8 +720,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$140&ndash;$280</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -767,8 +730,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$140&ndash;$280</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html?aid=1784897&sid=best-hotels-in-hoi-an--almanity-hoi-an-resort-amp-spa"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -812,8 +775,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$180&ndash;$380</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -822,8 +785,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$180&ndash;$380</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-trails-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-trails-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -877,8 +840,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$180&ndash;$320</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -887,8 +850,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$180&ndash;$320</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--anantara-hoi-an-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -932,8 +895,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$95&ndash;$180</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -942,8 +905,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$95&ndash;$180</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--la-siesta-resort-spa-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -987,8 +950,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$70&ndash;$130</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -997,8 +960,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$70&ndash;$130</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html?aid=1784897&sid=best-hotels-in-hoi-an--phu-thinh-boutique-resort"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1042,8 +1005,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$75&ndash;$140</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1052,8 +1015,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$75&ndash;$140</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-historic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-historic"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1107,8 +1070,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$120&ndash;$220</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1117,8 +1080,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$120&ndash;$220</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/victoria-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--victoria-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1162,8 +1125,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$75&ndash;$140</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1172,8 +1135,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$75&ndash;$140</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/an-bang-seaside-village.html?aid=1784897&sid=best-hotels-in-hoi-an--an-bang-seaside-village"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1227,8 +1190,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$55&ndash;$90</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1237,8 +1200,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$55&ndash;$90</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/hoi-an-chic.html?aid=1784897&sid=best-hotels-in-hoi-an--hoi-an-chic"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1282,8 +1245,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$65&ndash;$110</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1292,8 +1255,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$65&ndash;$110</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/the-riverside-hoi-an.html?aid=1784897&sid=best-hotels-in-hoi-an--the-riverside-hoi-an"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>
@@ -1337,8 +1300,8 @@ a.booking-cta.booking-button {
             </div>
             <div class="hotel-footer-tablet" style="display:none">
               <div class="hft-price"><strong itemprop="priceRange">$35&ndash;$65</strong><small>&nbsp;/ night</small></div>
-              <a href="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique" class="booking-cta hft-btn hotel-book-btn affiliate-link"
-                 data-booking-url="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique" class="booking-com-button affiliate-link"
+                 data-booking-url="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
           <div class="hotel-price-cta">
@@ -1347,8 +1310,8 @@ a.booking-cta.booking-button {
               <span class="hpc-price-val" itemprop="priceRange">$35&ndash;$65</span>
               <span class="hpc-price-sub">per night</span>
             </div>
-            <a href="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique" class="booking-cta hotel-book-btn affiliate-link"
-               data-booking-url="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+            <a href="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique" class="booking-com-button affiliate-link"
+               data-booking-url="https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html?aid=1784897&sid=best-hotels-in-hoi-an--little-hoi-an-central-boutique"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
           </div>
         </div>
       </article>

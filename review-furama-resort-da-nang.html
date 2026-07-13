@@ -718,51 +718,67 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 
   
 
-/* ── Booking.com unified CTA button ── */
-.booking-cta {
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  min-width: 200px !important;
-  height: 50px !important;
-  padding: 0 22px !important;
-  background: #003b94 !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
   border-radius: 8px !important;
+  border: 0 !important;
   text-decoration: none !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
   white-space: nowrap !important;
-  vertical-align: middle !important;
-  font-size: unset !important;
-  color: #ffffff !important;
-  border: none !important;
   cursor: pointer !important;
-}
-.booking-cta:hover {
-  background: #002f7a !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
-  color: #ffffff !important;
-}
-.booking-cta:active {
-  transform: translateY(0) !important;
-}
-.booking-cta__logo {
-  height: 20px !important;
-  width: auto !important;
-  display: block !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  /* Reset anything a parent container might impose */
+  overflow: hidden !important;
   flex-shrink: 0 !important;
 }
-.booking-cta__label {
-  font-family: inherit !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1 !important;
+.booking-com-button:hover,
+.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
 }
-/* ── end Booking.com unified CTA button ── */
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  .booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
   <script type="application/ld+json">
 {
@@ -838,7 +854,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-cta nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+    <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -862,7 +878,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-cta mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+  <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
@@ -921,7 +937,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
       <p class="bb-sub">Established beachfront resort. Good value in the 5-star category.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+      <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=review-furama-resort-da-nang--furama-resort-danang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
       <a href="best-hotels-in-da-nang.html" class="bb-cta-ghost">See all Da Nang hotels</a>
     </div>
   </div>

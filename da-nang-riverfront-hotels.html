@@ -397,51 +397,67 @@ a{text-decoration:none;color:inherit}
 
 
 
-/* ── Booking.com unified CTA button ── */
-.booking-cta {
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  min-width: 200px !important;
-  height: 50px !important;
-  padding: 0 22px !important;
-  background: #003b94 !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
   border-radius: 8px !important;
+  border: 0 !important;
   text-decoration: none !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
   white-space: nowrap !important;
-  vertical-align: middle !important;
-  font-size: unset !important;
-  color: #ffffff !important;
-  border: none !important;
   cursor: pointer !important;
-}
-.booking-cta:hover {
-  background: #002f7a !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
-  color: #ffffff !important;
-}
-.booking-cta:active {
-  transform: translateY(0) !important;
-}
-.booking-cta__logo {
-  height: 20px !important;
-  width: auto !important;
-  display: block !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  /* Reset anything a parent container might impose */
+  overflow: hidden !important;
   flex-shrink: 0 !important;
 }
-.booking-cta__label {
-  font-family: inherit !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1 !important;
+.booking-com-button:hover,
+.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
 }
-/* ── end Booking.com unified CTA button ── */
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  .booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the best hotels on the Han River in Da Nang?","acceptedAnswer":{"@type":"Answer","text":"The top Han River hotels in Da Nang are the Novotel Da Nang Han River, the A La Carte Da Nang Beach, and the Brilliant Hotel. For a more boutique experience, the Azura Da Nang and TMS Hotel are well-located river options. Most riverside hotels offer city and river views, often at better value than beachfront equivalents."}},{"@type":"Question","name":"Are riverside hotels better value than beach hotels in Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Generally yes, riverside hotels in Da Nang typically cost 20–40% less than equivalent beachfront properties. You trade direct sand access for a city-centre location near Dragon Bridge, restaurants, and the night market. For business travellers or those prioritising dining and city access over beach time, riverside hotels are usually the better value pick."}},{"@type":"Question","name":"How far are Han River hotels from My Khe Beach?","acceptedAnswer":{"@type":"Answer","text":"Most Han River hotels are 3–5 kilometres from My Khe Beach, about a 10–15 minute Grab ride or a 20–30 minute walk via Dragon Bridge. Da Nang is compact enough that the river-to-beach trip is never a significant inconvenience."}},{"@type":"Question","name":"Which Da Nang riverside hotel has the best Dragon Bridge views?","acceptedAnswer":{"@type":"Answer","text":"The Novotel Da Nang Han River has the most direct Dragon Bridge views, with many rooms facing the river and the bridge directly. The Brilliant Hotel and A La Carte Da Nang also have good river-facing rooms. Book a river view room specifically, city-facing rooms at the same hotels can overlook an unremarkable street."}}]}
@@ -486,7 +502,7 @@ a{text-decoration:none;color:inherit}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -513,7 +529,7 @@ a{text-decoration:none;color:inherit}
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
 </div>
 
 <!-- Search overlay -->
@@ -681,7 +697,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$65</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>
@@ -699,7 +715,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$120</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>
@@ -717,7 +733,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$75</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>
@@ -735,7 +751,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$55</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>
@@ -753,7 +769,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$85</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>
@@ -771,7 +787,7 @@ a{text-decoration:none;color:inherit}
             </div>
             <div class="hotel-footer">
               <div class="hotel-price">From <strong>$110</strong>/night</div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta hotel-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
             </div>
           </div>
         </article>

@@ -276,51 +276,67 @@ a{text-decoration:none;color:inherit}
 .vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
 
 
-/* ── Booking.com unified CTA button ── */
-.booking-cta {
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
+   ═══════════════════════════════════════════════════════════════ */
+.booking-com-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  min-width: 200px !important;
-  height: 50px !important;
-  padding: 0 22px !important;
-  background: #003b94 !important;
+  gap: 12px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  height: 56px !important;
+  padding: 0 18px !important;
+  box-sizing: border-box !important;
+  background: #003b95 !important;
   border-radius: 8px !important;
+  border: 0 !important;
   text-decoration: none !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
   white-space: nowrap !important;
-  vertical-align: middle !important;
-  font-size: unset !important;
-  color: #ffffff !important;
-  border: none !important;
   cursor: pointer !important;
-}
-.booking-cta:hover {
-  background: #002f7a !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
-  color: #ffffff !important;
-}
-.booking-cta:active {
-  transform: translateY(0) !important;
-}
-.booking-cta__logo {
-  height: 20px !important;
-  width: auto !important;
-  display: block !important;
+  vertical-align: middle !important;
+  transition: background 0.15s ease, box-shadow 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
+  /* Reset anything a parent container might impose */
+  overflow: hidden !important;
   flex-shrink: 0 !important;
 }
-.booking-cta__label {
-  font-family: inherit !important;
-  font-size: 0.88rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1 !important;
+.booking-com-button:hover,
+.booking-com-button:focus {
+  background: #002e80 !important;
+  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
+  text-decoration: none !important;
+  color: #fff !important;
 }
-/* ── end Booking.com unified CTA button ── */
+.booking-com-button__logo {
+  display: block !important;
+  width: 125px !important;
+  height: auto !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+  overflow: visible !important;
+}
+.booking-com-button__label {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  font-family: inherit !important;
+}
+@media (max-width: 480px) {
+  .booking-com-button {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 260px !important;
+    height: 56px !important;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════ */
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -354,7 +370,7 @@ a{text-decoration:none;color:inherit}
     <a href="about.html" class="nav-link">About</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta nav-stays-btn" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -368,7 +384,7 @@ a{text-decoration:none;color:inherit}
   <a href="dining.html" class="mobile-nav-link">Dining</a>
   <a href="guides.html" class="mobile-nav-link active">Guides</a>
   <a href="about.html" class="mobile-nav-link">About</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
 </div>
 
 <!-- BREADCRUMB -->
@@ -403,7 +419,7 @@ a{text-decoration:none;color:inherit}
       <p class="bb-sub">Check availability across the full city — My Khe beach, Han River, and Son Tra.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
       <a href="best-hotels-in-da-nang.html" class="bb-cta-ghost">Compare top-rated hotels</a>
     </div>
   </div>
@@ -542,20 +558,8 @@ a{text-decoration:none;color:inherit}
     <p>For Hoi An overnights: if you want to spend two nights in Hoi An and Day 3 in Da Nang instead, that works equally well. The <a href="where-to-stay-in-da-nang.html">where to stay guide</a> covers Da Nang's neighbourhoods in detail; for hotel rankings, <a href="best-hotels-in-da-nang.html">best hotels in Da Nang</a> covers all categories and price points.</p>
 
     <div class="hotel-strip">
-      <a class="hs-card" href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=da-nang-itinerary--sheraton-grand-danang-resort" target="_blank" rel="nofollow noopener sponsored">
-    <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Da Nang Resort" loading="lazy" style="width:calc(100% + 2.2rem);height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-1.1rem -1.1rem 0.75rem;display:block">
-        <div class="hs-fit">5-Star · My Khe Beach</div>
-        <div class="hs-name">Sheraton Grand Danang Resort</div>
-        <div class="hs-why">On My Khe, walkable An Thuong strip, direct beach. The cleanest choice for this itinerary's base.</div>
-        <div class="hs-btn">Check rates →</div>
-      </a>
-      <a class="hs-card" href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=da-nang-itinerary--novotel-danang-premier-han-riv" target="_blank" rel="nofollow noopener sponsored">
-    <img src="images/hotels/novotel-da-nang-han-river.jpg" alt="Novotel Da Nang Premier Han River" loading="lazy" style="width:calc(100% + 2.2rem);height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-1.1rem -1.1rem 0.75rem;display:block">
-        <div class="hs-fit">Best · Han River</div>
-        <div class="hs-name">Novotel Danang Premier Han River</div>
-        <div class="hs-why">City-side base with Dragon Bridge views — better for Day 1 evening, trade-off is 15 min Grab to beach.</div>
-        <div class="hs-btn">Check rates →</div>
-      </a>
+      <a class="booking-com-button" href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=da-nang-itinerary--sheraton-grand-danang-resort" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a class="booking-com-button" href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=da-nang-itinerary--novotel-danang-premier-han-riv" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
     </div>
 
     <!-- QUICK REFERENCE TABLE -->
