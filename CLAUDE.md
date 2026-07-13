@@ -15,20 +15,79 @@ NEVER use `href="/filename.html"` or `href="guides/filename.html"` — leading s
 
 ## Affiliate parameters
 
-- Booking.com Da Nang dest_id: `-3730689`
-- Booking.com aid: `1784897`
-- Awin mid: `18119`
-- Awin affid: `2788028`
-- Hoi An dest_id: `-3723930`
-- NEVER use Hanoi dest_id `-3714993` — wrong city, has appeared in past errors
+- Booking.com affiliate ID (aid): `1784897`
+- CJ publisher ID: `101820678`
+- Da Nang generic search: `dest_id=6232&dest_type=region`
+- Hoi An dest_id: `-3723930` (city-level, correct for Hoi An)
+- NEVER use dest_id `-3714993` (wrong Hanoi ID) or `-3730689` (stale city-level Da Nang ID)
+- DO NOT reintroduce Awin. Awin was the previous affiliate network. CJ is current.
 
-## Booking.com link format
+## Affiliate network: CJ (Commission Junction) only
 
+The site uses **CJ Deep Link Automation (DLA)** — NOT Awin.
+
+### How it works
+
+Every page includes this script at page bottom:
+
+```html
+<script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
 ```
-https://www.booking.com/searchresults.html?dest_id=-3730689&dest_type=city&aid=1784897
+
+This script:
+1. On DOM ready, attaches a `click` listener to every `<a>` tag on the page.
+2. On click, checks if `element.href` matches a CJ-whitelisted domain.
+3. `booking.com` is in the whitelist — clicks are auto-rewritten to:
+   `https://www.qksrv.net/links/101820678/type/am/<original-booking-url>`
+4. This CJ redirect fires a tracked click and forwards to Booking.com.
+
+### Requirements for CJ click tracking to fire
+
+- The `<a>` element's `href` must contain the full `booking.com` URL **at the time of click**.
+- Do NOT use `href="#"` with `data-booking-url` — the `href` must be real so DLA can read it.
+- The CJ DLA script must have loaded (it loads synchronously from `anrdoezrs.net`).
+
+### Booking.com link format
+
+Always include `aid=1784897` in every Booking.com URL (Booking.com affiliate tracking):
+
+Hotel-specific:
+```
+https://www.booking.com/hotel/vn/<slug>.html?aid=1784897&sid=<page-id>--<hotel-slug>
 ```
 
-Affiliate wrapper: use `awinmid=18119` and `awinaffid=2788028` via Awin network.
+Generic Da Nang search:
+```
+https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us
+```
+
+### SID placement identifiers
+
+Every hotel-specific link includes a `&sid=` parameter for placement-level CJ reporting.
+Format: `<page-basename>--<hotel-slug>` (max 70 chars total, hyphens only, no spaces).
+Example: `sid=best-hotels-in-da-nang--intercontinental-danang-sun-pe`
+
+### How to create new Booking.com affiliate links
+
+1. Find the exact Booking.com property page URL: `https://www.booking.com/hotel/vn/<slug>.html`
+2. Append: `?aid=1784897&sid=<page-id>--<hotel-slug>`
+3. Use this URL directly in `href=`. Do NOT wrap in Awin. Do NOT use `href="#"`.
+4. Set `data-booking-url` to the same URL as `href`.
+5. The CJ DLA script handles click tracking automatically.
+
+### How to validate affiliate links
+
+Run: `node scripts/audit-cj-affiliate.js`
+
+This checks that:
+- No `href="#"` exists on booking CTAs
+- All hotel links contain `aid=1784897`
+- No Awin links are present
+- No old bad dest_ids remain
+
+### Hotel registry
+
+`scripts/hotels.json` — canonical list of all hotels with slugs, city, district, and status.
 
 ## Design system
 

@@ -243,7 +243,7 @@ function fixInternalLinks($) {
       href.startsWith("kr/") ||
       href === "" ||
       href === "/" ||
-      /^https?:\/\/(www\.)?(booking\.com|awin1\.com|agoda\.com)/.test(href)
+      /^https?:\/\/(www\.)?(booking\.com|agoda\.com)/.test(href)
     ) return;
 
     // External links — leave alone

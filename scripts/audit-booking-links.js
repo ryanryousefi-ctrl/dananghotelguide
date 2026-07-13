@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 /**
- * audit-booking-links.js
+ * audit-booking-links.js — DEPRECATED. DO NOT USE.
  *
+ * This script checked for Awin-era bad link patterns. Awin has been replaced by CJ.
+ * Use scripts/audit-cj-affiliate.js instead.
+ *
+ * Original description (historical):
  * Scans all .html files for bad Booking.com / Awin affiliate link patterns.
  * Reports file + line number + matched text for each issue found.
  * Exit code: 0 if clean, 1 if issues found.

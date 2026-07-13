@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 /**
- * fix-booking-links.js
+ * fix-booking-links.js — DEPRECATED. DO NOT USE.
  *
+ * This script was written for the Awin affiliate network. Awin has been replaced by CJ.
+ * Use scripts/fix-cj-affiliate.js instead.
+ * Use scripts/audit-cj-affiliate.js to validate.
+ *
+ * Original description (historical):
  * Fixes all bad Booking.com / Awin affiliate links sitewide.
  *
  * Bad pattern: dest_id=-3730689 (city-level ID that resolves to Thôn Mai Ðang)

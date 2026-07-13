@@ -1,0 +1,290 @@
+[
+  {
+    "id": "intercontinental-danang",
+    "name": "InterContinental Danang Sun Peninsula Resort",
+    "slug": "intercontinental-danang-sun-peninsula-resort",
+    "city": "Da Nang",
+    "district": "Son Tra",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "hyatt-regency-danang",
+    "name": "Hyatt Regency Danang Resort and Spa",
+    "slug": "hyatt-regency-danang-resort-and-spa",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "sheraton-grand-danang",
+    "name": "Sheraton Grand Danang Resort",
+    "slug": "sheraton-grand-danang-resort",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "fusion-maia-danang",
+    "name": "TIA Wellness Resort Da Nang (formerly Fusion Maia)",
+    "slug": "fusion-maia-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "danang-beach-resort",
+    "name": "Pullman Danang Beach Resort",
+    "slug": "danang-beach-resort",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "a-la-carte-danang",
+    "name": "A La Carte Da Nang Beach",
+    "slug": "a-la-carte-da-nang-beach",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "wyndham-soleil-danang",
+    "name": "Wyndham Soleil Danang",
+    "slug": "wyndham-soleil-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "tms-luxury-danang",
+    "name": "TMS Luxury Hotel Da Nang Beach",
+    "slug": "tms-luxury-danang-beach",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "furama-resort-danang",
+    "name": "Furama Resort Danang",
+    "slug": "furama-resort-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "sandy-beach-non-nuoc",
+    "name": "Sandy Beach Non Nuoc Resort",
+    "slug": "sandy-beach-non-nuoc-resort",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "danang-marriott-non-nuoc",
+    "name": "Danang Marriott Resort & Spa, Non Nuoc Beach Villas",
+    "slug": "danang-marriott-resort-spa-non-nuoc-beach-villas",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "the-memory-danang",
+    "name": "The Memory Danang",
+    "slug": "the-memory-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "premier-village-danang",
+    "name": "Premier Village Danang Resort",
+    "slug": "premier-village-danang-resort",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "novotel-danang",
+    "name": "Novotel Danang Premier Han River",
+    "slug": "novotel-danang-premier-han-river",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "haian-riverfront",
+    "name": "Haian Riverfront Hotel & Spa",
+    "slug": "haian-riverfont",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "brilliant-danang",
+    "name": "Brilliant Hotel Da Nang",
+    "slug": "brilliant",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "grandvrio-danang",
+    "name": "Grandvrio Ocean Resort Danang",
+    "slug": "grandvrio-ocean-resort-danang-tinh-quang-nam",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "almanity-hoi-an",
+    "name": "Almanity Hoi An Resort & Spa",
+    "slug": "almanity-hoi-an-resort-amp-spa",
+    "city": "Hoi An",
+    "district": "Hoi An",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "melia-danang",
+    "name": "Melia Danang Beach Resort",
+    "slug": "melia-danang-beach-resort",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "radisson-danang",
+    "name": "Radisson Blu Resort Danang",
+    "slug": "radisson-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "muong-thanh-luxury-danang",
+    "name": "Muong Thanh Luxury Da Nang Hotel",
+    "slug": "muong-thanh-luxury-da-nang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "naman-retreat",
+    "name": "Naman Retreat",
+    "slug": "naman-retreat-da-nang",
+    "city": "Da Nang",
+    "district": "Non Nuoc Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "tia-wellness",
+    "name": "TIA Wellness Resort",
+    "slug": "tia-wellness-resort",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "fusion-suites-danang",
+    "name": "Fusion Suites Da Nang Beach",
+    "slug": "fusion-suites-da-nang-beach",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "four-points-danang",
+    "name": "Four Points by Sheraton Da Nang",
+    "slug": "four-points-by-sheraton-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "grand-mercure-danang",
+    "name": "Grand Mercure Danang",
+    "slug": "grand-mercure-danang",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "hilton-danang",
+    "name": "Hilton Da Nang",
+    "slug": "hilton-da-nang",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "silk-path-grand-danang",
+    "name": "Silk Path Grand Resort & Spa Danang",
+    "slug": "silk-path-grand-resort-spa-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "azura-danang",
+    "name": "Azura Da Nang Hotel",
+    "slug": "azura-da-nang",
+    "city": "Da Nang",
+    "district": "Han River",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "mikazuki-danang",
+    "name": "Da Nang Mikazuki Japanese Resorts & Spa",
+    "slug": "da-nang-mikazuki-japanese-resorts-spa",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "haian-beach",
+    "name": "Haian Beach Hotel & Spa",
+    "slug": "haian-beach-hotel-spa",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  },
+  {
+    "id": "le-sands-danang",
+    "name": "Le Sands Oceanfront Hotel Da Nang",
+    "slug": "le-sands-oceanfront-danang",
+    "city": "Da Nang",
+    "district": "My Khe Beach",
+    "active": true,
+    "verifiedAt": "2026-07-13"
+  }
+]
