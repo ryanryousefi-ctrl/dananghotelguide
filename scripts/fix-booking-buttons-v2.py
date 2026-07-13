@@ -26,8 +26,19 @@ VISUAL_CLASSES_TO_REMOVE_FROM_ANCHOR = [
     'booking-cta', 'booking-cta__logo', 'booking-cta__label',  # previous attempt
     'hotel-book-btn', 'nav-stays-btn', 'mobile-stays-btn', 'verdict-book-btn',
     'hft-btn', 'bb-cta-primary', 'sc-book-btn', 'booking-button', 'hs-book-btn',
-    'hs-card',
+    'hs-card', 'hw-cta', 'btn-book', 'mobile-cta-bar-btn', 'hotel-card-cta',
+    'boutique-btn', 'hbtn', 'hc-btn', 'ep-cta', 'sb-cta', 'hero-cta',
+    'cta-block-btn', 'sidebar-cta-btn', 'sidebar-book-btn', 'sidebar-cta',
+    'hero-cta-btn', 'verdict-option', 'sidebar-book', 'cta-btn', 'hotel-cta',
+    'comparison-book-btn', 'area-book-btn', 'price-cta', 'book-btn',
+    'ep-card-cta', 'p5-final-btn-primary', 'p5-final-btn', 'p5-btn',
+    'hotel-cta-btn', 'district-cta', 'map-book-btn', 'area-cta',
 ]
+
+# Classes that wrap entire cards — do NOT convert these
+CARD_WRAPPER_CLASSES = {
+    'wid-hotel-card', 'hotel-card', 'p5-hc', 'hs-card', 'card-link', 'hotel-link',
+}
 
 # CJ tracking requires affiliate-link to remain on the anchor. Keep it.
 KEEP_CLASSES = {'affiliate-link'}
@@ -121,22 +132,48 @@ def is_booking_link(opening_tag: str) -> bool:
     return 'booking.com' in href_m.group(1)
 
 
-def should_convert(opening_tag: str) -> bool:
+BUTTON_TEXT_SIGNALS = [
+    'check price', 'check availab', 'book now', 'view hotel', 'search hotel',
+    'search stay', 'compare', 'book on booking', 'booking.com →', 'booking.com ↗',
+    'booking.com ↗', 'search on booking', 'find hotel', 'see price', 'check rate',
+    'search all hotel', 'browse hotel', 'browse boutique', 'search da nang',
+    'search hoi an', 'search my khe', 'book via booking', 'search festival',
+    'check current rate', 'book hyatt', 'book sheraton', 'book marriott',
+    'book intercontinental', 'book furama', 'book pullman', 'book novotel',
+    'book melia', 'view rates', 'check now', 'check live',
+    'browse da nang', 'browse all', 'all hotels', 'all da nang',
+    'da nang hotel', 'da nang hotels', 'view recommended', 'booking.com',
+]
+
+
+def looks_like_button_text(inner_html: str) -> bool:
+    """Returns True if the anchor inner text signals it's a CTA button (not body text)."""
+    text = re.sub(r'<[^>]+>', '', inner_html).lower().strip()
+    if len(text) > 120:
+        return False  # Sentence-length text = body link
+    return any(signal in text for signal in BUTTON_TEXT_SIGNALS)
+
+
+def should_convert(opening_tag: str, inner_html: str = '') -> bool:
     """
     Returns True if this booking.com anchor should be converted.
     Catches:
       - anchors with one of our known target visual class names
       - anchors with inline style= (coral pill etc.)
-      - anchors with no class at all (plain text links to booking.com are left alone unless button-styled)
+      - anchor-only affiliate-link that acts as a button CTA
+      - naked anchors whose text signals they're a button CTA
     """
     # Already converted
     cls_m = CLASS_RE.search(opening_tag)
     if cls_m and 'booking-com-button' in cls_m.group(1):
         return True
 
-    # Has one of our target visual class names
     if cls_m:
         classes = set(cls_m.group(1).split())
+        # Never convert card wrappers
+        if classes & CARD_WRAPPER_CLASSES:
+            return False
+        # Has one of our target visual class names
         if classes & TARGET_CLASSES:
             return True
 
@@ -146,6 +183,10 @@ def should_convert(opening_tag: str) -> bool:
         style = style_m.group(1)
         if 'background' in style and ('padding' in style or 'border-radius' in style):
             return True
+
+    # Naked or affiliate-link-only anchor — convert only if text looks like a CTA
+    if looks_like_button_text(inner_html):
+        return True
 
     return False
 
@@ -181,11 +222,12 @@ def replace_anchor(match: re.Match) -> str:
         return full
 
     opening = tag_m.group(1)
+    inner = tag_m.group(2)
 
     if not is_booking_link(opening):
         return full
 
-    if not should_convert(opening):
+    if not should_convert(opening, inner):
         return full
 
     new_opening = rewrite_opening_tag(opening)
