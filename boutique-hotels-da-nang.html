@@ -896,6 +896,53 @@ font-weight:600;}
 .atm-eyebrow{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--ocean,#1B5C5C);margin-bottom:.5rem}
 .atm-heading{font-family:var(--font-serif,serif);font-size:1.2rem;color:var(--ink,#1A1A18);margin-bottom:.6rem}
 .atm-body{font-size:.9rem;color:var(--ink-soft,#3C3C38);line-height:1.75;margin:0}
+
+
+/* ── Booking.com unified CTA button ── */
+.booking-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-width: 200px !important;
+  height: 50px !important;
+  padding: 0 22px !important;
+  background: #003b94 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease, transform 0.1s ease !important;
+  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  font-size: unset !important;
+  color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+.booking-cta:hover {
+  background: #002f7a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
+  color: #ffffff !important;
+}
+.booking-cta:active {
+  transform: translateY(0) !important;
+}
+.booking-cta__logo {
+  height: 20px !important;
+  width: auto !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.booking-cta__label {
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1 !important;
+}
+/* ── end Booking.com unified CTA button ── */
 </style>
   
   
@@ -942,10 +989,7 @@ font-weight:600;}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span class="btn-text">Search Stays</span>
-    </a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -973,7 +1017,7 @@ font-weight:600;}
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
 </div>
 
 <!-- Search overlay -->
@@ -1112,7 +1156,7 @@ font-weight:600;}
       <p class="bb-sub">Character, location, and value — browse Da Nang's independent and boutique properties with live rates.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Boutique Hotels</a>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
       <a href="hotel-reviews.html" class="bb-cta-ghost">See all hotel reviews →</a>
     </div>
   </div>
@@ -1158,10 +1202,7 @@ font-weight:600;}
             </div>
             <div class="hc-footer">
               <div class="hc-price-box"><span class="hc-price-from">From</span><span class="hc-price-num"> $75</span><span class="hc-price-night">/night</span></div>
-              <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--a-la-carte-da-nang-beach" data-booking-url="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--a-la-carte-da-nang-beach" class="booking-button hc-btn affiliate-link">
-                <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-                View on Booking.com
-              </a>
+              <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--a-la-carte-da-nang-beach" data-booking-url="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--a-la-carte-da-nang-beach" class="booking-cta booking-button hc-btn affiliate-link"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
             </div>
           </div>
         </article>
@@ -1190,10 +1231,7 @@ font-weight:600;}
             </div>
             <div class="hc-footer">
               <div class="hc-price-box"><span class="hc-price-from">From</span><span class="hc-price-num"> $48</span><span class="hc-price-night">/night</span></div>
-              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-button hc-btn affiliate-link">
-                <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-                View on Booking.com
-              </a>
+              <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-cta booking-button hc-btn affiliate-link"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
             </div>
           </div>
         </article>
@@ -1226,10 +1264,7 @@ font-weight:600;}
             </div>
             <div class="hc-footer">
               <div class="hc-price-box"><span class="hc-price-from">From</span><span class="hc-price-num"> $65</span><span class="hc-price-night">/night</span></div>
-              <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--tms-luxury-danang-beach" data-booking-url="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--tms-luxury-danang-beach" class="booking-button hc-btn affiliate-link">
-                <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-                View on Booking.com
-              </a>
+              <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--tms-luxury-danang-beach" data-booking-url="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=boutique-hotels-da-nang--tms-luxury-danang-beach" class="booking-cta booking-button hc-btn affiliate-link"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
             </div>
           </div>
         </article>
@@ -1258,10 +1293,7 @@ font-weight:600;}
             </div>
             <div class="hc-footer">
               <div class="hc-price-box"><span class="hc-price-from">From</span><span class="hc-price-num"> $55</span><span class="hc-price-night">/night</span></div>
-              <a href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=boutique-hotels-da-nang--brilliant" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=boutique-hotels-da-nang--brilliant" class="booking-button hc-btn affiliate-link">
-                <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-                View on Booking.com
-              </a>
+              <a href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=boutique-hotels-da-nang--brilliant" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=boutique-hotels-da-nang--brilliant" class="booking-cta booking-button hc-btn affiliate-link"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
             </div>
           </div>
         </article>
@@ -1294,10 +1326,7 @@ font-weight:600;}
             </div>
             <div class="hc-footer">
               <div class="hc-price-box"><span class="hc-price-from">From</span><span class="hc-price-num"> $70</span><span class="hc-price-night">/night</span></div>
-              <a href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=boutique-hotels-da-nang--wyndham-soleil-danang" data-booking-url="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=boutique-hotels-da-nang--wyndham-soleil-danang" class="booking-button hc-btn affiliate-link">
-                <svg class="bcom-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 18" width="72" height="14" aria-hidden="true"><circle cx="4.5" cy="9" r="4.5" fill="currentColor"/><text x="11" y="13.5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" fill="currentColor">Booking.com</text></svg>
-                View on Booking.com
-              </a>
+              <a href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=boutique-hotels-da-nang--wyndham-soleil-danang" data-booking-url="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=boutique-hotels-da-nang--wyndham-soleil-danang" class="booking-cta booking-button hc-btn affiliate-link"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
             </div>
           </div>
         </article>

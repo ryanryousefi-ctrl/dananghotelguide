@@ -153,6 +153,59 @@ a{text-decoration:none;color:inherit}
 .sep{color:rgba(255,255,255,.15)}
 @media(max-width:900px){.review-layout{grid-template-columns:1fr}.review-sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.nav-hamburger{display:flex}}
 @media(max-width:580px){.pros-cons{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.quick-facts-grid{grid-template-columns:1fr}}
+
+
+/* ── Booking.com unified CTA button ────────────────────────────────── */
+.booking-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 200px;
+  height: 50px;
+  padding: 0 22px;
+  background: #003b94;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0,59,148,.35);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.booking-cta:hover {
+  background: #002f7a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,59,148,.45);
+}
+.booking-cta:active {
+  transform: translateY(0);
+}
+.booking-cta__logo {
+  height: 20px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.booking-cta__label {
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+/* Override any conflicting old button styles for these class combos */
+a.booking-cta.hotel-book-btn,
+a.booking-cta.nav-stays-btn,
+a.booking-cta.mobile-stays-btn,
+a.booking-cta.verdict-book-btn,
+a.booking-cta.hft-btn,
+a.booking-cta.bb-cta-primary,
+a.booking-cta.sc-book-btn,
+a.booking-cta.booking-button {
+  color: #ffffff;
+  background: #003b94;
+}
 </style>
 <meta name="robots" content="noindex,follow">
 
@@ -226,10 +279,7 @@ a{text-decoration:none;color:inherit}
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
-    <a class="nav-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span>Search Stays</span>
-    </a>
+    <a class="booking-cta nav-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -240,7 +290,7 @@ a{text-decoration:none;color:inherit}
   <a href="guides.html" class="mobile-nav-link">Guides</a>
   <a href="hotel-reviews.html" class="mobile-nav-link active">Hotel Reviews</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a class="mobile-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+  <a class="booking-cta mobile-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
 </div>
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="hotel-reviews.html">Hotel Reviews</a><span class="bc-sep">›</span><span>Naman Retreat Da Nang Review</span></div></nav>
 <div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem var(--gutter);">
@@ -379,7 +429,7 @@ a{text-decoration:none;color:inherit}
       <div class="verdict-label">Our verdict</div>
       <div class="verdict-score">9.2 <span>/ 10</span></div>
       <p class="verdict-summary">Naman Retreat is one of the most architecturally remarkable hotels in Vietnam, Vo Trong Nghia's bamboo architecture and the 250-metre infinity pool are unlike anything else in Da Nang.</p>
-      <a class="verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored">Check rates on Booking.com →</a>
+      <a class="booking-cta verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
     </div>
     <div class="internal-links-bar">
       <span class="ilb-label">More guides</span>
@@ -394,7 +444,7 @@ a{text-decoration:none;color:inherit}
 <h2>Check Rates &amp; Availability</h2>
 <p>Rates at Naman Retreat Da Nang vary significantly by season, room type, and how far in advance you book. Low season (roughly May through August) typically offers the best value, expect rates from around $180/night. Peak season runs December through February when Da Nang's weather is at its finest and demand from domestic and international travellers peaks, with nightly rates reaching $380 or above for the best rooms.</p>
 <p>We recommend checking Booking.com for live availability, current pricing, and cancellation policies. Many rooms can be held with free cancellation if you book in advance.</p>
-<p style="margin-top:1.25rem;"><a class="verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;padding:12px 22px;border-radius:100px;font-size:.85rem;font-weight:700;text-decoration:none;">Check availability on Booking.com →</a></p>
+<p style="margin-top:1.25rem;"><a class="booking-cta verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a></p>
 
   </article>
   <aside class="review-sidebar">
@@ -402,7 +452,7 @@ a{text-decoration:none;color:inherit}
       <div class="sc-label">Current rates</div>
       <div class="sc-price-main">$200/night</div>
       <div class="sc-price-sub">per night · via Booking.com</div>
-      <a class="sc-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored">Check availability →</a>
+      <a class="booking-cta sc-book-btn" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=naman-retreat-da-nang--naman-retreat-da-nang" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
       <p class="sc-disclosure">We earn a small commission on completed bookings at no extra cost to you.</p>
     </div>
     <div class="sidebar-card">

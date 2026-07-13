@@ -716,7 +716,54 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .review-body a{color:var(--ocean);font-weight:600;border-bottom:1px solid rgba(27,92,92,.25);transition:border-color .15s}
     .review-body a:hover{border-color:var(--ocean)}
 
-  </style>
+  
+
+/* ── Booking.com unified CTA button ── */
+.booking-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-width: 200px !important;
+  height: 50px !important;
+  padding: 0 22px !important;
+  background: #003b94 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease, transform 0.1s ease !important;
+  box-shadow: 0 2px 6px rgba(0,59,148,.35) !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  font-size: unset !important;
+  color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+.booking-cta:hover {
+  background: #002f7a !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0,59,148,.45) !important;
+  color: #ffffff !important;
+}
+.booking-cta:active {
+  transform: translateY(0) !important;
+}
+.booking-cta__logo {
+  height: 20px !important;
+  width: auto !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+.booking-cta__label {
+  font-family: inherit !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1 !important;
+}
+/* ── end Booking.com unified CTA button ── */
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -791,10 +838,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span class="btn-text">Search Stays</span>
-    </a>
+    <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="booking-cta nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -818,7 +862,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+  <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="booking-cta mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
@@ -877,7 +921,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
       <p class="bb-sub">Best mid-range beachfront. Rooftop infinity pool with ocean views.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Availability</a>
+      <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=review-a-la-carte-da-nang--a-la-carte-da-nang-beach" class="booking-cta bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="booking-logo.svg" class="booking-cta__logo" alt="Booking.com" loading="lazy"><span class="booking-cta__label">Check availability</span></a>
       <a href="best-hotels-in-da-nang.html" class="bb-cta-ghost">See all Da Nang hotels</a>
     </div>
   </div>
