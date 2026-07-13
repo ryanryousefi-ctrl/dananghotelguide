@@ -121,13 +121,33 @@ def is_booking_link(opening_tag: str) -> bool:
     return 'booking.com' in href_m.group(1)
 
 
-def has_target_class(opening_tag: str) -> bool:
-    """Returns True if anchor has any of our target visual classes."""
+def should_convert(opening_tag: str) -> bool:
+    """
+    Returns True if this booking.com anchor should be converted.
+    Catches:
+      - anchors with one of our known target visual class names
+      - anchors with inline style= (coral pill etc.)
+      - anchors with no class at all (plain text links to booking.com are left alone unless button-styled)
+    """
+    # Already converted
     cls_m = CLASS_RE.search(opening_tag)
-    if not cls_m:
-        return False
-    classes = set(cls_m.group(1).split())
-    return bool(classes & TARGET_CLASSES)
+    if cls_m and 'booking-com-button' in cls_m.group(1):
+        return True
+
+    # Has one of our target visual class names
+    if cls_m:
+        classes = set(cls_m.group(1).split())
+        if classes & TARGET_CLASSES:
+            return True
+
+    # Has inline style that makes it look like a button (background, padding, border-radius)
+    style_m = re.search(r'style="([^"]*)"', opening_tag, re.IGNORECASE)
+    if style_m:
+        style = style_m.group(1)
+        if 'background' in style and ('padding' in style or 'border-radius' in style):
+            return True
+
+    return False
 
 
 def rewrite_opening_tag(opening_tag: str) -> str:
@@ -165,13 +185,7 @@ def replace_anchor(match: re.Match) -> str:
     if not is_booking_link(opening):
         return full
 
-    if not has_target_class(opening):
-        # Could be a booking link with no visual class — check if it was already converted
-        cls_m = CLASS_RE.search(opening)
-        if cls_m and 'booking-com-button' in cls_m.group(1):
-            # Already done but inner may need update
-            new_opening = rewrite_opening_tag(opening)
-            return new_opening + BUTTON_INNER + tag_m.group(3)
+    if not should_convert(opening):
         return full
 
     new_opening = rewrite_opening_tag(opening)
