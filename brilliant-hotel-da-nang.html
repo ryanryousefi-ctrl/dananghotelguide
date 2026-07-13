@@ -154,128 +154,6 @@ a{text-decoration:none;color:inherit}
 .sep{color:rgba(255,255,255,.15)}
 @media(max-width:900px){.review-layout{grid-template-columns:1fr}.review-sidebar{position:static}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.nav-hamburger{display:flex}}
 @media(max-width:580px){.pros-cons{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.quick-facts-grid{grid-template-columns:1fr}}
-
-
-/* ── Booking.com unified CTA button ────────────────────────────────── */
-.booking-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-width: 200px;
-  height: 50px;
-  padding: 0 22px;
-  background: #003b94;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.15s ease, transform 0.1s ease;
-  box-shadow: 0 2px 6px rgba(0,59,148,.35);
-  white-space: nowrap;
-  vertical-align: middle;
-}
-.booking-cta:hover {
-  background: #002f7a;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,59,148,.45);
-}
-.booking-cta:active {
-  transform: translateY(0);
-}
-.booking-cta__logo {
-  height: 20px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-.booking-cta__label {
-  font-family: inherit;
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.01em;
-  line-height: 1;
-}
-/* Override any conflicting old button styles for these class combos */
-a.booking-cta.hotel-book-btn,
-a.booking-cta.nav-stays-btn,
-a.booking-cta.mobile-stays-btn,
-a.booking-cta.verdict-book-btn,
-a.booking-cta.hft-btn,
-a.booking-cta.bb-cta-primary,
-a.booking-cta.sc-book-btn,
-a.booking-cta.booking-button {
-  color: #ffffff;
-  background: #003b94;
-}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
-   ═══════════════════════════════════════════════════════════════ */
-/* High-specificity selector: * .booking-com-button defeats .parent a rules */
-* .booking-com-button,
-a.booking-com-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  width: 260px !important;
-  min-width: 260px !important;
-  max-width: 260px !important;
-  height: 56px !important;
-  padding: 0 18px !important;
-  box-sizing: border-box !important;
-  background: #003b95 !important;
-  border-radius: 8px !important;
-  border: 0 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  vertical-align: middle !important;
-  transition: background 0.15s ease, box-shadow 0.15s ease !important;
-  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
-  overflow: hidden !important;
-  flex-shrink: 0 !important;
-  color: #fff !important;
-}
-* .booking-com-button:hover,
-a.booking-com-button:hover,
-* .booking-com-button:focus,
-a.booking-com-button:focus {
-  background: #002e80 !important;
-  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
-  text-decoration: none !important;
-  color: #fff !important;
-}
-.booking-com-button__logo {
-  display: block !important;
-  width: 125px !important;
-  height: auto !important;
-  max-height: 30px !important;
-  object-fit: contain !important;
-  flex: 0 0 auto !important;
-  overflow: visible !important;
-  border-radius: 0 !important;
-}
-.booking-com-button__label {
-  display: inline-block !important;
-  color: #ffffff !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-  font-family: inherit !important;
-}
-@media (max-width: 480px) {
-  * .booking-com-button,
-  a.booking-com-button {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 260px !important;
-    height: 56px !important;
-  }
-}
-/* ═══════════════════════════════════════════════════════════════ */
 </style>
 
 <script type="application/ld+json">
@@ -348,7 +226,10 @@ a.booking-com-button:focus {
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
-    <a class="booking-com-button" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a class="nav-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Search Stays</span>
+    </a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -359,7 +240,7 @@ a.booking-com-button:focus {
   <a href="guides.html" class="mobile-nav-link">Guides</a>
   <a href="hotel-reviews.html" class="mobile-nav-link active">Hotel Reviews</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a class="booking-com-button" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a class="mobile-stays-btn" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
 </div>
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="hotel-reviews.html">Hotel Reviews</a><span class="bc-sep">›</span><span>Brilliant Hotel Da Nang Review</span></div></nav>
 <div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem var(--gutter);">
@@ -394,7 +275,7 @@ a.booking-com-button:focus {
     <p style="font-weight:700;color:var(--ocean);font-size:.93rem;margin:0 0 .2rem;">Check prices for your dates in Da Nang</p>
     <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Live rates &middot; Free cancellation on most hotels &middot; Instant confirmation</p>
   </div>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels &#8594;</a>
 </div>
 
     <div class="review-hero-meta">
@@ -497,7 +378,7 @@ a.booking-com-button:focus {
       <div class="verdict-label">Our verdict</div>
       <div class="verdict-score">8.2 <span>/ 10</span></div>
       <p class="verdict-summary">Outstanding value for a Han River hotel, the Brilliant Hotel's rooftop pool views of Dragon Bridge, included breakfast, and competitive rates make it a perennial favourite for city-focused visitors.</p>
-      <a class="booking-com-button" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a class="verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored">Check rates on Booking.com →</a>
     </div>
     <div class="internal-links-bar">
       <span class="ilb-label">More guides</span>
@@ -512,7 +393,7 @@ a.booking-com-button:focus {
 <h2>Check Rates &amp; Availability</h2>
 <p>Rates at Brilliant Hotel Da Nang vary significantly by season, room type, and how far in advance you book. Low season (roughly May through August) typically offers the best value, expect rates from around $45/night. Peak season runs December through February when Da Nang's weather is at its finest and demand from domestic and international travellers peaks, with nightly rates reaching $90 or above for the best rooms.</p>
 <p>We recommend checking Booking.com for live availability, current pricing, and cancellation policies. Many rooms can be held with free cancellation if you book in advance.</p>
-<p style="margin-top:1.25rem;"><a class="booking-com-button" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a></p>
+<p style="margin-top:1.25rem;"><a class="verdict-book-btn" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;padding:12px 22px;border-radius:100px;font-size:.85rem;font-weight:700;text-decoration:none;">Check availability on Booking.com →</a></p>
 
   </article>
   <aside class="review-sidebar">
@@ -520,7 +401,7 @@ a.booking-com-button:focus {
       <div class="sc-label">Current rates</div>
       <div class="sc-price-main">$55/night</div>
       <div class="sc-price-sub">per night · via Booking.com</div>
-      <a class="booking-com-button" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a class="sc-book-btn" data-booking-url="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=brilliant-hotel-da-nang--brilliant" rel="nofollow noopener sponsored">Check availability →</a>
       <p class="sc-disclosure">We earn a small commission on completed bookings at no extra cost to you.</p>
     </div>
     <div class="sidebar-card">
@@ -587,7 +468,7 @@ a.booking-com-button:focus {
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
 </section>

@@ -174,75 +174,6 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:480px){.hotel-card-img{height:180px}}
   .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
-   ═══════════════════════════════════════════════════════════════ */
-/* High-specificity selector: * .booking-com-button defeats .parent a rules */
-* .booking-com-button,
-a.booking-com-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  width: 260px !important;
-  min-width: 260px !important;
-  max-width: 260px !important;
-  height: 56px !important;
-  padding: 0 18px !important;
-  box-sizing: border-box !important;
-  background: #003b95 !important;
-  border-radius: 8px !important;
-  border: 0 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  vertical-align: middle !important;
-  transition: background 0.15s ease, box-shadow 0.15s ease !important;
-  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
-  overflow: hidden !important;
-  flex-shrink: 0 !important;
-  color: #fff !important;
-}
-* .booking-com-button:hover,
-a.booking-com-button:hover,
-* .booking-com-button:focus,
-a.booking-com-button:focus {
-  background: #002e80 !important;
-  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
-  text-decoration: none !important;
-  color: #fff !important;
-}
-.booking-com-button__logo {
-  display: block !important;
-  width: 125px !important;
-  height: auto !important;
-  max-height: 30px !important;
-  object-fit: contain !important;
-  flex: 0 0 auto !important;
-  overflow: visible !important;
-  border-radius: 0 !important;
-}
-.booking-com-button__label {
-  display: inline-block !important;
-  color: #ffffff !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-  font-family: inherit !important;
-}
-@media (max-width: 480px) {
-  * .booking-com-button,
-  a.booking-com-button {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 260px !important;
-    height: 56px !important;
-  }
-}
-/* ═══════════════════════════════════════════════════════════════ */
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Best Hotel Breakfast in Da Nang 2026 — Worth the Upgrade?","description":"Which Da Nang hotels have the best breakfast spreads in 2026? InterContinental, Hyatt Regency, Sheraton, Naman Retreat reviewed honestly. Is breakfast included worth it?","url":"https://www.dananghotelguide.com/best-resort-breakfast-da-nang.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -291,7 +222,10 @@ a.booking-com-button:focus {
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="btn-text">Search Stays</span>
+    </a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -315,7 +249,7 @@ a.booking-com-button:focus {
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">&#10005;</button>
@@ -408,7 +342,7 @@ a.booking-com-button:focus {
       <p>The InterContinental's breakfast at Citron restaurant is the best hotel breakfast in Da Nang, and it is not particularly close. The setting alone - a clifftop open-air restaurant on Son Tra Peninsula with a full ocean view - is impossible to replicate. Add a spread that covers Vietnamese and international options properly (genuinely good pho station, fresh tropical fruit that is actually ripe, eggs cooked to order, quality pastries) and this is a breakfast that holds its own against the view.</p>
       <p>More importantly: you do not have a meaningful alternative from Son Tra Peninsula. The InterContinental is deliberately remote. There are no cafes at the base of the funicular, no banh mi stalls five minutes walk away. Breakfast at Citron is not just good - it is effectively the only sensible option unless you are taking the funicular down and calling a Grab 20 minutes into the city. Inclusion is essentially required for any stay here.</p>
       <p>The Vietnamese options at Citron are notably better than at most 5-star breakfast buffets, where pho is often a pale imitation. This one is closer to what you would get at a decent local pho shop, which is a meaningful compliment.</p>
-      <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-resort-breakfast-da-nang--intercontinental-danang-sun-pe" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-resort-breakfast-da-nang--intercontinental-danang-sun-pe" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -425,7 +359,7 @@ a.booking-com-button:focus {
       <p>The Hyatt Regency runs a large, well-organised breakfast buffet with a particularly good Vietnamese section - the pho, bun bo Hue, and banh mi options are prepared properly rather than as afterthoughts. The buffet sits next to the beachfront, which means you eat with the Non Nuoc sand and South China Sea directly in view. This is a genuinely pleasant setting for breakfast.</p>
       <p>Like the InterContinental, the Non Nuoc location means local alternatives require a Grab ride. There is not much within walking distance of the resort. Breakfast inclusion at the Hyatt makes practical sense: the spread is good enough to justify it, and the alternative is inconvenient enough to make it the default choice anyway.</p>
       <p>The quality is a step below the InterContinental - the product overall is solid 5-star rather than exceptional - but it is consistent and well-run. If you are staying at the Hyatt, include breakfast.</p>
-      <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=best-resort-breakfast-da-nang--hyatt-regency-danang-resort-an" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=best-resort-breakfast-da-nang--hyatt-regency-danang-resort-an" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -442,7 +376,7 @@ a.booking-com-button:focus {
       <p>The Sheraton Grand runs a competent 5-star breakfast buffet. The spread covers the expected ground - eggs, proteins, international pastries, Vietnamese options, fresh fruit - and is well-presented. The beach-adjacent setting is pleasant. There is nothing wrong with the Sheraton breakfast.</p>
       <p>The honest calculation here is different to the Non Nuoc resorts. The Sheraton's My Khe Beach location puts you within closer reach of the An Thuong cafe district and local eating options than the more remote Non Nuoc properties. You can reach good local breakfast spots in 10-15 minutes on a bike or a short Grab ride. That changes the value equation meaningfully: you are now genuinely choosing between a $30/person hotel buffet and a $3/person local breakfast that might be better.</p>
       <p>For price-conscious travellers staying at the Sheraton, skipping breakfast inclusion and eating locally is a legitimate choice worth making. For those who value the convenience and beachfront setting, the Sheraton breakfast is perfectly good.</p>
-      <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-resort-breakfast-da-nang--sheraton-grand-danang-resort" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-resort-breakfast-da-nang--sheraton-grand-danang-resort" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -459,7 +393,7 @@ a.booking-com-button:focus {
       <p>Naman Retreat's breakfast is quieter and more curated than the large 5-star buffets. The resort does not run a cavernous 400-person dining room - it fits the scale and design ethos of the property. Vietnamese and continental options are both solid. Nest Villa guests can arrange in-villa breakfast service, which changes the experience meaningfully: coffee and banh cuon brought to your bamboo terrace is a different meal from a buffet, even if the food is similar.</p>
       <p>Like the other Non Nuoc resorts, location makes breakfast inclusion more logical here. Non Nuoc does not have the cafe infrastructure of An Thuong. The Naman kitchen is genuinely good and the setting - bamboo, garden, pool views - is nicer than most hotel dining rooms in Da Nang.</p>
       <p>The breakfast is proportional to the resort: not the biggest spread in Da Nang, but more thoughtfully done than most. Villa guests in particular benefit from the in-villa option, which makes the otherwise abstract question of whether to include breakfast fairly easy to answer.</p>
-      <a href="https://www.booking.com/hotel/vn/naman-retreat.html?aid=1784897&sid=best-resort-breakfast-da-nang--naman-retreat" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/naman-retreat.html?aid=1784897&sid=best-resort-breakfast-da-nang--naman-retreat" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -475,7 +409,7 @@ a.booking-com-button:focus {
       </div>
       <p>Furama Resort is one of Da Nang's longest-established 5-star properties, and the breakfast buffet reflects that heritage. It is a broad, well-organised spread in a beachside dining setting. The variety covers Vietnamese options properly, not just as a token corner of the buffet, and the quality is consistent. Not the most exciting breakfast in Da Nang, but one of the most reliable.</p>
       <p>Furama sits on My Khe Beach, similar to the Sheraton in terms of proximity to local alternatives. The An Thuong cafe area is reachable, which means the value calculation involves the same trade-off: excellent hotel buffet vs excellent local breakfast at a fraction of the price. For guests who are staying for a week and want the convenience of stepping from their room to breakfast without navigating transport, Furama's inclusion makes sense. For shorter stays or budget-conscious travellers, eating locally at least some mornings is worth considering.</p>
-      <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=best-resort-breakfast-da-nang--furama-resort-danang" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=best-resort-breakfast-da-nang--furama-resort-danang" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
   </div>
 
@@ -535,7 +469,7 @@ a.booking-com-button:focus {
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Compare hotel rates in Da Nang</p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Filter by breakfast included, check live availability, and compare prices across all Da Nang hotels and resorts.</p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Check Prices &rarr;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
 </section>
@@ -571,7 +505,7 @@ a.booking-com-button:focus {
 
 <div id="mobileStickyBar">
   <p style="color:#fff;font-size:.82rem;font-weight:600;margin:0;line-height:1.3;">Compare Da Nang hotel rates</p>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="flex-shrink:0;display:inline-flex;align-items:center;gap:5px;background:var(--coral);color:#fff;font-size:.8rem;font-weight:700;padding:9px 16px;border-radius:100px;text-decoration:none;white-space:nowrap;">Check Prices &rarr;</a>
 </div>
 
 <footer class="site-footer" role="contentinfo">

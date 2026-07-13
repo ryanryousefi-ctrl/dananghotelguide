@@ -181,75 +181,6 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 @media(max-width:480px){.hotel-card-img{height:180px}}
   .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
-   ═══════════════════════════════════════════════════════════════ */
-/* High-specificity selector: * .booking-com-button defeats .parent a rules */
-* .booking-com-button,
-a.booking-com-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  width: 260px !important;
-  min-width: 260px !important;
-  max-width: 260px !important;
-  height: 56px !important;
-  padding: 0 18px !important;
-  box-sizing: border-box !important;
-  background: #003b95 !important;
-  border-radius: 8px !important;
-  border: 0 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  vertical-align: middle !important;
-  transition: background 0.15s ease, box-shadow 0.15s ease !important;
-  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
-  overflow: hidden !important;
-  flex-shrink: 0 !important;
-  color: #fff !important;
-}
-* .booking-com-button:hover,
-a.booking-com-button:hover,
-* .booking-com-button:focus,
-a.booking-com-button:focus {
-  background: #002e80 !important;
-  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
-  text-decoration: none !important;
-  color: #fff !important;
-}
-.booking-com-button__logo {
-  display: block !important;
-  width: 125px !important;
-  height: auto !important;
-  max-height: 30px !important;
-  object-fit: contain !important;
-  flex: 0 0 auto !important;
-  overflow: visible !important;
-  border-radius: 0 !important;
-}
-.booking-com-button__label {
-  display: inline-block !important;
-  color: #ffffff !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-  font-family: inherit !important;
-}
-@media (max-width: 480px) {
-  * .booking-com-button,
-  a.booking-com-button {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 260px !important;
-    height: 56px !important;
-  }
-}
-/* ═══════════════════════════════════════════════════════════════ */
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Best Han River Hotels in Da Nang 2026 — Views, Location, Honest Picks","description":"Best hotels on the Han River in Da Nang 2026. Dragon Bridge views, city walkability, rooftop bars, and why some travelers prefer the river over the beach.","url":"https://www.dananghotelguide.com/best-han-river-hotels-da-nang.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -298,7 +229,10 @@ a.booking-com-button:focus {
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="btn-text">Search Stays</span>
+    </a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -322,7 +256,7 @@ a.booking-com-button:focus {
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">&#10005;</button>
@@ -377,7 +311,7 @@ a.booking-com-button:focus {
       <p class="bb-sub">Dragon Bridge views, city energy, 10 minutes to the beach. Browse live rates on Booking.com.</p>
     </div>
     <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Han River Hotels</a>
       <a href="#hotels" class="bb-cta-ghost">See curated picks →</a>
     </div>
   </div>
@@ -422,7 +356,7 @@ a.booking-com-button:focus {
         </div>
         <div style="flex-shrink:0;display:flex;flex-direction:column;gap:.5rem">
           <a href="novotel-da-nang-han-river.html" style="display:inline-block;padding:8px 14px;background:#fff;color:#073f3d;font-size:.72rem;font-weight:800;border-radius:100px;text-decoration:none;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase">Read review</a>
-          <a href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=best-han-river-hotels-da-nang--novotel-danang-premier-han-riv" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+          <a href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=best-han-river-hotels-da-nang--novotel-danang-premier-han-riv" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;padding:8px 14px;background:rgba(255,255,255,.12);color:#fff;font-size:.72rem;font-weight:700;border-radius:100px;text-decoration:none;white-space:nowrap;text-align:center;letter-spacing:.03em">Check rates</a>
         </div>
       </div>
       <div class="verdict-option" style="display:flex;align-items:flex-start;gap:1.25rem;padding:1.25rem;border-radius:var(--p10-r);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);margin-bottom:.75rem">
@@ -433,7 +367,7 @@ a.booking-com-button:focus {
         </div>
         <div style="flex-shrink:0;display:flex;flex-direction:column;gap:.5rem">
           <a href="grand-mercure-da-nang.html" style="display:inline-block;padding:8px 14px;background:#fff;color:#073f3d;font-size:.72rem;font-weight:800;border-radius:100px;text-decoration:none;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase">Read review</a>
-          <a href="https://www.booking.com/hotel/vn/grand-mercure-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--grand-mercure-danang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+          <a href="https://www.booking.com/hotel/vn/grand-mercure-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--grand-mercure-danang" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;padding:8px 14px;background:rgba(255,255,255,.12);color:#fff;font-size:.72rem;font-weight:700;border-radius:100px;text-decoration:none;white-space:nowrap;text-align:center;letter-spacing:.03em">Check rates</a>
         </div>
       </div>
       <div class="verdict-option" style="display:flex;align-items:flex-start;gap:1.25rem;padding:1.25rem;border-radius:var(--p10-r);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);margin-bottom:.75rem">
@@ -444,7 +378,7 @@ a.booking-com-button:focus {
         </div>
         <div style="flex-shrink:0;display:flex;flex-direction:column;gap:.5rem">
           <a href="brilliant-hotel-da-nang.html" style="display:inline-block;padding:8px 14px;background:#fff;color:#073f3d;font-size:.72rem;font-weight:800;border-radius:100px;text-decoration:none;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase">Read review</a>
-          <a href="https://www.booking.com/hotel/vn/brilliant-da-nang.html?aid=1784897&sid=best-han-river-hotels-da-nang--brilliant-da-nang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+          <a href="https://www.booking.com/hotel/vn/brilliant-da-nang.html?aid=1784897&sid=best-han-river-hotels-da-nang--brilliant-da-nang" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;padding:8px 14px;background:rgba(255,255,255,.12);color:#fff;font-size:.72rem;font-weight:700;border-radius:100px;text-decoration:none;white-space:nowrap;text-align:center;letter-spacing:.03em">Check rates</a>
         </div>
       </div>
   </div>
@@ -462,7 +396,7 @@ a.booking-com-button:focus {
       </div>
       <p>The Novotel is the strongest all-round Han River hotel in Da Nang. It sits directly on Bach Dang - the main riverside street - with the Dragon Bridge a short walk away. The rooftop bar has genuine views of the river and is a good place to watch the Saturday and Sunday night fire and water show from Dragon Bridge. Service is at the level you expect from Accor's upper-midscale brand.</p>
       <p>Rooms are well-proportioned and the river-facing rooms are worth the upgrade. The pool is not the draw here - this is a city hotel, not a resort. But for a central Da Nang base with brand-standard reliability, rooftop access, and a genuinely useful location, the Novotel is the default recommendation for most travelers choosing the Han River over the beach.</p>
-      <a href="https://www.booking.com/hotel/vn/novotel-da-nang-premier-han-river.html?aid=1784897&sid=best-han-river-hotels-da-nang--novotel-da-nang-premier-han-ri" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/novotel-da-nang-premier-han-river.html?aid=1784897&sid=best-han-river-hotels-da-nang--novotel-da-nang-premier-han-ri" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -480,7 +414,7 @@ a.booking-com-button:focus {
       </div>
       <p>Brilliant Hotel is the best value pick on the Han River. River-view rooms offer genuinely good views of the waterway at rates that are a fraction of what comparable beach hotels charge. It is an independent property rather than a brand hotel, which means less standardized service but also often more character and more attentive staff who are not following a corporate playbook.</p>
       <p>For solo travelers, digital nomads, and budget-aware couples who want a central location and a river view without paying for it in full, Brilliant is the honest pick. The rooms are clean and functional. The location puts you on the river within walking distance of most central Da Nang attractions. Do not expect luxury - expect honest value at an accessible price.</p>
-      <a href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=best-han-river-hotels-da-nang--brilliant" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/brilliant.html?aid=1784897&sid=best-han-river-hotels-da-nang--brilliant" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -496,7 +430,7 @@ a.booking-com-button:focus {
       </div>
       <p>The Hilton Da Nang is the strongest option for business travelers and anyone who wants the reliability of an international brand with proper facilities. It has the best meeting and conference setup among Han River hotels, and the rooms are spacious with river views from upper floors. The pool deck is better than the Novotel's for daytime use.</p>
       <p>For leisure travelers, the Hilton is a solid choice but competes against the Novotel for the same traveler type at a slightly higher price. The brand assurance is the main argument - you know exactly what you are getting with a Hilton. For business travel or travelers who prioritize brand loyalty points, it is the right call on the Han River.</p>
-      <a href="https://www.booking.com/hotel/vn/hilton-da-nang.html?aid=1784897&sid=best-han-river-hotels-da-nang--hilton-da-nang" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/hilton-da-nang.html?aid=1784897&sid=best-han-river-hotels-da-nang--hilton-da-nang" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -512,7 +446,7 @@ a.booking-com-button:focus {
       </div>
       <p>Four Points is Marriott's reliable mid-range brand, and the Da Nang property delivers what the brand promises - clean rooms, consistent service, and a well-located base without boutique hotel character or luxury resort pretensions. It is the dependable choice for travelers who want a known quantity at a sensible price.</p>
       <p>Location is the main argument for Four Points - it sits close enough to the Han River area to access the walkability benefits without paying river-view premium rates. Good for Marriott Bonvoy members who want points accumulation while keeping costs reasonable.</p>
-      <a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--four-points-by-sheraton-danang" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--four-points-by-sheraton-danang" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
 
     <div class="hotel-card">
@@ -528,7 +462,7 @@ a.booking-com-button:focus {
       </div>
       <p>Grand Mercure is a larger Accor property positioned slightly away from the riverfront itself but still within the city center area. The facilities are comprehensive - full pool, multiple dining options, good gym. For families or groups who want city access with more hotel infrastructure than a compact riverfront property, Grand Mercure offers a workable compromise.</p>
       <p>It is not the right choice for travelers who specifically want river views or the tightest possible location on Bach Dang. But for those who want a larger Accor property with more amenities and are happy being a few minutes further from the river on foot, Grand Mercure is a reasonable pick.</p>
-      <a href="https://www.booking.com/hotel/vn/grand-mercure-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--grand-mercure-danang" class="booking-com-button" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/grand-mercure-danang.html?aid=1784897&sid=best-han-river-hotels-da-nang--grand-mercure-danang" class="btn-book" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
     </div>
   </div>
 
@@ -610,7 +544,7 @@ a.booking-com-button:focus {
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Compare Han River hotel rates in Da Nang</p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Live availability, guest reviews, and free cancellation on most properties.</p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Check Prices &rarr;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
 </section>
@@ -714,7 +648,7 @@ a.booking-com-button:focus {
 
 <div id="mobileStickyBar" role="complementary" aria-label="Search Han River hotels">
   <p>Best Han River hotels in Da Nang - compare live rates</p>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored">Check Prices &rarr;</a>
 </div>
 
 <script>

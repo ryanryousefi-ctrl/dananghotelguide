@@ -329,75 +329,6 @@ a{text-decoration:none;color:inherit}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
 .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
-
-
-/* ═══════════════════════════════════════════════════════════════
-   BOOKING.COM UNIFIED BUTTON — do not edit individual instances
-   ═══════════════════════════════════════════════════════════════ */
-/* High-specificity selector: * .booking-com-button defeats .parent a rules */
-* .booking-com-button,
-a.booking-com-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  width: 260px !important;
-  min-width: 260px !important;
-  max-width: 260px !important;
-  height: 56px !important;
-  padding: 0 18px !important;
-  box-sizing: border-box !important;
-  background: #003b95 !important;
-  border-radius: 8px !important;
-  border: 0 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-  cursor: pointer !important;
-  vertical-align: middle !important;
-  transition: background 0.15s ease, box-shadow 0.15s ease !important;
-  box-shadow: 0 2px 8px rgba(0,59,149,.30) !important;
-  overflow: hidden !important;
-  flex-shrink: 0 !important;
-  color: #fff !important;
-}
-* .booking-com-button:hover,
-a.booking-com-button:hover,
-* .booking-com-button:focus,
-a.booking-com-button:focus {
-  background: #002e80 !important;
-  box-shadow: 0 4px 14px rgba(0,59,149,.45) !important;
-  text-decoration: none !important;
-  color: #fff !important;
-}
-.booking-com-button__logo {
-  display: block !important;
-  width: 125px !important;
-  height: auto !important;
-  max-height: 30px !important;
-  object-fit: contain !important;
-  flex: 0 0 auto !important;
-  overflow: visible !important;
-  border-radius: 0 !important;
-}
-.booking-com-button__label {
-  display: inline-block !important;
-  color: #ffffff !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-  font-family: inherit !important;
-}
-@media (max-width: 480px) {
-  * .booking-com-button,
-  a.booking-com-button {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 260px !important;
-    height: 56px !important;
-  }
-}
-/* ═══════════════════════════════════════════════════════════════ */
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -436,7 +367,10 @@ a.booking-com-button:focus {
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="btn-text">Search Stays</span>
+    </a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -464,7 +398,7 @@ a.booking-com-button:focus {
   <a href="hotel-reviews.html" class="mobile-nav-link">Hotel Reviews</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
 </div>
 
 <!-- ── BREADCRUMB ──────────────────────────────────────── -->
@@ -501,7 +435,7 @@ a.booking-com-button:focus {
     <p style="font-weight:700;color:var(--ocean);font-size:.93rem;margin:0 0 .2rem;">Check prices for your dates in Da Nang</p>
     <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Live rates &middot; Free cancellation on most hotels &middot; Instant confirmation</p>
   </div>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels &#8594;</a>
 </div>
 
 
@@ -626,7 +560,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A well-located mid-range option directly on My Khe Beach with modern rooms, a rooftop pool, and sea-view rooms available. Popular with international travelers for its central position and consistent quality. Walking distance to the An Thuong restaurant strip. Rooms typically run USD 45–90/night depending on season. One of the best value-for-money options on the main beach road.
       </div>
-      <a href="https://www.booking.com/hotel/vn/tms-da-nang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--tms-da-nang-beach" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/tms-da-nang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--tms-da-nang-beach" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -641,7 +575,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A compact, clean hotel a short walk from My Khe Beach with good air-conditioning, free breakfast at some rate levels, and helpful staff. Sala Da Nang is one of the go-to options for budget-conscious international travelers wanting a reliable, no-surprise base near the beach. Rates typically run USD 25–55/night. Good location for exploring the An Thuong café and restaurant neighborhood on foot.
       </div>
-      <a href="https://www.booking.com/hotel/vn/sala-danang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--sala-danang-beach" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/sala-danang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--sala-danang-beach" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -656,7 +590,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A well-reviewed budget hotel within the My Khe Beach corridor, offering clean rooms with air-conditioning and basic amenities at some of the lowest prices in the area. Popular with solo travelers and couples looking to keep accommodation costs down while remaining close to the beach. Rates typically run USD 20–40/night. Straightforward and reliable, exactly what budget travelers need.
       </div>
-      <a href="https://www.booking.com/hotel/vn/sea-queen-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--sea-queen-da-nang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/sea-queen-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--sea-queen-da-nang" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -671,7 +605,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A modern mid-range property with a rooftop pool and bar, sea-view rooms, and a solid restaurant on site. Adamo is a step up from basic budget hotels and frequently appears in top-rated lists for value on Booking.com. Located in the heart of the My Khe Beach strip, within walking distance of restaurants and shops. Rates run USD 40–80/night. A reliable choice for travelers wanting more comfort without resort prices.
       </div>
-      <a href="https://www.booking.com/hotel/vn/adamo-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--adamo-da-nang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/adamo-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--adamo-da-nang" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -686,7 +620,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A contemporary hotel with a fresh design aesthetic, pool, and beachfront-adjacent location on My Khe. Raon offers a notch above the basic budget options with better room quality and a more polished common areas, at rates that remain affordable. Rates typically run USD 35–75/night. Particularly popular with couples and travelers who want a comfortable, stylish base without paying luxury prices.
       </div>
-      <a href="https://www.booking.com/hotel/vn/raon-danang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--raon-danang-beach" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/raon-danang-beach.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--raon-danang-beach" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -701,7 +635,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         HAIAN is a well-established mid-range hotel with direct beach access, a pool, spa facilities, and multiple dining options, making it one of the best all-in-one packages at its price point on My Khe Beach. Frequently praised in guest reviews for its beach location and helpful staff. Rates run USD 50–110/night. Suits travelers who want beach-resort amenities at a mid-range price.
       </div>
-      <a href="https://www.booking.com/hotel/vn/haian-beach-hotel-spa.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--haian-beach-hotel-spa" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/haian-beach-hotel-spa.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--haian-beach-hotel-spa" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -716,7 +650,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         A compact, modern hotel a short walk from My Khe Beach with clean rooms, balconies on upper floors, and a rooftop area with city and sea views. Popular with budget-conscious international travelers for its affordable rates, friendly staff, and proximity to the beach and An Thuong dining strip. Rates typically run USD 22–50/night, among the best budget options in the area.
       </div>
-      <a href="https://www.booking.com/hotel/vn/balcona-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--balcona-da-nang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/balcona-da-nang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--balcona-da-nang" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <div class="hotel-card">
@@ -731,7 +665,7 @@ a.booking-com-button:focus {
       <div class="hotel-card-body">
         Le Sands sits directly on My Khe Beach with an oceanfront pool, beachside lounge chairs, and sea-view rooms at accessible mid-range prices. One of the best-value direct-beachfront hotels in the city, offering a resort-style experience without resort pricing. Rooms run USD 55–120/night. A strong choice for travelers who prioritise beach access above all else and want to walk straight from their room onto the sand.
       </div>
-      <a href="https://www.booking.com/hotel/vn/le-sands-oceanfront-danang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--le-sands-oceanfront-danang" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/hotel/vn/le-sands-oceanfront-danang.html?aid=1784897&sid=da-nang-guide-for-russian-travelers--le-sands-oceanfront-danang" class="hotel-card-book affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check availability →</a>
     </div>
 
     <!-- SECTION 5 -->
@@ -921,7 +855,7 @@ a.booking-com-button:focus {
     <div class="sidebar-card">
       <div class="sidebar-card-title">Book Your Hotel</div>
       <p class="sidebar-highlight" style="margin-bottom:.9rem">Compare Da Nang beach hotels from budget to luxury on Booking.com, filter by price, beach distance, and guest rating.</p>
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="booking-com-button affiliate-link" target="_blank" rel="nofollow noopener sponsored"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="sidebar-book-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Da Nang Hotels →</a>
     </div>
 
     <div class="sidebar-card">
@@ -960,7 +894,7 @@ a.booking-com-button:focus {
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
     <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
 </section>
@@ -1002,7 +936,7 @@ a.booking-com-button:focus {
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="booking-com-button affiliate-link"><img src="/assets/images/booking-com-logo-white.svg" class="booking-com-button__logo" alt="Booking.com" loading="lazy" width="125" height="30"><span class="booking-com-button__label">Check prices</span></a>
+        <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Book via Booking.com ↗</a>
       </div>
     </div>
     <div class="footer-bottom">
