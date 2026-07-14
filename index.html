@@ -771,6 +771,223 @@ font-weight:600;}
   h1.hero-h1{font-size:8vw}
   .hero-stats{gap:1rem;flex-wrap:wrap}
 }
+
+/* ══════════════════════════════════════════════════════════
+   EDITORIAL REDESIGN — magazine-style overrides
+   Namespaced .home-ed- where new, otherwise targeted
+   overrides of existing classes. Homepage only.
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Hero: taller, more cinematic ───────────────────────── */
+.hero{
+  height:94vh;
+  min-height:640px;
+  max-height:1040px;
+}
+h1.hero-h1{
+  font-size:clamp(3.2rem,7.5vw,5.8rem);
+  letter-spacing:-.05em;
+  max-width:800px;
+}
+.hero-sub{
+  font-size:1.08rem;
+  max-width:560px;
+  color:rgba(255,255,255,.88);
+  font-weight:500;
+}
+.hero-actions{margin-bottom:3.5rem;}
+.hero-widget-wrap{transform:translateY(-100px);}
+
+/* ── Section spacing: generous white space ───────────────── */
+.section{padding:clamp(5rem,10vw,9rem) var(--gutter);}
+.section-heading{
+  font-size:clamp(2.4rem,4.5vw,3.8rem);
+  letter-spacing:-.04em;
+}
+.section-label{
+  font-size:.62rem;
+  letter-spacing:.25em;
+  margin-bottom:.9rem;
+}
+
+/* ── Trip router: taller featured cards, bolder grid ─────── */
+.trip-router-section{
+  padding:clamp(5rem,9vw,8rem) var(--gutter);
+}
+.tr-header{
+  margin-bottom:clamp(2.5rem,5vw,4rem);
+  max-width:700px;
+}
+.tr-feat-card{
+  min-height:520px;
+  border-radius:0;
+}
+.tr-feat-title{
+  font-size:clamp(1.6rem,2.8vw,2.4rem);
+  letter-spacing:-.03em;
+}
+.tr-card{border-radius:0;}
+.tr-card-img{
+  height:240px;
+}
+.tr-grid{
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  margin-top:1.5rem;
+}
+
+/* ── Quick browse: slightly thicker ─────────────────────── */
+.qb-inner{padding:0 var(--gutter);}
+.qb-item{height:58px;font-size:.74rem;}
+
+/* ── Editorial stat bar ──────────────────────────────────── */
+.p5-stat-bar{
+  padding:clamp(2.5rem,4vw,3.5rem) var(--gutter);
+  gap:clamp(2rem,6vw,5rem);
+}
+.p5-stat-num{font-size:clamp(2rem,4vw,3rem);}
+
+/* ── DST cinematic sections: more room ───────────────────── */
+.dst-section{padding:clamp(5rem,10vw,9rem) var(--gutter);}
+.dst-headline{
+  font-size:clamp(2rem,3.5vw,3rem);
+  letter-spacing:-.035em;
+}
+.dst-grid{gap:clamp(3rem,6vw,6rem);}
+.dic-main img{
+  aspect-ratio:4/3;
+  width:100%;
+  object-fit:cover;
+}
+.cin-break{min-height:600px;}
+.cin-break-headline{
+  font-size:clamp(2.4rem,5vw,4.2rem);
+  letter-spacing:-.045em;
+  max-width:700px;
+}
+
+/* ── Editors picks: more vertical breathing ──────────────── */
+.editors-picks-section{
+  padding:clamp(5rem,9vw,8rem) var(--gutter);
+}
+.ep-heading{
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  letter-spacing:-.04em;
+}
+.ep-card--featured .ep-card-img-wrap{
+  aspect-ratio:4/3;
+}
+.ep-card-desc{font-size:.97rem;line-height:1.75;}
+
+/* ── Trust section: more generous ───────────────────────── */
+.trust-section{
+  padding:clamp(5rem,9vw,8rem) var(--gutter) !important;
+}
+.trust-headline{
+  font-size:clamp(2rem,3.5vw,3rem);
+  letter-spacing:-.04em;
+}
+
+/* ── Pathways: taller cards ─────────────────────────────── */
+.pathways-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.pw-card{min-height:520px;}
+.pw-card-title{font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-.03em;}
+
+/* ── Where I'd Stay: more space ─────────────────────────── */
+.wid-stay-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.wid-hotel-card{
+  border-radius:0;
+  border-left:none;border-right:none;border-top:none;
+  border-bottom:1px solid rgba(0,0,0,.09);
+  padding:1.1rem 0;
+  margin-bottom:0;
+}
+.wid-hotel-card:first-of-type{border-top:1px solid rgba(0,0,0,.09);}
+.wid-hcard-img{display:none;}
+
+/* ── Booking band: bolder ────────────────────────────────── */
+.booking-band{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+.bb-headline{font-size:clamp(1.8rem,3.5vw,2.8rem);letter-spacing:-.035em;margin:.5rem 0;}
+
+/* ── Map section: cleaner ────────────────────────────────── */
+.map-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* ── Links section: more breathing room ─────────────────── */
+.links-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* ── P5 atmospheric section ──────────────────────────────── */
+.p5-atm-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.p5-atm-heading{
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  letter-spacing:-.04em;
+  line-height:1.1;
+}
+.p5-atm-img-main img{border-radius:0;}
+.p5-atm-img-small img{border-radius:0;}
+
+/* ── Intro section prose: larger, more editorial ─────────── */
+.intro-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.intro-prose p{font-size:1.05rem;line-height:1.85;}
+.intro-grid{gap:clamp(3rem,6vw,5rem);}
+
+/* ── Booking section ─────────────────────────────────────── */
+.booking-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* ── Discovery rail ──────────────────────────────────────── */
+.p5-discovery{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+
+/* ── Final CTA: taller ───────────────────────────────────── */
+.p5-final-cta{min-height:600px;}
+.p5-final-heading{
+  font-size:clamp(2.4rem,5vw,4rem);
+  letter-spacing:-.045em;
+}
+
+/* ── Mood quote: bigger ──────────────────────────────────── */
+.mood-quote{padding:clamp(4rem,8vw,7rem) var(--gutter);}
+.mood-quote-text{
+  font-size:clamp(1.4rem,2.8vw,2.2rem);
+  letter-spacing:-.03em;
+  line-height:1.45;
+}
+
+/* ── Hotel strips: cleaner cards ────────────────────────── */
+.p5-hotel-strip{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.p5-strip-title{font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.035em;}
+.p5-hc{border-radius:0;}
+.p5-hc-img img{border-radius:0;}
+
+/* ── Comparison cards ────────────────────────────────────── */
+.p5-cmp-section{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+.p5-cmp-card{border-radius:0;}
+.p5-cmp-img img{border-radius:0;}
+
+/* ── Korean hub banner ───────────────────────────────────── */
+.kr-hub-banner{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.kr-hub-heading{font-size:clamp(1.6rem,2.8vw,2.2rem);}
+
+/* ── prefers-reduced-motion ──────────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  .fade-up{animation:none}
+  .hero-slide{transition:opacity .3s}
+  *{transition-duration:.01ms !important}
+}
+
+/* ── Responsive overrides ────────────────────────────────── */
+@media(max-width:900px){
+  .tr-featured{grid-template-columns:1fr;}
+  .tr-feat-card{min-height:380px;}
+  .hero{height:88vh;}
+  .hero-widget-wrap{transform:none;margin:0;width:100%;}
+  .hero-booking-widget{width:100%;}
+  .hero-content--split{flex-direction:column;gap:1.5rem;}
+  .pw-card{min-height:380px;}
+}
+@media(max-width:600px){
+  .tr-grid{grid-template-columns:1fr 1fr;gap:1rem;}
+  .p5-final-cta{min-height:480px;}
+  .cin-break{min-height:420px;}
+}
 </style>
   
   
@@ -792,6 +1009,122 @@ font-weight:600;}
 <link rel="stylesheet" href="phase10_5.css">
 <link rel="stylesheet" href="phase13.css">
 <script src="search-engine.js"></script>
+<style>
+/* ── Editorial override block — loads after external CSS ── */
+
+/* Hero: taller, more cinematic */
+.hero{height:94vh;min-height:640px;max-height:1040px;}
+h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:800px;}
+.hero-sub{font-size:1.08rem;max-width:560px;color:rgba(255,255,255,.88);font-weight:500;}
+.hero-actions{margin-bottom:3.5rem;}
+.hero-widget-wrap{transform:translateY(-100px);}
+
+/* Section heading: bigger, more editorial */
+.section-heading{font-size:clamp(2.4rem,4.5vw,3.8rem);letter-spacing:-.04em;}
+.section{padding:clamp(5rem,10vw,9rem) var(--gutter);}
+
+/* Trip router */
+.trip-router-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.tr-feat-card{min-height:520px;border-radius:0;}
+.tr-feat-title{font-size:clamp(1.6rem,2.8vw,2.4rem);letter-spacing:-.03em;}
+.tr-card{border-radius:0;}
+.tr-card-img{height:240px;}
+.tr-grid{gap:1.5rem;margin-top:1.5rem;}
+.tr-header{margin-bottom:clamp(2.5rem,5vw,4rem);}
+
+/* Editors picks */
+.editors-picks-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.ep-heading{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.04em;}
+.ep-card-desc{font-size:.97rem;line-height:1.75;}
+
+/* Destination storytelling */
+.dst-section{padding:clamp(5rem,10vw,9rem) var(--gutter);}
+.dst-headline{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-.035em;}
+.dst-grid{gap:clamp(3rem,6vw,6rem);}
+.cin-break{min-height:600px;}
+.cin-break-headline{font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.045em;max-width:700px;}
+
+/* Trust section */
+.trust-section{padding:clamp(5rem,9vw,8rem) var(--gutter)!important;}
+.trust-headline{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-.04em;}
+
+/* Pathways */
+.pathways-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.pw-card{min-height:520px;border-radius:var(--r-lg);}
+.pw-card-title{font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-.03em;}
+
+/* Where I'd Stay */
+.wid-stay-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* Booking band */
+.booking-band{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+.bb-headline{font-size:clamp(1.8rem,3.5vw,2.8rem);letter-spacing:-.035em;margin:.5rem 0;}
+
+/* Map section */
+.map-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* Links section */
+.links-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* Intro prose */
+.intro-section.section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.intro-prose p{font-size:1.05rem;line-height:1.85;}
+.intro-grid{gap:clamp(3rem,6vw,5rem);}
+
+/* Atmospheric split */
+.p5-atm-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.p5-atm-heading{font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.04em;line-height:1.1;}
+.p5-atm-img-main img,.p5-atm-img-small img{border-radius:0;}
+
+/* Booking section */
+.booking-section{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+
+/* P5 hotel strip */
+.p5-hotel-strip{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.p5-strip-title{font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.035em;}
+.p5-hc{border-radius:0;}
+.p5-hc-img img{border-radius:0;}
+
+/* Comparison cards */
+.p5-cmp-section{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+.p5-cmp-card{border-radius:0;}
+.p5-cmp-img img{border-radius:0;}
+
+/* Mood quote */
+.mood-quote{padding:clamp(4rem,8vw,7rem) var(--gutter);}
+.mood-quote-text{font-size:clamp(1.4rem,2.8vw,2.2rem);letter-spacing:-.03em;line-height:1.45;}
+
+/* Final CTA */
+.p5-final-cta{min-height:600px;}
+.p5-final-heading{font-size:clamp(2.4rem,5vw,4rem);letter-spacing:-.045em;}
+
+/* Korean hub */
+.kr-hub-banner{padding:clamp(5rem,9vw,8rem) var(--gutter);}
+.kr-hub-heading{font-size:clamp(1.6rem,2.8vw,2.2rem);}
+
+/* Discovery rail */
+.p5-discovery{padding:clamp(4rem,7vw,6rem) var(--gutter);}
+
+/* prefers-reduced-motion */
+@media(prefers-reduced-motion:reduce){
+  .fade-up{animation:none;}
+  .hero-slide{transition:opacity .3s;}
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .tr-feat-card{min-height:380px;}
+  .hero{height:88vh;}
+  .hero-widget-wrap{transform:none;margin:0;width:100%;}
+  .hero-booking-widget{width:100%;}
+  .hero-content--split{flex-direction:column;gap:1.5rem;}
+  .pw-card{min-height:380px;}
+}
+@media(max-width:600px){
+  .p5-final-cta{min-height:480px;}
+  .cin-break{min-height:420px;}
+}
+</style>
 </head>
 <body>
 
