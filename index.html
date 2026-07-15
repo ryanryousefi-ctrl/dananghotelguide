@@ -1352,35 +1352,69 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
     <a href="hoi-an.html" class="qb-item">Hoi An</a>
   </div>
 </nav>
-<section class="da-glance-section" aria-label="Da Nang at a glance">
-  <div class="da-glance-inner">
-    <p class="da-glance-title">Da Nang at a glance</p>
-    <div class="da-glance-grid">
-      <div class="da-glance-item"><span class="da-glance-key">Best beach season</span><span class="da-glance-val">Mar – Aug</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">Luxury from</span><span class="da-glance-val">$160 / night</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">Mid-range from</span><span class="da-glance-val">$55 / night</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">Budget from</span><span class="da-glance-val">$20 / night</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">Airport to beach</span><span class="da-glance-val">10 min / 4 km</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">Hoi An day trip</span><span class="da-glance-val">30 min south</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">MICHELIN listings</span><span class="da-glance-val">43 restaurants</span></div>
-      <div class="da-glance-item"><span class="da-glance-key">My Khe Beach</span><span class="da-glance-val">30 km of sand</span></div>
+<section class="map-section" aria-labelledby="map-heading">
+  <div class="map-section-inner">
+    <p class="section-label">Orientation</p>
+    <h2 class="section-heading" id="map-heading">Da Nang <em>at a Glance</em></h2>
+    <p style="font-size:.97rem;color:var(--ink-muted);max-width:560px;line-height:1.7;margin-top:.4rem">Key landmarks, beaches, and hotel zones, orient yourself before you book.</p>
+
+    <div class="map-layout">
+      <div class="map-embed" aria-label="Interactive map of Da Nang, Vietnam">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62624.06578453685!2d108.22022!3d16.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map of Da Nang, Vietnam showing key areas and landmarks"
+          aria-label="Map of Da Nang, Vietnam"></iframe>
+      </div>
+
+      <nav class="map-pins" aria-label="Da Nang landmarks and areas">
+        <a href="where-to-stay-in-da-nang.html#my-khe" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">🏖</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">My Khe Beach</div>
+            <div class="map-pin-desc">30km of sand, Da Nang's main hotel and dining strip</div>
+          </div>
+        </a>
+        <a href="where-to-stay-in-da-nang.html#son-tra" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">🌿</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">Son Tra Peninsula</div>
+            <div class="map-pin-desc">Jungle headland with Lady Buddha and luxury resorts</div>
+          </div>
+        </a>
+        <a href="where-to-stay-in-da-nang.html#han-river" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">🐉</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">Dragon Bridge</div>
+            <div class="map-pin-desc">Iconic landmark, city center along the Han River</div>
+          </div>
+        </a>
+        <a href="where-to-stay-in-da-nang.html#non-nuoc" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">⛰️</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">Marble Mountains</div>
+            <div class="map-pin-desc">Limestone peaks near Non Nuoc Beach, south of the city</div>
+          </div>
+        </a>
+        <a href="guides.html#hoi-an" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">🏮</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">Hoi An (Day Trip)</div>
+            <div class="map-pin-desc">UNESCO Ancient Town, 30 minutes south by road</div>
+          </div>
+        </a>
+        <a href="where-to-stay-in-da-nang.html#non-nuoc" class="map-pin-card">
+          <div class="map-pin-icon" aria-hidden="true">🏄</div>
+          <div class="map-pin-body">
+            <div class="map-pin-name">Non Nuoc Beach</div>
+            <div class="map-pin-desc">Quieter southern beach, family resorts and surf</div>
+          </div>
+        </a>
+      </nav>
     </div>
-    <a href="where-to-stay-in-da-nang.html" class="da-glance-cta">Where to stay guide →</a>
   </div>
 </section>
-<style>
-.da-glance-section{background:var(--off-white,#F6F1E9);border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);padding:3rem var(--gutter,1.5rem)}
-.da-glance-inner{max-width:var(--max,1200px);margin:0 auto}
-.da-glance-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--ink-muted,#888);margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:1px solid rgba(0,0,0,.1)}
-.da-glance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.da-glance-item{display:flex;justify-content:space-between;align-items:baseline;padding:.65rem 1rem .65rem 0;border-bottom:1px solid rgba(0,0,0,.06);gap:1rem}
-.da-glance-key{font-size:.8rem;color:var(--ink-soft,#444)}
-.da-glance-val{font-size:.8rem;font-weight:700;color:var(--ink,#1a1a1a);text-align:right;white-space:nowrap}
-.da-glance-cta{display:inline-block;margin-top:1.25rem;font-size:.72rem;font-weight:700;color:var(--ocean,#1B5C5C);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid rgba(27,92,92,.3);padding-bottom:2px}
-.da-glance-cta:hover{border-color:var(--ocean)}
-@media(max-width:768px){.da-glance-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.da-glance-grid{grid-template-columns:1fr}}
-</style>
 
 
 <!-- Phase 10.5: Stat bar -->
@@ -1682,70 +1716,6 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      MAP SECTION
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="map-section" aria-labelledby="map-heading">
-  <div class="map-section-inner">
-    <p class="section-label">Orientation</p>
-    <h2 class="section-heading" id="map-heading">Da Nang <em>at a Glance</em></h2>
-    <p style="font-size:.97rem;color:var(--ink-muted);max-width:560px;line-height:1.7;margin-top:.4rem">Key landmarks, beaches, and hotel zones, orient yourself before you book.</p>
-
-    <div class="map-layout">
-      <div class="map-embed" aria-label="Interactive map of Da Nang, Vietnam">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d62624.06578453685!2d108.22022!3d16.0544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Map of Da Nang, Vietnam showing key areas and landmarks"
-          aria-label="Map of Da Nang, Vietnam"></iframe>
-      </div>
-
-      <nav class="map-pins" aria-label="Da Nang landmarks and areas">
-        <a href="where-to-stay-in-da-nang.html#my-khe" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">🏖</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">My Khe Beach</div>
-            <div class="map-pin-desc">30km of sand, Da Nang's main hotel and dining strip</div>
-          </div>
-        </a>
-        <a href="where-to-stay-in-da-nang.html#son-tra" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">🌿</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">Son Tra Peninsula</div>
-            <div class="map-pin-desc">Jungle headland with Lady Buddha and luxury resorts</div>
-          </div>
-        </a>
-        <a href="where-to-stay-in-da-nang.html#han-river" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">🐉</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">Dragon Bridge</div>
-            <div class="map-pin-desc">Iconic landmark, city center along the Han River</div>
-          </div>
-        </a>
-        <a href="where-to-stay-in-da-nang.html#non-nuoc" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">⛰️</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">Marble Mountains</div>
-            <div class="map-pin-desc">Limestone peaks near Non Nuoc Beach, south of the city</div>
-          </div>
-        </a>
-        <a href="guides.html#hoi-an" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">🏮</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">Hoi An (Day Trip)</div>
-            <div class="map-pin-desc">UNESCO Ancient Town, 30 minutes south by road</div>
-          </div>
-        </a>
-        <a href="where-to-stay-in-da-nang.html#non-nuoc" class="map-pin-card">
-          <div class="map-pin-icon" aria-hidden="true">🏄</div>
-          <div class="map-pin-body">
-            <div class="map-pin-name">Non Nuoc Beach</div>
-            <div class="map-pin-desc">Quieter southern beach, family resorts and surf</div>
-          </div>
-        </a>
-      </nav>
-    </div>
-  </div>
-</section>
-
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      INTRO, SEO content
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
