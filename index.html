@@ -405,6 +405,100 @@ font-weight:600;}
 .stat-label{font-size:.65rem;color:rgba(255,255,255,.35);font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
 .hero-tag{display:none}
 
+/* ─── TOP PICKS PANEL ──────────────────────────────────── */
+.top-picks{
+  position:absolute;
+  top:84px;
+  left:var(--gutter);
+  z-index:10;
+  animation:topPicksFadeIn .6s var(--ease) .3s both;
+}
+@keyframes topPicksFadeIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.top-picks-inner{
+  background:rgba(0,0,0,.42);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:14px;
+  padding:14px 20px 16px;
+  display:inline-block;
+}
+.top-picks-label{
+  display:block;
+  font-size:10px;font-weight:800;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  margin-bottom:10px;
+  padding-bottom:9px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.top-picks-logos{
+  display:flex;align-items:center;gap:22px;
+  flex-wrap:nowrap;
+}
+.top-picks-logo{
+  display:inline-flex;align-items:center;
+  opacity:.68;
+  transition:opacity .25s ease, transform .25s ease;
+  position:relative;
+}
+.top-picks-logo:hover{opacity:1;transform:scale(1.05);}
+.top-picks-logo::after{
+  content:attr(data-tip);
+  position:absolute;
+  bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  font-size:10px;font-weight:700;letter-spacing:.06em;
+  color:#fff;
+  background:rgba(0,0,0,.75);
+  padding:5px 10px;
+  border-radius:4px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .2s ease;
+}
+.top-picks-logo:hover::after{opacity:1;}
+.top-picks-logo img{
+  height:28px;
+  width:auto;
+  display:block;
+  filter:brightness(0) invert(1);
+}
+.top-picks-logo--intercontinental img{
+  filter:none;
+  height:32px;
+  mix-blend-mode:screen;
+  opacity:.85;
+}
+.top-picks-logo--intercontinental:hover img{opacity:1;}
+@media(max-width:680px){
+  .top-picks{
+    top:auto;
+    left:0;right:0;
+    width:100%;
+  }
+  .top-picks-inner{
+    border-radius:0;
+    border-left:none;border-right:none;
+    border-right:none;
+    padding:12px var(--gutter);
+    width:100%;
+    box-sizing:border-box;
+  }
+  .top-picks-logos{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    gap:20px;
+    padding-bottom:2px;
+  }
+  .top-picks-logos::-webkit-scrollbar{display:none;}
+  .top-picks-logo img{height:22px;}
+  .top-picks-logo--intercontinental img{height:26px;}
+  .top-picks-logo::after{display:none;}
+}
+
 /* ─── BOOKING WIDGET NBW (hero) ───────────────────────────── */
 .nbw-header{
   background:var(--coral);
@@ -1292,6 +1386,70 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
      HERO, Auto-advancing guide slides
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 <header class="hero" role="banner">
+  <!-- ─── TOP PICKS PANEL ──────────────────────────────────── -->
+  <div class="top-picks" role="complementary" aria-label="Our top hotel picks">
+    <div class="top-picks-inner">
+      <span class="top-picks-label">Our Top Picks</span>
+      <div class="top-picks-logos">
+
+        <a href="intercontinental-da-nang.html"
+           class="top-picks-logo top-picks-logo--intercontinental"
+           data-tip="View Hotel Guide →"
+           aria-label="InterContinental Danang Sun Peninsula Resort — View Hotel Guide">
+          <img src="data:image/png;base64,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"
+               alt="InterContinental Danang Sun Peninsula Resort logo"
+               width="auto" height="32" loading="lazy">
+        </a>
+
+        <a href="hyatt-regency-da-nang.html"
+           class="top-picks-logo top-picks-logo--hyatt"
+           data-tip="View Hotel Guide →"
+           aria-label="Hyatt Regency Da Nang — View Hotel Guide">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMzgiIGhlaWdodD0iMjgiPjx0ZXh0IHg9IjAiIHk9IjI3IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9Ii0wLjUiIGZpbGw9IndoaXRlIj5IeWF0dDwvdGV4dD48dGV4dCB4PSIwIiB5PSIzNyIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNyIgZm9udC13ZWlnaHQ9IjQwMCIgbGV0dGVyLXNwYWNpbmc9IjIuNSIgZmlsbD0id2hpdGUiPlJFR0VOQ1kgREEgTkFORzwvdGV4dD48L3N2Zz4="
+               alt="Hyatt Regency Da Nang logo"
+               width="auto" height="28" loading="lazy">
+        </a>
+
+        <a href="pullman-da-nang.html"
+           class="top-picks-logo top-picks-logo--pullman"
+           data-tip="View Hotel Guide →"
+           aria-label="Pullman Da Nang Beach Resort — View Hotel Guide">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMzIiIGhlaWdodD0iMjgiPjx0ZXh0IHg9IjAiIHk9IjIzIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgbGV0dGVyLXNwYWNpbmc9IjEiIGZpbGw9IndoaXRlIj5QVUxMTUFOPC90ZXh0Pjx0ZXh0IHg9IjAiIHk9IjMxIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI3IiBmb250LXdlaWdodD0iNDAwIiBsZXR0ZXItc3BhY2luZz0iMi41IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNzUpIj5EQSBOQU5HPC90ZXh0Pjwvc3ZnPg=="
+               alt="Pullman Da Nang Beach Resort logo"
+               width="auto" height="28" loading="lazy">
+        </a>
+
+        <a href="furama-resort-da-nang.html"
+           class="top-picks-logo top-picks-logo--furama"
+           data-tip="View Hotel Guide →"
+           aria-label="Furama Resort Da Nang — View Hotel Guide">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDggMzIiIGhlaWdodD0iMjgiPjx0ZXh0IHg9IjAiIHk9IjIyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC13ZWlnaHQ9IjQwMCIgbGV0dGVyLXNwYWNpbmc9IjAuNSIgZmlsbD0id2hpdGUiPkZ1cmFtYTwvdGV4dD48dGV4dCB4PSIwIiB5PSIzMSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNyIgZm9udC13ZWlnaHQ9IjQwMCIgbGV0dGVyLXNwYWNpbmc9IjIuMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjc1KSI+UkVTT1JUIERBIE5BTkc8L3RleHQ+PC9zdmc+"
+               alt="Furama Resort Da Nang logo"
+               width="auto" height="28" loading="lazy">
+        </a>
+
+        <a href="tia-wellness-resort-da-nang.html"
+           class="top-picks-logo top-picks-logo--tia"
+           data-tip="View Hotel Guide →"
+           aria-label="TIA Wellness Resort Da Nang — View Hotel Guide">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMzIiIGhlaWdodD0iMjgiPjx0ZXh0IHg9IjAiIHk9IjIwIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjQwMCIgbGV0dGVyLXNwYWNpbmc9IjMiIGZpbGw9IndoaXRlIj5USUE8L3RleHQ+PHRleHQgeD0iMCIgeT0iMzAiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjciIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSIyIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNzUpIj5XRUxMTkVTUyBSRVNPUlQ8L3RleHQ+PC9zdmc+"
+               alt="TIA Wellness Resort Da Nang logo"
+               width="auto" height="28" loading="lazy">
+        </a>
+
+        <a href="four-points-sheraton-da-nang.html"
+           class="top-picks-logo top-picks-logo--fourpoints"
+           data-tip="View Hotel Guide →"
+           aria-label="Four Points by Sheraton Da Nang — View Hotel Guide">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTUgMzQiIGhlaWdodD0iMjgiPjx0ZXh0IHg9IjAiIHk9IjE4IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMS41IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMS41IiBmaWxsPSJ3aGl0ZSI+Rk9VUiBQT0lOVFM8L3RleHQ+PHRleHQgeD0iMCIgeT0iMjciIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjguNSIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuOCkiPmJ5IFNoZXJhdG9uPC90ZXh0Pjx0ZXh0IHg9IjAiIHk9IjM0IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2IiBmb250LXdlaWdodD0iNDAwIiBsZXR0ZXItc3BhY2luZz0iMi4yIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuNTUpIj5EQSBOQU5HPC90ZXh0Pjwvc3ZnPg=="
+               alt="Four Points by Sheraton Da Nang logo"
+               width="auto" height="28" loading="lazy">
+        </a>
+
+      </div>
+    </div>
+  </div>
+
   <div class="hero-slides" aria-hidden="true">
     <div class="hero-slide active"></div>
     <div class="hero-slide"></div>
