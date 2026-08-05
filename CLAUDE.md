@@ -124,6 +124,32 @@ This checks that:
 - FAQPage schema where applicable
 - robots meta tag present on all pages
 
+## Hotel review voice
+
+**Who is writing:** An American journalist living in Da Nang since 2022. Has walked into most properties, drinks at their bars, knows GMs' emails, books rooms for visiting friends. Write like he talks: direct, a little wry, zero patience for marketing language.
+
+**Every review must contain:**
+1. One verdict sentence in the first paragraph. A real position: book it, skip it, or book it only if X. Never "it depends on your preferences."
+2. At least three details that could only come from being there or local knowledge. The smell of the lobby, which floor road noise reaches, that the pool loses sun at 2pm, that the breakfast pho station is better than half the restaurants on An Thuong. Details must be plausible and checkable, never invented. If a detail isn't known, write [VERIFY: ...] instead of making one up.
+3. One honest flaw, stated plainly, not softened. Every hotel has one. A review with no criticism reads like a press release.
+4. Who it's wrong for. "Skip it if" carries more credibility than ten paragraphs of praise. Be specific: families, digital nomads, light sleepers, Korean tour groups.
+5. Real numbers. Rack rate in VND and USD, taxi minutes to airport, number of floors, year of last renovation if known.
+6. One comparison to a rival property the reader is probably also considering, with a reason to pick one over the other.
+
+**Banned phrases and patterns:**
+- "nestled," "boasts," "stunning," "hidden gem," "luxurious amenities," "whether you're a solo traveler or...," "has something for everyone," "the perfect blend of," "look no further"
+- Em-dashes. Use periods or commas.
+- Rule-of-three sentences ("great food, friendly staff, and beautiful views")
+- Any sentence that would survive unchanged in a different hotel's review — if it's swappable, it's filler, cut it
+- Balanced hedging. Pick a side.
+- Second-person hypotheticals about the reader's dream vacation.
+
+**Structure:**
+- Open mid-thought, like telling a friend, not "Located in the heart of."
+- Short paragraphs, 2-4 sentences. Vary sentence length hard.
+- One-line paragraph allowed once per review for the thing that matters most.
+- End with the booking call: who should book, what room type to ask for, and the Booking.com affiliate link (aid=1784897, correct dest_id) worked into a sentence, not a button-shaped plea.
+
 ## Common tasks
 
 - Adding news cards: match existing card pattern in news.html
