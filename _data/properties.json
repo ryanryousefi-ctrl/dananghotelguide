@@ -1,0 +1,1029 @@
+{
+  "generated": "2026-08-08",
+  "note": "property_id and photo_url require BOOKING_DEMAND_API_KEY \u2014 not populated",
+  "count": 80,
+  "properties": {
+    "a-la-carte-da-nang-beach": {
+      "booking_slug": "a-la-carte-da-nang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "a-la-carte-da-nang",
+        "beachfront-vs-city-hotels-da-nang",
+        "best-bars-in-da-nang",
+        "best-beach-hotel-under-100-da-nang",
+        "best-budget-hotels-in-da-nang",
+        "best-hotels-an-thuong-da-nang",
+        "best-hotels-in-da-nang",
+        "best-hotels-near-my-khe-beach",
+        "boutique-hotels-da-nang",
+        "da-nang-budget-guide",
+        "da-nang-first-time-visitors-area-guide",
+        "da-nang-hotels-infinity-pool",
+        "da-nang-vs-hoi-an",
+        "da-nang-with-teenagers",
+        "my-khe-beach-da-nang",
+        "review-a-la-carte-da-nang"
+      ],
+      "photo_url": null
+    },
+    "an-bang-seaside-village": {
+      "booking_slug": "an-bang-seaside-village",
+      "booking_url": "https://www.booking.com/hotel/vn/an-bang-seaside-village.html",
+      "property_id": null,
+      "appears_in": [
+        "an-bang-beach-hotels",
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an"
+      ],
+      "photo_url": null
+    },
+    "victoria-hoi-an": {
+      "booking_slug": "victoria-hoi-an",
+      "booking_url": "https://www.booking.com/hotel/vn/victoria-hoi-an.html",
+      "property_id": null,
+      "appears_in": [
+        "an-bang-beach-hotels",
+        "best-hotels-in-hoi-an"
+      ],
+      "photo_url": null
+    },
+    "hoi-an-trails-resort": {
+      "booking_slug": "hoi-an-trails-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/hoi-an-trails-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "an-bang-beach-hotels",
+        "best-hotels-in-hoi-an"
+      ],
+      "photo_url": null
+    },
+    "four-seasons-resort-the-nam-hai": {
+      "booking_slug": "four-seasons-resort-the-nam-hai",
+      "booking_url": "https://www.booking.com/hotel/vn/four-seasons-resort-the-nam-hai.html",
+      "property_id": null,
+      "appears_in": [
+        "an-bang-beach-hotels",
+        "best-hotels-in-hoi-an"
+      ],
+      "photo_url": null
+    },
+    "azura-da-nang": {
+      "booking_slug": "azura-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/azura-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "azura-da-nang",
+        "best-beach-hotel-under-100-da-nang",
+        "best-hotels-an-thuong-da-nang",
+        "review-azura-da-nang"
+      ],
+      "photo_url": null
+    },
+    "danang-beach-resort": {
+      "booking_slug": "danang-beach-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/danang-beach-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "ba-na-hills-guide",
+        "best-hotels-in-da-nang",
+        "best-hotels-near-my-khe-beach",
+        "da-nang-beach-hotels",
+        "da-nang-first-time-visitors-area-guide",
+        "da-nang-guide-for-australian-travelers",
+        "da-nang-guide-for-korean-travelers",
+        "da-nang-quiet-areas-hotels",
+        "da-nang-vs-hoi-an",
+        "furama-vs-pullman-da-nang",
+        "how-many-days-in-da-nang",
+        "is-da-nang-walkable",
+        "luxury-hotels-da-nang",
+        "non-nuoc-beach-da-nang",
+        "pullman-da-nang",
+        "pullman-vs-sheraton-da-nang",
+        "review-pullman-da-nang",
+        "where-to-stay-in-da-nang",
+        "mandila-beach-vs-stella-maris-da-nang",
+        "beachfront-vs-city-hotels-da-nang",
+        "best-beach-hotel-under-100-da-nang",
+        "my-khe-beach-da-nang",
+        "an-bang-beach-hotels",
+        "tms-hotel-vs-sala-danang-beach",
+        "da-nang-hotels-private-beach"
+      ],
+      "photo_url": null
+    },
+    "mercure-danang-french-village-banahills": {
+      "booking_slug": "mercure-danang-french-village-banahills",
+      "booking_url": "https://www.booking.com/hotel/vn/mercure-danang-french-village-banahills.html",
+      "property_id": null,
+      "appears_in": [
+        "ba-na-hills-guide"
+      ],
+      "photo_url": null
+    },
+    "novotel-danang-premier-han-river": {
+      "booking_slug": "novotel-danang-premier-han-river",
+      "booking_url": "https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html",
+      "property_id": null,
+      "appears_in": [
+        "ba-na-hills-guide",
+        "best-bars-in-da-nang",
+        "best-han-river-hotels-da-nang",
+        "best-hotels-in-da-nang",
+        "da-nang-hotels-map",
+        "da-nang-itinerary",
+        "novotel-da-nang-han-river",
+        "novotel-vs-hilton-da-nang",
+        "review-novotel-da-nang-han-river",
+        "where-to-stay-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "sheraton-grand-danang-resort": {
+      "booking_slug": "sheraton-grand-danang-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "beachfront-vs-city-hotels-da-nang",
+        "best-areas-da-nang-families",
+        "best-bars-in-da-nang",
+        "best-family-resort-da-nang",
+        "best-hotels-in-da-nang",
+        "best-hotels-near-my-khe-beach",
+        "best-resort-breakfast-da-nang",
+        "da-nang-3-day-itinerary",
+        "da-nang-5-day-itinerary",
+        "da-nang-beach-hotels",
+        "da-nang-first-time-visitors-area-guide",
+        "da-nang-hotels-connecting-rooms",
+        "da-nang-hotels-kids-club",
+        "da-nang-hotels-private-beach",
+        "da-nang-itinerary",
+        "da-nang-vs-hanoi",
+        "da-nang-vs-hoi-an",
+        "da-nang-with-teenagers",
+        "how-many-days-in-da-nang",
+        "is-da-nang-walkable",
+        "luxury-hotels-da-nang",
+        "my-khe-beach-da-nang",
+        "non-nuoc-beach-da-nang",
+        "pullman-vs-sheraton-da-nang",
+        "review-sheraton-grand-da-nang",
+        "sheraton-grand-da-nang"
+      ],
+      "photo_url": null
+    },
+    "novotel-da-nang-premier-han-river": {
+      "booking_slug": "novotel-da-nang-premier-han-river",
+      "booking_url": "https://www.booking.com/hotel/vn/novotel-da-nang-premier-han-river.html",
+      "property_id": null,
+      "appears_in": [
+        "beachfront-vs-city-hotels-da-nang",
+        "best-han-river-hotels-da-nang"
+      ],
+      "photo_url": null
+    },
+    "hyatt-regency-danang-resort-and-spa": {
+      "booking_slug": "hyatt-regency-danang-resort-and-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "beachfront-vs-city-hotels-da-nang",
+        "best-areas-da-nang-families",
+        "best-family-resort-da-nang",
+        "best-hotels-in-da-nang",
+        "best-resort-breakfast-da-nang",
+        "da-nang-3-day-itinerary",
+        "da-nang-5-day-itinerary",
+        "da-nang-7-day-itinerary",
+        "da-nang-beach-hotels",
+        "da-nang-first-time-travel-guide",
+        "da-nang-first-time-visitors-area-guide",
+        "da-nang-guide-for-korean-travelers",
+        "da-nang-hotels-connecting-rooms",
+        "da-nang-hotels-infinity-pool",
+        "da-nang-hotels-kids-club",
+        "da-nang-hotels-private-beach",
+        "da-nang-hotels-spa-packages",
+        "da-nang-hotels-with-lazy-river",
+        "da-nang-quiet-areas-hotels",
+        "da-nang-vs-bali",
+        "da-nang-vs-ho-chi-minh-city",
+        "da-nang-vs-phu-quoc",
+        "da-nang-with-kids-guide",
+        "hyatt-regency-da-nang",
+        "hyatt-regency-vs-furama-da-nang",
+        "intercontinental-vs-hyatt-da-nang",
+        "luxury-hotels-da-nang",
+        "melia-vs-hyatt-regency-da-nang",
+        "non-nuoc-beach-da-nang",
+        "pullman-vs-hyatt-regency-da-nang",
+        "review-hyatt-regency-da-nang",
+        "sheraton-vs-hyatt-regency-da-nang",
+        "where-to-stay-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "mikazuki-japanese-resorts-spa": {
+      "booking_slug": "mikazuki-japanese-resorts-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/mikazuki-japanese-resorts-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "best-areas-da-nang-families",
+        "best-family-resort-da-nang",
+        "da-nang-hotels-kids-club",
+        "da-nang-hotels-with-lazy-river",
+        "mikazuki-da-nang",
+        "review-mikazuki-da-nang"
+      ],
+      "photo_url": null
+    },
+    "furama-resort-danang": {
+      "booking_slug": "furama-resort-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/furama-resort-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-areas-da-nang-families",
+        "best-family-resort-da-nang",
+        "best-hotels-in-da-nang",
+        "best-resort-breakfast-da-nang",
+        "da-nang-beach-hotels",
+        "da-nang-first-time-travel-guide",
+        "da-nang-guide-for-korean-travelers",
+        "da-nang-hotels-connecting-rooms",
+        "da-nang-hotels-kids-club",
+        "da-nang-hotels-private-beach",
+        "da-nang-hotels-with-lazy-river",
+        "furama-resort-da-nang",
+        "furama-vs-pullman-da-nang",
+        "hyatt-regency-vs-furama-da-nang",
+        "intercontinental-vs-furama-da-nang",
+        "luxury-hotels-da-nang",
+        "review-furama-resort-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-suites-danang-beach": {
+      "booking_slug": "fusion-suites-danang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-suites-danang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "best-beach-hotel-under-100-da-nang",
+        "best-hotels-near-my-khe-beach"
+      ],
+      "photo_url": null
+    },
+    "muong-thanh-luxury-da-nang": {
+      "booking_slug": "muong-thanh-luxury-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/muong-thanh-luxury-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-beach-hotel-under-100-da-nang",
+        "da-nang-beach-hotels",
+        "da-nang-hotels-map",
+        "da-nang-vs-nha-trang",
+        "da-nang-with-teenagers",
+        "family-hotels-da-nang",
+        "muong-thanh-luxury-da-nang",
+        "my-khe-beach-da-nang",
+        "review-muong-thanh-luxury-da-nang"
+      ],
+      "photo_url": null
+    },
+    "tms-luxury-danang-beach": {
+      "booking_slug": "tms-luxury-danang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "best-beach-hotel-under-100-da-nang",
+        "best-hotels-an-thuong-da-nang",
+        "best-hotels-in-da-nang",
+        "best-hotels-near-my-khe-beach",
+        "boutique-hotels-da-nang",
+        "da-nang-budget-guide",
+        "da-nang-hotels-map",
+        "review-tms-hotel-da-nang",
+        "tms-hotel-da-nang",
+        "tms-hotel-vs-sala-danang-beach"
+      ],
+      "photo_url": null
+    },
+    "brilliant": {
+      "booking_slug": "brilliant",
+      "booking_url": "https://www.booking.com/hotel/vn/brilliant.html",
+      "property_id": null,
+      "appears_in": [
+        "best-budget-hotels-in-da-nang",
+        "best-han-river-hotels-da-nang",
+        "best-hotels-in-da-nang",
+        "boutique-hotels-da-nang",
+        "brilliant-hotel-da-nang",
+        "review-brilliant-hotel-da-nang"
+      ],
+      "photo_url": null
+    },
+    "wyndham-soleil-danang": {
+      "booking_slug": "wyndham-soleil-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/wyndham-soleil-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-budget-hotels-in-da-nang",
+        "best-hotels-an-thuong-da-nang",
+        "best-hotels-in-da-nang",
+        "boutique-hotels-da-nang",
+        "my-khe-beach-da-nang",
+        "review-wyndham-soleil-da-nang",
+        "wyndham-soleil-da-nang"
+      ],
+      "photo_url": null
+    },
+    "premier-village-resort-da-nang": {
+      "booking_slug": "premier-village-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/premier-village-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-family-resort-da-nang",
+        "review-premier-village-da-nang",
+        "premier-village-da-nang"
+      ],
+      "photo_url": null
+    },
+    "sheraton-grand-da-nang-resort": {
+      "booking_slug": "sheraton-grand-da-nang-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/sheraton-grand-da-nang-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-family-resort-da-nang",
+        "da-nang-hotels-with-lazy-river",
+        "marriott-vs-sheraton-da-nang",
+        "sheraton-vs-hyatt-regency-da-nang",
+        "review-sheraton-grand-da-nang",
+        "sheraton-grand-da-nang"
+      ],
+      "photo_url": null
+    },
+    "premier-village-danang-resort": {
+      "booking_slug": "premier-village-danang-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/premier-village-danang-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-family-resort-da-nang",
+        "best-hotels-in-da-nang",
+        "best-luxury-resort-couples-da-nang",
+        "da-nang-vs-phu-quoc",
+        "da-nang-with-kids-guide",
+        "luxury-hotels-da-nang",
+        "premier-village-da-nang",
+        "review-premier-village-da-nang"
+      ],
+      "photo_url": null
+    },
+    "grand-mercure-danang": {
+      "booking_slug": "grand-mercure-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/grand-mercure-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-han-river-hotels-da-nang",
+        "review-grand-mercure-da-nang"
+      ],
+      "photo_url": null
+    },
+    "brilliant-da-nang": {
+      "booking_slug": "brilliant-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/brilliant-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-han-river-hotels-da-nang",
+        "review-brilliant-hotel-da-nang",
+        "brilliant-hotel-da-nang"
+      ],
+      "photo_url": null
+    },
+    "hilton-da-nang": {
+      "booking_slug": "hilton-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/hilton-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-han-river-hotels-da-nang",
+        "hilton-da-nang",
+        "novotel-vs-hilton-da-nang",
+        "review-hilton-da-nang"
+      ],
+      "photo_url": null
+    },
+    "four-points-by-sheraton-danang": {
+      "booking_slug": "four-points-by-sheraton-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-han-river-hotels-da-nang",
+        "da-nang-beach-hotels",
+        "da-nang-guide-for-korean-travelers",
+        "da-nang-hotels-map",
+        "family-hotels-da-nang",
+        "four-points-sheraton-da-nang",
+        "my-khe-beach-da-nang",
+        "review-four-points-sheraton-da-nang"
+      ],
+      "photo_url": null
+    },
+    "intercontinental-danang-sun-peninsula-resort": {
+      "booking_slug": "intercontinental-danang-sun-peninsula-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang",
+        "best-luxury-resort-couples-da-nang",
+        "best-resort-breakfast-da-nang",
+        "da-nang-7-day-itinerary",
+        "da-nang-adults-only-hotels",
+        "da-nang-beach-hotels",
+        "da-nang-guide-for-australian-travelers",
+        "da-nang-guide-for-korean-travelers",
+        "da-nang-honeymoon-hotels",
+        "da-nang-hotels-infinity-pool",
+        "da-nang-hotels-map",
+        "da-nang-hotels-private-pool-villa",
+        "da-nang-hotels-spa-packages",
+        "da-nang-quiet-areas-hotels",
+        "da-nang-vs-bali",
+        "da-nang-vs-ho-chi-minh-city",
+        "intercontinental-da-nang",
+        "intercontinental-vs-furama-da-nang",
+        "intercontinental-vs-hyatt-da-nang",
+        "luxury-hotels-da-nang",
+        "review-intercontinental-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-maia-danang": {
+      "booking_slug": "fusion-maia-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-maia-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang",
+        "best-luxury-resort-couples-da-nang",
+        "da-nang-vs-phuket",
+        "rainy-season-da-nang-guide"
+      ],
+      "photo_url": null
+    },
+    "sandy-beach-non-nuoc-resort": {
+      "booking_slug": "sandy-beach-non-nuoc-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/sandy-beach-non-nuoc-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "danang-marriott-resort-spa-non-nuoc-beach-villas": {
+      "booking_slug": "danang-marriott-resort-spa-non-nuoc-beach-villas",
+      "booking_url": "https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang",
+        "luxury-hotels-da-nang",
+        "marriott-resort-da-nang",
+        "review-marriott-resort-da-nang",
+        "vinpearl-luxury-da-nang"
+      ],
+      "photo_url": null
+    },
+    "the-memory-danang": {
+      "booking_slug": "the-memory-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/the-memory-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "haian-riverfont": {
+      "booking_slug": "haian-riverfont",
+      "booking_url": "https://www.booking.com/hotel/vn/haian-riverfont.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "grandvrio-ocean-resort-danang-tinh-quang-nam": {
+      "booking_slug": "grandvrio-ocean-resort-danang-tinh-quang-nam",
+      "booking_url": "https://www.booking.com/hotel/vn/grandvrio-ocean-resort-danang-tinh-quang-nam.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang"
+      ],
+      "photo_url": null
+    },
+    "almanity-hoi-an-resort-amp-spa": {
+      "booking_slug": "almanity-hoi-an-resort-amp-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/almanity-hoi-an-resort-amp-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-da-nang",
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "anantara-hoi-an-resort": {
+      "booking_slug": "anantara-hoi-an-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "la-siesta-resort-spa-hoi-an": {
+      "booking_slug": "la-siesta-resort-spa-hoi-an",
+      "booking_url": "https://www.booking.com/hotel/vn/la-siesta-resort-spa-hoi-an.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "phu-thinh-boutique-resort": {
+      "booking_slug": "phu-thinh-boutique-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/phu-thinh-boutique-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "hoi-an-historic": {
+      "booking_slug": "hoi-an-historic",
+      "booking_url": "https://www.booking.com/hotel/vn/hoi-an-historic.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "hoi-an-chic": {
+      "booking_slug": "hoi-an-chic",
+      "booking_url": "https://www.booking.com/hotel/vn/hoi-an-chic.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "the-riverside-hoi-an": {
+      "booking_slug": "the-riverside-hoi-an",
+      "booking_url": "https://www.booking.com/hotel/vn/the-riverside-hoi-an.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "little-hoi-an-central-boutique-hotel": {
+      "booking_slug": "little-hoi-an-central-boutique-hotel",
+      "booking_url": "https://www.booking.com/hotel/vn/little-hoi-an-central-boutique-hotel.html",
+      "property_id": null,
+      "appears_in": [
+        "best-hotels-in-hoi-an",
+        "best-value-hotels-hoi-an",
+        "hoi-an-old-town-hotels"
+      ],
+      "photo_url": null
+    },
+    "naman-retreat": {
+      "booking_slug": "naman-retreat",
+      "booking_url": "https://www.booking.com/hotel/vn/naman-retreat.html",
+      "property_id": null,
+      "appears_in": [
+        "best-luxury-resort-couples-da-nang",
+        "best-resort-breakfast-da-nang",
+        "da-nang-adults-only-hotels",
+        "da-nang-honeymoon-hotels",
+        "da-nang-hotels-infinity-pool",
+        "da-nang-hotels-kids-club",
+        "da-nang-hotels-private-beach",
+        "da-nang-hotels-private-pool-villa",
+        "da-nang-hotels-spa-packages",
+        "da-nang-quiet-areas-hotels",
+        "review-naman-retreat-da-nang",
+        "tia-wellness-vs-naman-retreat-da-nang",
+        "naman-retreat-da-nang"
+      ],
+      "photo_url": null
+    },
+    "tia-wellness-resort": {
+      "booking_slug": "tia-wellness-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/tia-wellness-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "best-luxury-resort-couples-da-nang",
+        "da-nang-adults-only-hotels",
+        "da-nang-beach-hotels",
+        "da-nang-honeymoon-hotels",
+        "da-nang-hotels-private-beach",
+        "da-nang-hotels-private-pool-villa",
+        "da-nang-hotels-spa-packages",
+        "da-nang-quiet-areas-hotels",
+        "luxury-hotels-da-nang",
+        "non-nuoc-beach-da-nang",
+        "review-tia-wellness-resort-da-nang",
+        "tia-wellness-resort-da-nang",
+        "tia-wellness-vs-naman-retreat-da-nang"
+      ],
+      "photo_url": null
+    },
+    "melia-danang": {
+      "booking_slug": "melia-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/melia-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-adults-only-hotels",
+        "da-nang-hotels-connecting-rooms",
+        "melia-vs-hyatt-regency-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-maia-resort-da-nang": {
+      "booking_slug": "fusion-maia-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-maia-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-adults-only-hotels",
+        "da-nang-honeymoon-hotels",
+        "da-nang-hotels-private-pool-villa",
+        "da-nang-hotels-spa-packages"
+      ],
+      "photo_url": null
+    },
+    "hilton-garden-inn-da-nang": {
+      "booking_slug": "hilton-garden-inn-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/hilton-garden-inn-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-beach-hotels",
+        "da-nang-hotels-map"
+      ],
+      "photo_url": null
+    },
+    "chicland": {
+      "booking_slug": "chicland",
+      "booking_url": "https://www.booking.com/hotel/vn/chicland.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-beach-hotels"
+      ],
+      "photo_url": null
+    },
+    "naman-retreat-da-nang": {
+      "booking_slug": "naman-retreat-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/naman-retreat-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-beach-hotels",
+        "da-nang-vs-phuket",
+        "luxury-hotels-da-nang",
+        "naman-retreat-da-nang",
+        "rainy-season-da-nang-guide",
+        "review-naman-retreat-da-nang",
+        "tia-wellness-vs-naman-retreat-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-resort-da-nang": {
+      "booking_slug": "fusion-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-beach-hotels",
+        "fusion-suites-da-nang",
+        "review-fusion-suites-da-nang"
+      ],
+      "photo_url": null
+    },
+    "da-nang-marriott-resort-and-spa-non-nuoc-beach-villas": {
+      "booking_slug": "da-nang-marriott-resort-and-spa-non-nuoc-beach-villas",
+      "booking_url": "https://www.booking.com/hotel/vn/da-nang-marriott-resort-and-spa-non-nuoc-beach-villas.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-beach-hotels"
+      ],
+      "photo_url": null
+    },
+    "hyatt-regency-da-nang-resort-and-spa": {
+      "booking_slug": "hyatt-regency-da-nang-resort-and-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/hyatt-regency-da-nang-resort-and-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-australian-travelers"
+      ],
+      "photo_url": null
+    },
+    "furama-resort-da-nang": {
+      "booking_slug": "furama-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/furama-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-australian-travelers",
+        "furama-vs-pullman-da-nang",
+        "hyatt-regency-vs-furama-da-nang",
+        "intercontinental-vs-furama-da-nang",
+        "furama-resort-da-nang",
+        "review-furama-resort-da-nang"
+      ],
+      "photo_url": null
+    },
+    "four-points-by-sheraton-da-nang": {
+      "booking_slug": "four-points-by-sheraton-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/four-points-by-sheraton-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-australian-travelers",
+        "review-four-points-sheraton-da-nang"
+      ],
+      "photo_url": null
+    },
+    "tms-da-nang-beach": {
+      "booking_slug": "tms-da-nang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/tms-da-nang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers",
+        "my-khe-beach-da-nang"
+      ],
+      "photo_url": null
+    },
+    "sala-danang-beach": {
+      "booking_slug": "sala-danang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/sala-danang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers",
+        "tms-hotel-vs-sala-danang-beach"
+      ],
+      "photo_url": null
+    },
+    "sea-queen-da-nang": {
+      "booking_slug": "sea-queen-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/sea-queen-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "adamo-da-nang": {
+      "booking_slug": "adamo-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/adamo-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "raon-danang-beach": {
+      "booking_slug": "raon-danang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/raon-danang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "haian-beach-hotel-spa": {
+      "booking_slug": "haian-beach-hotel-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/haian-beach-hotel-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "balcona-da-nang": {
+      "booking_slug": "balcona-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/balcona-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "le-sands-oceanfront-danang": {
+      "booking_slug": "le-sands-oceanfront-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/le-sands-oceanfront-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-guide-for-russian-travelers"
+      ],
+      "photo_url": null
+    },
+    "premier-village-da-nang-resort": {
+      "booking_slug": "premier-village-da-nang-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/premier-village-da-nang-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-honeymoon-hotels",
+        "da-nang-hotels-infinity-pool",
+        "da-nang-hotels-private-pool-villa",
+        "premier-village-da-nang",
+        "review-premier-village-da-nang"
+      ],
+      "photo_url": null
+    },
+    "marriott-resort-da-nang": {
+      "booking_slug": "marriott-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/marriott-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-hotels-connecting-rooms",
+        "marriott-resort-da-nang",
+        "marriott-vs-sheraton-da-nang",
+        "hyatt-vs-marriott-da-nang",
+        "review-marriott-resort-da-nang"
+      ],
+      "photo_url": null
+    },
+    "pullman-da-nang-beach-resort": {
+      "booking_slug": "pullman-da-nang-beach-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/pullman-da-nang-beach-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-hotels-with-lazy-river",
+        "pullman-vs-hyatt-regency-da-nang"
+      ],
+      "photo_url": null
+    },
+    "caro-da-nang": {
+      "booking_slug": "caro-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/caro-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-vs-nha-trang"
+      ],
+      "photo_url": null
+    },
+    "grand-mercure-da-nang": {
+      "booking_slug": "grand-mercure-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/grand-mercure-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "da-nang-vs-nha-trang",
+        "grand-mercure-da-nang",
+        "review-grand-mercure-da-nang"
+      ],
+      "photo_url": null
+    },
+    "da-nang-mikazuki-japanese-resorts-spa": {
+      "booking_slug": "da-nang-mikazuki-japanese-resorts-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/da-nang-mikazuki-japanese-resorts-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "family-hotels-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-suites-da-nang": {
+      "booking_slug": "fusion-suites-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-suites-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "fusion-suites-da-nang",
+        "review-fusion-suites-da-nang"
+      ],
+      "photo_url": null
+    },
+    "da-nang-marriott-resort-spa": {
+      "booking_slug": "da-nang-marriott-resort-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/da-nang-marriott-resort-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "luxury-hotels-da-nang",
+        "non-nuoc-beach-da-nang"
+      ],
+      "photo_url": null
+    },
+    "the-ocean-villas": {
+      "booking_slug": "the-ocean-villas",
+      "booking_url": "https://www.booking.com/hotel/vn/the-ocean-villas.html",
+      "property_id": null,
+      "appears_in": [
+        "luxury-hotels-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-resort-villas-da-nang": {
+      "booking_slug": "fusion-resort-villas-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-resort-villas-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "luxury-hotels-da-nang"
+      ],
+      "photo_url": null
+    },
+    "grandvrio-ocean-resort-danang": {
+      "booking_slug": "grandvrio-ocean-resort-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/grandvrio-ocean-resort-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "luxury-hotels-da-nang"
+      ],
+      "photo_url": null
+    },
+    "danang-marriott-resort-spa": {
+      "booking_slug": "danang-marriott-resort-spa",
+      "booking_url": "https://www.booking.com/hotel/vn/danang-marriott-resort-spa.html",
+      "property_id": null,
+      "appears_in": [
+        "marriott-vs-sheraton-da-nang"
+      ],
+      "photo_url": null
+    },
+    "melia-danang-beach-resort": {
+      "booking_slug": "melia-danang-beach-resort",
+      "booking_url": "https://www.booking.com/hotel/vn/melia-danang-beach-resort.html",
+      "property_id": null,
+      "appears_in": [
+        "melia-da-nang",
+        "melia-vs-radisson-blu-da-nang",
+        "non-nuoc-beach-da-nang",
+        "review-melia-da-nang",
+        "review-melia-vinpearl-da-nang"
+      ],
+      "photo_url": null
+    },
+    "radisson-danang": {
+      "booking_slug": "radisson-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/radisson-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "melia-vs-radisson-blu-da-nang",
+        "non-nuoc-beach-da-nang",
+        "radisson-blu-da-nang",
+        "review-radisson-blu-da-nang"
+      ],
+      "photo_url": null
+    },
+    "fusion-suites-da-nang-beach": {
+      "booking_slug": "fusion-suites-da-nang-beach",
+      "booking_url": "https://www.booking.com/hotel/vn/fusion-suites-da-nang-beach.html",
+      "property_id": null,
+      "appears_in": [
+        "review-fusion-suites-da-nang"
+      ],
+      "photo_url": null
+    },
+    "marriott-resort-spa-da-nang": {
+      "booking_slug": "marriott-resort-spa-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/marriott-resort-spa-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "review-marriott-resort-da-nang"
+      ],
+      "photo_url": null
+    },
+    "radisson-blu-resort-da-nang": {
+      "booking_slug": "radisson-blu-resort-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/radisson-blu-resort-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "review-radisson-blu-da-nang",
+        "radisson-blu-da-nang",
+        "melia-vs-radisson-blu-da-nang"
+      ],
+      "photo_url": null
+    },
+    "wyndham-soleil-da-nang": {
+      "booking_slug": "wyndham-soleil-da-nang",
+      "booking_url": "https://www.booking.com/hotel/vn/wyndham-soleil-da-nang.html",
+      "property_id": null,
+      "appears_in": [
+        "review-wyndham-soleil-da-nang",
+        "wyndham-soleil-da-nang"
+      ],
+      "photo_url": null
+    },
+    "silk-path-grand-resort-spa-danang": {
+      "booking_slug": "silk-path-grand-resort-spa-danang",
+      "booking_url": "https://www.booking.com/hotel/vn/silk-path-grand-resort-spa-danang.html",
+      "property_id": null,
+      "appears_in": [
+        "silk-path-grand-da-nang"
+      ],
+      "photo_url": null
+    }
+  }
+}
