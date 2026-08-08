@@ -22,7 +22,124 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <style>
-
+/* ─── SITE NAV (canonical) ──────────────────────────────── */
+.site-nav{
+  position:sticky;top:0;z-index:500;
+  height:68px;
+  background:#0A0A0A;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;
+  padding:0 var(--gutter);
+}
+.nav-logo{
+  font-family:var(--font-serif);font-size:1.3rem;
+  color:#fff;letter-spacing:-.01em;flex-shrink:0;
+  margin-right:clamp(1.5rem,3.5vw,3rem);
+  display:inline-flex;align-items:baseline;gap:.35em;
+}
+.nav-logo em{font-style:italic;color:var(--coral)}
+.nav-links{display:flex;align-items:center;gap:0;flex:1;}
+.nav-link{
+  position:relative;
+  padding:8px 14px;
+  font-size:.8rem;font-weight:700;letter-spacing:.03em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+  transition:color .18s;
+  white-space:nowrap;
+}
+.nav-link:hover{color:#fff}
+.nav-link.active{color:#fff}
+.nav-link.active::after{
+  content:'';position:absolute;bottom:-1px;left:14px;right:14px;
+  height:2px;background:var(--coral);border-radius:1px;
+}
+.nav-dropdown{position:relative;}
+.nav-dropdown-toggle::after{
+  content:'';display:inline-block;
+  width:5px;height:5px;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg) translateY(-2px);margin-left:5px;
+  transition:transform .2s;
+}
+.nav-dropdown:hover .nav-dropdown-toggle::after,
+.nav-dropdown-toggle[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px);}
+.nav-dropdown-menu{
+  position:absolute;top:calc(100% + 4px);left:0;
+  min-width:210px;
+  background:#111;
+  border:1px solid rgba(255,255,255,.1);
+  border-top:2px solid var(--coral);
+  border-radius:0 0 8px 8px;
+  padding:.4rem;
+  opacity:0;visibility:hidden;transform:translateY(-4px);
+  transition:opacity .18s,visibility .18s,transform .18s;
+  box-shadow:0 20px 48px rgba(0,0,0,.5);
+  z-index:600;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:focus-within{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-dropdown-item{
+  display:flex;align-items:center;gap:8px;
+  padding:9px 12px;
+  font-size:.78rem;font-weight:600;
+  color:rgba(255,255,255,.55);
+  border-radius:4px;
+  transition:color .12s,background .12s;
+  letter-spacing:.02em;text-transform:uppercase;
+}
+.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
+.nav-dropdown-item .di-icon{font-size:.85rem;width:18px;text-align:center;flex-shrink:0;display:none}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
+.nav-search-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border:1px solid rgba(255,255,255,.15);cursor:pointer;
+  background:transparent;border-radius:4px;
+  color:rgba(255,255,255,.6);transition:background .15s,color .15s;
+}
+.nav-search-btn:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav-search-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2}
+.nav-stays-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 18px;
+  background:var(--coral);color:#fff;
+  font-size:.75rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;
+  border-radius:4px;white-space:nowrap;
+  transition:background .15s,transform .12s;
+  border:none;cursor:pointer;text-decoration:none;
+}
+.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
+.nav-hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:40px;height:40px;background:rgba(255,255,255,.07);border:none;cursor:pointer;
+  border-radius:4px;padding:10px;margin-left:8px;
+}
+.nav-hamburger span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* ─── MOBILE MENU ──────────────────────────────────────── */
+.mobile-menu{
+  position:fixed;inset:0;z-index:450;background:#0A0A0A;
+  transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;
+  padding:calc(68px + 1.5rem) var(--gutter) 2rem;overflow-y:auto;
+}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s;}
+.mobile-nav-link:hover{color:#fff}
+.mobile-nav-link.active{color:var(--coral)}
+.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s cubic-bezier(.4,0,.2,1);}
+.mobile-dropdown-items.open{max-height:500px}
+.mobile-sub-link{display:block;padding:10px 0;font-size:.85rem;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s;}
+.mobile-sub-link:hover{color:#fff}
+.mobile-stays-btn{display:block;margin-top:2rem;padding:16px;background:var(--coral);color:#fff;text-align:center;font-size:.88rem;font-weight:800;border-radius:4px;letter-spacing:.05em;text-transform:uppercase;}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-stays-btn .btn-text{display:none}
+}
 /* ─── RESET & BASE ──────────────────────────────────────── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -55,129 +172,7 @@ body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webki
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
 
-/* ─── SITE NAV ──────────────────────────────────────────── */
-.site-nav{
-  position:sticky;top:0;z-index:500;
-  height:64px;
-  background:rgba(13,53,53,.97);
-  backdrop-filter:blur(18px) saturate(180%);
-  -webkit-backdrop-filter:blur(18px) saturate(180%);
-  border-bottom:1px solid rgba(255,255,255,.06);
-  display:flex;align-items:center;
-  padding:0 var(--gutter);
-  gap:0;
-}
-.nav-logo{
-  font-family:var(--font-serif);font-size:1.35rem;
-  color:#fff;letter-spacing:-.01em;flex-shrink:0;
-  margin-right:clamp(1rem,3vw,2.5rem);
-}
-.nav-logo{display:inline-flex;align-items:baseline;gap:.35em}
-.nav-logo em{font-style:italic;color:var(--coral-light)}
-.nav-links{display:flex;align-items:center;gap:0;flex:1;}
-.nav-link{
-  position:relative;
-  padding:8px 13px;
-  border-radius:8px;
-  font-size:.82rem;font-weight:600;
-  color:rgba(255,255,255,.5);
-  transition:color .18s,background .18s;
-  white-space:nowrap;
-}
-.nav-link:hover{color:#fff;background:rgba(255,255,255,.07)}
-.nav-link.active{color:#fff;background:rgba(255,255,255,.1)}
-.nav-dropdown{position:relative;}
-.nav-dropdown-toggle::after{
-  content:'';display:inline-block;
-  width:6px;height:6px;
-  border-right:1.5px solid currentColor;
-  border-bottom:1.5px solid currentColor;
-  transform:rotate(45deg) translateY(-2px);
-  margin-left:5px;
-  transition:transform .2s;
-}
-.nav-dropdown:hover .nav-dropdown-toggle::after,
-.nav-dropdown-toggle[aria-expanded="true"]::after{transform:rotate(-135deg) translateY(-2px);}
-.nav-dropdown-menu{
-  position:absolute;top:calc(100% + 8px);left:0;
-  min-width:200px;
-  background:var(--ocean-deep);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--r-lg);
-  padding:.5rem;
-  opacity:0;visibility:hidden;
-  transform:translateY(-6px);
-  transition:opacity .2s,visibility .2s,transform .2s;
-  box-shadow:0 16px 40px rgba(0,0,0,.4);
-  z-index:600;
-}
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-menu:focus-within{opacity:1;visibility:visible;transform:translateY(0);}
-.nav-dropdown-item{
-  display:flex;align-items:center;gap:8px;
-  padding:8px 12px;
-  font-size:.82rem;font-weight:500;
-  color:rgba(255,255,255,.55);
-  border-radius:var(--r-md);
-  transition:color .15s,background .15s;
-}
-.nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.07)}
-.nav-dropdown-item .di-icon{font-size:.9rem;width:20px;text-align:center;flex-shrink:0;}
-.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
-.nav-search-btn{
-  display:flex;align-items:center;justify-content:center;
-  width:36px;height:36px;
-  border:none;cursor:pointer;
-  background:rgba(255,255,255,.08);
-  border-radius:50%;
-  color:rgba(255,255,255,.6);
-  transition:background .18s,color .18s;
-}
-.nav-search-btn:hover{background:rgba(255,255,255,.14);color:#fff}
-.nav-search-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
-.search-overlay{
-  position:fixed;inset:0;z-index:900;
-  background:rgba(13,53,53,.95);
-  backdrop-filter:blur(24px);
-  display:flex;flex-direction:column;align-items:center;
-  padding:clamp(4rem,10vh,7rem) var(--gutter) 2rem;
-  opacity:0;visibility:hidden;
-  transition:opacity .25s,visibility .25s;
-}
-.search-overlay.open{opacity:1;visibility:visible}
-.search-close{
-  position:absolute;top:1.5rem;right:var(--gutter);
-  background:rgba(255,255,255,.1);
-  border:none;cursor:pointer;
-  color:rgba(255,255,255,.7);
-  width:40px;height:40px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;transition:background .18s,color .18s;
-}
-.search-close:hover{background:rgba(255,255,255,.18);color:#fff}
-.search-overlay-label{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.2rem;}
-.search-input-wrap{position:relative;width:100%;max-width:680px;margin-bottom:2rem;}
-.search-input{
-  width:100%;
-  background:rgba(255,255,255,.08);
-  border:2px solid rgba(255,255,255,.15);
-  border-radius:var(--r-xl);
-  padding:18px 60px 18px 24px;
-  font-family:var(--font-serif);
-  font-size:clamp(1.2rem,2.5vw,1.8rem);
-  color:#fff;
-  outline:none;
-  transition:border-color .2s,background .2s;
-}
-.search-input::placeholder{color:rgba(255,255,255,.3)}
-.search-input:focus{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.12);}
-.search-submit-icon{position:absolute;right:20px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.5);}
-.search-submit-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
-.search-results-inline{width:100%;max-width:680px;display:flex;flex-direction:column;gap:.5rem;max-height:50vh;overflow-y:auto;}
-.sri{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:14px 18px;cursor:pointer;transition:background .15s;text-decoration:none;color:inherit;}
-.sri:hover{background:rgba(255,255,255,.11)}
-.sri-cat{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-light);white-space:nowrap;margin-top:2px;}
-.sri-body{flex:1;min-width:0}
+body{flex:1;min-width:0}
 .sri-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:3px}
 .sri-excerpt{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .search-no-results{color:rgba(255,255,255,.45);font-size:.9rem;padding:1rem 0}
@@ -203,25 +198,7 @@ a{text-decoration:none;color:inherit}
 .nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mobile-menu{
-  position:fixed;inset:0;z-index:450;background:var(--ocean-deep);
-  transform:translateX(100%);transition:transform .3s var(--ease);
-  display:flex;flex-direction:column;
-  padding:calc(64px + 1.5rem) var(--gutter) 2rem;
-  overflow-y:auto;
-}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0;font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s;}
-.mobile-nav-link:hover{color:#fff}
-.mobile-nav-link.active{color:var(--coral-light)}
-.mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s var(--ease);}
-.mobile-dropdown-items.open{max-height:500px}
-.mobile-sub-link{display:block;padding:10px 0;font-size:.9rem;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s;}
-.mobile-sub-link:hover{color:#fff}
-.mobile-stays-btn{display:block;margin-top:2rem;padding:15px;background:var(--coral);color:#fff;text-align:center;font-size:.95rem;font-weight:700;border-radius:var(--r-xl);}
-
-/* ─── BREADCRUMB ─────────────────────────────────────────── */
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}/* ─── BREADCRUMB ─────────────────────────────────────────── */
 .breadcrumb{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:10px var(--gutter);}
 .breadcrumb ol{max-width:var(--max);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted);}
 .breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
@@ -771,19 +748,59 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   <div class="nav-links" role="list">
     <a href="index.html" class="nav-link">Home</a>
     <div class="nav-dropdown">
-      <a href="hotels.html" class="nav-link nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">Hotels</a>
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="best-hotels-in-da-nang.html"  class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
-        <a href="da-nang-beach-hotels.html"    class="nav-dropdown-item" role="menuitem"><span class="di-icon">🏖</span>Beachfront</a>
-        <a href="luxury-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">✦</span>Luxury</a>
-        <a href="family-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">👨‍👩‍👧</span>Family</a>
-        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">◈</span>Boutique</a>
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
+        <a href="da-nang-beach-hotels.html"    class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Beachfront</a>
+        <a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Riverside</a>
+        <a href="luxury-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Luxury</a>
+        <a href="family-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Boutique</a>
       </div>
     </div>
     <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
-    <a href="dining.html" class="nav-link">Dining</a>
-    <a href="guides.html" class="nav-link">Guides</a>
-    <a href="hotel-reviews.html" class="nav-link">Hotel Reviews</a>
+    <div class="nav-dropdown">
+      <a href="guides.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guides</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="things-to-do-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🗺</span>Things To Do</a>
+        <a href="da-nang-itinerary.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">📅</span>Itineraries</a>
+        <a href="da-nang-transport-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🚗</span>Getting Around</a>
+        <a href="da-nang-first-time-visitors.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">✈</span>First Timers</a>
+        <a href="best-time-to-visit-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">☀</span>Best Time to Visit</a>
+        <a href="da-nang-budget-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">💰</span>Budget Guide</a>
+        <a href="da-nang-digital-nomad-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">💻</span>Digital Nomads</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="dining.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Food &amp; Nightlife</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="dining.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🍜</span>Dining Guide</a>
+        <a href="best-bars-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🍸</span>Best Bars</a>
+        <a href="best-cafes-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">☕</span>Best Cafes</a>
+        <a href="da-nang-hoi-an-markets-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🛒</span>Markets Guide</a>
+      </div>
+    </div>
+    <a href="hotel-reviews.html" class="nav-link active">Reviews</a>
+    <div class="nav-dropdown">
+      <a href="hoi-an.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hoi An</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Hoi An Travel Guide</a>
+        <a href="da-nang-vs-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Da Nang vs Hoi An</a>
+        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Where to Stay in Hoi An</a>
+        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels Hoi An</a>
+        <a href="best-value-hotels-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Value Hotels</a>
+        <a href="hoi-an-old-town-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Old Town Hotels</a>
+        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>An Bang Beach Hotels</a>
+        <a href="da-nang-airport-to-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Airport to Hoi An</a>
+        <a href="is-hoi-an-cheaper-than-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Is Hoi An Cheaper?</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="news.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">News</a>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="news.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Latest News</a>
+      </div>
+    </div>
     <a href="about.html" class="nav-link">About</a>
     <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
@@ -791,7 +808,7 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.booking.com/hotel/vn/fusion-suites-da-nang.html?aid=1784897&sid=review-fusion-suites-da-nang--fusion-suites-da-nang" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <span class="btn-text">Search Stays</span>
     </a>
@@ -807,10 +824,58 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     <div class="mobile-dropdown-items" id="mobileHotelsSub">
       <a href="best-hotels-in-da-nang.html" class="mobile-sub-link">Best Hotels</a>
       <a href="da-nang-beach-hotels.html" class="mobile-sub-link">Beachfront Hotels</a>
+      <a href="da-nang-riverfront-hotels.html" class="mobile-sub-link">Riverside Hotels</a>
       <a href="luxury-hotels-da-nang.html" class="mobile-sub-link">Luxury Hotels</a>
       <a href="family-hotels-da-nang.html" class="mobile-sub-link">Family Hotels</a>
       <a href="boutique-hotels-da-nang.html" class="mobile-sub-link">Boutique Hotels</a>
     </div>
+  </div>
+  <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
+  <div>
+    <a href="guides.html" class="mobile-nav-link">Guides <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items">
+      <a href="things-to-do-in-da-nang.html" class="mobile-sub-link">Things To Do</a>
+      <a href="da-nang-itinerary.html" class="mobile-sub-link">Itineraries</a>
+      <a href="da-nang-transport-guide.html" class="mobile-sub-link">Getting Around</a>
+      <a href="da-nang-first-time-visitors.html" class="mobile-sub-link">First Timers</a>
+      <a href="best-time-to-visit-da-nang.html" class="mobile-sub-link">Best Time to Visit</a>
+      <a href="da-nang-budget-guide.html" class="mobile-sub-link">Budget Guide</a>
+    </div>
+  </div>
+  <div>
+    <a href="dining.html" class="mobile-nav-link">Food &amp; Nightlife <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items">
+      <a href="dining.html" class="mobile-sub-link">Dining Guide</a>
+      <a href="best-bars-in-da-nang.html" class="mobile-sub-link">Best Bars</a>
+      <a href="best-cafes-da-nang.html" class="mobile-sub-link">Best Cafes</a>
+      <a href="da-nang-hoi-an-markets-guide.html" class="mobile-sub-link">Markets Guide</a>
+    </div>
+  </div>
+  <a href="hotel-reviews.html" class="mobile-nav-link active">Reviews</a>
+  <div>
+    <a href="hoi-an.html" class="mobile-nav-link">Hoi An <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items">
+      <a href="hoi-an.html" class="mobile-sub-link">Hoi An Travel Guide</a>
+      <a href="da-nang-vs-hoi-an.html" class="mobile-sub-link">Da Nang vs Hoi An</a>
+      <a href="where-to-stay-in-hoi-an.html" class="mobile-sub-link">Where to Stay in Hoi An</a>
+      <a href="best-hotels-in-hoi-an.html" class="mobile-sub-link">Best Hotels Hoi An</a>
+      <a href="best-value-hotels-hoi-an.html" class="mobile-sub-link">Best Value Hotels</a>
+      <a href="hoi-an-old-town-hotels.html" class="mobile-sub-link">Old Town Hotels</a>
+      <a href="an-bang-beach-hotels.html" class="mobile-sub-link">An Bang Beach Hotels</a>
+      <a href="da-nang-airport-to-hoi-an.html" class="mobile-sub-link">Airport to Hoi An</a>
+      <a href="is-hoi-an-cheaper-than-da-nang.html" class="mobile-sub-link">Is Hoi An Cheaper?</a>
+    </div>
+  </div>
+  <div>
+    <a href="news.html" class="mobile-nav-link">News <span style="font-size:.8rem;opacity:.5">▾</span></a>
+    <div class="mobile-dropdown-items">
+      <a href="news.html" class="mobile-sub-link">Latest News</a>
+    </div>
+  </div>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
+  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
+</div>
   </div>
   <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
   <a href="dining.html" class="mobile-nav-link">Dining</a>
