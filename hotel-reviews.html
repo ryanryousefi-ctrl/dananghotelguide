@@ -237,7 +237,8 @@ a{text-decoration:none;color:inherit}
 }
 .hr-feat-primary:hover{background:var(--sand)}
 .hr-feat-primary-img{
-  aspect-ratio: 16/9;
+  flex: 1;
+  min-height: 200px;
   overflow: hidden;
 }
 .hr-feat-primary-img img{
@@ -247,7 +248,7 @@ a{text-decoration:none;color:inherit}
 .hr-feat-primary:hover .hr-feat-primary-img img{transform:scale(1.03)}
 .hr-feat-primary-body{
   padding: 1.35rem 1.5rem 1.4rem;
-  flex:1;
+  flex-shrink: 0;
   display:flex;
   flex-direction:column;
 }
@@ -729,9 +730,6 @@ details[open] .hr-faq-icon{transform:rotate(45deg)}
   <div class="hr-featured-grid">
     <!-- Primary featured: InterContinental -->
     <a href="intercontinental-da-nang.html" class="hr-feat-primary">
-      <div class="hr-feat-primary-img">
-        <img src="assets/img/intercontinental-da-nang-de1820f551b8.jpg" alt="InterContinental Danang Sun Peninsula Resort" loading="eager" width="800" height="450">
-      </div>
       <div class="hr-feat-primary-body">
         <div class="hr-badge luxury">Luxury Resort</div>
         <div class="hr-card-location">Son Tra Peninsula<span>·</span>from $350/night</div>
@@ -741,6 +739,9 @@ details[open] .hr-faq-icon{transform:rotate(45deg)}
           <span class="hr-card-price">from $350/night</span>
           <span class="hr-card-read">Read review →</span>
         </div>
+      </div>
+      <div class="hr-feat-primary-img">
+        <img src="assets/img/intercontinental-da-nang-de1820f551b8.jpg" alt="InterContinental Danang Sun Peninsula Resort" loading="eager" width="800" height="450">
       </div>
     </a>
     <!-- Secondary stack -->
