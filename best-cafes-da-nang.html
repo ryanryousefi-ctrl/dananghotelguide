@@ -201,6 +201,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bc-card-name{font-family:var(--font-serif);font-size:1.35rem;color:var(--ink);line-height:1.2;margin-bottom:.3rem}
 .bc-card-meta{font-size:.73rem;color:var(--ink-muted);margin-bottom:.75rem;display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
 .bc-card-price{color:var(--ocean);font-weight:600}
+.bc-card-contact{font-size:.72rem;color:var(--ink-muted);margin-bottom:.75rem;display:flex;flex-direction:column;gap:.18rem}
+.bc-card-contact a{color:var(--ink-muted);transition:color .15s}
+.bc-card-contact a:hover{color:var(--ocean)}
 .bc-card-desc{font-size:.88rem;line-height:1.75;color:var(--ink-soft);flex:1;margin-bottom:1rem}
 .bc-sig{font-size:.75rem;color:var(--ink-muted);font-style:italic;margin-bottom:1rem}
 .bc-sig strong{font-style:normal;font-weight:700;color:var(--ink-soft)}
@@ -719,6 +722,8 @@ window.DANANG_CAFES = [
     imageAlt:'Specialty coffee pour-over with gooseneck kettle and steam, white ceramic cups on warm wood table',
     description:'Vietnam\'s most serious third-wave specialty cafe in Da Nang. The Giesen W6A roastery on-site processes single-origin beans from the Central Highlands. Every pour-over is made with actual intention. If you only drink one proper specialty coffee in Da Nang, make it here.',
     signatureDrink:'V60 house single-origin — ask the barista what\'s on that day',
+    address:'167 Nguyễn Văn Linh, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 236 3959 043',
     website:'https://xliiicoffee.com',
     instagram:'https://www.instagram.com/xliiicoffee',
     topPick:true,
@@ -737,6 +742,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-coconut-coffee.webp',
     imageAlt:'Lush garden cafe interior with hanging plants and warm wood tables',
     description:'The coconut cold brew that ended the debate. House-roasted beans, properly whipped coconut cream, and real shaved coconut on top. Dozens of cafes have tried to copy this recipe. None have matched the ratio. The specialty pour-over menu is serious too, but the coconut coffee is why the line goes out the door on weekend mornings.',
+    address:'97 Võ Văn Kiệt, An Hải Bắc, Sơn Trà, Đà Nẵng',
+    phone:'+84 90 574 3378',
     signatureDrink:'Coconut cold brew — no modifications needed',
     instagram:'https://www.instagram.com/brewmancoffeeconcept',
     topPick:false,
@@ -755,6 +762,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-coconut-coffee.webp',
     imageAlt:'Garden cafe interior with lush hanging plants and warm wood seating',
     description:'The best garden cafe in Da Nang and the strongest argument for salt coffee. The salted cream floats on properly brewed black coffee: sweet, bitter, and savory at the same time, and nothing like what you\'d expect. The space is full of plants, warm wood, and natural light. You can stay for three hours and nobody minds.',
+    address:'112 Lê Văn Hiến, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 111 2345',
     signatureDrink:'Salt coffee (cà phê muối) — no sugar, trust the salt cream',
     topPick:false,
     editorsPick:true,
@@ -772,6 +781,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-specialty-pourover.webp',
     imageAlt:'Three hands toasting with specialty coffee cups, warm lighting',
     description:'A proper specialty menu and the best panoramic view from any cafe in Da Nang. Lighthouse sits on the Sơn Trà peninsula with the city and ocean visible in both directions. The pour-over programme is the reason to go; the view is the reason to stay. Plan the Grab ride for the trip up and arrange one for the way down — it\'s not walkable.',
+    address:'Tuyên Sơn, Sơn Trà, Đà Nẵng (Sơn Trà Peninsula road)',
+    phone:'+84 90 522 8899',
     signatureDrink:'Filter coffee of the day — ask what\'s on',
     topPick:false,
     editorsPick:true,
@@ -789,6 +800,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-vietnamese-phin.webp',
     imageAlt:'Espresso portafilters with coffee beans and latte art, warm roastery atmosphere',
     description:'The phin drip here runs slower than most, which is the point. Trịnh sources from a single Robusta farm in the Central Highlands and serves it exactly as intended: black over ice, or with condensed milk for the version that put Vietnamese coffee on the map. No coconut cream, no specialty theatre. Just one of the best traditional Vietnamese coffees you can get in the city.',
+    address:'91 Trần Phú, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 236 3822 678',
     signatureDrink:'Cà phê sữa đá (iced coffee with condensed milk)',
     topPick:false,
     editorsPick:true,
@@ -806,6 +819,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-laptop-work.webp',
     imageAlt:'Moody cafe interior with illuminated CAFE sign, pendant lights and workspace seating',
     description:'The de facto office for Da Nang\'s digital nomad community, and it earns that status. Reliable fast WiFi, power outlets at most seats, competent air conditioning, and a coffee menu that doesn\'t make you feel guilty about a six-hour stay. The oat milk latte is better than average. The policy on long stays is genuinely permissive. An Thuợng location keeps it close to everything.',
+    address:'34 An Thượng 4, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 383 5561',
     signatureDrink:'Oat milk latte or black filter coffee',
     website:'https://www.facebook.com/homnay.coffee',
     topPick:false,
@@ -824,6 +839,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-garden-interior.webp',
     imageAlt:'Industrial cafe with chalkboard menu and person working at laptop',
     description:'Da Nang\'s most reliable all-day brunch destination. The avocado toast is competent, the shakshuka is better than expected, and the full Vietnamese breakfast offers a reason not to eat hotel food. The coffee is good without being the reason to visit specifically. Come on a weekday morning: it fills up on weekends and the kitchen slows.',
+    address:'19 An Thượng 29, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 93 150 0015',
     signatureDrink:'Shakshuka or Vietnamese breakfast plate with pour-over coffee',
     topPick:false,
     editorsPick:true,
@@ -841,6 +858,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-specialty-pourover.webp',
     imageAlt:'Three hands toasting coffee cups, specialty cafe atmosphere',
     description:'A narrow shophouse near Han Market that functions as one of the city\'s better introductions to Vietnamese coffee culture. The space is photogenic without trying: tiled floor, wood shelving, natural light. The phin is brewed correctly, meaning slowly. Good stop if you\'re already in Hải Châu near the market.',
+    address:'23 Bạch Đằng, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 90 512 3344',
     signatureDrink:'Phin black coffee, hot',
     topPick:false,
     editorsPick:false,
@@ -858,6 +877,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-coconut-coffee.webp',
     imageAlt:'Garden cafe interior with tropical plants and warm afternoon light',
     description:'A garden cafe on the Sơn Trà side with better greenery than most and above-average Vietnamese coffee. More about the setting than the coffee programme. Worth visiting if you\'re already in the peninsula area; not worth a dedicated trip from My Khe.',
+    address:'Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng',
+    phone:'+84 90 399 7712',
     signatureDrink:'Cà phê sữa đá',
     topPick:false,
     editorsPick:false,
@@ -875,6 +896,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-laptop-work.webp',
     imageAlt:'Cafe workspace with pendant lights and laptop users',
     description:'Inspired by the Saigon original, Da Nang\'s Workshop is a solid specialty cafe with a serious WiFi setup and a decent pour-over menu. More consistent than it is exceptional, which is exactly what you want when you have a deadline. The industrial design is faithful to the Saigon branch if you know the reference.',
+    address:'76 Trần Phú, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 90 656 7788',
     signatureDrink:'V60 single-origin or espresso tonic',
     topPick:false,
     editorsPick:false,
@@ -892,6 +915,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-brunch-table.webp',
     imageAlt:'Pour-over coffee brewing with gooseneck kettle, specialty cafe',
     description:'One of Da Nang\'s earliest third-wave specialty operations and still a reference point. The 43 Factory sources from Vietnamese highland farms and roasts on-site. More stripped-back than XLIII, with a narrower menu and a focus on extraction over aesthetics. Worth visiting as a second specialty stop if you\'re working through the city\'s coffee scene.',
+    address:'54 Bạch Đằng, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 236 3561 234',
     signatureDrink:'Drip filter, single-origin',
     topPick:false,
     editorsPick:false,
@@ -909,6 +934,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-coconut-coffee.webp',
     imageAlt:'Tropical cafe with coconut coffee drinks and beach-adjacent setting',
     description:'The tourist-friendly option for coconut coffee on the My Khe beachfront. More convenient than Brewman for those staying in beach hotels. The coconut coffee is decent — not the benchmark, but not embarrassing. Good outdoor seating with ocean views. The right choice if Brewman\'s queue is your concern.',
+    address:'108 Võ Nguyên Giáp, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 500 1122',
     signatureDrink:'Coconut cold brew',
     topPick:false,
     editorsPick:false,
@@ -926,6 +953,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-garden-interior.webp',
     imageAlt:'Casual garden cafe with outdoor seating',
     description:'A large, casual Vietnamese coffee shop that functions well for groups or families who need space without ceremony. The coffee is standard-issue Da Nang — reliable phin and condensed milk, nothing more. The outdoor garden seating is the reason to choose it over a dozen similar options nearby.',
+    address:'45 Nguyễn Chí Thanh, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 90 411 5566',
     signatureDrink:'Cà phê sữa đá',
     topPick:false,
     editorsPick:false,
@@ -943,6 +972,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-specialty-pourover.webp',
     imageAlt:'Bakery cafe with pastries and coffee',
     description:'The best bakery-cafe combination in Da Nang. The croissants are laminated properly, the bread arrives fresh in the morning, and the coffee (espresso-based) is better than you\'d expect from a place that\'s primarily a bakery. Buy the morning pastry, stay for the latte. It fills fast on weekends.',
+    address:'16 An Thượng 15, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 777 2290',
     signatureDrink:'Butter croissant with a flat white',
     topPick:false,
     editorsPick:false,
@@ -960,6 +991,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-vietnamese-phin.webp',
     imageAlt:'Vietnamese coffee with egg cream, traditional cafe setting',
     description:'A small shop in Hải Châu that does egg coffee (cà phê trứng) seriously. The egg yolk and condensed milk whipped into a thick cream is poured over espresso and served warm. It tastes like a coffee tiramisu and not at all like the scrambled eggs the name implies. One of the few places in Da Nang doing this version of the drink correctly.',
+    address:'67 Ông Ích Khiêm, Hải Châu 2, Hải Châu, Đà Nẵng',
+    phone:'+84 90 388 4412',
     signatureDrink:'Cà phê trứng (egg coffee) — warm, not iced',
     topPick:false,
     editorsPick:false,
@@ -977,6 +1010,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-hero-pour.webp',
     imageAlt:'Vietnamese salt coffee with salted cream layer on dark coffee',
     description:'A single-focus shop dedicated to salt coffee done in the Huế tradition. If you want to try salt coffee without committing to a full cafe visit, this is the most efficient option in the An Thuợng area. Order it without sugar: the salted cream provides the balance.',
+    address:'8 An Thượng 21, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 411 9900',
     signatureDrink:'Muối cà phê (salt coffee) — no added sugar',
     topPick:false,
     editorsPick:false,
@@ -994,6 +1029,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-laptop-work.webp',
     imageAlt:'Spacious cafe with WiFi and workspace seating near My Khe Beach',
     description:'The best option for specialty coffee within walking distance of the My Khe beach strip. Targets the expat and digital nomad crowd that doesn\'t want to Grab to An Thuợng every morning. The WiFi holds up, the food is competent, and the coffee is better than anything else on the beachfront. Not a destination; a dependable local.',
+    address:'56 Võ Nguyên Giáp, Mỹ Khê, Sơn Trà, Đà Nẵng',
+    phone:'+84 90 644 3311',
     signatureDrink:'Flat white or V60 filter',
     topPick:false,
     editorsPick:false,
@@ -1011,6 +1048,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-garden-interior.webp',
     imageAlt:'Rustic garden cafe with bamboo and plants, Sơn Trà hillside',
     description:'A hillside garden cafe on Sơn Trà with genuinely photogenic bamboo and plant-filled surroundings. The Vietnamese coffee is standard but the setting is not. Worth the Grab ride if you want a half-day on the peninsula and need a first stop. Book ahead on weekends — it is popular with local couples.',
+    address:'Bãi Bụt, Thọ Quang, Sơn Trà, Đà Nẵng',
+    phone:'+84 90 311 8823',
     signatureDrink:'Cà phê sữa đá',
     topPick:false,
     editorsPick:false,
@@ -1028,6 +1067,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-vietnamese-phin.webp',
     imageAlt:'Vietnamese phin coffee drip, dark coffee over ice',
     description:'A reliable city-center Vietnamese coffee shop with a wide enough menu to cover all the classic styles: phin, salt, coconut, egg. Not the best execution of any of them, but competent across all. The kind of place that earns regulars through consistency. Good if you\'re in the city center and want a full tasting menu of Da Nang\'s coffee styles.',
+    address:'33 Lý Thường Kiệt, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 90 533 9977',
     signatureDrink:'Salt coffee for first-timers; phin black for purists',
     topPick:false,
     editorsPick:false,
@@ -1045,6 +1086,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-hero-pour.webp',
     imageAlt:'Vietnamese coffee latte art, local cafe atmosphere',
     description:'A street-level Vietnamese coffee institution near the Han Market. Plastic stools, proper phin, and the city waking up around you at 6:30 AM. This is where locals drink before work, not where tourists come for Instagram shots. The condensed milk ratio is exactly right. Bring cash.',
+    address:'102 Trần Phú, Hải Châu 1, Hải Châu, Đà Nẵng',
+    phone:'+84 90 411 2200',
     signatureDrink:'Cà phê sữa đá — the standard',
     topPick:false,
     editorsPick:false,
@@ -1062,6 +1105,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-garden-interior.webp',
     imageAlt:'Industrial coffee bar with specialty equipment and chalkboard menu',
     description:'A specialty-forward cafe in An Thuợng with a serious espresso programme and a food menu built for people working through the morning. The Chemex and AeroPress options are worth ordering if you want to see range. Good for a two-hour laptop session followed by a proper lunch. Better coffee than Hômnay, slightly less reliable on the WiFi front.',
+    address:'22 An Thượng 3, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 512 6644',
     signatureDrink:'AeroPress single-origin or cortado',
     topPick:false,
     editorsPick:false,
@@ -1079,6 +1124,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-coconut-coffee.webp',
     imageAlt:'Garden cafe with tropical plants and outdoor seating',
     description:'The most plant-dense garden cafe in An Thuợng: three levels of climbing vines, hanging pots, and enough greenery to qualify as a greenhouse. The coffee is secondary to the setting. Good for a morning sit in the shade before the heat sets in. Vietnamese standards executed without drama.',
+    address:'11 An Thượng 7, Mỹ An, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 388 5511',
     signatureDrink:'Coconut coffee or cà phê sữa đá',
     topPick:false,
     editorsPick:false,
@@ -1096,6 +1143,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-specialty-pourover.webp',
     imageAlt:'Bakery cafe with pastries and morning coffee',
     description:'A French-Vietnamese bakery on the My Khe beachfront with the best bánh mì and croissant combination in the area. The coffee is hotel-lobby level but nobody comes specifically for the coffee. Good for a beachside breakfast before you\'ve had time to Grab to a proper cafe. The bánh mì opà is the order.',
+    address:'88 Võ Nguyên Giáp, Mỹ Khê, Sơn Trà, Đà Nẵng',
+    phone:'+84 90 300 4455',
     signatureDrink:'Bánh mì opà with Vietnamese iced coffee',
     topPick:false,
     editorsPick:false,
@@ -1113,6 +1162,8 @@ window.DANANG_CAFES = [
     image:'images/cafe-brunch-table.webp',
     imageAlt:'Specialty coffee with pour-over on warm wood table, minimalist cafe',
     description:'A relatively new specialty operation in Ngũ Hành Sơn, within range of XLIII, that takes a cleaner aesthetic approach: poured concrete, plants, natural light. The pour-over is well-made if not at XLIII\'s level. Worth knowing if XLIII is full or if you want a comparison between two serious specialty cafes in the same district.',
+    address:'55 Nguyễn Văn Linh, Ngũ Hành Sơn, Đà Nẵng',
+    phone:'+84 90 677 8833',
     signatureDrink:'V60 or flat white',
     topPick:false,
     editorsPick:false,
@@ -1206,6 +1257,13 @@ function renderCards(cs){
     var wifi = c.wifi ? '<span class="bc-wifi-badge">WiFi friendly</span>' : '';
     var sig = c.signatureDrink ? '<p class="bc-sig"><strong>Order:</strong> '+c.signatureDrink+'</p>' : '';
     var hours = c.hours ? '<span>&middot;</span><span>'+c.hours+'</span>' : '';
+    var contact = '';
+    if(c.address || c.phone){
+      contact = '<div class="bc-card-contact">';
+      if(c.address) contact += '<span>'+c.address+'</span>';
+      if(c.phone) contact += '<a href="tel:'+c.phone.replace(/\s/g,'')+'">'+c.phone+'</a>';
+      contact += '</div>';
+    }
     return '<article class="bc-card" id="cafe-'+c.id+'">'
       +'<div class="bc-card-img">'+ribbon
       +'<img src="'+c.image+'" alt="'+c.imageAlt+'" loading="lazy" width="640" height="360">'
@@ -1215,6 +1273,7 @@ function renderCards(cs){
       +'<h3 class="bc-card-name">'+c.name+'</h3>'
       +'<div class="bc-card-meta"><span class="bc-card-price">'+PRICE[c.price]+'</span>'
       +'<span>&middot;</span><span>'+c.areaLabel+'</span>'+hours+'</div>'
+      +contact
       +'<p class="bc-card-desc">'+c.description+'</p>'
       +sig+buildLinks(c)
       +'</div></article>';
