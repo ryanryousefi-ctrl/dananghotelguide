@@ -239,10 +239,21 @@ a{text-decoration:none;color:inherit}
 
 .guide-card-image{
   width:100%;
-  height:200px;
-  background-size:cover;
-  background-position:center;
+  aspect-ratio:16/9;
+  overflow:hidden;
   background-color:var(--sand-mid);
+  flex-shrink:0;
+}
+.guide-card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  transition:transform .4s var(--ease);
+}
+.guide-card:hover .guide-card-image img{
+  transform:scale(1.04);
 }
 
 .guide-card-content{
@@ -527,7 +538,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 1: DIFF 2026 Fireworks Festival -->
   <a href="da-nang-fireworks-festival-diff-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/news-98abd7f00a8f.webp');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/news-98abd7f00a8f.webp" alt="Da Nang fireworks over the Han River at the DIFF festival" loading="eager" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-19">April 19, 2026</time>
@@ -535,15 +548,15 @@ a{text-decoration:none;color:inherit}
       </div>
       <h2 class="guide-title">Da Nang Fireworks Festival 2026 to Ignite Summer Tourism Boom</h2>
       <p class="guide-excerpt">DIFF 2026 returns May 30 to July 11 with 10 international teams, Sky AR technology, and expanded cultural programming expected to draw millions of visitors.</p>
-<p style="margin:1.75rem 0;"><a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="color:var(--ocean);font-weight:700;text-decoration:none;border-bottom:2px solid rgba(27,92,92,.25);padding-bottom:1px;">Compare top Da Nang hotels for your dates &#8594;</a></p>
-
       <span class="guide-link">Read full story</span>
     </div>
   </a>
 
   <!-- Article 2: Forbes Digital Nomad Cities -->
   <a href="da-nang-digital-nomad-forbes-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/news-98c9992076ab.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/news-98c9992076ab.jpg" alt="Da Nang digital nomad working in a city cafe" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-18">April 18, 2026</time>
@@ -557,7 +570,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 3: Vladivostok Flight -->
   <a href="da-nang-vladivostok-flight-russian-tourism-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/news-3cbda5b2f03d.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/news-3cbda5b2f03d.jpg" alt="Aircraft at Da Nang International Airport" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-17">April 17, 2026</time>
@@ -571,7 +586,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 4: Vietnam Tourism Boom -->
   <a href="vietnam-tourism-boom-record-growth-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/da-nang-first-time-visitors-70238e83ce65.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/da-nang-first-time-visitors-70238e83ce65.jpg" alt="Aerial view of Da Nang city and coastline, Vietnam" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-17">April 17, 2026</time>
@@ -585,7 +602,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 5: Travel + Leisure Ranking -->
   <a href="hoi-an-da-nang-travel-leisure-hidden-gems-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/news-6eb0d4fff5e4.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/news-6eb0d4fff5e4.jpg" alt="Hoi An Ancient Town lantern streets at night" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-16">April 16, 2026</time>
@@ -599,7 +618,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 6: Russia/CIS Air Links -->
   <a href="da-nang-russia-cis-air-links-2026.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/da-nang-urban-railway-2026-a61aec7cdfc8.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/da-nang-urban-railway-2026-a61aec7cdfc8.jpg" alt="Da Nang transport and urban development" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-16">April 16, 2026</time>
@@ -613,7 +634,9 @@ a{text-decoration:none;color:inherit}
 
   <!-- Article 7: Mega Merger for Global Eco-City Vision -->
   <a href="da-nang-eco-city-merger-2050.html" class="guide-card">
-    <div class="guide-card-image" style="background-image: url('assets/img/news-84175a02f667.jpg');"></div>
+    <div class="guide-card-image">
+      <img src="assets/img/news-84175a02f667.jpg" alt="Da Nang city skyline and urban development plan" loading="lazy" width="800" height="450">
+    </div>
     <div class="guide-card-content">
       <div class="guide-meta">
         <time class="guide-date" datetime="2026-04-16">April 16, 2026</time>
