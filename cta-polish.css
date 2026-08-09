@@ -5,6 +5,15 @@
  * NEVER modify affiliate links, hrefs, tracking params, or button destinations.
  */
 
+/* ─── CANONICAL BREADCRUMB ─────────────────────────────────────────────────── */
+/* Fixes browser-default numbered list rendering on all pages using .breadcrumb */
+.breadcrumb{background:var(--white,#fff);border-bottom:1px solid var(--sand-dark,#D9CDBB);padding:10px var(--gutter,clamp(1.25rem,5vw,3rem))}
+.breadcrumb ol{max-width:var(--max,1200px);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted,#7A7A70)}
+.breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
+.breadcrumb a{color:var(--ocean,#1B5C5C);transition:opacity .15s}
+.breadcrumb a:hover{opacity:.7}
+.breadcrumb li:last-child span{color:var(--ink-soft,#3C3C38);font-weight:600}
+
 /* ─── Shared white-button variables ───────────────────────────────────────── */
 :root {
   --cta-bg:           #ffffff;
