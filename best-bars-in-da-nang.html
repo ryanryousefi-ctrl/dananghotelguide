@@ -114,6 +114,23 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bb-top-pick-img img{width:100%;height:100%;object-fit:cover}
 .bb-top-pick-img-label{position:absolute;bottom:.85rem;left:.85rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.45);padding:.25rem .6rem;border-radius:3px;backdrop-filter:blur(4px)}
 
+/* ── SIGNATURE PICK ─────────────────────────────────────── */
+.bb-sig-pick{background:var(--sand);padding:clamp(3rem,6vw,5rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.bb-sig-pick-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.bb-sig-pick-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);margin-bottom:.85rem}
+.bb-sig-pick-badge::before{content:'';width:24px;height:1px;background:var(--ocean);flex-shrink:0}
+.bb-sig-pick h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
+.bb-sig-pick-type{font-size:.75rem;color:var(--ink-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.1rem}
+.bb-sig-pick-sub{font-size:1rem;font-weight:600;color:var(--ink-soft);margin-bottom:1rem;font-family:var(--font-sans)}
+.bb-sig-pick-desc{font-size:.97rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1.25rem}
+.bb-sig-pick-detail{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin-bottom:1.5rem}
+.bb-sig-detail-tag{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(0,0,0,.12);border-radius:100px;color:var(--ink-muted)}
+.bb-sig-pick-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.82rem;font-weight:700;color:var(--ocean);border-bottom:2px solid var(--ocean);padding-bottom:2px;transition:color .15s,border-color .15s}
+.bb-sig-pick-link:hover{color:var(--ink);border-color:var(--ink)}
+.bb-sig-pick-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/10;position:relative;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.bb-sig-pick-img img{width:100%;height:100%;object-fit:cover}
+.bb-sig-pick-img-label{position:absolute;bottom:.85rem;left:.85rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(0,0,0,.4);padding:.25rem .6rem;border-radius:3px;backdrop-filter:blur(4px)}
+
 /* ── EDITOR PICKS GRID ──────────────────────────────────── */
 .bb-picks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .bb-pick-card{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;cursor:pointer;display:block}
@@ -244,6 +261,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 @media(max-width:1024px){
   .bb-top-pick-inner{grid-template-columns:1fr}
   .bb-top-pick-img{aspect-ratio:16/7}
+  .bb-sig-pick-inner{grid-template-columns:1fr}
+  .bb-sig-pick-img{aspect-ratio:16/7;order:-1}
   .bb-picks-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
@@ -371,6 +390,31 @@ button{font-family:var(--font-sans);cursor:pointer}
     <div class="bb-top-pick-img">
       <img src="images/venue-the-1920s-lounge.jpg" alt="Inside The 1920's Lounge Da Nang — bartenders at the illuminated bar counter, guests seated, warm brick arches and full spirit shelves" loading="eager" width="800" height="600">
       <span class="bb-top-pick-img-label">Editor's Top Pick</span>
+    </div>
+  </div>
+</section>
+
+<!-- DA NANG SIGNATURE PICK -->
+<section class="bb-sig-pick">
+  <div class="bb-sig-pick-inner">
+    <div>
+      <div class="bb-sig-pick-badge">Da Nang Signature Pick</div>
+      <h2>East West Brewing</h2>
+      <p class="bb-sig-pick-type">My Khe Beach &middot; Craft Brewery &middot; $$</p>
+      <p class="bb-sig-pick-sub">Pound for pound, the best combination of view and beer in Da Nang.</p>
+      <p class="bb-sig-pick-desc">Plenty of bars in this city have a good view. Several have decent beer. East West is the only place that delivers both at a genuinely high level simultaneously. The taproom sits directly on My Khe Beach — floor-to-ceiling glass, 1,000 sqm of space across four distinct areas, and the Pacific Ocean filling the frame. The beer is the real thing: a serious brewing operation with a rotating lineup built around a consistent house IPA, Pale Ale, Lager, and Ale. These are not hotel-lobby cocktails dressed up in pint glasses. They are well-made, properly conditioned craft beers that would hold their own in any city.</p>
+      <p class="bb-sig-pick-desc">Come in late afternoon. Order a flight or a cold pint, take a seat facing the beach, and watch the light change over the South China Sea. That specific combination — cold craft beer, My Khe sand, the city behind you — is not something you will find anywhere else in Da Nang. Even if you never normally seek out craft beer, it is worth visiting for what East West does with the setting alone.</p>
+      <div class="bb-sig-pick-detail">
+        <span class="bb-sig-detail-tag">Beachfront My Khe</span>
+        <span class="bb-sig-detail-tag">House-brewed IPA, Pale Ale, Lager, Ale</span>
+        <span class="bb-sig-detail-tag">8 AM &ndash; 1 AM daily</span>
+        <span class="bb-sig-detail-tag">Happy hour weekdays 3&ndash;6 PM</span>
+      </div>
+      <a href="https://eastwestbrewing.vn" target="_blank" rel="nofollow noopener" class="bb-sig-pick-link">Visit East West Brewing &rarr;</a>
+    </div>
+    <div class="bb-sig-pick-img">
+      <img src="images/venue-east-west-brewing.jpg" alt="East West Brewing Da Nang interior at dusk — open-plan dining room with floor-to-ceiling glass, My Khe Beach and ocean visible behind guests" loading="lazy" width="900" height="562">
+      <span class="bb-sig-pick-img-label">Da Nang Signature Pick</span>
     </div>
   </div>
 </section>
