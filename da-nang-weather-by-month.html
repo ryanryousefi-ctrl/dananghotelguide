@@ -83,6 +83,8 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 .nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);border-radius:4px;transition:color .12s,background .12s;letter-spacing:.02em;text-transform:uppercase}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-dropdown-item .di-icon{font-size:.85rem;width:18px;text-align:center;flex-shrink:0;display:none}
+.nav-dd-group-label{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);padding:8px 12px 4px;margin-top:2px}
+.nav-dd-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 8px}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .nav-search-btn{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.15);cursor:pointer;background:transparent;border-radius:4px;color:rgba(255,255,255,.6);transition:background .15s,color .15s}
 .nav-search-btn:hover{background:rgba(255,255,255,.1);color:#fff}
@@ -414,15 +416,20 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
     <div class="nav-dropdown">
       <a href="hoi-an.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hoi An</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Hoi An Travel Guide</a>
+        <div class="nav-dd-group-label">Hoi An</div>
+        <a href="hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Travel Guide</a>
         <a href="da-nang-vs-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Da Nang vs Hoi An</a>
-        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Where to Stay in Hoi An</a>
-        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels Hoi An</a>
-        <a href="best-value-hotels-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Value Hotels</a>
-        <a href="hoi-an-old-town-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Old Town Hotels</a>
-        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>An Bang Beach Hotels</a>
+        <div class="nav-dd-divider"></div>
+        <div class="nav-dd-group-label">Hotels</div>
+        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
+        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Where to Stay</a>
+        <a href="best-value-hotels-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Value</a>
+        <a href="hoi-an-old-town-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Old Town</a>
+        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>An Bang Beach</a>
+        <div class="nav-dd-divider"></div>
+        <div class="nav-dd-group-label">Planning</div>
         <a href="da-nang-airport-to-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Airport to Hoi An</a>
-        <a href="is-hoi-an-cheaper-than-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Is Hoi An Cheaper?</a>
+        <a href="is-hoi-an-cheaper-than-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Cost Comparison</a>
       </div>
     </div>
     <div class="nav-dropdown">
