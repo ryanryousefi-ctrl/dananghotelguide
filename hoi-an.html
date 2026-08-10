@@ -490,6 +490,92 @@ a{color:inherit;text-decoration:none}
 .ha-crosslink a{color:rgba(255,255,255,.9);font-weight:700;border-bottom:1px solid rgba(255,255,255,.3);white-space:nowrap;font-size:.8rem;flex-shrink:0;transition:opacity .15s}
 .ha-crosslink a:hover{opacity:.7}
 
+/* Good to Know */
+.ha-good-know{
+  background:var(--ocean-pale);border-radius:var(--r-md);
+  padding:1.5rem 1.8rem;margin:2rem 0;
+  border-left:3px solid var(--ocean);
+}
+.ha-good-know-label{font-size:.58rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean);margin-bottom:.6rem}
+.ha-good-know p{font-size:.85rem;color:var(--ink-soft);line-height:1.78;margin:0}
+.ha-good-know p+p{margin-top:.7rem}
+
+/* The Tradeoff */
+.ha-tradeoff{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:var(--sand-dark);border:1px solid var(--sand-dark);
+  border-radius:var(--r-md);overflow:hidden;margin:2rem 0;
+}
+.ha-tradeoff-col{background:var(--white);padding:1.5rem 1.8rem}
+.ha-tradeoff-col-label{font-size:.58rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.7rem}
+.ha-tradeoff-col.pro .ha-tradeoff-col-label{color:#2A7A4A}
+.ha-tradeoff-col.con .ha-tradeoff-col-label{color:var(--coral)}
+.ha-tradeoff-col ul{list-style:none;padding:0;margin:0}
+.ha-tradeoff-col li{font-size:.83rem;color:var(--ink-soft);line-height:1.65;padding:.3rem 0;border-bottom:1px solid var(--sand-dark)}
+.ha-tradeoff-col li:last-child{border-bottom:none}
+.ha-tradeoff-col li::before{margin-right:.45rem}
+.ha-tradeoff-col.pro li::before{content:"✓";color:#2A7A4A;font-weight:700}
+.ha-tradeoff-col.con li::before{content:"–";color:var(--coral);font-weight:700}
+@media(max-width:540px){.ha-tradeoff{grid-template-columns:1fr}}
+
+/* Best For tags */
+.ha-best-for{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.ha-best-for-label{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);flex-basis:100%}
+.ha-best-for-tag{background:var(--sand);border:1px solid var(--sand-dark);border-radius:100px;padding:.3rem .85rem;font-size:.75rem;font-weight:600;color:var(--ink-soft)}
+
+/* Signature Pick */
+.ha-sig-pick{
+  position:relative;background:var(--sand);border-radius:var(--r-md);
+  padding:1.6rem 1.8rem 1.6rem 2.2rem;margin:2rem 0;
+  border-left:3px solid #B8901E;
+}
+.ha-sig-pick::before{content:"Hoi An Signature Pick";position:absolute;top:-1px;left:1.8rem;font-size:.55rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#B8901E;background:var(--sand);padding:0 .35rem;transform:translateY(-50%)}
+.ha-sig-pick-name{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:.4rem}
+.ha-sig-pick p{font-size:.83rem;color:var(--ink-soft);line-height:1.75;margin:0}
+.ha-sig-pick a{color:var(--ocean);font-weight:700;border-bottom:1px solid rgba(27,92,92,.25)}
+
+/* Hoiana section */
+.ha-hoiana{
+  background:var(--ocean-deep);
+  padding:clamp(3rem,6vw,5rem) var(--gutter);
+}
+.ha-hoiana-inner{max-width:var(--max);margin:0 auto}
+.ha-hoiana-label{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.55rem}
+.ha-hoiana-heading{font-family:var(--font-serif);font-size:clamp(1.7rem,3.5vw,2.5rem);color:#fff;letter-spacing:-.03em;line-height:1.08;margin-bottom:.85rem;text-wrap:balance}
+.ha-hoiana-heading em{font-style:italic;color:rgba(255,255,255,.55)}
+.ha-hoiana-intro{font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.78;max-width:680px;margin-bottom:2rem}
+.ha-hoiana-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:2px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--r-md);overflow:hidden;margin-bottom:2rem;
+}
+@media(max-width:800px){.ha-hoiana-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){.ha-hoiana-grid{grid-template-columns:1fr}}
+.ha-hoiana-card{
+  background:rgba(255,255,255,.04);
+  padding:1.4rem 1.5rem;
+  transition:background .15s;
+}
+.ha-hoiana-card:hover{background:rgba(255,255,255,.08)}
+.ha-hoiana-card-icon{font-size:1.3rem;margin-bottom:.7rem}
+.ha-hoiana-card-name{font-size:.82rem;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:.4rem;letter-spacing:-.01em}
+.ha-hoiana-card-desc{font-size:.74rem;color:rgba(255,255,255,.48);line-height:1.65}
+.ha-hoiana-cta{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.8rem;font-weight:700;color:rgba(255,255,255,.9);
+  border:1px solid rgba(255,255,255,.25);border-radius:4px;
+  padding:.65rem 1.4rem;transition:background .15s,border-color .15s;
+  margin-top:1.5rem;
+}
+.ha-hoiana-cta:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.45)}
+.ha-hoiana-fact{
+  background:rgba(255,255,255,.05);border-radius:var(--r-sm);
+  padding:1.2rem 1.5rem;margin-top:2rem;
+  font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.7;
+  border:1px solid rgba(255,255,255,.07);
+}
+.ha-hoiana-fact strong{color:rgba(255,255,255,.8)}
+
 /* Footer */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
 .footer-inner{max-width:var(--max);margin:0 auto}
@@ -877,10 +963,96 @@ a{color:inherit;text-decoration:none}
       </a>
     </div>
 
+    <!-- Signature Pick: Anantara -->
+    <div class="ha-sig-pick">
+      <div class="ha-sig-pick-name">Anantara Hoi An Resort</div>
+      <p>The most consistently recommended riverside property. Colonial garden, pool directly on the Thu Bon, and walking distance to the Ancient Town in the evening. <a href="https://www.booking.com/hotel/vn/anantara-hoi-an-resort.html?aid=1784897&sid=hoi-an--anantara-sig" target="_blank" rel="nofollow noopener sponsored">Check availability</a></p>
+    </div>
+
+    <!-- Good to Know -->
+    <div class="ha-good-know">
+      <div class="ha-good-know-label">Good to Know</div>
+      <p>The walk from most riverside hotels to the Ancient Town is 10&ndash;20 minutes depending on where you start. Not all riverfront hotels are equidistant &mdash; Anantara and Little Riverside are the closest. La Siesta and Almanity are slightly further but still walkable in under 25 minutes.</p>
+      <p>Hotel breakfast quality in Hoi An varies significantly. At the mid-range level ($80&ndash;140/night), most include breakfast &mdash; but the quality varies. Anantara's is consistently praised. Check reviews specifically for breakfast rather than assuming it's good.</p>
+    </div>
+
+    <!-- Additional hotels: Wafaifo, Moire, Bellerive, Silk Marina -->
+    <div class="ha-hotel-grid" style="margin-top:1.5rem">
+      <a href="https://www.booking.com/hotel/vn/wafaifo-hotel.html?aid=1784897&sid=hoi-an--wafaifo" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-riverfront-hotels-4e319610.jpg" alt="Wafaifo Hotel Hoi An riverside boutique" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Wafaifo Hotel</h3>
+          <p class="ha-card-desc">A boutique riverside property named after Hoi An's old trading name. Compact rooms, thoughtful design details, and a good position relative to the old quarter. Best for travellers who prioritise atmosphere over large pool facilities.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Riverside &middot; From ~<strong>$75</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/moire-hotel-hoi-an.html?aid=1784897&sid=hoi-an--moire-vignette" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-riverfront-hotels-dc3f1b2f.jpg" alt="Moire Hoi An Vignette Collection IHG boutique hotel" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Moire Hoi An &mdash; Vignette Collection</h3>
+          <p class="ha-card-desc">IHG's Vignette Collection property in Hoi An: boutique positioning, heritage-influenced interiors, and a more curated experience than the brand's standard hotels. The design rewards guests who notice the detail work. Good pool. Solid F&amp;B.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Old Town adjacent &middot; From ~<strong>$120</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/bellerive-hoi-an.html?aid=1784897&sid=hoi-an--bellerive" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-riverfront-hotels-064608a4.jpg" alt="Bellerive Hoi An boutique hotel Thu Bon river" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Bellerive Hoi An</h3>
+          <p class="ha-card-desc">Small, quiet, and genuinely beautiful riverside property. The kind of hotel that doesn't try to impress with amenities but earns repeat visits through atmosphere, attentive staff, and a garden that actually gets used. Honest boutique.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Riverside &middot; From ~<strong>$95</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- The Tradeoff: Old Town vs River -->
+    <div class="ha-tradeoff">
+      <div class="ha-tradeoff-col pro">
+        <div class="ha-tradeoff-col-label">Riverside hotels</div>
+        <ul>
+          <li>Pool access and garden space</li>
+          <li>Better value per dollar</li>
+          <li>Quieter rooms at night</li>
+          <li>Still walkable to Ancient Town</li>
+        </ul>
+      </div>
+      <div class="ha-tradeoff-col con">
+        <div class="ha-tradeoff-col-label">Old Town stays</div>
+        <ul>
+          <li>No-vehicle restrictions at night</li>
+          <li>Narrow lanes with limited parking</li>
+          <li>Often smaller rooms</li>
+          <li>More noise from tourist traffic</li>
+        </ul>
+      </div>
+    </div>
+
     <!-- An Bang Beach -->
     <div style="margin-top:3rem">
       <p style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.4rem">An Bang Beach</p>
       <p style="font-size:.84rem;color:var(--ink-soft);line-height:1.72;max-width:640px;margin-bottom:1.2rem">4km from the Ancient Town. The better beach near Hoi An &mdash; quieter than Cua Dai, better restaurants, decent surf. Most resorts run shuttles into the old quarter.</p>
+    </div>
+
+    <div class="ha-best-for">
+      <div class="ha-best-for-label">Best for</div>
+      <span class="ha-best-for-tag">Beach holidays</span>
+      <span class="ha-best-for-tag">Slow travel</span>
+      <span class="ha-best-for-tag">Couples wanting sand over culture</span>
+      <span class="ha-best-for-tag">Parents with young children</span>
     </div>
 
     <div class="ha-hotel-grid">
@@ -942,6 +1114,102 @@ a{color:inherit;text-decoration:none}
       </a>
     </div>
 
+    <!-- More An Bang hotels -->
+    <div class="ha-hotel-grid" style="margin-top:2px">
+      <a href="https://www.booking.com/hotel/vn/sol-an-bang-beach.html?aid=1784897&sid=hoi-an--sol-an-bang" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-beach-hotels-8bc40b10.webp" alt="Sol An Bang Beach Hoi An resort pool" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Sol An Bang Beach Resort</h3>
+          <p class="ha-card-desc">A relaxed, colorful beach-facing property with direct sand access and a pool that sits between the hotel and the waterline. Service is easy-going. Good value for An Bang. Best for guests who want a beachy, unpretentious stay without the resort markup.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">An Bang &middot; From ~<strong>$65</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/the-linh-seaside-villa.html?aid=1784897&sid=hoi-an--the-linh" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-beach-hotels-30b63280.webp" alt="The Linh Seaside Villa An Bang beach bungalows" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">The Linh Seaside Villa</h3>
+          <p class="ha-card-desc">Quiet, villa-style accommodation steps from An Bang Beach. Small property, personal service, and a garden that keeps the noise out. Not a resort &mdash; more like a well-run guesthouse with genuine character and a good outdoor pool.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">An Bang &middot; From ~<strong>$50</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/boutique-hoi-an-resort.html?aid=1784897&sid=hoi-an--boutique-hoi-an" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-beach-hotels-064608a4.jpg" alt="Boutique Hoi An Resort Cua Dai beachfront" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Boutique Hoi An Resort</h3>
+          <p class="ha-card-desc">A well-maintained Cua Dai option with a large pool and landscaped gardens. The beach has eroded here, but the pool and grounds compensate. Room quality is above average for the price bracket. Good for couples and families who want garden resort atmosphere.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Cua Dai &middot; From ~<strong>$80</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Good to Know: An Bang -->
+    <div class="ha-good-know">
+      <div class="ha-good-know-label">Good to Know — An Bang Beach</div>
+      <p>The beach clubs at An Bang (Soul Kitchen, La Plage, An Bang Beach Shack) are open to non-guests and are generally the better option for lunch and afternoon drinks compared to hotel restaurants. Walking from your hotel to a beach club and renting sun loungers is standard practice here.</p>
+      <p>Motorbike rental from the Ancient Town to An Bang is around 100,000&ndash;150,000 VND/day. Grab bikes are easy. If you're staying at An Bang and want to reach the old quarter in the evenings, factor in transport costs of 40,000&ndash;80,000 VND each way.</p>
+    </div>
+
+    <!-- More beach/resort hotels -->
+    <div style="margin-top:2rem">
+      <p style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.4rem">More Hoi An Beach Resorts</p>
+    </div>
+    <div class="ha-hotel-grid">
+      <a href="https://www.booking.com/hotel/vn/hoi-an-beach-resort.html?aid=1784897&sid=hoi-an--hoi-an-beach-resort" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-beach-hotels-5c163732.webp" alt="Hoi An Beach Resort and Spa Cua Dai beachfront" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Hoi An Beach Resort &amp; Spa</h3>
+          <p class="ha-card-desc">A large, established Cua Dai property with multiple pools, a spa, and a reliable buffet breakfast. The beachfront is the real selling point &mdash; despite erosion, there's still sand to use. A better pick for families than couples seeking intimacy.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Cua Dai Beach &middot; From ~<strong>$90</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/the-pearl-hoi-an.html?aid=1784897&sid=hoi-an--the-pearl" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/best-hotels-in-hoi-an-e25abed6.jpg" alt="The Pearl Hoi An boutique hotel pool and garden" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">The Pearl Hoi An</h3>
+          <p class="ha-card-desc">Mid-scale boutique property with a pool and consistent guest satisfaction scores. Not the most memorable design, but execution is reliable &mdash; rooms are clean, breakfast arrives on time, staff are responsive. A sensible mid-range option near the old quarter.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Town adjacent &middot; From ~<strong>$65</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/royal-beachfront-villas.html?aid=1784897&sid=hoi-an--royal-beachfront" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-beach-hotels-a2c685c6.webp" alt="Royal Beachfront Villas An Bang pool villas Hoi An" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Royal Beachfront Villas</h3>
+          <p class="ha-card-desc">Private pool villas steps from An Bang Beach. The villa format works well here &mdash; you get genuinely private outdoor space, which is rare in Hoi An. Suited to honeymooners or small groups who want exclusivity over hotel amenities.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">An Bang &middot; From ~<strong>$120</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+    </div>
+
     <!-- Luxury / Four Seasons -->
     <div style="margin-top:3rem">
       <p style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.4rem">Luxury</p>
@@ -966,9 +1234,91 @@ a{color:inherit;text-decoration:none}
       </div>
     </a>
 
+    <!-- Silk Marina and Soluna -->
+    <div style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--sand-dark);border:1px solid var(--sand-dark);border-radius:var(--r-md);overflow:hidden">
+      <a href="https://www.booking.com/hotel/vn/silk-marina.html?aid=1784897&sid=hoi-an--silk-marina" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-riverfront-hotels-064608a4.jpg" alt="Silk Marina Hoi An riverside boutique hotel pool" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Silk Marina</h3>
+          <p class="ha-card-desc">A riverside boutique with a strong design identity &mdash; silk-inspired interiors, earthy tones, and a pool courtyard that photographs better than most properties twice the price. Walking distance to the Ancient Town. The rooms are smaller than they look in photos but the overall experience delivers.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Riverside &middot; From ~<strong>$85</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/soluna-dannam-hoi-an.html?aid=1784897&sid=hoi-an--soluna-dannam" target="_blank" rel="nofollow noopener sponsored" class="ha-card">
+        <div class="ha-card-img">
+          <img src="images/da-nang-riverfront-hotels-dc3f1b2f.jpg" alt="Soluna D'Annam Hoi An boutique hotel garden pool" width="500" height="333" loading="lazy">
+        </div>
+        <div class="ha-card-body">
+          <h3 class="ha-card-name">Soluna D'Annam</h3>
+          <p class="ha-card-desc">A boutique property that sits in the quieter zone between the Ancient Town and the beach road. Pool, garden, and a pace that rewards guests who aren't trying to squeeze every attraction into two days. Not for first-timers who want to maximise sightseeing; excellent for those who want to slow down.</p>
+        </div>
+        <div class="ha-card-foot">
+          <span class="ha-card-meta">Town area &middot; From ~<strong>$70</strong></span>
+          <span class="ha-card-cta">View hotel &rarr;</span>
+        </div>
+      </a>
+    </div>
+
     <div class="ha-crosslink" style="margin-top:2rem">
       <p>Looking for a full ranked list with more options across every budget?</p>
       <a href="best-hotels-in-hoi-an.html">All Hoi An hotels &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOIANA INTEGRATED RESORT — major feature section -->
+<section class="ha-hoiana" id="hoiana">
+  <div class="ha-hoiana-inner">
+    <p class="ha-hoiana-label">Quang Nam Province &middot; 20 min south of Hoi An</p>
+    <h2 class="ha-hoiana-heading">Hoiana &mdash; <em>the integrated resort</em></h2>
+    <p class="ha-hoiana-intro">The largest resort development in central Vietnam opened in phases from 2020 onward, 10km south of Hoi An's Ancient Town. It sits on 1,000 hectares of beachfront land with a casino, three golf courses, multiple hotel brands, and direct access to a quiet stretch of Cua Dai coast. This is not a Hoi An day trip. It is a separate destination that makes sense as a 2&ndash;3 night base, combined with day trips into the Ancient Town.</p>
+
+    <div class="ha-hoiana-grid">
+      <div class="ha-hoiana-card">
+        <div class="ha-hoiana-card-icon">♠</div>
+        <div class="ha-hoiana-card-name">Hoiana Casino</div>
+        <div class="ha-hoiana-card-desc">Open to foreign passport holders. Table games, slots, and a high-limit room. The main reason most visitors even know Hoiana exists.</div>
+      </div>
+      <div class="ha-hoiana-card">
+        <div class="ha-hoiana-card-icon">⛳</div>
+        <div class="ha-hoiana-card-name">Three Golf Courses</div>
+        <div class="ha-hoiana-card-desc">Designed by Robert Trent Jones Jr. Considered among the top courses in Southeast Asia. Serious equipment, serious greens fees.</div>
+      </div>
+      <div class="ha-hoiana-card">
+        <div class="ha-hoiana-card-icon">🏖</div>
+        <div class="ha-hoiana-card-name">Beachfront Access</div>
+        <div class="ha-hoiana-card-desc">A quiet, uncrowded stretch of Cua Dai coast. Better sand than the public sections near town, calmer than An Bang in peak season.</div>
+      </div>
+      <div class="ha-hoiana-card">
+        <div class="ha-hoiana-card-icon">🏨</div>
+        <div class="ha-hoiana-card-name">Multiple Hotel Brands</div>
+        <div class="ha-hoiana-card-desc">Rosewood, Hoiana Hotel, and The Residences, with more properties planned. The Rosewood is the standout luxury option in this zone.</div>
+      </div>
+    </div>
+
+    <!-- Hoiana hotel features -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);overflow:hidden;margin-bottom:2rem">
+      <a href="https://www.booking.com/hotel/vn/rosewood-hoi-an.html?aid=1784897&sid=hoi-an--rosewood-hoiana" target="_blank" rel="nofollow noopener sponsored" style="background:rgba(255,255,255,.05);padding:1.8rem;display:block;transition:background .15s;color:inherit;text-decoration:none">
+        <p style="font-size:.55rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.5rem">Ultra-Luxury &middot; Hoiana</p>
+        <p style="font-family:var(--font-serif);font-size:1.1rem;color:#fff;letter-spacing:-.02em;margin-bottom:.55rem">Rosewood Hoi An</p>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.72;margin-bottom:.8rem">The anchor luxury property at Hoiana. Pool villas, a private beach club, and the most considered interiors of any hotel in the Hoi An region. Service is Rosewood-standard. If you are asking whether it is worth the rate, the answer is: for a honeymoon or milestone trip, yes. For a week-long stay, probably not &mdash; you will want to leave the property more than the rate justifies.</p>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.35)">From ~$450/night &middot; <span style="color:rgba(255,255,255,.7);font-weight:600">View hotel &rarr;</span></p>
+      </a>
+      <a href="https://www.booking.com/hotel/vn/hoiana-hotel-suites.html?aid=1784897&sid=hoi-an--hoiana-hotel-suites" target="_blank" rel="nofollow noopener sponsored" style="background:rgba(255,255,255,.03);padding:1.8rem;display:block;transition:background .15s;color:inherit;text-decoration:none">
+        <p style="font-size:.55rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.5rem">Upper Mid-Range &middot; Hoiana</p>
+        <p style="font-family:var(--font-serif);font-size:1.1rem;color:#fff;letter-spacing:-.02em;margin-bottom:.55rem">Hoiana Hotel &amp; Suites</p>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.72;margin-bottom:.8rem">The more accessible entry point to Hoiana. Comfortable rooms, resort pool access, and proximity to the casino without the Rosewood price. Not a design hotel. Good for golfers and guests who want the Hoiana facilities without overpaying for a room they won't spend much time in.</p>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.35)">From ~$130/night &middot; <span style="color:rgba(255,255,255,.7);font-weight:600">View hotel &rarr;</span></p>
+      </a>
+    </div>
+
+    <div class="ha-hoiana-fact">
+      <strong>Getting there:</strong> Hoiana is 10km south of Hoi An's Ancient Town along the coastal road &mdash; around 20 minutes by Grab. The resort runs a daily shuttle between Hoiana and Hoi An Old Town (check with your hotel for times). From Da Nang International Airport, allow 50&ndash;60 minutes. The casino is for foreign passport holders only; show your passport at reception.
     </div>
   </div>
 </section>
