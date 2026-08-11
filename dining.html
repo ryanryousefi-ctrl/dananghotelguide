@@ -481,6 +481,11 @@ button{font-family:var(--font-sans);cursor:pointer}
   .drf-search-wrap{max-width:100%}
   .drf-mobile-filter-btn{width:100%;justify-content:center}
 }
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 </head>
 <body>
@@ -841,6 +846,10 @@ button{font-family:var(--font-sans);cursor:pointer}
 </section>
 
 <!-- ── EDITORIAL ───────────────────────────────────────────── -->
+
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-fishing-boats-da-nang-skyline.jpg" alt="Vietnamese fishing boats Da Nang city skyline Han River" loading="lazy">
+</figure>
 <section class="drf-editorial">
   <div class="drf-editorial-inner">
     <h2 class="drf-ed-h2">About the 2026 <em>Michelin Guide</em> in Da Nang</h2>
@@ -875,6 +884,10 @@ button{font-family:var(--font-sans);cursor:pointer}
 </section>
 
 <!-- ── CTA ─────────────────────────────────────────────────── -->
+
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Need a hotel to match your dining plans?</p>

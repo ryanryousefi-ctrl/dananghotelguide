@@ -641,7 +641,12 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
     .cmp-table tr:nth-child(even) td{background:var(--sand)}
     .tick{color:var(--ocean);font-weight:700}
     .cross{color:var(--coral);font-weight:700}
-  </style>
+  
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -910,7 +915,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 
   <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Villas</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-hotel-strip.jpg" alt="My Khe beachfront hotel strip palm trees Da Nang skyline" loading="lazy">
+</figure>
+<h2>Rooms &amp; <em>Villas</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Hyatt Regency, Rooms</h3>
@@ -960,7 +969,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
   </div>
 
   <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel Is <em>Best For</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>Who Each Hotel Is <em>Best For</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <img class="scenic-img" src="images/luxury-hotels-da-nang-5c163732.webp" alt="Da Nang Vietnam travel" loading="lazy" width="900" height="240">
@@ -1032,7 +1045,11 @@ h1.hero-h1 em{font-style:italic;color:rgba(255,255,255,.85)}
 
 
   <div style="max-width:860px;margin:2rem auto;padding:0 var(--gutter) 3rem">
-    <h2 style="font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid)">More <em style="font-style:italic;color:var(--ocean)">Comparisons</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat Da Nang aerial infinity pool villas and beach" loading="lazy" style="object-position:center 35%">
+</figure>
+<h2 style="font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand-mid)">More <em style="font-style:italic;color:var(--ocean)">Comparisons</em></h2>
     <div style="display:flex;flex-wrap:wrap;gap:.75rem">
       <a href="pullman-vs-sheraton-da-nang.html" style="display:inline-block;padding:.6rem 1.2rem;background:rgba(27,92,92,.08);border:1px solid rgba(27,92,92,.2);border-radius:100px;color:var(--ocean);font-size:.82rem;font-weight:600">Pullman vs Sheraton</a>
       <a href="melia-vs-radisson-blu-da-nang.html" style="display:inline-block;padding:.6rem 1.2rem;background:rgba(27,92,92,.08);border:1px solid rgba(27,92,92,.2);border-radius:100px;color:var(--ocean);font-size:.82rem;font-weight:600">Melia vs Radisson Blu</a>

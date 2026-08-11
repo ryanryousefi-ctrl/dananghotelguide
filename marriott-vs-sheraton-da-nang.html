@@ -251,6 +251,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Marriott vs Sheraton Grand Da Nang 2026 — Side-by-Side","description":"Marriott Resort vs Sheraton Grand Da Nang: both on Non Nuoc Beach, both Bonvoy properties compared.","url":"https://www.dananghotelguide.com/marriott-vs-sheraton-da-nang.html","datePublished":"2026-05-24","dateModified":"2026-05-24","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -518,7 +523,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </div>
 
   <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Suites</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-hotel-strip.jpg" alt="My Khe beachfront hotel strip palm trees Da Nang skyline" loading="lazy">
+</figure>
+<h2>Rooms &amp; <em>Suites</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Marriott Resort, Rooms</h3>
@@ -569,7 +578,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </div>
 
   <div class="cmp-section" id="bonvoy">
-    <h2>Marriott <em>Bonvoy</em> Loyalty</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-premier-village-villas-aerial.jpg" alt="Premier Village Da Nang white villas palm grove aerial" loading="lazy">
+</figure>
+<h2>Marriott <em>Bonvoy</em> Loyalty</h2>
     <p>Both hotels earn and redeem Marriott Bonvoy points, so loyalty members can use either without compromising their programme. A few practical notes:</p>
     <ul style="padding-left:1.5rem;color:var(--ink-soft);font-size:.95rem;line-height:2;margin-bottom:1rem;">
       <li>Earn rates are based on spend, not nights - higher rack rates at the Marriott may generate marginally more points per stay</li>
@@ -609,7 +622,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </div>
 
   <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat Da Nang aerial infinity pool villas and beach" loading="lazy" style="object-position:center 35%">
+</figure>
+<h2>Final Verdict</h2>
     <p>The decision is actually straightforward: travelling with kids, choose the Sheraton Grand. The water complex is genuinely excellent and will make your trip for children of almost any age.</p>
 <p>No other Non Nuoc hotel comes close to matching it for family entertainment.</p>
     <p>Travelling as a couple or solo, choose the Marriott Resort. The quieter atmosphere, stronger spa, and more refined experience make for a better adult stay.</p>

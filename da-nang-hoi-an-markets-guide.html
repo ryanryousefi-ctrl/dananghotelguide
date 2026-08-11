@@ -325,6 +325,11 @@ button{font-family:var(--font-sans);cursor:pointer}
   .mg-mobile-filter-btn{width:100%;justify-content:center}
   .buy-grid{grid-template-columns:1fr}
 }
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 </head>
 <body>
@@ -586,6 +591,14 @@ button{font-family:var(--font-sans);cursor:pointer}
 </section>
 
 <!-- WHAT TO BUY -->
+
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-fishing-boats-da-nang-skyline.jpg" alt="Vietnamese fishing boats Da Nang city skyline Han River" loading="lazy">
+</figure>
+
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
 <section class="mg-section" style="background:var(--white);border-top:1px solid var(--sand-dark)">
   <div class="mg-inner">
     <span class="mg-label">Shopping guide</span>

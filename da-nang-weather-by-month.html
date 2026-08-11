@@ -364,6 +364,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
   .aff-callout{flex-direction:column;align-items:flex-start}
   .month-strip{grid-template-columns:repeat(4,1fr)}
 }
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 
 <!-- Google tag -->
@@ -698,7 +703,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 <section class="wx-section" style="background:var(--sand)">
   <div class="wx-wide">
     <div class="wx-section-label">Climate data</div>
-    <h2 class="wx-section-h2">Temperature &amp; <em>Rainfall Charts</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2 class="wx-section-h2">Temperature &amp; <em>Rainfall Charts</em></h2>
     <p class="wx-section-sub">Long-term monthly averages from VNMHA. The rainfall spike in October is not a typo.</p>
 
     <!-- Temperature chart -->
@@ -883,7 +892,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 <section class="wx-section" style="background:var(--bg)">
   <div class="wx-wide">
     <div class="wx-section-label">Month by month</div>
-    <h2 class="wx-section-h2">Every Month, <em>In Detail</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2 class="wx-section-h2">Every Month, <em>In Detail</em></h2>
     <p class="wx-section-sub">What it's actually like on the ground — not averages, but conditions.</p>
     <div class="month-cards-grid">
 
@@ -1095,7 +1108,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 <section class="wx-section" style="background:var(--bg)">
   <div class="wx-narrow">
     <div class="wx-section-label">Context</div>
-    <h2 class="wx-section-h2">What Rain <em>Actually Means</em> Here</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-son-tra-lady-buddha-aerial.jpg" alt="Son Tra Peninsula Lady Buddha aerial coastal cove Da Nang" loading="lazy">
+</figure>
+<h2 class="wx-section-h2">What Rain <em>Actually Means</em> Here</h2>
     <div class="rain-explainer">
       <h3>The difference between 66mm and 620mm</h3>
       <p>Rainfall averages hide the real picture. 66mm in January (spread across 14 days) means occasional showers — grey sky, some drizzle, then it clears. 620mm in October (21 rain days) means sustained heavy downpours, flooding in low-lying areas, and beach conditions that are simply unsafe.</p>

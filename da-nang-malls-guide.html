@@ -400,6 +400,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 .atb-link{color:var(--ocean,#1B5C5C);font-weight:600}
 .atb-link:hover{text-decoration:underline}
 @media(max-width:500px){.author-trust-block{flex-direction:column;gap:.75rem}.atb-avatar{width:38px;height:38px}}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
@@ -753,7 +758,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       <div class="mall-card-header">
         <div class="mall-card-title-wrap">
           <div class="mall-card-eyebrow">Riverside Location</div>
-          <h2>Indochina Riverside Mall</h2>
+          
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2>Indochina Riverside Mall</h2>
           <div class="mall-card-sub">74 Bạch Đằng, Hải Châu · Han River frontage, city centre</div>
         </div>
         <div class="mall-stars">
@@ -884,7 +893,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       <div class="mall-card-header">
         <div class="mall-card-title-wrap">
           <div class="mall-card-eyebrow">Budget Hypermarket</div>
-          <h2>Big C Da Nang</h2>
+          
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-fishing-boats-da-nang-skyline.jpg" alt="Vietnamese fishing boats Da Nang city skyline Han River" loading="lazy">
+</figure>
+<h2>Big C Da Nang</h2>
           <div class="mall-card-sub">257 Hùng Vương, Thanh Khê District · West of city centre</div>
         </div>
         <div class="mall-stars">
@@ -1022,7 +1035,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       </table>
     </div>
 
-    <h2>What to Buy at Da Nang Malls</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-lady-buddha-han-river-skyline.jpg" alt="Lady Buddha full statue Han River Da Nang city skyline" loading="lazy">
+</figure>
+<h2>What to Buy at Da Nang Malls</h2>
     <div class="buy-grid">
       <div class="buy-card">
         <div class="buy-icon">☕</div>

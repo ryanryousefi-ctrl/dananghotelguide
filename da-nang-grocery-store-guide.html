@@ -346,6 +346,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 }
 .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -616,7 +621,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       <div class="mall-card-header">
         <div class="mall-card-title-wrap">
           <div class="mall-card-eyebrow">Store 01 · Convenience</div>
-          <h2>Full Market</h2>
+          
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2>Full Market</h2>
           <div class="mall-card-sub">The grab-and-go chain, snacks, beer, dry goods, not much else</div>
         </div>
         <div class="mall-stars">
@@ -777,7 +786,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       <div class="mall-card-header">
         <div class="mall-card-title-wrap">
           <div class="mall-card-eyebrow">Store 03 · Vietnamese Chain</div>
-          <h2>Winmart</h2>
+          
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-fishing-boats-da-nang-skyline.jpg" alt="Vietnamese fishing boats Da Nang city skyline Han River" loading="lazy">
+</figure>
+<h2>Winmart</h2>
           <div class="mall-card-sub">Vast selection across every category, the most complete everyday supermarket in Da Nang</div>
         </div>
         <div class="mall-stars">
@@ -942,7 +955,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
           <div class="mall-card-eyebrow">Store 05 · Warehouse Giant</div>
           <p class="pull-quote">"For day-to-day shopping, Da Nang's best combination is: local wet market for produce and fresh fish at local prices, VinMart or Co.op Mart for packaged goods, and Lotte Mart for western imports and household items."</p>
 
-    <h2>MegaMart</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>MegaMart</h2>
           <div class="mall-card-sub">The COSTCO of Da Nang, enormous selection across every category at the lowest prices in the city</div>
         </div>
         <div class="mall-stars">
@@ -1102,7 +1119,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
       </div>
     </div>
 
-    <h2>What to Buy Where</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-lady-buddha-han-river-skyline.jpg" alt="Lady Buddha full statue Han River Da Nang city skyline" loading="lazy">
+</figure>
+<h2>What to Buy Where</h2>
     <p>A quick reference grid for specific grocery needs, which store handles each category best.</p>
 
     <div class="buy-grid">

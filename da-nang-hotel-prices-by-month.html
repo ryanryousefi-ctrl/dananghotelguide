@@ -432,6 +432,11 @@ a{text-decoration:none;color:inherit}
 /* ── SECTION LABEL ── */
 .section-eyebrow{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ocean);margin-bottom:.4rem;display:flex;align-items:center;gap:8px}
 .section-eyebrow::before{content:'';display:block;width:16px;height:1px;background:var(--ocean)}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -757,7 +762,11 @@ a{text-decoration:none;color:inherit}
     <p class="table-note">★ Tet pricing applies to approximately 5–7 days around the Lunar New Year. In 2026, Tet falls on January 29, meaning late January also sees elevated rates across all categories.</p>
 
     <!-- SECTION 2: PEAK VS LOW -->
-    <h2 id="savings">Peak vs. Low Season: How Much Can You Save?</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-hotel-strip.jpg" alt="My Khe beachfront hotel strip palm trees Da Nang skyline" loading="lazy">
+</figure>
+<h2 id="savings">Peak vs. Low Season: How Much Can You Save?</h2>
 
     <div class="stat-row">
       <div class="stat-card sc-peak">
@@ -815,7 +824,11 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- SECTION 3: YoY TRENDS -->
-    <h2 id="trends">Year-Over-Year Trends: 2024 to 2026</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat Da Nang aerial infinity pool villas and beach" loading="lazy" style="object-position:center 35%">
+</figure>
+<h2 id="trends">Year-Over-Year Trends: 2024 to 2026</h2>
 
     <div class="table-wrap">
       <table class="data-table">
@@ -872,7 +885,11 @@ a{text-decoration:none;color:inherit}
     </div>
 
     <!-- SECTION 4: BEST TIME -->
-    <h2 id="best-time">Best Time to Visit: Matched to Your Budget</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2 id="best-time">Best Time to Visit: Matched to Your Budget</h2>
 
     <div class="time-grid">
       <div class="time-card">

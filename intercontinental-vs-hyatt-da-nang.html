@@ -328,6 +328,11 @@ img{display:block;max-width:100%}
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 
   <script type="application/ld+json">
@@ -612,7 +617,11 @@ img{display:block;max-width:100%}
 <!-- COMPARISON TABLE -->
 <div style="background:var(--sand);padding:3rem 0">
   <div class="section-inner">
-    <h2 style="font-family:var(--font-serif);font-size:clamp(1.3rem,2.5vw,1.8rem);margin-bottom:1.25rem">Quick <em style="font-style:italic;color:var(--ocean)">Comparison</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-son-tra-lady-buddha-aerial.jpg" alt="Son Tra Peninsula Lady Buddha aerial coastal cove Da Nang" loading="lazy">
+</figure>
+<h2 style="font-family:var(--font-serif);font-size:clamp(1.3rem,2.5vw,1.8rem);margin-bottom:1.25rem">Quick <em style="font-style:italic;color:var(--ocean)">Comparison</em></h2>
     <div class="cmp-table-wrap">
       <table class="cmp-table">
         <thead>
@@ -704,7 +713,11 @@ img{display:block;max-width:100%}
     </div>
 
     <div class="cmp-section">
-      <h2>Location &amp; <em>Access</em></h2>
+      
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat Da Nang aerial infinity pool villas and beach" loading="lazy" style="object-position:center 35%">
+</figure>
+<h2>Location &amp; <em>Access</em></h2>
       
       <p>Location is where the properties diverge most sharply. The InterContinental sits inside the Son Tra Nature Reserve, 25–30 minutes from Da Nang city and 25 minutes from Hoi An.</p>
 <p>You are committing to the resort when you check in. If you want to eat outside, explore street food, or browse the city, you are paying for a taxi each time.</p>
@@ -728,7 +741,11 @@ img{display:block;max-width:100%}
     </div>
 
     <div class="cmp-section">
-      <h2>Pools, Beach &amp; <em>Amenities</em></h2>
+      
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-lady-buddha-closeup-boats.jpg" alt="Lady Buddha Son Tra Peninsula Da Nang profile fishing boats" loading="lazy">
+</figure>
+<h2>Pools, Beach &amp; <em>Amenities</em></h2>
       
       <p>The InterContinental has five distinct pool environments on five levels, including the main lagoon pool and a beach pool at bay level. The spa, Mi Sol Spa, is one of the better resort spas in Vietnam.</p>
 <p>La Maison 1888 is MICHELIN-recognised and the most serious restaurant in any Da Nang resort. The Long Bar and Citron provide strong supporting options.</p>

@@ -202,6 +202,11 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Melia vs Hyatt Regency Da Nang 2026, Non Nuoc Beach Resorts","description":"Melia Da Nang Beach Resort vs Hyatt Regency Da Nang compared for 2026.","url":"https://www.dananghotelguide.com/melia-vs-hyatt-regency-da-nang.html","datePublished":"2026-05-09","dateModified":"2026-05-09","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -472,7 +477,11 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
   </div>
 
   <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>The Level</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-hotel-strip.jpg" alt="My Khe beachfront hotel strip palm trees Da Nang skyline" loading="lazy">
+</figure>
+<h2>Rooms &amp; <em>The Level</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Melia Da Nang, Rooms</h3>
@@ -521,7 +530,11 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
   </div>
 
   <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat Da Nang aerial infinity pool villas and beach" loading="lazy" style="object-position:center 35%">
+</figure>
+<h2>Who Each Hotel <em>Is Best For</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Choose Melia Da Nang if&hellip;</h3>
@@ -561,7 +574,11 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
   </div>
 
   <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>More <em>Comparisons</em></h2>
     <div class="cmp-links">
       <a href="melia-vs-radisson-blu-da-nang.html" class="cmp-link-btn">Melia vs Radisson Blu</a>
       <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>

@@ -322,6 +322,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 .vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
 .vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
 .vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -565,7 +570,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 
     <img class="scenic-img" src="https://images.unsplash.com/photo-1436491865332-7a61d2539077?w=900&h=240&fit=crop&q=75" alt="Da Nang International Airport terminal exterior" width="900" height="240" loading="lazy">
 
-    <h2>The Only Transport Advice You Actually Need</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-airport-terminal.jpg" alt="Da Nang International Airport glass facade terminal DAD" loading="lazy">
+</figure>
+<h2>The Only Transport Advice You Actually Need</h2>
 
     <div class="grab-callout">
       <div class="grab-callout-label">The bottom line, upfront</div>
@@ -652,7 +661,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
     <div class="warning-box"><p><strong>Surge pricing tip:</strong> If Grab quotes you something that looks higher than the table above, it usually means peak hours (7–9am, 5–7pm) or it just rained. Wait 10 minutes and refresh, prices typically drop back quickly.</p>
 <p>If you're not in a rush, it's worth the wait.</p></div>
 
-    <h2>SIM Cards, Get One Before You Leave the Hall</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>SIM Cards, Get One Before You Leave the Hall</h2>
     <p>Three carriers have counters right inside the arrivals hall, staffed for every international flight. This is not optional, you need data to use Grab, and you want Grab.</p>
 <p>Bring your passport, it takes five minutes, and it'll cost you around $7 for a month of data.</p>
 
@@ -692,7 +705,11 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 
     <p class="pull-quote">The airport exchange rate is fine. Don't wait for a 'better' rate in the city — the difference on $500 is maybe $5, and you'll need cash immediately for SIM cards and Grab if you're paying cash.</p>
 
-    <h2>Luggage Storage</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2>Luggage Storage</h2>
     <p>Airport-operated luggage storage is available in both the arrivals and departures areas, running approximately 30,000–50,000 VND per bag per day, with lockers in small and large sizes. Most useful if you're landing and heading straight to Hoi An for the day before checking in, drop your bags here and travel light.</p>
 
     <h2>Lounges</h2>

@@ -142,6 +142,11 @@
 .footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;font-size:.7rem;color:rgba(255,255,255,.25)}
 @media(max-width:768px){.budget-tiers{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 </head>
 <body>
@@ -199,13 +204,21 @@
 
   <div class="gd-pick gd-pick-sig">
     <div class="gd-pick-label">Da Nang Signature Pick</div>
-    <h2>The Food Value Here Is Exceptional</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2>The Food Value Here Is Exceptional</h2>
     <p>Street food and local restaurants in Da Nang consistently deliver better meals at lower prices than Hoi An, Hanoi, or Da Lat. A full banh mi is 20,000-30,000 VND ($1.00-1.30). A bowl of mi quang is 40,000-55,000 VND ($1.75-2.40). Even sit-down local restaurants rarely break 100,000 VND per person. Budget more elsewhere; eat as much as you want here.</p>
   </div>
 
   <div class="gd-section">
     <div class="gd-section-label">Daily Budget Tiers</div>
-    <h2>What Your <em>Budget Gets You</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>What Your <em>Budget Gets You</em></h2>
   </div>
 
   <div class="budget-tiers">
@@ -234,7 +247,11 @@
 
   <div class="gd-section" style="margin-top:2.5rem">
     <div class="gd-section-label">Cost breakdown</div>
-    <h2>What Things <em>Actually Cost</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-fishing-boats-da-nang-skyline.jpg" alt="Vietnamese fishing boats Da Nang city skyline Han River" loading="lazy">
+</figure>
+<h2>What Things <em>Actually Cost</em></h2>
   </div>
 
   <div class="cost-table-wrap">

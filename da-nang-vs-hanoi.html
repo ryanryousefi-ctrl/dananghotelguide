@@ -351,6 +351,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* Inline broll photo breaks */
+.art-broll{display:block;width:100%;margin:2.5rem 0;position:relative;height:clamp(180px,25vw,360px);overflow:hidden;border-radius:8px}
+.art-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.art-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.12) 0%,rgba(10,28,28,.03) 40%,rgba(10,28,28,.03) 60%,rgba(10,28,28,.12) 100%)}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -621,7 +626,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 
   <!-- Culture & History -->
   <div class="cmp-section" id="culture">
-    <h2>Culture &amp; <em>History</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city at dusk Marble Mountains sunset skyline" loading="lazy">
+</figure>
+<h2>Culture &amp; <em>History</em></h2>
     <div class="cmp-grid">
       <div class="cmp-card">
         <h3>Da Nang's Cultural Assets</h3>
@@ -702,7 +711,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 
   <!-- Pros & Cons -->
   <div class="cmp-section" id="pros-cons">
-    <h2>Pros &amp; <em>Cons</em></h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-my-khe-beach-aerial-coastline.jpg" alt="My Khe Beach Da Nang aerial view long straight coastline" loading="lazy" style="object-position:center 40%">
+</figure>
+<h2>Pros &amp; <em>Cons</em></h2>
 
     <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.75rem">DA NANG</p>
     <div class="pros-cons-grid">
@@ -856,7 +869,11 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 
   <!-- Final Verdict -->
   <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
+    
+<figure class="art-broll" aria-hidden="true">
+  <img src="images/broll-son-tra-lady-buddha-aerial.jpg" alt="Son Tra Peninsula Lady Buddha aerial coastal cove Da Nang" loading="lazy">
+</figure>
+<h2>Final Verdict</h2>
     <p>Da Nang and Hanoi answer different questions. Da Nang answers: where should I go for a beach holiday in Vietnam with good food, easy logistics, and hotel value?</p>
 <p>Hanoi answers: where should I go to understand what Vietnam actually is, its history, its street life, its intellectual and political identity?</p>
     <p><strong style="color:rgba(255,255,255,.8)">Choose Da Nang if:</strong> you want beach access, warm reliable weather, outdoor life, family infrastructure, or digital nomad capability. It's Vietnam's Miami, built to make you comfortable, not to challenge you.</p>
