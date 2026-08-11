@@ -219,6 +219,16 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 .gold-callout .local-callout-label{color:var(--gold,#B8901E)}
 .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+.gd-hero{position:relative;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;background:#0A0A0A}
+.gd-hero-img{position:absolute;inset:0;background-size:cover;background-position:center}
+.gd-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.35) 55%,transparent 100%)}
+.gd-hero-content{position:relative;z-index:1;width:100%;max-width:var(--max,1160px);margin:0 auto;padding:3rem clamp(1.25rem,5vw,3rem)}
+.gd-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem}
+.gd-hero-h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.75rem);color:#fff;line-height:1.05;letter-spacing:-.03em;margin-bottom:.75rem}
+.gd-hero-h1 em{font-style:italic;color:rgba(255,255,255,.55)}
+.gd-hero-sub{font-size:clamp(.9rem,1.4vw,1.05rem);color:rgba(255,255,255,.5);max-width:52ch}
+.gd-hero-meta{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:.85rem}
+.section-img{width:100%;border-radius:16px;margin:2.5rem 0;display:block;max-height:380px;object-fit:cover;object-position:center}
 .vibe-bar{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.25rem 0}
 .vibe-pill{font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--sand,#F6F1E9);color:var(--ink-soft,#3C3C38);border:1px solid var(--sand-dark,#D9CDBB)}
 .vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
@@ -440,25 +450,15 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Grab is the default transport for tourists in Da Nang. It is safe, affordable, and works everywhere.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">Download the app before you land.</p>
+<header class="gd-hero">
+  <div class="gd-hero-img" role="img" aria-label="Grab app on phone showing ride options in Da Nang Vietnam" style="background:url('images/grab-da-nang.jpg') center/cover no-repeat;opacity:.55"></div>
+  <div class="gd-hero-content">
+    <p class="gd-eyebrow">Transport Guide &middot; Da Nang 2026</p>
+    <h1 class="gd-hero-h1">Da Nang <em>Grab Guide</em></h1>
+    <p class="gd-hero-sub">Prices, airport pickups, surge times, and why you should never get in a taxi. Everything you need before you land.</p>
+    <p class="gd-hero-meta">Updated 2026 &middot; Local editor &middot; Real prices</p>
   </div>
-</div>
-
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Transport Guide &middot; Da Nang 2026</p>
-  <h1>Da Nang <em>Grab Guide</em> 2026</h1>
-  <p class="page-hero-sub">Prices, how to book, airport pickups, surge times, and when a metered taxi makes more sense. Everything you need before you arrive.</p>
-  <div class="page-meta">
-    <span>&#9998; Written by <strong>Ryan Yousefi</strong></span>
-    <span>&middot;</span>
-    <span>&#128197; Last updated: <strong>May 2026</strong></span>
-    <span>&middot;</span>
-    <span>&#9200; 8-min read</span>
-  </div>
-</section>
+</header>
 
 <div class="page-body">
 
@@ -621,6 +621,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 <p>If there was a genuine problem, use the in-app reporting. Do not rate down for traffic, rain, or things outside the driver's control.</p>
   </div>
 
+  <img src="images/grab-airport-da-nang.jpg" alt="Da Nang International Airport arrivals entrance" class="section-img" loading="lazy">
+
   <div class="page-section" id="airport">
     <h2>Getting From <em>Da Nang Airport</em> with Grab</h2>
     <p>Da Nang International Airport is compact and well-signed. Once you clear customs and exit the arrivals hall, look for the designated ride-hailing pickup zone on the outer edge of the forecourt.</p>
@@ -636,6 +638,8 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 
     <div class="gold-callout"><div class="local-callout-label">Worth Knowing</div>The airport Grab pickup zone moved in 2024. Exit arrivals, walk past the taxi rank, and look for the blue Grab sign at the far left of the pickup area. It's a 3-minute walk from the terminal exit.</div>
   </div>
+
+  <img src="images/grab-dragon-bridge-da-nang.jpg" alt="Grab drivers on Dragon Bridge Da Nang" class="section-img" loading="lazy">
 
   <div class="page-section" id="alternatives">
     <h2>Alternatives to Grab</h2>
@@ -687,7 +691,7 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 <section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
   <div style="max-width:760px;margin:0 auto;">
     <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <img class="scenic-img" src="images/da-nang-transport-guide-082e11be.jpg" alt="Da Nang Vietnam travel" loading="lazy" width="900" height="240">
+    <img class="scenic-img" src="images/grab-da-nang.jpg" alt="Grab app showing ride options in Da Nang Vietnam" loading="lazy" width="900" height="240">
 
     <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Da Nang Grab Guide: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
     <div style="border-top:1px solid var(--sand-dark);">
