@@ -269,6 +269,18 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* ─── CH-HERO (image-led page header) ─────────────────────── */
+.ch-hero{position:relative;height:clamp(480px,65vh,720px);overflow:hidden;display:flex;align-items:flex-end}
+.ch-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.ch-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,28,28,.9) 0%,rgba(10,28,28,.4) 50%,rgba(10,28,28,.05) 100%)}
+.ch-hero-body{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 3.5rem;width:100%}
+.ch-hero-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem}
+.ch-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.6rem);color:#fff;line-height:1.07;letter-spacing:-.03em;margin-bottom:.9rem;text-wrap:balance}
+.ch-hero h1 em{font-style:italic}
+.ch-hero-sub{font-size:.98rem;color:rgba(255,255,255,.7);max-width:540px;line-height:1.55}
+.ch-hero-meta{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+.ch-hero-meta strong{color:rgba(255,255,255,.7)}
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Best Han River Hotels in Da Nang 2026 — Views, Location, Honest Picks","description":"Best hotels on the Han River in Da Nang 2026. Dragon Bridge views, city walkability, rooftop bars, and why some travelers prefer the river over the beach.","url":"https://www.dananghotelguide.com/best-han-river-hotels-da-nang.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -448,19 +460,15 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
   </div>
 </div>
 
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Han River Hotels &middot; Da Nang City &middot; 2026</p>
-  <h1>Best Han River Hotels in <em>Da Nang</em> 2026</h1>
-  <p class="page-hero-sub">Da Nang's most walkable area. Dragon Bridge, night market, Con Market, and 100+ restaurants - all within 1-2km.</p>
-<p class="page-hero-sub">The honest guide to staying on the river.</p>
-  <div class="page-meta">
-    <span>&#9998; Written by <strong>Ryan Yousefi</strong></span>
-    <span>&middot;</span>
-    <span>&#128197; Last updated: <strong>May 2026</strong></span>
-    <span>&middot;</span>
-    <span>&#9200; 9-min read</span>
+<header class="ch-hero">
+  <img src="images/da-nang-han-river-night.webp" alt="Han River Dragon Bridge at night, Da Nang city lights" loading="eager">
+  <div class="ch-hero-body">
+    <p class="ch-hero-label">Area Guide &middot; Da Nang &middot; 2026</p>
+    <h1>Best Han River Hotels in <em>Da Nang</em> 2026</h1>
+    <p class="ch-hero-sub">Dragon Bridge views, city access, and no beachfront premium — the case for staying on the Han River.</p>
+    <p class="ch-hero-meta">By <strong>Ryan Yousefi</strong> &middot; Updated May 2026</p>
   </div>
-</section>
+</header>
 <!-- Phase 11: Booking band -->
 <div class="booking-band">
   <div class="booking-band-inner">

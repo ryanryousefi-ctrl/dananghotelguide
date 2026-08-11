@@ -354,6 +354,18 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 .vibe-pill.green{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
 .vibe-pill.red{background:#fce4ec;border-color:#f48fb1;color:#c62828}
 .vibe-pill.gold{background:#fff8e1;border-color:#ffe082;color:#e65100}
+
+/* ─── CH-HERO (image-led page header) ─────────────────────── */
+.ch-hero{position:relative;height:clamp(480px,65vh,720px);overflow:hidden;display:flex;align-items:flex-end}
+.ch-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.ch-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,28,28,.9) 0%,rgba(10,28,28,.4) 50%,rgba(10,28,28,.05) 100%)}
+.ch-hero-body{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 3.5rem;width:100%}
+.ch-hero-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem}
+.ch-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.6rem);color:#fff;line-height:1.07;letter-spacing:-.03em;margin-bottom:.9rem;text-wrap:balance}
+.ch-hero h1 em{font-style:italic}
+.ch-hero-sub{font-size:.98rem;color:rgba(255,255,255,.7);max-width:540px;line-height:1.55}
+.ch-hero-meta{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+.ch-hero-meta strong{color:rgba(255,255,255,.7)}
 </style>
 </head>
 <body>
@@ -497,16 +509,15 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 </div>
 </div>
 
-<div class="page-hero">
-  <div class="page-hero-overlay" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-eyebrow">🌧 Honest Weather Guide &nbsp;·&nbsp; Updated 2026</div>
-      <h1>Worst Time to Visit <em>Da Nang</em></h1>
-      <p class="hero-sub">October and November. Not the whole answer — but that's the short version. Here's what actually happens during rainy season, what the risk is, and what to do if you're stuck with those dates.</p>
-    </div>
+<header class="ch-hero">
+  <img src="images/da-nang-weather-by-month-22ab344f.webp" alt="Stormy coastal weather during Da Nang rainy season" loading="eager">
+  <div class="ch-hero-body">
+    <p class="ch-hero-label">Weather Guide &middot; Da Nang &middot; 2026</p>
+    <h1>Worst Time to Visit <em>Da Nang</em></h1>
+    <p class="ch-hero-sub">October and November. Not the whole answer — but that's the short version. What the bad months actually look like.</p>
+    <p class="ch-hero-meta">By <strong>Ryan Yousefi</strong> &middot; Updated May 2026</p>
   </div>
-</div>
+</header>
 
 <main>
 <div class="page-wrap">

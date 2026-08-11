@@ -269,6 +269,18 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* ─── CH-HERO (image-led page header) ─────────────────────── */
+.ch-hero{position:relative;height:clamp(480px,65vh,720px);overflow:hidden;display:flex;align-items:flex-end}
+.ch-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.ch-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,28,28,.9) 0%,rgba(10,28,28,.4) 50%,rgba(10,28,28,.05) 100%)}
+.ch-hero-body{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 3.5rem;width:100%}
+.ch-hero-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem}
+.ch-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.6rem);color:#fff;line-height:1.07;letter-spacing:-.03em;margin-bottom:.9rem;text-wrap:balance}
+.ch-hero h1 em{font-style:italic}
+.ch-hero-sub{font-size:.98rem;color:rgba(255,255,255,.7);max-width:540px;line-height:1.55}
+.ch-hero-meta{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+.ch-hero-meta strong{color:rgba(255,255,255,.7)}
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Adults-Only Hotels in Da Nang 2026 — No Kids, No Noise","description":"The best adults-only hotels and resorts in Da Nang for 2026. TIA Wellness, Naman Retreat, Melia, and options that deliver genuine peace and quiet.","url":"https://www.dananghotelguide.com/da-nang-adults-only-hotels.html","datePublished":"2026-05-25","dateModified":"2026-05-25","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -448,18 +460,15 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
   </div>
 </div>
 
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Adults-Only Hotels &middot; Da Nang Resorts &middot; 2026</p>
-  <h1>Adults-Only Hotels in <em>Da Nang</em> 2026</h1>
-  <p class="page-hero-sub">The honest guide to genuinely quiet stays in Da Nang - which properties ban children outright, which just skew adult in practice, and how to choose based on what you actually want.</p>
-  <div class="page-meta">
-    <span>&#9998; Written by <strong>Ryan Yousefi</strong></span>
-    <span>&middot;</span>
-    <span>&#128197; Last updated: <strong>May 2026</strong></span>
-    <span>&middot;</span>
-    <span>&#9200; 10-min read</span>
+<header class="ch-hero">
+  <img src="images/luxury-hotels-da-nang-ed652ae2.jpg" alt="Adults-only pool resort in Da Nang" loading="eager">
+  <div class="ch-hero-body">
+    <p class="ch-hero-label">Hotel Guide &middot; Da Nang &middot; 2026</p>
+    <h1>Da Nang <em>Adults-Only Hotels</em> 2026</h1>
+    <p class="ch-hero-sub">The best adult-oriented and couple-friendly hotels in Da Nang — where to stay for a quieter, more relaxed trip.</p>
+    <p class="ch-hero-meta">By <strong>Ryan Yousefi</strong> &middot; Updated May 2026</p>
   </div>
-</section>
+</header>
 
 <div class="page-body">
 

@@ -261,6 +261,18 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
 .search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}
 .sh-pill{padding:7px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);cursor:pointer;transition:background .12s,color .12s;letter-spacing:.04em;text-transform:uppercase;}
 .sh-pill:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* ─── CH-HERO (image-led page header) ─────────────────────── */
+.ch-hero{position:relative;height:clamp(480px,65vh,720px);overflow:hidden;display:flex;align-items:flex-end}
+.ch-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.ch-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,28,28,.9) 0%,rgba(10,28,28,.4) 50%,rgba(10,28,28,.05) 100%)}
+.ch-hero-body{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 3.5rem;width:100%}
+.ch-hero-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem}
+.ch-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.6rem);color:#fff;line-height:1.07;letter-spacing:-.03em;margin-bottom:.9rem;text-wrap:balance}
+.ch-hero h1 em{font-style:italic}
+.ch-hero-sub{font-size:.98rem;color:rgba(255,255,255,.7);max-width:540px;line-height:1.55}
+.ch-hero-meta{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+.ch-hero-meta strong{color:rgba(255,255,255,.7)}
 </style>
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Best Luxury Resort for Couples in Da Nang 2026","description":"The best luxury resorts for couples in Da Nang in 2026. InterContinental, Naman Retreat, TIA Wellness, Fusion Maia ranked by a local.","url":"https://www.dananghotelguide.com/best-luxury-resort-couples-da-nang.html","datePublished":"2026-05-24","dateModified":"2026-05-24","author":{"@type":"Person","name":"Ryan Yousefi"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://www.dananghotelguide.com"}}
@@ -440,18 +452,15 @@ details p{font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 
   </div>
 </div>
 
-<section class="page-hero">
-  <p class="page-hero-eyebrow">Couples Travel &middot; Da Nang Luxury Resorts &middot; 2026</p>
-  <h1>Best Luxury Resort for <em>Couples</em> in Da Nang</h1>
-  <p class="page-hero-sub">Five resorts that genuinely work for couples - ranked by a local who has stayed at or thoroughly vetted all of them. Honest about price, seclusion, and which type of trip each suits best.</p>
-  <div class="page-meta">
-    <span>&#9998; Written by <strong>Ryan Yousefi</strong></span>
-    <span>&middot;</span>
-    <span>&#128197; Last updated: <strong>May 2026</strong></span>
-    <span>&middot;</span>
-    <span>&#9200; 10-min read</span>
+<header class="ch-hero">
+  <img src="images/luxury-hotels-da-nang-5c163732.webp" alt="Luxury beachfront resort in Da Nang for couples" loading="eager">
+  <div class="ch-hero-body">
+    <p class="ch-hero-label">Luxury Guide &middot; Da Nang Couples &middot; 2026</p>
+    <h1>Best Luxury Resorts for <em>Couples</em> in Da Nang 2026</h1>
+    <p class="ch-hero-sub">The best luxury Da Nang hotels for couples — InterContinental, Premier Village, Naman Retreat, and more.</p>
+    <p class="ch-hero-meta">By <strong>Ryan Yousefi</strong> &middot; Updated May 2026</p>
   </div>
-</section>
+</header>
 <!-- Phase 11: Booking band -->
 <div class="booking-band">
   <div class="booking-band-inner">
