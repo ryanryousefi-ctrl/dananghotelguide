@@ -149,6 +149,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 .wx-section-h2 em{font-style:italic;color:var(--ocean)}
 .wx-section-sub{font-size:.95rem;color:var(--ink-muted);line-height:1.7;max-width:60ch;margin-bottom:2rem}
 
+/* ── SECTION BROLL BREAKS ── */
+.wx-broll{position:relative;height:clamp(220px,30vw,420px);overflow:hidden;display:block;margin:0}
+.wx-broll img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.wx-broll::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,28,28,.18) 0%,rgba(10,28,28,.05) 40%,rgba(10,28,28,.05) 60%,rgba(10,28,28,.18) 100%)}
+
 /* ── SEASON CARDS (Short Version) ── */
 .season-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
 @media(max-width:900px){.season-cards{grid-template-columns:repeat(2,1fr)}}
@@ -648,6 +653,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
   </div>
 </section>
 
+<!-- BROLL BREAK -->
+<figure class="wx-broll" aria-hidden="true">
+  <img src="images/broll-son-tra-lady-buddha-aerial.jpg" alt="Lady Buddha statue aerial view with Son Tra peninsula and South China Sea" loading="lazy">
+</figure>
+
 <!-- SHORT VERSION: 4 SEASON CARDS                             -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <section class="wx-section" style="background:var(--white)">
@@ -718,6 +728,11 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
     </div>
   </div>
 </section>
+<!-- BROLL BREAK -->
+<figure class="wx-broll" aria-hidden="true">
+  <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Aerial view of beachfront resort villas, pool and white sand at Non Nuoc Beach" loading="lazy">
+</figure>
+
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- WHEN SHOULD YOU VISIT MATRIX                              -->
 <!-- ═══════════════════════════════════════════════════════════ -->
