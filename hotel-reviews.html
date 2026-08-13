@@ -358,8 +358,18 @@ a{text-decoration:none;color:inherit}
   text-decoration: none;
   color: var(--ink);
   transition: background .18s;
-  align-self: start;
 }
+.hr-feat-primary-img2{
+  flex:1;
+  overflow:hidden;
+  min-height:120px;
+}
+.hr-feat-primary-img2 img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease;
+  display:block;
+}
+.hr-feat-primary:hover .hr-feat-primary-img2 img{transform:scale(1.03)}
 .hr-feat-primary:hover{background:var(--sand)}
 .hr-feat-primary-img{
   aspect-ratio: 16/9;
@@ -948,6 +958,9 @@ details[open] .hr-faq-icon{transform:rotate(45deg)}
           <span class="hr-card-price">from $350/night</span>
           <span class="hr-card-read">Read review →</span>
         </div>
+      </div>
+      <div class="hr-feat-primary-img2">
+        <img src="images/review-intercontinental-da-nang-pool.jpg" alt="InterContinental Danang Sun Peninsula Resort infinity pool" loading="lazy" width="800" height="450">
       </div>
     </a>
     <!-- Secondary stack -->
