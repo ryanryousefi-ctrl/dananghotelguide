@@ -41,12 +41,17 @@
   padding:0 var(--gutter);
 }
 .nav-logo{
-  font-family:var(--font-serif);font-size:1.3rem;
-  color:#fff;letter-spacing:-.01em;flex-shrink:0;
-  margin-right:clamp(1.5rem,3.5vw,3rem);
-  display:inline-flex;align-items:baseline;gap:.35em;
+  flex-shrink:0;
+  margin-right:clamp(1rem,2.5vw,2rem);
+  display:inline-flex;align-items:center;
+  text-decoration:none;
 }
-.nav-logo em{font-style:italic;color:var(--coral)}
+.nav-logo-img{
+  display:block;
+  height:44px;width:44px;
+  object-fit:contain;
+  border-radius:50%;
+}
 .nav-links{display:flex;align-items:center;gap:0;flex:1;}
 .nav-link{
   position:relative;
@@ -367,7 +372,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">Da Nang <em>Hotel Guide</em></a>
+  <a href="https://www.dananghotelguide.com/" class="nav-logo" aria-label="Da Nang Hotel Guide home"><img src="images/dhg-logo.png" alt="Da Nang Hotel Guide" class="nav-logo-img" width="48" height="48"></a>
   <div class="nav-links" role="list">
     <a href="index.html" class="nav-link">Home</a>
     <div class="nav-dropdown">

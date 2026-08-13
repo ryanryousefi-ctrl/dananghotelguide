@@ -39,8 +39,8 @@
 :root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--ocean:#1B5C5C;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1200px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:6px;--r-md:12px;--r-lg:18px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{font-family:var(--font-sans);cursor:pointer}
 .site-nav{position:sticky;top:0;z-index:500;height:68px;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 var(--gutter)}
-.nav-logo{font-family:var(--font-serif);font-size:1.3rem;color:#fff;letter-spacing:-.01em;flex-shrink:0;margin-right:clamp(1.5rem,3.5vw,3rem);display:inline-flex;align-items:baseline;gap:.35em}
-.nav-logo em{font-style:italic;color:var(--coral)}
+.nav-logo{flex-shrink:0;margin-right:clamp(1rem,2.5vw,2rem);display:inline-flex;align-items:center;text-decoration:none}
+.nav-logo-img{display:block;height:44px;width:44px;object-fit:contain;border-radius:50%}
 .nav-links{display:flex;align-items:center;gap:0;flex:1}
 .nav-link{position:relative;padding:8px 14px;font-size:.8rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .18s;white-space:nowrap}
 .nav-link:hover,.nav-link.active{color:#fff}
@@ -146,7 +146,7 @@
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">Da Nang <em>Hotel Guide</em></a>
+  <a href="https://www.dananghotelguide.com/" class="nav-logo" aria-label="Da Nang Hotel Guide home"><img src="images/dhg-logo.png" alt="Da Nang Hotel Guide" class="nav-logo-img" width="48" height="48"></a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
     <div class="nav-dropdown"><a href="hotels.html" class="nav-link nav-dropdown-toggle">Hotels</a><div class="nav-dropdown-menu"><a href="best-hotels-in-da-nang.html" class="nav-dropdown-item">Best Hotels</a><a href="da-nang-beach-hotels.html" class="nav-dropdown-item">Beachfront</a><a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item">Riverside</a><a href="luxury-hotels-da-nang.html" class="nav-dropdown-item">Luxury</a><a href="family-hotels-da-nang.html" class="nav-dropdown-item">Family</a><a href="boutique-hotels-da-nang.html" class="nav-dropdown-item">Boutique</a></div></div>
