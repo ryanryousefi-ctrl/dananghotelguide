@@ -102,6 +102,8 @@ a{text-decoration:none;color:inherit}
 .site-nav{position:sticky;top:0;z-index:500;height:64px;background:rgba(13,53,53,.97);backdrop-filter:blur(18px);display:flex;align-items:center;padding:0 var(--gutter);gap:1rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .nav-logo{flex-shrink:0;margin-right:auto;display:inline-flex;align-items:center;text-decoration:none}
 .nav-logo-img{display:block;height:44px;width:44px;object-fit:contain;border-radius:50%}
+.nav-x-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:rgba(255,255,255,.5);flex-shrink:0;margin-right:clamp(.75rem,2vw,1.5rem);border-radius:50%;transition:color .18s,background .18s}
+.nav-x-link:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-lang{display:flex;gap:.5rem;align-items:center}
 .nav-lang a{font-size:.8rem;font-weight:500;padding:4px 10px;border-radius:6px;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);transition:all .2s}
 .nav-lang a.active{color:#fff;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4)}
@@ -210,6 +212,7 @@ footer{background:var(--ocean-deep);color:rgba(255,255,255,.6);padding:2.5rem va
 
 <nav class="site-nav">
   <a href="https://www.dananghotelguide.com/" class="nav-logo" aria-label="Da Nang Hotel Guide home"><img src="../images/dhg-logo.png" alt="Da Nang Hotel Guide" class="nav-logo-img" width="48" height="48"></a>
+  <a href="https://x.com/DaNangHG" class="nav-x-link" target="_blank" rel="noopener noreferrer" aria-label="Da Nang Hotel Guide on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
   <div class="nav-lang">
     <a href="../da-nang-vs-hoi-an.html" hreflang="en" lang="en">EN</a>
     <a href="da-nang-vs-hoi-an.html" hreflang="ko" lang="ko" class="active">한국어</a>
