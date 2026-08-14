@@ -446,20 +446,26 @@ font-weight:600;}
 .stat-label{font-size:.65rem;color:rgba(255,255,255,.35);font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
 .hero-tag{display:none}
 
-/* ─── WEATHER WIDGET ──────────────────────────────────────── */
-.wx-widget{
+/* ─── WEATHER + BOOKING WIDGET CLUSTER ───────────────────── */
+.hero-widgets{
   position:absolute;top:clamp(1.2rem,3vh,2rem);left:var(--gutter);z-index:4;
+  display:flex;align-items:stretch;gap:8px;
+}
+/* shared pill styles */
+.wx-widget,.bk-widget{
   background:rgba(0,0,0,.38);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border:1px solid rgba(255,255,255,.14);
   border-radius:14px;
   padding:.65rem 1rem .7rem;
-  min-width:148px;max-width:190px;
-  pointer-events:none;
   transition:opacity .4s;
 }
+.wx-widget{
+  min-width:148px;max-width:190px;
+  pointer-events:none;
+}
 .wx-widget.wx-hidden{opacity:0;}
-.wx-label{
+.wx-label,.bk-label{
   display:block;font-size:.55rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
   color:rgba(255,255,255,.42);margin-bottom:.45rem;line-height:1;
 }
@@ -468,8 +474,55 @@ font-weight:600;}
 .wx-temp{font-family:var(--font-serif);font-size:1.8rem;color:#fff;line-height:1;letter-spacing:-.03em;}
 .wx-condition{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.72);margin-bottom:.35rem;line-height:1.3;}
 .wx-hl{font-size:.63rem;font-weight:700;color:rgba(255,255,255,.42);letter-spacing:.04em;}
-@media(max-width:600px){
-  .wx-widget{top:auto;bottom:calc(clamp(3rem,7vh,5.5rem) + 10.5rem);left:var(--gutter);max-width:160px;}
+/* booking widget */
+.bk-widget{min-width:220px;}
+.bk-dest{
+  font-size:.75rem;font-weight:600;color:rgba(255,255,255,.65);
+  margin-bottom:.5rem;line-height:1.2;
+  display:flex;align-items:center;gap:.3rem;
+}
+.bk-dest-pin{font-size:.8rem;}
+.bk-dates{display:flex;gap:6px;margin-bottom:.55rem;}
+.bk-date-field{flex:1;display:flex;flex-direction:column;gap:2px;}
+.bk-date-lbl{
+  font-size:.5rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.35);line-height:1;
+}
+.bk-date-input{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:7px;
+  color:#fff;
+  font-size:.72rem;font-weight:600;
+  padding:.3rem .45rem;
+  width:100%;box-sizing:border-box;
+  cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+  font-family:inherit;
+}
+.bk-date-input::-webkit-calendar-picker-indicator{filter:invert(1) opacity(.45);cursor:pointer;}
+.bk-date-input:focus{outline:none;border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.16);}
+.bk-btn{
+  display:block;width:100%;
+  background:var(--coral);
+  border:none;border-radius:8px;
+  color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:.42rem .5rem;
+  cursor:pointer;
+  transition:background .14s,transform .12s;
+  font-family:inherit;
+  text-align:center;
+}
+.bk-btn:hover{background:var(--coral-light);transform:translateY(-1px);}
+@media(max-width:700px){
+  .hero-widgets{
+    top:auto;
+    bottom:calc(clamp(3rem,7vh,5.5rem) + 10.5rem);
+    flex-direction:column;
+    max-width:calc(100vw - 2*var(--gutter));
+  }
+  .wx-widget,.bk-widget{max-width:100%;}
+  .bk-widget{min-width:0;}
 }
 
 /* ─── BOOKING WIDGET NBW (hero) ───────────────────────────── */
@@ -1380,15 +1433,33 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
   <!-- Slide counter top-right -->
   <div class="hero-counter" aria-hidden="true"><span id="heroCurrentNum">01</span> / 05</div>
 
-  <!-- Weather widget top-left -->
-  <div class="wx-widget wx-hidden" id="wxWidget" aria-label="Da Nang current weather" role="status" aria-live="polite">
-    <span class="wx-label">Da Nang</span>
-    <div class="wx-main">
-      <span class="wx-icon" id="wxIcon" aria-hidden="true">&#x1F324;</span>
-      <span class="wx-temp" id="wxTemp">--&deg;C</span>
+  <!-- Widget cluster: weather + booking -->
+  <div class="hero-widgets">
+    <div class="wx-widget wx-hidden" id="wxWidget" aria-label="Da Nang current weather" role="status" aria-live="polite">
+      <span class="wx-label">Da Nang</span>
+      <div class="wx-main">
+        <span class="wx-icon" id="wxIcon" aria-hidden="true">&#x1F324;</span>
+        <span class="wx-temp" id="wxTemp">--&deg;C</span>
+      </div>
+      <div class="wx-condition" id="wxCondition"></div>
+      <div class="wx-hl" id="wxHL"></div>
     </div>
-    <div class="wx-condition" id="wxCondition"></div>
-    <div class="wx-hl" id="wxHL"></div>
+
+    <div class="bk-widget" aria-label="Search Da Nang hotels">
+      <span class="bk-label">Da Nang Hotels</span>
+      <div class="bk-dest"><span class="bk-dest-pin" aria-hidden="true">&#x1F4CD;</span> Da Nang, Vietnam</div>
+      <div class="bk-dates">
+        <div class="bk-date-field">
+          <label class="bk-date-lbl" for="bkCheckin">Check-in</label>
+          <input class="bk-date-input" type="date" id="bkCheckin" name="bkCheckin">
+        </div>
+        <div class="bk-date-field">
+          <label class="bk-date-lbl" for="bkCheckout">Check-out</label>
+          <input class="bk-date-input" type="date" id="bkCheckout" name="bkCheckout">
+        </div>
+      </div>
+      <button class="bk-btn" id="bkSearchBtn" type="button">Find Hotel Deals</button>
+    </div>
   </div>
 
   <!-- Content area, text updated by JS on each slide transition -->
@@ -2249,6 +2320,58 @@ function handleNbwSubmit(e) {
       document.getElementById('wxHL').textContent='';
       w.classList.remove('wx-hidden');
     }
+  });
+})();
+</script>
+
+<script>
+(function(){
+  function toISODate(d){
+    var y=d.getFullYear();
+    var m=String(d.getMonth()+1).padStart(2,'0');
+    var day=String(d.getDate()).padStart(2,'0');
+    return y+'-'+m+'-'+day;
+  }
+  var tomorrow=new Date();
+  tomorrow.setDate(tomorrow.getDate()+1);
+  var checkoutDef=new Date(tomorrow);
+  checkoutDef.setDate(checkoutDef.getDate()+3);
+
+  var ci=document.getElementById('bkCheckin');
+  var co=document.getElementById('bkCheckout');
+  if(!ci||!co)return;
+
+  ci.value=toISODate(tomorrow);
+  co.value=toISODate(checkoutDef);
+  ci.min=toISODate(tomorrow);
+  co.min=toISODate(checkoutDef);
+
+  ci.addEventListener('change',function(){
+    var newCi=new Date(ci.value+'T00:00:00');
+    var newCo=new Date(co.value+'T00:00:00');
+    if(newCo<=newCi){
+      var def=new Date(newCi);
+      def.setDate(def.getDate()+3);
+      co.value=toISODate(def);
+    }
+    co.min=toISODate(new Date(newCi.getTime()+86400000));
+  });
+
+  document.getElementById('bkSearchBtn').addEventListener('click',function(){
+    var ciVal=ci.value;
+    var coVal=co.value;
+    if(!ciVal||!coVal)return;
+    var parts=ciVal.split('-');
+    var oparts=coVal.split('-');
+    var url='https://www.booking.com/searchresults.en-us.html'
+      +'?ss=Da+Nang+Municipality%2C+Vietnam'
+      +'&dest_id=6232&dest_type=region'
+      +'&checkin='+parts[0]+'-'+parts[1]+'-'+parts[2]
+      +'&checkout='+oparts[0]+'-'+oparts[1]+'-'+oparts[2]
+      +'&aid=1784897'
+      +'&lang=en-us';
+    if(window.gtag){window.gtag('event','homepage_booking_widget_click',{event_category:'booking_widget',checkin:ciVal,checkout:coVal});}
+    window.open(url,'_blank','noopener,noreferrer');
   });
 })();
 </script>
