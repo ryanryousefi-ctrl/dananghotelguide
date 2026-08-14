@@ -446,6 +446,32 @@ font-weight:600;}
 .stat-label{font-size:.65rem;color:rgba(255,255,255,.35);font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
 .hero-tag{display:none}
 
+/* ─── WEATHER WIDGET ──────────────────────────────────────── */
+.wx-widget{
+  position:absolute;top:clamp(1.2rem,3vh,2rem);left:var(--gutter);z-index:4;
+  background:rgba(0,0,0,.38);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:.65rem 1rem .7rem;
+  min-width:148px;max-width:190px;
+  pointer-events:none;
+  transition:opacity .4s;
+}
+.wx-widget.wx-hidden{opacity:0;}
+.wx-label{
+  display:block;font-size:.55rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.42);margin-bottom:.45rem;line-height:1;
+}
+.wx-main{display:flex;align-items:center;gap:.5rem;margin-bottom:.2rem;}
+.wx-icon{font-size:1.6rem;line-height:1;}
+.wx-temp{font-family:var(--font-serif);font-size:1.8rem;color:#fff;line-height:1;letter-spacing:-.03em;}
+.wx-condition{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.72);margin-bottom:.35rem;line-height:1.3;}
+.wx-hl{font-size:.63rem;font-weight:700;color:rgba(255,255,255,.42);letter-spacing:.04em;}
+@media(max-width:600px){
+  .wx-widget{top:auto;bottom:calc(clamp(3rem,7vh,5.5rem) + 10.5rem);left:var(--gutter);max-width:160px;}
+}
+
 /* ─── BOOKING WIDGET NBW (hero) ───────────────────────────── */
 .nbw-header{
   background:var(--coral);
@@ -1354,6 +1380,17 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
   <!-- Slide counter top-right -->
   <div class="hero-counter" aria-hidden="true"><span id="heroCurrentNum">01</span> / 05</div>
 
+  <!-- Weather widget top-left -->
+  <div class="wx-widget wx-hidden" id="wxWidget" aria-label="Da Nang current weather" role="status" aria-live="polite">
+    <span class="wx-label">Da Nang</span>
+    <div class="wx-main">
+      <span class="wx-icon" id="wxIcon" aria-hidden="true">&#x1F324;</span>
+      <span class="wx-temp" id="wxTemp">--&deg;C</span>
+    </div>
+    <div class="wx-condition" id="wxCondition"></div>
+    <div class="wx-hl" id="wxHL"></div>
+  </div>
+
   <!-- Content area, text updated by JS on each slide transition -->
   <div class="hero-content hero-content--split">
   <div class="hero-text">
@@ -2163,5 +2200,57 @@ function handleNbwSubmit(e) {
 </script>
   
   <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
+
+<script>
+(function(){
+  var WMO={
+    0:{label:'Clear',icon:'☀️'},
+    1:{label:'Mostly clear',icon:'🌤️'},
+    2:{label:'Partly cloudy',icon:'⛅'},
+    3:{label:'Overcast',icon:'☁️'},
+    45:{label:'Foggy',icon:'🌫️'},
+    48:{label:'Foggy',icon:'🌫️'},
+    51:{label:'Light drizzle',icon:'🌦️'},
+    53:{label:'Drizzle',icon:'🌦️'},
+    55:{label:'Heavy drizzle',icon:'🌧️'},
+    61:{label:'Light rain',icon:'🌧️'},
+    63:{label:'Rain',icon:'🌧️'},
+    65:{label:'Heavy rain',icon:'🌧️'},
+    71:{label:'Light snow',icon:'❄️'},
+    73:{label:'Snow',icon:'❄️'},
+    75:{label:'Heavy snow',icon:'❄️'},
+    80:{label:'Rain showers',icon:'🌦️'},
+    81:{label:'Rain showers',icon:'🌦️'},
+    82:{label:'Heavy showers',icon:'⛈️'},
+    95:{label:'Thunderstorm',icon:'⛈️'},
+    96:{label:'Thunderstorm',icon:'⛈️'},
+    99:{label:'Thunderstorm',icon:'⛈️'}
+  };
+  var url='https://api.open-meteo.com/v1/forecast?latitude=16.0544&longitude=108.2022&current=temperature_2m,weathercode&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FHo_Chi_Minh&forecast_days=1';
+  fetch(url).then(function(r){return r.json();}).then(function(d){
+    var cur=d.current,daily=d.daily;
+    var temp=Math.round(cur.temperature_2m);
+    var code=cur.weathercode;
+    var info=WMO[code]||{label:'Partly cloudy',icon:'⛅'};
+    var hi=Math.round(daily.temperature_2m_max[0]);
+    var lo=Math.round(daily.temperature_2m_min[0]);
+    document.getElementById('wxTemp').textContent=temp+'°C';
+    document.getElementById('wxIcon').textContent=info.icon;
+    document.getElementById('wxCondition').textContent=info.label;
+    document.getElementById('wxHL').textContent='H '+hi+'° / L '+lo+'°';
+    var w=document.getElementById('wxWidget');
+    if(w){w.classList.remove('wx-hidden');}
+  }).catch(function(){
+    var w=document.getElementById('wxWidget');
+    if(w){
+      document.getElementById('wxCondition').textContent='Currently unavailable';
+      document.getElementById('wxTemp').textContent='';
+      document.getElementById('wxIcon').textContent='';
+      document.getElementById('wxHL').textContent='';
+      w.classList.remove('wx-hidden');
+    }
+  });
+})();
+</script>
 </body>
 </html>
