@@ -1,0 +1,168 @@
+/* ─── Sitewide Booking Widget ─────────────────────────────────
+   Shared stylesheet for the Da Nang hotel booking widget.
+   Injected into every content page's hero/banner area.
+   ─────────────────────────────────────────────────────────── */
+
+/* Widget positioned in the hero overlay (right side) */
+.sw-bk-wrap {
+  position: absolute;
+  top: clamp(1.2rem, 3vh, 2rem);
+  right: var(--gutter, 2rem);
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Widget anchored below hero text (centered pages) */
+.sw-bk-wrap--below {
+  position: static;
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 1.25rem auto 0;
+  pointer-events: auto;
+}
+
+/* Pill shell */
+.sw-bk-widget {
+  background: rgba(0, 0, 0, .38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 14px;
+  padding: .65rem 1rem .7rem;
+  min-width: 220px;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+/* Top label */
+.sw-bk-label {
+  display: block;
+  font-size: .55rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .42);
+  margin-bottom: .45rem;
+  line-height: 1;
+}
+
+/* Destination line */
+.sw-bk-dest {
+  font-size: .75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, .65);
+  margin-bottom: .5rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+/* Date row */
+.sw-bk-dates {
+  display: flex;
+  gap: 6px;
+  margin-bottom: .55rem;
+}
+
+.sw-bk-date-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sw-bk-date-lbl {
+  font-size: .5rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .35);
+  line-height: 1;
+}
+
+.sw-bk-date-input {
+  background: rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 7px;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .3rem .45rem;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+}
+
+.sw-bk-date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1) opacity(.45);
+  cursor: pointer;
+}
+
+.sw-bk-date-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, .16);
+}
+
+/* CTA button */
+.sw-bk-btn {
+  display: block;
+  width: 100%;
+  background: #C8604A;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .42rem .5rem;
+  cursor: pointer;
+  transition: background .14s, transform .12s;
+  font-family: inherit;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.sw-bk-btn:hover {
+  background: #E07A62;
+  transform: translateY(-1px);
+}
+
+/* ── BELOW-HERO CENTERED variant ────────────────────────────── */
+.sw-bk-wrap--below .sw-bk-widget {
+  max-width: 100%;
+  min-width: 0;
+  background: rgba(0, 0, 0, .42);
+}
+
+.sw-bk-wrap--below .sw-bk-dates {
+  gap: 8px;
+}
+
+/* ── MOBILE ──────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .sw-bk-wrap {
+    position: static;
+    display: block;
+    width: calc(100% - 2 * var(--gutter, 1.25rem));
+    max-width: 100%;
+    margin: 1rem auto 0;
+  }
+
+  .sw-bk-widget {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sw-bk-wrap--below {
+    max-width: 100%;
+    width: calc(100% - 2 * var(--gutter, 1.25rem));
+    margin: 1rem auto 0;
+  }
+}
