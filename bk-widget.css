@@ -152,17 +152,27 @@
     display: block;
     width: calc(100% - 2 * var(--gutter, 1.25rem));
     max-width: 100%;
-    margin: 1rem auto 0;
+    margin: 0.75rem auto 0;
   }
 
   .sw-bk-widget {
     max-width: 100%;
     min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .sw-bk-dates {
+    gap: 4px;
+  }
+
+  .sw-bk-date-input {
+    font-size: 0.68rem;
+    padding: 0.28rem 0.35rem;
   }
 
   .sw-bk-wrap--below {
     max-width: 100%;
     width: calc(100% - 2 * var(--gutter, 1.25rem));
-    margin: 1rem auto 0;
+    margin: 0.75rem auto 0;
   }
 }

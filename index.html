@@ -516,12 +516,16 @@ font-weight:600;}
 .bk-btn:hover{background:var(--coral-light);transform:translateY(-1px);}
 @media(max-width:700px){
   .hero-widgets{
-    top:auto;
-    bottom:calc(clamp(3rem,7vh,5.5rem) + 10.5rem);
+    position:static;
     flex-direction:column;
-    max-width:calc(100vw - 2*var(--gutter));
+    max-width:100%;
+    width:100%;
+    gap:6px;
+    padding:0 var(--gutter);
+    margin-bottom:.75rem;
+    pointer-events:auto;
   }
-  .wx-widget,.bk-widget{max-width:100%;}
+  .wx-widget,.bk-widget{max-width:100%;width:100%;box-sizing:border-box;}
   .bk-widget{min-width:0;}
 }
 
