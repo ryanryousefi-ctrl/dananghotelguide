@@ -145,6 +145,14 @@
   gap: 8px;
 }
 
+/* ── 320px NAV CROWDING FIX ─────────────────────────────────── */
+@media (max-width: 360px) {
+  .nav-x-link,
+  .nav-fb-link,
+  .nav-pin-link,
+  .nav-search-btn { display: none; }
+}
+
 /* ── MOBILE ──────────────────────────────────────────────────── */
 @media (max-width: 700px) {
   .sw-bk-wrap {
