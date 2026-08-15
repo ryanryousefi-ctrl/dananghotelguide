@@ -19,6 +19,126 @@
       "source": "/hotels.html",
       "destination": "/best-hotels-in-da-nang.html",
       "permanent": true
+    },
+    {
+      "source": "/review-a-la-carte-da-nang.html",
+      "destination": "/a-la-carte-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-azura-da-nang.html",
+      "destination": "/azura-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-brilliant-hotel-da-nang.html",
+      "destination": "/brilliant-hotel-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-four-points-sheraton-da-nang.html",
+      "destination": "/four-points-sheraton-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-furama-resort-da-nang.html",
+      "destination": "/furama-resort-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-fusion-suites-da-nang.html",
+      "destination": "/fusion-suites-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-grand-mercure-da-nang.html",
+      "destination": "/grand-mercure-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-hilton-da-nang.html",
+      "destination": "/hilton-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-hyatt-regency-da-nang.html",
+      "destination": "/hyatt-regency-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-intercontinental-da-nang.html",
+      "destination": "/intercontinental-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-marriott-resort-da-nang.html",
+      "destination": "/marriott-resort-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-melia-da-nang.html",
+      "destination": "/melia-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-melia-vinpearl-da-nang.html",
+      "destination": "/melia-vinpearl-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-mikazuki-da-nang.html",
+      "destination": "/mikazuki-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-muong-thanh-luxury-da-nang.html",
+      "destination": "/muong-thanh-luxury-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-naman-retreat-da-nang.html",
+      "destination": "/naman-retreat-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-novotel-da-nang-han-river.html",
+      "destination": "/novotel-da-nang-han-river.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-premier-village-da-nang.html",
+      "destination": "/premier-village-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-pullman-da-nang.html",
+      "destination": "/pullman-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-radisson-blu-da-nang.html",
+      "destination": "/radisson-blu-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-sheraton-grand-da-nang.html",
+      "destination": "/sheraton-grand-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-tia-wellness-resort-da-nang.html",
+      "destination": "/tia-wellness-resort-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-tms-hotel-da-nang.html",
+      "destination": "/tms-hotel-da-nang.html",
+      "permanent": true
+    },
+    {
+      "source": "/review-wyndham-soleil-da-nang.html",
+      "destination": "/wyndham-soleil-da-nang.html",
+      "permanent": true
     }
   ]
 }
