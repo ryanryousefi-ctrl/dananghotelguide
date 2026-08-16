@@ -226,6 +226,11 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bb-card-desc{font-size:.88rem;line-height:1.75;color:var(--ink-soft);flex:1;margin-bottom:1rem}
 .bb-sig{font-size:.75rem;color:var(--ink-muted);font-style:italic;margin-bottom:1rem}
 .bb-sig strong{font-style:normal;font-weight:700;color:var(--ink-soft)}
+.bb-card-address-row{display:flex;flex-direction:column;gap:.2rem;margin-bottom:.75rem}
+.bb-card-address{font-size:.72rem;color:var(--ink-muted);line-height:1.4}
+.bb-card-phone{font-size:.72rem;color:var(--ink-muted)}
+.bb-card-phone a{color:var(--ocean);font-weight:600;text-decoration:none}
+.bb-card-phone a:hover{text-decoration:underline}
 .bb-card-links{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:auto}
 .bb-ext-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.73rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
 .bb-ext-link:hover{color:var(--ocean-deep);border-color:var(--ocean-deep)}
@@ -444,13 +449,17 @@ button{font-family:var(--font-sans);cursor:pointer}
       <div class="bb-sig-pick-badge">Da Nang Signature Pick</div>
       <h2>Kal&agrave; Kal&agrave; Beach Club</h2>
       <p class="bb-sig-pick-type">Ng&#361; H&agrave;nh S&#417;n &middot; Beach Club &middot; $$$</p>
-      <p class="bb-sig-pick-sub">4.6 stars across 2,000+ Google reviews. The most polished beach club in Da Nang.</p>
+      <p class="bb-sig-pick-sub">The most polished beach club in Da Nang.</p>
       <p class="bb-sig-pick-desc">Production quality normally associated with Bali or Phuket, on a proper Vietnamese beach. Sitting at 51 V&#245; Nguy&ecirc;n Gi&aacute;p in Ng&#361; H&agrave;nh S&#417;n, Kal&agrave; Kal&agrave; is doing something genuinely different from the rest of the strip. Real sound system, proper DJ programming, beach access, and a bar that takes the cocktail side seriously. The crowd skews stylish without feeling exclusive &mdash; dressed-up without the door policy.</p>
       <p class="bb-sig-pick-desc">The Ng&#361; H&agrave;nh S&#417;n location means it's slightly south of the My Khe main strip, which keeps it less crowded and more deliberately curated. Worth the extra few minutes on Grab. Arrive before sunset for the best table positions. Call ahead on weekends.</p>
       <div class="bb-sig-pick-detail">
         <span class="bb-sig-detail-tag">51 V&#245; Nguy&ecirc;n Gi&aacute;p, Ng&#361; H&agrave;nh S&#417;n</span>
         <span class="bb-sig-detail-tag">+84 789 995 151</span>
-        <span class="bb-sig-detail-tag">4.6 &#9733; &middot; 2,000+ Google reviews</span>
+      </div>
+      <div class="bb-top-pick-links" style="margin-top:.5rem">
+        <a href="https://kalakalabeachclub.com/" target="_blank" rel="nofollow noopener" class="bb-sig-pick-link">Website &rarr;</a>
+        <a href="https://www.instagram.com/kalakalabeachclub/" target="_blank" rel="nofollow noopener" class="bb-sig-pick-link" style="margin-left:1rem">Instagram &rarr;</a>
+        <a href="https://www.facebook.com/KalaKalaBeachClub/" target="_blank" rel="nofollow noopener" class="bb-sig-pick-link" style="margin-left:1rem">Facebook &rarr;</a>
       </div>
     </div>
     <div class="bb-sig-pick-img">
@@ -471,15 +480,15 @@ button{font-family:var(--font-sans);cursor:pointer}
         <div class="bb-pick-overlay">
           <span class="bb-pick-category">Best Beach Club</span>
           <span class="bb-pick-name">Kal&agrave; Kal&agrave;</span>
-          <span class="bb-pick-meta">Ng&#361; H&agrave;nh S&#417;n &middot; 4.6&#9733; &middot; $$$</span>
+          <span class="bb-pick-meta">Ng&#361; H&agrave;nh S&#417;n &middot; $$$</span>
         </div>
       </a>
       <a href="#venue-malibu-beach-club" class="bb-pick-card">
         <img src="images/bar-beach-sunset-drinks.webp" alt="Malibu Beach Club Da Nang — beachfront bar at 3 Vo Nguyen Giap, sunset cocktails" loading="lazy" width="600" height="450">
         <div class="bb-pick-overlay">
-          <span class="bb-pick-category">Best Rated Beachfront</span>
+          <span class="bb-pick-category">Best Beachfront</span>
           <span class="bb-pick-name">Malibu Beach Club</span>
-          <span class="bb-pick-meta">My Khe &middot; 4.8&#9733; &middot; $$$</span>
+          <span class="bb-pick-meta">My Khe &middot; $$$</span>
         </div>
       </a>
       <a href="#venue-adm-club" class="bb-pick-card">
@@ -495,7 +504,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <div class="bb-pick-overlay">
           <span class="bb-pick-category">Best Club Night</span>
           <span class="bb-pick-name">Saga</span>
-          <span class="bb-pick-meta">An Th&#432;&#7907;ng &middot; 4.7&#9733; &middot; $$$</span>
+          <span class="bb-pick-meta">An Th&#432;&#7907;ng &middot; $$$</span>
         </div>
       </a>
       <a href="#venue-sky36" class="bb-pick-card">
@@ -511,7 +520,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <div class="bb-pick-overlay">
           <span class="bb-pick-category">Best LED Spectacle</span>
           <span class="bb-pick-name">For You Club</span>
-          <span class="bb-pick-meta">H&#7843;i Ch&#226;u &middot; 4.8&#9733; &middot; $$$$</span>
+          <span class="bb-pick-meta">H&#7843;i Ch&#226;u &middot; $$$$</span>
         </div>
       </a>
     </div>
@@ -800,6 +809,13 @@ function buildLinks(v){
   return out.length ? '<div class="bb-card-links">'+out.join('')+'</div>' : '';
 }
 
+function buildMeta(v){
+  var parts = [];
+  if(v.address) parts.push('<span class="bb-card-address">'+v.address+'</span>');
+  if(v.phone) parts.push('<span class="bb-card-phone"><a href="tel:'+v.phone.replace(/\s/g,'')+'">'+v.phone+'</a></span>');
+  return parts.length ? '<div class="bb-card-address-row">'+parts.join('')+'</div>' : '';
+}
+
 function renderCards(vs){
   var grid = document.getElementById('bbGrid');
   if(!vs.length){
@@ -822,6 +838,7 @@ function renderCards(vs){
       +'<h3 class="bb-card-name">'+v.name+'</h3>'
       +'<div class="bb-card-meta"><span class="bb-card-price">'+PRICE[v.price]+'</span>'
       +'<span>&middot;</span><span>'+v.areaLabel+'</span>'+hours+'</div>'
+      +buildMeta(v)
       +'<p class="bb-card-desc">'+v.description+'</p>'
       +sig+buildLinks(v)
       +'</div></article>';
