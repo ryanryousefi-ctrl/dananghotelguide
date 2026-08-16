@@ -16,7 +16,7 @@
 <meta property="og:description" content="How to get around Da Nang in 2026. Grab, taxis, scooters, private cars, airport transfers — what to use and real prices.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dananghotelguide.com/da-nang-transport-guide.html">
-<meta property="og:image" content="https://www.dananghotelguide.com/images/da-nang-transport-guide-082e11be.jpg">
+<meta property="og:image" content="https://www.dananghotelguide.com/images/grab-da-nang.jpg">
 <meta name="robots" content="index, follow">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,10 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is the best way to get around Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Grab is the best option for most visitors. It's reliable, air-conditioned, metered via app, and available city-wide within 2–5 minutes. Most rides within the My Khe–city center area cost 40,000–80,000 VND. For Hoi An, book a Grab car (not bike) for around 200,000–280,000 VND one way."}},
+{"@type":"Question","name":"What is the best way to get around Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Grab is the best option for most visitors. It's reliable, air-conditioned, metered via app, and available city-wide within 2–5 minutes. Most rides within the My Khe–city center area cost 40,000–80,000 VND. For Hoi An, book a Grab car for around 200,000–280,000 VND one way."}},
 {"@type":"Question","name":"How much does a Grab cost in Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Short city rides within My Khe or the city center: 30,000–60,000 VND. My Khe to city center: 50,000–80,000 VND. Da Nang to Hoi An: 200,000–280,000 VND. Da Nang to Marble Mountains: 60,000–100,000 VND. All prices vary by time of day and demand."}},
-{"@type":"Question","name":"Should I rent a scooter in Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Only if you're already comfortable riding a scooter in Vietnamese traffic. Da Nang is more manageable than Hanoi or Ho Chi Minh City, but the traffic is still fast and lane discipline is loose. Rentals cost around 100,000–200,000 VND per day. An international driving permit is technically required but rarely checked. If you're uncertain, use Grab — it's cheap enough that scooter rental rarely saves meaningful money."}},
-{"@type":"Question","name":"How far is Da Nang airport from the city?","acceptedAnswer":{"@type":"Answer","text":"Da Nang International Airport is 3–5km from the city center and 5–8km from My Khe Beach. A Grab to My Khe hotels takes 10–20 minutes and costs 60,000–120,000 VND depending on traffic. One of the most conveniently located airports in Vietnam."}}
+{"@type":"Question","name":"Should I rent a scooter in Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Only if you're already comfortable riding a scooter in Vietnamese traffic. Da Nang is more manageable than Hanoi or Ho Chi Minh City, but traffic is still fast and lane discipline is loose. Rentals cost around 100,000–200,000 VND per day. If you're uncertain, use Grab."}},
+{"@type":"Question","name":"How far is Da Nang airport from the city?","acceptedAnswer":{"@type":"Answer","text":"Da Nang International Airport is 3–5km from the city center and 5–8km from My Khe Beach. A Grab to My Khe hotels takes 10–20 minutes and costs 60,000–120,000 VND. One of the most conveniently located airports in Vietnam."}}
 ]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
@@ -39,8 +39,28 @@
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
 <style>
-:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--ocean:#1B5C5C;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1200px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:6px;--r-md:12px;--r-lg:18px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{font-family:var(--font-sans);cursor:pointer}
+/* ── TOKENS ─────────────────────────────────────────────── */
+:root{
+  --sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;
+  --white:#FFFFFF;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --ocean:#1B5C5C;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
+  --coral:#C8604A;--coral-light:#E07A62;
+  --night:#0A0A0A;--night-border:rgba(255,255,255,.08);
+  --font-serif:'Instrument Serif',Georgia,serif;
+  --font-sans:'Satoshi',system-ui,sans-serif;
+  --max:1200px;--gutter:clamp(1.25rem,5vw,3rem);
+  --r-sm:6px;--r-md:12px;--r-lg:18px;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
+::selection{background:var(--ocean);color:#fff}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font-family:var(--font-sans);cursor:pointer}
+
+/* ── NAV ───────────────────────────────────────────────── */
 .site-nav{position:sticky;top:0;z-index:500;height:68px;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 var(--gutter)}
 .nav-logo{flex-shrink:0;margin-right:clamp(1rem,2.5vw,2rem);display:inline-flex;align-items:center;text-decoration:none}
 .nav-logo-img{display:block;height:44px;width:44px;object-fit:contain;border-radius:50%}
@@ -64,98 +84,249 @@
 .nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);border-radius:4px;transition:color .12s,background .12s;letter-spacing:.02em;text-transform:uppercase}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
-.nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:var(--coral);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;white-space:nowrap;transition:background .15s;border:none}
-.nav-stays-btn:hover{background:var(--coral-light)}
+.nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:var(--coral);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;white-space:nowrap;transition:background .15s,transform .12s;border:none}
+.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.07);border:none;cursor:pointer;border-radius:4px;padding:10px;margin-left:8px}
 .nav-hamburger span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s}
 .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-menu{position:fixed;inset:0;z-index:450;background:#0A0A0A;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;padding:calc(68px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
+.mobile-menu{position:fixed;inset:0;z-index:450;background:#0A0A0A;transform:translateX(100%);transition:transform .28s var(--ease);display:flex;flex-direction:column;padding:calc(68px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
 .mobile-menu.open{transform:translateX(0)}
 .mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
 .mobile-nav-link:hover,.mobile-nav-link.active{color:var(--coral)}
+.mobile-sub-link{display:block;padding:10px 0 10px 1rem;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s}
+.mobile-sub-link:hover{color:rgba(255,255,255,.8)}
 .mobile-stays-btn{display:block;margin-top:2rem;padding:16px;background:var(--coral);color:#fff;text-align:center;font-size:.88rem;font-weight:800;border-radius:4px;letter-spacing:.05em;text-transform:uppercase}
-@media(max-width:1100px){.nav-links{display:none}.nav-hamburger{display:flex}}
-.gd-hero{position:relative;min-height:420px;display:flex;align-items:flex-end;overflow:hidden;background:#0A0A0A}
-.gd-hero-img{position:absolute;inset:0;background:url('images/grab-da-nang.jpg') center/cover no-repeat;opacity:.55}
-.gd-short-img{width:100%;border-radius:var(--r-md);margin:1.25rem 0;display:block;max-height:380px;object-fit:cover;object-position:center top}
-.gd-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.97) 0%,rgba(10,10,10,.4) 60%,transparent 100%)}
-.gd-hero-content{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--gutter)}
-.gd-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem}
-.gd-hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5.5vw,3.75rem);color:#fff;line-height:1.05;letter-spacing:-.03em;margin-bottom:.75rem}
-.gd-hero h1 em{font-style:italic;color:rgba(255,255,255,.55)}
-.gd-hero-sub{font-size:clamp(.9rem,1.4vw,1.05rem);color:rgba(255,255,255,.5);max-width:52ch}
-.gd-hero-meta{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-top:.85rem}
-.gd-page{max-width:800px;margin:0 auto;padding:0 var(--gutter) 4rem}
-.gd-short{background:var(--ocean-pale);border:1px solid rgba(27,92,92,.2);border-radius:var(--r-lg);padding:1.5rem 1.75rem;margin:2.5rem 0}
-.gd-short-label{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);margin-bottom:.6rem}
-.gd-short p{font-size:.95rem;line-height:1.8;color:var(--ink);margin-bottom:.75rem}
-.gd-short p:last-child{margin-bottom:0}
-.gd-pick{border-radius:var(--r-lg);padding:1.5rem 1.75rem;margin:2rem 0}
-.gd-pick-editor{background:var(--night);border-left:3px solid var(--coral)}
-.gd-pick-sig{background:var(--sand-mid);border-left:3px solid var(--ocean)}
-.gd-pick-label{font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.5rem}
-.gd-pick-editor .gd-pick-label{color:var(--coral)}
-.gd-pick-sig .gd-pick-label{color:var(--ocean)}
-.gd-pick-editor h2{font-family:var(--font-serif);font-size:1.35rem;color:#fff;margin-bottom:.5rem}
-.gd-pick-sig h2{font-family:var(--font-serif);font-size:1.35rem;color:var(--ink);margin-bottom:.5rem}
-.gd-pick-editor p{font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.6)}
-.gd-pick-sig p{font-size:.9rem;line-height:1.75;color:var(--ink-soft)}
-.gd-section{margin:3rem 0 1.25rem}
-.gd-section-label{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem}
-.gd-section h2{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,1.85rem);color:var(--ink);letter-spacing:-.02em}
-.gd-section h2 em{font-style:italic;color:var(--ocean)}
-/* Transport tiles */
-.tr-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.5rem 0}
-.tr-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.25rem 1.35rem}
-.tr-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem;gap:.5rem}
-.tr-card h3{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink)}
-.tr-card-verdict{font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .5rem;border-radius:3px;white-space:nowrap;flex-shrink:0}
-.verdict-yes{background:rgba(27,92,92,.12);color:var(--ocean-deep)}
+@media(max-width:1100px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn .btn-text{display:none}}
+
+/* ── HERO ───────────────────────────────────────────────── */
+.bb-hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden}
+.bb-hero-img{position:absolute;inset:0}
+.bb-hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.bb-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.45) 50%,rgba(10,10,10,.08) 100%)}
+.bb-hero-content{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--gutter)}
+.bb-hero-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem}
+.bb-hero h1{font-family:var(--font-serif);font-size:clamp(2.5rem,6vw,4rem);color:#fff;line-height:1.05;letter-spacing:-.03em;margin-bottom:.85rem}
+.bb-hero h1 em{font-style:italic;color:rgba(255,255,255,.6)}
+.bb-hero-sub{font-size:clamp(.95rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:48ch;line-height:1.65;margin-bottom:1.25rem}
+.bb-hero-meta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+/* ── QUICK PICKS STRIP ──────────────────────────────────── */
+.tr-picks-strip{background:var(--night);padding:clamp(2rem,4vw,3rem) var(--gutter);border-bottom:1px solid rgba(255,255,255,.06)}
+.tr-picks-strip-inner{max-width:var(--max);margin:0 auto}
+.tr-picks-label{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.65rem;display:block}
+.tr-picks-heading{font-family:var(--font-serif);font-size:clamp(1.3rem,2.2vw,1.65rem);color:#fff;letter-spacing:-.025em;margin-bottom:1.5rem}
+.tr-picks-heading em{font-style:italic;color:rgba(255,255,255,.45)}
+.tr-picks-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.85rem}
+.tr-pick-card{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:3/4;display:block}
+.tr-pick-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease)}
+.tr-pick-card:hover img{transform:scale(1.05)}
+.tr-pick-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.9) 0%,rgba(10,10,10,.2) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:.85rem}
+.tr-pick-cat{font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:.2rem}
+.tr-pick-name{font-family:var(--font-serif);font-size:.98rem;color:#fff;line-height:1.2}
+.tr-pick-sub{font-size:.62rem;color:rgba(255,255,255,.45);margin-top:.15rem}
+.tr-pick-badge{position:absolute;top:.65rem;left:.65rem;font-size:.52rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px}
+.tr-pick-badge-ep{background:var(--coral);color:#fff}
+.tr-pick-badge-sp{background:var(--ocean);color:#fff}
+
+/* ── TOP PICK FEATURE ───────────────────────────────────── */
+.bb-top-pick{background:var(--night);padding:clamp(3rem,6vw,5rem) var(--gutter)}
+.bb-top-pick-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.bb-top-pick-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:.85rem}
+.bb-top-pick-badge::before{content:'';width:24px;height:1px;background:var(--coral);flex-shrink:0}
+.bb-top-pick h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
+.bb-top-pick-type{font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.1rem}
+.bb-top-pick-desc{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:1.1rem}
+.bb-top-pick-detail{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin-bottom:1.4rem}
+.bb-detail-tag{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(255,255,255,.12);border-radius:100px;color:rgba(255,255,255,.45)}
+.bb-top-pick-note{font-size:.8rem;color:rgba(255,255,255,.35);font-style:italic;margin-bottom:1.25rem;padding:.7rem .9rem;background:rgba(255,255,255,.04);border-radius:var(--r-sm);border-left:2px solid var(--coral)}
+.bb-top-pick-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;position:relative}
+.bb-top-pick-img img{width:100%;height:100%;object-fit:cover}
+.bb-top-pick-img-label{position:absolute;bottom:.85rem;left:.85rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.45);padding:.25rem .6rem;border-radius:3px;backdrop-filter:blur(4px)}
+
+/* ── SIGNATURE PICK ─────────────────────────────────────── */
+.bb-sig-pick{background:var(--sand);padding:clamp(3rem,6vw,5rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.bb-sig-pick-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.bb-sig-pick-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);margin-bottom:.85rem}
+.bb-sig-pick-badge::before{content:'';width:24px;height:1px;background:var(--ocean);flex-shrink:0}
+.bb-sig-pick h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);color:var(--ink);letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
+.bb-sig-pick-type{font-size:.75rem;color:var(--ink-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.1rem}
+.bb-sig-pick-sub{font-size:1rem;font-weight:600;color:var(--ink-soft);margin-bottom:.9rem}
+.bb-sig-pick-desc{font-size:.97rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1.1rem}
+.bb-sig-pick-detail{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin-bottom:1rem}
+.bb-sig-detail-tag{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(0,0,0,.12);border-radius:100px;color:var(--ink-muted)}
+.bb-sig-pick-tradeoff{font-size:.82rem;color:var(--coral);font-style:italic;padding:.7rem .9rem;background:rgba(200,96,74,.06);border-radius:var(--r-sm);border-left:2px solid var(--coral)}
+.bb-sig-pick-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/10;position:relative;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.bb-sig-pick-img img{width:100%;height:100%;object-fit:cover}
+.bb-sig-pick-img-label{position:absolute;bottom:.85rem;left:.85rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(0,0,0,.4);padding:.25rem .6rem;border-radius:3px;backdrop-filter:blur(4px)}
+
+/* ── SECTION SHELLS ─────────────────────────────────────── */
+.bb-section{padding:clamp(2.5rem,5vw,4rem) var(--gutter)}
+.bb-section-inner{max-width:var(--max);margin:0 auto}
+.bb-section-label{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.65rem;display:block}
+.bb-section-h2{font-family:var(--font-serif);font-size:clamp(1.6rem,2.8vw,2.1rem);letter-spacing:-.025em;color:var(--ink);margin-bottom:1.75rem}
+.bb-section-h2 em{font-style:italic;color:var(--ocean)}
+
+/* ── TRANSPORT GRID ─────────────────────────────────────── */
+.tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem}
+.tr-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--sand-dark);box-shadow:0 1px 4px rgba(26,26,24,.05);display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.tr-card:hover{box-shadow:0 4px 20px rgba(26,26,24,.1);transform:translateY(-2px)}
+.tr-card-img{aspect-ratio:16/9;overflow:hidden;background:var(--sand-mid)}
+.tr-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s var(--ease)}
+.tr-card:hover .tr-card-img img{transform:scale(1.04)}
+.tr-card-body{padding:1.1rem 1.2rem 1.25rem;flex:1;display:flex;flex-direction:column}
+.tr-card-meta{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.tr-card-cat{color:var(--coral)}
+.tr-card-verdict{font-size:.55rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;white-space:nowrap}
+.verdict-yes{background:rgba(27,92,92,.1);color:var(--ocean-deep)}
 .verdict-maybe{background:rgba(200,96,74,.1);color:var(--coral)}
-.verdict-no{background:rgba(122,122,112,.12);color:var(--ink-muted)}
-.tr-card p{font-size:.85rem;line-height:1.7;color:var(--ink-soft);margin-bottom:.6rem}
-.tr-card-price{font-size:.75rem;font-weight:700;color:var(--ocean);border-top:1px solid var(--sand-mid);padding-top:.55rem;margin-top:.1rem}
-.tr-card-skip{font-size:.75rem;font-style:italic;color:var(--ink-muted);margin-top:.35rem}
-/* Fare table */
-.fare-table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:.85rem;overflow-x:auto;display:block}
-.fare-table th{text-align:left;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);padding:.55rem .75rem;border-bottom:2px solid var(--sand-dark)}
-.fare-table td{padding:.55rem .75rem;border-bottom:1px solid var(--sand-mid);color:var(--ink-soft)}
-.fare-table tr:last-child td{border-bottom:none}
-.fare-table td:first-child{color:var(--ink);font-weight:600}
-.gd-note-box{background:var(--ocean-pale);border:1px solid rgba(27,92,92,.18);border-radius:var(--r-md);padding:1rem 1.25rem;font-size:.85rem;color:var(--ocean-deep);line-height:1.7;margin:1.5rem 0}
-.gd-note-box strong{display:block;margin-bottom:.25rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
-.gd-related{background:var(--night);border-radius:var(--r-lg);padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin:2.5rem 0}
-.gd-related p{font-size:.88rem;color:rgba(255,255,255,.5);margin:0}
-.gd-related strong{color:#fff;display:block;font-size:.95rem;margin-bottom:.2rem}
-.gd-related-btn{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.2);padding:.55rem 1.1rem;border-radius:4px;white-space:nowrap;transition:background .15s;flex-shrink:0}
-.gd-related-btn:hover{background:rgba(255,255,255,.08)}
-.gd-faq{margin:3rem 0 0;padding-top:2rem;border-top:1px solid var(--sand-dark)}
-.gd-faq h2{font-family:var(--font-serif);font-size:1.4rem;color:var(--ink);margin-bottom:1.25rem}
-.gd-faq-item{border-top:1px solid var(--sand-dark);padding:.8rem 0}
-.gd-faq-item:last-child{border-bottom:1px solid var(--sand-dark)}
-.gd-faq-q{font-size:.9rem;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:.5rem;list-style:none;-webkit-appearance:none}
-.gd-faq-q::after{content:'+';font-size:1.1rem;font-weight:300;color:var(--ink-muted);flex-shrink:0;transition:transform .2s}
-.gd-faq-item.open .gd-faq-q::after{transform:rotate(45deg)}
-.gd-faq-a{font-size:.87rem;line-height:1.75;color:var(--ink-soft);max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
-.gd-faq-item.open .gd-faq-a{max-height:300px;padding:.45rem 0 .2rem}
+.verdict-skip{background:rgba(122,122,112,.1);color:var(--ink-muted)}
+.tr-card h3{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink);margin-bottom:.4rem;line-height:1.25}
+.tr-card p{font-size:.86rem;line-height:1.72;color:var(--ink-soft);flex:1}
+.tr-card-price{font-size:.75rem;font-weight:700;color:var(--ocean);border-top:1px solid var(--sand-mid);padding-top:.5rem;margin-top:.75rem}
+.tr-card-note{font-size:.75rem;font-style:italic;color:var(--ink-muted);margin-top:.35rem}
+
+/* ── COMPARISON TABLE ───────────────────────────────────── */
+.tr-compare{background:var(--ocean-deep);padding:clamp(3rem,6vw,5rem) var(--gutter)}
+.tr-compare-inner{max-width:var(--max);margin:0 auto}
+.tr-compare-label{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.65rem;display:block}
+.tr-compare h2{font-family:var(--font-serif);font-size:clamp(1.6rem,2.8vw,2.1rem);color:#fff;letter-spacing:-.025em;margin-bottom:1.75rem}
+.tr-compare h2 em{font-style:italic;color:rgba(255,255,255,.45)}
+.tr-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tr-table{width:100%;border-collapse:collapse;min-width:600px}
+.tr-table th{text-align:left;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:.65rem .85rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.tr-table td{padding:.65rem .85rem;border-bottom:1px solid rgba(255,255,255,.06);font-size:.85rem;color:rgba(255,255,255,.65);vertical-align:top}
+.tr-table tr:last-child td{border-bottom:none}
+.tr-table td:first-child{font-weight:700;color:#fff;white-space:nowrap}
+.tr-table tr:hover td{background:rgba(255,255,255,.03)}
+.tr-dot-yes{color:#4CAF87;font-weight:700}
+.tr-dot-mid{color:rgba(255,255,255,.45)}
+.tr-dot-no{color:rgba(200,96,74,.7)}
+
+/* ── ROUTES SECTION ─────────────────────────────────────── */
+.tr-routes{background:var(--sand-mid);padding:clamp(2.5rem,5vw,4rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.tr-routes-inner{max-width:var(--max);margin:0 auto}
+.tr-routes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.75rem}
+.tr-route-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.tr-route-from{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.2rem}
+.tr-route-name{font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);margin-bottom:.6rem;line-height:1.25}
+.tr-route-rows{display:flex;flex-direction:column;gap:.3rem}
+.tr-route-row{display:flex;justify-content:space-between;align-items:center;font-size:.78rem}
+.tr-route-key{color:var(--ink-muted);font-weight:600}
+.tr-route-val{color:var(--ink);font-weight:700;text-align:right}
+
+/* ── SCOOTER TIPS ───────────────────────────────────────── */
+.tr-scooter-tips{background:var(--white);padding:clamp(2.5rem,5vw,4rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.tr-scooter-tips-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.tr-tips-list{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+.tr-tip{display:flex;gap:.75rem;align-items:flex-start;font-size:.88rem;color:var(--ink-soft);line-height:1.6}
+.tr-tip-icon{width:22px;height:22px;border-radius:50%;background:var(--ocean-pale);color:var(--ocean);font-size:.65rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+.tr-tip-icon-warn{background:rgba(200,96,74,.1);color:var(--coral)}
+.tr-scooter-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/10}
+.tr-scooter-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── DAY TRIPS ──────────────────────────────────────────── */
+.tr-daytrips{background:var(--sand);padding:clamp(2.5rem,5vw,4rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.tr-daytrips-inner{max-width:var(--max);margin:0 auto}
+.tr-daytrips-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1.75rem}
+.tr-daytrip-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);overflow:hidden}
+.tr-daytrip-img{aspect-ratio:4/3;overflow:hidden}
+.tr-daytrip-img img{width:100%;height:100%;object-fit:cover;display:block}
+.tr-daytrip-body{padding:.85rem 1rem}
+.tr-daytrip-dest{font-family:var(--font-serif);font-size:.98rem;color:var(--ink);margin-bottom:.35rem}
+.tr-daytrip-how{font-size:.72rem;font-weight:700;color:var(--ocean);margin-bottom:.2rem}
+.tr-daytrip-time{font-size:.7rem;color:var(--ink-muted)}
+
+/* ── WHAT I'D DO ────────────────────────────────────────── */
+.tr-wid{background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter)}
+.tr-wid-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.tr-wid-label{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.65rem;display:block}
+.tr-wid h2{font-family:var(--font-serif);font-size:clamp(1.5rem,2.5vw,2rem);color:#fff;letter-spacing:-.025em;margin-bottom:1.25rem}
+.tr-wid-rows{display:flex;flex-direction:column;gap:.5rem}
+.tr-wid-row{display:flex;gap:.85rem;align-items:baseline;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.tr-wid-row:last-child{border-bottom:none}
+.tr-wid-situation{font-size:.78rem;color:rgba(255,255,255,.4);font-weight:600;min-width:170px;flex-shrink:0;text-transform:uppercase;letter-spacing:.04em}
+.tr-wid-answer{font-size:.9rem;color:#fff;font-weight:700}
+.tr-grab-tip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-lg);padding:1.5rem}
+.tr-grab-tip-label{font-size:.6rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem;display:block}
+.tr-grab-tip h3{font-family:var(--font-serif);font-size:1.2rem;color:#fff;margin-bottom:.85rem}
+.tr-grab-tip-items{display:flex;flex-direction:column;gap:.5rem}
+.tr-grab-tip-item{font-size:.85rem;color:rgba(255,255,255,.6);display:flex;gap:.6rem;align-items:flex-start;line-height:1.55}
+.tr-grab-tip-item::before{content:'→';color:var(--coral);flex-shrink:0;font-weight:700}
+
+/* ── RELATED ────────────────────────────────────────────── */
+.tr-related{background:var(--sand-mid);padding:clamp(2.5rem,5vw,4rem) var(--gutter);border-top:1px solid var(--sand-dark)}
+.tr-related-inner{max-width:var(--max);margin:0 auto}
+.tr-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
+.tr-related-card{background:var(--night);border-radius:var(--r-lg);padding:1.35rem 1.5rem;display:flex;flex-direction:column}
+.tr-related-card-label{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem}
+.tr-related-card strong{font-family:var(--font-serif);font-size:1.1rem;color:#fff;display:block;margin-bottom:.4rem}
+.tr-related-card p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;flex:1;margin-bottom:1rem}
+.tr-related-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:2px;transition:color .15s,border-color .15s;align-self:flex-start}
+.tr-related-btn:hover{color:#fff;border-color:#fff}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.bb-faq{padding:clamp(2.5rem,5vw,4rem) var(--gutter);background:var(--sand);border-top:1px solid var(--sand-dark)}
+.bb-faq-inner{max-width:760px;margin:0 auto}
+.bb-faq h2{font-family:var(--font-serif);font-size:clamp(1.4rem,2.2vw,1.75rem);color:var(--ink);margin-bottom:1.5rem;letter-spacing:-.02em}
+.bb-faq-item{border-top:1px solid var(--sand-dark);padding:.85rem 0}
+.bb-faq-item:last-child{border-bottom:1px solid var(--sand-dark)}
+.bb-faq-q{font-size:.92rem;font-weight:700;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:.75rem;list-style:none;padding:0;-webkit-appearance:none}
+.bb-faq-q::after{content:'+';font-size:1.2rem;font-weight:300;color:var(--ink-muted);flex-shrink:0;transition:transform .2s}
+.bb-faq-item.open .bb-faq-q::after{transform:rotate(45deg)}
+.bb-faq-a{font-size:.88rem;line-height:1.75;color:var(--ink-soft);max-height:0;overflow:hidden;transition:max-height .3s var(--ease),padding .3s}
+.bb-faq-item.open .bb-faq-a{max-height:400px;padding:.5rem 0 .25rem}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
 .footer-inner{max-width:var(--max);margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
 .footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem}
 .footer-brand em{font-style:italic;color:var(--coral-light)}
 .footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem}
+.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
 .footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem}
 .footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s}
 .footer-col a:hover{color:rgba(255,255,255,.75)}
 .footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;font-size:.7rem;color:rgba(255,255,255,.25)}
-@media(max-width:768px){.tr-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:1024px){
+  .bb-top-pick-inner,.bb-sig-pick-inner,.tr-wid-inner,.tr-scooter-tips-inner{grid-template-columns:1fr}
+  .bb-top-pick-img{aspect-ratio:16/7}
+  .bb-sig-pick-img,.tr-scooter-img{aspect-ratio:16/7;order:-1}
+  .tr-picks-grid{grid-template-columns:repeat(3,1fr)}
+  .tr-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-routes-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-daytrips-grid{grid-template-columns:repeat(3,1fr)}
+  .tr-related-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .bb-hero{min-height:420px}
+  .tr-picks-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-grid{grid-template-columns:1fr}
+  .tr-routes-grid{grid-template-columns:1fr}
+  .tr-daytrips-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-related-grid{grid-template-columns:1fr}
+  .tr-wid-situation{min-width:130px}
+}
+@media(max-width:600px){
+  .tr-picks-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-daytrips-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:400px){
+  .tr-daytrips-grid{grid-template-columns:1fr}
+  .tr-wid-row{flex-direction:column;gap:.2rem}
+  .tr-wid-situation{min-width:0}
+}
 </style>
   <link rel="stylesheet" href="bk-widget.css">
 </head>
 <body>
+
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="https://www.dananghotelguide.com/" class="nav-logo" aria-label="Da Nang Hotel Guide home"><img src="images/dhg-logo.png" alt="Da Nang Hotel Guide" class="nav-logo-img" width="48" height="48"></a>
   <a href="https://x.com/DaNangHG" class="nav-x-link" target="_blank" rel="noopener noreferrer" aria-label="Da Nang Hotel Guide on X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -164,25 +335,77 @@
   <a href="https://www.instagram.com/dananghotelguide/" class="nav-ig-link" target="_blank" rel="noopener noreferrer" aria-label="Da Nang Hotel Guide on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
-    <div class="nav-dropdown"><a href="hotels.html" class="nav-link nav-dropdown-toggle">Hotels</a><div class="nav-dropdown-menu"><a href="best-hotels-in-da-nang.html" class="nav-dropdown-item">Best Hotels</a><a href="da-nang-beach-hotels.html" class="nav-dropdown-item">Beachfront</a><a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item">Riverside</a><a href="luxury-hotels-da-nang.html" class="nav-dropdown-item">Luxury</a><a href="family-hotels-da-nang.html" class="nav-dropdown-item">Family</a><a href="boutique-hotels-da-nang.html" class="nav-dropdown-item">Boutique</a></div></div>
+    <div class="nav-dropdown">
+      <a href="hotels.html" class="nav-link nav-dropdown-toggle">Hotels</a>
+      <div class="nav-dropdown-menu">
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item">Best Hotels</a>
+        <a href="da-nang-beach-hotels.html" class="nav-dropdown-item">Beachfront</a>
+        <a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item">Riverside</a>
+        <a href="luxury-hotels-da-nang.html" class="nav-dropdown-item">Luxury</a>
+        <a href="family-hotels-da-nang.html" class="nav-dropdown-item">Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item">Boutique</a>
+      </div>
+    </div>
     <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
-    <div class="nav-dropdown"><a href="guides.html" class="nav-link nav-dropdown-toggle active">Guides</a><div class="nav-dropdown-menu"><a href="things-to-do-in-da-nang.html" class="nav-dropdown-item">Things To Do</a><a href="da-nang-itinerary.html" class="nav-dropdown-item">Itineraries</a><a href="da-nang-transport-guide.html" class="nav-dropdown-item">Getting Around</a><a href="da-nang-first-time-visitors.html" class="nav-dropdown-item">First Timers</a><a href="best-time-to-visit-da-nang.html" class="nav-dropdown-item">Best Time to Visit</a><a href="da-nang-budget-guide.html" class="nav-dropdown-item">Budget Guide</a><a href="da-nang-digital-nomad-guide.html" class="nav-dropdown-item">Digital Nomads</a></div></div>
-    <div class="nav-dropdown"><a href="dining.html" class="nav-link nav-dropdown-toggle">Food &amp; Nightlife</a><div class="nav-dropdown-menu"><a href="dining.html" class="nav-dropdown-item">Dining Guide</a><a href="best-bars-in-da-nang.html" class="nav-dropdown-item">Best Bars</a>
-        <a href="da-nang-nightlife-guide.html" class="nav-dropdown-item">Nightlife Guide</a><a href="best-cafes-da-nang.html" class="nav-dropdown-item">Best Cafes</a><a href="da-nang-hoi-an-markets-guide.html" class="nav-dropdown-item">Markets Guide</a></div></div>
+    <div class="nav-dropdown">
+      <a href="guides.html" class="nav-link nav-dropdown-toggle active">Guides</a>
+      <div class="nav-dropdown-menu">
+        <a href="things-to-do-in-da-nang.html" class="nav-dropdown-item">Things To Do</a>
+        <a href="da-nang-itinerary.html" class="nav-dropdown-item">Itineraries</a>
+        <a href="da-nang-transport-guide.html" class="nav-dropdown-item">Getting Around</a>
+        <a href="da-nang-first-time-visitors.html" class="nav-dropdown-item">First Timers</a>
+        <a href="best-time-to-visit-da-nang.html" class="nav-dropdown-item">Best Time to Visit</a>
+        <a href="da-nang-budget-guide.html" class="nav-dropdown-item">Budget Guide</a>
+        <a href="da-nang-digital-nomad-guide.html" class="nav-dropdown-item">Digital Nomads</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="dining.html" class="nav-link nav-dropdown-toggle">Food &amp; Nightlife</a>
+      <div class="nav-dropdown-menu">
+        <a href="dining.html" class="nav-dropdown-item">Dining Guide</a>
+        <a href="best-bars-in-da-nang.html" class="nav-dropdown-item">Best Bars</a>
+        <a href="da-nang-nightlife-guide.html" class="nav-dropdown-item">Nightlife Guide</a>
+        <a href="best-cafes-da-nang.html" class="nav-dropdown-item">Best Cafes</a>
+        <a href="da-nang-hoi-an-markets-guide.html" class="nav-dropdown-item">Markets Guide</a>
+      </div>
+    </div>
     <a href="hotel-reviews.html" class="nav-link">Reviews</a>
-    <div class="nav-dropdown"><a href="hoi-an.html" class="nav-link nav-dropdown-toggle">Hoi An</a><div class="nav-dropdown-menu"><a href="hoi-an.html" class="nav-dropdown-item">Hoi An Guide</a><a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item">Best Hotels Hoi An</a><a href="an-bang-beach-hotels.html" class="nav-dropdown-item">An Bang Beach Hotels</a></div></div>
-    <a href="news.html" class="nav-link">News</a>
+    <div class="nav-dropdown">
+      <a href="hoi-an.html" class="nav-link nav-dropdown-toggle">Hoi An</a>
+      <div class="nav-dropdown-menu">
+        <a href="hoi-an.html" class="nav-dropdown-item">Travel Guide</a>
+        <a href="da-nang-vs-hoi-an.html" class="nav-dropdown-item">Da Nang vs Hoi An</a>
+        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item">Best Hotels</a>
+        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item">Where to Stay</a>
+        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item">An Bang Beach</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="news.html" class="nav-link nav-dropdown-toggle">News</a>
+      <div class="nav-dropdown-menu">
+        <a href="news.html" class="nav-dropdown-item">Latest News</a>
+      </div>
+    </div>
     <a href="about.html" class="nav-link">About</a>
+    <a href="da-nang-videos.html" class="nav-link">Videos</a>
   </div>
   <div class="nav-right">
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored"><span class="btn-text">Search Stays</span></a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">
+      <span class="btn-text">Search Stays</span>
+    </a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="index.html" class="mobile-nav-link">Home</a>
   <a href="hotels.html" class="mobile-nav-link">Hotels</a>
+  <a href="where-to-stay-in-da-nang.html" class="mobile-nav-link">Where to Stay</a>
   <a href="guides.html" class="mobile-nav-link active">Guides</a>
+  <a href="things-to-do-in-da-nang.html" class="mobile-sub-link">Things To Do</a>
+  <a href="da-nang-itinerary.html" class="mobile-sub-link">Itineraries</a>
+  <a href="da-nang-transport-guide.html" class="mobile-sub-link">Getting Around</a>
   <a href="dining.html" class="mobile-nav-link">Food &amp; Nightlife</a>
   <a href="hoi-an.html" class="mobile-nav-link">Hoi An</a>
   <a href="news.html" class="mobile-nav-link">News</a>
@@ -190,139 +413,588 @@
   <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
 </div>
 
-<header class="gd-hero">
-  <div class="gd-hero-img" role="img" aria-label="Da Nang city aerial — Han River, Dragon Bridge, and beachfront skyline"></div>
-  <div class="gd-hero-content">
-    <div class="gd-eyebrow">Transport Guide &mdash; Da Nang &mdash; 2026</div>
+<!-- HERO -->
+<header class="bb-hero">
+  <div class="bb-hero-img">
+    <img src="images/grab-da-nang.jpg" alt="Grab car pickup on a Da Nang city street" loading="eager" width="1400" height="800">
+  </div>
+  <div class="bb-hero-content">
+    <div class="bb-hero-eyebrow">Transport Guide &mdash; Da Nang &mdash; 2026</div>
     <h1>Getting Around <em>Da Nang</em></h1>
-    <p class="gd-hero-sub">Grab covers most trips. Here's when to use everything else.</p>
-    <p class="gd-hero-meta">Updated 2026 &middot; Local editor &middot; Real 2026 prices</p>
+    <p class="bb-hero-sub">Grab, scooters, taxis, private cars and the easiest ways to move around the city and beyond.</p>
+    <p class="bb-hero-meta">Updated 2026 &middot; Local guide</p>
   </div>
 </header>
 
-<main class="gd-page">
-
-  <div class="gd-short">
-    <div class="gd-short-label">The Single Most Important App You Will Download in Vietnam</div>
-    <p><strong>Download Grab. Use Grab. Do nothing else.</strong></p>
-    <p>This is not a suggestion. This is the difference between a great trip and one where you get quoted four times the fair price by a taxi driver the moment you step outside arrivals.</p>
-    <p>Avoid all taxis. Avoid anyone who walks up to you outside your hotel and says they will match Grab. Avoid the tuk-tuk, the waved-down motorbike, and the guy at the airport who "has a friend with a car." None of them will match Grab. They are counting on you not knowing what the real price is.</p>
-    <p>Grab is a car-sharing app - think Uber, but faster, cheaper, and more reliable than Uber ever was anywhere. You open the app, you enter your destination, you see the price before you confirm. That price is what you pay. No negotiation. No surprise charges. No language barrier. The car arrives in less time than it takes to put on your shoes.</p>
-    <img src="images/grab-da-nang.jpg" alt="Grab app open on phone showing GrabCar options and map in Vietnam" class="gd-short-img" loading="lazy">
-    <p>Here is what the numbers look like in Da Nang. Nothing in the city should cost you more than 50,000 VND - that is $2. Airport to your hotel should run no more than 200,000 VND. A trip to Hoi An is around 250,000 to 300,000 VND. That is the ceiling for virtually every journey you will make. At those prices there is no reason to shop around, cut corners, or try to bargain with anyone.</p>
-    <p>Grab also doubles as the fastest food delivery app in existence. Order from a local restaurant, your food arrives in 15 minutes, and the cost including delivery is less than a coffee back home.</p>
-    <p>No tip is required, but you can add one in the app after drop-off if your driver was great. Most of them are.</p>
-    <p>Do not get cute about this. Download Grab before you land. It is the best travel advice on this entire website.</p>
-  </div>
-
-  <img src="images/grab-airport-da-nang.jpg" alt="Da Nang International Airport arrivals entrance with Grab pickup zone" class="gd-short-img" loading="lazy">
-
-  <div class="gd-section">
-    <div class="gd-section-label">Your options</div>
-    <h2>Every Way to <em>Get Around</em></h2>
-  </div>
-
-  <div class="gd-short">
-    <div class="gd-short-label">When Grab Is Not Enough</div>
-    <p>For most visitors on a short trip, Grab handles everything. But not everyone is on a short trip, and not every situation fits a ride-share.</p>
-    <p>Renting a motorbike is the classic Da Nang move - cheap, fast, and the best way to explore Son Tra Peninsula on your own schedule. The catch is your license. Technically you need an International Driving Permit endorsed for motorbikes. In practice enforcement is inconsistent, but an accident without the right license means your travel insurance will not pay out. Know that going in.</p>
-    <p>A private car with a driver is worth considering if you are planning a full day out - Marble Mountains, Hoi An, Hai Van Pass, all in one loop. Calling four separate Grabs across a day works fine, but a private car means one driver, one price agreed upfront, and no waiting around between stops. It is a genuine convenience, not a scam, if you book through your hotel or a reputable local operator.</p>
-    <p>Walking is underrated. The beach strip between An Thuong and the shore is completely walkable. The Han River promenade is flat and pleasant at night. Da Nang is not a city that punishes you for going on foot - at least in the areas most visitors actually spend time in.</p>
-    <p>But for everything else - airport runs, evening meals, day trips, getting back after a late night - Grab is the answer. Always.</p>
-  </div>
-
-  <div class="tr-grid">
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Grab</h3><span class="tr-card-verdict verdict-yes">Best Option</span></div>
-      <p>Vietnam's dominant ride-hail app. Available city-wide, 2–5 minute wait times. GrabCar (air-conditioned) for comfort; GrabBike for short hops. No language required — destination is typed in app.</p>
-      <div class="tr-card-price">City rides: 40,000–80,000 VND &middot; To Hoi An: ~250,000 VND &middot; Airport: 60,000–120,000 VND</div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Taxi</h3><span class="tr-card-verdict verdict-maybe">Fine, Use Meter</span></div>
-      <p>Vinasun and Mai Linh are the reliable metered companies. Always insist on the meter — accept no fixed-price offers from strangers at the airport or near tourist areas. Grab is usually cheaper and easier.</p>
-      <div class="tr-card-price">Similar to Grab. Flag-fall ~15,000 VND, then ~12,000–15,000 VND/km</div>
-      <div class="tr-card-skip">Skip unlicensed taxis approaching you at the airport — fixed rates are rarely in your favour.</div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Scooter Rental</h3><span class="tr-card-verdict verdict-maybe">If Experienced</span></div>
-      <p>100,000–200,000 VND per day from rental shops near My Khe. Freedom to explore Son Tra and Hai Van Pass at your own pace. Requires comfort with Vietnamese traffic — faster and less orderly than most Western cities.</p>
-      <div class="tr-card-price">100,000–200,000 VND/day &middot; Fuel: ~25,000 VND/litre</div>
-      <div class="tr-card-skip">Skip if you're uncertain — Grab is cheap enough that rental rarely saves meaningful money for a short trip.</div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Private Car</h3><span class="tr-card-verdict verdict-yes">Best for Day Trips</span></div>
-      <p>Book a full-day private car with driver for Hoi An, Hai Van Pass, or Ba Na Hills. Hotel concierge can arrange; rates are negotiable. More comfortable than Grab for long distances, and the driver waits while you explore.</p>
-      <div class="tr-card-price">Hoi An full day: ~1,200,000–1,800,000 VND &middot; Ba Na Hills: ~1,000,000–1,500,000 VND</div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Walking</h3><span class="tr-card-verdict verdict-yes">For Compact Areas</span></div>
-      <p>An Thuong neighbourhood and the My Khe beachfront are walkable. The city center (Han River area) is walkable once you're there. Between major zones — beach to city, city to Son Tra — the distances require a ride.</p>
-      <div class="tr-card-price">Free &middot; Best before 10am and after 5pm (heat)</div>
-    </div>
-    <div class="tr-card">
-      <div class="tr-card-top"><h3>Airport Transfer</h3><span class="tr-card-verdict verdict-yes">Use Grab</span></div>
-      <p>Da Nang airport is 3–5km from the city center, 5–8km from My Khe. Open the Grab app on arrival — it works in the terminal. Faster and cheaper than hotel transfers for most destinations.</p>
-      <div class="tr-card-price">To My Khe: 60,000–120,000 VND &middot; 10–20 minutes</div>
-      <div class="tr-card-skip">Hotel airport transfers average 200,000–400,000 VND — rarely worth it.</div>
+<!-- QUICK PICKS STRIP -->
+<div class="tr-picks-strip">
+  <div class="tr-picks-strip-inner">
+    <span class="tr-picks-label">The short answer</span>
+    <h2 class="tr-picks-heading">Six ways to get around &mdash; <em>ranked</em></h2>
+    <div class="tr-picks-grid">
+      <div class="tr-pick-card">
+        <img src="images/grab-car-fleet.jpg" alt="Grab cars lined up in Da Nang" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-badge tr-pick-badge-ep">Editor's Pick</span>
+          <span class="tr-pick-cat">Best Overall</span>
+          <span class="tr-pick-name">Grab</span>
+          <span class="tr-pick-sub">Upfront price &middot; No negotiating</span>
+        </div>
+      </div>
+      <div class="tr-pick-card">
+        <img src="images/da-nang-transport-guide-8c98784a.webp" alt="Scooter on Da Nang coastal road" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-badge tr-pick-badge-sp">Signature Pick</span>
+          <span class="tr-pick-cat">Most Da Nang</span>
+          <span class="tr-pick-name">Scooter Rental</span>
+          <span class="tr-pick-sub">Total freedom &middot; If experienced</span>
+        </div>
+      </div>
+      <div class="tr-pick-card">
+        <img src="images/grab-airport-da-nang.jpg" alt="Da Nang airport arrivals pickup zone" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-cat">Airport Arrival</span>
+          <span class="tr-pick-name">Grab / Pre-Booked Car</span>
+          <span class="tr-pick-sub">60–120k VND to My Khe</span>
+        </div>
+      </div>
+      <div class="tr-pick-card">
+        <img src="images/guides-b64-40.jpg" alt="Hoi An Ancient Town street" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-cat">Best for Hoi An</span>
+          <span class="tr-pick-name">Grab or Private Car</span>
+          <span class="tr-pick-sub">40–50 min &middot; 200–280k VND</span>
+        </div>
+      </div>
+      <div class="tr-pick-card">
+        <img src="images/da-nang-transport-guide-082e11be.jpg" alt="Private van transfer Da Nang" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-cat">Best for Groups</span>
+          <span class="tr-pick-name">Private Van</span>
+          <span class="tr-pick-sub">Fixed price &middot; Driver waits</span>
+        </div>
+      </div>
+      <div class="tr-pick-card">
+        <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Da Nang city boulevard at dusk" loading="lazy" width="400" height="533">
+        <div class="tr-pick-overlay">
+          <span class="tr-pick-cat">Don't Want to Think</span>
+          <span class="tr-pick-name">Hotel Transfer</span>
+          <span class="tr-pick-sub">Pre-booked &middot; Fixed price</span>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <img src="images/grab-dragon-bridge-da-nang.jpg" alt="Grab drivers on scooters crossing Dragon Bridge Da Nang" class="gd-short-img" loading="lazy">
-
-  <div class="gd-section" style="margin-top:2.5rem">
-    <div class="gd-section-label">Key routes</div>
-    <h2>Common Journeys &amp; <em>Fares</em></h2>
+<!-- EDITOR'S PICK: GRAB -->
+<section class="bb-top-pick">
+  <div class="bb-top-pick-inner">
+    <div>
+      <div class="bb-top-pick-badge">Editor's Pick</div>
+      <h2>Grab</h2>
+      <p class="bb-top-pick-type">City-wide &middot; Ride-hail &middot; All distances</p>
+      <p class="bb-top-pick-desc">Grab is the default answer for most visitors. Open the app, see the fare, get in. You're usually across town for under $2 USD. No negotiating, no language barrier, no wondering if you're being overcharged &mdash; the price is locked before you confirm.</p>
+      <p class="bb-top-pick-desc">Available city-wide with 2&ndash;5 minute wait times. GrabCar for luggage or AC comfort; GrabBike for short hops. Works for My Khe, An Thu&#7907;ng, Han River, airport, Marble Mountains, and Hoi An. Download the app before you land.</p>
+      <div class="bb-top-pick-detail">
+        <span class="bb-detail-tag">Upfront pricing</span>
+        <span class="bb-detail-tag">No negotiating</span>
+        <span class="bb-detail-tag">2&ndash;5 min wait</span>
+        <span class="bb-detail-tag">GrabCar &amp; GrabBike</span>
+        <span class="bb-detail-tag">City rides: 40,000&ndash;80,000 VND</span>
+      </div>
+      <div class="bb-top-pick-note">Download Grab before you land. Airport Wi-Fi is reliable, but having the app ready saves you from anyone quoting fixed prices at arrivals.</div>
+    </div>
+    <div class="bb-top-pick-img">
+      <img src="images/grab-airport-da-nang.jpg" alt="Grab pickup zone at Da Nang International Airport" loading="lazy" width="800" height="600">
+      <span class="bb-top-pick-img-label">Editor's Pick</span>
+    </div>
   </div>
+</section>
 
-  <div style="overflow-x:auto">
-    <table class="fare-table">
-      <thead><tr><th>Route</th><th>Grab (approx)</th><th>Time</th><th>Notes</th></tr></thead>
-      <tbody>
-        <tr><td>Airport &rarr; My Khe Beach</td><td>60,000–120,000 VND</td><td>10–20 min</td><td>GrabCar recommended with luggage</td></tr>
-        <tr><td>My Khe &rarr; City Center / Han River</td><td>50,000–80,000 VND</td><td>10–15 min</td><td>Short hop, GrabBike works fine</td></tr>
-        <tr><td>My Khe &rarr; Marble Mountains</td><td>70,000–110,000 VND</td><td>15–20 min</td><td>Book return or arrange pickup</td></tr>
-        <tr><td>My Khe &rarr; Son Tra / Linh Ung</td><td>60,000–100,000 VND</td><td>15–20 min</td><td>Driver will wait if you ask</td></tr>
-        <tr><td>Da Nang &rarr; Hoi An</td><td>200,000–280,000 VND</td><td>40–50 min</td><td>GrabCar only — too far for bike</td></tr>
-        <tr><td>Da Nang &rarr; Ba Na Hills</td><td>~350,000–450,000 VND</td><td>45–60 min</td><td>Private car better for day trip</td></tr>
-      </tbody>
-    </table>
+<!-- SIGNATURE PICK: SCOOTER -->
+<section class="bb-sig-pick">
+  <div class="bb-sig-pick-inner">
+    <div>
+      <div class="bb-sig-pick-badge">Da Nang Signature Pick</div>
+      <h2>Scooter Rental</h2>
+      <p class="bb-sig-pick-type">Daily rental &middot; 100,000&ndash;200,000 VND/day</p>
+      <p class="bb-sig-pick-sub">The most Da Nang way to get around &mdash; if you're comfortable in the traffic.</p>
+      <p class="bb-sig-pick-desc">A scooter gives you total freedom. Son Tra Peninsula at dawn, a hidden cafe off a back road, My Khe at any hour, the coastal road south past Marble Mountains. No waiting for Grab, no surge pricing, easy parking almost everywhere. Rental shops near My Khe charge 100,000&ndash;200,000 VND per day.</p>
+      <p class="bb-sig-pick-desc">Da Nang is more manageable than Hanoi or HCMC. But traffic is still fast, lane discipline is loose, and an accident without the right license means insurance won't pay. If you've ridden in Southeast Asia before, this is the move. If you haven't, use Grab &mdash; it's cheap enough that a scooter rarely saves meaningful money on a short trip.</p>
+      <div class="bb-sig-pick-detail">
+        <span class="bb-sig-detail-tag">Total freedom</span>
+        <span class="bb-sig-detail-tag">Son Tra &amp; coastal roads</span>
+        <span class="bb-sig-detail-tag">Easy parking</span>
+        <span class="bb-sig-detail-tag">100,000&ndash;200,000 VND/day</span>
+      </div>
+      <div class="bb-sig-pick-tradeoff">THE TRADEOFF: Vietnamese traffic is faster and less predictable than most Western cities. An accident without a valid motorcycle license voids most travel insurance. Ride only if you're genuinely experienced.</div>
+    </div>
+    <div class="bb-sig-pick-img">
+      <img src="images/da-nang-transport-guide-8c98784a.webp" alt="Scooter on Da Nang street near My Khe beachfront" loading="lazy" width="900" height="562">
+      <span class="bb-sig-pick-img-label">Da Nang Signature Pick</span>
+    </div>
   </div>
+</section>
 
-  <div class="gd-note-box">
-    <strong>Good to Know</strong>
-    Grab prices fluctuate with demand — peak hours (7–9am, 5–7pm) and rain can push fares 20–40% higher. If a fare looks unusually high, cancel and retry in 5 minutes. Prices above are off-peak estimates for 2026.
+<!-- TRANSPORT GRID -->
+<section class="bb-section" style="background:var(--white)">
+  <div class="bb-section-inner">
+    <span class="bb-section-label">All options</span>
+    <h2 class="bb-section-h2">Every way to <em>get around</em></h2>
+    <div class="tr-grid">
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/grab-dragon-bridge-da-nang.jpg" alt="Grab motorbike riders crossing Dragon Bridge Da Nang at night" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Ride-hail</span><span class="tr-card-verdict verdict-yes">Best Option</span></div>
+          <h3>Grab</h3>
+          <p>Vietnam's dominant ride-hail. City-wide coverage, 2&ndash;5 minute wait. GrabCar for comfort and luggage; GrabBike for short hops. No language required &mdash; destination typed in app.</p>
+          <div class="tr-card-price">City: 40,000&ndash;80,000 VND &middot; Airport: 60,000&ndash;120,000 VND &middot; Hoi An: ~250,000 VND</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/grab-taxi.jpg" alt="Yellow taxi on a Da Nang street" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Taxi</span><span class="tr-card-verdict verdict-maybe">Use Meter</span></div>
+          <h3>Taxi</h3>
+          <p>Vinasun and Mai Linh are the reliable metered companies. Always insist on the meter. Grab is usually cheaper and easier, but taxis remain an option if the app isn't working.</p>
+          <div class="tr-card-price">Flag-fall ~15,000 VND, then ~12,000&ndash;15,000 VND/km</div>
+          <div class="tr-card-note">Avoid anyone approaching you outside the airport offering a fixed price.</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/grab-car-fleet.jpg" alt="Private car fleet for hire in Da Nang" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Private Car</span><span class="tr-card-verdict verdict-yes">Day Trips</span></div>
+          <h3>Private Car with Driver</h3>
+          <p>Book through your hotel for full-day trips to Hoi An, Hai Van Pass, Ba Na Hills, or a combined loop. One driver, one price agreed upfront &mdash; no waiting for Grab between stops.</p>
+          <div class="tr-card-price">Hoi An full day: ~1,200,000&ndash;1,800,000 VND &middot; Ba Na Hills: ~1,000,000&ndash;1,500,000 VND</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/da-nang-transport-guide-082e11be.jpg" alt="Van transfer for groups in Da Nang" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Private Van</span><span class="tr-card-verdict verdict-yes">Groups</span></div>
+          <h3>Private Van</h3>
+          <p>For groups of 4&ndash;8. Fixed price agreed upfront, driver waits. Airport runs, Hoi An day trips, and multi-stop itineraries all work well with a van. Book through hotel or local operators.</p>
+          <div class="tr-card-price">Airport to city: ~300,000&ndash;500,000 VND &middot; Hoi An day: ~1,500,000&ndash;2,000,000 VND</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/grab-bike-rider.jpg" alt="GrabBike motorbike rider in Da Nang city" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Ride-hail Moto</span><span class="tr-card-verdict verdict-yes">Short Hops</span></div>
+          <h3>GrabBike</h3>
+          <p>Motorbike version of Grab &mdash; faster through traffic, cheaper for short distances. Good for solo riders on quick city hops. Helmet provided. Not recommended with luggage or on long routes.</p>
+          <div class="tr-card-price">Short city hops: 20,000&ndash;45,000 VND</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/broll-da-nang-airport-terminal.jpg" alt="Da Nang International Airport terminal entrance" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Airport</span><span class="tr-card-verdict verdict-yes">Use Grab</span></div>
+          <h3>Airport Transfer</h3>
+          <p>Da Nang airport is 3&ndash;5km from city center, 5&ndash;8km from My Khe. Open Grab on arrival &mdash; it works in the terminal. Faster and cheaper than pre-booked hotel transfers for most hotels.</p>
+          <div class="tr-card-price">To My Khe: 60,000&ndash;120,000 VND &middot; 10&ndash;20 min</div>
+          <div class="tr-card-note">Hotel airport transfers average 200,000&ndash;400,000 VND &mdash; rarely worth it.</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/broll-my-khe-hotel-strip.jpg" alt="My Khe beachfront promenade walkable strip" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">On Foot</span><span class="tr-card-verdict verdict-yes">Compact Zones</span></div>
+          <h3>Walking</h3>
+          <p>An Thu&#7907;ng and the My Khe beachfront are walkable. The Han River promenade is a good evening walk. Between major zones &mdash; beach to city, city to Son Tra &mdash; distances require a ride.</p>
+          <div class="tr-card-price">Free &middot; Best before 10am and after 5pm (heat)</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/grab-bike-waiting.jpg" alt="Motorbike riders waiting at a Da Nang junction" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Bicycle</span><span class="tr-card-verdict verdict-maybe">Limited Use</span></div>
+          <h3>Bicycle</h3>
+          <p>Some hotels lend or rent bicycles. Good for the beachfront strip and flat An Thu&#7907;ng area at low-traffic hours. Not practical for cross-city or day trips. Avoid peak traffic.</p>
+          <div class="tr-card-price">Hotel rental: free&ndash;50,000 VND/day</div>
+        </div>
+      </div>
+
+      <div class="tr-card">
+        <div class="tr-card-img">
+          <img src="images/guide-hanoi-trainstreet.jpg" alt="Vietnam train railway" loading="lazy" width="600" height="338">
+        </div>
+        <div class="tr-card-body">
+          <div class="tr-card-meta"><span class="tr-card-cat">Train</span><span class="tr-card-verdict verdict-maybe">Hue Only</span></div>
+          <h3>Train</h3>
+          <p>Da Nang station connects north to Hue (2.5&ndash;3 hrs, from ~100,000 VND) and south to Saigon. For Hoi An: trains don't stop there &mdash; use Grab. Scenic Hai Van Pass crossing on the Da Nang&ndash;Hue route.</p>
+          <div class="tr-card-price">Da Nang&ndash;Hue: from ~100,000 VND &middot; Book at dsvn.vn</div>
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
 
-  <div class="gd-related">
-    <div><strong>Planning a Hoi An day trip?</strong><p>The 40-minute Grab ride is the easiest option. Our airport-to-Hoi An guide covers all transfer options.</p></div>
-    <a href="da-nang-airport-to-hoi-an.html" class="gd-related-btn">Airport to Hoi An &rarr;</a>
+<!-- COMPARISON TABLE -->
+<section class="tr-compare">
+  <div class="tr-compare-inner">
+    <span class="tr-compare-label">Side by side</span>
+    <h2>Which transport should you <em>use?</em></h2>
+    <div class="tr-table-wrap">
+      <table class="tr-table">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Best for</th>
+            <th>Typical cost</th>
+            <th>Convenience</th>
+            <th>Flexibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Grab</td>
+            <td>Everything. Short rides, airport, Hoi An</td>
+            <td>40,000&ndash;280,000 VND</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> Highest</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> On demand</td>
+          </tr>
+          <tr>
+            <td>Scooter</td>
+            <td>Son Tra, coastal roads, all-day explore</td>
+            <td>100,000&ndash;200,000 VND/day</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> Total freedom</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> Go anywhere</td>
+          </tr>
+          <tr>
+            <td>Taxi</td>
+            <td>When Grab isn't working</td>
+            <td>Similar to Grab</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> Medium</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> On demand</td>
+          </tr>
+          <tr>
+            <td>Private Car</td>
+            <td>Full-day trips, Hoi An, Ba Na Hills</td>
+            <td>1,000,000&ndash;1,800,000 VND/day</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> Pre-book required</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> Driver waits</td>
+          </tr>
+          <tr>
+            <td>Private Van</td>
+            <td>Groups 4&ndash;8, airport runs</td>
+            <td>300,000&ndash;2,000,000 VND</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> Pre-book required</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> Fixed route</td>
+          </tr>
+          <tr>
+            <td>Walking</td>
+            <td>An Thu&#7907;ng, beachfront, Han River</td>
+            <td>Free</td>
+            <td><span class="tr-dot-yes">&#9679;&#9679;&#9679;</span> In compact zones</td>
+            <td><span class="tr-dot-mid">&#9679;&#9679;</span> Zone-limited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+</section>
 
-  <div class="gd-faq">
+<!-- COMMON ROUTES -->
+<section class="tr-routes">
+  <div class="tr-routes-inner">
+    <span class="bb-section-label">Key journeys</span>
+    <h2 class="bb-section-h2">Common routes &amp; <em>approximate fares</em></h2>
+    <div class="tr-routes-grid">
+      <div class="tr-route-card">
+        <div class="tr-route-from">Airport</div>
+        <div class="tr-route-name">Airport &rarr; My Khe Beach</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">GrabCar</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">60,000&ndash;120,000 VND</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">10&ndash;20 min</span></div>
+        </div>
+      </div>
+      <div class="tr-route-card">
+        <div class="tr-route-from">Airport</div>
+        <div class="tr-route-name">Airport &rarr; An Thu&#7907;ng</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">GrabCar</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">70,000&ndash;130,000 VND</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">12&ndash;22 min</span></div>
+        </div>
+      </div>
+      <div class="tr-route-card">
+        <div class="tr-route-from">City</div>
+        <div class="tr-route-name">My Khe &rarr; Han River</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">Grab or GrabBike</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">40,000&ndash;80,000 VND</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">10&ndash;18 min</span></div>
+        </div>
+      </div>
+      <div class="tr-route-card">
+        <div class="tr-route-from">Day Trip</div>
+        <div class="tr-route-name">Da Nang &rarr; Hoi An</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">GrabCar or private car</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">200,000&ndash;280,000 VND</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">40&ndash;50 min</span></div>
+        </div>
+      </div>
+      <div class="tr-route-card">
+        <div class="tr-route-from">Day Trip</div>
+        <div class="tr-route-name">Da Nang &rarr; Hoiana</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">Private car</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">250,000&ndash;350,000 VND Grab</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">50&ndash;65 min</span></div>
+        </div>
+      </div>
+      <div class="tr-route-card">
+        <div class="tr-route-from">Day Trip</div>
+        <div class="tr-route-name">Da Nang &rarr; Ba Na Hills</div>
+        <div class="tr-route-rows">
+          <div class="tr-route-row"><span class="tr-route-key">Best option</span><span class="tr-route-val">Private car (driver waits)</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Typical cost</span><span class="tr-route-val">Grab ~350,000&ndash;450,000 VND</span></div>
+          <div class="tr-route-row"><span class="tr-route-key">Time</span><span class="tr-route-val">45&ndash;60 min</span></div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:var(--ink-muted);margin-top:1.25rem">Fares vary with demand and time of day. Peak hours (7&ndash;9am, 5&ndash;7pm) and rain can push Grab fares 20&ndash;40% higher. Prices above are off-peak estimates for 2026.</p>
+  </div>
+</section>
+
+<!-- SCOOTER RENTAL TIPS -->
+<section class="tr-scooter-tips">
+  <div class="tr-scooter-tips-inner">
+    <div>
+      <span class="bb-section-label">Before you rent</span>
+      <h2 class="bb-section-h2">Scooter rental &mdash; <em>good to know</em></h2>
+      <div class="tr-tips-list">
+        <div class="tr-tip"><div class="tr-tip-icon">1</div><span><strong>License:</strong> An International Driving Permit endorsed for motorcycles is technically required. Enforcement is inconsistent, but an accident without it voids most travel insurance.</span></div>
+        <div class="tr-tip"><div class="tr-tip-icon">2</div><span><strong>Photograph the bike:</strong> Before riding away, document every existing scratch and dent with photos or video. Show the rental shop. Prevents disputes on return.</span></div>
+        <div class="tr-tip"><div class="tr-tip-icon">3</div><span><strong>Helmet:</strong> Mandatory by law and included with rental. Wear it. The fines are real, and it matters.</span></div>
+        <div class="tr-tip"><div class="tr-tip-icon">4</div><span><strong>Passport deposit:</strong> Some shops ask for your passport as a deposit. Many travellers prefer to leave a copy and pay a small cash deposit instead. Both are common practice.</span></div>
+        <div class="tr-tip"><div class="tr-tip-icon tr-tip-icon-warn">!</div><span><strong>Traffic comfort:</strong> Da Nang traffic is faster and less predictable than most Western cities. Roundabouts and lane merging require active awareness. If you've ridden in Vietnam or SE Asia before, you'll be fine. If not, use Grab.</span></div>
+        <div class="tr-tip"><div class="tr-tip-icon tr-tip-icon-warn">!</div><span><strong>Rain:</strong> The wet season (Sept&ndash;Nov) brings heavy rain. Wet roads plus unfamiliar traffic is high-risk. Check the forecast before an all-day scooter trip.</span></div>
+      </div>
+    </div>
+    <div class="tr-scooter-img">
+      <img src="images/guides-b64-25.jpg" alt="Coastal road on Hai Van Pass &mdash; prime scooter territory" loading="lazy" width="800" height="500">
+    </div>
+  </div>
+</section>
+
+<!-- DAY TRIPS -->
+<section class="tr-daytrips">
+  <div class="tr-daytrips-inner">
+    <span class="bb-section-label">Beyond the city</span>
+    <h2 class="bb-section-h2">Best transport for <em>day trips</em></h2>
+    <div class="tr-daytrips-grid">
+      <div class="tr-daytrip-card">
+        <div class="tr-daytrip-img">
+          <img src="images/guides-b64-40.jpg" alt="Hoi An Ancient Town lantern street" loading="lazy" width="400" height="300">
+        </div>
+        <div class="tr-daytrip-body">
+          <div class="tr-daytrip-dest">Hoi An</div>
+          <div class="tr-daytrip-how">Grab or Private Car</div>
+          <div class="tr-daytrip-time">40&ndash;50 min &middot; 200,000&ndash;280,000 VND</div>
+        </div>
+      </div>
+      <div class="tr-daytrip-card">
+        <div class="tr-daytrip-img">
+          <img src="images/da-nang-airport-guide-e25abed6.jpg" alt="Hoiana resort coastal road" loading="lazy" width="400" height="300">
+        </div>
+        <div class="tr-daytrip-body">
+          <div class="tr-daytrip-dest">Hoiana</div>
+          <div class="tr-daytrip-how">Private Car</div>
+          <div class="tr-daytrip-time">50&ndash;65 min &middot; Grab or pre-booked</div>
+        </div>
+      </div>
+      <div class="tr-daytrip-card">
+        <div class="tr-daytrip-img">
+          <img src="images/guides-b64-04.jpg" alt="Ba Na Hills cable car Golden Bridge" loading="lazy" width="400" height="300">
+        </div>
+        <div class="tr-daytrip-body">
+          <div class="tr-daytrip-dest">Ba Na Hills</div>
+          <div class="tr-daytrip-how">Private Car / Shuttle</div>
+          <div class="tr-daytrip-time">45&ndash;60 min &middot; Driver waits</div>
+        </div>
+      </div>
+      <div class="tr-daytrip-card">
+        <div class="tr-daytrip-img">
+          <img src="images/guides-b64-25.jpg" alt="Hai Van Pass mountain switchback road" loading="lazy" width="400" height="300">
+        </div>
+        <div class="tr-daytrip-body">
+          <div class="tr-daytrip-dest">Hai Van Pass</div>
+          <div class="tr-daytrip-how">Scooter (if experienced)</div>
+          <div class="tr-daytrip-time">40km north &middot; Private car also fine</div>
+        </div>
+      </div>
+      <div class="tr-daytrip-card">
+        <div class="tr-daytrip-img">
+          <img src="images/guide-hanoi-trainstreet.jpg" alt="Vietnam train for Hue route" loading="lazy" width="400" height="300">
+        </div>
+        <div class="tr-daytrip-body">
+          <div class="tr-daytrip-dest">Hue</div>
+          <div class="tr-daytrip-how">Train or Private Car</div>
+          <div class="tr-daytrip-time">2.5&ndash;3 hrs &middot; From ~100,000 VND train</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I'D DO + GRAB TIP -->
+<section class="tr-wid">
+  <div class="tr-wid-inner">
+    <div>
+      <span class="tr-wid-label">Editorial</span>
+      <h2>What I'd do</h2>
+      <div class="tr-wid-rows">
+        <div class="tr-wid-row"><span class="tr-wid-situation">Most city rides</span><span class="tr-wid-answer">Grab</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Son Tra all day</span><span class="tr-wid-answer">Scooter, if experienced</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Hoi An day trip</span><span class="tr-wid-answer">Grab or private car</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Airport with luggage</span><span class="tr-wid-answer">GrabCar</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Family or group</span><span class="tr-wid-answer">Private van</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Ba Na Hills</span><span class="tr-wid-answer">Private car with driver</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Nervous about traffic</span><span class="tr-wid-answer">Skip the scooter entirely</span></div>
+        <div class="tr-wid-row"><span class="tr-wid-situation">Hue day trip</span><span class="tr-wid-answer">Train &mdash; more scenic</span></div>
+      </div>
+    </div>
+    <div class="tr-grab-tip">
+      <span class="tr-grab-tip-label">Grab tips</span>
+      <h3>Getting the most out of Grab</h3>
+      <div class="tr-grab-tip-items">
+        <div class="tr-grab-tip-item">Confirm the license plate in the app before getting in. Plates match 99% of the time, but worth a glance.</div>
+        <div class="tr-grab-tip-item">Type your destination in the app rather than telling the driver &mdash; eliminates any language barrier entirely.</div>
+        <div class="tr-grab-tip-item">At the airport, follow signs to the Grab pickup zone &mdash; it's separate from the taxi queue and well-marked.</div>
+        <div class="tr-grab-tip-item">Screenshot your hotel's address in Vietnamese before leaving if your connection is unreliable.</div>
+        <div class="tr-grab-tip-item">If a fare seems unusually high (surge), cancel and retry in 5 minutes. Prices normalise quickly after peak moments.</div>
+        <div class="tr-grab-tip-item">GrabBike arrives faster than GrabCar late at night when car supply drops.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED GUIDES -->
+<section class="tr-related">
+  <div class="tr-related-inner">
+    <span class="bb-section-label">Keep planning</span>
+    <h2 class="bb-section-h2">Related <em>guides</em></h2>
+    <div class="tr-related-grid">
+      <div class="tr-related-card">
+        <span class="tr-related-card-label">Airport</span>
+        <strong>Da Nang to Hoi An Transfers</strong>
+        <p>All options covered: Grab, private car, shuttle and what each actually costs in 2026.</p>
+        <a href="da-nang-airport-to-hoi-an.html" class="tr-related-btn">Read guide &rarr;</a>
+      </div>
+      <div class="tr-related-card">
+        <span class="tr-related-card-label">Day Trip</span>
+        <strong>Hoi An Travel Guide</strong>
+        <p>Where to go, what to eat, when to arrive, and which Ancient Town streets are worth your time.</p>
+        <a href="hoi-an.html" class="tr-related-btn">Read guide &rarr;</a>
+      </div>
+      <div class="tr-related-card">
+        <span class="tr-related-card-label">Planning</span>
+        <strong>Da Nang Itineraries</strong>
+        <p>1-day, 2-day, 3-day and 5-day plans with transport and timing already worked out.</p>
+        <a href="da-nang-itinerary.html" class="tr-related-btn">Read guide &rarr;</a>
+      </div>
+    </div>
+    <p style="font-size:.83rem;color:var(--ink-muted);margin-top:2rem">Need a hotel? See our <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:600">Best Hotels in Da Nang guide &rarr;</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bb-faq">
+  <div class="bb-faq-inner">
     <h2>Common Questions</h2>
-    <div class="gd-faq-item"><summary class="gd-faq-q">What is the best way to get around Da Nang?</summary><div class="gd-faq-a">Grab for virtually everything. Reliable, cheap, no language needed. Most city rides cost 40,000–80,000 VND.</div></div>
-    <div class="gd-faq-item"><summary class="gd-faq-q">How much does a Grab cost in Da Nang?</summary><div class="gd-faq-a">Short city rides: 30,000–60,000 VND. My Khe to city center: 50,000–80,000 VND. Da Nang to Hoi An: 200,000–280,000 VND. Da Nang to Marble Mountains: 70,000–110,000 VND. Prices vary with demand.</div></div>
-    <div class="gd-faq-item"><summary class="gd-faq-q">Should I rent a scooter in Da Nang?</summary><div class="gd-faq-a">Only if you're already comfortable riding in Vietnamese traffic. Rentals cost 100,000–200,000 VND per day. If uncertain, use Grab — it's cheap enough that a scooter rarely saves meaningful money on a short trip.</div></div>
-    <div class="gd-faq-item"><summary class="gd-faq-q">How far is Da Nang airport from the city?</summary><div class="gd-faq-a">3–5km from the city center, 5–8km from My Khe Beach hotels. Grab takes 10–20 minutes and costs 60,000–120,000 VND. One of the most convenient airports in Vietnam.</div></div>
+    <div class="bb-faq-item">
+      <summary class="bb-faq-q">What is the best way to get around Da Nang?</summary>
+      <div class="bb-faq-a">Grab for virtually everything. Reliable, cheap, upfront pricing, no language needed. Most city rides cost 40,000&ndash;80,000 VND. Download the app before you land.</div>
+    </div>
+    <div class="bb-faq-item">
+      <summary class="bb-faq-q">How much does a Grab cost in Da Nang?</summary>
+      <div class="bb-faq-a">Short city rides: 30,000&ndash;60,000 VND. My Khe to city center: 50,000&ndash;80,000 VND. Airport to My Khe: 60,000&ndash;120,000 VND. Da Nang to Hoi An: 200,000&ndash;280,000 VND. Prices vary with demand and time of day.</div>
+    </div>
+    <div class="bb-faq-item">
+      <summary class="bb-faq-q">Should I rent a scooter in Da Nang?</summary>
+      <div class="bb-faq-a">Only if you're already comfortable riding in Vietnamese traffic. Rentals cost 100,000&ndash;200,000 VND per day. An accident without a valid motorcycle license voids most travel insurance. If uncertain, use Grab &mdash; it's cheap enough that a scooter rarely saves meaningful money on a short trip.</div>
+    </div>
+    <div class="bb-faq-item">
+      <summary class="bb-faq-q">How far is Da Nang airport from the city?</summary>
+      <div class="bb-faq-a">3&ndash;5km from city center, 5&ndash;8km from My Khe Beach hotels. Grab takes 10&ndash;20 minutes and costs 60,000&ndash;120,000 VND. One of the most conveniently located airports in Vietnam.</div>
+    </div>
   </div>
+</section>
 
-</main>
-
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><a href="index.html" class="footer-brand">Da Nang <em>Hotel Guide</em></a><p class="footer-brand-desc">Independent travel resource for Da Nang. Honest guides from a local editor since 2022.</p></div>
-      <div class="footer-col"><p class="footer-col-title">Hotels</p><a href="best-hotels-in-da-nang.html">Best Hotels</a><a href="luxury-hotels-da-nang.html">Luxury</a><a href="da-nang-beach-hotels.html">Beach Hotels</a><a href="boutique-hotels-da-nang.html">Boutique</a></div>
-      <div class="footer-col"><p class="footer-col-title">Guides</p><a href="things-to-do-in-da-nang.html">Things to Do</a><a href="da-nang-itinerary.html">Itineraries</a><a href="da-nang-transport-guide.html">Getting Around</a><a href="best-time-to-visit-da-nang.html">Best Time to Visit</a></div>
-      <div class="footer-col"><p class="footer-col-title">Food &amp; More</p><a href="dining.html">Dining Guide</a><a href="best-bars-in-da-nang.html">Best Bars</a><a href="best-cafes-da-nang.html">Best Cafes</a><a href="da-nang-hoi-an-markets-guide.html">Markets Guide</a><a href="hoi-an.html">Hoi An</a></div>
+      <div>
+        <a href="index.html" class="footer-brand">Da Nang <em>Hotel Guide</em></a>
+        <p class="footer-brand-desc">Independent travel resource for Da Nang. Honest guides from a local editor since 2022.</p>
+        <div class="footer-disclosure-box">Affiliate disclosure: Some links on this page are affiliate links. If you book through them, we may earn a small commission at no extra cost to you.</div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Hotels</p>
+        <a href="best-hotels-in-da-nang.html">Best Hotels</a>
+        <a href="luxury-hotels-da-nang.html">Luxury</a>
+        <a href="da-nang-beach-hotels.html">Beach Hotels</a>
+        <a href="boutique-hotels-da-nang.html">Boutique</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Guides</p>
+        <a href="things-to-do-in-da-nang.html">Things to Do</a>
+        <a href="da-nang-itinerary.html">Itineraries</a>
+        <a href="da-nang-transport-guide.html">Getting Around</a>
+        <a href="best-time-to-visit-da-nang.html">Best Time to Visit</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Food &amp; More</p>
+        <a href="dining.html">Dining Guide</a>
+        <a href="best-bars-in-da-nang.html">Best Bars</a>
+        <a href="best-cafes-da-nang.html">Best Cafes</a>
+        <a href="da-nang-hoi-an-markets-guide.html">Markets Guide</a>
+        <a href="hoi-an.html">Hoi An</a>
+      </div>
     </div>
     <div class="footer-legal">&copy; 2026 Da Nang Hotel Guide. Independent. No sponsored rankings.</div>
   </div>
 </footer>
+
 <script>
 var ham=document.getElementById('navHamburger'),mob=document.getElementById('mobileMenu');
 if(ham&&mob){ham.addEventListener('click',function(){var o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});}
-document.querySelectorAll('.gd-faq-item').forEach(function(item){var q=item.querySelector('.gd-faq-q');if(q)q.addEventListener('click',function(){item.classList.toggle('open');});});
+document.querySelectorAll('.bb-faq-item').forEach(function(item){
+  var q=item.querySelector('.bb-faq-q');
+  if(q)q.addEventListener('click',function(){item.classList.toggle('open');});
+});
 </script>
 
   <script src="bk-widget.js" defer></script>
@@ -338,7 +1010,6 @@ document.querySelectorAll('.gd-faq-item').forEach(function(item){var q=item.quer
   <a class="shr-btn" id="shr-li" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
 </aside>
 <style>
-/* ── SHARE BAR ── */
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#0D3535;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Satoshi',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
