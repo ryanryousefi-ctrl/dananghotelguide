@@ -408,6 +408,46 @@ a{text-decoration:none;color:inherit}
 .img-caption{font-size:.72rem;color:var(--ink-muted,#888);padding:.5rem .8rem;text-align:right;font-style:italic;}
 .pull-quote{font-family:var(--font-serif,'Instrument Serif',Georgia,serif);font-size:clamp(1.15rem,2.5vw,1.5rem);color:var(--ocean-deep,#0D3535);line-height:1.45;border-left:3px solid var(--coral,#C8604A);padding:.75rem 0 .75rem 1.5rem;margin:2rem 0;font-style:italic}
 .scenic-img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin:2rem 0;display:block}
+
+/* ── QUICK PICKS ── */
+.quick-picks{background:var(--ocean-deep);border-radius:var(--r-xl);padding:1.8rem 2rem;margin:2rem 0}
+.quick-picks-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--coral-light);margin-bottom:1.1rem}
+.quick-picks-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.qp-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);padding:.9rem 1.1rem;display:flex;gap:.75rem;align-items:flex-start}
+.qp-badge{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--coral);color:#fff;border-radius:3px;padding:2px 7px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.qp-badge.gold{background:var(--gold)}
+.qp-badge.ocean{background:var(--ocean)}
+.qp-venue{font-size:.9rem;font-weight:700;color:#fff;line-height:1.3}
+.qp-meta{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:2px}
+@media(max-width:580px){.quick-picks-grid{grid-template-columns:1fr}}
+
+/* ── FILTER BAR ── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.75rem 0 1.2rem}
+.filter-btn{font-size:.73rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:100px;border:1.5px solid var(--sand-dark);background:transparent;color:var(--ink-soft);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.filter-btn:hover{border-color:var(--ocean);color:var(--ocean)}
+.filter-btn.active{background:var(--ocean-deep);border-color:var(--ocean-deep);color:#fff}
+
+/* ── VENUE CARDS ── */
+.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:0 0 2.5rem}
+.venue-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-xl);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.venue-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.venue-card-img-wrap{position:relative;overflow:hidden;height:180px;flex-shrink:0}
+.venue-card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.venue-card:hover .venue-card-img-wrap img{transform:scale(1.04)}
+.venue-badge{position:absolute;top:10px;left:10px;font-size:.57rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:3px;line-height:1.4}
+.badge-pick{background:var(--coral);color:#fff}
+.badge-local{background:var(--ocean-deep);color:#fff}
+.badge-new{background:var(--gold);color:#fff}
+.venue-card-body{padding:1.2rem 1.35rem;flex:1;display:flex;flex-direction:column}
+.venue-card-cat{font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.3rem}
+.venue-card-name{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink);line-height:1.2;margin-bottom:.45rem;letter-spacing:-.01em}
+.venue-card-desc{font-size:.85rem;line-height:1.65;color:var(--ink-soft);flex:1}
+.venue-card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:.85rem;padding-top:.75rem;border-top:1px solid var(--sand-dark)}
+.venue-card-hours{font-size:.72rem;color:var(--ink-muted)}
+.venue-card-link{font-size:.72rem;font-weight:700;color:var(--ocean);text-decoration:none;border-bottom:1px solid rgba(27,92,92,.3);transition:border-color .15s}
+.venue-card-link:hover{border-bottom-color:var(--ocean)}
+.venue-card[data-hidden="true"]{display:none}
+@media(max-width:640px){.venue-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="premium.css">
 <!-- Google tag (gtag.js) -->
@@ -598,56 +638,88 @@ a{text-decoration:none;color:inherit}
 <div class="guide-layout">
   <article class="guide-body">
 
+
     <div class="author-box">
       <img class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi, Editor" width="52" height="52" loading="lazy">
       <div>
         <div class="author-name">Ryan Yousefi</div>
         <div class="author-role">Editor · Da Nang Hotel Guide · Based in Da Nang since 2022</div>
       </div>
-      <div class="author-updated">Last updated<br>May 2026</div>
+      <div class="author-updated">Last updated<br>Aug 2026</div>
     </div>
-
-<div class="atmosphere-block">
-  <div class="atmosphere-eyebrow">What It Actually Feels Like</div>
-  <div class="atmosphere-heading">Da Nang After Dark</div>
-  <p class="atmosphere-body">Da Nang at night is <strong>unhurried and genuine</strong>. There's no tourist strip trying to sell you something every five steps.</p>
-<p class="atmosphere-body">The Han River reflects the Dragon Bridge lights on weekend nights and the rooftop bars stay genuinely local even as the city grows. The cocktail scene is real, Vietnamese bartenders who trained seriously, seasonal menus that change, techniques that hold up against Bangkok or Singapore.</p>
-<p class="atmosphere-body">If you've been burned by hollow "nightlife" in other Vietnamese cities, Da Nang will surprise you.</p>
-</div>
 
     <div class="quick-answer">
       <div class="quick-answer-label">Quick Answer</div>
-      <p>Da Nang's nightlife is varied and approachable, not a party city, but far from quiet. The best rooftop bar is <strong>Sky36</strong> at Novotel.</p>
-<p>The best cocktail bars are <strong>The Craftsman</strong> and <strong>Tê Mixology</strong>. The best craft beer is at <strong>7 Bridges Brewing</strong>.</p>
-<p><strong>Dragon Bridge</strong> breathes fire every Friday and Saturday at 9pm. Use <strong>Grab</strong> to get home, drink-driving enforcement is active.</p>
-<p>Most bars close 1–2am; some push to 3am on weekends.</p>
+      <p>Da Nang's nightlife is varied and approachable — not a party city, but far from quiet. <strong>Sky36</strong> is the best rooftop. <strong>The 1920's Lounge</strong> is the most theatrical cocktail bar. <strong>East West Brewing</strong> is the best craft beer taproom. <strong>Dragon Bridge</strong> breathes fire every Friday and Saturday at 9pm. Use <strong>Grab</strong> to get home — drink-driving enforcement is active.</p>
     </div>
 
-<div class="best-for-strip">
-  <span class="best-for-badge">🍸 Cocktail lovers</span>
-  <span class="best-for-badge">🏙️ Rooftop seekers</span>
-  <span class="best-for-badge coral">🍺 Craft beer</span>
-  <span class="best-for-badge">🎵 Live music</span>
-  <span class="best-for-badge gold">🌉 Dragon Bridge nights</span>
-  <span class="best-for-badge coral">🕵️ Hidden bars</span>
-</div>
+    <div class="best-for-strip">
+      <span class="best-for-badge">🍸 Cocktail lovers</span>
+      <span class="best-for-badge">🏙️ Rooftop seekers</span>
+      <span class="best-for-badge coral">🍺 Craft beer</span>
+      <span class="best-for-badge">🎵 Live music</span>
+      <span class="best-for-badge gold">🌉 Dragon Bridge nights</span>
+      <span class="best-for-badge coral">🕵️ Hidden bars</span>
+    </div>
 
-    <p>Da Nang is a city that goes out without making a performance of it. You won't find a Bui Vien here, no neon-lit tourist strip, no bucket bars at every corner.</p>
-<p>What you do find is a genuine local bar scene, some genuinely good rooftop bars, a growing cocktail culture driven by Vietnamese bartenders, and the best weekly light show in Southeast Asia on the Han River every weekend.</p>
-
-    <figure style="margin:1.5rem 0;">
-      <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=900&h=500&fit=crop&q=75" alt="Da Nang nightlife street, bars and neon lights at night" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">The nightlife is concentrated, not sprawling. Once you're on the right street, everything is walkable.</figcaption>
-    </figure>
-
-    <p>This guide covers the full picture: where to go for each type of night out, what Dragon Bridge is actually like, how to get home safely, and what tourists consistently get wrong about Da Nang after dark.</p>
+    <p>Da Nang is a city that goes out without making a performance of it. You won't find a Bui Vien here — no neon-lit tourist strip, no bucket bars at every corner. What you find is a genuine local bar scene, some genuinely good rooftop bars, a growing cocktail culture driven by Vietnamese bartenders who trained seriously, and the best free weekly light show in Southeast Asia on the Han River every weekend.</p>
 
     <div style="background:var(--ocean-pale);border:1px solid rgba(27,92,92,.2);border-radius:14px;padding:1.1rem 1.4rem;margin:1.5rem 0 1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.85rem;">
       <div>
         <p style="font-weight:700;color:var(--ocean);font-size:.93rem;margin:0 0 .2rem;">Staying in Da Nang's bar district?</p>
-        <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Han River hotels give you walking access to the best nightlife, live rates, free cancellation</p>
+        <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Han River hotels give you walking access to the best nightlife — live rates, free cancellation</p>
       </div>
       <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:#fff;font-size:.83rem;font-weight:700;padding:9px 18px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0;">View Hotels →</a>
+    </div>
+
+    <h2>Editor's Quick Picks</h2>
+
+    <div class="quick-picks">
+      <div class="quick-picks-label">Best of Da Nang Nightlife 2026</div>
+      <div class="quick-picks-grid">
+        <div class="qp-item">
+          <div class="qp-badge">Editor's Pick</div>
+          <div>
+            <div class="qp-venue">The 1920's Lounge</div>
+            <div class="qp-meta">Best Cocktail Bar · Art Deco jazz speakeasy</div>
+          </div>
+        </div>
+        <div class="qp-item">
+          <div class="qp-badge ocean">Signature</div>
+          <div>
+            <div class="qp-venue">East West Brewing</div>
+            <div class="qp-meta">Best Craft Beer · Brewed on-site, 8+ taps</div>
+          </div>
+        </div>
+        <div class="qp-item">
+          <div class="qp-badge gold">Best Rooftop</div>
+          <div>
+            <div class="qp-venue">Sky36</div>
+            <div class="qp-meta">Floors 35–37, Novotel · City's highest bar</div>
+          </div>
+        </div>
+        <div class="qp-item">
+          <div class="qp-badge ocean">Best Live Music</div>
+          <div>
+            <div class="qp-venue">On The Radio</div>
+            <div class="qp-meta">Live bands Tue–Sat from 8:30pm</div>
+          </div>
+        </div>
+        <div class="qp-item">
+          <div class="qp-badge">Best Beach Bar</div>
+          <div>
+            <div class="qp-venue">ESCO Beach</div>
+            <div class="qp-meta">DJs, fire shows, My Khe beachfront</div>
+          </div>
+        </div>
+        <div class="qp-item">
+          <div class="qp-badge gold">Best Sports Bar</div>
+          <div>
+            <div class="qp-venue">Bamboo 2</div>
+            <div class="qp-meta">Dragon Bridge views · Oldest expat bar</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <h2>The Da Nang Nightlife Scene at a Glance</h2>
@@ -667,120 +739,292 @@ a{text-decoration:none;color:inherit}
     </table>
 
     <div class="highlight-box">
-      <p>Most bars close by 1am on weeknights and 2am on weekends. Beach clubs on Vo Nguyen Giap wind down even earlier, often by 10pm.</p>
-<p>If you want a late night, head to An Thượng, not the riverfront.</p>
+      <p>Most bars close by 1am on weeknights and 2am on weekends. Beach clubs on Vo Nguyen Giap wind down even earlier, often by 10pm. If you want a late night, head to An Thượng, not the riverfront.</p>
     </div>
 
-<div class="authority-strip">
-  <div class="authority-item">
-    <span class="authority-badge insight">Local Insight</span>
-    <p class="authority-text"><strong>An Thượng is where the actual nightlife is.</strong> Most tourists walk Bach Dang riverfront, find it quieter than expected, and leave underwhelmed. The real bar scene, late nights, expat pubs, craft beer, is in An Thượng, a 5-minute Grab away.</p>
-  </div>
-  <div class="authority-item">
-    <span class="authority-badge mistake">Tourist Mistake</span>
-    <p class="authority-text"><strong>Coming mid-week and missing Dragon Bridge.</strong> The fire show only happens Friday and Saturday at 9pm. Many visitors spend 3–4 nights in Da Nang and leave before the weekend without knowing the show exists.</p>
-  </div>
-  <div class="authority-item">
-    <span class="authority-badge grab">Grab Reality</span>
-    <p class="authority-text"><strong>Never ride a motorbike after drinking.</strong> Vietnam enforces drink-driving actively, on-the-spot fines, licence confiscation. GrabBike arrives in 3 minutes and costs 40,000–70,000 VND across all bar districts.</p>
-<p class="authority-text">This is non-negotiable.</p>
-  </div>
-</div>
-
-<div class="section-img-wrap">
-  <img src="images/guides-b64-23.jpg" alt="Dragon Bridge Da Nang illuminated purple against sunset sky" loading="lazy" width="1200" height="800">
-  <p class="img-caption">The Dragon Bridge is Da Nang's nightlife landmark — it breathes fire and water on weekend nights.</p>
-</div>
-
-    <h2>Nightlife by Category</h2>
-
-    <figure style="margin:1.5rem 0;">
-      <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&h=500&fit=crop&q=75" alt="Rooftop bar Da Nang, city view at night" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">Sky36 and Gypsy Kitchen draw the biggest crowds. Arrive before 9pm for guaranteed seating on peak nights.</figcaption>
-    </figure>
-
-    <div class="nightlife-grid">
-      <a href="best-bars-in-da-nang.html#rooftop-bars" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=300&fit=crop&auto=format&q=80" alt="Sky36 rooftop bar Da Nang" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Rooftop Bars</div>
-          <div class="nl-card-title">Sky36, Gypsy Kitchen &amp; A La Carte</div>
-          <div class="nl-card-desc">Da Nang's rooftop scene ranges from the city's highest bar (Sky36, 36th floor) to relaxed beach-view terraces. Best for: sunset drinks, first-night arrivals, impressing someone.</div>
-          <span class="nl-card-link">See rooftop bars →</span>
-        </div>
-      </a>
-
-      <a href="best-bars-in-da-nang.html" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500&h=300&fit=crop&auto=format&q=80" alt="Cocktail bar Da Nang" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Cocktail Bars</div>
-          <div class="nl-card-title">The Craftsman, Waterfront &amp; Firgun</div>
-          <div class="nl-card-desc">Serious cocktail culture from trained Vietnamese bartenders. Seasonal menus, local ingredients, technique that holds up against any Asian city. Expect 150,000–320,000 VND per drink.</div>
-          <span class="nl-card-link">See cocktail bars →</span>
-        </div>
-      </a>
-
-      <a href="best-bars-in-da-nang.html#craft-beer" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop&auto=format&q=80" alt="7 Bridges craft beer Da Nang" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Craft Beer</div>
-          <div class="nl-card-title">7 Bridges Brewing, Oasis Taproom</div>
-          <div class="nl-card-desc">7 Bridges is Da Nang's flagship brewpub, brewed on-site, rotating taps, full food menu. Oasis Taproom in An Thượng runs 12–16 rotating craft taps weekly. Pints from 80,000 VND.</div>
-          <span class="nl-card-link">See craft beer bars →</span>
-        </div>
-      </a>
-
-      <a href="best-bars-in-da-nang.html#hidden-bars" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&h=300&fit=crop&auto=format&q=80" alt="Hidden speakeasy bar Da Nang" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Hidden Bars</div>
-          <div class="nl-card-title">The 1920's Lounge, Tê Mixology &amp; More</div>
-          <div class="nl-card-desc">Seven hidden bars and speakeasies, no signs, unmarked doors, serious cocktails. The 1920's Lounge is the most theatrical; Tê Mixology is the most local. Find them before they find you.</div>
-          <span class="nl-card-link">Find hidden bars →</span>
-        </div>
-      </a>
-
-      <a href="best-bars-in-da-nang.html#live-music" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=500&h=300&fit=crop&auto=format&q=80" alt="Live music bar Da Nang" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Live Music</div>
-          <div class="nl-card-title">On The Radio, Murphy's &amp; Simple Man</div>
-          <div class="nl-card-desc">On The Radio Bar runs the best live music programme on the Han River, rock, blues, soul, Wednesday through Sunday. Murphy's in An Thượng does acoustic nights and all major sport fixtures.</div>
-          <span class="nl-card-link">See live music venues →</span>
-        </div>
-      </a>
-
-      <a href="best-bars-in-da-nang.html#beach-bars" class="nl-card">
-        <img class="nl-card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=300&fit=crop&auto=format&q=80" alt="Beach bar Da Nang My Khe" loading="lazy" width="500" height="150">
-        <div class="nl-card-body">
-          <div class="nl-card-cat">Beach Clubs</div>
-          <div class="nl-card-title">Esco Beach Club, Maia Beach Bar</div>
-          <div class="nl-card-desc">Daytime and sunset drinking directly on My Khe and Non Nuoc beaches. Esco Beach Club has a pool, DJ, and full bar. Maia Beach Bar is quieter and more laid-back. Both open from around 9am. Beach clubs are largely empty during rainy season (October to December).</div>
-          <span class="nl-card-link">See beach bars →</span>
-        </div>
-      </a>
+    <div class="authority-strip">
+      <div class="authority-item">
+        <span class="authority-badge insight">Local Insight</span>
+        <p class="authority-text"><strong>An Thượng is where the actual nightlife is.</strong> Most tourists walk Bach Dang riverfront, find it quieter than expected, and leave underwhelmed. The real bar scene — late nights, expat pubs, craft beer — is in An Thượng, a 5-minute Grab away.</p>
+      </div>
+      <div class="authority-item">
+        <span class="authority-badge mistake">Tourist Mistake</span>
+        <p class="authority-text"><strong>Coming mid-week and missing Dragon Bridge.</strong> The fire show only happens Friday and Saturday at 9pm. Many visitors spend 3–4 nights in Da Nang and leave before the weekend without knowing the show exists.</p>
+      </div>
+      <div class="authority-item">
+        <span class="authority-badge grab">Grab Reality</span>
+        <p class="authority-text"><strong>Never ride a motorbike after drinking.</strong> Vietnam enforces drink-driving actively — on-the-spot fines, licence confiscation. GrabBike arrives in 3 minutes and costs 40,000–70,000 VND across all bar districts. This is non-negotiable.</p>
+      </div>
     </div>
 
-    <figure style="margin:1.5rem 0;">
-      <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&h=500&fit=crop&q=75" alt="Craft beer bar Da Nang, local bar atmosphere" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">7 Bridges and Oasis are where locals and long-term expats actually drink. Less polished, more real.</figcaption>
-    </figure>
+    <h2>All Venues</h2>
 
-<div class="section-img-wrap">
-  <img src="images/guides-b64-37.jpg" alt="Da Nang beach and city at night from aerial view" loading="lazy" width="1200" height="800">
-  <p class="img-caption">The An Thuong bar strip runs parallel to the beach — walk between venues in minutes.</p>
-</div>
+    <p>Fourteen venues, ranked by category. Filter by what you're looking for tonight.</p>
 
-    <p class="pull-quote">"Da Nang's nightlife is quieter than Bangkok and livelier than Hoi An — which makes it ideal. An Thuong has a proper bar street.</p>
-<p class="pull-quote">The Han River glitters with the Dragon Bridge. You can have a great evening out and still function the next morning."</p>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Venues</button>
+      <button class="filter-btn" data-filter="cocktail">Cocktail Bars</button>
+      <button class="filter-btn" data-filter="rooftop">Rooftops</button>
+      <button class="filter-btn" data-filter="craft-beer">Craft Beer</button>
+      <button class="filter-btn" data-filter="live-music">Live Music</button>
+      <button class="filter-btn" data-filter="beach-bar">Beach Bars</button>
+      <button class="filter-btn" data-filter="club">Clubs</button>
+      <button class="filter-btn" data-filter="pub">Pubs</button>
+    </div>
+
+    <div class="venue-grid" id="venueGrid">
+
+      <!-- The 1920's Lounge -->
+      <div class="venue-card" data-tags="cocktail">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-the-1920s-lounge.jpg" alt="The 1920's Lounge Da Nang — Art Deco jazz cocktail bar" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-pick">Editor's Pick</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Cocktail Bar · Speakeasy</div>
+          <div class="venue-card-name">The 1920's Lounge</div>
+          <div class="venue-card-desc">The most theatrical bar in Da Nang. Art Deco interior, nightly jazz from 9pm, bartenders in suspenders, cocktails built around Prohibition-era recipes updated with Vietnamese ingredients. There's no sign outside — find it at <a href="https://the1920s.vn" target="_blank" rel="noopener noreferrer">the1920s.vn</a> for the address. Go early or go on a weeknight. Weekend seatings fill fast and it's too small to hover.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">From 9pm nightly</span>
+            <a href="https://www.facebook.com/The1920sLounge" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- East West Brewing -->
+      <div class="venue-card" data-tags="craft-beer">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-east-west-brewing.jpg" alt="East West Brewing Da Nang taproom craft beer" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Da Nang Signature</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Craft Beer · Taproom</div>
+          <div class="venue-card-name">East West Brewing</div>
+          <div class="venue-card-desc">Brewed on-site in Da Nang. Eight rotating taps — year-round flagships plus seasonal experiments that actually work. The taproom is big, loud, and properly airconditioned, which matters at 85% humidity. Better food than most taprooms have any right to serve. Find the Da Nang location at <a href="https://eastwestbrewing.vn/taproom/da-nang" target="_blank" rel="noopener noreferrer">eastwestbrewing.vn</a>.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily from noon</span>
+            <a href="https://www.facebook.com/eastwestbrewing.danang" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sky36 -->
+      <div class="venue-card" data-tags="rooftop">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-sky36.jpg" alt="Sky36 rooftop bar Da Nang, city panorama from Novotel" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-pick">Best Rooftop</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Rooftop Bar</div>
+          <div class="venue-card-name">Sky36</div>
+          <div class="venue-card-desc">Floors 35–37 of the Novotel Premier Han River — Da Nang's highest bar, capacity for 500 people, panoramic views of the Han River and Dragon Bridge. Free entry most nights. The cocktails aren't the point; the view is. Arrive before the Dragon Bridge show on Fridays and Saturdays. <a href="https://sky36.vn" target="_blank" rel="noopener noreferrer">sky36.vn</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily, closes 2am</span>
+            <a href="https://sky36.vn" class="venue-card-link" target="_blank" rel="noopener noreferrer">Website →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- On The Radio -->
+      <div class="venue-card" data-tags="live-music">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-live-music-stage.webp" alt="On The Radio live music bar Da Nang" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Best Live Music</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Live Music Bar</div>
+          <div class="venue-card-name">On The Radio</div>
+          <div class="venue-card-desc">Live bands Tuesday through Saturday from 8:30pm — rock, blues, soul, and the occasional Vietnamese cover band that's significantly better than that description implies. Han River location means river views from the terrace. Genuinely local crowd, affordable drinks, no cover charge. Check their Facebook page before you go for the weekly schedule.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Tue–Sat from 8:30pm</span>
+            <a href="https://www.facebook.com/ontheradio.bar" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESCO Beach -->
+      <div class="venue-card" data-tags="beach-bar">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-beach-sunset-drinks.webp" alt="ESCO Beach Club Da Nang, My Khe beachfront bar" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-pick">Best Beach Bar</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Beach Club</div>
+          <div class="venue-card-name">ESCO Beach</div>
+          <div class="venue-card-desc">My Khe beachfront with a proper setup: DJs, fire shows on weekend nights, full bar, sunbeds. The best beach club in Da Nang by some margin — the competition is thin, but ESCO actually tries. More lively after 7pm when the day crowd clears and the music gets louder. Closes early by nightlife standards — plan this as your first stop, not your last. <a href="https://escobeach.com" target="_blank" rel="noopener noreferrer">escobeach.com</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily, open from noon</span>
+            <a href="https://escobeach.com" class="venue-card-link" target="_blank" rel="noopener noreferrer">Website →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bamboo 2 -->
+      <div class="venue-card" data-tags="pub">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-pub-drinks.webp" alt="Bamboo 2 Bar Da Nang, Dragon Bridge view pub" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Best Sports Bar</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Pub · Sports Bar</div>
+          <div class="venue-card-name">Bamboo 2</div>
+          <div class="venue-card-desc">The oldest expat bar on the Han River, Dragon Bridge visible from the terrace. Multi-screen sports setup handles every major fixture — Premier League, Champions League, Six Nations, whatever. Cheap beer, reliable mix of expats and tourists, genuinely late hours. The unpretentious option when you want a proper pub without any performance of it.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily, past 2am weekends</span>
+            <a href="best-bars-in-da-nang.html" class="venue-card-link">More bars →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sky21 -->
+      <div class="venue-card" data-tags="rooftop">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-gypsy-rooftop.webp" alt="Sky21 rooftop bar Da Nang, 21st floor panorama" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Rooftop</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Rooftop Bar</div>
+          <div class="venue-card-name">Sky21</div>
+          <div class="venue-card-desc">Twenty-first floor of Parosan Hotel — less famous than Sky36, quieter, and easier to get a table. BOGO cocktails 5–7pm daily make it the best happy hour in the city if you're willing to plan around it. The view isn't quite Sky36 but it's significantly closer to intimate. <a href="https://parosanddanang.com/restaurant/sky-21-bar" target="_blank" rel="noopener noreferrer">parosanddanang.com</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">BOGO 5–7pm daily</span>
+            <a href="https://parosanddanang.com/restaurant/sky-21-bar" class="venue-card-link" target="_blank" rel="noopener noreferrer">Website →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vấn -->
+      <div class="venue-card" data-tags="cocktail">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-te-bar.jpg" alt="Vấn speakeasy cocktail bar Da Nang, 3rd floor hidden bar" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Hidden Bar</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Cocktail Bar · Speakeasy</div>
+          <div class="venue-card-name">Vấn</div>
+          <div class="venue-card-desc">Third-floor speakeasy, no sign, Vietnamese-ingredient cocktails built by bartenders who genuinely know what they're doing. The menu rotates with the season — Vietnamese herbs, local spirits, things you won't find on any other bar menu in town. Quieter than The 1920's Lounge, better for conversation, equally serious about the drinks.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Evening, verify hours</span>
+            <a href="best-bars-in-da-nang.html#hidden-bars" class="venue-card-link">Hidden bars →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Locus -->
+      <div class="venue-card" data-tags="cocktail">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-cocktail-dark-interior.webp" alt="Locus cocktail bar Da Nang, moody interior" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Cocktail Bar</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Cocktail Bar</div>
+          <div class="venue-card-name">Locus</div>
+          <div class="venue-card-desc">Dark interior, serious menu, the kind of cocktail bar that Da Nang wasn't supposed to have at this level. Bartenders trained internationally and it shows. Prices are mid-range by Da Nang standards, high by Vietnamese standards — expect 150,000–220,000 VND. Not the place for a round of beers. The place for when you want one really good drink.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Evening from 7pm</span>
+            <a href="https://www.facebook.com/Locusdanang" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saga -->
+      <div class="venue-card" data-tags="club">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-neon-interior.webp" alt="Saga nightclub Da Nang, underground EDM venue" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Nightclub</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Nightclub · EDM</div>
+          <div class="venue-card-name">Saga</div>
+          <div class="venue-card-desc">Da Nang's most serious club — underground layout, EDM-focused programming, and the recently added Eden outdoor space for when the interior gets too loud to think. Not a tourist venue in any meaningful sense. The crowd is local and the music runs late. If you came for a proper club night, this is the answer. <a href="https://sagadanang.com" target="_blank" rel="noopener noreferrer">sagadanang.com</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Thu–Sun from 9pm</span>
+            <a href="https://www.facebook.com/saga.danang" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADM Club -->
+      <div class="venue-card" data-tags="club">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-friends-toasting.webp" alt="ADM Club Da Nang, VR lighting nightclub" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Nightclub</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Nightclub</div>
+          <div class="venue-card-name">ADM Club</div>
+          <div class="venue-card-desc">VR lighting system, CODA speaker setup, the kind of production budget that's unusual for a Vietnamese city this size. EDM-forward programming with international-standard sound. Draws a mixed crowd of locals and visitors who actually came for a club night. <a href="https://admclubdn.com" target="_blank" rel="noopener noreferrer">admclubdn.com</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Fri–Sat from 9pm</span>
+            <a href="https://www.facebook.com/ADMClubdanang" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- For You Club -->
+      <div class="venue-card" data-tags="club">
+        <div class="venue-card-img-wrap">
+          <img src="images/venue-ciela-skybar.jpg" alt="For You Club Da Nang, 120m curved screen entertainment venue" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Entertainment</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Entertainment Club</div>
+          <div class="venue-card-name">For You Club</div>
+          <div class="venue-card-desc">The spectacle option: 120-metre curved LED screen wrapping the interior, Martin UK sound system, the kind of setup that exists to impress before you've had a drink. More entertainment venue than nightclub in the traditional sense — popular with Vietnamese partygoers, big groups, celebrations. Less about the music, more about the scale of the thing.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Thu–Sun from 8pm</span>
+            <a href="best-bars-in-da-nang.html" class="venue-card-link">More venues →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Golden Pine -->
+      <div class="venue-card" data-tags="pub">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-craft-beer-glasses.webp" alt="New Golden Pine pub Da Nang, late night expat bar" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Late Night</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Pub · Expat Bar</div>
+          <div class="venue-card-name">New Golden Pine</div>
+          <div class="venue-card-desc">The late-night option when everywhere else has closed. Been open since 2010, which in Da Nang bar years makes it ancient. Unpretentious, affordable, genuinely late hours. The crowd is expats who live here and visitors who've figured out where to go after 2am. <a href="https://goldenpinepub.com" target="_blank" rel="noopener noreferrer">goldenpinepub.com</a></div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily, very late</span>
+            <a href="https://www.facebook.com/newgoldenpine" class="venue-card-link" target="_blank" rel="noopener noreferrer">Facebook →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paradise Beach -->
+      <div class="venue-card" data-tags="beach-bar">
+        <div class="venue-card-img-wrap">
+          <img src="images/bar-wine-glasses.webp" alt="Paradise Beach Da Nang, beach bar with cinema screen" loading="lazy" width="600" height="360">
+          <span class="venue-badge badge-local">Beach + Cinema</span>
+        </div>
+        <div class="venue-card-body">
+          <div class="venue-card-cat">Beach Bar</div>
+          <div class="venue-card-name">Paradise Beach</div>
+          <div class="venue-card-desc">Beach bar with an outdoor cinema screen — the combination is better than it sounds. BOGO cocktails on certain nights. More relaxed than ESCO, better suited to a long evening of watching something than a night out proper. Good for the first drink of an evening, or for the visit where you want beach without the club energy.</div>
+          <div class="venue-card-footer">
+            <span class="venue-card-hours">Daily from noon</span>
+            <a href="best-bars-in-da-nang.html#beach-bars" class="venue-card-link">Beach bars →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <h2>Dragon Bridge: The Best Free Show in Da Nang</h2>
+
+    <div class="section-img-wrap">
+      <img src="images/guides-b64-23.jpg" alt="Dragon Bridge Da Nang illuminated against night sky" loading="lazy" width="1200" height="800">
+      <p class="img-caption">Dragon Bridge breathes fire and water on Friday and Saturday nights at 9pm. Free, 15 minutes, legitimately impressive.</p>
+    </div>
 
     <div class="dragon-section">
       <div class="dragon-section-text">
         <h3>Dragon Bridge Fire &amp; Water Show</h3>
-        <p>Every Friday and Saturday night at 9pm, the Dragon Bridge, an 666-metre steel structure shaped as a dragon, breathes fire and water for 10–15 minutes. It's legitimately impressive and completely free.</p>
-<p>The best viewing position is the Bach Dang riverfront walkway on the west bank, or directly on the bridge deck itself.</p>
+        <p>Every Friday and Saturday night at 9pm, the Dragon Bridge — a 666-metre steel structure shaped as a dragon — breathes fire and water for 10–15 minutes. Legitimately impressive and completely free. The best viewing position is the Bach Dang riverfront walkway on the west bank, or directly on the bridge deck itself.</p>
       </div>
       <div class="dragon-section-details">
         <div class="dragon-detail"><span class="dragon-detail-key">Days</span><span class="dragon-detail-val">Fri &amp; Sat</span></div>
@@ -792,89 +1036,37 @@ a{text-decoration:none;color:inherit}
       </div>
     </div>
 
-    <div class="local-tip-card">
-  <div class="local-tip-icon">💡</div>
-  <div>
-    <div class="local-tip-label">Local Tip · Dragon Bridge</div>
-    <p>The riverfront bars on Bach Dang (Waterfront, On The Radio, Bamboo 2) fill from 8pm on Friday and Saturday nights. If you want a table with a river view for the Dragon Bridge show, arrive by 7:30pm or accept standing room.</p>
-<p>The show is clearly visible from Waterfront Restaurant's riverside terrace without a reservation, but the terrace tables go fast.</p>
-  </div>
-</div>
-
-
-    <figure style="margin:1.5rem 0;">
-      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&h=500&fit=crop&q=75" alt="Live music venue Da Nang, local bands and bar atmosphere" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">On The Radio and Simple Man both have live acts most nights. Check their Facebook pages for schedules.</figcaption>
-    </figure>
-
-    <h2>What Tourists Get Wrong About Da Nang Nightlife</h2>
-
-    <p><strong>Expecting a party strip.</strong> Da Nang doesn't have a Bui Vien or Khao San Road equivalent. The nightlife is distributed across three districts rather than concentrated on one street.</p>
-<p>First-timers who wander Bach Dang looking for a "party area" often feel underwhelmed, the scene is there, but you need to know where to look.</p>
-
-    <p><strong>Underestimating An Thượng.</strong> The An Thượng area behind My Khe Beach is where most of the good, affordable nightlife actually is, expat pubs, craft beer, late-night bars. It's a 5-minute Grab from Bach Dang and significantly cheaper than the riverfront venues.</p>
-
-    <p><strong>Riding a motorbike after drinking.</strong> Don't. Da Nang enforces drink-driving actively.</p>
-<p>Grab is cheap, reliable, and widely available until 3am across all bar districts.</p>
-
-<div class="authority-strip">
-  <div class="authority-item">
-    <span class="authority-badge insight">Local Insight</span>
-    <span class="authority-text"><strong>An Thượng starts slow and ends late.</strong> Don't arrive before 9pm expecting atmosphere, the expat pubs fill from 10pm and hit their stride after midnight. The early evening energy is on Bach Dang riverfront, not in An Thượng.</span>
-  </div>
-  <div class="authority-item">
-    <span class="authority-badge mistake">Tourist Mistake</span>
-    <span class="authority-text"><strong>Booking a hotel near Bạch Đằng for "nightlife access."</strong> The Han River strip closes earlier than An Thượng. If late nights matter, stay near My Khe Beach, An Thượng is a 5-minute Grab from there.</span>
-  </div>
-  <div class="authority-item">
-    <span class="authority-badge timing">Best Time of Day</span>
-    <span class="authority-text"><strong>Dragon Bridge: arrive 8:15pm Saturday.</strong> The show is 9pm but Bach Đằng fills from 8:30pm on weekends. Arrive earlier if you want a seat at a riverfront bar.</span>
-  </div>
-  <div class="authority-item">
-    <span class="authority-badge grab">Grab Reality</span>
-    <span class="authority-text"><strong>GrabBike after 1am is faster than GrabCar.</strong> On weekend nights, GrabCar wait times extend to 15+ minutes in bar districts. GrabBike arrives in 3–4 minutes. Have the app ready before you need it.</span>
-  </div>
-</div>
-
-    <p><strong>Missing the Dragon Bridge show.</strong> It only happens on Friday and Saturday. Many visitors arrive mid-week, do the riverfront bars, and leave before the weekend without knowing the show exists.</p>
-
-    <h2>Getting Home Safely</h2>
-
-    <figure style="margin:1.5rem 0;">
-      <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=900&h=500&fit=crop&q=75" alt="Grab motorbike night pickup, getting home safely Da Nang" width="900" height="500" loading="lazy" style="width:100%;border-radius:12px;display:block;">
-      <figcaption style="font-size:0.8rem;color:#666;margin-top:0.4rem;font-style:italic;">Always pre-book Grab before midnight. Surge pricing kicks in after 1am on weekends.</figcaption>
-    </figure>
-
-    <p>Use Grab, the ride-hailing app works across all of Da Nang's bar districts and is available late on weekends. GrabBike (motorbike taxi) arrives in 3–5 minutes and costs 40,000–70,000 VND for most in-district journeys.</p>
-<p>GrabCar costs 80,000–140,000 VND for groups or longer distances. Grab availability drops off after midnight, especially on weekends, so don't leave it until the last minute.</p>
-<p>Book your ride 10–15 minutes before you need it.</p>
-
-    <div class="highlight-box">
-      <p><strong>Grab tip:</strong> Save your hotel address in the Grab app before going out. Have your payment method set up in advance.</p>
-<p>On weekend nights after 1am, GrabBike is faster and more available than GrabCar in the bar districts.</p>
+    <div class="local-tip">
+      <div class="local-tip-label">Local Tip · Dragon Bridge</div>
+      <p>The riverfront bars on Bach Dang (On The Radio, Bamboo 2) fill from 8pm on Friday and Saturday nights. If you want a table with a river view for the Dragon Bridge show, arrive by 7:30pm or accept standing room. Sky36 has guaranteed views from above — no fight for position, but you're paying rooftop prices for drinks.</p>
     </div>
 
-<div class="price-check">
-  <div class="price-check-text">
-    <div class="price-check-label">Ready to Book</div>
-    <div class="price-check-title">Find hotels near Da Nang's bar districts</div>
-    <div class="price-check-sub">Han River hotels from $45 · My Khe Beach from $35 · Free cancellation on most</div>
-  </div>
-  <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="price-check-btn">Check Prices →</a>
-</div>
+    <h2>Getting Home</h2>
 
-    <img class="scenic-img" src="images/da-nang-riverfront-hotels-4e319610.jpg" alt="Da Nang Han River Dragon Bridge nightlife lights" loading="lazy" width="900" height="240">
+    <p>Use Grab. The ride-hailing app works across all of Da Nang's bar districts and is available late on weekends. GrabBike (motorbike taxi) arrives in 3–5 minutes and costs 40,000–70,000 VND for most in-district journeys. GrabCar costs 80,000–140,000 VND for groups or longer distances.</p>
+
+    <div class="highlight-box">
+      <p><strong>Grab tip:</strong> Save your hotel address in the Grab app before going out. On weekend nights after 1am, GrabBike is faster and more available than GrabCar in the bar districts. Book your ride 10–15 minutes before you need it.</p>
+    </div>
+
+    <div class="price-check">
+      <div class="price-check-text">
+        <div class="price-check-label">Ready to Book</div>
+        <div class="price-check-title">Find hotels near Da Nang's bar districts</div>
+        <div class="price-check-sub">Han River hotels from $45 · My Khe Beach from $35 · Free cancellation on most</div>
+      </div>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="price-check-btn">Check Prices →</a>
+    </div>
 
     <h2>Hotels Near Da Nang's Nightlife</h2>
 
-    <p>For walkable access to the Han River bar scene and Dragon Bridge: <a href="da-nang-riverfront-hotels.html">Da Nang's riverfront hotels</a> on Bach Dang put you within 5–10 minutes on foot of most riverside bars. The <a href="novotel-da-nang-han-river.html">Novotel Da Nang Premier</a> has Sky36 on-site.</p>
-<p>For the An Thượng expat pub district, <a href="da-nang-beach-hotels.html">My Khe Beach hotels</a> are the closest base, most An Thượng bars are a 10-minute walk from the main beach hotel strip.</p>
-
-    <p>If rooftop bars and beach clubs are your priority, hotels on the Vo Nguyen Giap beachfront boulevard give you the shortest walk to Gypsy Kitchen, Esco Beach Club, and A La Carte Rooftop.</p>
+    <p>For walkable access to the Han River bar scene and Dragon Bridge: <a href="da-nang-riverfront-hotels.html">Da Nang's riverfront hotels</a> on Bach Dang put you within 5–10 minutes on foot of most riverside bars. The Novotel Da Nang Premier has Sky36 on-site.</p>
+    <p>For the An Thượng expat pub district, <a href="da-nang-beach-hotels.html">My Khe Beach hotels</a> are the closest base — most An Thượng bars are a 10-minute walk from the main beach hotel strip. If rooftop bars and beach clubs are your priority, hotels on the Vo Nguyen Giap beachfront boulevard give you the shortest walk to ESCO Beach Club.</p>
 
     <p style="margin-top:1rem"><a href="best-bars-in-da-nang.html" style="color:var(--ocean);font-weight:700">→ Full guide: 25 Best Bars in Da Nang 2026</a></p>
-    <p><a href="dining.html" style="color:var(--ocean);font-weight:700">→ Da Nang Dining Guide, MICHELIN restaurants and street food</a></p>
-    <p><a href="things-to-do-in-da-nang.html" style="color:var(--ocean);font-weight:700">→ Things To Do in Da Nang, daytime activities</a></p>
+    <p><a href="dining.html" style="color:var(--ocean);font-weight:700">→ Da Nang Dining Guide: MICHELIN restaurants and street food</a></p>
+    <p><a href="things-to-do-in-da-nang.html" style="color:var(--ocean);font-weight:700">→ Things To Do in Da Nang: daytime activities</a></p>
+
 
   </article>
 
@@ -1028,6 +1220,28 @@ a{text-decoration:none;color:inherit}
   
   <script src="bk-widget.js" defer></script>
   <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
+<script>
+(function(){
+  var bar=document.getElementById('filterBar');
+  var grid=document.getElementById('venueGrid');
+  if(!bar||!grid)return;
+  bar.addEventListener('click',function(e){
+    var btn=e.target.closest('.filter-btn');
+    if(!btn)return;
+    bar.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    var filter=btn.dataset.filter;
+    grid.querySelectorAll('.venue-card').forEach(function(card){
+      if(filter==='all'||card.dataset.tags.split(' ').indexOf(filter)>-1){
+        card.removeAttribute('data-hidden');
+        card.style.display='';
+      }else{
+        card.style.display='none';
+      }
+    });
+  });
+})();
+</script>
 
 <!-- SHARE BAR -->
 <aside class="shr-bar" aria-label="Share this page">
