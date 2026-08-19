@@ -491,6 +491,7 @@ body{flex:1;min-width:0}
 <link rel="stylesheet" href="phase13.css">
 <script src="search-engine.js"></script>
   <link rel="stylesheet" href="bk-widget.css">
+<link rel="stylesheet" href="search-ui.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -1948,19 +1949,6 @@ body{flex:1;min-width:0}
   </div>
 </footer>
 <script>
-
-        ];
-  const q = query.toLowerCase();
-  return window.SEARCH_INDEX.filter(item => {
-    return (
-      item.title.toLowerCase().includes(q) ||
-      item.excerpt.toLowerCase().includes(q) ||
-      item.cat.toLowerCase().includes(q)
-    );
-  });
-}
-
-
 (function() {
   // ── Hamburger / mobile menu ──────────────────────────
   var ham = document.getElementById('navHamburger');
@@ -2049,21 +2037,7 @@ body{flex:1;min-width:0}
         return;
       }
       if (hint) hint.style.display = 'none';
-      var hits = window.runSearch ? runSearch(q) : [,
-    {{
-      title: "Da Nang Visa Run Guide 2026",
-      desc: "Vietnam e-visa rules, visa exemption countries, Lao Bao border run, Lynn Visa Da Nang, step-by-step checklist and FAQ.",
-      url: "da-nang-visa-run-guide.html",
-      category: "Visa & Entry"
-    }}
-  ,
-          {
-            title: "Da Nang Visa Run Guide (2026) + E-Visa Rules & Border Options",
-            desc: "Vietnam e-visa explained, visa exemption countries, Lao Bao border, flight runs, Lynn Visa Da Nang, checklist, and FAQ.",
-            url: "da-nang-visa-run-guide.html",
-            cats: ["Practical", "Visa"]
-          }
-        ];
+      var hits = window.runSearch ? runSearch(q) : [];
       if (!hits.length) {
         results.innerHTML = '<p class="search-no-results">No results for "' + q + '", try a different term.</p>';
         return;

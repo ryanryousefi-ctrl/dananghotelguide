@@ -311,6 +311,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 }
 </style>
 <link rel="stylesheet" href="bk-widget.css">
+<link rel="stylesheet" href="search-ui.css">
 </head>
 <body>
 
@@ -333,6 +334,9 @@ button{font-family:var(--font-sans);cursor:pointer}
     <a href="about.html" class="nav-link">About</a>
   </div>
   <div class="nav-right">
+    <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
     <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="nav-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays</a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -349,6 +353,28 @@ button{font-family:var(--font-sans);cursor:pointer}
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
 </div>
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
+  <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
+  <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
+  <div class="search-input-wrap">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
+    <button class="search-submit-icon" aria-label="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+  </div>
+  <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
+  <div class="search-hint" id="searchHint">
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
+  </div>
+</div>
+
 
 <!-- HERO -->
 <header class="bb-hero">
@@ -1060,5 +1086,7 @@ document.querySelectorAll('.bb-faq-item').forEach(function(item){
   run();
 })();
 </script>
+<script src="search-engine.js"></script>
+<script src="search-ui.js"></script>
 </body>
 </html>

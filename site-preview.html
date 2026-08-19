@@ -2199,6 +2199,7 @@ footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3rem cla
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
+<link rel="stylesheet" href="search-ui.css">
 </head>
 <body>
 
@@ -2682,7 +2683,29 @@ footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3rem cla
   <a href="about.html" class="mobile-nav-link active">About</a>
   <a href="da-nang-videos.html" class="mobile-nav-link">Videos</a>
   <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com →</a>
-</div><nav class="breadcrumb" aria-label="Breadcrumb">
+</div>
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
+  <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
+  <p class="search-overlay-label">Search Da Nang Hotel Guide</p>
+  <div class="search-input-wrap">
+    <input type="search" class="search-input" id="searchInput" placeholder="Hotels, dining, marble mountains, Hoi An…" autocomplete="off" spellcheck="false">
+    <button class="search-submit-icon" aria-label="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    </button>
+  </div>
+  <div class="search-results-inline" id="searchResultsInline" role="listbox" aria-label="Search results"></div>
+  <div class="search-hint" id="searchHint">
+    <button class="sh-pill" data-q="dining">Dining</button>
+    <button class="sh-pill" data-q="luxury hotels">Luxury Hotels</button>
+    <button class="sh-pill" data-q="beach hotels">Beach Hotels</button>
+    <button class="sh-pill" data-q="marble mountains">Marble Mountains</button>
+    <button class="sh-pill" data-q="hoi an">Hoi An</button>
+    <button class="sh-pill" data-q="family hotels">Family Hotels</button>
+    <button class="sh-pill" data-q="bars">Bars &amp; Nightlife</button>
+    <button class="sh-pill" data-q="itinerary">Itinerary</button>
+  </div>
+</div>
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <ol>
     <li><a href="index.html">Home</a></li>
     <li><a href="https://www.booking.com/searchresults.html?ss=Da+Nang%2C+Vietnam&aid=AFFILIATE_ID_PLACEHOLDER&label=danangstays-best-hotels&dest_id=-3714993&dest_type=city&checkin=&checkout=" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Da Nang Hotels</a></li>
@@ -6891,5 +6914,7 @@ footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3rem cla
 </script>
   
   <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
+<script src="search-engine.js"></script>
+<script src="search-ui.js"></script>
 </body>
 </html>
