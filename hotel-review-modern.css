@@ -123,7 +123,29 @@
 .hr-related-cat{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.25rem}
 .hr-related-name{font-family:var(--font-serif);font-size:1.1rem;color:var(--ink);line-height:1.25}
 
+/* ── FOOTER (fallback — some review pages don't define this locally) ── */
+.site-footer{background:#0A0A0A;color:rgba(255,255,255,.3);padding:clamp(4rem,7vw,6rem) var(--gutter) 0}
+.footer-inner{max-width:var(--max);margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(2rem,4vw,4rem);padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-brand{font-family:var(--font-serif);font-size:1.4rem;color:#fff;display:block;margin-bottom:.6rem}
+.footer-brand em{font-style:italic;color:var(--coral)}
+.footer-brand-desc{font-size:.8rem;line-height:1.8;max-width:260px;margin-bottom:1.5rem;color:rgba(255,255,255,.35)}
+.footer-disclosure-box{font-size:.7rem;line-height:1.75;color:rgba(255,255,255,.2);background:rgba(255,255,255,.03);padding:.85rem 1rem;border:1px solid rgba(255,255,255,.06)}
+.footer-col-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+.footer-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.3);padding:4px 0;transition:color .15s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.6rem 0;font-size:.7rem}
+.footer-legal{border-top:1px solid rgba(255,255,255,.05);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem}
+.footer-legal-text{font-size:.68rem;line-height:1.75;color:rgba(255,255,255,.2);max-width:60ch}
+.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0}
+.footer-legal-links a{font-size:.7rem;color:rgba(255,255,255,.3);transition:color .15s}
+.footer-legal-links a:hover{color:#fff}
+.footer-legal-links .sep{color:rgba(255,255,255,.12);font-size:.6rem}
+
 /* ── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:1024px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:900px){
   .hr-split{grid-template-columns:1fr;gap:1.5rem}
   .hr-split-img{aspect-ratio:16/10}
@@ -132,6 +154,7 @@
 @media(max-width:768px){
   .hr-hero{min-height:380px}
   .hr-snapshot-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}
 }
 @media(max-width:600px){
   .hr-related-grid{grid-template-columns:1fr}
@@ -139,4 +162,6 @@
 }
 @media(max-width:480px){
   .hr-snapshot-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-legal{flex-direction:column;align-items:flex-start}
 }
