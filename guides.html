@@ -672,13 +672,30 @@ body{flex:1;min-width:0}
 @media(max-width:560px){.guide-hub-grid{grid-template-columns:1fr}}
 </style>
 
-<header style="position:relative;background:var(--ocean-deep);border-bottom:1px solid rgba(255,255,255,.06);padding:clamp(3.5rem,7vw,5.5rem) var(--gutter);overflow:hidden">
+<style>
+/* Guides hero: give the sitewide-injected booking widget a proper top-right
+   card position instead of the default centered/below placement, which
+   overlapped the hero copy on this page's wide photo header. */
+header.gd-guides-hero { min-height:clamp(420px,44vw,540px); display:flex; align-items:center }
+header.gd-guides-hero .sw-bk-wrap.sw-bk-wrap--below {
+  position:absolute; top:clamp(1.2rem,3vh,2rem); right:var(--gutter,2rem);
+  width:auto; max-width:280px; margin:0; z-index:10;
+}
+@media (max-width:700px){
+  header.gd-guides-hero { display:block; min-height:0 }
+  header.gd-guides-hero .sw-bk-wrap.sw-bk-wrap--below {
+    position:static; width:100%;
+    max-width:100%; margin:1.5rem 0 0; right:auto; top:auto;
+  }
+}
+</style>
+<header class="gd-guides-hero" style="position:relative;background:var(--ocean-deep);border-bottom:1px solid rgba(255,255,255,.06);padding:clamp(3.5rem,7vw,5.5rem) var(--gutter);overflow:hidden">
   <div style="position:absolute;inset:0;background-image:url('images/guides-b64-18.jpg');background-size:cover;background-position:center 40%;opacity:.45;z-index:0"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(13,35,35,.85) 0%,rgba(13,35,35,.55) 60%,rgba(13,35,35,.3) 100%);z-index:1"></div>
-  <div style="max-width:var(--max);margin:0 auto;position:relative;z-index:2">
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(13,35,35,.88) 0%,rgba(13,35,35,.6) 55%,rgba(13,35,35,.25) 100%);z-index:1"></div>
+  <div style="max-width:var(--max);margin:0 auto;position:relative;z-index:2;width:100%">
     <p style="font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.8rem">Travel Resources · Da Nang, Vietnam</p>
     <h1 style="font-family:var(--font-serif);font-size:clamp(2.2rem,4.5vw,3.5rem);color:#fff;line-height:1.08;letter-spacing:-.035em;margin-bottom:.9rem">Da Nang <em style="font-style:italic;color:var(--coral-light)">Travel Guides</em></h1>
-    <p style="font-size:clamp(.9rem,1.6vw,1rem);color:rgba(255,255,255,.7);max-width:600px;line-height:1.75">Everything you need before and during your trip — hotels, weather, transport, dining, and practical tips across every major topic. Written by a local team, updated regularly.</p>
+    <p style="font-size:clamp(.9rem,1.6vw,1rem);color:rgba(255,255,255,.7);max-width:560px;line-height:1.75">Everything you need before and during your trip — hotels, weather, transport, dining, and practical tips across every major topic. Written by a local team, updated regularly.</p>
   </div>
 </header>
 
@@ -1224,7 +1241,7 @@ body{flex:1;min-width:0}
 </section>
 
 <figure class="gs-broll" aria-hidden="true">
-  <img src="images/broll-son-tra-lady-buddha-aerial.jpg" alt="Son Tra Peninsula aerial Lady Buddha coastal cove Da Nang" loading="lazy">
+  <img src="images/hotels/son-tra-peninsula-da-nang.jpg" alt="Son Tra Peninsula aerial Lady Buddha coastal cove Da Nang" loading="lazy">
 </figure>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -1520,7 +1537,7 @@ body{flex:1;min-width:0}
 </section>
 
 <figure class="gs-broll" aria-hidden="true">
-  <img src="images/broll-premier-village-villas-aerial.jpg" alt="Premier Village Da Nang white villas palm grove aerial view" loading="lazy">
+  <img src="images/review-premier-village-da-nang-e25abed6.jpg" alt="Premier Village Da Nang white villas palm grove aerial view" loading="lazy">
 </figure>
 
 <!-- ═══════════════════════════════════════════════════════════
