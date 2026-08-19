@@ -199,6 +199,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bb-card-img{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--sand-mid);flex-shrink:0}
 .bb-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .35s var(--ease)}
 .bb-card:hover .bb-card-img img{transform:scale(1.04)}
+.bb-thumb-link{display:block;width:100%;height:100%;cursor:pointer}
+.bb-thumb-link:focus-visible{outline:2px solid var(--ocean);outline-offset:-2px}
 .bb-card-ribbon{position:absolute;top:.65rem;left:.65rem}
 .bb-ribbon-ep{font-size:.55rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .6rem;border-radius:3px;background:var(--coral);color:#fff}
 .bb-ribbon-tp{font-size:.55rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .6rem;border-radius:3px;background:#1A1A18;color:#fff}
@@ -457,7 +459,9 @@ details[open].bb-faq-item .bb-faq-q::after{transform:rotate(45deg)}
       </div>
     </div>
     <div class="bb-top-pick-img">
-      <img src="assets/img/intercontinental-da-nang-de1820f551b8.jpg" alt="InterContinental Danang Sun Peninsula Resort" loading="eager" width="800" height="600">
+      <a href="intercontinental-da-nang.html" class="bb-thumb-link" aria-label="Read the full review of InterContinental Danang Sun Peninsula Resort">
+        <img src="assets/img/intercontinental-da-nang-de1820f551b8.jpg" alt="InterContinental Danang Sun Peninsula Resort" loading="eager" width="800" height="600">
+      </a>
       <span class="bb-top-pick-img-label">Editor's Pick</span>
     </div>
   </div>
@@ -483,7 +487,9 @@ details[open].bb-faq-item .bb-faq-q::after{transform:rotate(45deg)}
       </div>
     </div>
     <div class="bb-sig-pick-img">
-      <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=900&h=562&fit=crop&auto=format&q=85" alt="TMS Hotel Da Nang Beach" loading="lazy" width="900" height="562">
+      <a href="tms-hotel-da-nang.html" class="bb-thumb-link" aria-label="Read the full review of TMS Hotel Da Nang Beach">
+        <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=900&h=562&fit=crop&auto=format&q=85" alt="TMS Hotel Da Nang Beach" loading="lazy" width="900" height="562">
+      </a>
       <span class="bb-sig-pick-img-label">Da Nang Signature Pick</span>
     </div>
   </div>
@@ -800,7 +806,9 @@ function renderCards(hs){
   grid.innerHTML = hs.map(function(h){
     return '<article class="bb-card" id="hotel-'+h.id+'">'
       +'<div class="bb-card-img">'
+      +'<a href="'+h.url+'" class="bb-thumb-link" aria-label="Read the full review of '+h.name+'">'
       +'<img src="'+h.image+'" alt="'+h.imageAlt+'" loading="lazy" width="480" height="320">'
+      +'</a>'
       +'</div>'
       +'<div class="bb-card-body">'
       +'<span class="bb-card-cat">'+(h.categories.map(function(c){return CAT[c]||c}).join(' &middot; '))+'</span>'
