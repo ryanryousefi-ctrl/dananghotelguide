@@ -329,6 +329,18 @@ button{font-family:var(--font-sans);cursor:pointer}
 </style>
 
 <style>
+/* ── PROMO CODE CALLOUT (top of page) ─────────────────────── */
+.esim-promo-bar{background:var(--gold);padding:.75rem var(--gutter);text-align:center}
+.esim-promo-bar p{margin:0;font-size:.85rem;font-weight:700;color:#1A1405;letter-spacing:.01em}
+.esim-promo-bar code{background:rgba(255,255,255,.55);padding:.15rem .55rem;border-radius:5px;font-family:var(--font-sans);font-weight:800;letter-spacing:.03em}
+
+/* ── PROMO CODE CHIP (next to CTAs) ───────────────────────── */
+.esim-promo-chip{display:inline-flex;align-items:baseline;gap:.4rem;font-size:.78rem;margin-top:.6rem}
+.esim-promo-chip span{color:var(--ink-muted)}
+.esim-promo-chip code{background:var(--sand-mid);border:1px solid var(--sand-dark);padding:.1rem .5rem;border-radius:5px;font-family:var(--font-sans);font-weight:800;letter-spacing:.03em;color:var(--ink)}
+.esim-promo-chip.on-dark span{color:rgba(255,255,255,.5)}
+.esim-promo-chip.on-dark code{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+
 /* ── HERO CTAs ────────────────────────────────────────────── */
 .esim-hero-ctas{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.5rem}
 .esim-cta-primary{display:inline-flex;align-items:center;gap:.4rem;background:var(--coral);color:#fff;font-size:.9rem;font-weight:700;padding:14px 26px;border-radius:100px;text-decoration:none;transition:background .15s,transform .15s}
@@ -604,6 +616,10 @@ button{font-family:var(--font-sans);cursor:pointer}
 </div>
 
 <main>
+<div class="esim-promo-bar">
+  <p>Use code <code>RYAN6986</code> to get $3 off your first Airalo purchase</p>
+</div>
+
 <header class="bb-hero" style="min-height:560px">
   <div class="bb-hero-img" style="background:linear-gradient(135deg,#0D3535 0%,#0A0A0A 100%)" role="img" aria-label="Placeholder hero image — Airalo eSIM in Vietnam"></div>
   <div class="bb-hero-content">
@@ -612,9 +628,10 @@ button{font-family:var(--font-sans);cursor:pointer}
     <p class="bb-hero-sub">I've used Airalo across Paris, Singapore, Shanghai, and Hong Kong, and today it's my everyday mobile data here in Da Nang. Here's exactly how I use it, why I recommend it, and what to know before you land.</p>
     <p class="bb-hero-meta">Updated August 2026 &middot; By Ryan Yousefi</p>
     <div class="esim-hero-ctas">
-      <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Get an Airalo eSIM</a>
-      <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-secondary affiliate-link">See Vietnam eSIM Plans</a>
+      <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Get an Airalo eSIM</a>
+      <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-secondary affiliate-link">See Vietnam eSIM Plans</a>
     </div>
+    <div class="esim-promo-chip on-dark"><span>Use code</span> <code>RYAN6986</code> <span>for $3 off</span></div>
   </div>
 </header>
 
@@ -695,7 +712,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 
 <section class="bb-section" style="text-align:center">
   <div class="bb-section-inner" style="max-width:640px">
-    <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link" style="background:var(--coral)">Get Connected Before You Fly</a>
+    <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link" style="background:var(--coral)">Get Connected Before You Fly</a>
+    <div class="esim-promo-chip"><span>Use code</span> <code>RYAN6986</code> <span>for $3 off</span></div>
   </div>
 </section>
 <section class="bb-section" style="background:var(--night)">
@@ -809,7 +827,8 @@ button{font-family:var(--font-sans);cursor:pointer}
     </div>
     <p style="font-size:.85rem;color:var(--ink-muted);margin-top:1.75rem;max-width:70ch">A quick note on hotspotting: connecting a laptop through your phone's hotspot uses data significantly faster than phone-only use. If you plan to work from your hotspot at all, size up.</p>
     <div style="text-align:center;margin-top:2.25rem">
-      <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Check Current Vietnam eSIM Plans</a>
+      <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Check Current Vietnam eSIM Plans</a>
+      <div class="esim-promo-chip"><span>Use code</span> <code>RYAN6986</code> <span>for $3 off</span></div>
     </div>
   </div>
 </section>
@@ -906,7 +925,8 @@ button{font-family:var(--font-sans);cursor:pointer}
     <div class="esim-verdict-cta">
       <h3>Landing in Vietnam Soon? <em style="font-style:italic;color:rgba(255,255,255,.55)">Get Your Data Sorted Before You Fly.</em></h3>
       <p>Set it up now, and the moment your plane touches down, you're already connected.</p>
-      <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Get an Airalo eSIM</a>
+      <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Get an Airalo eSIM</a>
+      <div class="esim-promo-chip on-dark" style="justify-content:center;display:flex"><span>Use code</span> <code>RYAN6986</code> <span>for $3 off</span></div>
     </div>
   </div>
 </section>
@@ -1006,8 +1026,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 </footer>
 
 <div id="mobileStickyBar" role="complementary" aria-label="Get an Airalo eSIM">
-  <p>Landing in Vietnam soon? Get your eSIM sorted before you fly.</p>
-  <a href="AIRALO_AFFILIATE_LINK" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Get Airalo &rarr;</a>
+  <p>Code <strong>RYAN6986</strong> for $3 off your first Airalo purchase.</p>
+  <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link">Get Airalo &rarr;</a>
 </div>
 
 <script>
