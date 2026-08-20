@@ -336,6 +336,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-cta-secondary{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:#fff;font-size:.9rem;font-weight:700;padding:13px 24px;border-radius:100px;text-decoration:none;transition:background .15s,border-color .15s}
 .esim-cta-secondary:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
 
+/* ── BANNER IMAGE ─────────────────────────────────────────── */
+.esim-banner-img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+
 /* ── DISCLOSURE BAR ───────────────────────────────────────── */
 .esim-disclosure-bar{background:var(--sand-mid);border-bottom:1px solid var(--sand-dark);padding:.9rem var(--gutter)}
 .esim-disclosure-inner{max-width:var(--max);margin:0 auto}
@@ -350,6 +353,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-img-slot-label{position:relative;z-index:1;text-align:center;padding:1.5rem}
 .esim-img-slot-tag{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);display:block;margin-bottom:.4rem}
 .esim-img-slot-desc{font-size:.82rem;color:var(--ink-muted);max-width:26ch;margin:0 auto}
+.esim-img-slot.esim-img-filled{background:none}
+.esim-img-slot.esim-img-filled::before{display:none}
+.esim-img-slot.esim-img-filled img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
 
 /* ── EDITOR'S TIP (premium callout) ──────────────────────── */
 .esim-editor-tip{position:relative;background:var(--ocean-deep);border-radius:var(--r-xl,24px);padding:clamp(2rem,4vw,3rem);overflow:hidden}
@@ -615,6 +621,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 <!-- HERO IMAGE PLACEHOLDER — swap the linear-gradient background above for:
      background-image:url('images/esim-hero.jpg') -->
 
+<img src="images/airalo-esim-vietnam-banner.png" alt="Airalo eSIM Vietnam banner" class="esim-banner-img" loading="eager" width="1899" height="640">
+
 <div class="esim-disclosure-bar">
   <div class="esim-disclosure-inner">
     <p>Da Nang Hotel Guide may earn a commission when you purchase through Airalo links on this page, at no extra cost to you. I personally use Airalo, and everything below is based on my own experience, not a sponsored review.</p>
@@ -628,11 +636,8 @@ button{font-family:var(--font-sans);cursor:pointer}
       <p style="font-size:.95rem;line-height:1.85;color:var(--ink-soft);margin-bottom:1rem">I've tried a handful of eSIM providers while traveling, and Airalo is the one I keep coming back to. Not because it's flashy, but because of the boring stuff that actually matters when you're relying on it daily: the connection holds up, the app doesn't fight you, top-ups take seconds, and support has never left me stuck.</p>
       <p style="font-size:.95rem;line-height:1.85;color:var(--ink-soft)">This isn't a product I tested for a weekend to write an affiliate post. I've used it as a traveler in Paris, Singapore, Shanghai, and Hong Kong, and today it's the service that keeps my phone connected day to day here in Da Nang.</p>
     </div>
-    <div class="esim-img-slot">
-      <div class="esim-img-slot-label">
-        <span class="esim-img-slot-tag">Image Slot 2</span>
-        <p class="esim-img-slot-desc">Airalo app / eSIM install screen on phone</p>
-      </div>
+    <div class="esim-img-slot esim-img-filled">
+      <img src="images/airalo-esim-app-screenshot.webp" alt="Airalo app showing a Vietnam eSIM plan on a phone" loading="lazy" width="1200" height="900">
     </div>
   </div>
 </section>
@@ -661,11 +666,8 @@ button{font-family:var(--font-sans);cursor:pointer}
         <span class="bb-detail-tag">Connect on landing</span>
       </div>
     </div>
-    <div class="esim-img-slot" style="aspect-ratio:4/3">
-      <div class="esim-img-slot-label">
-        <span class="esim-img-slot-tag">Image Slot 5</span>
-        <p class="esim-img-slot-desc">Airport / arrivals travel photo (optional)</p>
-      </div>
+    <div class="bb-top-pick-img">
+      <img src="images/airalo-esim-travel-couple.webp" alt="Travelers landing in Vietnam with an Airalo eSIM already connected" loading="lazy" width="540" height="422">
     </div>
   </div>
 </section>
