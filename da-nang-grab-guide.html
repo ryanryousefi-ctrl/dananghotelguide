@@ -509,6 +509,37 @@ button{font-family:var(--font-sans);cursor:pointer}
 .gb-simple-list li{font-size:.83rem;color:var(--ink-soft);padding-left:1.1rem;position:relative}
 .gb-simple-list li::before{content:'•';position:absolute;left:0;color:var(--ocean);font-weight:700}
 
+/* ── DARK SECTION OVERRIDES ───────────────────────────────── */
+.gb-on-dark .bb-section-label{color:var(--coral-light)}
+.gb-on-dark .bb-section-h2{color:#fff}
+.gb-on-dark .bb-section-h2 em{color:rgba(255,255,255,.55)}
+.gb-on-dark > .bb-section-inner > p{color:rgba(255,255,255,.6)}
+.gb-on-dark > .bb-section-inner > p a{color:var(--coral-light)}
+.gb-on-dark .gb-service-card,
+.gb-on-dark .gb-price-card,
+.gb-on-dark .gb-simple-card,
+.gb-on-dark .gb-flow-step{background:rgba(255,255,255,.06);box-shadow:none;border:1px solid rgba(255,255,255,.08)}
+.gb-on-dark .gb-service-name,
+.gb-on-dark .gb-price-route,
+.gb-on-dark .gb-simple-name{color:#fff}
+.gb-on-dark .gb-service-tagline,
+.gb-on-dark .gb-price-time{color:rgba(255,255,255,.4)}
+.gb-on-dark .gb-service-label{color:var(--coral-light)}
+.gb-on-dark .gb-service-list li,
+.gb-on-dark .gb-simple-list li{color:rgba(255,255,255,.65)}
+.gb-on-dark .gb-service-list li::before,
+.gb-on-dark .gb-simple-list li::before{color:var(--coral-light)}
+.gb-on-dark .gb-price-cell{background:rgba(255,255,255,.05)}
+.gb-on-dark .gb-price-cell-label{color:rgba(255,255,255,.4)}
+.gb-on-dark .gb-price-cell-val{color:var(--coral-light)}
+.gb-on-dark .gb-flow-step{color:#fff}
+.gb-on-dark .gb-flow-arrow{color:rgba(255,255,255,.35)}
+.gb-on-dark .gb-mistake-card{background:rgba(200,96,74,.1);border-color:rgba(200,96,74,.3)}
+.gb-on-dark .gb-mistake-text{color:rgba(255,255,255,.7)}
+.gb-on-dark .gb-tip{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1)}
+.gb-on-dark .gb-tip.warn{background:rgba(200,96,74,.1);border-color:rgba(200,96,74,.25)}
+.gb-on-dark .gb-tip-text{color:rgba(255,255,255,.65)}
+
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media(max-width:1024px){
   .gb-features{grid-template-columns:1fr}
@@ -740,9 +771,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <a href="#ride" class="gb-feature-card">
           <img src="images/grab-dragon-bridge-da-nang.jpg" alt="Grab riders passing Dragon Bridge in Da Nang" loading="eager" width="500" height="667">
           <div class="gb-feature-overlay"></div>
-          <div class="gb-feature-body">
-            <span class="gb-feature-icon">🚗</span>
-            <h3 class="gb-feature-h3">Ride</h3>
+          <div class="gb-feature-body">            <h3 class="gb-feature-h3">Ride</h3>
             <p class="gb-feature-sub">Get Almost Anywhere</p>
             <p class="gb-feature-desc">GrabBike and GrabCar cover the whole city, from the airport to My Khe, An Thuong, Marble Mountains, and Hoi An.</p>
             <span class="gb-feature-cta">How Rides Work ↓</span>
@@ -753,9 +782,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <a href="#food" class="gb-feature-card">
           <img src="images/grab-food-delivery.jpg" alt="Vietnamese noodle soup ordered for delivery in Da Nang" loading="lazy" width="500" height="667">
           <div class="gb-feature-overlay"></div>
-          <div class="gb-feature-body">
-            <span class="gb-feature-icon">🍜</span>
-            <h3 class="gb-feature-h3">Food</h3>
+          <div class="gb-feature-body">            <h3 class="gb-feature-h3">Food</h3>
             <p class="gb-feature-sub">The Feature Tourists Underestimate</p>
             <p class="gb-feature-desc">Restaurants, coffee, breakfast, dessert, late-night food. Delivered to your hotel entrance in under 30 minutes, usually.</p>
             <span class="gb-feature-cta">How GrabFood Works ↓</span>
@@ -766,9 +793,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <a href="#mart" class="gb-feature-card">
           <img src="images/store-winmart-danang.jpg" alt="Vietnamese convenience store shelves stocked with drinks and snacks" loading="lazy" width="500" height="667">
           <div class="gb-feature-overlay"></div>
-          <div class="gb-feature-body">
-            <span class="gb-feature-icon">🛍</span>
-            <h3 class="gb-feature-h3">Mart</h3>
+          <div class="gb-feature-body">            <h3 class="gb-feature-h3">Mart</h3>
             <p class="gb-feature-sub">Your Convenience Store on a Phone</p>
             <p class="gb-feature-desc">Water, sunscreen, snacks, toiletries, basic groceries. Order instead of carrying six bottles of water back to your room.</p>
             <span class="gb-feature-cta">How GrabMart Works ↓</span>
@@ -805,20 +830,18 @@ button{font-family:var(--font-sans);cursor:pointer}
         <div class="gb-step-desc">Confirm the upfront price, then book. That's the whole process.</div>
       </div>
     </div>
-    <div style="margin-top:1.75rem" class="gb-tip">
-      <span class="gb-tip-icon">✈️</span>
-      <div>
+    <div style="margin-top:1.75rem" class="gb-tip">      <div>
         <div class="gb-tip-label">Do This Before You Fly</div>
         <p class="gb-tip-text">Download the app, create your account, and add a payment method before you leave home. Then you're ready the moment you land, instead of fumbling with app stores on airport wifi.</p>
       </div>
     </div>
   </div>
 </section>
-<section class="bb-section" id="ride">
+<section class="bb-section gb-on-dark" style="background:var(--night)" id="ride">
   <div class="bb-section-inner">
     <span class="bb-section-label">Getting Around</span>
     <h2 class="bb-section-h2">Da Nang <em>with Grab</em></h2>
-    <p style="font-size:.95rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin-bottom:2rem">Set your pickup and destination, pick a service, confirm the upfront price, and a driver comes to you. Payment is either through the app or cash on arrival. You need data to run it &mdash; sort a <a href="da-nang-sim-card-guide.html" style="color:var(--ocean);font-weight:600">SIM card</a> at the airport if you're landing without one.</p>
+    <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:70ch;margin-bottom:2rem">Set your pickup and destination, pick a service, confirm the upfront price, and a driver comes to you. Payment is either through the app or cash on arrival. You need data to run it &mdash; sort a <a href="da-nang-sim-card-guide.html" style="color:var(--coral-light);font-weight:600">SIM card</a> at the airport if you're landing without one.</p>
     <div class="gb-service-grid">
       <div class="gb-service-card">
         <div class="gb-service-name">GrabBike</div>
@@ -901,11 +924,11 @@ button{font-family:var(--font-sans);cursor:pointer}
   </div>
 </section>
 
-<section class="bb-section" id="prices">
+<section class="bb-section gb-on-dark" style="background:var(--night)" id="prices">
   <div class="bb-section-inner">
     <span class="bb-section-label">What It Costs</span>
     <h2 class="bb-section-h2">What Does <em>a Grab Cost?</em></h2>
-    <p style="font-size:.9rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin-bottom:2rem">Approximate fares in normal traffic, no surge. Grab pricing is dynamic and changes with demand, weather, and time of day &mdash; treat these as a ballpark, not a quote.</p>
+    <p style="font-size:.9rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:70ch;margin-bottom:2rem">Approximate fares in normal traffic, no surge. Grab pricing is dynamic and changes with demand, weather, and time of day &mdash; treat these as a ballpark, not a quote.</p>
     <div class="gb-price-grid">
       <div class="gb-price-card">
         <div class="gb-price-route">Airport → My Khe</div>
@@ -957,7 +980,6 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
     </div>
     <div class="gb-tip warn" style="margin-top:1.75rem">
-      <span class="gb-tip-icon">⚠️</span>
       <div>
         <div class="gb-tip-label">Surge Pricing</div>
         <p class="gb-tip-text">Expect 1.5x to 2x these fares during DIFF fireworks nights, Tet and public holidays, heavy rain, and the 7-9pm weekend dinner rush. If a fare looks way off, close the app and try again in 10-15 minutes &mdash; surge usually clears fast. Walking a few blocks from the tourist strip before booking also helps.</p>
@@ -987,16 +1009,12 @@ button{font-family:var(--font-sans);cursor:pointer}
     </div>
     <p style="font-size:.9rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin:1.75rem 0">Exit the arrivals hall and walk about 50 metres to the zone signed <strong>Xe Cong Nghe</strong> (ride-hailing) &mdash; near Lane 1-2 at the international terminal, around pillars 2-3 at the domestic terminal. It's separate from the taxi rank, and there's a Grab help desk and free wifi there. Typical wait for an assigned car is 2-10 minutes.</p>
     <p style="font-size:.9rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin-bottom:1.75rem">The terminal building blocks signal in places, so book once you're outside. See the <a href="da-nang-airport-guide.html" style="color:var(--ocean);font-weight:600">Da Nang airport guide</a> for the full arrivals walkthrough, including where taxis queue if you'd rather skip the app.</p>
-    <div class="gb-tip">
-      <span class="gb-tip-icon">💡</span>
-      <div>
+    <div class="gb-tip">      <div>
         <div class="gb-tip-label">Local Tip</div>
         <p class="gb-tip-text">Don't book while you're still wandering through baggage claim. Get outside, figure out exactly where you are relative to the signed zone, then book. Confirm the pin matches your actual spot before you tap confirm.</p>
       </div>
     </div>
-    <div class="gb-tip" style="margin-top:1rem">
-      <span class="gb-tip-icon">🌙</span>
-      <div>
+    <div class="gb-tip" style="margin-top:1rem">      <div>
         <div class="gb-tip-label">Late Arrivals</div>
         <p class="gb-tip-text">Grab runs 24 hours, but driver availability thins out after midnight. If you land after 1am, budget for a possible 10-15 minute wait. Metered taxis &mdash; Vinasun and Mai Linh, both legitimate and metered &mdash; queue outside arrivals as a reliable backup.</p>
       </div>
@@ -1073,29 +1091,19 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="bb-section-label">Ordering</span>
     <h2 class="bb-section-h2">What Should <em>I Order?</em></h2>
     <div class="gb-cat-grid">
-      <div class="gb-cat-card">
-        <span class="gb-cat-icon">🥐</span>
-        <div class="gb-cat-name">Breakfast</div>
+      <div class="gb-cat-card">        <div class="gb-cat-name">Breakfast</div>
         <div class="gb-cat-items">Banh mi, coffee</div>
       </div>
-      <div class="gb-cat-card">
-        <span class="gb-cat-icon">🍲</span>
-        <div class="gb-cat-name">Local</div>
+      <div class="gb-cat-card">        <div class="gb-cat-name">Local</div>
         <div class="gb-cat-items">Mi Quang, bun cha ca, com ga</div>
       </div>
-      <div class="gb-cat-card">
-        <span class="gb-cat-icon">🍕</span>
-        <div class="gb-cat-name">Comfort Food</div>
+      <div class="gb-cat-card">        <div class="gb-cat-name">Comfort Food</div>
         <div class="gb-cat-items">Pizza, burgers, fried chicken</div>
       </div>
-      <div class="gb-cat-card">
-        <span class="gb-cat-icon">☕</span>
-        <div class="gb-cat-name">Coffee</div>
+      <div class="gb-cat-card">        <div class="gb-cat-name">Coffee</div>
         <div class="gb-cat-items">Vietnamese, salt, coconut coffee</div>
       </div>
-      <div class="gb-cat-card">
-        <span class="gb-cat-icon">🌙</span>
-        <div class="gb-cat-name">Late Night</div>
+      <div class="gb-cat-card">        <div class="gb-cat-name">Late Night</div>
         <div class="gb-cat-items">Noodles, fried snacks, dessert</div>
       </div>
     </div>
@@ -1250,9 +1258,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       <p style="color:var(--ink-soft)">For a traveler staying several days and actually using all three &mdash; a ride, a food order, a Mart run &mdash; the membership can pay for itself quickly. It doesn't always pay for itself. If you're barely ordering anything, skip it.</p>
     </div>
 
-    <div class="gb-tip" style="margin-top:1.75rem">
-      <span class="gb-tip-icon">🎟️</span>
-      <div>
+    <div class="gb-tip" style="margin-top:1.75rem">      <div>
         <div class="gb-tip-label">Always Check Offers Before You Pay</div>
         <p class="gb-tip-text">Grab often runs member benefits, restaurant promotions, ride offers, and merchant deals alongside GrabCoins. GrabUnlimited discounts usually apply automatically at checkout, but extra offers can sometimes be selected manually depending on current eligibility. Before you tap order, check the offers screen.</p>
       </div>
@@ -1264,19 +1270,13 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="bb-section-label">Paying</span>
     <h2 class="bb-section-h2">How You <em>Pay</em></h2>
     <div class="gb-pay-grid">
-      <div class="gb-pay-card">
-        <span class="gb-pay-icon">💳</span>
-        <div class="gb-pay-title">Card</div>
+      <div class="gb-pay-card">        <div class="gb-pay-title">Card</div>
         <p class="gb-pay-desc">Link a card in-app for cashless rides and orders. Most major international cards work, but occasional declines happen &mdash; have a backup ready.</p>
       </div>
-      <div class="gb-pay-card">
-        <span class="gb-pay-icon">💵</span>
-        <div class="gb-pay-title">Cash</div>
+      <div class="gb-pay-card">        <div class="gb-pay-title">Cash</div>
         <p class="gb-pay-desc">Still widely accepted with drivers. If your card isn't cooperating, tell the driver "cash" when they arrive and round up to the nearest 10,000₫ note.</p>
       </div>
-      <div class="gb-pay-card">
-        <span class="gb-pay-icon">📱</span>
-        <div class="gb-pay-title">GrabPay</div>
+      <div class="gb-pay-card">        <div class="gb-pay-title">GrabPay</div>
         <p class="gb-pay-desc">Top up an in-app wallet to skip card declines entirely. Useful if you're staying long enough to make setup worthwhile.</p>
       </div>
     </div>
@@ -1284,7 +1284,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   </div>
 </section>
 
-<section class="bb-section">
+<section class="bb-section gb-on-dark" style="background:var(--night)">
   <div class="bb-section-inner">
     <span class="bb-section-label">Avoid These</span>
     <h2 class="bb-section-h2">Don't Do <em>This</em></h2>
@@ -1310,9 +1310,7 @@ button{font-family:var(--font-sans);cursor:pointer}
     <p style="font-size:1.05rem;font-weight:700;color:var(--ocean-deep);margin-bottom:1rem">Yes.</p>
     <p style="font-size:.95rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin-bottom:1rem">The outbound trip is straightforward &mdash; book from Da Nang like any other ride, 45-60 minutes, roughly $12-18 by GrabCar. Getting back is the less predictable part. Fewer drivers circulate in Hoi An's old town, and afternoon surge pricing is common.</p>
     <p style="font-size:.95rem;line-height:1.8;color:var(--ink-soft);max-width:70ch;margin-bottom:1.5rem">If you hate uncertainty, arrange a private return transfer through your hotel before you leave Da Nang. See the <a href="da-nang-airport-to-hoi-an.html" style="color:var(--ocean);font-weight:600">Hoi An transport guide</a> for the full breakdown.</p>
-    <div class="gb-tip">
-      <span class="gb-tip-icon">🏮</span>
-      <div>
+    <div class="gb-tip">      <div>
         <div class="gb-tip-label">Local Tip</div>
         <p class="gb-tip-text">For Hoi An, think about your return transportation before you book the outbound leg. A booked return removes the one part of the day that can actually go sideways.</p>
       </div>
@@ -1320,7 +1318,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   </div>
 </section>
 
-<section class="bb-section">
+<section class="bb-section gb-on-dark" style="background:var(--night)">
   <div class="bb-section-inner">
     <span class="bb-section-label">Alternatives</span>
     <h2 class="bb-section-h2">Grab vs <em>Private Car</em></h2>
