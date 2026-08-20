@@ -329,6 +329,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 </style>
 
 <style>
+/* ── BANNER IMAGE ─────────────────────────────────────────── */
+.esim-banner-img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+
 /* ── PROMO CODE CALLOUT (top of page) ─────────────────────── */
 .esim-promo-bar{background:var(--gold);padding:.75rem var(--gutter);text-align:center}
 .esim-promo-bar p{margin:0;font-size:.85rem;font-weight:700;color:#1A1405;letter-spacing:.01em}
@@ -347,9 +350,6 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-cta-primary:hover{background:var(--coral-light);transform:translateY(-1px)}
 .esim-cta-secondary{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);color:#fff;font-size:.9rem;font-weight:700;padding:13px 24px;border-radius:100px;text-decoration:none;transition:background .15s,border-color .15s}
 .esim-cta-secondary:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
-
-/* ── BANNER IMAGE ─────────────────────────────────────────── */
-.esim-banner-img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
 
 /* ── DISCLOSURE BAR ───────────────────────────────────────── */
 .esim-disclosure-bar{background:var(--sand-mid);border-bottom:1px solid var(--sand-dark);padding:.9rem var(--gutter)}
@@ -390,6 +390,12 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-profile-card{background:var(--white);border-radius:var(--r-lg);padding:1.75rem;box-shadow:0 1px 4px rgba(26,26,24,.06)}
 .esim-profile-name{font-family:var(--font-serif);font-size:1.3rem;color:var(--ink);margin-bottom:.6rem}
 .esim-profile-desc{font-size:.87rem;line-height:1.7;color:var(--ink-soft)}
+
+/* ── REWARDS LAYOUT + PROOF SCREENSHOT ────────────────────── */
+.esim-rewards-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:start}
+.esim-rewards-proof{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:.75rem;text-align:center}
+.esim-rewards-proof img{width:100%;height:auto;border-radius:calc(var(--r-lg) - 4px);display:block}
+.esim-rewards-proof-cap{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:.6rem}
 
 /* ── REWARDS TIER CARDS ───────────────────────────────────── */
 .esim-tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
@@ -435,6 +441,8 @@ button{font-family:var(--font-sans);cursor:pointer}
   .esim-tier-grid{grid-template-columns:repeat(2,1fr)}
   .esim-support-grid{grid-template-columns:1fr}
   .esim-two-col{grid-template-columns:1fr;gap:1.75rem}
+  .esim-rewards-layout{grid-template-columns:1fr;gap:1.75rem}
+  .esim-rewards-proof{max-width:320px;margin:0 auto}
 }
 @media(max-width:768px){
   .esim-vs-grid{grid-template-columns:1fr}
@@ -635,10 +643,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   </div>
 </header>
 
-<!-- HERO IMAGE PLACEHOLDER — swap the linear-gradient background above for:
-     background-image:url('images/esim-hero.jpg') -->
-
-<img src="images/airalo-esim-vietnam-banner.png" alt="Airalo eSIM Vietnam banner" class="esim-banner-img" loading="eager" width="1899" height="640">
+<img src="images/airalo-esim-hero-banner.webp" alt="Airalo eSIM card on a phone screen" class="esim-banner-img" loading="eager" width="1200" height="629">
 
 <div class="esim-disclosure-bar">
   <div class="esim-disclosure-inner">
@@ -720,30 +725,38 @@ button{font-family:var(--font-sans);cursor:pointer}
   <div class="bb-section-inner">
     <span class="bb-section-label" style="color:var(--coral-light)">Airalo Rewards</span>
     <h2 class="bb-section-h2" style="color:#fff">The More I Travel, <em style="color:rgba(255,255,255,.55);font-style:italic">the More Airalo Pays for the Next Trip</em></h2>
-    <p style="font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.6);max-width:70ch;margin-bottom:2rem">Every purchase earns Airmoney, credit toward your next eSIM. It's a simple loyalty structure, but it adds up faster than I expected once I started traveling regularly. I eventually reached Platinum, which earns 10% back on every purchase &mdash; enough that accumulated credit has covered a meaningful chunk of more than one later trip's data plan.</p>
-    <div class="esim-tier-grid">
-      <div class="esim-tier-card">
-        <div class="esim-tier-name">Traveler</div>
-        <div class="esim-tier-pct">5%</div>
-        <div class="esim-tier-req">Starting tier</div>
+    <div class="esim-rewards-layout">
+      <div>
+        <p style="font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:2rem">Every purchase earns Airmoney, credit toward your next eSIM. It's a simple loyalty structure, but it adds up faster than I expected once I started traveling regularly. I eventually reached Platinum, which earns 10% back on every purchase &mdash; enough that accumulated credit has covered a meaningful chunk of more than one later trip's data plan.</p>
+        <div class="esim-tier-grid">
+          <div class="esim-tier-card">
+            <div class="esim-tier-name">Traveler</div>
+            <div class="esim-tier-pct">5%</div>
+            <div class="esim-tier-req">Starting tier</div>
+          </div>
+          <div class="esim-tier-card">
+            <div class="esim-tier-name">Silver</div>
+            <div class="esim-tier-pct">6%</div>
+            <div class="esim-tier-req">$20+ spent</div>
+          </div>
+          <div class="esim-tier-card">
+            <div class="esim-tier-name">Gold</div>
+            <div class="esim-tier-pct">7%</div>
+            <div class="esim-tier-req">$70+ spent</div>
+          </div>
+          <div class="esim-tier-card top">
+            <div class="esim-tier-name">Platinum</div>
+            <div class="esim-tier-pct">10%</div>
+            <div class="esim-tier-req">$200+ spent</div>
+          </div>
+        </div>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.35);margin-top:1.5rem">Tier names, thresholds, and cashback rates reflect Airalo's published loyalty program as of this writing and are set by Airalo, not by us &mdash; confirm current terms in the app before relying on them.</p>
       </div>
-      <div class="esim-tier-card">
-        <div class="esim-tier-name">Silver</div>
-        <div class="esim-tier-pct">6%</div>
-        <div class="esim-tier-req">$20+ spent</div>
-      </div>
-      <div class="esim-tier-card">
-        <div class="esim-tier-name">Gold</div>
-        <div class="esim-tier-pct">7%</div>
-        <div class="esim-tier-req">$70+ spent</div>
-      </div>
-      <div class="esim-tier-card top">
-        <div class="esim-tier-name">Platinum</div>
-        <div class="esim-tier-pct">10%</div>
-        <div class="esim-tier-req">$200+ spent</div>
+      <div class="esim-rewards-proof">
+        <img src="images/airalo-platinum-traveler-proof.jpeg" alt="My own Airalo account showing Platinum Traveler status, 10% cashback" loading="lazy" width="1320" height="1065">
+        <p class="esim-rewards-proof-cap">My own account, Platinum tier.</p>
       </div>
     </div>
-    <p style="font-size:.78rem;color:rgba(255,255,255,.35);margin-top:1.5rem;max-width:70ch">Tier names, thresholds, and cashback rates reflect Airalo's published loyalty program as of this writing and are set by Airalo, not by us &mdash; confirm current terms in the app before relying on them.</p>
   </div>
 </section>
 <section class="bb-section" style="background:var(--sand-mid)">
@@ -889,11 +902,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 </section>
 <section class="bb-section">
   <div class="bb-section-inner" style="max-width:900px">
-    <div class="esim-img-slot" style="aspect-ratio:21/9">
-      <div class="esim-img-slot-label">
-        <span class="esim-img-slot-tag">Image Slot 3</span>
-        <p class="esim-img-slot-desc">Travel usage photo &mdash; phone in hand while traveling</p>
-      </div>
+    <div class="esim-img-slot esim-img-filled" style="aspect-ratio:968/507">
+      <img src="images/airalo-esim-phone-signal.svg" alt="Airalo eSIM connectivity on a phone" loading="lazy" width="968" height="507">
     </div>
   </div>
 </section>
