@@ -329,8 +329,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 </style>
 
 <style>
-/* ── BANNER IMAGE ─────────────────────────────────────────── */
-.esim-banner-img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+/* ── HERO PHOTO (Airalo Vietnam banner as hero background) ── */
+.esim-hero-photo{background-size:cover;background-position:100% center}
+.esim-hero-photo::after{background:linear-gradient(to right, rgba(6,10,10,.97) 0%, rgba(6,10,10,.94) 55%, rgba(6,10,10,.65) 78%, rgba(6,10,10,.4) 100%),linear-gradient(to top, rgba(6,10,10,.85) 0%, rgba(6,10,10,.3) 55%, rgba(6,10,10,.15) 100%)}
 
 /* ── PROMO CODE CALLOUT (top of page) ─────────────────────── */
 .esim-promo-bar{background:var(--gold);padding:.75rem var(--gutter);text-align:center}
@@ -629,7 +630,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 </div>
 
 <header class="bb-hero" style="min-height:560px">
-  <div class="bb-hero-img" style="background:linear-gradient(135deg,#0D3535 0%,#0A0A0A 100%)" role="img" aria-label="Placeholder hero image — Airalo eSIM in Vietnam"></div>
+  <div class="bb-hero-img esim-hero-photo" style="background-image:url('images/airalo-esim-hero-banner.webp')" role="img" aria-label="Airalo eSIM card on a phone screen"></div>
   <div class="bb-hero-content">
     <div class="bb-hero-eyebrow">Connectivity Guide &middot; Vietnam</div>
     <h1>The eSIM I Actually <em>Use in Vietnam</em></h1>
@@ -642,8 +643,6 @@ button{font-family:var(--font-sans);cursor:pointer}
     <div class="esim-promo-chip on-dark"><span>Use code</span> <code>RYAN6986</code> <span>for $3 off</span></div>
   </div>
 </header>
-
-<img src="images/airalo-esim-hero-banner.webp" alt="Airalo eSIM card on a phone screen" class="esim-banner-img" loading="eager" width="1200" height="629">
 
 <div class="esim-disclosure-bar">
   <div class="esim-disclosure-inner">
@@ -897,7 +896,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         </div>
       </div>
     </div>
-    <p style="font-size:.9rem;line-height:1.8;color:var(--ink-soft);margin-top:1.75rem;max-width:70ch">If you're staying long-term or genuinely need a Vietnamese phone number, a local physical SIM can make more sense and is often cheaper, ask at any Viettel or Vinaphone store in the city. For most trips, the convenience of showing up already connected outweighs the savings.</p>
+    <p style="font-size:.9rem;line-height:1.8;color:var(--ink-soft);margin-top:1.75rem;max-width:70ch">If you're staying long-term or genuinely need a Vietnamese phone number, a local physical SIM can make more sense and is often cheaper. See the <a href="da-nang-sim-card-guide.html" style="color:var(--ocean);font-weight:600">Da Nang SIM card guide</a> for that route. For most trips, the convenience of showing up already connected outweighs the savings.</p>
   </div>
 </section>
 <section class="bb-section">
@@ -915,17 +914,6 @@ button{font-family:var(--font-sans);cursor:pointer}
       <h3>Why I'd Still Recommend It</h3>
       <p>I travel frequently, and I've tried more than one eSIM option along the way. Airalo is the one I keep using. I value being able to install my data before I arrive, hotspot my laptop when wifi lets me down, watch rewards credit build toward future trips, and reach a real person when something needs fixing.</p>
       <p>For someone visiting Vietnam, especially for the first time, I think eliminating the "how am I getting online when I land?" problem before you even board the plane is easily worth the ten minutes it takes to set up.</p>
-    </div>
-  </div>
-</section>
-
-<section class="bb-section">
-  <div class="bb-section-inner" style="max-width:900px">
-    <div class="esim-img-slot" style="aspect-ratio:16/9">
-      <div class="esim-img-slot-label">
-        <span class="esim-img-slot-tag">Image Slot 4</span>
-        <p class="esim-img-slot-desc">Laptop + hotspot / remote work setup</p>
-      </div>
     </div>
   </div>
 </section>
@@ -979,6 +967,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       <a href="da-nang-digital-nomad-guide.html" class="bb-card" style="padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:center;text-align:center"><span style="font-family:var(--font-serif);font-size:1.05rem;color:var(--ink)">Digital Nomad Guide</span></a>
       <a href="da-nang-itinerary.html" class="bb-card" style="padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:center;text-align:center"><span style="font-family:var(--font-serif);font-size:1.05rem;color:var(--ink)">Da Nang Itinerary</span></a>
       <a href="hoi-an.html" class="bb-card" style="padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:center;text-align:center"><span style="font-family:var(--font-serif);font-size:1.05rem;color:var(--ink)">Hoi An Guide</span></a>
+      <a href="da-nang-sim-card-guide.html" class="bb-card" style="padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:center;text-align:center"><span style="font-family:var(--font-serif);font-size:1.05rem;color:var(--ink)">SIM Card Guide</span></a>
       <a href="da-nang-transport-guide.html" class="bb-card" style="padding:1.1rem 1.25rem;display:flex;align-items:center;justify-content:center;text-align:center"><span style="font-family:var(--font-serif);font-size:1.05rem;color:var(--ink)">Transport Guide</span></a>
     </div>
   </div>
@@ -1007,6 +996,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       <div class="footer-col">
         <div class="footer-col-title">Connectivity</div>
         <a href="best-esim-vietnam-airalo-guide.html">eSIM &amp; Airalo Guide</a>
+        <a href="da-nang-sim-card-guide.html">SIM Card Guide</a>
         <a href="da-nang-digital-nomad-guide.html">Digital Nomad Guide</a>
         <a href="da-nang-grab-guide.html">Grab Guide</a>
       </div>
