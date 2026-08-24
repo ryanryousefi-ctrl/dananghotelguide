@@ -114,7 +114,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bb-hero-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem}
 .bb-hero h1{font-family:var(--font-serif);font-size:clamp(2.5rem,6vw,4rem);color:#fff;line-height:1.05;letter-spacing:-.03em;margin-bottom:.85rem}
 .bb-hero h1 em{font-style:italic;color:rgba(255,255,255,.6)}
-.bb-hero-sub{font-size:clamp(.95rem,1.5vw,1.1rem);color:rgba(255,255,255,.55);max-width:52ch;line-height:1.65;margin-bottom:1.25rem}
+.bb-hero-sub{font-size:clamp(.95rem,1.5vw,1.1rem);color:rgba(255,255,255,.92);font-weight:600;max-width:52ch;line-height:1.65;margin-bottom:1.25rem}
 .bb-hero-meta{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3)}
 
 /* ── SECTION SHELLS ─────────────────────────────────────── */
@@ -131,7 +131,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .bb-top-pick-badge::before{content:'';width:24px;height:1px;background:var(--coral);flex-shrink:0}
 .bb-top-pick h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:.35rem}
 .bb-top-pick-type{font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.1rem}
-.bb-top-pick-desc{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:1.25rem}
+.bb-top-pick-desc{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.92);font-weight:600;margin-bottom:1.25rem}
 .bb-top-pick-detail{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin-bottom:1.4rem}
 .bb-detail-tag{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(255,255,255,.12);border-radius:100px;color:rgba(255,255,255,.45)}
 .bb-top-pick-sig{font-size:.8rem;color:rgba(255,255,255,.3);margin-bottom:1.4rem;font-style:italic}
@@ -173,7 +173,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .dragon-callout{background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter)}
 .dragon-callout-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .dragon-callout-text h2{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;letter-spacing:-.025em;line-height:1.1;margin-bottom:.5rem}
-.dragon-callout-text p{font-size:.92rem;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:0}
+.dragon-callout-text p{font-size:.92rem;line-height:1.8;color:rgba(255,255,255,.92);font-weight:600;margin-bottom:0}
 .dragon-facts{display:flex;flex-direction:column;gap:.6rem}
 .dragon-fact{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-md);padding:.75rem 1rem;display:flex;justify-content:space-between;align-items:center}
 .dragon-fact-key{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em}
@@ -344,12 +344,33 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-promo-chip code{background:var(--sand-mid);border:1px solid var(--sand-dark);padding:.1rem .5rem;border-radius:5px;font-family:var(--font-sans);font-weight:800;letter-spacing:.03em;color:var(--ink)}
 .esim-promo-chip.on-dark span{color:rgba(255,255,255,.5)}
 .esim-promo-chip.on-dark code{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
-.esim-hero-coupon{display:inline-flex;align-items:center;gap:.65rem;margin-top:1.1rem;background:var(--gold);border-radius:12px;padding:.6rem .9rem .6rem 1rem}
-.esim-hero-coupon-amount{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:#1A1405;line-height:1}
-.esim-hero-coupon-text{display:flex;flex-direction:column;line-height:1.25}
-.esim-hero-coupon-text span{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:rgba(26,20,5,.65)}
-.esim-hero-coupon-text code{font-family:var(--font-sans);font-size:.85rem;font-weight:800;letter-spacing:.03em;color:#1A1405;background:rgba(255,255,255,.55);padding:.05rem .4rem;border-radius:4px}
-@media(max-width:600px){.esim-hero-coupon{flex-wrap:wrap}}
+/* airalo promo widget */
+.airalo-widget{
+  background:rgba(0,0,0,.38);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:.65rem 1rem .7rem;
+  min-width:150px;max-width:190px;
+  display:flex;flex-direction:column;
+  text-decoration:none;
+  margin-top:1.1rem;
+  transition:opacity .4s,border-color .15s,background .15s;
+}
+.airalo-widget:hover{background:rgba(0,0,0,.5);border-color:rgba(255,255,255,.28)}
+.airalo-label{display:block;font-size:.55rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:.45rem;line-height:1}
+.airalo-amount{font-family:var(--font-serif);font-size:1.8rem;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:.3rem}
+.airalo-sub{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.72);line-height:1.3;margin-bottom:.55rem}
+.airalo-btn{
+  display:block;width:100%;
+  background:var(--coral);
+  border:none;border-radius:8px;
+  color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:.42rem .5rem;
+  text-align:center;
+  transition:background .14s,transform .12s;
+}
+.airalo-widget:hover .airalo-btn{background:var(--coral-light);transform:translateY(-1px)}
 
 /* ── HERO CTAs ────────────────────────────────────────────── */
 .esim-hero-ctas{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.5rem}
@@ -381,7 +402,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .esim-editor-tip::before{content:'';position:absolute;top:-40%;right:-10%;width:60%;height:180%;background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 70%)}
 .esim-editor-badge{position:relative;z-index:1;display:inline-flex;align-items:center;gap:.5rem;font-size:.62rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:rgba(184,144,30,.14);border:1px solid rgba(184,144,30,.35);border-radius:100px;padding:.35rem .9rem;margin-bottom:1.1rem}
 .esim-editor-tip h3{position:relative;z-index:1;font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.15}
-.esim-editor-tip p{position:relative;z-index:1;font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.65);margin-bottom:1rem}
+.esim-editor-tip p{position:relative;z-index:1;font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.92);font-weight:600;margin-bottom:1rem}
 .esim-editor-tip p:last-child{margin-bottom:0}
 .esim-editor-tip p strong{color:#fff;font-weight:700}
 
@@ -437,7 +458,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 /* ── VERDICT CTA BLOCK ────────────────────────────────────── */
 .esim-verdict-cta{background:var(--night);border-radius:var(--r-xl,24px);padding:clamp(2.5rem,5vw,3.5rem);text-align:center}
 .esim-verdict-cta h3{font-family:var(--font-serif);font-size:clamp(1.6rem,3.5vw,2.4rem);color:#fff;letter-spacing:-.02em;margin-bottom:1rem;line-height:1.15}
-.esim-verdict-cta p{font-size:.95rem;color:rgba(255,255,255,.6);max-width:60ch;margin:0 auto 1.75rem}
+.esim-verdict-cta p{font-size:.95rem;color:rgba(255,255,255,.92);font-weight:600;max-width:60ch;margin:0 auto 1.75rem}
 
 /* ── VERIFY MARKER (internal QA aid, invisible styling not needed since none remain) ── */
 
@@ -646,10 +667,12 @@ button{font-family:var(--font-sans);cursor:pointer}
       <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-primary affiliate-link">Get an Airalo eSIM</a>
       <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="esim-cta-secondary affiliate-link">See Vietnam eSIM Plans</a>
     </div>
-    <div class="esim-hero-coupon">
-      <span class="esim-hero-coupon-amount">$3 OFF</span>
-      <span class="esim-hero-coupon-text"><span>Your First Airalo eSIM</span> <code>RYAN6986</code></span>
-    </div>
+    <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="airalo-widget affiliate-link" aria-label="Get $3 off your first Airalo eSIM with code RYAN6986">
+      <span class="airalo-label">Airalo eSIM</span>
+      <span class="airalo-amount">$3 Off</span>
+      <span class="airalo-sub">Code RYAN6986</span>
+      <span class="airalo-btn">Get eSIM</span>
+    </a>
   </div>
 </header>
 
@@ -745,7 +768,7 @@ button{font-family:var(--font-sans);cursor:pointer}
     <h2 class="bb-section-h2" style="color:#fff">The More I Travel, <em style="color:rgba(255,255,255,.55);font-style:italic">the More Airalo Pays for the Next Trip</em></h2>
     <div class="esim-rewards-layout">
       <div>
-        <p style="font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.6);margin-bottom:2rem">Every purchase earns Airmoney, credit toward your next eSIM. It's a simple loyalty structure, but it adds up faster than I expected once I started traveling regularly. I eventually reached Platinum, which earns 10% back on every purchase &mdash; enough that accumulated credit has covered a meaningful chunk of more than one later trip's data plan.</p>
+        <p style="font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.92);font-weight:600;margin-bottom:2rem">Every purchase earns Airmoney, credit toward your next eSIM. It's a simple loyalty structure, but it adds up faster than I expected once I started traveling regularly. I eventually reached Platinum, which earns 10% back on every purchase &mdash; enough that accumulated credit has covered a meaningful chunk of more than one later trip's data plan.</p>
         <div class="esim-tier-grid">
           <div class="esim-tier-card">
             <div class="esim-tier-name">Traveler</div>
@@ -995,7 +1018,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center">
   <div style="max-width:680px;margin:0 auto">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em">Still planning where to stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7">Compare live rates and book with free cancellation on most properties.</p>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.92);font-weight:600;margin:0 0 2rem;line-height:1.7">Compare live rates and book with free cancellation on most properties.</p>
     <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none">Search Da Nang Hotels &rarr;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25)">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
