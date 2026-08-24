@@ -407,14 +407,14 @@ button{font-family:var(--font-sans);cursor:pointer}
 .gb-fare-time{display:flex;align-items:center;gap:.4rem;font-size:.74rem;font-weight:600;color:rgba(255,255,255,.42);letter-spacing:.02em;white-space:nowrap}
 .gb-fare-time svg{flex-shrink:0}
 .gb-fare-bars{display:flex;flex-direction:column;gap:.55rem}
-.gb-fare-bar-track{display:grid;grid-template-columns:30px 1fr;align-items:center;gap:.75rem}
+.gb-fare-bar-track{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:.75rem}
 .gb-fare-bar-icon{display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55)}
 .gb-fare-bar-outer{position:relative;height:26px;background:rgba(255,255,255,.05);border-radius:100px;overflow:hidden}
 .gb-fare-bar-fill{position:absolute;top:0;left:0;height:100%;border-radius:100px;display:flex;align-items:center;justify-content:flex-end;padding-right:.85rem;box-sizing:border-box;transition:width .3s var(--ease)}
 .gb-fare-bar-fill.bike{background:linear-gradient(90deg,var(--coral) 0%,var(--coral-light) 100%)}
 .gb-fare-bar-fill.car{background:linear-gradient(90deg,#A6822F 0%,var(--gold) 100%)}
 .gb-fare-bar-val{font-family:var(--font-sans);font-size:.76rem;font-weight:800;color:#fff;letter-spacing:.01em;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.25)}
-.gb-fare-bar-val.outside{position:absolute;left:calc(100% + .6rem);color:rgba(255,255,255,.75);text-shadow:none}
+.gb-fare-bar-val.outside{color:rgba(255,255,255,.75);text-shadow:none;text-align:left}
 .gb-fare-bar-outer.unavailable{background:transparent;display:flex;align-items:center}
 .gb-fare-unavailable-text{font-size:.76rem;font-weight:600;color:rgba(255,255,255,.3);font-style:italic;padding-left:.1rem}
 .gb-fare-warn{margin-top:2rem;background:rgba(200,96,74,.1);border:1px solid rgba(200,96,74,.3);border-radius:var(--r-lg);padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
@@ -608,7 +608,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   .gb-cat-grid{grid-template-columns:repeat(2,1fr)}
   .gb-mistakes-grid{grid-template-columns:1fr}
   .gb-fare-route{font-size:1.05rem}
-  .gb-fare-bar-track{grid-template-columns:24px 1fr;gap:.5rem}
+  .gb-fare-bar-track{grid-template-columns:24px 1fr auto;gap:.5rem}
   .gb-fare-bar-icon svg{width:15px;height:15px}
   .gb-fare-bar-outer{height:22px}
   .gb-fare-bar-val{font-size:.7rem}
@@ -1000,15 +1000,15 @@ button{font-family:var(--font-sans);cursor:pointer}
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 17.5 9 10h5l3.5 7.5M9 10 8 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 10l2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill bike" style="width:9.1%"></div>
-              <span class="gb-fare-bar-val outside">$1-2</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$1-2</span>
           </div>
           <div class="gb-fare-bar-track">
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16V12.5L6 8h12l2 4.5V16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 16h16v2.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1V17h-9v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V16Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill car" style="width:18.2%"></div>
-              <span class="gb-fare-bar-val outside">$2-4</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$2-4</span>
           </div>
         </div>
       </div>
@@ -1023,15 +1023,15 @@ button{font-family:var(--font-sans);cursor:pointer}
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 17.5 9 10h5l3.5 7.5M9 10 8 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 10l2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill bike" style="width:13.6%"></div>
-              <span class="gb-fare-bar-val outside">$2-3</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$2-3</span>
           </div>
           <div class="gb-fare-bar-track">
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16V12.5L6 8h12l2 4.5V16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 16h16v2.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1V17h-9v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V16Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill car" style="width:27.3%"></div>
-              <span class="gb-fare-bar-val outside">$4-6</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$4-6</span>
           </div>
         </div>
       </div>
@@ -1046,15 +1046,15 @@ button{font-family:var(--font-sans);cursor:pointer}
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 17.5 9 10h5l3.5 7.5M9 10 8 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 10l2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill bike" style="width:13.6%"></div>
-              <span class="gb-fare-bar-val outside">$2-3</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$2-3</span>
           </div>
           <div class="gb-fare-bar-track">
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16V12.5L6 8h12l2 4.5V16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 16h16v2.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1V17h-9v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V16Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill car" style="width:27.3%"></div>
-              <span class="gb-fare-bar-val outside">$4-6</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$4-6</span>
           </div>
         </div>
       </div>
@@ -1069,15 +1069,15 @@ button{font-family:var(--font-sans);cursor:pointer}
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 17.5 9 10h5l3.5 7.5M9 10 8 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 10l2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill bike" style="width:18.2%"></div>
-              <span class="gb-fare-bar-val outside">$3-4</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$3-4</span>
           </div>
           <div class="gb-fare-bar-track">
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16V12.5L6 8h12l2 4.5V16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 16h16v2.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1V17h-9v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V16Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill car" style="width:31.8%"></div>
-              <span class="gb-fare-bar-val outside">$5-7</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$5-7</span>
           </div>
         </div>
       </div>
@@ -1092,8 +1092,8 @@ button{font-family:var(--font-sans);cursor:pointer}
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><circle cx="18.5" cy="17.5" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 17.5 9 10h5l3.5 7.5M9 10 8 7H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 10l2 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
             <div class="gb-fare-bar-outer">
               <div class="gb-fare-bar-fill bike" style="width:40.9%"></div>
-              <span class="gb-fare-bar-val outside">$7-9</span>
-            </div>
+              </div>
+            <span class="gb-fare-bar-val outside">$7-9</span>
           </div>
           <div class="gb-fare-bar-track">
             <span class="gb-fare-bar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16V12.5L6 8h12l2 4.5V16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 16h16v2.5a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1V17h-9v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V16Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></svg></span>
