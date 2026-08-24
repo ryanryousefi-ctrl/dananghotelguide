@@ -361,14 +361,20 @@ button{font-family:var(--font-sans);cursor:pointer}
 .gb-step-desc{font-size:.8rem;line-height:1.5;color:var(--ink-muted)}
 
 /* ── SERVICE CARDS (GrabBike/Car/XL/Plus) ───────────────────── */
+.gb-ride-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.gb-ride-card{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end}
+.gb-ride-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.gb-ride-card:hover img{transform:scale(1.04)}
+.gb-ride-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.95) 0%,rgba(10,10,10,.55) 42%,rgba(10,10,10,.08) 75%)}
+.gb-ride-body{position:relative;z-index:1;padding:1.15rem 1.15rem 1.25rem}
+.gb-ride-cap{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:.25rem .7rem;margin-bottom:.7rem}
+.gb-ride-name{font-family:var(--font-serif);font-size:1.5rem;color:#fff;letter-spacing:-.02em;line-height:1.05;margin-bottom:.5rem}
+.gb-ride-desc{font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.72)}
+
+/* ── SERVICE GRID (generic 4-up step cards) ──────────────────── */
 .gb-service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
 .gb-service-card{background:var(--white);border-radius:var(--r-lg);padding:1.5rem 1.35rem;box-shadow:0 1px 4px rgba(26,26,24,.06)}
-.gb-service-name{font-family:var(--font-serif);font-size:1.3rem;color:var(--ink);margin-bottom:.15rem}
-.gb-service-tagline{font-size:.75rem;color:var(--ink-muted);margin-bottom:1rem}
 .gb-service-label{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.5rem}
-.gb-service-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
-.gb-service-list li{font-size:.82rem;color:var(--ink-soft);padding-left:1rem;position:relative}
-.gb-service-list li::before{content:'';position:absolute;left:0;top:.55rem;width:5px;height:5px;border-radius:50%;background:var(--ocean)}
 
 /* ── BIKE VS CAR COMPARISON ──────────────────────────────────── */
 .gb-vs{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
@@ -563,16 +569,10 @@ button{font-family:var(--font-sans);cursor:pointer}
 .gb-on-dark .bb-section-h2 em{color:rgba(255,255,255,.55)}
 .gb-on-dark > .bb-section-inner > p{color:rgba(255,255,255,.6)}
 .gb-on-dark > .bb-section-inner > p a{color:var(--coral-light)}
-.gb-on-dark .gb-service-card,
 .gb-on-dark .gb-simple-card,
 .gb-on-dark .gb-flow-step{background:rgba(255,255,255,.06);box-shadow:none;border:1px solid rgba(255,255,255,.08)}
-.gb-on-dark .gb-service-name,
 .gb-on-dark .gb-simple-name{color:#fff}
-.gb-on-dark .gb-service-tagline{color:rgba(255,255,255,.4)}
-.gb-on-dark .gb-service-label{color:var(--coral-light)}
-.gb-on-dark .gb-service-list li,
 .gb-on-dark .gb-simple-list li{color:rgba(255,255,255,.65)}
-.gb-on-dark .gb-service-list li::before,
 .gb-on-dark .gb-simple-list li::before{color:var(--coral-light)}
 .gb-on-dark .gb-flow-step{color:#fff}
 .gb-on-dark .gb-flow-arrow{color:rgba(255,255,255,.35)}
@@ -588,6 +588,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   .gb-feature-card{aspect-ratio:16/10}
   .gb-steps{grid-template-columns:repeat(2,1fr)}
   .gb-service-grid{grid-template-columns:repeat(2,1fr)}
+  .gb-ride-grid{grid-template-columns:repeat(2,1fr)}
   .gb-cat-grid{grid-template-columns:repeat(3,1fr)}
   .gb-plan-grid{grid-template-columns:1fr}
   .gb-mistakes-grid{grid-template-columns:repeat(2,1fr)}
@@ -605,6 +606,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 @media(max-width:600px){
   .gb-steps{grid-template-columns:1fr}
   .gb-service-grid{grid-template-columns:1fr}
+  .gb-ride-grid{grid-template-columns:1fr}
+  .gb-ride-card{aspect-ratio:16/10}
   .gb-cat-grid{grid-template-columns:repeat(2,1fr)}
   .gb-mistakes-grid{grid-template-columns:1fr}
   .gb-fare-route{font-size:1.05rem}
@@ -819,48 +822,43 @@ button{font-family:var(--font-sans);cursor:pointer}
   <div class="bb-section-inner">
     <span class="bb-section-label">Getting Around</span>
     <h2 class="bb-section-h2">Da Nang <em>with Grab</em></h2>
-    <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:70ch;margin-bottom:2rem">Set your pickup and destination, pick a service, confirm the upfront price, and a driver comes to you. Payment is either through the app or cash on arrival. You need data to run it &mdash; install an <a href="best-esim-vietnam-airalo-guide.html" style="color:var(--coral-light);font-weight:600">Airalo eSIM</a> before you fly so you're connected the moment you land.</p>
-    <div class="gb-service-grid">
-      <div class="gb-service-card">
-        <div class="gb-service-name">GrabBike</div>
-        <div class="gb-service-tagline">Motorbike taxi, one rider</div>
-        <div class="gb-service-label">Best For</div>
-        <ul class="gb-service-list">
-          <li>Solo travelers</li>
-          <li>Short hops</li>
-          <li>Cheapest option</li>
-        </ul>
+    <p style="font-size:.95rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:58ch;margin-bottom:1.75rem">Set your pickup and destination, pick a service, confirm the upfront price, and a driver comes to you. Payment is either through the app or cash on arrival. You need data to run it &mdash; install an <a href="best-esim-vietnam-airalo-guide.html" style="color:var(--coral-light);font-weight:600">Airalo eSIM</a> before you fly so you're connected the moment you land.</p>
+    <div class="gb-ride-grid">
+      <div class="gb-ride-card">
+        <img src="images/grab-bike-rider.jpg" alt="GrabBike motorbike taxi rider on a Da Nang street" width="600" height="800" loading="lazy" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw">
+        <div class="gb-ride-overlay"></div>
+        <div class="gb-ride-body">
+          <span class="gb-ride-cap">1 Rider</span>
+          <div class="gb-ride-name">GrabBike</div>
+          <p class="gb-ride-desc">The cheapest and fastest choice for one person making short trips.</p>
+        </div>
       </div>
-      <div class="gb-service-card">
-        <div class="gb-service-name">GrabCar</div>
-        <div class="gb-service-tagline">Standard car, up to 4</div>
-        <div class="gb-service-label">Best For</div>
-        <ul class="gb-service-list">
-          <li>Couples</li>
-          <li>Air conditioning</li>
-          <li>Luggage</li>
-          <li>Airport runs</li>
-        </ul>
+      <div class="gb-ride-card">
+        <img src="images/grab-car-da-nang.jpeg" alt="GrabCar sedan parked on a Da Nang street" width="600" height="800" loading="lazy" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw">
+        <div class="gb-ride-overlay"></div>
+        <div class="gb-ride-body">
+          <span class="gb-ride-cap">Up to 4</span>
+          <div class="gb-ride-name">GrabCar</div>
+          <p class="gb-ride-desc">The everyday option for couples, luggage, airport pickups, and air conditioning.</p>
+        </div>
       </div>
-      <div class="gb-service-card">
-        <div class="gb-service-name">6-Seater</div>
-        <div class="gb-service-tagline">Larger car or van</div>
-        <div class="gb-service-label">Best For</div>
-        <ul class="gb-service-list">
-          <li>Families</li>
-          <li>Groups of 5+</li>
-          <li>Extra luggage</li>
-        </ul>
+      <div class="gb-ride-card">
+        <img src="images/grab-car-fleet.jpg" alt="Row of larger Grab vehicles for group rides in Da Nang" width="600" height="800" loading="lazy" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw">
+        <div class="gb-ride-overlay"></div>
+        <div class="gb-ride-body">
+          <span class="gb-ride-cap">Groups Up to 6</span>
+          <div class="gb-ride-name">6-Seater</div>
+          <p class="gb-ride-desc">Best for families, groups, or travelers carrying several large bags.</p>
+        </div>
       </div>
-      <div class="gb-service-card">
-        <div class="gb-service-name">Car Plus</div>
-        <div class="gb-service-tagline">Premium / EV option</div>
-        <div class="gb-service-label">Best For</div>
-        <ul class="gb-service-list">
-          <li>Comfort</li>
-          <li>Newer vehicles</li>
-          <li>Where available</li>
-        </ul>
+      <div class="gb-ride-card">
+        <img src="images/grab-taxi.jpg" alt="Premium car option for Grab rides in Da Nang" width="600" height="800" loading="lazy" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw">
+        <div class="gb-ride-overlay"></div>
+        <div class="gb-ride-body">
+          <span class="gb-ride-cap">Premium / EV</span>
+          <div class="gb-ride-name">Car Plus</div>
+          <p class="gb-ride-desc">A more comfortable premium or electric vehicle option where available.</p>
+        </div>
       </div>
     </div>
   </div>
