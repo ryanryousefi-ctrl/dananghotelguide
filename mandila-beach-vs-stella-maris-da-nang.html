@@ -184,7 +184,7 @@
   .nav-stays-btn .btn-text{display:none}
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
+:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
 html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}::selection{background:var(--ocean);color:#fff}a{text-decoration:none;color:inherit}a{color:var(--ocean);}.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0;}.footer-inner{max-width:var(--max);margin:0 auto}.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07);}.footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem;}.footer-brand em{font-style:italic;color:var(--coral-light)}.footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem;}.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.06);}.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem;}.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s;}.footer-col a:hover{color:rgba(255,255,255,.75)}.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.8rem 0;font-size:.72rem;}.footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem;}.footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch;}.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0;}.footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35);}.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
 .cmp-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.cmp-hero::before{content:"";position:absolute;inset:0;background-image:url("images/da-nang-beach-hotels-30b63280.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.cmp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.cmp-hero>*{position:relative;z-index:2}.cmp-hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:1rem;font-weight:600}.cmp-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem}.cmp-hero h1 em{font-style:italic;color:var(--coral-light)}.cmp-hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:560px;margin:0 auto 1.5rem;line-height:1.65}.cmp-meta{display:flex;justify-content:center;gap:1.5rem;font-size:.72rem;color:rgba(255,255,255,.35);flex-wrap:wrap}.cmp-meta strong{color:rgba(255,255,255,.6)}
@@ -263,6 +263,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 <link rel="stylesheet" href="phase13.css">
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -443,192 +444,219 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Mandila Beach Hotel is a well-established My Khe beachfront with a pool, good family value, and consistent reviews. Stella Maris is a newer, more design-led property that suits couples and travellers who prefer boutique character over volume.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">Both offer good value at similar price points.</p>
-  </div>
-</div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · My Khe Beach · 2026</p>
-  <h1>Mandila Beach Hotel vs <em>Stella Maris Da Nang</em></h1>
-  <p class="cmp-hero-sub">Two upper-mid My Khe Beach hotels with very different personalities. Mandila is a proven beachfront with pool and family value.</p>
-<p class="cmp-hero-sub">Stella Maris brings design and a quieter, more intimate feel.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 7-min read</span>
+<section class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <p class="hvh-hero-eyebrow">Hotel Comparison · My Khe Beach</p>
+    <h1 class="hvh-hero-title">Mandila Beach <em>vs</em> Stella Maris Da Nang</h1>
+    <p class="hvh-hero-sub">Two mid-tier My Khe hotels with different personalities. One is built for families, the other leans boutique for couples.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach hotel strip and coastline, Da Nang" loading="lazy">
+        <div class="hvh-split-label">
+          <p class="hvh-split-hotel-eyebrow">Hotel A</p>
+          <p class="hvh-split-hotel-name">Mandila Beach Hotel</p>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach shoreline and skyline, Da Nang" loading="lazy">
+        <div class="hvh-split-label">
+          <p class="hvh-split-hotel-eyebrow">Hotel B</p>
+          <p class="hvh-split-hotel-name">Stella Maris Da Nang</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <!-- TODO: Replace fallback with real Mandila Beach Hotel image -->
-  <div class="cmp-visual-card">
-    <img src="images/hotels/brilliant-hotel-da-nang.jpg" alt="Mandila Beach Hotel Da Nang" loading="lazy">
-    <div class="cmp-visual-label">Mandila Beach Hotel</div>
+<section class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <p class="hvh-editors-pick-badge">Editor's Pick</p>
+      <h2 class="hvh-editors-pick-name">Mandila Beach Hotel</h2>
+      <p class="hvh-editors-pick-why-label">Why It Wins</p>
+      <p class="hvh-editors-pick-why">Stella Maris has the better pool and the newer interiors. But Mandila is the safer, more proven booking for most travelers in this price tier: a larger property, a bigger ground-level pool that actually works for kids, and a longer track record of consistent reviews. Stella Maris pulls ahead specifically for couples who want a smaller, design-led stay.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/da-nang-beach-hotels-30b63280.webp" alt="My Khe Beach hotel row, Da Nang" loading="lazy">
+    </div>
   </div>
-  <!-- TODO: Replace fallback with real Stella Maris Da Nang image -->
-  <div class="cmp-visual-card">
-    <img src="images/hotels/chicland-da-nang.jpg" alt="Stella Maris Da Nang beachfront hotel" loading="lazy">
-    <div class="cmp-visual-label">Stella Maris Da Nang</div>
-  </div>
-</div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
+</section>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Mandila Beach Hotel Da Nang</h3>
-        <ul>
-          <li>★★★★ Established beachfront hotel</li>
-          <li>Large property with multiple floors</li>
-          <li>My Khe Beach, central strip</li>
-          <li>Pool + direct beach access</li>
-          <li>Consistently solid review scores</li>
-          <li>From $70/night</li>
+<div class="hvh-section" style="background:var(--white)">
+  <div class="hvh-section-inner">
+
+    <p style="font-size:.82rem;color:var(--ink-muted);background:var(--sand);border:1px solid var(--sand-dark);border-radius:var(--r-md);padding:.85rem 1.1rem;margin-bottom:2rem;line-height:1.6">[VERIFY: neither property has a canonical, verified photo set in our archive at time of writing. Photography above shows the general My Khe Beach hotel strip, not either specific property, so the property comparisons below rely on published specs and guest-review patterns rather than a side-by-side photo match.]</p>
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Proven and practical versus <em>small and design-led</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <h3 class="hvh-verdict30-hotel">Mandila Beach Hotel</h3>
+        <p class="hvh-verdict30-label">Best For</p>
+        <p class="hvh-verdict30-bestfor">Families and groups who want an established, larger beachfront hotel with reliable reviews</p>
+        <p class="hvh-verdict30-label">Wins</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Larger ground-level pool, better for kids</li>
+          <li>More room categories and interconnecting options</li>
+          <li>Longer track record, more consistent reviews</li>
+        </ul>
+        <p class="hvh-verdict30-label">Tradeoff</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Functional 4-star design, nothing distinctive</li>
+          <li>Larger property feels less personal</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Stella Maris Da Nang</h3>
-        <ul>
-          <li>★★★★ Boutique-style beachfront hotel</li>
-          <li>Smaller, more design-forward property</li>
-          <li>My Khe Beach, central-north</li>
-          <li>Rooftop pool + beach access</li>
-          <li>Newer property with contemporary design</li>
-          <li>From $65/night</li>
+      <div class="hvh-verdict30-card">
+        <h3 class="hvh-verdict30-hotel">Stella Maris Da Nang</h3>
+        <p class="hvh-verdict30-label">Best For</p>
+        <p class="hvh-verdict30-bestfor">Couples and solo travelers who want a smaller, newer, design-forward stay with a rooftop pool</p>
+        <p class="hvh-verdict30-label">Wins</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Rooftop pool with beach views</li>
+          <li>Newer property, contemporary interiors</li>
+          <li>Smaller, quieter, more intimate feel</li>
+        </ul>
+        <p class="hvh-verdict30-label">Tradeoff</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Fewer rooms and room-category options</li>
+          <li>Less proven for families needing connecting rooms</li>
         </ul>
       </div>
     </div>
-    <p>Both hotels occupy the popular mid-tier of <a href="my-khe-beach-da-nang.html" style="color:var(--ocean);font-weight:600">My Khe Beach</a>, priced between the basic guesthouses and the full five-star resorts. Mandila is the more established option with a larger footprint and family-friendly setup.</p>
-<p>Stella Maris is newer, has a rooftop pool, and leans into the boutique feel that younger travellers and couples often prefer.</p>
-  </div>
 
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Mandila Beach Hotel</th><th>Stella Maris Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>My Khe, central strip</td><td>My Khe, central-north</td></tr>
-        <tr><td>From airport</td><td>~10 min · $3–5</td><td>~10 min · $3–5</td></tr>
-        <tr><td>From city centre</td><td>~10 min · $3–4</td><td>~12 min · $3–4</td></tr>
-        <tr><td>An Thuong restaurants</td><td>~5 min Grab</td><td>~5 min Grab</td></tr>
-        <tr><td>Dragon Bridge</td><td>~15 min Grab</td><td>~15 min Grab</td></tr>
-        <tr><td>Hoi An</td><td>~45 min · $11–14</td><td>~45 min · $11–14</td></tr>
-      </tbody>
-    </table>
-    <p>Location is essentially equal. Both hotels sit on the My Khe strip with the same core advantages: close to the airport, close to An Thuong restaurants, and reasonably positioned for Hoi An day trips.</p>
-<p>The My Khe beach strip itself is lively with local restaurants and cafes within walking distance of both properties.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Style</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Mandila Beach, Rooms</h3>
-        <ul>
-          <li>Standard rooms comfortable and clean</li>
-          <li>Ocean-view rooms worth paying for</li>
-          <li>Functional 4-star design, nothing unexpected</li>
-          <li>Good for families with interconnecting options</li>
-          <li>Balconies on upper floors</li>
-          <li>Larger property means more room variety</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Stella Maris, Rooms</h3>
-        <ul>
-          <li>Rooms with contemporary, design-led interiors</li>
-          <li>Rooftop access from upper floors</li>
-          <li>Better suited to couples and solo travellers</li>
-          <li>Newer property, facilities in good condition</li>
-          <li>Fewer rooms, quieter corridor experience</li>
-          <li>Check ocean-facing room types at booking</li>
-        </ul>
+    <span class="hvh-eyebrow" style="margin-top:3rem;display:block">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Mandila Beach</th><th>Stella Maris</th></tr></thead>
+          <tbody>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">8.3 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Stella Maris</span></td></tr>
+            <tr><td>Rooms &amp; Design</td><td class="hvh-scorecard-score">6.8</td><td class="hvh-scorecard-score">7.9 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Stella Maris</span></td></tr>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">8.0 <span class="hvh-winner-badge" style="margin-left:6px">Tie</span></td><td class="hvh-scorecard-score">8.0</td></tr>
+            <tr><td>Kids &amp; Family</td><td class="hvh-scorecard-score">7.8 <span class="hvh-winner-badge" style="margin-left:6px">Mandila</span></td><td class="hvh-scorecard-score">5.8</td></tr>
+            <tr><td>Couples Appeal</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">8.4 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Stella Maris</span></td></tr>
+            <tr><td>Consistency/Reviews</td><td class="hvh-scorecard-score">7.9 <span class="hvh-winner-badge" style="margin-left:6px">Mandila</span></td><td class="hvh-scorecard-score">7.0</td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">7.6 <span class="hvh-winner-badge" style="margin-left:6px">Mandila</span></td><td class="hvh-scorecard-score">7.4</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Pool</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">7.5</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">8.3 🏆</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Rooms &amp; Design</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">6.8</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">7.9 🏆</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Beach Access</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">8.0 (tie)</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">8.0</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Kids &amp; Family</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">7.8 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">5.8</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Couples Appeal</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">6.5</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">8.4 🏆</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Consistency/Reviews</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">7.9 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">7.0</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Value</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Mandila Beach</span><span class="hvh-scorecard-card-score">7.6 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Stella Maris</span><span class="hvh-scorecard-card-score">7.4</span></div>
+      </div>
+    </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Mandila Beach Hotel</th><th>Stella Maris Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Pool</td><td>✓ Outdoor pool</td><td>✓ Rooftop pool</td></tr>
-        <tr><td>Beach access</td><td>✓ Direct My Khe</td><td>✓ Direct My Khe</td></tr>
-        <tr><td>Restaurant</td><td>✓ On-site restaurant</td><td>✓ Restaurant</td></tr>
-        <tr><td>Bar</td><td>✓</td><td>✓ Rooftop bar</td></tr>
-        <tr><td>Spa</td><td>✓ Massage services</td><td>✓ Spa services</td></tr>
-        <tr><td>Fitness</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Pool type</td><td>Ground level outdoor pool</td><td>Rooftop pool with views</td></tr>
-        <tr><td>Loyalty programme</td><td>None</td><td>None</td></tr>
-      </tbody>
-    </table>
-    <p>Stella Maris's rooftop pool is a genuine advantage, the views over the beach from an elevated position make it more enjoyable as a destination in itself. Mandila's ground-level pool is larger and more practical for families with children.</p>
-<p>Both have beach access and comparable F&B setups for this price tier.</p>
-  </div>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <p class="hvh-overall-score-hotel">Mandila Beach Hotel</p>
+        <p class="hvh-overall-score-num">7.6<span>/10</span></p>
+      </div>
+      <div class="hvh-overall-score-card">
+        <p class="hvh-overall-score-hotel">Stella Maris Da Nang</p>
+        <p class="hvh-overall-score-num">7.5<span>/10</span></p>
+      </div>
+    </div>
 
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose Mandila Beach Hotel if&hellip;</h3>
-        <ul>
-          <li>Travelling as a family or group</li>
-          <li>Ground-level pool is preferred for children</li>
-          <li>You want a proven, established beachfront</li>
-          <li>Reliability and consistency matter</li>
-          <li>You want more room category options</li>
+    <span class="hvh-eyebrow" style="margin-top:1rem;display:block">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to your <em>trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <h3 class="hvh-book-check-title">Book Mandila Beach If You Want:</h3>
+        <ul class="hvh-book-check-list">
+          <li>A larger pool that actually works for kids</li>
+          <li>More room categories, including interconnecting options</li>
+          <li>An established property with a longer, more consistent review history</li>
           <li>Standard 4-star comfort at a fair rate</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Choose Stella Maris Da Nang if&hellip;</h3>
-        <ul>
-          <li>Travelling as a couple</li>
-          <li>Rooftop pool with views appeals</li>
-          <li>Design and aesthetics matter to you</li>
-          <li>Smaller, quieter property is preferred</li>
-          <li>Newer property condition is a factor</li>
-          <li>You find larger hotels generic and impersonal</li>
+      <div class="hvh-book-check-card">
+        <h3 class="hvh-book-check-title">Book Stella Maris If You Want:</h3>
+        <ul class="hvh-book-check-list">
+          <li>A rooftop pool with beach views</li>
+          <li>Newer, more design-forward interiors</li>
+          <li>A smaller, quieter property over a big hotel corridor</li>
+          <li>A stay built around a couple's trip, not a family one</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>For families: Mandila is the sensible choice. The ground-level pool, larger room variety, and established track record make it the more dependable option for groups travelling with children.</p>
-    <p>For couples: Stella Maris edges ahead, the rooftop pool and bar, the newer design-led interiors, and the boutique atmosphere give it a personality that Mandila lacks. It's the more memorable stay at a similar or lower rate.</p>
-    <p>If neither satisfies, upgrading to <a href="furama-resort-da-nang.html" style="color:rgba(255,255,255,.6)">Furama Resort</a> adds genuine five-star character for a modest premium. See our full <a href="da-nang-beach-hotels.html" style="color:rgba(255,255,255,.6)">beach hotels guide</a> for the full My Khe and Non Nuoc range.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Mandila+Beach+Hotel+Da+Nang&dest_type=hotel&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Mandila Beach Hotel on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Stella+Maris+Da+Nang&dest_type=hotel&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Stella Maris Da Nang on Booking.com →</a>
+    <span class="hvh-eyebrow" style="margin-top:1rem;display:block">Know Before You Book</span>
+    <h2 class="hvh-h2">The <em>honest</em> tradeoffs</h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <p class="hvh-tradeoff-hotel">Mandila Beach Hotel</p>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Functional 4-star design, don't expect a design statement</li>
+          <li>Larger property can feel more generic than boutique alternatives</li>
+          <li>[VERIFY: current room sizes and exact floor count]</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <p class="hvh-tradeoff-hotel">Stella Maris Da Nang</p>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Fewer rooms means less flexibility if you need specific categories</li>
+          <li>Newer property with a shorter review track record</li>
+          <li>[VERIFY: exact room sqm and rooftop pool hours]</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons &amp; Guides</em></h2>
-    <div class="cmp-links">
-      <a href="tms-hotel-vs-sala-danang-beach.html" class="cmp-link-btn">TMS Hotel vs Sala Danang</a>
-      <a href="furama-vs-pullman-da-nang.html" class="cmp-link-btn">Furama vs Pullman</a>
-      <a href="da-nang-beach-hotels.html" class="cmp-link-btn">All My Khe Beach Hotels</a>
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">Best Hotels Da Nang</a>
-      <a href="boutique-hotels-da-nang.html" class="cmp-link-btn">Boutique Hotels Guide</a>
-      <a href="da-nang-hotel-prices.html" class="cmp-link-btn">Hotel Prices Guide</a>
+    <div class="hvh-final-verdict">
+      <p class="hvh-final-verdict-eyebrow">Final Verdict</p>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">If you're traveling with kids or want the safer, more proven option in this price tier, book Mandila. The bigger ground-level pool and wider room selection do more for a family stay than a rooftop view.</p>
+      <p class="hvh-final-verdict-body">If you're a couple who wants a smaller, newer property with a rooftop pool and more design personality, Stella Maris is the better call, often at a similar or slightly lower rate.</p>
+      <p class="hvh-final-verdict-body">Neither is a splurge stay. If your budget stretches further, Furama Resort a short distance away adds genuine five-star character for a modest premium.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Mandila Beach Hotel</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Search Mandila Beach on Booking.com →</a>
+        <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Search Stella Maris on Booking.com →</a>
+      </div>
     </div>
+
+    <div class="hvh-cta-row">
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Mandila Beach: Check Rates →</a>
+      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" data-booking-url="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&aid=1784897&lang=en-us" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Stella Maris: Check Rates →</a>
+    </div>
+
   </div>
 </div>
 </main>

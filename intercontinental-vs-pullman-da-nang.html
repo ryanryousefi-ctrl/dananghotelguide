@@ -187,6 +187,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -245,6 +246,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -417,142 +419,248 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </div>
 
 <main class="cmp-main">
-<div class="cmp-hero">
-  <div class="cmp-hero-inner">
-    <div class="cmp-hero-eyebrow">Da Nang Hotel Comparison &nbsp;&middot;&nbsp; 2026</div>
-    <h1>InterContinental vs <em>Pullman</em> Da Nang</h1>
-    <p class="cmp-hero-sub">Two very different hotels. The InterContinental is the most dramatic resort in the city. Pullman is the most polished large hotel on the main beach strip.</p>
-    <div class="cmp-hero-verdict">InterContinental is the better hotel. Pullman is the more practical one.</div>
-  </div>
-</div>
 
-<div class="cmp-body">
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
-
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>InterContinental Danang Sun Peninsula Resort</h3>
-        <ul>
-          <li>★★★★★ IHG luxury resort</li><li>197 rooms and villas</li><li>Son Tra Peninsula, Bai Bac cove</li><li>MICHELIN-starred La Maison 1888</li><li>IHG One Rewards loyalty</li><li>From ~$200/night</li>
-        </ul>
+<section class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <p class="hvh-hero-eyebrow">Hotel Comparison · Da Nang</p>
+    <h1 class="hvh-hero-title">InterContinental <em>vs</em> Pullman Da Nang</h1>
+    <p class="hvh-hero-sub">The most dramatic resort in the city against the most polished large hotel on the main beach strip. Not really competing for the same trip.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/review-intercontinental-da-nang-exterior.jpg" alt="InterContinental Danang Sun Peninsula Resort villas above a private bay" loading="lazy">
+        <div class="hvh-split-label">
+          <p class="hvh-split-hotel-eyebrow">Hotel A</p>
+          <p class="hvh-split-hotel-name">InterContinental Sun Peninsula</p>
+        </div>
       </div>
-      <div class="cmp-card">
-        <h3>Pullman Da Nang Beach Resort</h3>
-        <ul>
-          <li>★★★★★ Accor upscale resort</li><li>187 rooms on My Khe Beach</li><li>Truong Sa Road, main beach strip</li><li>Multiple pools, beach service</li><li>Accor ALL loyalty</li><li>From ~$120/night</li>
-        </ul>
-      </div>
-    </div>
-    <p>The InterContinental and Pullman are not really competing for the same customer. The InterContinental is for people who want the most impressive hotel in Da Nang and are willing to be somewhat isolated for it. The Pullman is for people who want a high-quality resort on the main beach with easy city access.</p>
-    <p>Both are strong picks at their respective price points. The comparison comes up because they are both internationally branded five-star properties, but the actual guest experience is quite different. See the <a href="luxury-hotels-da-nang.html" style="color:var(--ocean);font-weight:600">luxury hotels guide</a> for a full ranking.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>InterContinental Danang Sun Peninsula Resort</th><th>Pullman Da Nang Beach Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Beach</td><td>Bai Bac cove, Son Tra Peninsula</td><td>Direct My Khe Beach access</td></tr>
-        <tr><td>From airport</td><td>~20 min north · $6–8</td><td>~20 min · $6–8</td></tr>
-        <tr><td>From city centre</td><td>~20 min Grab</td><td>~20 min Grab</td></tr>
-        <tr><td>Isolation</td><td>High — peninsula headland</td><td>Resort zone, city reachable</td></tr>
-        <tr><td>An Thuong restaurants</td><td>~35 min Grab</td><td>~15 min Grab</td></tr>
-        <tr><td>Marble Mountains</td><td>~40 min south</td><td>~20 min south</td></tr>
-    
-      </tbody>
-    </table>
-    <p>The Pullman's My Khe location is more accessible. Evening dinners at An Thuong, shopping at Vincom, day trips to Hoi An — all easier from the Pullman. The InterContinental's remoteness is intentional: if you're leaving the resort constantly, you're not getting the value from it.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Space</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>InterContinental Danang Sun Peninsula Resort, Rooms</h3>
-        <ul>
-          <li>Hillside rooms with seaviews</li><li>Funicular between levels</li><li>[VERIFY: exact room sizes and villa count]</li><li>Villa categories most dramatic</li><li>Not family-optimised layout</li><li>All rooms oriented to ocean</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Pullman Da Nang Beach Resort, Rooms</h3>
-        <ul>
-          <li>Standard rooms from ~45 sqm</li><li>Ocean and garden view categories</li><li>Balconies on most room types</li><li>[VERIFY: exact sqm]</li><li>Pool access rooms available</li><li>Better for families, flat layout</li>
-        </ul>
-      </div>
-    </div>
-    <p>Pullman rooms are generous and well-appointed for the price. InterContinental rooms are more distinctive in design. The Pullman is predictably excellent. The InterContinental is more memorable.</p>
-  </div>
-
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>InterContinental Danang Sun Peninsula Resort</th><th>Pullman Da Nang Beach Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Pool</td><td>Cliff-edge infinity pool</td><td>Multiple pools including beach access</td></tr>
-        <tr><td>Restaurant</td><td>La Maison 1888 (MICHELIN ★)</td><td>Multiple F&amp;B outlets</td></tr>
-        <tr><td>Beach</td><td>Bai Bac cove (calm, sheltered)</td><td>My Khe direct, wider beach</td></tr>
-        <tr><td>Spa</td><td>✓ Peninsula Spa</td><td>✓ Full-service spa</td></tr>
-        <tr><td>Kids club</td><td>Limited</td><td>✓ Better for families</td></tr>
-        <tr><td>Loyalty</td><td>IHG One Rewards</td><td>ALL, Accor</td></tr>
-        <tr><td>City shuttle</td><td>Complimentary for dinner guests</td><td>Paid transfer</td></tr>
-    
-      </tbody>
-    </table>
-    <p>La Maison 1888 is the deciding amenity for many guests. If a MICHELIN dinner is part of the trip, the InterContinental is the obvious base. The Pullman has better family facilities and the wider My Khe Beach. Both have strong spa programmes.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Book InterContinental if&hellip;</h3>
-        <ul>
-          <li>Couples and adults-only trips</li><li>Special occasions where setting matters</li><li>Guests prioritising La Maison 1888</li><li>IHG One Rewards members at elite tier</li><li>Those who want genuine seclusion in a luxury setting</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Book Pullman if&hellip;</h3>
-        <ul>
-          <li>Families with children</li><li>Guests who want My Khe Beach and city access</li><li>Accor ALL members</li><li>Travellers with active itineraries leaving the resort regularly</li><li>Guests prioritising value within the luxury tier</li>
-        </ul>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/pullman-da-nang.jpg" alt="Pullman Danang Beach Resort beach bar and My Khe beachfront" loading="lazy">
+        <div class="hvh-split-label">
+          <p class="hvh-split-hotel-eyebrow">Hotel B</p>
+          <p class="hvh-split-hotel-name">Pullman Danang Beach Resort</p>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>The InterContinental is the better hotel. That is a straightforward position. The architecture, the location, La Maison 1888, the cliff-edge pool — it is a more exceptional property.</p>
-    <p>The Pullman is the more practical choice for most travellers. It costs less, it is easier to leave for dinner, and the My Khe Beach setup is more conventional and family-friendly.</p>
-    <p>If budget is not the deciding factor and you are travelling as a couple or small adult group, book the InterContinental. If you have children or are planning an itinerary that involves daily city excursions, the Pullman makes more sense.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=InterContinental+Da+Nang+Sun+Peninsula+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book InterContinental on Booking.com &rarr;</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Pullman+Da+Nang+Beach+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Pullman on Booking.com &rarr;</a>
+<section class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <p class="hvh-editors-pick-badge">Editor's Pick</p>
+      <h2 class="hvh-editors-pick-name">InterContinental Sun Peninsula</h2>
+      <p class="hvh-editors-pick-why-label">Why It Wins</p>
+      <p class="hvh-editors-pick-why">Pullman is easier and costs about $80-100 less a night. But the InterContinental is the hotel worth building a Da Nang trip around. The Bai Bac cove setting, La Maison 1888, and the sheer architectural ambition put it in a different category, one Pullman was never trying to compete in.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-intercontinental-da-nang-beach.jpg" alt="InterContinental Danang private beach lined with palm trees" loading="lazy">
     </div>
   </div>
+</section>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="marriott-vs-intercontinental-da-nang.html" class="cmp-link-btn">Marriott vs InterContinental</a>
-      <a href="furama-vs-pullman-da-nang.html" class="cmp-link-btn">Furama vs Pullman</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">All Luxury Hotels</a>
-    
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">All Best Hotels</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
+<div class="hvh-section" style="background:var(--white)">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">The exceptional hotel versus <em>the practical one</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <h3 class="hvh-verdict30-hotel">InterContinental Sun Peninsula</h3>
+        <p class="hvh-verdict30-label">Best For</p>
+        <p class="hvh-verdict30-bestfor">Couples and adult travelers who want the single most impressive resort in Da Nang and don't need to leave it</p>
+        <p class="hvh-verdict30-label">Wins</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Bai Bac cove, private and sheltered</li>
+          <li>MICHELIN-starred La Maison 1888</li>
+          <li>Cliff-edge infinity pool and Bensley design</li>
+        </ul>
+        <p class="hvh-verdict30-label">Tradeoff</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>~35 minutes to An Thuong's restaurants</li>
+          <li>Roughly $80-100/night above Pullman</li>
+        </ul>
+      </div>
+      <div class="hvh-verdict30-card">
+        <h3 class="hvh-verdict30-hotel">Pullman Danang Beach Resort</h3>
+        <p class="hvh-verdict30-label">Best For</p>
+        <p class="hvh-verdict30-bestfor">Families and travelers who want a strong five-star on My Khe Beach with easy city access</p>
+        <p class="hvh-verdict30-label">Wins</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Direct My Khe Beach, wider and more open</li>
+          <li>~15 minutes to An Thuong restaurants</li>
+          <li>Better kids facilities</li>
+        </ul>
+        <p class="hvh-verdict30-label">Tradeoff</p>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Conventional design, no signature moment</li>
+          <li>No MICHELIN-level dining on property</li>
+        </ul>
+      </div>
     </div>
+
+    <span class="hvh-eyebrow" style="margin-top:3rem;display:block">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>InterContinental</th><th>Pullman</th></tr></thead>
+          <tbody>
+            <tr><td>Setting &amp; Design</td><td class="hvh-scorecard-score">9.8 <span class="hvh-winner-badge" style="margin-left:6px">IC</span></td><td class="hvh-scorecard-score">7.6</td></tr>
+            <tr><td>Beach</td><td class="hvh-scorecard-score">8.8</td><td class="hvh-scorecard-score">8.6</td></tr>
+            <tr><td>Dining</td><td class="hvh-scorecard-score">9.5 <span class="hvh-winner-badge" style="margin-left:6px">IC</span></td><td class="hvh-scorecard-score">7.8</td></tr>
+            <tr><td>Location/Access</td><td class="hvh-scorecard-score">5.8</td><td class="hvh-scorecard-score">8.5 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Pullman</span></td></tr>
+            <tr><td>Kids &amp; Family</td><td class="hvh-scorecard-score">5.5</td><td class="hvh-scorecard-score">8.2 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Pullman</span></td></tr>
+            <tr><td>Rooms</td><td class="hvh-scorecard-score">9.2 <span class="hvh-winner-badge" style="margin-left:6px">IC</span></td><td class="hvh-scorecard-score">8.0</td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">6.6</td><td class="hvh-scorecard-score">8.6 <span class="hvh-winner-badge hvh-coral" style="margin-left:6px">Pullman</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Setting &amp; Design</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.8 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">7.6</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Beach</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">8.8</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">8.6</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Dining</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.5 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">7.8</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Location/Access</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">5.8</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">8.5 🏆</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Kids &amp; Family</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">5.5</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">8.2 🏆</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Rooms</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.2 🏆</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">8.0</span></div>
+      </div>
+      <div class="hvh-scorecard-card">
+        <p class="hvh-scorecard-card-cat">Value</p>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">6.6</span></div>
+        <div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Pullman</span><span class="hvh-scorecard-card-score">8.6 🏆</span></div>
+      </div>
+    </div>
+
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <p class="hvh-overall-score-hotel">InterContinental Sun Peninsula</p>
+        <p class="hvh-overall-score-num">8.9<span>/10</span></p>
+      </div>
+      <div class="hvh-overall-score-card">
+        <p class="hvh-overall-score-hotel">Pullman Danang Beach Resort</p>
+        <p class="hvh-overall-score-num">8.2<span>/10</span></p>
+      </div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <h3 class="hvh-photo-compare-label">The Property</h3>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-exterior.jpg" alt="InterContinental Danang villas terraced into the Son Tra hillside above Bai Bac cove" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/pullman-da-nang.jpg" alt="Pullman Danang Beach Resort beach bar and cabanas on My Khe" loading="lazy">
+          <span class="hvh-photo-compare-tag">Pullman</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The InterContinental terraces down a forested headland to its own cove, connected by funiculars. Pullman sits flat on the main My Khe strip with a beach bar and cabana setup built for a straightforward, sociable beach holiday. Different ambitions entirely.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">InterContinental</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <h3 class="hvh-photo-compare-label">InterContinental, Up Close</h3>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-pool-underwater.jpg" alt="Swimmer underwater in InterContinental Danang infinity pool overlooking the bay" loading="lazy">
+          <span class="hvh-photo-compare-tag">The Pool</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-room.jpg" alt="InterContinental Danang suite interior with Bill Bensley design" loading="lazy">
+          <span class="hvh-photo-compare-tag">The Rooms</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The cliff-edge infinity pool and Bensley-designed rooms are the two things guests remember most about a stay here. Pullman's rooms are generous and well-appointed from roughly 45 sqm, comfortable rather than a design statement. [VERIFY: no comparable published pool or room-interior photo for Pullman was available for a direct side-by-side.]</p>
+    </div>
+
+    <span class="hvh-eyebrow" style="margin-top:1rem;display:block">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to your <em>trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <h3 class="hvh-book-check-title">Book InterContinental If You Want:</h3>
+        <ul class="hvh-book-check-list">
+          <li>The most impressive resort setting in Da Nang</li>
+          <li>A private, sheltered cove instead of a shared beach strip</li>
+          <li>MICHELIN-recognized dining on property</li>
+          <li>A couples or adults-only trip where price isn't the deciding factor</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <h3 class="hvh-book-check-title">Book Pullman If You Want:</h3>
+        <ul class="hvh-book-check-list">
+          <li>Direct access to the main My Khe Beach strip</li>
+          <li>An easy 15-minute run to An Thuong's restaurants</li>
+          <li>Better kids facilities and a family-friendly layout</li>
+          <li>Roughly $80-100 less per night than the InterContinental</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow" style="margin-top:1rem;display:block">Know Before You Book</span>
+    <h2 class="hvh-h2">The <em>honest</em> tradeoffs</h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <p class="hvh-tradeoff-hotel">InterContinental Sun Peninsula</p>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>~35 minutes to An Thuong, every off-property dinner costs a taxi both ways</li>
+          <li>Limited kids facilities, this is an adult-focused resort</li>
+          <li>Premium pricing extends to in-resort food and drink</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <p class="hvh-tradeoff-hotel">Pullman Danang Beach Resort</p>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>No standout architectural moment, competent rather than memorable</li>
+          <li>No MICHELIN-level restaurant on site</li>
+          <li>My Khe's main strip is busier and less exclusive than a private cove</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <p class="hvh-final-verdict-eyebrow">Final Verdict</p>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">The InterContinental is the better hotel, full stop. The architecture, the cove, La Maison 1888, the cliff-edge pool, it's a more exceptional property than Pullman was ever trying to be.</p>
+      <p class="hvh-final-verdict-body">Pullman is the more practical choice for most travelers. It costs $80-100 less a night, it's a 15-minute Grab to dinner instead of 35, and the My Khe setup is more conventional and better for families.</p>
+      <p class="hvh-final-verdict-body">If budget isn't the deciding factor and you're traveling as a couple, book the InterContinental. If you have kids or want daily city access, Pullman makes more sense.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: InterContinental Sun Peninsula</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--intercontinental-danang-sun-pe" data-booking-url="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--intercontinental-danang-sun-pe" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check InterContinental Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--pullman-danang-beach-resort" data-booking-url="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--pullman-danang-beach-resort" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Pullman Rates →</a>
+      </div>
+    </div>
+
+    <div class="hvh-cta-row">
+      <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--intercontinental-danang-sun-pe" data-booking-url="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--intercontinental-danang-sun-pe" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">InterContinental: Check Rates →</a>
+      <a href="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--pullman-danang-beach-resort" data-booking-url="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=intercontinental-vs-pullman-da-nang--pullman-danang-beach-resort" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Pullman: Check Rates →</a>
+    </div>
+
   </div>
 </div>
 </main>
