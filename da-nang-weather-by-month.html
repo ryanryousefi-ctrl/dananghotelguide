@@ -174,24 +174,6 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 .ac-sig .answer-tradeoff{color:var(--ink-muted);border-top-color:var(--sand-dark)}
 .ac-gamble .answer-tradeoff{color:#e0c880;border-top-color:rgba(255,255,255,.14)}
 
-/* ── YEAR AT A GLANCE HEATMAP ── */
-.heatmap-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5rem -1px 0;padding-bottom:.6rem}
-.heatmap-scroll::-webkit-scrollbar{height:5px}
-.heatmap-scroll::-webkit-scrollbar-track{background:var(--sand)}
-.heatmap-scroll::-webkit-scrollbar-thumb{background:var(--sand-dark);border-radius:3px}
-.heatmap{display:grid;grid-template-columns:repeat(12,minmax(108px,1fr));gap:.5rem;min-width:1180px}
-.hm-card{background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:.9rem .8rem;transition:transform .15s,box-shadow .15s}
-.hm-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
-.hm-month{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink);font-style:italic;margin-bottom:.5rem}
-.hm-row{display:flex;align-items:center;justify-content:space-between;font-size:.68rem;padding:.28rem 0;border-top:1px solid var(--rule)}
-.hm-row:first-of-type{border-top:none;margin-top:.1rem}
-.hm-row-label{color:var(--ink-muted);font-weight:600}
-.hm-row-val{font-weight:700;padding:1px 8px;border-radius:100px;font-size:.62rem;text-transform:uppercase;letter-spacing:.03em}
-.hm-excellent{background:#d4f0de;color:#1a6e40}
-.hm-good{background:#e8f5dc;color:#3a7020}
-.hm-mixed{background:#fdf3cc;color:#7a5800}
-.hm-poor{background:#ffe0da;color:#9a2a10}
-
 /* ── SEASON CARDS ── */
 .season-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
 @media(max-width:900px){.season-cards{grid-template-columns:repeat(2,1fr)}}
@@ -672,112 +654,246 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- YEAR AT A GLANCE HEATMAP                                  -->
+<!-- MONTH-BY-MONTH CARDS                                      -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <section class="wx-section" style="background:var(--sand)">
   <div class="wx-wide">
-    <div class="wx-section-label">Year at a glance</div>
-    <h2 class="wx-section-h2">All 12 Months, <em>One View</em></h2>
-    <p class="wx-section-sub">Editorial ratings, not scientific scores. Scroll sideways on mobile.</p>
-    <div class="heatmap-scroll">
-      <div class="heatmap" id="yearHeatmap">
-        <div class="hm-card">
-          <div class="hm-month">Jan</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-mixed">23° / 18°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-mixed">Mixed</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-good">Low</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-excellent">Strong</span></div>
+    <div class="wx-section-label">Month by month</div>
+    <h2 class="wx-section-h2">Every Month, <em>In Detail</em></h2>
+    <p class="wx-section-sub">The essentials for each month, not a wall of text.</p>
+    <div class="month-cards-rail-wrap">
+    <div class="month-cards-grid" id="monthCardsGrid">
+
+      <div class="mc" id="jan">
+        <div class="mc-photo">
+          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, tail end of monsoon season" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">January</div>
+          <span class="mc-rating r-ok">Mixed</span>
         </div>
-        <div class="hm-card">
-          <div class="hm-month">Feb</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">25° / 19°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-good">Good</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-mixed">Mixed</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-good">Low</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-excellent">Strong</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Mar</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-excellent">28° / 21°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-good">Moderate</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-good">Good</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Apr</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-excellent">30° / 23°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-mixed">Moderate</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-good">Good</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">May</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">32° / 25°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-good">Good</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-mixed">Moderate</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-mixed">Fair</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Jun</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">33° / 26°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-good">Good</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-mixed">High</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-mixed">Fair</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Jul</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">33° / 26°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-good">Good</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-poor">Peak</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-poor">Poor</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Aug</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">33° / 26°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-mixed">Mixed</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-good">Good</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-poor">Peak</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-poor">Poor</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Sep</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-good">30° / 24°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-mixed">Mixed</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-good">Low</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-good">Good</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Oct</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-mixed">27° / 22°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-excellent">Lowest</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Nov</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-mixed">25° / 21°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-excellent">Low</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-excellent">Excellent</span></div>
-        </div>
-        <div class="hm-card">
-          <div class="hm-month">Dec</div>
-          <div class="hm-row"><span class="hm-row-label">Temp</span><span class="hm-row-val hm-mixed">23° / 19°</span></div>
-          <div class="hm-row"><span class="hm-row-label">Rain</span><span class="hm-row-val hm-mixed">Mixed</span></div>
-          <div class="hm-row"><span class="hm-row-label">Beach</span><span class="hm-row-val hm-poor">Poor</span></div>
-          <div class="hm-row"><span class="hm-row-label">Crowds</span><span class="hm-row-val hm-mixed">Rising</span></div>
-          <div class="hm-row"><span class="hm-row-label">Value</span><span class="hm-row-val hm-mixed">Fair</span></div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">18°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">66mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Flexible travelers, city plans.</div>
+          <div class="mc-line"><strong>Beach:</strong> Unreliable. <strong>Crowds:</strong> Low. <strong>Value:</strong> Strong.</div>
+          <div class="mc-take">"Tail end of the monsoon. Fine for the city, don't plan around the beach."</div>
         </div>
       </div>
+
+      <div class="mc" id="feb">
+        <div class="mc-photo">
+          <img src="images/my-khe-beach-palms.jpg" alt="My Khe Beach, Da Nang, palm trees and quiet sand" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">February</div>
+          <span class="mc-rating r-good">Good</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">19°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">28mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Value-focused first-timers.</div>
+          <div class="mc-line"><strong>Beach:</strong> Good. <strong>Crowds:</strong> Low. <strong>Value:</strong> Strong.</div>
+          <div class="mc-take">"Underrated. Monsoon's done, crowds haven't shown up yet. Just check Tet dates."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="mar">
+        <div class="mc-photo">
+          <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach panoramic view, Da Nang, wide sand and clear water" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">March</div>
+          <span class="mc-rating r-best">Excellent</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">28°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">21°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">22mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> First-time visitors.</div>
+          <div class="mc-line"><strong>Beach:</strong> Very good. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Strong.</div>
+          <div class="mc-take">"Probably the safest all-around month to recommend."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="apr">
+        <div class="mc-photo">
+          <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach aerial view, Da Nang" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">April</div>
+          <span class="mc-rating r-best">Excellent</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">30°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">35mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Beach-focused trips.</div>
+          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Good.</div>
+          <div class="mc-take">"One notch warmer than March, loses nothing. Watch for Reunification Day crowds."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="may">
+        <div class="mc-photo">
+          <img src="images/my-khe-beach-palms-2.jpg" alt="My Khe Beach, Da Nang, palm trees along the shore" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">May</div>
+          <span class="mc-rating r-good">Very Good</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">32°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">55mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Nomads, couples, beach time.</div>
+          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Fair.</div>
+          <div class="mc-take">"Heat is building. Morning beach, afternoon air-con, still far more sun than rain."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="jun">
+        <div class="mc-photo">
+          <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach panoramic view, Da Nang, wide sand and clear water" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">June</div>
+          <span class="mc-rating r-good">Very Good</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">82mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Full summer beach trips.</div>
+          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> High. <strong>Value:</strong> Fair.</div>
+          <div class="mc-take">"Full summer. Midday sun is punishing, mornings and evenings are excellent."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="jul">
+        <div class="mc-photo">
+          <img src="images/bar-beach-sunset-drinks.webp" alt="Beach sunset in Da Nang, classic summer evening" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">July</div>
+          <span class="mc-rating r-good">Very Good</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">76mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Families tied to school breaks.</div>
+          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Peak. <strong>Value:</strong> Poor.</div>
+          <div class="mc-take">"Classic beach month. Sea's at 30°C. Book hotels 6-8 weeks out."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="aug">
+        <div class="mc-photo">
+          <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach aerial view, Da Nang" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">August</div>
+          <span class="mc-rating r-good">Good</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">100mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Peak family vacation.</div>
+          <div class="mc-line"><strong>Beach:</strong> Good. <strong>Crowds:</strong> Peak. <strong>Value:</strong> Poor.</div>
+          <div class="mc-take">"Still summer, but the monsoon starts showing at the edges. Typhoon risk begins."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="sep">
+        <div class="mc-photo">
+          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, transition into wet season" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">September</div>
+          <span class="mc-rating r-ok">Mixed</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">30°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">24°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">280mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> City trips, not beach trips.</div>
+          <div class="mc-line"><strong>Beach:</strong> Unreliable. <strong>Crowds:</strong> Low. <strong>Value:</strong> Good.</div>
+          <div class="mc-take">"This is where it flips. Rainfall nearly triples from August overnight."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="oct">
+        <div class="mc-photo">
+          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, heavy rain season" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">October</div>
+          <span class="mc-rating r-wet">Avoid</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">27°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">22°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">620mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Only the flexible or budget-driven.</div>
+          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Lowest. <strong>Value:</strong> Excellent.</div>
+          <div class="mc-take">"620mm in one month. Skip it for a vacation if you have any choice at all."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="nov">
+        <div class="mc-photo">
+          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, wet season" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">November</div>
+          <span class="mc-rating r-wet">Wet</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">21°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">380mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Budget travelers who can be flexible.</div>
+          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Low. <strong>Value:</strong> Excellent.</div>
+          <div class="mc-take">"Depends entirely which half you land in. Late November usually improves."</div>
+        </div>
+      </div>
+
+      <div class="mc" id="dec">
+        <div class="mc-photo">
+          <img src="images/my-khe-beach-palms.jpg" alt="My Khe Beach, Da Nang, quiet off-season sand" loading="lazy" width="340" height="213">
+          <div class="mc-photo-overlay"></div>
+          <div class="mc-month">December</div>
+          <span class="mc-rating r-ok">Mixed</span>
+        </div>
+        <div class="mc-body">
+          <div class="mc-stats">
+            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">High</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">19°C</span><span class="mc-stat-label">Low</span></div>
+            <div class="mc-stat"><span class="mc-stat-num">125mm</span><span class="mc-stat-label">Rain</span></div>
+          </div>
+          <div class="mc-line"><strong>Best for:</strong> Food-focused, non-beach trips.</div>
+          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Rising (Christmas). <strong>Value:</strong> Fair.</div>
+          <div class="mc-take">"Not a beach month, and for some travelers that's actually the appeal."</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="month-cards-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M15 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Scroll for the rest of the year</div>
     </div>
   </div>
 </section>
@@ -788,7 +904,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 <section class="wx-section" style="background:var(--white)">
   <div class="wx-narrow">
     <p style="font-size:1.05rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem">Da Nang's weather is split cleanly into two halves. Roughly eight months of the year, from February through early September, are dry, hot, and beach-reliable. The other four, from mid-September through January, are wetter and less predictable, with October standing well apart as the one month I'd actually steer people away from.</p>
-    <p style="font-size:1.05rem;line-height:1.8;color:var(--ink)">None of this means the rest of the year is off-limits. It means you plan around it. Charts, month cards, and a heatmap below cover the rest.</p>
+    <p style="font-size:1.05rem;line-height:1.8;color:var(--ink)">None of this means the rest of the year is off-limits. It means you plan around it. Charts and month cards below cover the rest.</p>
   </div>
 </section>
 
@@ -1070,250 +1186,6 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- MONTH-BY-MONTH CARDS                                      -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<section class="wx-section" style="background:var(--sand)">
-  <div class="wx-wide">
-    <div class="wx-section-label">Month by month</div>
-    <h2 class="wx-section-h2">Every Month, <em>In Detail</em></h2>
-    <p class="wx-section-sub">The essentials for each month, not a wall of text.</p>
-    <div class="month-cards-rail-wrap">
-    <div class="month-cards-grid" id="monthCardsGrid">
-
-      <div class="mc" id="jan">
-        <div class="mc-photo">
-          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, tail end of monsoon season" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">January</div>
-          <span class="mc-rating r-ok">Mixed</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">18°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">66mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Flexible travelers, city plans.</div>
-          <div class="mc-line"><strong>Beach:</strong> Unreliable. <strong>Crowds:</strong> Low. <strong>Value:</strong> Strong.</div>
-          <div class="mc-take">"Tail end of the monsoon. Fine for the city, don't plan around the beach."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="feb">
-        <div class="mc-photo">
-          <img src="images/my-khe-beach-palms.jpg" alt="My Khe Beach, Da Nang, palm trees and quiet sand" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">February</div>
-          <span class="mc-rating r-good">Good</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">19°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">28mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Value-focused first-timers.</div>
-          <div class="mc-line"><strong>Beach:</strong> Good. <strong>Crowds:</strong> Low. <strong>Value:</strong> Strong.</div>
-          <div class="mc-take">"Underrated. Monsoon's done, crowds haven't shown up yet. Just check Tet dates."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="mar">
-        <div class="mc-photo">
-          <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach panoramic view, Da Nang, wide sand and clear water" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">March</div>
-          <span class="mc-rating r-best">Excellent</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">28°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">21°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">22mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> First-time visitors.</div>
-          <div class="mc-line"><strong>Beach:</strong> Very good. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Strong.</div>
-          <div class="mc-take">"Probably the safest all-around month to recommend."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="apr">
-        <div class="mc-photo">
-          <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach aerial view, Da Nang" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">April</div>
-          <span class="mc-rating r-best">Excellent</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">30°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">35mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Beach-focused trips.</div>
-          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Good.</div>
-          <div class="mc-take">"One notch warmer than March, loses nothing. Watch for Reunification Day crowds."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="may">
-        <div class="mc-photo">
-          <img src="images/my-khe-beach-palms-2.jpg" alt="My Khe Beach, Da Nang, palm trees along the shore" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">May</div>
-          <span class="mc-rating r-good">Very Good</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">32°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">55mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Nomads, couples, beach time.</div>
-          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Moderate. <strong>Value:</strong> Fair.</div>
-          <div class="mc-take">"Heat is building. Morning beach, afternoon air-con, still far more sun than rain."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="jun">
-        <div class="mc-photo">
-          <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach panoramic view, Da Nang, wide sand and clear water" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">June</div>
-          <span class="mc-rating r-good">Very Good</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">82mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Full summer beach trips.</div>
-          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> High. <strong>Value:</strong> Fair.</div>
-          <div class="mc-take">"Full summer. Midday sun is punishing, mornings and evenings are excellent."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="jul">
-        <div class="mc-photo">
-          <img src="images/bar-beach-sunset-drinks.webp" alt="Beach sunset in Da Nang, classic summer evening" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">July</div>
-          <span class="mc-rating r-good">Very Good</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">76mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Families tied to school breaks.</div>
-          <div class="mc-line"><strong>Beach:</strong> Excellent. <strong>Crowds:</strong> Peak. <strong>Value:</strong> Poor.</div>
-          <div class="mc-take">"Classic beach month. Sea's at 30°C. Book hotels 6-8 weeks out."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="aug">
-        <div class="mc-photo">
-          <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach aerial view, Da Nang" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">August</div>
-          <span class="mc-rating r-good">Good</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">33°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">26°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">100mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Peak family vacation.</div>
-          <div class="mc-line"><strong>Beach:</strong> Good. <strong>Crowds:</strong> Peak. <strong>Value:</strong> Poor.</div>
-          <div class="mc-take">"Still summer, but the monsoon starts showing at the edges. Typhoon risk begins."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="sep">
-        <div class="mc-photo">
-          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, transition into wet season" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">September</div>
-          <span class="mc-rating r-ok">Mixed</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">30°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">24°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">280mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> City trips, not beach trips.</div>
-          <div class="mc-line"><strong>Beach:</strong> Unreliable. <strong>Crowds:</strong> Low. <strong>Value:</strong> Good.</div>
-          <div class="mc-take">"This is where it flips. Rainfall nearly triples from August overnight."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="oct">
-        <div class="mc-photo">
-          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, heavy rain season" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">October</div>
-          <span class="mc-rating r-wet">Avoid</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">27°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">22°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">620mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Only the flexible or budget-driven.</div>
-          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Lowest. <strong>Value:</strong> Excellent.</div>
-          <div class="mc-take">"620mm in one month. Skip it for a vacation if you have any choice at all."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="nov">
-        <div class="mc-photo">
-          <img src="images/broll-da-nang-city-dusk-mountains.jpg" alt="Overcast sky over Da Nang, wet season" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">November</div>
-          <span class="mc-rating r-wet">Wet</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">25°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">21°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">380mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Budget travelers who can be flexible.</div>
-          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Low. <strong>Value:</strong> Excellent.</div>
-          <div class="mc-take">"Depends entirely which half you land in. Late November usually improves."</div>
-        </div>
-      </div>
-
-      <div class="mc" id="dec">
-        <div class="mc-photo">
-          <img src="images/my-khe-beach-palms.jpg" alt="My Khe Beach, Da Nang, quiet off-season sand" loading="lazy" width="340" height="213">
-          <div class="mc-photo-overlay"></div>
-          <div class="mc-month">December</div>
-          <span class="mc-rating r-ok">Mixed</span>
-        </div>
-        <div class="mc-body">
-          <div class="mc-stats">
-            <div class="mc-stat"><span class="mc-stat-num">23°C</span><span class="mc-stat-label">High</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">19°C</span><span class="mc-stat-label">Low</span></div>
-            <div class="mc-stat"><span class="mc-stat-num">125mm</span><span class="mc-stat-label">Rain</span></div>
-          </div>
-          <div class="mc-line"><strong>Best for:</strong> Food-focused, non-beach trips.</div>
-          <div class="mc-line"><strong>Beach:</strong> Poor. <strong>Crowds:</strong> Rising (Christmas). <strong>Value:</strong> Fair.</div>
-          <div class="mc-take">"Not a beach month, and for some travelers that's actually the appeal."</div>
-        </div>
-      </div>
-
-    </div>
-    <div class="month-cards-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M15 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Scroll for the rest of the year</div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- SEASON CARDS ── SHORT VERSION                             -->
