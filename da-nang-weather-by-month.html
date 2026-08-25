@@ -271,11 +271,10 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 .split-fact-val{color:var(--ink);font-weight:700;text-align:right}
 
 /* ── MONTH CARDS ── */
-.month-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:1.5rem}
-@media(max-width:900px){.month-cards-grid{grid-template-columns:repeat(2,1fr)}}
+.month-cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem;margin-top:1.5rem}
 @media(max-width:560px){.month-cards-grid{grid-template-columns:1fr}}
 .mc{background:var(--white);border:1px solid var(--rule);border-radius:var(--r-lg);padding:1.15rem 1.2rem;position:relative}
-.mc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.7rem;gap:.5rem}
+.mc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.7rem;gap:.5rem;flex-wrap:wrap}
 .mc-month{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink);font-style:italic;font-weight:400}
 .mc-rating{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap}
 .mc-rating.r-best{background:#d4f0de;color:#1a6e40}
