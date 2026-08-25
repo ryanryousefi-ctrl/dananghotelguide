@@ -132,6 +132,35 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 .wx-hero-h1{font-family:var(--font-serif);font-size:clamp(2.6rem,6vw,4.4rem);color:#fff;line-height:1.02;letter-spacing:-.04em;margin-bottom:.9rem;max-width:760px;text-transform:uppercase}
 .wx-hero-deck{font-size:clamp(.95rem,1.6vw,1.1rem);color:rgba(255,255,255,.7);max-width:52ch;line-height:1.65;margin-bottom:1.6rem}
 .wx-hero-byline{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;font-size:.72rem;color:rgba(255,255,255,.45)}
+
+/* airalo promo widget */
+.airalo-widget{
+  background:rgba(0,0,0,.38);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:.65rem 1rem .7rem;
+  min-width:150px;max-width:190px;
+  display:flex;flex-direction:column;
+  text-decoration:none;
+  margin-top:1.25rem;
+  transition:opacity .4s,border-color .15s,background .15s;
+}
+.airalo-widget:hover{background:rgba(0,0,0,.5);border-color:rgba(255,255,255,.28)}
+.airalo-label{display:block;font-size:.55rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:.45rem;line-height:1}
+.airalo-amount{font-family:var(--font-serif);font-size:1.8rem;color:#fff;line-height:1;letter-spacing:-.03em;margin-bottom:.3rem}
+.airalo-sub{font-size:.68rem;font-weight:600;color:rgba(255,255,255,.72);line-height:1.3;margin-bottom:.55rem}
+.airalo-sub strong{color:#fff;font-weight:800}
+.airalo-btn{
+  display:block;width:100%;
+  background:var(--coral);
+  border:none;border-radius:8px;
+  color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:.42rem .5rem;
+  text-align:center;
+  transition:background .14s,transform .12s;
+}
+.airalo-widget:hover .airalo-btn{background:var(--coral-light);transform:translateY(-1px)}
 .wx-hero-byline span{display:flex;align-items:center;gap:.4rem}
 .wx-hero-byline span+span::before{content:'';display:block;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0}
 
@@ -621,6 +650,12 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
       <span>Updated August 2026</span>
       <span>12 months covered</span>
     </div>
+    <a href="https://www.airalo.com/auth/signup" target="_blank" rel="nofollow noopener sponsored" class="airalo-widget affiliate-link" aria-label="Get $3 off your first Airalo eSIM with code RYAN6986">
+      <span class="airalo-label">Airalo eSIM</span>
+      <span class="airalo-amount">$3 Off</span>
+      <span class="airalo-sub">Code <strong>RYAN6986</strong></span>
+      <span class="airalo-btn">Get eSIM</span>
+    </a>
   </div>
 </header>
 
