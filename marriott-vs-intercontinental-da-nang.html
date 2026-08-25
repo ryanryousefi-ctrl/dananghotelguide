@@ -187,6 +187,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -211,40 +212,14 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 .nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
-.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}.page-hero,.page-body,.cmp-body,.guide-body{max-width:860px;margin:0 auto;padding:3rem var(--gutter) 0}
-.cmp-section{margin-bottom:3rem}
-.cmp-section h2{font-family:var(--font-serif);font-size:1.75rem;color:var(--ink);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--sand-mid)}
-.cmp-section h2 em{font-style:italic;color:var(--ocean)}
-.cmp-section p{color:var(--ink-soft);line-height:1.8;margin-bottom:1rem;font-size:.97rem}
-.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-@media(max-width:600px){.cmp-grid{grid-template-columns:1fr}}
-.cmp-card{background:var(--sand);border-radius:var(--r-lg);padding:1.5rem;border:1px solid var(--sand-dark)}
-.cmp-card h3{font-family:var(--font-serif);font-size:1.1rem;color:var(--ocean);margin-bottom:.75rem}
-.cmp-card ul{margin:0;padding:0 0 0 1.1rem;color:var(--ink-soft);font-size:.88rem;line-height:1.9}
-.cmp-verdict{background:var(--ocean-deep);border-radius:var(--r-xl);padding:2.25rem 2rem;margin:2.5rem 0}
-.cmp-verdict h2{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.75rem}
-.cmp-verdict p{color:rgba(255,255,255,.75);line-height:1.8;font-size:.95rem;margin-bottom:.75rem}
-.cmp-verdict p:last-child{margin-bottom:0}
-.cmp-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
-.cmp-link-btn{display:inline-block;padding:.6rem 1.2rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600}
-.cmp-link-btn.primary{background:var(--coral);border-color:var(--coral)}
-.cmp-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:1.5rem 0}
-.cmp-table th{background:var(--ocean-deep);color:#fff;padding:.7rem 1rem;text-align:left;font-weight:600}
-.cmp-table td{padding:.65rem 1rem;border-bottom:1px solid var(--sand-mid);color:var(--ink-soft);vertical-align:top}
-.cmp-table tr:nth-child(even) td{background:var(--sand)}
-.tick{color:var(--ocean);font-weight:700}
-.cross{color:var(--coral);font-weight:700}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
-.cmp-visual-duel{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 2.5rem}
-.cmp-visual-card{position:relative;border-radius:var(--r-lg,14px);overflow:hidden;aspect-ratio:4/3}
-.cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
-.cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
-@media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
   </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -414,175 +389,265 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </div>
 </div>
 
-</div>
-
 <main class="cmp-main">
-<div class="cmp-hero">
-  <div class="cmp-hero-inner">
-    <div class="cmp-hero-eyebrow">Da Nang Hotel Comparison &nbsp;&middot;&nbsp; 2026</div>
-    <h1>Marriott vs <em>InterContinental</em> Da Nang</h1>
-    <p class="cmp-hero-sub">The big Marriott on Non Nuoc Beach versus the InterContinental on Son Tra Peninsula. Two different versions of Da Nang luxury.</p>
-    <div class="cmp-hero-verdict">InterContinental if budget is not the main constraint. Marriott if you are travelling with family.</div>
+
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Da Nang Hotel Comparison &middot; 2026</div>
+    <h1 class="hvh-hero-title">Marriott vs <em>InterContinental</em> Da Nang</h1>
+    <p class="hvh-hero-sub">Two five-star resorts, two different ideas of luxury. One is easy and family-ready on Non Nuoc Beach; the other is dramatic and adults-first on Son Tra Peninsula.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort & Spa exterior on Non Nuoc Beach" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Non Nuoc Beach</div>
+          <div class="hvh-split-hotel-name">Da Nang Marriott Resort &amp; Spa</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/review-intercontinental-da-nang-hero.jpg" alt="InterContinental Danang Sun Peninsula Resort on the hillside" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Son Tra Peninsula</div>
+          <div class="hvh-split-hotel-name">InterContinental Danang Sun Peninsula</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="cmp-body">
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
-
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Da Nang Marriott Resort & Spa</h3>
-        <ul>
-          <li>★★★★★ Large luxury resort</li><li>200 rooms and villas</li><li>Non Nuoc Beach, south My Khe</li><li>Infinity pool, private beach</li><li>Marriott Bonvoy loyalty</li><li>From ~$150/night</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>InterContinental Danang Sun Peninsula Resort</h3>
-        <ul>
-          <li>★★★★★ IHG luxury resort</li><li>197 rooms and villas</li><li>Bai Bac, Son Tra Peninsula</li><li>La Maison 1888 (MICHELIN Star)</li><li>IHG One Rewards loyalty</li><li>From ~$200/night</li>
-        </ul>
-      </div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">InterContinental Danang Sun Peninsula</div>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">The Marriott is easier and cheaper, and does family logistics better. The InterContinental is the hotel we'd tell a friend to actually travel to Da Nang for. The Son Tra setting, the private-feeling cove, La Maison 1888, and the sense that you're somewhere specific rather than in a resort strip put it in a different category.</p>
     </div>
-    <p>These are the two properties that compete for the "most impressive Da Nang hotel" headline, and they genuinely are competing for different customers. The Marriott is a large conventional luxury resort on Non Nuoc Beach with everything in place: villas, multiple pools, a spa, and easy beach access. [VERIFY: exact room and villa count]</p>
-    <p>The InterContinental is architecturally different and sits on Son Tra Peninsula, 20 minutes from the main beach strip. The drama of the setting is real. La Maison 1888 is a legitimate MICHELIN-starred restaurant in the building. If money is not the main decision factor and you want the more memorable hotel, it's the InterContinental. See the <a href="intercontinental-da-nang.html" style="color:var(--ocean);font-weight:600">full InterContinental review</a> for detail.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Da Nang Marriott Resort & Spa</th><th>InterContinental Danang Sun Peninsula Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Beach</td><td>Direct Non Nuoc Beach access</td><td>Bai Bac cove, Son Tra Peninsula</td></tr>
-        <tr><td>From airport</td><td>~25 min south · $7–9</td><td>~20 min north · $6–8</td></tr>
-        <tr><td>From city centre</td><td>~25 min Grab</td><td>~20 min Grab</td></tr>
-        <tr><td>Marble Mountains</td><td>5 min south</td><td>~40 min south</td></tr>
-        <tr><td>An Thuong restaurants</td><td>~20 min Grab</td><td>~30 min Grab</td></tr>
-        <tr><td>Isolation level</td><td>Resort zone, neighbours nearby</td><td>Peninsula, genuinely secluded</td></tr>
-    
-      </tbody>
-    </table>
-    <p>The InterContinental's isolation is both its main selling point and its only real drawback. You are on a headland, and getting anywhere requires a taxi or the hotel shuttle. If you want to walk to dinner or explore the city, you are better placed at the Marriott on Non Nuoc. If the point of the trip is the resort itself, the isolation is fine.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Space</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Da Nang Marriott Resort & Spa, Rooms</h3>
-        <ul>
-          <li>[VERIFY: room sizes in sqm]</li><li>Multiple room types including pool villas</li><li>Direct beach access from lower villas</li><li>Ocean and garden view categories</li><li>Connecting rooms for families</li><li>Marriott Bonvoy upgrade path</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>InterContinental Danang Sun Peninsula Resort, Rooms</h3>
-        <ul>
-          <li>Rooms built into steep hillside</li><li>Funicular to beach from upper areas</li><li>Seaview from most room types</li><li>Hillside villas most dramatic</li><li>[VERIFY: exact sqm and villa count]</li><li>Not designed for families with young children</li>
-        </ul>
-      </div>
-    </div>
-    <p>The InterContinental's hillside layout means the resort is spread vertically. There is a funicular. Guests with mobility issues or small children should factor this in. The Marriott's flat layout is more conventional and easier to navigate.</p>
-  </div>
-
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Da Nang Marriott Resort & Spa</th><th>InterContinental Danang Sun Peninsula Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Pool</td><td>Infinity pool + kids pool</td><td>Cliff-edge infinity pool</td></tr>
-        <tr><td>Beach</td><td>Non Nuoc direct access</td><td>Bai Bac cove, calm water</td></tr>
-        <tr><td>Restaurant</td><td>Multiple F&amp;B outlets</td><td>La Maison 1888 (MICHELIN ★)</td></tr>
-        <tr><td>Spa</td><td>✓ Full-service spa</td><td>✓ Peninsula Spa</td></tr>
-        <tr><td>Kids facilities</td><td>✓ Kids club, family-friendly</td><td>Limited, not designed for children</td></tr>
-        <tr><td>Loyalty</td><td>Marriott Bonvoy</td><td>IHG One Rewards</td></tr>
-        <tr><td>Shuttle</td><td>Paid · to city</td><td>Complimentary city transfer for dinner guests</td></tr>
-    
-      </tbody>
-    </table>
-    <p>La Maison 1888 is the single best restaurant attached to any hotel in Da Nang. If a MICHELIN dinner is on your itinerary, this is where you're staying. The Marriott's dining is solid but not distinctive. The Marriott wins on family infrastructure by a significant margin.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Book Marriott Da Nang if&hellip;</h3>
-        <ul>
-          <li>Families with children (kids club, flat layout)</li><li>Marriott Bonvoy members</li><li>Guests wanting Non Nuoc Beach's long surf beach</li><li>Those who want to day-trip to Hoi An and Marble Mountains (closer)</li><li>Travellers who value easier city access</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Book InterContinental if&hellip;</h3>
-        <ul>
-          <li>Couples or adults-only trips</li><li>Special occasions where the setting matters</li><li>Guests who want La Maison 1888 on the doorstep</li><li>Those who want genuine seclusion, not a resort zone</li><li>IHG One Rewards members at the top tier</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>The InterContinental is one of the best resort experiences in Southeast Asia. That sentence is not marketing copy, it is a genuine position. The architecture, the setting, La Maison 1888, the cliff-edge pool — it is doing things the Marriott is not.</p>
-    <p>The Marriott is the better family hotel. The layout is easier with children, the kids club is real, and the price difference can be used on Hoi An day trips and dinners at An Thuong.</p>
-    <p>If budget is flexible and you are travelling as a couple or adult group, the InterContinental is the correct choice. It is the one hotel in Da Nang that guests specifically come back to book again.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang+Marriott+Resort+%26+Spa+Non+Nuoc+Beach+Villas&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Marriott Da Nang on Booking.com &rarr;</a>
-      <a href="https://www.booking.com/searchresults.html?ss=InterContinental+Da+Nang+Sun+Peninsula+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book InterContinental on Booking.com &rarr;</a>
-    </div>
-  </div>
-
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>
-      <a href="tia-wellness-vs-naman-retreat-da-nang.html" class="cmp-link-btn">TIA vs Naman Retreat</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">All Luxury Hotels</a>
-    
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">All Best Hotels</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-intercontinental-da-nang-pool.jpg" alt="InterContinental Danang cliff-edge infinity pool" loading="lazy">
     </div>
   </div>
 </div>
+
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>built for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Da Nang Marriott Resort &amp; Spa</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> families, Marriott Bonvoy members, first-time Da Nang visitors who want everything close.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Flat, easy-to-navigate layout</li>
+          <li>Real kids club and family infrastructure</li>
+          <li>Closer to Marble Mountains and An Thuong dining</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Feels like a large conventional resort, not a destination in itself</li>
+          <li>Shares Non Nuoc's resort-zone stretch with neighboring hotels</li>
+        </ul>
+      </div>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">InterContinental Danang Sun Peninsula</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> couples, anniversaries, IHG loyalists, guests who want the hotel to be the highlight of the trip.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Genuinely secluded Son Tra Peninsula setting</li>
+          <li>La Maison 1888, a MICHELIN-starred restaurant on-site</li>
+          <li>Cliff-edge infinity pool and hillside architecture</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Hillside layout with a funicular; harder with strollers or mobility issues</li>
+          <li>20-30 minutes by taxi to anywhere else</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>scores</em>, category by category</h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead>
+            <tr><th>Category</th><th>Marriott</th><th>InterContinental</th><th>Winner</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Location &amp; Setting</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">InterCon</span></td></tr>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">InterCon</span></td></tr>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge">Marriott</span></td></tr>
+            <tr><td>Rooms &amp; Villas</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">InterCon</span></td></tr>
+            <tr><td>Dining</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">InterCon</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">5.5</td><td><span class="hvh-winner-badge">Marriott</span></td></tr>
+            <tr><td>Couples Experience</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">InterCon</span></td></tr>
+            <tr><td>Value for Price</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">7.0</td><td><span class="hvh-winner-badge">Marriott</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location &amp; Setting</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach Access</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms &amp; Villas</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Dining</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">5.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples Experience</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value for Price</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">InterContinental</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
+    </div>
+
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Da Nang Marriott</div>
+        <div class="hvh-overall-score-num">7.9<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">InterContinental</div>
+        <div class="hvh-overall-score-num">8.7<span>/10</span></div>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>photo</em> comparison</h2>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Pools</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort & Spa exterior and pool grounds" loading="lazy">
+          <span class="hvh-photo-compare-tag">Marriott</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-pool-underwater.jpg" alt="InterContinental Danang pool underwater view" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The Marriott's infinity pool is large, flat, and easy with a kids' pool alongside it. The InterContinental's cliff-edge pool is smaller but the setting, water meeting sky above the bay, isn't replicated anywhere else in Da Nang.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">InterContinental</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Rooms</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-marriott-resort-da-nang-e25abed6.jpg" alt="Da Nang Marriott Resort & Spa property view" loading="lazy">
+          <span class="hvh-photo-compare-tag">Marriott</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-room.jpg" alt="InterContinental Danang hillside room interior" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Marriott rooms are conventional five-star: spacious, functional, some with direct beach or pool access from ground-floor villas. InterContinental rooms are built into the hillside with sea views from most categories and noticeably more design personality.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">InterContinental</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Grounds</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-jungle.jpg" alt="InterContinental Danang forested hillside grounds" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-beach.jpg" alt="InterContinental Danang private cove beach at Bai Bac" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">This is the InterContinental's real advantage: forested Son Tra hillside on one side, a private-feeling cove beach on the other. The Marriott sits on a flat, open stretch of Non Nuoc that's pleasant but shared with several neighboring resorts.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">InterContinental</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Dining</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort & Spa exterior" loading="lazy">
+          <span class="hvh-photo-compare-tag">Marriott</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-intercontinental-da-nang-chef.jpg" alt="La Maison 1888 chef at InterContinental Danang" loading="lazy">
+          <span class="hvh-photo-compare-tag">InterContinental</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">La Maison 1888 is the best hotel restaurant in Da Nang, a genuine MICHELIN-starred kitchen. The Marriott's food and beverage program is competent multi-outlet resort dining, nothing that would make anyone book the hotel specifically for it.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">InterContinental</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Decide</span>
+    <h2 class="hvh-h2">Which should you <em>book?</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Marriott Da Nang If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A flat, easy-to-navigate resort with young kids in tow</li>
+          <li>A real kids club and family pool setup</li>
+          <li>Quick access to Marble Mountains and An Thuong restaurants</li>
+          <li>Marriott Bonvoy points or status</li>
+          <li>A lower nightly rate for the same star rating</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book InterContinental If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A genuinely secluded, dramatic setting</li>
+          <li>A MICHELIN-starred dinner on-site at La Maison 1888</li>
+          <li>An adults-focused trip, honeymoon, or anniversary</li>
+          <li>IHG One Rewards points or status</li>
+          <li>The hotel to be the highlight of the trip, not just where you sleep</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Da Nang Marriott</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Shares its stretch of Non Nuoc Beach with several other resorts, so it doesn't feel private</li>
+          <li>Dining is solid but forgettable, nothing worth a special trip</li>
+          <li>Less architecturally distinctive than the InterContinental</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">InterContinental Danang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Hillside layout with a funicular; tough with strollers, wheelchairs, or bad knees</li>
+          <li>20-30 minutes by taxi from anything outside the resort</li>
+          <li>Not really set up for young children</li>
+          <li>Priced meaningfully above the Marriott</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Different hotels for different trips</h2>
+      <p class="hvh-final-verdict-body">If you're traveling with kids or just want a straightforward, well-run beach resort without a premium price tag, book the Marriott. It does the fundamentals well and puts you closer to Marble Mountains and An Thuong.</p>
+      <p class="hvh-final-verdict-body">But if budget isn't the deciding factor and you're traveling as a couple or an adult group, the InterContinental is the better hotel by a wide margin. The Son Tra setting, La Maison 1888, and the cliff-edge pool make it one of the few hotels in Da Nang people specifically travel here to experience.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: InterContinental Danang Sun Peninsula Resort</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--danang-marriott-non-nuoc" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--danang-marriott-non-nuoc">Check Marriott Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--intercontinental-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--intercontinental-danang">Check InterContinental Rates →</a>
+      </div>
+    </div>
+
+    <div class="hvh-cta-row">
+      <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--danang-marriott-non-nuoc" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--danang-marriott-non-nuoc">Da Nang Marriott: Check Rates →</a>
+      <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--intercontinental-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=marriott-vs-intercontinental-da-nang--intercontinental-danang">InterContinental: Check Rates →</a>
+    </div>
+
+  </div>
+</div>
+
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Marriott Da Nang vs InterContinental: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is the InterContinental Da Nang worth the extra cost over Marriott?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">For couples and adults: yes. The setting on Son Tra Peninsula is genuinely dramatic, La Maison 1888 is one of Vietnam's best restaurants, and the cliff-edge pool is exceptional. For families with young children: the Marriott's flat layout, kids club, and Non Nuoc Beach location makes more practical sense.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is the InterContinental Da Nang hard to get to?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">It is about 20 minutes from the airport and city centre by taxi. The Peninsula road is winding. The hotel runs a complimentary city transfer for dinner guests at La Maison 1888. It is not inconvenient if you are staying in the resort, but if you plan to go out every evening the location will cost you in taxi time.</p>
-      </details>
-    
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -653,7 +718,7 @@ function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return w
   if(overlay){overlay.querySelectorAll('.sh-pill').forEach(function(p){p.addEventListener('click',function(){if(si){si.value=this.dataset.q;si.dispatchEvent(new Event('input'));}});});}
 })();
 </script>
-  
+
 
 <!-- SHARE BAR -->
 <aside class="shr-bar" aria-label="Share this page">
@@ -686,8 +751,6 @@ function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return w
   d.getElementById('shr-li').href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
 })();
 </script>
-</body>
-</html>
 
   <script src="bk-widget.js" defer></script>
   <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>

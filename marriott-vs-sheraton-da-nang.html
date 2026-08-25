@@ -190,7 +190,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
-  --gold:#B8901E;
+  --gold:#B8901E;--night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -299,9 +299,6 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dananghotelguide.com/"},{"@type":"ListItem","position":2,"name":"Hotels","item":"https://www.dananghotelguide.com/hotels.html"},{"@type":"ListItem","position":3,"name":"Marriott vs Sheraton Grand","item":"https://www.dananghotelguide.com/marriott-vs-sheraton-da-nang.html"}]}
   </script>
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which earns more Marriott Bonvoy points, Marriott or Sheraton Da Nang?","acceptedAnswer":{"@type":"Answer","text":"Both properties earn Marriott Bonvoy points at similar rates since they're both part of the Bonvoy program. Earn rates are based on spend, so the Marriott Resort - which typically runs slightly higher rates - may generate marginally more points per night. Elite status benefits and suite upgrades apply at both properties."}},{"@type":"Question","name":"Is the Sheraton Grand Da Nang good for adults without kids?","acceptedAnswer":{"@type":"Answer","text":"Yes, adults without kids can enjoy the Sheraton Grand - it has good restaurants, a strong spa, and direct Non Nuoc beach access. However, the hotel is built around families and the water complex is its main draw. During school holidays the property gets busy and loud. If you want a quieter atmosphere, the Marriott Resort next door is the better adult-focused choice."}},{"@type":"Question","name":"Which has the better pool, Marriott or Sheraton Da Nang?","acceptedAnswer":{"@type":"Answer","text":"The Sheraton Grand has the more impressive pool complex - it includes a large water park-style area with slides and splash zones that makes it exceptional for families with kids. The Marriott Resort has a more refined pool setup with better atmosphere for adults. If pool-as-entertainment is the priority, Sheraton wins. If pool-as-relaxation is the priority, Marriott wins."}}]}
-  </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T1H4G2N80"></script>
 <script>
@@ -316,6 +313,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 <script src="search-engine.js"></script>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -496,248 +494,230 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Both sit on Non Nuoc Beach, both earn Marriott Bonvoy points. The Sheraton Grand is the largest hotel in Da Nang (785 rooms) with a water complex that families love.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">The Marriott Resort is smaller, quieter, more spa-focused, and better suited to couples. Same beach, very different atmospheres.</p>
+
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Da Nang Hotel Comparison &middot; 2026</div>
+    <h1 class="hvh-hero-title">Marriott Resort vs <em>Sheraton Grand</em> Da Nang</h1>
+    <p class="hvh-hero-sub">Same stretch of Non Nuoc Beach, same Marriott Bonvoy program, very different resorts. One is built for kids; the other is built for quiet.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort & Spa on Non Nuoc Beach" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Non Nuoc Beach</div>
+          <div class="hvh-split-hotel-name">Da Nang Marriott Resort &amp; Spa</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort on Non Nuoc Beach" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Non Nuoc Beach</div>
+          <div class="hvh-split-hotel-name">Sheraton Grand Danang Resort</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · Non Nuoc Beach Da Nang · 2026</p>
-  <h1>Marriott Resort vs <em>Sheraton Grand Da Nang</em></h1>
-  <p class="cmp-hero-sub">Two Bonvoy properties, same stretch of Non Nuoc Beach, but one is built for families and one for quieter stays. The decision is simpler than it looks once you know what each does best.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 8-min read</span>
-  </div>
-</section>
-
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <div class="cmp-visual-card">
-    <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort and Spa" loading="lazy">
-    <div class="cmp-visual-label">Da Nang Marriott Resort</div>
-  </div>
-  <div class="cmp-visual-card">
-    <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior" loading="lazy">
-    <div class="cmp-visual-label">Sheraton Grand Danang</div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">Depends on who's traveling</div>
+      <div class="hvh-editors-pick-why-label">Why This One's a Split Decision</div>
+      <p class="hvh-editors-pick-why">These two sit close enough on Non Nuoc Beach that location breaks even. The Sheraton is the largest hotel in Da Nang at 785 rooms with a genuine waterpark; the Marriott is smaller, quieter, and more spa-focused. Traveling with kids, book the Sheraton. Traveling as a couple, book the Marriott.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior" loading="lazy">
+    </div>
   </div>
 </div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#bonvoy" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Bonvoy</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-    <a href="#faq" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">FAQ</a>
-  </nav>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Da Nang Marriott Resort &amp; Spa</h3>
-        <ul>
-          <li>★★★★★ Resort &amp; Spa</li>
-          <li>~200 rooms + villas</li>
-          <li>Non Nuoc Beach, south Da Nang</li>
-          <li>Strong spa programme</li>
-          <li>Adult and couple-oriented atmosphere</li>
-          <li>Good breakfast included on most rates</li>
-          <li>From $150/night</li>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>built for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Da Nang Marriott Resort &amp; Spa</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> couples, spa-focused trips, guests who want a calmer version of Non Nuoc Beach.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Stronger, more relaxed spa programme</li>
+          <li>Quieter pool areas and public spaces</li>
+          <li>Well-reviewed breakfast</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>No dedicated water attraction for kids</li>
+          <li>Fewer dining outlets on-site</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ Resort - largest in Da Nang</li>
-          <li>785 rooms (massive scale)</li>
-          <li>Non Nuoc Beach, adjacent to Marriott</li>
-          <li>Water complex with kids' facilities</li>
-          <li>Strongly family-oriented</li>
-          <li>Multiple restaurants on-site</li>
-          <li>From $110/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Sheraton Grand Danang Resort</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> families, groups wanting more dining variety, guests who want the biggest resort in the city.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Real water complex: slides, splash zone, lazy river</li>
+          <li>Multiple restaurants under one roof</li>
+          <li>Often the cheaper of the two</li>
         </ul>
-      </div>
-    </div>
-    <p>These two hotels sit close to each other on Non Nuoc Beach and share the same Marriott Bonvoy loyalty programme. The differences are primarily in scale, atmosphere, and target audience.</p>
-<p>Sheraton Grand is a genuine mega-resort - at 785 rooms it's the largest hotel in Da Nang by a significant margin. That scale means more facilities but also a busier, louder atmosphere.</p>
-<p>The Marriott Resort is more contained, spa-focused, and better calibrated for adults who want a quieter experience.</p>
-    <p>Both offer solid Non Nuoc beach access, competitive Bonvoy earning, and that Non Nuoc advantage of being roughly 35 minutes from Hoi An. The choice really comes down to whether you're travelling with kids or not.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Marriott Resort Da Nang</th><th>Sheraton Grand Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>Non Nuoc, direct access</td><td>Non Nuoc, direct access</td></tr>
-        <tr><td>From airport</td><td>~20 min · $5-7</td><td>~20 min · $5-7</td></tr>
-        <tr><td>From city centre</td><td>~20 min · $5-7</td><td>~20 min · $5-7</td></tr>
-        <tr><td>From Hoi An</td><td>~35 min · $9-12</td><td>~35 min · $9-12</td></tr>
-        <tr><td>From Marble Mountains</td><td>~10 min · short Grab</td><td>~10 min · short Grab</td></tr>
-        <tr><td>Nearby dining</td><td>Limited, Grab required</td><td>Limited, Grab required</td></tr>
-      </tbody>
-    </table>
-    <p>Location is essentially identical - these two hotels are very close to each other on Non Nuoc Beach. Both are around 20 minutes from the city, 20 minutes from the airport, and 35 minutes from Hoi An.</p>
-<p>Neither has a meaningful location advantage over the other. The decision should be made entirely on the basis of facilities and atmosphere.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Suites</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Marriott Resort, Rooms</h3>
-        <ul>
-          <li>Contemporary resort design throughout</li>
-          <li>Ocean-view rooms available</li>
-          <li>Pool villas with private plunge pools</li>
-          <li>Quieter building layout</li>
-          <li>Good size - standard rooms well-proportioned</li>
-          <li>Marriott Bonvoy suite upgrades when available</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand, Rooms</h3>
-        <ul>
-          <li>785 rooms across a large complex</li>
-          <li>Varied room types and categories</li>
-          <li>Family room options and interconnecting layouts</li>
-          <li>Club floor with lounge access available</li>
-          <li>Ocean-facing and pool-facing options</li>
-          <li>Sheraton Bonvoy suite upgrade benefits</li>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>785 rooms means more foot traffic and noise</li>
+          <li>Busy and loud during school holidays</li>
         </ul>
       </div>
     </div>
-    <p>Room quality is competitive at both properties. The Marriott Resort rooms benefit from a quieter environment - with fewer guests overall, the corridors and common areas feel calmer.</p>
-<p>At Sheraton Grand, with 785 rooms, the scale means more foot traffic and a livelier atmosphere through the property. Families will appreciate the Sheraton's connecting room options; couples will likely prefer the Marriott's quieter configuration.</p>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Marriott Resort Da Nang</th><th>Sheraton Grand Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Pools</td><td>Resort pool complex, adult-focused</td><td>Large water complex + kids waterpark</td></tr>
-        <tr><td>Beach access</td><td><span class="tick">✓</span> Direct Non Nuoc</td><td><span class="tick">✓</span> Direct Non Nuoc</td></tr>
-        <tr><td>Spa</td><td>Strong spa programme, well-regarded</td><td>Full spa, solid but not the focus</td></tr>
-        <tr><td>Kids club</td><td>Available but not the main draw</td><td>Dedicated kids facilities throughout</td></tr>
-        <tr><td>Water facilities</td><td>Resort pool</td><td>Water slides, splash zone, lazy river</td></tr>
-        <tr><td>Dining</td><td>Good restaurant, breakfast strong</td><td>Multiple restaurants, more variety</td></tr>
-        <tr><td>Fitness</td><td><span class="tick">✓</span></td><td><span class="tick">✓</span></td></tr>
-        <tr><td>Loyalty</td><td>Marriott Bonvoy</td><td>Marriott Bonvoy</td></tr>
-      </tbody>
-    </table>
-    <p>The Sheraton Grand's water complex is genuinely impressive and one of the best family water facilities in Da Nang. Kids of almost any age will be occupied for hours.</p>
-<p>That is the Sheraton's single clearest advantage. The Marriott counters with a stronger spa programme and a more refined overall atmosphere that adults tend to prefer.</p>
-    <p>On dining, Sheraton Grand's size means more options under one roof. The Marriott's restaurant quality is solid and the breakfast particularly well-reviewed.</p>
-<p>Neither hotel requires you to eat out, though both benefit from being a Grab ride from Hoi An's restaurant scene.</p>
-  </div>
-
-  <div class="cmp-section" id="bonvoy">
-    <h2>Marriott <em>Bonvoy</em> Loyalty</h2>
-    <p>Both hotels earn and redeem Marriott Bonvoy points, so loyalty members can use either without compromising their programme. A few practical notes:</p>
-    <ul style="padding-left:1.5rem;color:var(--ink-soft);font-size:.95rem;line-height:2;margin-bottom:1rem;">
-      <li>Earn rates are based on spend, not nights - higher rack rates at the Marriott may generate marginally more points per stay</li>
-      <li>Elite status benefits (upgrades, late checkout, lounge access) apply at both properties</li>
-      <li>Points redemption is available at both - check award availability before booking</li>
-      <li>Titanium and Ambassador members will find both hotels attentive to status recognition</li>
-    </ul>
-    <p>If Bonvoy points earning is a primary consideration, both hotels work equally well for the programme. Pick based on the experience you want, not the loyalty maths.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose Marriott Resort Da Nang if&hellip;</h3>
-        <ul>
-          <li>You're a couple or travelling without children</li>
-          <li>Spa time is a priority</li>
-          <li>You prefer quieter pool areas</li>
-          <li>Smaller-scale resort atmosphere appeals</li>
-          <li>Good breakfast matters for your routine</li>
-          <li>You want less crowded public spaces</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Choose Sheraton Grand Da Nang if&hellip;</h3>
-        <ul>
-          <li>You're travelling with kids - the water complex is exceptional</li>
-          <li>More dining options under one roof is a priority</li>
-          <li>You want the largest resort in Da Nang experience</li>
-          <li>Budget matters - Sheraton often runs slightly cheaper</li>
-          <li>Club lounge access appeals at a larger property</li>
-          <li>You don't mind a busier atmosphere during peak periods</li>
-        </ul>
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>scores</em>, category by category</h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead>
+            <tr><th>Category</th><th>Marriott</th><th>Sheraton Grand</th><th>Winner</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Pool &amp; Water Facilities</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Sheraton</span></td></tr>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+            <tr><td>Rooms</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">7.5</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+            <tr><td>Spa</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">7.0</td><td><span class="hvh-winner-badge">Marriott</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Sheraton</span></td></tr>
+            <tr><td>Couples Experience</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">6.5</td><td><span class="hvh-winner-badge">Marriott</span></td></tr>
+            <tr><td>Dining Variety</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge">Sheraton</span></td></tr>
+            <tr><td>Value for Price</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge">Sheraton</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>The decision is actually straightforward: travelling with kids, choose the Sheraton Grand. The water complex is genuinely excellent and will make your trip for children of almost any age.</p>
-<p>No other Non Nuoc hotel comes close to matching it for family entertainment.</p>
-    <p>Travelling as a couple or solo, choose the Marriott Resort. The quieter atmosphere, stronger spa, and more refined experience make for a better adult stay.</p>
-<p>You'll pay slightly more on average but the environment justifies it.</p>
-    <p>Both earn Bonvoy points, both have the same Non Nuoc beach access, and both are competent five-star hotels. The overlap ends there.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Da+Nang+Marriott+Resort+%26+Spa+Non+Nuoc+Beach+Villas&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Marriott Resort Da Nang →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Sheraton+Grand+Da+Nang+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Sheraton Grand Da Nang →</a>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool &amp; Water Facilities</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach Access</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Spa</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples Experience</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">6.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Dining Variety</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value for Price</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Marriott</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn dark">Hyatt vs Marriott</a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="cmp-link-btn dark">Sheraton vs Hyatt Regency</a>
-      <a href="hyatt-regency-vs-furama-da-nang.html" class="cmp-link-btn dark">Hyatt vs Furama</a>
-      <a href="family-hotels-da-nang.html" class="cmp-link-btn dark">Family Hotels Guide</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn dark">Da Nang Luxury Hotels</a>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Da Nang Marriott</div>
+        <div class="hvh-overall-score-num">7.8<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Sheraton Grand</div>
+        <div class="hvh-overall-score-num">7.9<span>/10</span></div>
+      </div>
     </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>photo</em> comparison</h2>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Properties</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort & Spa exterior" loading="lazy">
+          <span class="hvh-photo-compare-tag">Marriott</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior" loading="lazy">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The Marriott is contained and quiet, roughly 200 rooms and villas. The Sheraton Grand is a genuine mega-resort at 785 rooms, the largest hotel in Da Nang by a wide margin. That scale shows in the crowd, not just the buildings.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Depends on Preference</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Pools</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-marriott-resort-da-nang-e25abed6.jpg" alt="Da Nang Marriott Resort pool area" loading="lazy">
+          <span class="hvh-photo-compare-tag">Marriott</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-79e68188.jpg" alt="Sheraton Grand Danang water complex" loading="lazy">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Marriott's pool complex is calmer and adult-focused. Sheraton Grand's water complex has slides, a splash zone, and a lazy river, one of the best family water setups on this stretch of coast.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Sheraton Grand</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Decide</span>
+    <h2 class="hvh-h2">Which should you <em>book?</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Marriott Resort If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A quieter version of Non Nuoc Beach</li>
+          <li>A stronger, more relaxed spa program</li>
+          <li>Fewer crowds in the pool and public areas</li>
+          <li>A couples or adults-only trip</li>
+          <li>A well-reviewed breakfast without the crowd</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Sheraton Grand If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A real water complex for kids: slides, splash zone, lazy river</li>
+          <li>More restaurants and dining variety on-site</li>
+          <li>The largest resort in Da Nang experience</li>
+          <li>A slightly lower nightly rate on average</li>
+          <li>Club lounge access at a bigger property</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Da Nang Marriott</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>No dedicated water attraction, kids will get bored of the standard pool faster</li>
+          <li>Fewer dining outlets than the Sheraton</li>
+          <li>Runs slightly higher rates for a comparable star rating</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Sheraton Grand Danang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>785 rooms means real crowds at the pool and breakfast during peak season</li>
+          <li>Loud and busy during Vietnamese and Korean school holidays</li>
+          <li>Spa is solid but not the focus the way it is at the Marriott</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Same beach, opposite atmospheres</h2>
+      <p class="hvh-final-verdict-body">Travelling with kids, book the Sheraton Grand. The water complex is genuinely excellent and nothing else on Non Nuoc Beach comes close for family entertainment. You'll also likely pay a bit less for the extra scale.</p>
+      <p class="hvh-final-verdict-body">Travelling as a couple or without children, book the Marriott. The quieter pool areas, stronger spa program, and calmer public spaces make for a better adult stay, and the price difference is small enough not to matter.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Sheraton Grand for families, Marriott for couples</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--danang-marriott-non-nuoc" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--danang-marriott-non-nuoc">Check Marriott Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--sheraton-grand-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--sheraton-grand-danang">Check Sheraton Grand Rates →</a>
+      </div>
+    </div>
+
+    <div class="hvh-cta-row">
+      <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--danang-marriott-non-nuoc" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--danang-marriott-non-nuoc">Da Nang Marriott: Check Rates →</a>
+      <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--sheraton-grand-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=marriott-vs-sheraton-da-nang--sheraton-grand-danang">Sheraton Grand: Check Rates →</a>
+    </div>
+
   </div>
 </div>
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="family-hotels-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Family hotels guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-    <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Marriott vs Sheraton Grand: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Which earns more Marriott Bonvoy points?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Both properties earn Marriott Bonvoy points at similar rates since they're both part of the Bonvoy programme. Earn rates are based on spend, so the Marriott Resort - which typically runs slightly higher rates - may generate marginally more points per night.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Elite status benefits and suite upgrades apply at both properties.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is the Sheraton Grand good for adults without kids?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Yes, adults without kids can enjoy the Sheraton Grand - it has good restaurants, a solid spa, and direct Non Nuoc beach access. However, the hotel is built around families and the water complex is its main draw.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">During school holidays the property gets busy and loud. If you want a quieter atmosphere, the Marriott Resort is the better adult-focused choice on the same stretch of beach.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Which has the better pool?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">The Sheraton Grand has the more impressive pool complex - it includes a large water park-style area with slides and splash zones that makes it exceptional for families with kids. The Marriott Resort has a more refined pool setup with a calmer atmosphere for adults.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">If pool-as-entertainment is the priority, Sheraton wins. If pool-as-relaxation is the priority, Marriott wins.</p>
-      </details>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">

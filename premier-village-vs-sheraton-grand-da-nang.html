@@ -22,6 +22,22 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Premier Village worth the extra cost over Sheraton Grand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For couples who specifically want a private pool: yes. Premier Village is the only all-villa property on My Khe Beach and the private pool makes it a meaningfully different stay. For families or groups who will use the shared pool anyway, the Sheraton Grand offers better value and stronger kids facilities at roughly half the rate."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
 /* ─── SITE NAV (canonical) ──────────────────────────────── */
 .site-nav{
@@ -187,6 +203,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -212,39 +229,13 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-hamburger.open span:nth-child(2){opacity:0}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}.page-hero,.page-body,.cmp-body,.guide-body{max-width:860px;margin:0 auto;padding:3rem var(--gutter) 0}
-.cmp-section{margin-bottom:3rem}
-.cmp-section h2{font-family:var(--font-serif);font-size:1.75rem;color:var(--ink);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--sand-mid)}
-.cmp-section h2 em{font-style:italic;color:var(--ocean)}
-.cmp-section p{color:var(--ink-soft);line-height:1.8;margin-bottom:1rem;font-size:.97rem}
-.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
-@media(max-width:600px){.cmp-grid{grid-template-columns:1fr}}
-.cmp-card{background:var(--sand);border-radius:var(--r-lg);padding:1.5rem;border:1px solid var(--sand-dark)}
-.cmp-card h3{font-family:var(--font-serif);font-size:1.1rem;color:var(--ocean);margin-bottom:.75rem}
-.cmp-card ul{margin:0;padding:0 0 0 1.1rem;color:var(--ink-soft);font-size:.88rem;line-height:1.9}
-.cmp-verdict{background:var(--ocean-deep);border-radius:var(--r-xl);padding:2.25rem 2rem;margin:2.5rem 0}
-.cmp-verdict h2{font-family:var(--font-serif);font-size:1.5rem;color:#fff;margin-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:.75rem}
-.cmp-verdict p{color:rgba(255,255,255,.75);line-height:1.8;font-size:.95rem;margin-bottom:.75rem}
-.cmp-verdict p:last-child{margin-bottom:0}
-.cmp-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
-.cmp-link-btn{display:inline-block;padding:.6rem 1.2rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;color:#fff;text-decoration:none;font-size:.82rem;font-weight:600}
-.cmp-link-btn.primary{background:var(--coral);border-color:var(--coral)}
-.cmp-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:1.5rem 0}
-.cmp-table th{background:var(--ocean-deep);color:#fff;padding:.7rem 1rem;text-align:left;font-weight:600}
-.cmp-table td{padding:.65rem 1rem;border-bottom:1px solid var(--sand-mid);color:var(--ink-soft);vertical-align:top}
-.cmp-table tr:nth-child(even) td{background:var(--sand)}
-.tick{color:var(--ocean);font-weight:700}
-.cross{color:var(--coral);font-weight:700}
 @media(max-width:768px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn span.btn-text{display:none}.footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer-legal{flex-direction:column;align-items:flex-start}}
 @media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
-.cmp-visual-duel{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 2.5rem}
-.cmp-visual-card{position:relative;border-radius:var(--r-lg,14px);overflow:hidden;aspect-ratio:4/3}
-.cmp-visual-card img{width:100%;height:100%;object-fit:cover;display:block}
-.cmp-visual-label{position:absolute;bottom:0;left:0;right:0;padding:.6rem .9rem;background:linear-gradient(to top,rgba(13,53,53,.9),transparent);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.04em}
-@media(max-width:600px){.cmp-visual-duel{grid-template-columns:1fr}}
   </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -417,144 +408,237 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </div>
 
 <main class="cmp-main">
-<div class="cmp-hero">
-  <div class="cmp-hero-inner">
-    <div class="cmp-hero-eyebrow">Da Nang Hotel Comparison &nbsp;&middot;&nbsp; 2026</div>
-    <h1>Premier Village vs <em>Sheraton Grand</em> Da Nang</h1>
-    <p class="cmp-hero-sub">Premier Village's private villa concept versus Sheraton Grand's conventional luxury. Both on the southern beach strip, very different stays.</p>
-    <div class="cmp-hero-verdict">Premier Village for villa privacy. Sheraton Grand for the better family facilities.</div>
+
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">Premier Village <em>vs</em> Sheraton Grand Da Nang</h1>
+    <p class="hvh-hero-sub">Two resorts on the same stretch of My Khe Beach. One sells private-pool villas, the other sells family infrastructure at half the price.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang Resort villa exterior">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">Premier Village Da Nang</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Sheraton Grand Da Nang</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="cmp-body">
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
-
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Premier Village Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ All-villa resort</li><li>109 private pool villas</li><li>My Khe Beach, south zone</li><li>Each villa has private pool and ocean view</li><li>Managed by AccorHotels</li><li>From ~$200/night</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ Full-service resort</li><li>258 rooms in tower format</li><li>Truong Sa Road, My Khe Beach</li><li>Large pool + kids club, family focus</li><li>Marriott Bonvoy loyalty</li><li>From ~$110/night</li>
-        </ul>
-      </div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <h2 class="hvh-editors-pick-name">Premier Village Da Nang Resort</h2>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Premier Village is the only all-villa resort on this stretch of My Khe. Every unit has a private plunge pool facing the ocean, which is a genuinely different kind of stay from a tower room, not just a nicer version of one. If you're not traveling with kids and privacy matters more than a lazy river, this is the pick.</p>
     </div>
-    <p>Premier Village is the only all-villa resort on the main My Khe Beach strip. Every unit has a private plunge pool and faces the ocean. You get the privacy of a villa without the isolation of somewhere like the InterContinental. [VERIFY: villa count and pool configuration]</p>
-    <p>The Sheraton Grand is a conventional tower resort better suited to families. The kids infrastructure is the best on My Khe. At roughly half the price, the Sheraton is the obvious choice for anyone who doesn't specifically want a private villa.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Premier Village Da Nang Resort</th><th>Sheraton Grand Da Nang Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Beach</td><td>Direct My Khe beach access</td><td>Direct My Khe beach access</td></tr>
-        <tr><td>From airport</td><td>~22 min · $6–8</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From city centre</td><td>~22 min Grab</td><td>~20 min Grab</td></tr>
-        <tr><td>Nearest restaurants</td><td>An Thuong ~20 min Grab</td><td>An Thuong ~15 min Grab</td></tr>
-        <tr><td>Hoi An</td><td>~35 min south</td><td>~35 min south</td></tr>
-        <tr><td>Marble Mountains</td><td>~20 min south</td><td>~20 min south</td></tr>
-    
-      </tbody>
-    </table>
-    <p>Both properties are in the same resort zone on the southern end of My Khe Beach, close enough that location is not a meaningful differentiator. The Sheraton is slightly closer to the city, but neither hotel is somewhere you walk out of for dinner.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Space</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Premier Village Da Nang Resort, Rooms</h3>
-        <ul>
-          <li>All units are private villas</li><li>Private plunge pool in every villa</li><li>Ocean-facing orientation</li><li>[VERIFY: villa sizes in sqm]</li><li>Beach villas have direct sand access</li><li>Separate living and sleeping areas</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort, Rooms</h3>
-        <ul>
-          <li>Standard rooms from ~44 sqm</li><li>Ocean-view tower rooms on high floors</li><li>Connecting rooms for families</li><li>Junior suites with larger footprint</li><li>[VERIFY: exact sqm]</li><li>Balconies on most upper-floor rooms</li>
-        </ul>
-      </div>
-    </div>
-    <p>Premier Village's private pool makes a genuine difference for couples or small groups who want to swim without being in a shared resort pool. For families with children, the Sheraton's connecting rooms and proximity to the kids club are more practical than a villa.</p>
-  </div>
-
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Premier Village Da Nang Resort</th><th>Sheraton Grand Da Nang Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Private pool</td><td>✓ Every villa</td><td>Shared resort pools</td></tr>
-        <tr><td>Main pool</td><td>Shared infinity pool, beach</td><td>Large resort pool + kids pool</td></tr>
-        <tr><td>Kids club</td><td>Limited</td><td>✓ Strong programme, waterslides</td></tr>
-        <tr><td>Spa</td><td>✓ Alma Spa</td><td>✓ Shine Spa for Sheraton</td></tr>
-        <tr><td>Restaurants</td><td>Multiple outlets, beachside dining</td><td>Multiple F&amp;B outlets, pool bar</td></tr>
-        <tr><td>Fitness</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Loyalty</td><td>ALL (AccorHotels)</td><td>Marriott Bonvoy</td></tr>
-    
-      </tbody>
-    </table>
-    <p>The private pool is Premier Village's entire value proposition. If that matters to you, it is worth the premium. If it doesn't, the Sheraton has better shared facilities including a stronger kids programme and a more active resort atmosphere.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Book Premier Village if&hellip;</h3>
-        <ul>
-          <li>Couples who want villa privacy without remote isolation</li><li>Honeymoons and anniversaries</li><li>Guests who find shared resort pools unappealing</li><li>AccorHotels ALL members at premium tier</li><li>Anyone who specifically wants a private pool on a good beach</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Book Sheraton Grand if&hellip;</h3>
-        <ul>
-          <li>Families with children, best kids club on My Khe</li><li>Marriott Bonvoy members</li><li>Groups who want resort atmosphere and activity</li><li>Budget-conscious luxury travellers (half the Premier Village rate)</li><li>Guests who want ocean views from a tower room</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>Premier Village is a one-idea hotel and the idea is good: private pool villa on a good beach. If that is what you are coming for, it delivers without the isolation penalty of somewhere like the InterContinental.</p>
-    <p>The Sheraton is a better family hotel by almost every measure. Kids club, connecting rooms, larger shared pool, lower price. For a couple, the Sheraton is adequate but Premier Village is the more interesting experience.</p>
-    <p>The price gap is real. Premier Village runs roughly double the Sheraton's rack rate. Whether a private pool justifies that difference is a personal call, but it is the only hotel in the My Khe zone where that option exists.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Premier+Village+Da+Nang+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Premier Village on Booking.com &rarr;</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Sheraton+Grand+Da+Nang+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Sheraton Grand on Booking.com &rarr;</a>
-    </div>
-  </div>
-
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      
-      <a href="hyatt-regency-vs-sheraton-grand-da-nang.html" class="cmp-link-btn">Hyatt vs Sheraton Grand</a>
-      <a href="tia-wellness-vs-naman-retreat-da-nang.html" class="cmp-link-btn">TIA vs Naman Retreat</a>
-      <a href="marriott-vs-intercontinental-da-nang.html" class="cmp-link-btn">Marriott vs InterContinental</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">All Luxury Hotels</a>
-    
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">All Best Hotels</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-premier-village-da-nang-exterior.webp" alt="Premier Village Da Nang Resort villa pool">
     </div>
   </div>
 </div>
+
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Premier Village Da Nang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Couples, honeymoons, anyone who wants a private pool and doesn't need a kids club.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Private plunge pool in every villa</li>
+          <li>More privacy, quieter grounds</li>
+          <li>Separate living and sleeping areas</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Roughly double the Sheraton's rate</li>
+          <li>Thinner kids programming</li>
+        </ul>
+      </div>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Sheraton Grand Da Nang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Families, Marriott Bonvoy members, and anyone who wants resort energy over villa quiet.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Best kids club and waterslides on My Khe</li>
+          <li>Connecting rooms for families</li>
+          <li>About half the nightly rate</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Shared pools, no private plunge pool option</li>
+          <li>Busier, louder grounds in high season</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Premier Village</th><th>Sheraton Grand</th><th>Winner</th></tr></thead>
+          <tbody>
+            <tr><td>Rooms &amp; Privacy</td><td class="hvh-scorecard-score">9.3</td><td class="hvh-scorecard-score">7.8</td><td><span class="hvh-winner-badge">Premier Village</span></td></tr>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">8.2</td><td><span class="hvh-winner-badge">Premier Village</span></td></tr>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">8.5</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">5.5</td><td class="hvh-scorecard-score">9.2</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+            <tr><td>Couples Experience</td><td class="hvh-scorecard-score">9.4</td><td class="hvh-scorecard-score">7.2</td><td><span class="hvh-winner-badge">Premier Village</span></td></tr>
+            <tr><td>Resort Grounds</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">8.6</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">6.8</td><td class="hvh-scorecard-score">8.8</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+            <tr><td>Loyalty Program</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">8.4</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms &amp; Privacy</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">9.3</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.8</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.2</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach Access</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">5.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">9.2</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples Experience</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">9.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.2</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Resort Grounds</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.6</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">6.8</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.8</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Loyalty Program</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Premier Village</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.4</span></div></div>
+    </div>
+
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Premier Village Da Nang</div>
+        <div class="hvh-overall-score-num">8.4<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Sheraton Grand Da Nang</div>
+        <div class="hvh-overall-score-num">8.3<span>/10</span></div>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>Pools</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang private villa pool">
+          <span class="hvh-photo-compare-tag">Premier Village</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-exterior.jpg" alt="Sheraton Grand Danang Resort pool area">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Every Premier Village villa has its own plunge pool, so you're never sharing water with other guests. The Sheraton's pool is bigger and livelier, with a dedicated kids' section, but it's a shared resort pool at peak times.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Premier Village — for privacy</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Property</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-premier-village-da-nang-exterior.webp" alt="Premier Village Da Nang Resort grounds">
+          <span class="hvh-photo-compare-tag">Premier Village</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-79e68188.jpg" alt="Sheraton Grand Danang Resort tower and grounds">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Premier Village is low-rise villas spread across landscaped grounds, quieter and more spread out. The Sheraton is a conventional high-rise tower with a busier, more active resort feel and more food and beverage outlets in one place.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Tie — different by design</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Rooms</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-premier-village-da-nang-e25abed6.jpg" alt="Premier Village Da Nang villa exterior and deck">
+          <span class="hvh-photo-compare-tag">Premier Village</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort tower rooms">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Standard Sheraton rooms run from roughly 44 sqm with balconies on most upper floors. Every Premier Village unit is a standalone villa with separate living and sleeping zones, direct outdoor access, and no shared corridors.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Premier Village — for space and privacy</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to <em>your trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Premier Village If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A private plunge pool you don't share with anyone</li>
+          <li>A quiet, adults-oriented atmosphere</li>
+          <li>Extra space for a honeymoon or anniversary trip</li>
+          <li>AccorHotels ALL loyalty benefits</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Sheraton Grand If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A strong kids club and waterslides</li>
+          <li>Connecting rooms for a family group</li>
+          <li>Lower cost per night for the same beach</li>
+          <li>Marriott Bonvoy points and status</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Premier Village Da Nang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Rack rate runs roughly double the Sheraton's</li>
+          <li>Kids club and family programming is limited compared to a family-first resort</li>
+          <li>Villas are spread across the grounds, more walking to restaurants and the lobby</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Sheraton Grand Da Nang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>No private pool option at any room tier</li>
+          <li>Pool and lobby get busy with tour groups and families in peak season</li>
+          <li>Standard rooms are comfortable but not distinctive</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">Premier Village is a one-idea hotel and the idea works: a private pool villa on a good beach, without the isolation penalty of a resort further out of town. If that's what you're coming for, book it and ask for a beachfront villa.</p>
+      <p class="hvh-final-verdict-body">The Sheraton is the better hotel for families by almost every measure that matters to a family, and it costs roughly half as much. For a couple without kids who don't specifically want a private pool, the Sheraton is fine but Premier Village is the more interesting stay.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Premier Village Da Nang for couples, Sheraton Grand for families</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=premier-village-vs-sheraton-grand-da-nang--premier-village-danang" data-booking-url="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=premier-village-vs-sheraton-grand-da-nang--premier-village-danang" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Premier Village Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=premier-village-vs-sheraton-grand-da-nang--sheraton-grand-danang" data-booking-url="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=premier-village-vs-sheraton-grand-da-nang--sheraton-grand-danang" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Sheraton Grand Rates →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
@@ -570,12 +654,12 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
     <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
     <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Premier Village vs Sheraton Grand: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
     <div style="border-top:1px solid var(--sand-dark);">
-      
+
       <details style="border-bottom:1px solid var(--sand-dark);">
         <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is Premier Village worth the extra cost over Sheraton Grand?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
         <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">For couples who specifically want a private pool: yes. Premier Village is the only all-villa property on My Khe Beach and the private pool makes it a meaningfully different stay. For families or groups who will use the shared pool anyway, the Sheraton Grand offers better value and stronger kids facilities at roughly half the rate.</p>
       </details>
-    
+
     </div>
   </div>
 </section>
@@ -649,7 +733,7 @@ function runSearch(q){if(!q||q.length<2)return[];var lq=q.toLowerCase();return w
   if(overlay){overlay.querySelectorAll('.sh-pill').forEach(function(p){p.addEventListener('click',function(){if(si){si.value=this.dataset.q;si.dispatchEvent(new Event('input'));}});});}
 })();
 </script>
-  
+
 
 <!-- SHARE BAR -->
 <aside class="shr-bar" aria-label="Share this page">

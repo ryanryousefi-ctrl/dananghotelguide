@@ -184,7 +184,7 @@
   .nav-stays-btn .btn-text{display:none}
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--shadow-hover:0 8px 32px rgba(26,26,24,.12);--ease:cubic-bezier(.4,0,.2,1);}
+:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--shadow-hover:0 8px 32px rgba(26,26,24,.12);--ease:cubic-bezier(.4,0,.2,1);}
 html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}::selection{background:var(--ocean);color:#fff}a{text-decoration:none;color:inherit}a{color:var(--ocean);}.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0;}.footer-inner{max-width:var(--max);margin:0 auto}.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07);}.footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem;}.footer-brand em{font-style:italic;color:var(--coral-light)}.footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem;}.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.06);}.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem;}.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s;}.footer-col a:hover{color:rgba(255,255,255,.75)}.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.8rem 0;font-size:.72rem;}.footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem;}.footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch;}.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0;}.footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35);}.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
 .cmp-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.cmp-hero::before{content:"";position:absolute;inset:0;background-image:url("images/luxury-hotels-da-nang-5c163732.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.cmp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.cmp-hero>*{position:relative;z-index:2}.cmp-hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:1rem;font-weight:600}.cmp-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem}.cmp-hero h1 em{font-style:italic;color:var(--coral-light)}.cmp-hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:560px;margin:0 auto 1.5rem;line-height:1.65}.cmp-meta{display:flex;justify-content:center;gap:1.5rem;font-size:.72rem;color:rgba(255,255,255,.35);flex-wrap:wrap}.cmp-meta strong{color:rgba(255,255,255,.6)}
@@ -263,6 +263,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 <link rel="stylesheet" href="phase13.css">
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -443,237 +444,230 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Melia Da Nang is a design-forward resort with a distinct aesthetic and strong value at its price point. Hyatt Regency is the more conventional luxury choice with more pools (5 vs 2), Camp Hyatt for kids, and World of Hyatt loyalty.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">Melia is often ~30% cheaper.</p>
-  </div>
-</div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · Non Nuoc Beach · 2026</p>
-  <h1>Melia Da Nang Beach Resort vs <em>Hyatt Regency</em></h1>
-  <p class="cmp-hero-sub">Melia's bold design resort versus the Hyatt's polished luxury operation. Both on Non Nuoc beach, but different prices, different brands, and different guest priorities.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 7-min read</span>
-  </div>
-</section>
-<!-- Phase 11: Booking band -->
-<div class="booking-band">
-  <div class="booking-band-inner">
-    <div class="bb-text-group">
-      <span class="bb-eyebrow">Melia vs Hyatt</span>
-      <div class="bb-headline">Melia vs Hyatt Regency Da Nang</div>
-      <p class="bb-sub">Resort comparison: all-inclusive vs points hotel. Live rates below.</p>
-    </div>
-    <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Compare All Da Nang Hotels</a>
-      
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Da Nang Hotel Comparison &middot; 2026</div>
+    <h1 class="hvh-hero-title">Melia Da Nang vs <em>Hyatt Regency</em></h1>
+    <p class="hvh-hero-sub">Same Non Nuoc beach, very different price points. Melia is the design-forward value play; Hyatt Regency is the more complete, more expensive resort.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/melia-da-nang.jpg" alt="Melia Danang Beach Resort exterior" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Non Nuoc Beach</div>
+          <div class="hvh-split-hotel-name">Melia Danang Beach Resort</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort and Spa pool" loading="lazy">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Non Nuoc Beach</div>
+          <div class="hvh-split-hotel-name">Hyatt Regency Danang</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <div class="cmp-visual-card">
-    <img src="images/hotels/melia-da-nang.jpg" alt="Melia Danang Beach Resort exterior" loading="lazy">
-    <div class="cmp-visual-label">Melia Danang Beach Resort</div>
-  </div>
-  <div class="cmp-visual-card">
-    <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort pool" loading="lazy">
-    <div class="cmp-visual-label">Hyatt Regency Danang</div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">Melia Danang Beach Resort</div>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Melia typically runs 20-30% cheaper than the Hyatt Regency for the same beach and a genuine five-star room. Upgrade to The Level, its adults-only floor with a private lounge, and it beats the Hyatt on atmosphere for couples at a fraction of the price. The Hyatt only pulls ahead if you need more pools or a structured kids program.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-melia-da-nang-e25abed6.jpg" alt="Melia Danang Beach Resort property view" loading="lazy">
+    </div>
   </div>
 </div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Melia Da Nang Beach Resort</h3>
-        <ul>
-          <li>★★★★★ Design-forward resort</li>
-          <li>Melia Hotels International</li>
-          <li>Non Nuoc, south Da Nang</li>
-          <li>2 pools + beachfront access</li>
-          <li>The Level (adults-only premium floor)</li>
-          <li>From $110/night</li>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>built for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Melia Danang Beach Resort</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> value-conscious couples, design-focused travelers, anyone not tied to a specific loyalty program.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Runs 20-30% cheaper on comparable dates</li>
+          <li>The Level: a genuine adults-only floor with private lounge</li>
+          <li>More distinctive design aesthetic</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Only 2 pools versus the Hyatt's 5</li>
+          <li>Thinner loyalty program (Melia Rewards) than World of Hyatt</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Hyatt Regency Da Nang Resort &amp; Spa</h3>
-        <ul>
-          <li>★★★★★ Full-service resort</li>
-          <li>World of Hyatt</li>
-          <li>Non Nuoc, south Da Nang</li>
-          <li>5 pools including 100m beachfront pool</li>
-          <li>Camp Hyatt kids programme</li>
-          <li>From $150/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Hyatt Regency Danang</div>
+        <div class="hvh-verdict30-bestfor"><strong>Best for:</strong> families with young kids, World of Hyatt members, guests who want the most complete resort on Non Nuoc.</div>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>5 pools including a 100m beachfront pool</li>
+          <li>Camp Hyatt, a structured age-specific kids programme</li>
+          <li>Larger standard rooms (48 sqm vs Melia's ~35 sqm)</li>
         </ul>
-      </div>
-    </div>
-    <p>The clearest difference between these two hotels is price, Melia often runs around 20–30% less than the Hyatt Regency for comparable dates. At that discount, Melia represents exceptional value for a genuine five-star on <a href="non-nuoc-beach-da-nang.html" style="color:var(--ocean);font-weight:600">Non Nuoc beach</a>.</p>
-<p>The Hyatt is the more complete resort, more pools, better kids programme, stronger loyalty benefits, but you pay for it.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Melia Da Nang</th><th>Hyatt Regency Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>Non Nuoc, direct access</td><td>Non Nuoc, direct access</td></tr>
-        <tr><td>From airport</td><td>~20 min · $5–7</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From city centre</td><td>~20 min · $5–7</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From Hoi An</td><td>~35 min · $9–12</td><td>~35 min · $9–12</td></tr>
-        <tr><td>Marble Mountain</td><td>~10 min Grab</td><td>~10 min Grab</td></tr>
-        <tr><td>Local dining</td><td>Resort or Grab to city</td><td>Resort or Grab to city</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>The Level</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Melia Da Nang, Rooms</h3>
-        <ul>
-          <li>Rooms from ~35 sqm with modern design</li>
-          <li>"The Level", adults-only premium floor with exclusive lounge</li>
-          <li>Ocean view rooms on upper floors</li>
-          <li>Melia brand design aesthetic, distinctive</li>
-          <li>Good value base category</li>
-          <li>Suite upgrade path available</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Hyatt Regency, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 48 sqm</li>
-          <li>Regency Club lounge access</li>
-          <li>Ocean-view rooms with direct sea views</li>
-          <li>Pool villas with private plunge pools</li>
-          <li>World of Hyatt upgrade eligibility</li>
-          <li>Larger standard room size</li>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Meaningfully more expensive for a comparable stay</li>
+          <li>No adults-only floor or equivalent to The Level</li>
         </ul>
       </div>
     </div>
-    <p>Melia's "The Level" is a genuine differentiator, a premium floor with an adults-only focus and exclusive lounge access that makes it a compelling couples resort within the wider family-friendly property. If you're a couple and can upgrade to The Level, Melia competes very favourably with the Hyatt at a meaningful price saving.</p>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Melia Da Nang</th><th>Hyatt Regency Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Pools</td><td>2 pools + beach access</td><td>5 pools including 100m beachfront pool</td></tr>
-        <tr><td>Beach access</td><td>✓ Direct Non Nuoc</td><td>✓ Direct Non Nuoc</td></tr>
-        <tr><td>Spa</td><td>YHI Spa, full service</td><td>Quan Spa, full service</td></tr>
-        <tr><td>Kids facilities</td><td>Kids pool and programme</td><td>Camp Hyatt, structured age-specific programme</td></tr>
-        <tr><td>Adults-only option</td><td>✓ The Level floor</td><td><span class="cross">✗</span></td></tr>
-        <tr><td>Dining</td><td>Multiple restaurants + beach club</td><td>4 restaurants + lobby bar</td></tr>
-        <tr><td>Fitness</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Loyalty</td><td>Melia Rewards</td><td>World of Hyatt</td></tr>
-      </tbody>
-    </table>
-    <p>Hyatt clearly wins on pool count. Melia's unique advantage is The Level adults-only floor, something Hyatt doesn't offer.</p>
-<p>Both spas are well-regarded. Hyatt's Camp Hyatt programme is better structured for families with children.</p>
-<p>If the pool count is important to you, Hyatt is the stronger choice; if you're a couple seeking a premium resort at a lower rate, Melia is compelling.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose Melia Da Nang if&hellip;</h3>
-        <ul>
-          <li>Budget is a consideration, often ~30% cheaper than Hyatt</li>
-          <li>You're a couple and The Level adults-only upgrade appeals</li>
-          <li>Distinctive design matters more than conventional luxury</li>
-          <li>Melia Rewards membership</li>
-          <li>You want a beach resort without the full-service price tag</li>
-          <li>Smaller, more intimate resort feel preferred</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Choose Hyatt Regency Da Nang if&hellip;</h3>
-        <ul>
-          <li>World of Hyatt membership (points, upgrades)</li>
-          <li>5 pools is important for your stay</li>
-          <li>Camp Hyatt for children is a priority</li>
-          <li>You want the most complete resort on Non Nuoc</li>
-          <li>Large beachfront pool matters</li>
-          <li>Budget is not a constraint</li>
-        </ul>
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>scores</em>, category by category</h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead>
+            <tr><th>Category</th><th>Melia</th><th>Hyatt Regency</th><th>Winner</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Pools</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">Hyatt</span></td></tr>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+            <tr><td>Rooms</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">8.5</td><td><span class="hvh-winner-badge">Hyatt</span></td></tr>
+            <tr><td>Design</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">7.0</td><td><span class="hvh-winner-badge">Melia</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Hyatt</span></td></tr>
+            <tr><td>Couples Experience</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">7.5</td><td><span class="hvh-winner-badge">Melia</span></td></tr>
+            <tr><td>Loyalty Program</td><td class="hvh-scorecard-score">5.5</td><td class="hvh-scorecard-score">8.5</td><td><span class="hvh-winner-badge">Hyatt</span></td></tr>
+            <tr><td>Value for Price</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">7.0</td><td><span class="hvh-winner-badge">Melia</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>The value case for Melia is strong. If the price difference on your dates is more than ~$40/night, Melia on The Level is a hard deal to turn down, you get the same beach, a genuinely luxurious room, a distinctive design hotel, and an adults-only floor that the Hyatt can't match.</p>
-    <p>For families with children: the Hyatt Regency is the better call. Camp Hyatt is a more structured kids programme, and 5 pools gives the family more options throughout the day.</p>
-    <p>For World of Hyatt members: the loyalty maths will usually favour the Hyatt. Melia Rewards is a thinner programme globally.</p>
-<p>If you're not loyalty-committed, compare the nightly rates and let the gap decide.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Melia+Da+Nang+Beach+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Melia Da Nang on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Da+Nang+Resort+and+Spa&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Hyatt Regency Da Nang on Booking.com →</a>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pools</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach Access</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples Experience</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Loyalty Program</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">5.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value for Price</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Melia</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      <a href="melia-vs-radisson-blu-da-nang.html" class="cmp-link-btn">Melia vs Radisson Blu</a>
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Sheraton vs Hyatt Regency</a>
-      <a href="hyatt-regency-vs-furama-da-nang.html" class="cmp-link-btn">Hyatt Regency vs Furama</a>
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="non-nuoc-beach-da-nang.html" class="cmp-link-btn">All Non Nuoc Hotels</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">Da Nang Luxury Hotels</a>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Melia Danang</div>
+        <div class="hvh-overall-score-num">8.1<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Hyatt Regency</div>
+        <div class="hvh-overall-score-num">7.9<span>/10</span></div>
+      </div>
     </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>photo</em> comparison</h2>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Properties</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/melia-da-nang.jpg" alt="Melia Danang Beach Resort exterior" loading="lazy">
+          <span class="hvh-photo-compare-tag">Melia</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort exterior" loading="lazy">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Melia leans into a bolder, more distinctive design aesthetic. The Hyatt is more conventional five-star, polished but less memorable to look at. Both sit on the same stretch of Non Nuoc Beach.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Melia</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Pools</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-melia-da-nang-exterior.jpg" alt="Melia Danang Beach Resort pool area" loading="lazy">
+          <span class="hvh-photo-compare-tag">Melia</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-hyatt-regency-da-nang-79e68188.jpg" alt="Hyatt Regency Danang beachfront pool" loading="lazy">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Melia has 2 pools plus direct beach access. Hyatt Regency has 5, including a 100-metre beachfront pool that is the longest hotel pool in the area. If pool time is the priority, this isn't close.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Hyatt Regency</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Decide</span>
+    <h2 class="hvh-h2">Which should you <em>book?</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Melia If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A genuine five-star resort at a noticeably lower rate</li>
+          <li>The Level: an adults-only floor with a private lounge</li>
+          <li>A more distinctive, design-forward hotel</li>
+          <li>A smaller, more intimate resort feel</li>
+          <li>A couples trip without the Hyatt price tag</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Hyatt Regency If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>5 pools, including a 100m beachfront pool</li>
+          <li>Camp Hyatt's structured kids programme</li>
+          <li>World of Hyatt points or elite status</li>
+          <li>Larger standard rooms (48 sqm+)</li>
+          <li>The most complete resort on Non Nuoc, budget aside</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Melia Danang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Only 2 pools; less to do on-site than the Hyatt on a rainy day</li>
+          <li>Melia Rewards is a much thinner loyalty program than World of Hyatt</li>
+          <li>Kids facilities exist but aren't the focus</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Hyatt Regency Danang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Meaningfully pricier than Melia for a comparable room</li>
+          <li>No adults-only floor or quiet-zone equivalent to The Level</li>
+          <li>Larger resort scale means less of an intimate feel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Value wins unless you need the extras</h2>
+      <p class="hvh-final-verdict-body">If the price gap on your dates is more than about $40 a night, book Melia. You get the same beach, a genuinely well-designed room, and if you're a couple, The Level upgrade beats anything the Hyatt offers at a similar price. Melia is the better deal for most travelers who aren't loyalty-committed.</p>
+      <p class="hvh-final-verdict-body">Book the Hyatt Regency if you're traveling with young kids and want Camp Hyatt, if 5 pools genuinely matters to how you'll spend your days, or if you're a World of Hyatt member who wants the points and status recognition. Those are real reasons to pay more, not just brand preference.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Melia Danang Beach Resort</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/melia-danang-beach-resort.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--melia-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/melia-danang-beach-resort.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--melia-danang">Check Melia Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--hyatt-regency-danang" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--hyatt-regency-danang">Check Hyatt Regency Rates →</a>
+      </div>
+    </div>
+
+    <div class="hvh-cta-row">
+      <a href="https://www.booking.com/hotel/vn/melia-danang-beach-resort.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--melia-danang" class="hvh-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/melia-danang-beach-resort.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--melia-danang">Melia: Check Rates →</a>
+      <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--hyatt-regency-danang" class="hvh-cta-btn hvh-cta-secondary affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-booking-url="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=melia-vs-hyatt-regency-da-nang--hyatt-regency-danang">Hyatt Regency: Check Rates →</a>
+    </div>
+
   </div>
 </div>
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="luxury-hotels-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Luxury hotels guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-    <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Melia vs Hyatt Regency Da Nang: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is Melia or Hyatt Regency better in Da Nang?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Hyatt Regency is the more complete luxury resort, 5 pools, Camp Hyatt kids programme, larger rooms, and World of Hyatt loyalty. Melia is the better value pick and has "The Level" adults-only floor that couples find attractive.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">If budget matters, Melia; if you want the best resort on Non Nuoc, Hyatt.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is Melia Da Nang good for couples?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Yes, particularly with The Level upgrade, which provides an adults-only floor with an exclusive lounge. For couples who don't need a kids programme or extensive pool count, Melia at a lower rate is an excellent choice.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">See also our <a href="da-nang-beach-hotels.html" style="color:var(--ocean)">beach hotels guide</a> for more couple-friendly picks.</p>
-      </details>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">

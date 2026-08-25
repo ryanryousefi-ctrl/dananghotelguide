@@ -191,6 +191,7 @@
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
   --gold:#B8901E;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -312,6 +313,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 <script src="search-engine.js"></script>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -492,228 +494,219 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Hyatt Regency Da Nang is a larger, more polished resort on quieter Non Nuoc beach, closer to Hoi An. Furama is Da Nang's original five-star on My Khe, smaller, more characterful, with legendary gardens and closer to city restaurants.</p>
-  </div>
-</div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · Da Nang Luxury Resorts · 2026</p>
-  <h1>Hyatt Regency Da Nang vs <em>Furama Resort</em></h1>
-  <p class="cmp-hero-sub">Non Nuoc's polished Hyatt versus My Khe's characterful original. Same price tier, very different experiences, your choice depends on which beach and which vibe you want.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 8-min read</span>
+<section class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">Hyatt Regency <em>vs</em> Furama</h1>
+    <p class="hvh-hero-sub">Non Nuoc's polished, enormous Hyatt against My Khe's characterful original five-star. Same price tier, very different experiences.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort and Spa pool">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">Hyatt Regency Danang Resort &amp; Spa</div>
+        </div>
+      </div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/furama-resort-da-nang.jpg" alt="Furama Resort Danang lagoon pool and tropical gardens">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Furama Resort Danang</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+    </div>
   </div>
 </section>
 
-<div class="cmp-body">
-
-<div class="cmp-visual-duel">
-  <div class="cmp-visual-card">
-    <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort and Spa pool" loading="lazy">
-    <div class="cmp-visual-label">Hyatt Regency Danang</div>
+<section class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">Hyatt Regency Danang Resort &amp; Spa</div>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Five pools including a 100-meter beachfront pool, a structured Camp Hyatt kids program, World of Hyatt benefits, and a Non Nuoc position that saves 20 minutes each way on Hoi An day trips. Furama wins on atmosphere and its lagoon pool has more soul, but for most travelers ticking boxes, the Hyatt ticks more of them.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-hyatt-regency-da-nang-exterior.jpg" alt="Hyatt Regency Danang Resort and Spa beachfront exterior">
+    </div>
   </div>
-  <div class="cmp-visual-card">
-    <img src="images/hotels/furama-resort-da-nang.jpg" alt="Furama Resort Danang lagoon pool and tropical gardens" loading="lazy">
-    <div class="cmp-visual-label">Furama Resort Danang</div>
-  </div>
-</div>
+</section>
 
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Hyatt Regency Da Nang Resort &amp; Spa</h3>
-        <ul>
-          <li>★★★★★ Full-service resort</li>
-          <li>196 rooms + 37 villas</li>
-          <li>Non Nuoc, south Da Nang</li>
-          <li>5 pools including 100m beachfront pool</li>
-          <li>World of Hyatt loyalty benefits</li>
-          <li>From $150/night</li>
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Quick <em>read</em> before you scroll further</h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Hyatt Regency Danang Resort &amp; Spa</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">World of Hyatt members, families wanting a structured kids program, Hoi An day-trippers</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>5 pools including a 100m beachfront pool</li>
+          <li>Camp Hyatt, age-specific kids programs</li>
+          <li>~35 min to Hoi An, faster than Furama</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Usually ~$30 more per night</li>
+          <li>~20 min Grab to An Thuong restaurants</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Furama Resort Danang</h3>
-        <ul>
-          <li>★★★★★ Boutique resort character</li>
-          <li>198 rooms + villas</li>
-          <li>My Khe, South My Khe strip</li>
-          <li>3 pools including lagoon pool</li>
-          <li>Independent, no loyalty programme</li>
-          <li>From $120/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Furama Resort Danang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Travelers who value character over scale, serious diners, budget-conscious luxury seekers</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Mature lagoon pool and tropical gardens</li>
+          <li>La Maison 1888, Da Nang's most serious hotel restaurant</li>
+          <li>~8 min Grab to An Thuong restaurants</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>No loyalty programme</li>
+          <li>Only 3 pools versus Hyatt's 5</li>
+          <li>~45 min to Hoi An, slower than Hyatt</li>
         </ul>
       </div>
     </div>
-    <p>Both hotels sit in Da Nang's luxury resort tier, both have direct beach access, and both offer the full resort package, but they feel remarkably different. The Hyatt Regency is polished, contemporary, and enormous: its 100-metre pool alone is a statement.</p>
-<p>Furama trades scale for soul, it has been here since the 1990s and the tropical gardens and lagoon pool have a depth that newer resorts can't replicate. The Hyatt wins on modernity and facilities; Furama wins on atmosphere.</p>
-  </div>
 
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Hyatt Regency Da Nang</th><th>Furama Resort Danang</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>Non Nuoc, quieter, resort-focused</td><td>My Khe, lively, more local character</td></tr>
-        <tr><td>From airport</td><td>~20 min · $5–7</td><td>~15 min · $4–6</td></tr>
-        <tr><td>From city centre</td><td>~20 min · $5–7</td><td>~15 min · $4–6</td></tr>
-        <tr><td>From Hoi An</td><td>~35 min · $9–12</td><td>~45 min · $11–14</td></tr>
-        <tr><td>From An Thuong restaurants</td><td>~20 min Grab</td><td>~8 min Grab</td></tr>
-        <tr><td>Nearby dining</td><td>Limited, resort dining or Grab out</td><td>An Thuong 10 min by Grab</td></tr>
-      </tbody>
-    </table>
-    <p>The key location difference: Hyatt sits on <a href="non-nuoc-beach-da-nang.html" style="color:var(--ocean);font-weight:600">Non Nuoc beach</a>, which is quieter and more Hoi An–adjacent. Furama is on <a href="my-khe-beach-da-nang.html" style="color:var(--ocean);font-weight:600">My Khe beach</a>, which is livelier and closer to Da Nang city and the An Thuong restaurant strip.</p>
-<p>If you're combining Da Nang with a Hoi An day trip, Hyatt's position saves ~20 minutes each way.</p>
-  </div>
+    <span class="hvh-eyebrow">Our Scores</span>
+    <h2 class="hvh-h2">Editorial <em>scorecard</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Hyatt Regency</th><th>Furama</th></tr></thead>
+          <tbody>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">8.5</td></tr>
+            <tr><td>Kids / Family</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">7.5</td></tr>
+            <tr><td>Dining</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">9.0</td></tr>
+            <tr><td>Design</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">7.5</td></tr>
+            <tr><td>Beach</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">7.5</td></tr>
+            <tr><td>Location / Walkability</td><td class="hvh-scorecard-score">6.0</td><td class="hvh-scorecard-score">8.0</td></tr>
+            <tr><td>Loyalty Program</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">3.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids / Family</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Dining</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location / Walkability</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">6.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Loyalty Program</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Furama</span><span class="hvh-scorecard-card-score">3.0</span></div></div>
+    </div>
 
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Suites</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Hyatt Regency, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 48 sqm</li>
-          <li>Ocean-view rooms with direct sea views</li>
-          <li>Contemporary resort design throughout</li>
-          <li>Pool villas with private plunge pools</li>
-          <li>Regency Club floor with lounge access</li>
-          <li>Strong family interconnecting options</li>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Hyatt Regency Danang</div>
+        <div class="hvh-overall-score-num">8.3<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Furama Resort Danang</div>
+        <div class="hvh-overall-score-num">7.8<span>/10</span></div>
+      </div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Pools</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang 100-meter beachfront pool">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/furama-resort-da-nang.jpg" alt="Furama Resort Danang lagoon pool">
+          <span class="hvh-photo-compare-tag">Furama</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The Hyatt's 100-metre beachfront pool is one of the longest in Da Nang, genuinely a statement. Furama's lagoon pool is smaller but winds through mature palms and tropical gardens built up since the 1990s, far more photogenic than a standard rectangular pool.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Different strengths</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Property</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-hyatt-regency-da-nang-79e68188.jpg" alt="Hyatt Regency Danang property view">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-furama-resort-da-nang-79e68188.jpg" alt="Furama Resort Danang property view">
+          <span class="hvh-photo-compare-tag">Furama</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Hyatt Regency is polished, contemporary, and enormous, 196 rooms plus 37 villas on quieter Non Nuoc beach. Furama trades scale for soul, 198 rooms plus villas on the livelier My Khe strip, carrying its original five-star legacy since the 1990s.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Hyatt Regency</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book</span>
+    <h2 class="hvh-h2">Match it to your <em>trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Hyatt Regency If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>World of Hyatt points and status benefits</li>
+          <li>A structured kids programme (Camp Hyatt)</li>
+          <li>Faster access to Hoi An for day trips</li>
+          <li>The longest, most impressive pool in the area</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Furama Resort, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 45 sqm in garden setting</li>
-          <li>Superior villa category with private garden</li>
-          <li>Classic resort design, warm, not minimal</li>
-          <li>Family connecting rooms available</li>
-          <li>Balconies on most room types</li>
-          <li>La Maison 1888 dining access</li>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Furama If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Atmosphere and mature garden character</li>
+          <li>La Maison 1888 fine dining on-site</li>
+          <li>Proximity to An Thuong restaurants</li>
+          <li>A lower rate, often ~$30 cheaper per night</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Hyatt Regency Da Nang</th><th>Furama Resort Danang</th></tr></thead>
-      <tbody>
-        <tr><td>Pools</td><td>5 incl. 100m beachfront pool</td><td>3 incl. large lagoon pool</td></tr>
-        <tr><td>Beach access</td><td>✓ Direct Non Nuoc</td><td>✓ Direct My Khe</td></tr>
-        <tr><td>Spa</td><td>Quan Spa, full service</td><td>Furama Spa, long established</td></tr>
-        <tr><td>Kids club</td><td>Camp Hyatt with age-specific programmes</td><td>Coral Kids Club</td></tr>
-        <tr><td>Dining</td><td>4 restaurants + lobby bar</td><td>4 restaurants incl. La Maison 1888</td></tr>
-        <tr><td>Fitness</td><td>✓ Well-equipped gym</td><td>✓</td></tr>
-        <tr><td>Tennis</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Loyalty</td><td>World of Hyatt</td><td>None</td></tr>
-      </tbody>
-    </table>
-    <p>The Hyatt's 100-metre beachfront pool is genuinely impressive and one of the longest in Da Nang. Camp Hyatt gives families a structured programme that Furama's Kids Club doesn't quite match.</p>
-<p>Furama counters with La Maison 1888, the only Michel Roux-affiliated restaurant in Da Nang, and the mature lagoon pool, which is far more photogenic than any standard resort pool.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose Hyatt Regency Da Nang if&hellip;</h3>
-        <ul>
-          <li>You're a World of Hyatt member</li>
-          <li>Hoi An day trips are a priority</li>
-          <li>You want the longest pool in the area</li>
-          <li>A structured kids programme matters (Camp Hyatt)</li>
-          <li>You prefer Non Nuoc's quieter beach</li>
-          <li>Modern contemporary design appeals more than character</li>
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The <em>honest</em> tradeoffs</h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Hyatt Regency Danang</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>~20 min Grab to An Thuong restaurants</li>
+          <li>Usually ~$30 more per night than Furama</li>
+          <li>Non Nuoc is quieter but more isolated in the evenings</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Choose Furama Resort Danang if&hellip;</h3>
-        <ul>
-          <li>Atmosphere and character matter more than modernity</li>
-          <li>The lagoon pool and mature tropical gardens appeal</li>
-          <li>La Maison 1888 fine dining is a priority</li>
-          <li>You want My Khe proximity to An Thuong restaurants</li>
-          <li>Budget is a factor, Furama often runs ~$30 cheaper</li>
-          <li>You prefer a smaller, more intimate resort scale</li>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Furama Resort Danang</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>No loyalty programme</li>
+          <li>Fewer pools and a less structured kids programme</li>
+          <li>~45 min to Hoi An, slower than Hyatt</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>For most travellers the Hyatt Regency is the more logical choice: better facilities, structured kids programme, World of Hyatt benefits, and a better position for Hoi An day trips. If you're ticking boxes, the Hyatt ticks more of them.</p>
-    <p>But Furama wins on something harder to quantify, soul. The lagoon pool, the mature garden setting, and La Maison 1888 give it a character that newer resorts struggle to replicate.</p>
-<p>If you value atmosphere and want proximity to Da Nang's restaurant scene, Furama at a lower price point is the smarter pick.</p>
-    <p>Loyalty members should default to the Hyatt. Everyone else: decide between Non Nuoc quietness and My Khe vibrancy first, then let everything else follow.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Da+Nang+Resort+and+Spa&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Hyatt Regency Da Nang on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Furama+Resort+Da+Nang&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Furama Resort Danang on Booking.com →</a>
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">For most travelers the Hyatt Regency is the more logical choice: better facilities, a structured kids programme, World of Hyatt benefits, and a faster position for Hoi An day trips. If you're ticking boxes, the Hyatt ticks more of them.</p>
+      <p class="hvh-final-verdict-body">But Furama wins on something harder to quantify: soul. The lagoon pool, the mature garden setting, and La Maison 1888 give it a character newer resorts can't replicate. Loyalty members should default to the Hyatt. Everyone else should decide between Non Nuoc quietness and My Khe vibrancy first.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Hyatt Regency Danang Resort &amp; Spa</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=hyatt-regency-vs-furama-da-nang--hyatt-regency-danang-resort-and-spa" data-booking-url="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=hyatt-regency-vs-furama-da-nang--hyatt-regency-danang-resort-and-spa" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Hyatt Regency Rates &rarr;</a>
+        <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=hyatt-regency-vs-furama-da-nang--furama-resort-danang" data-booking-url="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=hyatt-regency-vs-furama-da-nang--furama-resort-danang" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Furama Rates &rarr;</a>
+      </div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>
-      <a href="furama-vs-pullman-da-nang.html" class="cmp-link-btn">Furama vs Pullman</a>
-      <a href="melia-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Melia vs Hyatt Regency</a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Sheraton vs Hyatt Regency</a>
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="non-nuoc-beach-da-nang.html" class="cmp-link-btn">All Non Nuoc Hotels</a>
-      <a href="my-khe-beach-da-nang.html" class="cmp-link-btn">My Khe Beach Guide</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">Da Nang Luxury Hotels</a>
-    </div>
   </div>
 </div>
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="luxury-hotels-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Luxury hotels guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-    <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Hyatt Regency vs Furama: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is Hyatt Regency better than Furama Da Nang?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">The Hyatt Regency has more pools, a structured kids programme, World of Hyatt loyalty benefits, and is closer to Hoi An. Furama has more character, better gardens, La Maison 1888 dining, and is closer to Da Nang city and restaurants.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Hyatt wins on facilities; Furama wins on atmosphere.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Which is more family-friendly, Hyatt Regency or Furama Da Nang?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Both are good family options. The Hyatt Regency edges ahead with Camp Hyatt, a more structured kids programme, and 5 pools.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Furama has the Coral Kids Club and garden space that families appreciate. See our <a href="family-hotels-da-nang.html" style="color:var(--ocean)">family hotels guide</a> for more options.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Which hotel is closer to Hoi An?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Hyatt Regency is closer to Hoi An, roughly 35 minutes versus 45 minutes from Furama. Both require a taxi or Grab; neither has direct shuttle service to Hoi An, though both can arrange transport.</p>
-      </details>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">

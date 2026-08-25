@@ -184,7 +184,7 @@
   .nav-stays-btn .btn-text{display:none}
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);--shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
+:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);--shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
 html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}::selection{background:var(--ocean);color:#fff}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}body{flex:1;min-width:0}.sri-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:3px}.sri-excerpt{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.search-no-results{color:rgba(255,255,255,.45);font-size:.9rem;padding:1rem 0}.search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}.sh-pill{padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.5);cursor:pointer;}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--coral);color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s,transform .15s;border:none;cursor:pointer;text-decoration:none;}.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:var(--r-sm);padding:10px;margin-left:8px;}.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.nav-hamburger.open span:nth-child(2){opacity:0}.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}.page-hero,.page-body,.cmp-body,.guide-body{max-width:860px;margin:0 auto;padding:3rem var(--gutter) 0}.cmp-section{margin-bottom:3rem}.cmp-section h2{font-family:var(--font-serif);font-size:1.75rem;color:var(--ink);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--sand-mid)}.cmp-section h2 em{font-style:italic;color:var(--ocean)}.cmp-section p{color:var(--ink-soft);line-height:1.8;margin-bottom:1rem;font-size:.97rem}
@@ -262,6 +262,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 <link rel="stylesheet" href="phase13.css">
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -442,210 +443,235 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> Both are Non Nuoc luxury resorts at similar price points. Sheraton Grand has a larger, more dramatic pool complex.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">Hyatt Regency has a structured kids programme (Camp Hyatt) and World of Hyatt benefits. Marriott Bonvoy members go Sheraton; Hyatt members go Hyatt.</p>
-  </div>
-</div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · Non Nuoc Luxury · 2026</p>
-  <h1>Sheraton Grand Da Nang vs <em>Hyatt Regency</em></h1>
-  <p class="cmp-hero-sub">Two of Non Nuoc's top luxury resorts compared. Same beach, similar price, but different strengths, Sheraton's dramatic pools versus Hyatt's family programme and loyalty benefits.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 8-min read</span>
-  </div>
-</section>
-<!-- Phase 11: Booking band -->
-<div class="booking-band">
-  <div class="booking-band-inner">
-    <div class="bb-text-group">
-      <span class="bb-eyebrow">Sheraton vs Hyatt</span>
-      <div class="bb-headline">Sheraton Grand vs Hyatt Regency</div>
-      <p class="bb-sub">Two 5-star beach resorts on the same strip. Compare live rates.</p>
-    </div>
-    <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Compare All Da Nang Hotels</a>
-      
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">Sheraton Grand <em>vs</em> Hyatt Regency Da Nang</h1>
+    <p class="hvh-hero-sub">Two five-star beach resorts, overlapping price, different strengths. Hyatt has more pools and a stronger kids programme, Sheraton has the more dramatic main pool.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">Sheraton Grand Da Nang</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort and Spa exterior">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Hyatt Regency Da Nang</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <div class="cmp-visual-card">
-    <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort exterior" loading="lazy">
-    <div class="cmp-visual-label">Sheraton Grand Danang</div>
-  </div>
-  <div class="cmp-visual-card">
-    <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort pool" loading="lazy">
-    <div class="cmp-visual-label">Hyatt Regency Danang</div>
-  </div>
-</div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
-
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ Full-service luxury resort</li>
-          <li>258 rooms + pool villas</li>
-          <li>Non Nuoc, south Da Nang</li>
-          <li>Multiple pools incl. large landscaped pool</li>
-          <li>Marriott Bonvoy loyalty programme</li>
-          <li>From $140/night</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Hyatt Regency Da Nang Resort &amp; Spa</h3>
-        <ul>
-          <li>★★★★★ Full-service resort</li>
-          <li>196 rooms + 37 villas</li>
-          <li>Non Nuoc, south Da Nang</li>
-          <li>5 pools including 100m beachfront pool</li>
-          <li>World of Hyatt loyalty programme</li>
-          <li>From $150/night</li>
-        </ul>
-      </div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <h2 class="hvh-editors-pick-name">Hyatt Regency Da Nang Resort &amp; Spa</h2>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Five pools including a 100-metre beachfront pool beats the Sheraton's one dramatic pool, and Camp Hyatt is more structured than Sheraton's kids programme. It's the more consistently well-rated resort of the two. Marriott Bonvoy loyalists should still pick Sheraton, this is close.</p>
     </div>
-    <p>This is one of Da Nang's most interesting comparisons because these two hotels are genuinely close, same beach, same neighbourhood, overlapping price bracket, yet they attract quite different travellers. The Sheraton wins on pool drama; the Hyatt wins on kids programming and pool scale.</p>
-<p>Loyalty allegiance will settle this for most people, but for independent travellers it comes down to what you value.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Sheraton Grand Da Nang</th><th>Hyatt Regency Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>Non Nuoc, direct beach access</td><td>Non Nuoc, direct beach access</td></tr>
-        <tr><td>From airport</td><td>~18 min · $5–7</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From city centre</td><td>~18 min · $5–7</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From Hoi An</td><td>~35 min · $9–12</td><td>~35 min · $9–12</td></tr>
-        <tr><td>From An Thuong restaurants</td><td>~18 min Grab</td><td>~20 min Grab</td></tr>
-        <tr><td>Nearest local dining</td><td>Resort restaurants or Grab out</td><td>Resort restaurants or Grab out</td></tr>
-      </tbody>
-    </table>
-    <p>Location is essentially a tie. Both are on <a href="non-nuoc-beach-da-nang.html" style="color:var(--ocean);font-weight:600">Non Nuoc beach</a>, both take ~20 minutes from the airport, and both are positioned for easy Hoi An day trips.</p>
-<p>The Sheraton is slightly closer to the city end of Non Nuoc; the Hyatt is slightly further south toward Marble Mountain.</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Villas</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Sheraton Grand, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 45 sqm</li>
-          <li>Ocean-view rooms strongly recommended</li>
-          <li>Pool villas with private pools available</li>
-          <li>Marriott Bonvoy upgrade eligibility</li>
-          <li>Sheraton Club lounge access</li>
-          <li>Good family interconnecting room options</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Hyatt Regency, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 48 sqm</li>
-          <li>Ocean-view rooms with direct sea views</li>
-          <li>Pool villas with private plunge pools</li>
-          <li>Regency Club floor with lounge access</li>
-          <li>World of Hyatt upgrade track</li>
-          <li>Strong family interconnecting options</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Sheraton Grand Da Nang</th><th>Hyatt Regency Da Nang</th></tr></thead>
-      <tbody>
-        <tr><td>Pools</td><td>Multiple pools, dramatic landscaped main pool</td><td>5 pools including 100m beachfront pool</td></tr>
-        <tr><td>Beach access</td><td>✓ Direct Non Nuoc</td><td>✓ Direct Non Nuoc</td></tr>
-        <tr><td>Spa</td><td>Full service spa</td><td>Quan Spa, full service</td></tr>
-        <tr><td>Kids club</td><td>Kids programme</td><td>Camp Hyatt, structured programme</td></tr>
-        <tr><td>Dining</td><td>Multiple F&amp;B outlets</td><td>4 restaurants + lobby bar</td></tr>
-        <tr><td>Fitness</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Tennis</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Water sports</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Loyalty</td><td>Marriott Bonvoy</td><td>World of Hyatt</td></tr>
-      </tbody>
-    </table>
-    <p>The Hyatt's pool count (5 pools) gives it a slight edge in pool variety. Camp Hyatt is more structured and consistently rated higher than the Sheraton's kids programme.</p>
-<p>The Sheraton's main pool is impressive architecturally. Both resorts have equivalent spa, fitness, and dining setups for this tier.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose Sheraton Grand Da Nang if&hellip;</h3>
-        <ul>
-          <li>You're a Marriott Bonvoy member</li>
-          <li>The main pool's architectural drama appeals</li>
-          <li>You prefer Marriott's brand service standard</li>
-          <li>Pool villas with private pools are a priority</li>
-          <li>You find the Sheraton rate slightly better on your dates</li>
-          <li>You've stayed at Sheratons and know what to expect</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Choose Hyatt Regency Da Nang if&hellip;</h3>
-        <ul>
-          <li>You're a World of Hyatt member</li>
-          <li>A structured kids programme (Camp Hyatt) matters</li>
-          <li>5 pools for the family is a draw</li>
-          <li>The 100m beachfront pool is appealing</li>
-          <li>You want the best-rated resort on Non Nuoc consistently</li>
-          <li>Hoi An day trips, marginally closer</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>Loyalty programme members should follow their brand, both the Sheraton (Bonvoy) and Hyatt (World of Hyatt) give you meaningful benefits here, and neither is a step down in quality.</p>
-    <p>For independent travellers: the Hyatt Regency is the more consistently top-rated resort on Non Nuoc, with the larger pool complex (5 pools including the 100m statement pool) and the better kids programme. If you're travelling as a family, the Hyatt edges ahead.</p>
-<p>If you're travelling as a couple and the Sheraton is running a better rate on your dates, it's not a compromise.</p>
-    <p>Both hotels are strong picks for the <a href="luxury-hotels-da-nang.html" style="color:rgba(255,255,255,.6)">Da Nang luxury tier</a>. Either way you won't be disappointed.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Sheraton+Grand+Da+Nang+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Sheraton Grand Da Nang on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Da+Nang+Resort+and+Spa&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Hyatt Regency Da Nang on Booking.com →</a>
-    </div>
-  </div>
-
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>
-      <a href="pullman-vs-sheraton-da-nang.html" class="cmp-link-btn">Pullman vs Sheraton</a>
-      <a href="hyatt-regency-vs-furama-da-nang.html" class="cmp-link-btn">Hyatt Regency vs Furama</a>
-      <a href="melia-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Melia vs Hyatt Regency</a>
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="non-nuoc-beach-da-nang.html" class="cmp-link-btn">All Non Nuoc Hotels</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">Da Nang Luxury Hotels</a>
-      <a href="family-hotels-da-nang.html" class="cmp-link-btn">Family Hotels</a>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-hyatt-regency-da-nang-exterior.jpg" alt="Hyatt Regency Danang Resort pool complex">
     </div>
   </div>
 </div>
+
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Sheraton Grand Da Nang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Marriott Bonvoy members and anyone drawn to a single, architecturally striking main pool.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Dramatic, large landscaped main pool</li>
+          <li>Marriott Bonvoy status and upgrades</li>
+          <li>Pool villas with private pools</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Fewer total pools than Hyatt</li>
+          <li>Kids programme less structured than Camp Hyatt</li>
+        </ul>
+      </div>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Hyatt Regency Da Nang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Families and World of Hyatt members who want the more complete resort package.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>5 pools including a 100m beachfront pool</li>
+          <li>Camp Hyatt's structured kids programme</li>
+          <li>World of Hyatt loyalty benefits</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Slightly higher rate than Sheraton</li>
+          <li>A few minutes further from the city</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Sheraton Grand</th><th>Hyatt Regency</th><th>Winner</th></tr></thead>
+          <tbody>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">8.4</td><td class="hvh-scorecard-score">9.2</td><td><span class="hvh-winner-badge">Hyatt Regency</span></td></tr>
+            <tr><td>Rooms</td><td class="hvh-scorecard-score">8.2</td><td class="hvh-scorecard-score">8.4</td><td><span class="hvh-winner-badge">Hyatt Regency</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">7.6</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Hyatt Regency</span></td></tr>
+            <tr><td>Beach</td><td class="hvh-scorecard-score">8.3</td><td class="hvh-scorecard-score">8.3</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+            <tr><td>Location</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">7.8</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+            <tr><td>Design</td><td class="hvh-scorecard-score">8.6</td><td class="hvh-scorecard-score">8.1</td><td><span class="hvh-winner-badge">Sheraton Grand</span></td></tr>
+            <tr><td>Loyalty Program</td><td class="hvh-scorecard-score">8.3</td><td class="hvh-scorecard-score">8.3</td><td><span class="hvh-winner-badge hvh-tie">Tie</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.2</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.2</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.4</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.6</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.3</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.3</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.8</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.6</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.1</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Loyalty Program</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.3</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.3</span></div></div>
+    </div>
+
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Sheraton Grand Da Nang</div>
+        <div class="hvh-overall-score-num">8.2<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Hyatt Regency Da Nang</div>
+        <div class="hvh-overall-score-num">8.5<span>/10</span></div>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>Pools</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort main pool">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort pool complex">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Sheraton's main pool is architecturally the more dramatic single pool of the two. Hyatt counters with five pools total, including a 100-metre beachfront pool, which is simply more pool for a family to spread out across.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Hyatt Regency — on scale</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Property</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-exterior.jpg" alt="Sheraton Grand Danang Resort grounds">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-hyatt-regency-da-nang-79e68188.jpg" alt="Hyatt Regency Danang Resort grounds and villas">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Both resorts sit on the same general stretch of beach with comparable airport and city travel times, roughly 18-20 minutes either way. Sheraton is a touch closer to the city; Hyatt is marginally closer to Marble Mountain and Hoi An day trips.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Tie</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Rooms</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-79e68188.jpg" alt="Sheraton Grand Danang Resort room">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort villa">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Sheraton's standard rooms start around 45 sqm with pool villas available and Sheraton Club lounge access. Hyatt's standards run slightly larger at roughly 48 sqm, with pool villas that include private plunge pools and a Regency Club floor.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Hyatt Regency — by a small margin</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to <em>your trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Sheraton Grand If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Marriott Bonvoy points and status</li>
+          <li>A single, dramatic architectural main pool</li>
+          <li>Pool villas with Sheraton Club lounge access</li>
+          <li>A slightly better rate on your dates</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Hyatt Regency If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Five pools including a 100m beachfront pool</li>
+          <li>Camp Hyatt's structured kids programming</li>
+          <li>World of Hyatt points and status</li>
+          <li>The more consistently top-rated resort of the two</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Sheraton Grand Da Nang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Fewer total pools than Hyatt Regency</li>
+          <li>Kids programme is less structured than Camp Hyatt</li>
+          <li>Only makes sense over Hyatt if you're chasing Bonvoy status or a better rate</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Hyatt Regency Da Nang</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Usually runs a touch above Sheraton on rate</li>
+          <li>A few minutes further from the city centre</li>
+          <li>Main pool is less architecturally distinctive than Sheraton's</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">This is close. Loyalty allegiance settles it for a lot of travelers, and neither Bonvoy nor World of Hyatt benefits here are a step down. For independent travelers with no brand loyalty, Hyatt Regency is the more consistently well-rated resort of the two, with the larger pool complex and the better kids programme.</p>
+      <p class="hvh-final-verdict-body">If you're traveling as a family, take the Hyatt. If you're a couple and the Sheraton is running a meaningfully better rate on your dates, book it without hesitation.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Hyatt Regency Da Nang, unless you're Bonvoy loyal or the Sheraton rate is clearly better</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=sheraton-vs-hyatt-regency-da-nang--sheraton-grand-danang" data-booking-url="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=sheraton-vs-hyatt-regency-da-nang--sheraton-grand-danang" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Sheraton Grand Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=sheraton-vs-hyatt-regency-da-nang--hyatt-regency-danang" data-booking-url="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=sheraton-vs-hyatt-regency-da-nang--hyatt-regency-danang" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Hyatt Regency Rates →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">

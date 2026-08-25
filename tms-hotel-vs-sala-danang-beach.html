@@ -184,7 +184,7 @@
   .nav-stays-btn .btn-text{display:none}
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--shadow-hover:0 8px 32px rgba(26,26,24,.12);--ease:cubic-bezier(.4,0,.2,1);}
+:root{--sand:#F6F1E9;--sand-mid:#EDE5D8;--sand-dark:#D9CDBB;--white:#FFFFFF;--ocean:#1B5C5C;--ocean-light:#217070;--ocean-deep:#0D3535;--ocean-pale:#EAF4F4;--coral:#C8604A;--coral-light:#E07A62;--ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;--night:#0A0A0A;--font-serif:'Instrument Serif',Georgia,serif;--font-sans:'Satoshi',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07);--shadow-hover:0 8px 32px rgba(26,26,24,.12);--ease:cubic-bezier(.4,0,.2,1);}
 html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}::selection{background:var(--ocean);color:#fff}a{text-decoration:none;color:inherit}a{color:var(--ocean);}.breadcrumb li:last-child span{color:var(--ink-soft);font-weight:600}
 .site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0;}.footer-inner{max-width:var(--max);margin:0 auto}.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07);}.footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem;}.footer-brand em{font-style:italic;color:var(--coral-light)}.footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem;}.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid rgba(255,255,255,.06);}.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem;}.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s;}.footer-col a:hover{color:rgba(255,255,255,.75)}.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;padding:1.8rem 0;font-size:.72rem;}.footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem;}.footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch;}.footer-legal-links{display:flex;flex-wrap:wrap;gap:.25rem .75rem;align-items:center;flex-shrink:0;}.footer-legal-links a{font-size:.72rem;color:rgba(255,255,255,.35);}.footer-legal-links .sep{color:rgba(255,255,255,.15);font-size:.65rem}
 .cmp-hero{position:relative;background:var(--ocean-deep);padding:5rem var(--gutter) 3.5rem;text-align:center;overflow:hidden}.cmp-hero::before{content:"";position:absolute;inset:0;background-image:url("images/da-nang-beach-hotels-30b63280.webp");background-size:cover;background-position:center;opacity:.45;z-index:0}.cmp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,35,35,.78) 0%,rgba(13,35,35,.38) 65%,transparent 100%);z-index:1}.cmp-hero>*{position:relative;z-index:2}.cmp-hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:1rem;font-weight:600}.cmp-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:.75rem}.cmp-hero h1 em{font-style:italic;color:var(--coral-light)}.cmp-hero-sub{color:rgba(255,255,255,.6);font-size:1rem;max-width:560px;margin:0 auto 1.5rem;line-height:1.65}.cmp-meta{display:flex;justify-content:center;gap:1.5rem;font-size:.72rem;color:rgba(255,255,255,.35);flex-wrap:wrap}.cmp-meta strong{color:rgba(255,255,255,.6)}
@@ -263,6 +263,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 <link rel="stylesheet" href="phase13.css">
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -443,193 +444,219 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> TMS Hotel Da Nang Beach is a larger, well-rated 4-star beachfront hotel with a pool and family-friendly setup. Sala Danang Beach is a smaller, more boutique property with a distinct aesthetic.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">TMS is the safer mainstream choice; Sala is better if you value design and quieter atmosphere over amenity count.</p>
+
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">TMS Hotel <em>vs</em> Sala Danang Beach</h1>
+    <p class="hvh-hero-sub">Two mid-market My Khe Beach hotels, minutes apart. TMS brings volume and reliability; Sala brings design and quiet.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach rooftop infinity pool">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">TMS Hotel Da Nang Beach</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/sala-danang-beach-hotel.jpg" alt="SALA Danang Beach Hotel pool and grounds">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Sala Danang Beach Hotel</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · My Khe Beach · 2026</p>
-  <h1>TMS Hotel Da Nang Beach vs <em>Sala Danang</em></h1>
-  <p class="cmp-hero-sub">Two popular mid-market My Khe Beach hotels compared. TMS brings volume and value; Sala brings personality and a quieter experience, the right choice depends on what kind of beach stay you're after.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 7-min read</span>
-  </div>
-</section>
-
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <!-- TODO: Replace fallback with real TMS Hotel image -->
-  <div class="cmp-visual-card">
-    <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach rooftop infinity pool" loading="lazy">
-    <div class="cmp-visual-label">TMS Hotel Da Nang Beach</div>
-  </div>
-  <!-- TODO: Replace fallback with real Sala Danang Beach Hotel image -->
-  <div class="cmp-visual-card">
-    <img src="images/hotels/sala-danang-beach-hotel.jpg" alt="SALA Danang Beach Hotel pool and grounds" loading="lazy">
-    <div class="cmp-visual-label">Sala Danang Beach Hotel</div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <h2 class="hvh-editors-pick-name">TMS Hotel Da Nang Beach</h2>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">TMS is the more consistent hotel: a larger pool, better group and family setup, and a proven track record at a price that undercuts most of My Khe. Sala is the right call only if design and quiet matter more to you than amenity count and reliability, in which case book Sala instead.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach pool and beach view">
+    </div>
   </div>
 </div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>TMS Hotel Da Nang Beach</h3>
-        <ul>
-          <li>★★★★ Superior beachfront hotel</li>
-          <li>Large property with pool and beach access</li>
-          <li>My Khe Beach, central strip</li>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">TMS Hotel Da Nang Beach</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Families and groups who want a proven, consistent beachfront hotel at a strong price.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Larger pool with beach views</li>
+          <li>Better interconnecting family room options</li>
           <li>Consistently high review scores</li>
-          <li>Good family and group setup</li>
-          <li>From $65/night</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Clean, functional design, nothing distinctive</li>
+          <li>Busier, more high-volume atmosphere</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Sala Danang Beach Hotel</h3>
-        <ul>
-          <li>★★★★ Boutique-style beachfront hotel</li>
-          <li>Smaller, more intimate property</li>
-          <li>My Khe Beach, central-north strip</li>
-          <li>Design-forward interiors</li>
-          <li>Good for couples and independent travellers</li>
-          <li>From $60/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Sala Danang Beach Hotel</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Couples and solo travelers who want design and quiet over amenity count.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Distinctive Vietnamese-influenced interiors</li>
+          <li>Smaller, quieter, less congested</li>
+          <li>Good value ocean-facing rooms</li>
         </ul>
-      </div>
-    </div>
-    <p>Both hotels sit in the popular mid-market tier on <a href="my-khe-beach-da-nang.html" style="color:var(--ocean);font-weight:600">My Khe Beach</a>, not full five-star resorts, but well-positioned hotels with direct beach access at genuinely competitive rates. TMS is the more mainstream pick with a strong track record for consistency.</p>
-<p>Sala has more personality and suits travellers who find larger hotels generic.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>TMS Hotel Da Nang Beach</th><th>Sala Danang Beach Hotel</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>My Khe, central strip</td><td>My Khe, central-north strip</td></tr>
-        <tr><td>From airport</td><td>~10 min · $3–5</td><td>~12 min · $3–5</td></tr>
-        <tr><td>From city centre</td><td>~10 min · $3–4</td><td>~12 min · $3–4</td></tr>
-        <tr><td>An Thuong restaurants</td><td>~5 min Grab</td><td>~5 min Grab</td></tr>
-        <tr><td>Dragon Bridge</td><td>~15 min Grab</td><td>~12 min Grab</td></tr>
-        <tr><td>Beach strip dining</td><td>Many options walking distance</td><td>Good selection nearby</td></tr>
-      </tbody>
-    </table>
-    <p>Both hotels are on My Khe, very close to each other in location terms. The key advantage of the My Khe strip is proximity to An Thuong's restaurants and cafes (~5 min Grab) and relatively easy access to Dragon Bridge and the city centre.</p>
-<p>Both hotels work equally well as a base for day trips to Hoi An (45–50 min) or Marble Mountain (25 min).</p>
-  </div>
-
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Style</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>TMS Hotel, Rooms</h3>
-        <ul>
-          <li>Standard rooms comfortable for the price point</li>
-          <li>Ocean-view rooms on upper floors recommended</li>
-          <li>Clean, functional design, nothing surprising</li>
-          <li>Good interconnecting family room options</li>
-          <li>Balconies on many room types</li>
-          <li>Reliable consistency across stays</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Sala Danang, Rooms</h3>
-        <ul>
-          <li>Rooms with distinctive Vietnamese-influenced design</li>
-          <li>Ocean-facing rooms notably good value</li>
-          <li>More stylish interiors than typical 4-star</li>
-          <li>Better suited to couples and solo travellers</li>
-          <li>Fewer rooms, quieter, less congested</li>
-          <li>Check specific room type at booking</li>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Smaller pool, fewer room types</li>
+          <li>Less suited to families or larger groups</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>TMS Hotel Da Nang Beach</th><th>Sala Danang Beach Hotel</th></tr></thead>
-      <tbody>
-        <tr><td>Pool</td><td>✓ Outdoor pool with beach views</td><td>✓ Pool available</td></tr>
-        <tr><td>Beach access</td><td>✓ Direct My Khe</td><td>✓ Direct My Khe</td></tr>
-        <tr><td>Restaurant</td><td>✓ On-site restaurant</td><td>✓ Restaurant</td></tr>
-        <tr><td>Bar</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Spa</td><td>✓ Massage services</td><td>✓ Spa services</td></tr>
-        <tr><td>Fitness</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Family friendly</td><td>✓ Good option</td><td>Better suited to couples</td></tr>
-        <tr><td>Loyalty programme</td><td>None</td><td>None</td></tr>
-      </tbody>
-    </table>
-    <p>TMS edges ahead on family suitability, larger pool, more room type variety, and a setup better suited to groups. Sala's strength is atmosphere, it's a more pleasant environment for couples or solo travellers who find high-volume hotels impersonal.</p>
-<p>Both are independent hotels with no loyalty programme.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Choose TMS Hotel if&hellip;</h3>
-        <ul>
-          <li>You want a proven, consistent beachfront hotel</li>
-          <li>Travelling as a family or group</li>
-          <li>Pool access is important during your stay</li>
-          <li>You value reliability over personality</li>
-          <li>Budget is tighter, TMS often great value</li>
-          <li>You want a central My Khe position</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Choose Sala Danang Beach if&hellip;</h3>
-        <ul>
-          <li>Travelling as a couple</li>
-          <li>Design and atmosphere matter to you</li>
-          <li>You prefer a smaller, quieter property</li>
-          <li>Generic large-hotel feel is not appealing</li>
-          <li>You want Vietnamese-influenced interior design</li>
-          <li>Direct beach access in a calmer setting</li>
-        </ul>
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>TMS Hotel</th><th>Sala Danang</th><th>Winner</th></tr></thead>
+          <tbody>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">8.2</td><td class="hvh-scorecard-score">6.8</td><td><span class="hvh-winner-badge">TMS Hotel</span></td></tr>
+            <tr><td>Rooms</td><td class="hvh-scorecard-score">7.4</td><td class="hvh-scorecard-score">8.0</td><td><span class="hvh-winner-badge">Sala Danang</span></td></tr>
+            <tr><td>Design</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">8.4</td><td><span class="hvh-winner-badge">Sala Danang</span></td></tr>
+            <tr><td>Kids &amp; Families</td><td class="hvh-scorecard-score">8.3</td><td class="hvh-scorecard-score">6.0</td><td><span class="hvh-winner-badge">TMS Hotel</span></td></tr>
+            <tr><td>Couples</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">8.5</td><td><span class="hvh-winner-badge">Sala Danang</span></td></tr>
+            <tr><td>Location</td><td class="hvh-scorecard-score">8.4</td><td class="hvh-scorecard-score">8.1</td><td><span class="hvh-winner-badge">TMS Hotel</span></td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">8.6</td><td class="hvh-scorecard-score">8.2</td><td><span class="hvh-winner-badge">TMS Hotel</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>TMS Hotel is the safe, reliable default, consistently rated, well-positioned, and good value. For families or groups who want a pool, beach access, and predictable quality, TMS is hard to beat at this price point on My Khe.</p>
-    <p>Sala Danang earns its following for a different reason: it's a more considered hotel with personality, and if you're after a quieter beachfront base with better-than-average design, the slight premium over a generic 4-star is worth it.</p>
-    <p>If neither fully satisfies, consider upgrading to <a href="furama-resort-da-nang.html" style="color:rgba(255,255,255,.6)">Furama Resort</a> for a genuine five-star at a modest premium, or see our full <a href="da-nang-beach-hotels.html" style="color:rgba(255,255,255,.6)">beach hotels guide</a> for more options across the My Khe and Non Nuoc strips.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=TMS+Luxury+Hotel+Da+Nang+Beach&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book TMS Hotel Da Nang Beach on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Sala+Danang+Beach+Hotel&dest_type=hotel&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Sala Danang Beach on Booking.com →</a>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">8.2</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">6.8</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">7.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">8.4</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids &amp; Families</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">8.3</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">6.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">8.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">8.1</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TMS Hotel</span><span class="hvh-scorecard-card-score">8.6</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sala Danang</span><span class="hvh-scorecard-card-score">8.2</span></div></div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons &amp; Guides</em></h2>
-    <div class="cmp-links">
-      <a href="furama-vs-pullman-da-nang.html" class="cmp-link-btn">Furama vs Pullman</a>
-      <a href="mandila-beach-vs-stella-maris-da-nang.html" class="cmp-link-btn">Mandila vs Stella Maris</a>
-      <a href="da-nang-beach-hotels.html" class="cmp-link-btn">All My Khe Beach Hotels</a>
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">Best Hotels Da Nang</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
-      <a href="da-nang-hotel-prices.html" class="cmp-link-btn">Hotel Prices Guide</a>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">TMS Hotel Da Nang Beach</div>
+        <div class="hvh-overall-score-num">7.8<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Sala Danang Beach Hotel</div>
+        <div class="hvh-overall-score-num">7.7<span>/10</span></div>
+      </div>
     </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>Pools</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach rooftop infinity pool">
+          <span class="hvh-photo-compare-tag">TMS Hotel</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sala-danang-beach-hotel.jpg" alt="SALA Danang Beach Hotel pool">
+          <span class="hvh-photo-compare-tag">Sala Danang</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">TMS has a larger outdoor pool with beach views that comfortably handles families and groups. Sala's pool is smaller and quieter, better suited to a couple who wants to actually get in the water without a crowd.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">TMS Hotel — for size</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Property</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach exterior and grounds">
+          <span class="hvh-photo-compare-tag">TMS Hotel</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sala-danang-beach-hotel.jpg" alt="SALA Danang Beach Hotel exterior and grounds">
+          <span class="hvh-photo-compare-tag">Sala Danang</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Both sit on My Khe Beach within a few minutes of each other, roughly 10-12 minutes from the airport and 5 minutes from An Thuong's restaurants. TMS is the larger, higher-volume property; Sala is smaller and noticeably quieter on the same strip.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Tie on location</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to <em>your trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book TMS Hotel If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>A larger pool with beach views</li>
+          <li>Good interconnecting rooms for a family or group</li>
+          <li>A proven, consistently well-reviewed hotel</li>
+          <li>Strong value at this price point on My Khe</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Sala Danang If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Distinctive, Vietnamese-influenced interior design</li>
+          <li>A smaller, quieter property on the same beach</li>
+          <li>Good-value ocean-facing rooms for a couple</li>
+          <li>Something that doesn't feel like a generic 4-star</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">TMS Hotel Da Nang Beach</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Design is clean and functional, nothing distinctive</li>
+          <li>Higher guest volume means a busier pool and lobby</li>
+          <li>No loyalty programme</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Sala Danang Beach Hotel</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Smaller pool, fewer amenities overall</li>
+          <li>Less suited to families or larger groups</li>
+          <li>No loyalty programme</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">TMS is the safer default. It's consistently rated, well-positioned, and gives families or groups a bigger pool and better room flexibility for a price that undercuts most of My Khe. If you just want a reliable beachfront stay, book it and don't overthink it.</p>
+      <p class="hvh-final-verdict-body">Sala earns its following for a different reason. It's smaller and quieter with genuinely distinctive interiors, and if you're a couple who finds high-volume hotels impersonal, the tradeoff in amenity count is worth it.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: TMS Hotel for families and groups, Sala Danang for couples wanting quiet and design</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=tms-hotel-vs-sala-danang-beach--tms-hotel" data-booking-url="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=tms-hotel-vs-sala-danang-beach--tms-hotel" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check TMS Hotel Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/sala-danang-beach-hotel.html?aid=1784897&sid=tms-hotel-vs-sala-danang-beach--sala-danang" data-booking-url="https://www.booking.com/hotel/vn/sala-danang-beach-hotel.html?aid=1784897&sid=tms-hotel-vs-sala-danang-beach--sala-danang" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Sala Danang Rates →</a>
+      </div>
+    </div>
+
   </div>
 </div>
+
 </main>
 
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">

@@ -191,6 +191,7 @@
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
   --gold:#B8901E;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -315,6 +316,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 <script src="search-engine.js"></script>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -495,187 +497,235 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </nav>
 
 <main>
-<div style="background:var(--ocean-pale);border-bottom:1px solid var(--sand-dark);padding:.9rem clamp(1.25rem,5vw,3rem);">
-  <div style="max-width:1160px;margin:0 auto;">
-    <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;"><strong>Quick answer:</strong> TIA Wellness Resort is smaller, adults-only, on My Khe Beach, and built around a genuine wellness concept. Naman Retreat is larger, villa-based, on Non Nuoc Beach, with one of Vietnam's best hotel spas and excellent dining.</p>
-<p style="font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin:0;">Both are exceptional - the right choice depends on what "wellness" means to you.</p>
-  </div>
-</div>
 
-<section class="cmp-hero">
-  <p class="cmp-hero-eyebrow">Hotel Comparison · Da Nang Wellness Resorts · 2026</p>
-  <h1>TIA Wellness Resort vs <em>Naman Retreat</em></h1>
-  <p class="cmp-hero-sub">Da Nang's two best wellness resorts compared honestly. Adults-only intimacy at TIA versus the villa luxury and world-class spa at Naman.</p>
-<p class="cmp-hero-sub">Same premium tier, very different stays.</p>
-  <div class="cmp-meta">
-    <span>✎ Written by <strong>Ryan Yousefi</strong></span>
-    <span>·</span>
-    <span>📅 Last updated: <strong>May 2026</strong></span>
-    <span>·</span>
-    <span>⏰ 7-min read</span>
-  </div>
-</section>
-<!-- Phase 11: Booking band -->
-<div class="booking-band">
-  <div class="booking-band-inner">
-    <div class="bb-text-group">
-      <span class="bb-eyebrow">Tia vs Naman</span>
-      <div class="bb-headline">Tia Wellness vs Naman Retreat</div>
-      <p class="bb-sub">Two design-led Non Nuoc resorts. Both exceptional, different experiences.</p>
-    </div>
-    <div class="bb-cta-group">
-      <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" class="bb-cta-primary affiliate-link" target="_blank" rel="nofollow noopener sponsored">Compare All Da Nang Hotels</a>
-      
+<div class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">TIA Wellness <em>vs</em> Naman Retreat</h1>
+    <p class="hvh-hero-sub">Da Nang's two best wellness-tier resorts. TIA sells guaranteed adults-only quiet, Naman sells villa design and a spa people book flights specifically to use.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/my-khe-beach-da-nang.webp" alt="My Khe Beach, Da Nang, near TIA Wellness Resort">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">TIA Wellness Resort</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+      <div class="hvh-split-side">
+        <img src="images/review-naman-retreat-da-nang-exterior.jpg" alt="Naman Retreat Da Nang beachfront villa">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Naman Retreat</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-<div class="cmp-body">
-<div class="cmp-visual-duel">
-  <!-- TODO: Replace fallback with real TIA Wellness Resort image -->
-  <div class="cmp-visual-card">
-    <img src="images/hotels/my-khe-beach-da-nang.webp" alt="TIA Wellness Resort Da Nang on My Khe Beach" loading="lazy">
-    <div class="cmp-visual-label">TIA Wellness Resort</div>
-  </div>
-  <div class="cmp-visual-card">
-    <img src="images/review-naman-retreat-da-nang-exterior.jpg" alt="Naman Retreat Da Nang beachfront villa" loading="lazy">
-    <div class="cmp-visual-label">Naman Retreat</div>
-  </div>
-</div>
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#comparison" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Comparison</a>
-    <a href="#spa" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Spa &amp; Wellness</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-    <a href="#faq" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">FAQ</a>
-  </nav>
-
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>TIA Wellness Resort</h3>
-        <ul>
-          <li>Adults-only (18+ strictly enforced)</li>
-          <li>~50 rooms, intimate scale</li>
-          <li>My Khe Beach, northern Da Nang strip</li>
-          <li>$180-380/night</li>
-          <li>Wellness-focused cuisine and programming</li>
-          <li>Smaller, quieter, genuinely curated</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Naman Retreat</h3>
-        <ul>
-          <li>72 villas, adult atmosphere (families allowed)</li>
-          <li>Non Nuoc Beach, south Da Nang</li>
-          <li>$200-450/night</li>
-          <li>Naman Spa - exceptional, world-class</li>
-          <li>Hay Hay restaurant, outstanding Vietnamese</li>
-          <li>More design-forward, architecturally striking</li>
-        </ul>
-      </div>
+<div class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <h2 class="hvh-editors-pick-name">Naman Retreat</h2>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Naman Spa is a genuine destination, not a hotel amenity, and the villa design is the most architecturally striking property in this tier. TIA is the better pick only if guaranteed adults-only quiet matters more to you than spa quality and design, in which case book TIA instead.</p>
     </div>
-    <p>These are the two properties most often mentioned when people ask about wellness-focused hotels in central Vietnam. They're genuinely different in concept.</p>
-<p>TIA is built around the idea that a wellness resort should have no children, no noise, and food that supports health goals. Naman is built around exceptional design, villa living, and a spa that could compete with anything in Southeast Asia.</p>
-    <p>Both deliver on their promises. The question is which promise matters more to you.</p>
-  </div>
-
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>TIA Wellness Resort</th><th>Naman Retreat</th></tr></thead>
-      <tbody>
-        <tr><td>Beach</td><td>My Khe Beach (northern section)</td><td><a href="non-nuoc-beach-da-nang.html" style="color:var(--ocean);font-weight:600">Non Nuoc Beach</a></td></tr>
-        <tr><td>From airport</td><td>~12 min · $4-6</td><td>~20 min · $5-8</td></tr>
-        <tr><td>From city centre</td><td>~12 min · $4-6</td><td>~20 min · $5-8</td></tr>
-        <tr><td>From Hoi An</td><td>~45-50 min · $12-16</td><td>~30 min · $8-12</td></tr>
-        <tr><td>Nearby dining</td><td>An Thuong strip ~10 min by Grab</td><td>Resort dining; city 20 min</td></tr>
-        <tr><td>Beach character</td><td>Livelier, more local activity</td><td>Quieter, more resort-focused</td></tr>
-      </tbody>
-    </table>
-    <p>Location is actually a meaningful differentiator here. TIA's My Khe position gives you easier access to Da Nang's restaurant scene - the An Thuong area with its concentration of good Vietnamese and international restaurants is a short Grab ride away.</p>
-<p>Naman's Non Nuoc position is more isolated but considerably closer to Hoi An, which matters if you're planning day trips.</p>
-  </div>
-
-  <div class="cmp-section" id="comparison">
-    <h2>Full <em>Comparison</em> Table</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Feature</th><th>TIA Wellness Resort</th><th>Naman Retreat</th></tr></thead>
-      <tbody>
-        <tr><td>Location</td><td>My Khe Beach</td><td>Non Nuoc Beach</td></tr>
-        <tr><td>Adults-only</td><td><span class="tick">Yes - strictly enforced</span></td><td><span class="cross">No (adult atmosphere)</span></td></tr>
-        <tr><td>Price range</td><td>$180-380/night</td><td>$200-450/night</td></tr>
-        <tr><td>Spa</td><td>Wellness spa, good</td><td>Naman Spa - exceptional</td></tr>
-        <tr><td>Dining</td><td>Healthy cuisine concept, limited choice</td><td>Hay Hay Vietnamese - excellent</td></tr>
-        <tr><td>Pool</td><td>Pool on-site, intimate</td><td>Large pool complex</td></tr>
-        <tr><td>Beach access</td><td>Direct My Khe access</td><td>Direct Non Nuoc access</td></tr>
-        <tr><td>Villas</td><td>No villas, room-based</td><td>72 villas, private pools available</td></tr>
-        <tr><td>Room count</td><td>~50 rooms (intimate)</td><td>72 villas (larger)</td></tr>
-        <tr><td>Design</td><td>Understated, wellness-focused</td><td>Architecturally striking, design-forward</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="cmp-section" id="spa">
-    <h2>Spa &amp; <em>Wellness</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>TIA Wellness Approach</h3>
-        <ul>
-          <li>Integrated wellness programming</li>
-          <li>Healthy cuisine designed around nutrition</li>
-          <li>Yoga and fitness classes included</li>
-          <li>No children means genuine quiet</li>
-          <li>Spa treatments available on-site</li>
-          <li>Wellness-focused from arrival to departure</li>
-        </ul>
-      </div>
-      <div class="cmp-card">
-        <h3>Naman Spa</h3>
-        <ul>
-          <li>One of the best hotel spas in Vietnam</li>
-          <li>Large, architecturally beautiful facility</li>
-          <li>Extensive treatment menu</li>
-          <li>Private treatment rooms, quality therapists</li>
-          <li>Not included in room rate - paid separately</li>
-          <li>Destination spa quality, not just hotel amenity</li>
-        </ul>
-      </div>
-    </div>
-    <p>This is where the two resorts genuinely diverge. TIA wraps wellness into everything - the food, the programming, the absence of children - but the spa itself is not remarkable by regional standards.</p>
-<p>Naman Spa is the standout: it's a facility that people travel specifically to use, not just a hotel amenity. If your trip is primarily about a spa experience, Naman is the clearer choice.</p>
-<p>If you want a holistic wellness environment with guaranteed adult peace, TIA delivers something Naman can't replicate.</p>
-    <p>Note that Naman Spa is not included in your room rate - budget separately for treatments. TIA's wellness programming is more integrated into the room price.</p>
-  </div>
-
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>Choose TIA Wellness Resort if you want a guaranteed adults-only environment, lower entry price, and a resort that takes wellness seriously as a concept rather than an amenity. The smaller scale, the healthy cuisine approach, and the strict no-under-18s policy make it one of a kind in Da Nang.</p>
-<p>You won't find the same certainty of quiet anywhere else on My Khe.</p>
-    <p>Choose Naman Retreat if you want premium villa living, Naman Spa (genuinely world-class), the Hay Hay dining experience, and a more architecturally impressive property. Families are technically allowed at Naman, but the atmosphere trends adult and the villa setup naturally creates separation.</p>
-<p>Being 30 minutes from Hoi An is also a practical advantage.</p>
-    <p>Couples who prioritise spa quality: Naman. Couples who prioritise guaranteed quiet and lower price: TIA.</p>
-<p>It's a genuine split, which is unusual for a comparison this close in tier.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=TIA+Wellness+Resort+Da+Nang&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book TIA Wellness Resort on Booking.com →</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Naman+Retreat+Da+Nang&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Naman Retreat on Booking.com →</a>
-    </div>
-  </div>
-
-  <div class="cmp-section">
-    <h2>More <em>Comparisons &amp; Guides</em></h2>
-    <div class="cmp-links">
-      <a href="tia-wellness-resort-da-nang.html" class="cmp-link-btn">TIA Wellness Resort Review</a>
-      <a href="naman-retreat-da-nang.html" class="cmp-link-btn">Naman Retreat Review</a>
-      <a href="luxury-hotels-da-nang.html" class="cmp-link-btn">Da Nang Luxury Hotels</a>
-      <a href="best-luxury-resort-couples-da-nang.html" class="cmp-link-btn">Best Couples Resorts</a>
-      <a href="non-nuoc-beach-da-nang.html" class="cmp-link-btn">Non Nuoc Beach Guide</a>
+    <div class="hvh-editors-pick-img">
+      <img src="images/broll-naman-retreat-aerial-pool.jpg" alt="Naman Retreat aerial view of pool and villas">
     </div>
   </div>
 </div>
+
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Who each hotel is actually <em>for</em></h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">TIA Wellness Resort</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Couples who want strictly enforced adults-only quiet and a lower entry price.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>18+ strictly enforced, guaranteed quiet</li>
+          <li>Lower nightly rate than Naman</li>
+          <li>Closer to the city and An Thuong dining</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Spa is good but not a destination in itself</li>
+          <li>Limited on-site dining variety</li>
+        </ul>
+      </div>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Naman Retreat</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Couples who want villa living, a destination-quality spa, and standout Vietnamese dining.</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Naman Spa, widely rated among Vietnam's best</li>
+          <li>Hay Hay restaurant, excellent Vietnamese</li>
+          <li>72 private villas, more architecturally striking</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Not strictly adults-only, families technically allowed</li>
+          <li>Spa treatments cost extra, not bundled into the rate</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Editorial Scorecard</span>
+    <h2 class="hvh-h2">Our <em>Scores</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>TIA Wellness</th><th>Naman Retreat</th><th>Winner</th></tr></thead>
+          <tbody>
+            <tr><td>Spa</td><td class="hvh-scorecard-score">7.8</td><td class="hvh-scorecard-score">9.5</td><td><span class="hvh-winner-badge">Naman Retreat</span></td></tr>
+            <tr><td>Design</td><td class="hvh-scorecard-score">7.6</td><td class="hvh-scorecard-score">9.3</td><td><span class="hvh-winner-badge">Naman Retreat</span></td></tr>
+            <tr><td>Couples Quiet</td><td class="hvh-scorecard-score">9.4</td><td class="hvh-scorecard-score">8.2</td><td><span class="hvh-winner-badge">TIA Wellness</span></td></tr>
+            <tr><td>Dining</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Naman Retreat</span></td></tr>
+            <tr><td>Rooms &amp; Villas</td><td class="hvh-scorecard-score">7.9</td><td class="hvh-scorecard-score">9.0</td><td><span class="hvh-winner-badge">Naman Retreat</span></td></tr>
+            <tr><td>Location</td><td class="hvh-scorecard-score">8.4</td><td class="hvh-scorecard-score">7.5</td><td><span class="hvh-winner-badge">TIA Wellness</span></td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">8.3</td><td class="hvh-scorecard-score">7.6</td><td><span class="hvh-winner-badge">TIA Wellness</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Spa</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">7.8</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">9.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">7.6</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">9.3</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples Quiet</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">9.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">8.2</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Dining</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms &amp; Villas</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">7.9</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">8.4</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">TIA Wellness</span><span class="hvh-scorecard-card-score">8.3</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Naman Retreat</span><span class="hvh-scorecard-card-score">7.6</span></div></div>
+    </div>
+
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">TIA Wellness Resort</div>
+        <div class="hvh-overall-score-num">8.1<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Naman Retreat</div>
+        <div class="hvh-overall-score-num">8.6<span>/10</span></div>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Side by Side</span>
+    <h2 class="hvh-h2">The <em>Spa</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach panoramic view near TIA Wellness Resort">
+          <span class="hvh-photo-compare-tag">TIA Wellness</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-naman-retreat-da-nang-e25abed6.jpg" alt="Naman Retreat spa and villa grounds">
+          <span class="hvh-photo-compare-tag">Naman Retreat</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">TIA's wellness programming is integrated into the stay, healthy cuisine, yoga, and the quiet that comes from a strict adults-only policy. Naman Spa is the standout of the two, a large, architecturally beautiful facility that people travel specifically to use, though treatments cost extra.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Naman Retreat — for spa quality</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Property</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="Aerial view of My Khe Beach near TIA Wellness Resort, Da Nang">
+          <span class="hvh-photo-compare-tag">TIA Wellness</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-naman-retreat-da-nang-exterior.jpg" alt="Naman Retreat exterior and villas">
+          <span class="hvh-photo-compare-tag">Naman Retreat</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">TIA is a small, understated, roughly 50-room property on My Khe Beach, about 12 minutes from the city. Naman Retreat is 72 villas on Non Nuoc Beach, more architecturally striking, about 20 minutes from the city but closer to Hoi An.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Naman Retreat — for design</span></div>
+    </div>
+
+    <h2 class="hvh-h2">The <em>Rooms</em></h2>
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/my-khe-beach-palms.jpg" alt="My Khe Beach palms near TIA Wellness Resort">
+          <span class="hvh-photo-compare-tag">TIA Wellness</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-naman-retreat-da-nang-e25abed6.jpg" alt="Naman Retreat villa interior and grounds">
+          <span class="hvh-photo-compare-tag">Naman Retreat</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">TIA is room-based, no villas, roughly 50 keys at an intimate scale. Naman is entirely villa-based across 72 units, some with private pools, which is the bigger structural difference between the two properties.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Naman Retreat — for villa living</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book?</span>
+    <h2 class="hvh-h2">Match the hotel to <em>your trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book TIA Wellness If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Strictly enforced adults-only quiet</li>
+          <li>A lower entry price in the same tier</li>
+          <li>Easier access to city dining on An Thuong</li>
+          <li>Wellness programming built into the stay, not an add-on</li>
+        </ul>
+      </div>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Naman Retreat If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>One of Vietnam's best hotel spas</li>
+          <li>Private villa living over a standard room</li>
+          <li>Hay Hay's standout Vietnamese cooking</li>
+          <li>Easier day trips to Hoi An</li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The honest <em>tradeoffs</em></h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">TIA Wellness Resort</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Spa is good but not a destination in its own right</li>
+          <li>Limited on-site dining variety compared to Naman</li>
+          <li>No villas, room-based only</li>
+        </ul>
+      </div>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Naman Retreat</div>
+        <span class="hvh-tradeoff-label">Watch Out For</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Not strictly adults-only, families technically permitted</li>
+          <li>Spa treatments are paid separately, not bundled into the rate</li>
+          <li>Further from the city and An Thuong dining</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">If guaranteed adults-only quiet is the whole point of your trip, book TIA. The strict 18+ policy, lower price, and easier access to city dining make it one of a kind in Da Nang and nothing else here replicates that certainty.</p>
+      <p class="hvh-final-verdict-body">For everyone else, Naman Retreat is the stronger hotel. Naman Spa is one of the best hotel spas in Vietnam, the villas are more distinctive than TIA's rooms, and Hay Hay is a better restaurant than anything on-site at TIA. It also sits closer to Hoi An for day trips.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Naman Retreat, unless guaranteed adults-only quiet is your top priority</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/tia-wellness-resort.html?aid=1784897&sid=tia-wellness-vs-naman-retreat-da-nang--tia-wellness" data-booking-url="https://www.booking.com/hotel/vn/tia-wellness-resort.html?aid=1784897&sid=tia-wellness-vs-naman-retreat-da-nang--tia-wellness" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check TIA Wellness Rates →</a>
+        <a href="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=tia-wellness-vs-naman-retreat-da-nang--naman-retreat" data-booking-url="https://www.booking.com/hotel/vn/naman-retreat-da-nang.html?aid=1784897&sid=tia-wellness-vs-naman-retreat-da-nang--naman-retreat" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Naman Retreat Rates →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </main>
 
 <section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">

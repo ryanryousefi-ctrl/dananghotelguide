@@ -187,6 +187,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -245,6 +246,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -417,168 +419,219 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </div>
 
 <main class="cmp-main">
-<div class="cmp-hero">
-  <div class="cmp-hero-inner">
-    <div class="cmp-hero-eyebrow">Da Nang Hotel Comparison &nbsp;&middot;&nbsp; 2026</div>
-    <h1>Four Points by Sheraton vs <em>Novotel</em> Da Nang</h1>
-    <p class="cmp-hero-sub">The Four Points is on the beach. The Novotel Premier is on the Han River with one of the city's best sky bars. Two strong midrange options, one decision.</p>
-    <div class="cmp-hero-verdict">Four Points for beach access. Novotel for city exploration and the sky bar.</div>
+
+<section class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">Four Points <em>vs</em> Novotel</h1>
+    <p class="hvh-hero-sub">The Four Points is on My Khe Beach. The Novotel Premier is on the Han River with one of the city's best rooftop bars. Beach access versus city walkability.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/review-four-points-sheraton-da-nang-exterior.jpg" alt="Four Points by Sheraton Danang exterior on My Khe Beach">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">Four Points by Sheraton Danang</div>
+        </div>
+      </div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/novotel-da-nang-han-river.jpg" alt="Novotel Danang Premier Han River exterior">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Novotel Danang Premier Han River</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="cmp-body">
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
+<section class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">Novotel Danang Premier Han River</div>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">Level 36 is one of the most popular rooftop bars in Da Nang, the river views from high floors are genuinely impressive, and Dragon Bridge and Han Market are a 5-10 minute walk. Four Points does the beach job competently but nothing here surprises you. If your plan involves evenings and city exploration, the Novotel earns the higher rate.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-novotel-da-nang-han-river-exterior.jpg" alt="Novotel Danang Premier Han River riverside exterior">
+    </div>
+  </div>
+</section>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Four Points by Sheraton Danang</h3>
-        <ul>
-          <li>★★★★ Beachfront hotel</li><li>200 rooms on My Khe Beach</li><li>Direct beach access, pool</li><li>Marriott Bonvoy loyalty (base tier)</li><li>~15 min from city centre</li><li>From ~$65/night</li>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Quick <em>read</em> before you scroll further</h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Four Points by Sheraton Danang</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Beach-first travelers, families, Marriott Bonvoy members, early swimmers</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Direct My Khe Beach access with sunbeds</li>
+          <li>Cheaper nightly rate</li>
+          <li>Marriott Bonvoy points</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>~20 min Grab to Dragon Bridge and Han Market</li>
+          <li>No standout evening amenity</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Novotel Danang Premier Han River</h3>
-        <ul>
-          <li>★★★★★ Upscale city hotel</li><li>323 rooms, one of Da Nang's tallest</li><li>Han River, Level 36 Sky Bar</li><li>Accor ALL loyalty programme</li><li>5 min from Han Market</li><li>From ~$80/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Novotel Danang Premier Han River</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">City explorers, business travelers, Accor ALL members, evening-oriented guests</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Level 36 Sky Bar, one of the city's best</li>
+          <li>5-10 min walk to Dragon Bridge and Han Market</li>
+          <li>High-floor river view rooms are genuinely impressive</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>No beach, ~10 min Grab to My Khe</li>
+          <li>$15-20 more per night than Four Points</li>
+          <li>City-view rooms are unremarkable, request river-facing</li>
         </ul>
       </div>
     </div>
-    <p>The Four Points and Novotel Premier are at different parts of the city with different strengths. The Four Points is a solid beach hotel: nothing exceptional, but competent, well-located on My Khe, and priced to make the beach option accessible without going budget.</p>
-    <p>The Novotel Premier Han River is a proper upscale hotel. Level 36 is one of the most popular rooftop bars in Da Nang and the river views from high-floor rooms are genuinely impressive. If your priority is the beach, it is the wrong hotel. If you want a city base with evening options walking distance away, it is the right one.</p>
-  </div>
 
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Four Points by Sheraton Danang</th><th>Novotel Danang Premier Han River</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Zone</td><td>My Khe Beach</td><td>Han River, city centre</td></tr>
-        <tr><td>From airport</td><td>~15 min · $4–6</td><td>~15 min · $4–6</td></tr>
-        <tr><td>Beach</td><td>Direct My Khe access</td><td>~10 min Grab to beach</td></tr>
-        <tr><td>Dragon Bridge</td><td>~20 min Grab</td><td>10 min walk</td></tr>
-        <tr><td>Han Market</td><td>~20 min Grab</td><td>5 min walk</td></tr>
-        <tr><td>An Thuong restaurants</td><td>~10 min Grab</td><td>~15 min Grab</td></tr>
-    
-      </tbody>
-    </table>
-    <p>This is the real comparison: beach access versus city walkability. The Four Points gives you the beach in the morning and costs you a Grab every evening. The Novotel gives you Dragon Bridge walking distance and costs you a Grab to the beach. Which matters more depends entirely on how you travel.</p>
-  </div>
+    <span class="hvh-eyebrow">Our Scores</span>
+    <h2 class="hvh-h2">Editorial <em>scorecard</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Four Points</th><th>Novotel</th></tr></thead>
+          <tbody>
+            <tr><td>Beach Access</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">3.0</td></tr>
+            <tr><td>Location / Walkability</td><td class="hvh-scorecard-score">6.0</td><td class="hvh-scorecard-score">8.5</td></tr>
+            <tr><td>Rooms &amp; Views</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">8.0</td></tr>
+            <tr><td>Rooftop / Bar</td><td class="hvh-scorecard-score">5.5</td><td class="hvh-scorecard-score">9.0</td></tr>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">6.5</td></tr>
+            <tr><td>Spa</td><td class="hvh-scorecard-score">5.5</td><td class="hvh-scorecard-score">7.5</td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">7.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Beach Access</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">3.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Location / Walkability</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">6.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">8.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms &amp; Views</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooftop / Bar</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">5.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">6.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Spa</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">5.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Four Points</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Novotel</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
+    </div>
 
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Space</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Four Points by Sheraton Danang, Rooms</h3>
-        <ul>
-          <li>Standard rooms from ~30 sqm</li><li>Beach view and pool view options</li><li>Balconies on beachfront rooms</li><li>[VERIFY: exact sqm]</li><li>Nothing remarkable inside, clean and comfortable</li><li>Good blackout curtains for morning beach light</li>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Four Points by Sheraton</div>
+        <div class="hvh-overall-score-num">6.7<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Novotel Premier Han River</div>
+        <div class="hvh-overall-score-num">7.5<span>/10</span></div>
+      </div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Property</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-four-points-sheraton-da-nang-exterior.jpg" alt="Four Points by Sheraton Danang beachfront exterior">
+          <span class="hvh-photo-compare-tag">Four Points</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/novotel-da-nang-han-river.jpg" alt="Novotel Danang Premier Han River tower exterior">
+          <span class="hvh-photo-compare-tag">Novotel</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Four Points is a low-rise beachfront block on My Khe. The Novotel Premier is one of Da Nang's tallest buildings, a proper city tower on the Han River with a very different skyline presence.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Depends on priority</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Views</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-four-points-sheraton-da-nang-79e68188.jpg" alt="Four Points by Sheraton Danang beach view">
+          <span class="hvh-photo-compare-tag">Four Points</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-novotel-da-nang-han-river-79e68188.jpg" alt="Novotel Danang Premier Han River view">
+          <span class="hvh-photo-compare-tag">Novotel</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Book a high-floor river-facing room at the Novotel and it earns its rate easily. City-view rooms are unremarkable, so request river view and specify floor at booking. Four Points rooms are consistent regardless of floor, beach or pool view either way.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Novotel (if river-facing)</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book</span>
+    <h2 class="hvh-h2">Match it to your <em>trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Four Points If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Direct beach access every morning</li>
+          <li>A lower nightly rate</li>
+          <li>Marriott Bonvoy points to accumulate</li>
+          <li>A reliable, no-surprises beach hotel</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Novotel Danang Premier Han River, Rooms</h3>
-        <ul>
-          <li>Standard rooms from 35 sqm</li><li>High-floor river views are the main draw</li><li>Request river view at booking, specify floor</li><li>Executive floor with lounge access</li><li>[VERIFY: exact sqm]</li><li>City-view rooms significantly less impressive</li>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Novotel Premier If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Walking access to Dragon Bridge and Han Market</li>
+          <li>Level 36 Sky Bar and city skyline views</li>
+          <li>A high-floor river view room</li>
+          <li>Accor ALL points or business-friendly location</li>
         </ul>
       </div>
     </div>
-    <p>Book a high-floor river-facing room at the Novotel and it earns its rate easily. Book a low-floor city-view room and it is just a hotel room. The Four Points rooms are consistent regardless of floor. Specify your preference at the Novotel before you arrive.</p>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Four Points by Sheraton Danang</th><th>Novotel Danang Premier Han River</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Pool</td><td>Outdoor pool, beachside</td><td>Rooftop pool on 36F</td></tr>
-        <tr><td>Bar</td><td>Pool bar, beach bar</td><td>Level 36 Sky Bar (one of the city's best)</td></tr>
-        <tr><td>Beach</td><td>Direct My Khe access, sunbeds</td><td>None (city hotel)</td></tr>
-        <tr><td>Gym</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Spa</td><td>Basic treatments</td><td>✓ Full-service spa</td></tr>
-        <tr><td>Restaurants</td><td>Main restaurant, pool bar</td><td>Multiple outlets, restaurant + bar</td></tr>
-        <tr><td>Loyalty</td><td>Marriott Bonvoy</td><td>ALL, Accor Live Limitless</td></tr>
-    
-      </tbody>
-    </table>
-    <p>Level 36 at the Novotel is the facility that changes the decision for evening-oriented travellers. It is one of the best rooftop bars in the city, the views are strong, and it draws a mix of guests and locals. Four Points has beach access and a pool bar but nothing equivalent in the evening.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Book Four Points if&hellip;</h3>
-        <ul>
-          <li>Beach-first travellers who will be in the water every day</li><li>Marriott Bonvoy members accumulating points</li><li>Families where beach proximity matters most</li><li>Budget-conscious guests who still want brand reliability</li><li>Early-morning swimmers and surfers</li>
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The <em>honest</em> tradeoffs</h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Four Points by Sheraton Danang</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>~20 min Grab to Dragon Bridge, Han Market, city sights</li>
+          <li>No standout bar or evening amenity</li>
+          <li>Spa is basic treatments only</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Book Novotel Premier if&hellip;</h3>
-        <ul>
-          <li>City explorers who want to walk to dinner and Dragon Bridge</li><li>Business travellers with city-centre meetings</li><li>Accor ALL members</li><li>Guests who care about the rooftop bar experience</li><li>First-timers who want easy access to Da Nang's main sights</li>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Novotel Danang Premier Han River</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>No beach access, ~10 min Grab to My Khe</li>
+          <li>City-view rooms are a letdown next to river-view rooms</li>
+          <li>$15-20 more per night than Four Points</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>The Four Points is a beach hotel that does its job: My Khe Beach, pool, competent rooms, reasonable price. Nothing here will disappoint, nothing will surprise you.</p>
-    <p>The Novotel Premier is the more interesting hotel. Level 36 is worth visiting even if you're not staying there, and the river views from upper floors are among the better city views in Da Nang.</p>
-    <p>If you are spending your days at the beach and your evenings eating locally, Four Points makes more logistical sense. If the plan involves city exploration, riverside bars, and Han Market mornings, the Novotel is better positioned.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Four+Points+by+Sheraton+Da+Nang&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Four Points on Booking.com &rarr;</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Novotel+Da+Nang+Premier+Han+River&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Novotel Premier on Booking.com &rarr;</a>
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">The Four Points does its job: My Khe Beach, a pool, competent rooms, a reasonable price. Nothing here disappoints, nothing surprises you either. The Novotel Premier is the more interesting hotel. Level 36 is worth visiting even if you're not staying there, and the river views from upper floors are among the better city views in Da Nang.</p>
+      <p class="hvh-final-verdict-body">If your days are at the beach and evenings are spent eating locally, Four Points makes more logistical sense. If the plan involves city exploration, riverside bars, and Han Market mornings, book the Novotel and request a high floor.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Novotel Danang Premier Han River</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&sid=four-points-vs-novotel-da-nang--four-points-by-sheraton-danang" data-booking-url="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&sid=four-points-vs-novotel-da-nang--four-points-by-sheraton-danang" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Four Points Rates &rarr;</a>
+        <a href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=four-points-vs-novotel-da-nang--novotel-danang-premier-han-river" data-booking-url="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=four-points-vs-novotel-da-nang--novotel-danang-premier-han-river" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Novotel Rates &rarr;</a>
+      </div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      
-      <a href="novotel-vs-hilton-da-nang.html" class="cmp-link-btn">Novotel vs Hilton</a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Sheraton vs Hyatt</a>
-      <a href="da-nang-beach-hotels.html" class="cmp-link-btn">All Beach Hotels</a>
-      <a href="da-nang-riverfront-hotels.html" class="cmp-link-btn">Han River Hotels</a>
-    
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">All Best Hotels</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
-    </div>
   </div>
 </div>
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Four Points vs Novotel Premier: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Four Points or Novotel Premier — which is better value?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">The Four Points is cheaper and gives you direct beach access. The Novotel Premier is $15–20 more per night and gives you a rooftop sky bar and river views. Value depends on your priorities: if beach time is the plan, Four Points is better value. If evenings and city access matter, the Novotel justifies the premium.</p>
-      </details>
-    
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">

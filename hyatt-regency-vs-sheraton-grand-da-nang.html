@@ -187,6 +187,7 @@
   --ocean-deep:#0D3535;--ocean-pale:#EAF4F4;
   --coral:#C8604A;--coral-light:#E07A62;
   --ink:#1A1A18;--ink-soft:#3C3C38;--ink-muted:#7A7A70;
+  --night:#0A0A0A;
   --font-serif:'Instrument Serif',Georgia,serif;
   --font-sans:'Satoshi',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
@@ -245,6 +246,7 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
   </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<link rel="stylesheet" href="hotel-vs-hotel.css">
 </head>
 <body>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -417,172 +419,234 @@ a{text-decoration:none;color:inherit}body{flex:1;min-width:0}
 </div>
 
 <main class="cmp-main">
-<div class="cmp-hero">
-  <div class="cmp-hero-inner">
-    <div class="cmp-hero-eyebrow">Da Nang Hotel Comparison &nbsp;&middot;&nbsp; 2026</div>
-    <h1>Hyatt Regency vs <em>Sheraton Grand</em> Da Nang</h1>
-    <p class="cmp-hero-sub">The two biggest names on My Khe Beach go head to head. Same zone, similar rates, different experiences.</p>
-    <div class="cmp-hero-verdict">Sheraton for families. Hyatt for design and the pool.</div>
+
+<section class="hvh-hero">
+  <div class="hvh-hero-inner">
+    <div class="hvh-hero-eyebrow">Hotel Comparison</div>
+    <h1 class="hvh-hero-title">Hyatt Regency <em>vs</em> Sheraton Grand</h1>
+    <p class="hvh-hero-sub">The two biggest names on My Khe Beach, 400 metres apart on Truong Sa Road. Same zone, similar rates, genuinely different experiences.</p>
+    <div class="hvh-split">
+      <div class="hvh-split-side">
+        <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang Resort pool and pavilion architecture">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel A</div>
+          <div class="hvh-split-hotel-name">Hyatt Regency Danang Resort</div>
+        </div>
+      </div>
+      <div class="hvh-split-side">
+        <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort tower and pool">
+        <div class="hvh-split-label">
+          <div class="hvh-split-hotel-eyebrow">Hotel B</div>
+          <div class="hvh-split-hotel-name">Sheraton Grand Danang Resort</div>
+        </div>
+      </div>
+      <div class="hvh-split-divider">VS</div>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="cmp-body">
-  <nav aria-label="Page sections" style="background:var(--sand);border-radius:var(--r-lg);padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem">
-    <a href="#overview" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Overview</a>
-    <a href="#location" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Location</a>
-    <a href="#rooms" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Rooms</a>
-    <a href="#amenities" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Amenities</a>
-    <a href="#best-for" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Best For</a>
-    <a href="#verdict" style="color:var(--ocean);font-size:.83rem;font-weight:600;text-decoration:none;padding:4px 12px;background:rgba(27,92,92,.1);border-radius:100px">Verdict</a>
-  </nav>
+<section class="hvh-editors-pick">
+  <div class="hvh-editors-pick-inner">
+    <div>
+      <div class="hvh-editors-pick-badge">Editor's Pick</div>
+      <div class="hvh-editors-pick-name">Hyatt Regency Danang Resort</div>
+      <div class="hvh-editors-pick-why-label">Why It Wins</div>
+      <p class="hvh-editors-pick-why">The Hyatt is lower-rise, spread across pavilion-style buildings with more architectural personality, five pools including a lap pool, and the well-regarded Stillwater Spa. The design difference is noticeable the moment you walk in. That said, this pick comes with a real asterisk: if you're traveling with kids under 12, skip straight to Sheraton Grand below.</p>
+    </div>
+    <div class="hvh-editors-pick-img">
+      <img src="images/review-hyatt-regency-da-nang-exterior.jpg" alt="Hyatt Regency Danang Resort beachfront pavilion exterior">
+    </div>
+  </div>
+</section>
 
-  <div class="cmp-section" id="overview">
-    <h2>Hotel <em>Overview</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Hyatt Regency Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ Luxury resort</li><li>318 rooms across 23 buildings</li><li>Truong Sa Road, My Khe Beach</li><li>5 outdoor pools including lap pool</li><li>World of Hyatt loyalty</li><li>From ~$120/night</li>
+<div class="hvh-section">
+  <div class="hvh-section-inner">
+
+    <span class="hvh-eyebrow">The 30-Second Verdict</span>
+    <h2 class="hvh-h2">Quick <em>read</em> before you scroll further</h2>
+    <div class="hvh-verdict30">
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Hyatt Regency Danang Resort</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Couples who care about design, World of Hyatt members, smaller groups wanting an intimate feel</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>5 pools including a lap pool</li>
+          <li>Pavilion-style architecture with more character</li>
+          <li>Stillwater Spa, well-regarded</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Usually ~$10 more per night</li>
+          <li>Kids club less structured than Sheraton's</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort</h3>
-        <ul>
-          <li>★★★★★ Full-service resort</li><li>258 rooms in tower format</li><li>Truong Sa Road, My Khe Beach</li><li>Large outdoor pool + kids pool</li><li>Marriott Bonvoy loyalty</li><li>From ~$110/night</li>
+      <div class="hvh-verdict30-card">
+        <div class="hvh-verdict30-hotel">Sheraton Grand Danang Resort</div>
+        <div class="hvh-verdict30-label">Best For</div>
+        <p class="hvh-verdict30-bestfor">Families with children under 12, Marriott Bonvoy members, larger groups needing connecting rooms</p>
+        <div class="hvh-verdict30-label">Wins</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-wins">
+          <li>Genuinely excellent kids club and waterslides</li>
+          <li>High-floor ocean-view tower rooms deliver</li>
+          <li>Larger suites and connecting rooms for families</li>
+        </ul>
+        <div class="hvh-verdict30-label">Tradeoff</div>
+        <ul class="hvh-verdict30-list hvh-verdict30-tradeoff">
+          <li>Tower format has less architectural personality</li>
+          <li>Fewer pools than Hyatt's five</li>
         </ul>
       </div>
     </div>
-    <p>These two properties are 400 metres apart on Truong Sa Road and compete for the same My Khe Beach customer. They are different hotels. The Hyatt is lower-rise, spread across pavilion-style buildings, and the architecture has more personality. [VERIFY: building count and layout]</p>
-    <p>The Sheraton is a tower with a conventional resort footprint, better for families with children because the kids club is genuinely good and the pool area is larger and more sheltered. If you're choosing between them, the right answer depends on who you're travelling with. See the <a href="best-hotels-in-da-nang.html" style="color:var(--ocean);font-weight:600">full hotel ranking</a> for context.</p>
-  </div>
 
-  <div class="cmp-section" id="location">
-    <h2><em>Location</em> Comparison</h2>
-    <table class="cmp-table">
-      <thead><tr><th>Category</th><th>Hyatt Regency Da Nang Resort</th><th>Sheraton Grand Da Nang Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Beach</td><td>Direct My Khe access</td><td>Direct My Khe access</td></tr>
-        <tr><td>From airport</td><td>~20 min · $5–7</td><td>~20 min · $5–7</td></tr>
-        <tr><td>From city centre</td><td>~20 min Grab</td><td>~20 min Grab</td></tr>
-        <tr><td>Nearest restaurants</td><td>An Thuong strip ~15 min</td><td>An Thuong strip ~15 min</td></tr>
-        <tr><td>Dragon Bridge fireworks</td><td>~30 min taxi</td><td>~30 min taxi</td></tr>
-        <tr><td>Marble Mountains</td><td>~20 min south</td><td>~20 min south</td></tr>
-    
-      </tbody>
-    </table>
-    <p>Neither property has a meaningful location advantage over the other. They sit on the same stretch of beach, equidistant from the airport and city. The beach here is wide, clean, and not crowded in shoulder season. Both hotels are too far from the Han River to walk anywhere interesting, so factor in Grab costs for evenings out.</p>
-  </div>
+    <span class="hvh-eyebrow">Our Scores</span>
+    <h2 class="hvh-h2">Editorial <em>scorecard</em></h2>
+    <div class="hvh-scorecard-wrap">
+      <div class="hvh-scorecard-scroll">
+        <table class="hvh-scorecard">
+          <thead><tr><th>Category</th><th>Hyatt Regency</th><th>Sheraton Grand</th></tr></thead>
+          <tbody>
+            <tr><td>Design / Architecture</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">6.5</td></tr>
+            <tr><td>Pool</td><td class="hvh-scorecard-score">9.0</td><td class="hvh-scorecard-score">7.5</td></tr>
+            <tr><td>Kids / Family</td><td class="hvh-scorecard-score">6.5</td><td class="hvh-scorecard-score">9.0</td></tr>
+            <tr><td>Rooms &amp; Views</td><td class="hvh-scorecard-score">7.5</td><td class="hvh-scorecard-score">8.0</td></tr>
+            <tr><td>Spa</td><td class="hvh-scorecard-score">8.0</td><td class="hvh-scorecard-score">7.0</td></tr>
+            <tr><td>Couples</td><td class="hvh-scorecard-score">8.5</td><td class="hvh-scorecard-score">6.5</td></tr>
+            <tr><td>Value</td><td class="hvh-scorecard-score">7.0</td><td class="hvh-scorecard-score">7.5</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hvh-scorecard-cards">
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Design / Architecture</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">6.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Pool</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">9.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Kids / Family</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">6.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">9.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Rooms &amp; Views</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">8.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Spa</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.0</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Couples</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">8.5</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">6.5</span></div></div>
+      <div class="hvh-scorecard-card"><div class="hvh-scorecard-card-cat">Value</div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Hyatt Regency</span><span class="hvh-scorecard-card-score">7.0</span></div><div class="hvh-scorecard-card-row"><span class="hvh-scorecard-card-hotel">Sheraton Grand</span><span class="hvh-scorecard-card-score">7.5</span></div></div>
+    </div>
 
-  <div class="cmp-section" id="rooms">
-    <h2>Rooms &amp; <em>Space</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Hyatt Regency Da Nang Resort, Rooms</h3>
-        <ul>
-          <li>Standard rooms from ~46 sqm</li><li>Garden, pool, or ocean view options</li><li>Lower-rise pavilion format, quieter</li><li>Balconies on most room types</li><li>[VERIFY: exact sqm, balcony availability]</li><li>Pool access rooms available</li>
+    <div class="hvh-overall-scores">
+      <div class="hvh-overall-score-card hvh-is-winner">
+        <div class="hvh-overall-score-hotel">Hyatt Regency Danang</div>
+        <div class="hvh-overall-score-num">7.9<span>/10</span></div>
+      </div>
+      <div class="hvh-overall-score-card">
+        <div class="hvh-overall-score-hotel">Sheraton Grand Danang</div>
+        <div class="hvh-overall-score-num">7.5<span>/10</span></div>
+      </div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Architecture</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang pavilion-style architecture">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang tower architecture">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">The Hyatt spreads 318 rooms across lower-rise pavilion buildings with genuine architectural personality. The Sheraton is a conventional tower with 258 rooms, more efficient but less distinctive to walk through.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge">Hyatt Regency</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Pools</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-hyatt-regency-da-nang-79e68188.jpg" alt="Hyatt Regency Danang pool area">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-79e68188.jpg" alt="Sheraton Grand Danang pool area">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Hyatt has five pools including a proper lap pool, more variety for adults. Sheraton has a large main pool plus a dedicated kids pool with waterslides, built specifically for families rather than lap swimmers.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Depends who's swimming</span></div>
+    </div>
+
+    <div class="hvh-photo-compare">
+      <div class="hvh-photo-compare-label">The Property</div>
+      <div class="hvh-photo-compare-grid">
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-hyatt-regency-da-nang-exterior.jpg" alt="Hyatt Regency Danang beachfront exterior">
+          <span class="hvh-photo-compare-tag">Hyatt Regency</span>
+        </div>
+        <div class="hvh-photo-compare-item">
+          <img src="images/review-sheraton-grand-da-nang-exterior.jpg" alt="Sheraton Grand Danang beachfront exterior">
+          <span class="hvh-photo-compare-tag">Sheraton Grand</span>
+        </div>
+      </div>
+      <p class="hvh-photo-compare-note">Both sit on the same stretch of Truong Sa Road, 400 metres apart, with direct My Khe beach access and equal distance from the airport. Neither has a location advantage; the choice comes down to what's inside the gate.</p>
+      <div class="hvh-photo-compare-winner-row"><span class="hvh-winner-badge hvh-tie">Same location</span></div>
+    </div>
+
+    <span class="hvh-eyebrow">Which Should You Book</span>
+    <h2 class="hvh-h2">Match it to your <em>trip</em></h2>
+    <div class="hvh-book-check">
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Hyatt Regency If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Design and atmosphere as a couple</li>
+          <li>World of Hyatt points or status upgrades</li>
+          <li>Multiple pool options, including a proper lap pool</li>
+          <li>A smaller, more intimate resort feel</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Sheraton Grand Da Nang Resort, Rooms</h3>
-        <ul>
-          <li>Standard rooms from ~44 sqm</li><li>Ocean-facing tower rooms have strong views</li><li>High-floor rooms significantly better</li><li>Larger suites available for families</li><li>[VERIFY: exact sqm]</li><li>Connecting rooms available for families</li>
+      <div class="hvh-book-check-card">
+        <div class="hvh-book-check-title">Book Sheraton Grand If You Want:</div>
+        <ul class="hvh-book-check-list">
+          <li>Traveling with children under 12</li>
+          <li>Marriott Bonvoy points or status</li>
+          <li>A high-floor ocean-view tower room</li>
+          <li>Connecting rooms for a larger family group</li>
         </ul>
       </div>
     </div>
-    <p>Book a high-floor ocean-view room at the Sheraton and it genuinely delivers. The Hyatt's pavilion layout means views are more about garden and pool than sea, unless you pay for the oceanfront category. At similar rack rates, the Hyatt's architecture earns its price more convincingly.</p>
-  </div>
 
-  <div class="cmp-section" id="amenities">
-    <h2>Amenities &amp; <em>Facilities</em></h2>
-    <table class="cmp-table">
-      <thead><tr><th>Amenity</th><th>Hyatt Regency Da Nang Resort</th><th>Sheraton Grand Da Nang Resort</th></tr></thead>
-      <tbody>
-        
-        <tr><td>Pools</td><td>5 pools including lap pool</td><td>Main pool + dedicated kids pool</td></tr>
-        <tr><td>Kids club</td><td>Camp Hyatt, 4–12 years</td><td>✓ Strong programme, waterslides</td></tr>
-        <tr><td>Spa</td><td>Stillwater Spa</td><td>Shine Spa for Sheraton</td></tr>
-        <tr><td>Fitness</td><td>✓ Full gym</td><td>✓ Full gym</td></tr>
-        <tr><td>Restaurants</td><td>3 F&B outlets including beach bar</td><td>Multiple outlets, pool bar</td></tr>
-        <tr><td>Beach service</td><td>✓ Sunbeds, towels</td><td>✓ Sunbeds, towels</td></tr>
-        <tr><td>Loyalty</td><td>World of Hyatt</td><td>Marriott Bonvoy</td></tr>
-    
-      </tbody>
-    </table>
-    <p>The Sheraton's kids club and waterslide setup is the better family facility. The Hyatt has the better pool count and the Stillwater Spa has a solid reputation. Both have beach service. Neither is missing anything you'd expect at this price point.</p>
-  </div>
-
-  <div class="cmp-section" id="best-for">
-    <h2>Who Each Hotel <em>Is Best For</em></h2>
-    <div class="cmp-grid">
-      <div class="cmp-card">
-        <h3>Book Hyatt Regency if&hellip;</h3>
-        <ul>
-          <li>Couples who care about design and atmosphere</li><li>World of Hyatt members pursuing points or upgrades</li><li>Guests who want multiple pool options</li><li>Smaller groups, more intimate resort feel</li><li>Design-forward travellers who find tower hotels generic</li>
+    <span class="hvh-eyebrow">Know Before You Book</span>
+    <h2 class="hvh-h2">The <em>honest</em> tradeoffs</h2>
+    <div class="hvh-tradeoff">
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Hyatt Regency Danang</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Kids club is fine but not purpose-built like Sheraton's</li>
+          <li>Usually ~$10 more per night</li>
+          <li>Garden/pool-view rooms outnumber true oceanfront</li>
         </ul>
       </div>
-      <div class="cmp-card">
-        <h3>Book Sheraton Grand if&hellip;</h3>
-        <ul>
-          <li>Families with children under 12, kids club is excellent</li><li>Marriott Bonvoy members</li><li>Guests wanting ocean views from a high floor</li><li>Larger groups or families needing connecting rooms</li><li>Vietnamese public holidays when the resort atmosphere suits families</li>
+      <div class="hvh-tradeoff-card">
+        <div class="hvh-tradeoff-hotel">Sheraton Grand Danang</div>
+        <span class="hvh-tradeoff-label">Tradeoffs</span>
+        <ul class="hvh-tradeoff-list">
+          <li>Tower format feels more generic than the Hyatt's pavilions</li>
+          <li>Fewer pools, no dedicated lap pool</li>
+          <li>Low-floor rooms lose most of the ocean view appeal</li>
         </ul>
       </div>
     </div>
-  </div>
 
-  <div class="cmp-verdict" id="verdict">
-    <h2>Final Verdict</h2>
-    <p>Skip it if you're a couple looking for atmosphere: the Hyatt will make you happier and the design difference is noticeable the moment you walk in.</p>
-    <p>Skip it if you have children under 12: the Sheraton's family infrastructure, kids club, waterslide, and pool layout is built for exactly this. The Hyatt is fine for kids but the Sheraton is engineered for them.</p>
-    <p>Loyalty programme members: straightforward choice. Bonvoy goes Sheraton, Hyatt goes Hyatt. If you're neutral on points, the Hyatt is the more interesting hotel.</p>
-    <div class="cmp-links">
-      <a href="https://www.booking.com/searchresults.html?ss=Hyatt+Regency+Da+Nang+Resort+and+Spa&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Hyatt Regency on Booking.com &rarr;</a>
-      <a href="https://www.booking.com/searchresults.html?ss=Sheraton+Grand+Da+Nang+Resort&aid=1784897" class="cmp-link-btn primary" target="_blank" rel="nofollow noopener sponsored">Book Sheraton Grand on Booking.com &rarr;</a>
+    <div class="hvh-final-verdict">
+      <div class="hvh-final-verdict-eyebrow">Final Verdict</div>
+      <h2 class="hvh-final-verdict-h2">Which one should you actually book?</h2>
+      <p class="hvh-final-verdict-body">If you're a couple looking for atmosphere, book the Hyatt. The design difference is noticeable the moment you walk in, and the five-pool layout plus Stillwater Spa make it the more distinctive stay.</p>
+      <p class="hvh-final-verdict-body">If you have children under 12, book the Sheraton instead. Its kids club, waterslides, and connecting-room availability are built for exactly this, and the Hyatt is merely fine for kids where the Sheraton is engineered for them. Loyalty members: the choice is easy, Bonvoy goes Sheraton, Hyatt goes Hyatt.</p>
+      <div class="hvh-final-verdict-pick">Our Pick: Hyatt Regency Danang Resort (couples) / Sheraton Grand (families)</div>
+      <div class="hvh-cta-row">
+        <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=hyatt-regency-vs-sheraton-grand--hyatt-regency-danang" data-booking-url="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=hyatt-regency-vs-sheraton-grand--hyatt-regency-danang" class="hvh-cta-btn" target="_blank" rel="nofollow noopener sponsored">Check Hyatt Regency Rates &rarr;</a>
+        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=hyatt-regency-vs-sheraton-grand-da-nang--sheraton-grand-danang-resort" data-booking-url="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=hyatt-regency-vs-sheraton-grand-da-nang--sheraton-grand-danang-resort" class="hvh-cta-btn hvh-cta-secondary" target="_blank" rel="nofollow noopener sponsored">Check Sheraton Grand Rates &rarr;</a>
+      </div>
     </div>
-  </div>
 
-  <div class="cmp-section">
-    <h2>More <em>Comparisons</em></h2>
-    <div class="cmp-links">
-      
-      <a href="hyatt-vs-marriott-da-nang.html" class="cmp-link-btn">Hyatt vs Marriott</a>
-      <a href="sheraton-vs-hyatt-regency-da-nang.html" class="cmp-link-btn">Sheraton vs Hyatt (original)</a>
-      <a href="intercontinental-vs-hyatt-da-nang.html" class="cmp-link-btn">InterContinental vs Hyatt</a>
-      <a href="furama-vs-pullman-da-nang.html" class="cmp-link-btn">Furama vs Pullman</a>
-    
-      <a href="best-hotels-in-da-nang.html" class="cmp-link-btn">All Best Hotels</a>
-      <a href="where-to-stay-in-da-nang.html" class="cmp-link-btn">Where to Stay Guide</a>
-    </div>
   </div>
 </div>
 </main>
-
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
-  <div style="max-width:680px;margin:0 auto;">
-    <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
-    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
-  </div>
-</section>
-
-<section style="background:var(--sand);padding:clamp(2rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem);border-top:1px solid var(--sand-dark);" id="faq">
-  <div style="max-width:760px;margin:0 auto;">
-    <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ocean);margin-bottom:.6rem;">Common Questions</p>
-    <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.8rem;">Hyatt Regency vs Sheraton Grand: <em style="color:var(--ocean);font-style:italic">FAQ</em></h2>
-    <div style="border-top:1px solid var(--sand-dark);">
-      
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Hyatt Regency or Sheraton Grand Da Nang — which is better?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">For couples: Hyatt Regency. The pavilion architecture, Stillwater Spa, and five-pool layout make it the more distinctive experience. For families with children: Sheraton Grand. The kids club, waterslide, and connecting room availability are purpose-built for travelling with under-12s.</p>
-      </details>
-      <details style="border-bottom:1px solid var(--sand-dark);">
-        <summary style="font-size:.95rem;font-weight:600;color:var(--ink);padding:1rem 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Are Hyatt Regency and Sheraton Grand on the same beach?<span style="font-size:1.2rem;color:var(--ocean);flex-shrink:0;margin-left:1rem;">+</span></summary>
-        <p style="font-size:.9rem;color:var(--ink-soft);line-height:1.8;padding:.5rem 0 1rem;max-width:65ch;">Yes. Both sit on Truong Sa Road on My Khe Beach, approximately 400 metres apart. The beach is the same stretch in both cases: wide, clean white sand, good surf in shoulder season. Neither has a location advantage.</p>
-      </details>
-    
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
