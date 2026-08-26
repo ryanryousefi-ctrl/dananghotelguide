@@ -440,7 +440,6 @@ a{text-decoration:none;color:inherit}
 /* ── CINEMATIC HERO ─────────────────────────────────────── */
 .bnh-hero{position:relative;min-height:580px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(180deg,#0A2E33 0%,#12414A 32%,#1B5C5C 58%,#2C7A6B 78%,#3E9270 100%)}
 .bnh-hero-img{position:absolute;inset:0}
-.bnh-hero-mtn{position:absolute;inset:0;width:100%;height:100%}
 .bnh-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,10,.75) 0%, rgba(10,10,10,.35) 46%, rgba(10,10,10,.1) 100%)}
 .bnh-hero-content{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--gutter)}
 .bnh-hero-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
@@ -473,37 +472,26 @@ a{text-decoration:none;color:inherit}
 .bnh-pick-desc{font-size:1rem;line-height:1.75;color:rgba(255,255,255,.65);max-width:68ch;margin-bottom:2.25rem}
 .bnh-pick-desc strong{color:#fff}
 
-.bnh-tl{display:grid;grid-template-columns:repeat(9,1fr);gap:.6rem;align-items:stretch}
-.bnh-tl-step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:1rem .85rem;position:relative;display:flex;flex-direction:column;gap:.35rem}
-.bnh-tl-step.hi{background:rgba(200,96,74,.16);border-color:rgba(224,122,98,.4)}
-.bnh-tl-time{font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-light)}
-.bnh-tl-title{font-family:var(--font-serif);font-size:.98rem;color:#fff;line-height:1.25}
-.bnh-tl-arrow{display:none;align-items:center;justify-content:center;color:rgba(255,255,255,.25);font-size:1.1rem}
-@media(min-width:1025px){
-  .bnh-tl{grid-template-columns:repeat(17,1fr)}
-  .bnh-tl-arrow{display:flex}
-  .bnh-tl-step{grid-column:span 2}
-  .bnh-tl-arrow{grid-column:span 1}
-}
-@media(max-width:1024px){
-  .bnh-tl{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:560px){
-  .bnh-tl{grid-template-columns:1fr;gap:.75rem}
-  .bnh-tl-step{flex-direction:row;align-items:baseline;gap:.6rem}
-  .bnh-tl-step::before{content:'↓';position:absolute;left:1.4rem;bottom:-1.1rem;color:rgba(255,255,255,.25);font-size:.9rem}
-  .bnh-tl-step:last-child::before{display:none}
-  .bnh-tl-time{flex-shrink:0;min-width:78px}
+.bnh-strat{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,3vw,3rem);align-items:center}
+.bnh-strat-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:4/3}
+.bnh-strat-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.bnh-strat-photo-tag{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(10,10,10,.85),transparent);color:#fff;font-family:var(--font-serif);font-style:italic;font-size:1.05rem;line-height:1.35;padding:2.5rem 1.3rem 1rem}
+.bnh-strat-steps{display:flex;flex-direction:column;gap:0}
+.bnh-strat-step{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.bnh-strat-step:last-child{border-bottom:none}
+.bnh-strat-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:.85rem;color:rgba(255,255,255,.6)}
+.bnh-strat-step.hi .bnh-strat-num{background:var(--coral);border-color:var(--coral);color:#fff}
+.bnh-strat-time{font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--coral-light);margin-bottom:.2rem}
+.bnh-strat-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;line-height:1.3}
+@media(max-width:900px){
+  .bnh-strat{grid-template-columns:1fr}
+  .bnh-strat-photo{aspect-ratio:16/10}
 }
 
 /* ── MAP ────────────────────────────────────────────────── */
 .bnh-map-wrap{background:var(--ocean-deep);padding:clamp(2.75rem,5.5vw,4.5rem) var(--gutter);border-top:1px solid rgba(255,255,255,.06)}
 .bnh-map-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:1.75rem;align-items:start}
-.bnh-map-stage{position:relative;border-radius:var(--r-xl);overflow:hidden;background:linear-gradient(180deg,#12313A 0%,#1B4A4A 45%,#2C6B5F 75%,#3E8567 100%);box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:4/3.3;border:1px solid rgba(255,255,255,.08)}
-.bnh-map-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
-.bnh-pin circle.halo{fill:rgba(200,96,74,.3)}
-.bnh-pin circle.dot{fill:var(--coral);stroke:#fff;stroke-width:1.4}
-.bnh-pin text{font-family:var(--font-sans);font-weight:800;font-size:8.5px;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.bnh-map-stage{position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.08)}
 .bnh-map-legend{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-lg);padding:1.3rem;max-height:100%;overflow-y:auto}
 .bnh-map-legend-title{font-size:.6rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.9rem}
 .bnh-leg-item{display:flex;gap:.6rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.07);align-items:flex-start}
@@ -536,8 +524,8 @@ a{text-decoration:none;color:inherit}
 .bnh-weather-desc{font-size:.84rem;color:var(--ink-soft);line-height:1.6}
 
 /* ── GOLDEN BRIDGE — DESIGNED CARD (no misleading photo) ─── */
-.bnh-gb-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:16/8;margin-bottom:1.5rem;box-shadow:0 16px 48px rgba(0,0,0,.18);background:linear-gradient(160deg,#0D3535 0%,#1B5C5C 45%,#2C7A6B 75%,#B8901E 140%);display:flex;align-items:center;justify-content:center}
-.bnh-gb-photo svg{width:46%;max-width:280px;height:auto;opacity:.92}
+.bnh-gb-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:16/9;margin-bottom:1.5rem;box-shadow:0 16px 48px rgba(0,0,0,.18)}
+.bnh-gb-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .bnh-gb-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,10,10,.75),transparent);color:rgba(255,255,255,.85);font-size:.78rem;padding:2rem 1.3rem .9rem;line-height:1.5}
 
 /* ── MERCURE FEATURE ─────────────────────────────────────── */
@@ -595,13 +583,15 @@ a{text-decoration:none;color:inherit}
 .bnh-food-card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 1px 4px rgba(26,26,24,.06),0 2px 12px rgba(26,26,24,.04)}
 .bnh-food-img{aspect-ratio:16/10;position:relative;overflow:hidden;background:var(--sand-mid)}
 .bnh-food-img img{width:100%;height:100%;object-fit:cover;display:block}
-.bnh-food-icon-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;background:linear-gradient(135deg,var(--ocean-pale),var(--sand-mid))}
+.bnh-food-icon-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-style:italic;font-size:1.1rem;color:var(--ocean-deep);background:linear-gradient(135deg,var(--ocean-pale),var(--sand-mid))}
 .bnh-food-body{padding:1rem 1.1rem 1.2rem}
 .bnh-food-type{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin-bottom:.3rem}
 .bnh-food-name{font-family:var(--font-serif);font-size:1rem;color:var(--ink);margin-bottom:.35rem;line-height:1.25}
 .bnh-food-desc{font-size:.78rem;color:var(--ink-muted);line-height:1.55}
 
 /* ── CABLE CAR / GETTING THERE / CHECKLIST CARDS ─────────── */
+.bnh-cable-photo{border-radius:var(--r-xl);overflow:hidden;margin:1.5rem 0;box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:16/9}
+.bnh-cable-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .bnh-info-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .bnh-info-card{background:var(--white);border:1px solid var(--sand-dark);border-radius:var(--r-lg);padding:1.1rem 1.2rem}
 .bnh-info-label{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean);margin-bottom:.4rem}
@@ -894,13 +884,8 @@ a{text-decoration:none;color:inherit}
 
 <!-- ═══ 1. HERO ═══ -->
 <header class="bnh-hero">
-  <div class="bnh-hero-img" role="img" aria-label="Illustrated mountain ridgeline evoking Ba Na Hills at dusk">
-    <svg class="bnh-hero-mtn" viewBox="0 0 1252 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <path d="M0,420 L120,300 220,360 340,240 460,330 560,220 680,310 800,200 920,300 1040,250 1160,340 1252,290 L1252,600 L0,600 Z" fill="#0D3535" opacity=".55"></path>
-      <path d="M0,470 L160,370 300,430 420,320 540,400 660,300 780,390 900,310 1020,380 1140,330 1252,390 L1252,600 L0,600 Z" fill="#124545" opacity=".7"></path>
-      <path d="M0,520 L180,450 320,500 460,420 600,490 740,410 880,480 1020,430 1160,490 1252,450 L1252,600 L0,600 Z" fill="#1B5C5C" opacity=".85"></path>
-      <circle cx="1000" cy="140" r="70" fill="#F0C77E" opacity=".18"></circle>
-    </svg>
+  <div class="bnh-hero-img">
+    <img src="images/golden-bridge-ba-na-hills.jpeg" alt="The Golden Bridge at Ba Na Hills, held aloft by giant stone hands above the forested ridge" loading="eager" width="678" height="452" style="width:100%;height:100%;object-fit:cover;object-position:center 35%">
   </div>
   <div class="bnh-hero-content">
     <p class="bnh-hero-label">Da Nang &middot; 2026</p>
@@ -914,36 +899,10 @@ a{text-decoration:none;color:inherit}
   <div class="bnh-section-inner">
     <p class="bnh-label on-dark">Orientation</p>
     <h2 class="bnh-h2 on-dark">Ba Na Hills <em>Map</em></h2>
-    <p class="bnh-dek on-dark">An illustrated orientation map, not a survey. It shows how the main areas sit relative to each other so you know what's near what before you go.</p>
+    <p class="bnh-dek on-dark">A working orientation map, not a survey. It shows how the main areas sit relative to each other so you know what's near what before you go.</p>
     <div class="bnh-map-grid">
       <div class="bnh-map-stage">
-        <svg class="bnh-map-svg" viewBox="0 0 400 330" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <path d="M0,240 C60,200 110,260 170,220 C230,180 260,230 330,190 C360,172 380,180 400,165 L400,330 L0,330 Z" fill="#ffffff" opacity=".05"></path>
-          <path d="M0,240 C60,200 110,260 170,220 C230,180 260,230 330,190 C360,172 380,180 400,165" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.5"></path>
-          <text x="60" y="290" class="mk-map-zone-label" style="font-size:8px">Cable Car Base (Foot of Mountain)</text>
-          <text x="330" y="120" class="mk-map-zone-label" style="font-size:8px">Summit Complex</text>
-
-          <!-- 1 Cable car arrival -->
-          <g class="bnh-pin" data-n="1" transform="translate(70,235)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">1</text></g>
-          <!-- 2 Golden Bridge -->
-          <g class="bnh-pin" data-n="2" transform="translate(150,150)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">2</text></g>
-          <!-- 3 Le Jardin d'Amour -->
-          <g class="bnh-pin" data-n="3" transform="translate(210,120)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">3</text></g>
-          <!-- 4 Linh Ung Pagoda -->
-          <g class="bnh-pin" data-n="4" transform="translate(120,95)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">4</text></g>
-          <!-- 5 French Village -->
-          <g class="bnh-pin" data-n="5" transform="translate(270,100)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">5</text></g>
-          <!-- 6 Mercure hotel -->
-          <g class="bnh-pin" data-n="6" transform="translate(295,75)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">6</text></g>
-          <!-- 7 Fantasy Park -->
-          <g class="bnh-pin" data-n="7" transform="translate(230,60)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">7</text></g>
-          <!-- 8 Debay Wine Cellar -->
-          <g class="bnh-pin" data-n="8" transform="translate(310,130)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">8</text></g>
-          <!-- 9 Beer garden / Ba Na Brew House -->
-          <g class="bnh-pin" data-n="9" transform="translate(340,90)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">9</text></g>
-          <!-- 10 Buffet / restaurant area -->
-          <g class="bnh-pin" data-n="10" transform="translate(260,140)"><circle class="halo" r="10"></circle><circle class="dot" r="6.5"></circle><text y=".5">10</text></g>
-        </svg>
+        <img src="images/ba-na-hills-map.jpeg" alt="Ba Na Hills complex map showing cable car stations, Golden Bridge, French Village, and main attraction areas" loading="lazy" width="1200" height="783" style="width:100%;height:auto;border-radius:var(--r-lg);display:block">
       </div>
       <div class="bnh-map-legend">
         <p class="bnh-map-legend-title">Legend</p>
@@ -993,22 +952,33 @@ a{text-decoration:none;color:inherit}
     <p class="bnh-pick-badge">Editor's Strategy</p>
     <h2>Wait For The Weather. Then Stay Overnight.</h2>
     <p class="bnh-pick-desc">Most visitors treat Ba Na Hills as a day trip booked weeks in advance. We don't. <strong>Check the weather around 9am.</strong> If it's clear, book the Mercure Danang French Village Bana Hills for that night and go. Arrive mid-morning, explore while the park is busy, check in once your room is ready, then get the version of Ba Na Hills that day-trippers never see: the hours after they leave, and the hour before they arrive the next morning.</p>
-    <div class="bnh-tl">
-      <div class="bnh-tl-step"><div class="bnh-tl-time">9:00 AM</div><div class="bnh-tl-title">Check the weather</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step hi"><div class="bnh-tl-time">If clear</div><div class="bnh-tl-title">Book the Mercure</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step"><div class="bnh-tl-time">10:00 AM</div><div class="bnh-tl-title">Head to Ba Na Hills</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step"><div class="bnh-tl-time">Day 1</div><div class="bnh-tl-title">Explore, then check in</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step hi"><div class="bnh-tl-time">After hours</div><div class="bnh-tl-title">The crowds disappear</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step"><div class="bnh-tl-time">Overnight</div><div class="bnh-tl-title">Sleep on the mountain</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step hi"><div class="bnh-tl-time">Early AM</div><div class="bnh-tl-title">Golden Bridge, quiet</div></div>
-      <div class="bnh-tl-arrow">→</div>
-      <div class="bnh-tl-step"><div class="bnh-tl-time">Day 2</div><div class="bnh-tl-title">Explore again</div></div>
+    <div class="bnh-strat">
+      <div class="bnh-strat-photo">
+        <img src="images/ba-na-hills-scenic.jpg" alt="Cable car arriving at the Ba Na Hills French Village station above the forested mountainside" loading="lazy" width="870" height="580">
+        <div class="bnh-strat-photo-tag">The cable car up. Same ride, completely different mountain once the day-trip buses leave.</div>
+      </div>
+      <div class="bnh-strat-steps">
+        <div class="bnh-strat-step">
+          <div class="bnh-strat-num">1</div>
+          <div><div class="bnh-strat-time">9:00 AM</div><div class="bnh-strat-title">Check the weather</div></div>
+        </div>
+        <div class="bnh-strat-step hi">
+          <div class="bnh-strat-num">2</div>
+          <div><div class="bnh-strat-time">If it's clear</div><div class="bnh-strat-title">Book the Mercure for tonight</div></div>
+        </div>
+        <div class="bnh-strat-step">
+          <div class="bnh-strat-num">3</div>
+          <div><div class="bnh-strat-time">10:00 AM</div><div class="bnh-strat-title">Head up, explore while it's busy</div></div>
+        </div>
+        <div class="bnh-strat-step hi">
+          <div class="bnh-strat-num">4</div>
+          <div><div class="bnh-strat-time">After hours</div><div class="bnh-strat-title">Check in. The crowds disappear</div></div>
+        </div>
+        <div class="bnh-strat-step">
+          <div class="bnh-strat-num">5</div>
+          <div><div class="bnh-strat-time">Early next morning</div><div class="bnh-strat-title">Golden Bridge, before the buses return</div></div>
+        </div>
+      </div>
     </div>
     <p style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:1.4rem;line-height:1.6">Early and after-hours access for hotel guests is subject to current Mercure and Sun World policy, confirm specifics at check-in. Optionally, stay a second night and turn it into a real mountain trip instead of a rushed itinerary.</p>
   </div>
@@ -1036,18 +1006,18 @@ a{text-decoration:none;color:inherit}
     <p class="bnh-dek">Ba Na Hills sits at 1,487m. Cloud and fog roll across the summit often enough that locking in a date weeks out is a gamble. Thick cloud can bury the Golden Bridge, kill the mountain views, and flatten your photos, there's no reliable way to guarantee clear skies on a specific future date. Our approach: check conditions the morning of, then decide.</p>
     <div class="bnh-weather-grid">
       <div class="bnh-weather-card good">
-        <div class="bnh-weather-icon">☀️</div>
-        <div class="bnh-weather-title">Good Weather → Go</div>
+        <div class="bnh-weather-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="bnh-weather-title">Good Weather &rarr; Go</div>
         <div class="bnh-weather-desc">Clear or mostly clear around 9am. This is your window. Head up, and if you like what you see, book the Mercure for the night.</div>
       </div>
       <div class="bnh-weather-card mid">
-        <div class="bnh-weather-icon">🌤️</div>
-        <div class="bnh-weather-title">Questionable → Check Live Conditions</div>
+        <div class="bnh-weather-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 18a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.7 1.7A3.5 3.5 0 0 0 7 18h10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="bnh-weather-title">Questionable &rarr; Check Live Conditions</div>
         <div class="bnh-weather-desc">Partial cloud isn't a dealbreaker, mist can even make the French Village look better. Check current conditions before committing to the drive.</div>
       </div>
       <div class="bnh-weather-card bad">
-        <div class="bnh-weather-icon">🌧️</div>
-        <div class="bnh-weather-title">Bad Weather → Wait If You Can</div>
+        <div class="bnh-weather-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 15a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.7 1.7A3.5 3.5 0 0 0 7 15h10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 19v2M12 19v2M16 19v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="bnh-weather-title">Bad Weather &rarr; Wait If You Can</div>
         <div class="bnh-weather-desc">Heavy fog or rain at the summit. If your schedule has any flexibility, this is the day to wait, not the day to force it.</div>
       </div>
     </div>
@@ -1060,14 +1030,8 @@ a{text-decoration:none;color:inherit}
   <div class="bnh-section-inner">
     <p class="bnh-label">The Icon</p>
     <h2 class="bnh-h2">Golden <em>Bridge</em></h2>
-    <div class="bnh-gb-photo" role="img" aria-label="Illustrated representation of the Golden Bridge walkway held by giant stone hands">
-      <svg viewBox="0 0 200 140" aria-hidden="true">
-        <path d="M20,120 Q100,60 180,120" fill="none" stroke="#F0C77E" stroke-width="6" stroke-linecap="round"></path>
-        <path d="M55,122 C50,105 58,95 68,98 C72,85 90,85 92,100" fill="#E8E2D5" opacity=".9"></path>
-        <path d="M145,122 C150,105 142,95 132,98 C128,85 110,85 108,100" fill="#E8E2D5" opacity=".9"></path>
-        <circle cx="45" cy="128" r="4" fill="#fff" opacity=".7"></circle>
-        <circle cx="155" cy="128" r="4" fill="#fff" opacity=".7"></circle>
-      </svg>
+    <div class="bnh-gb-photo">
+      <img src="images/golden-bridge-ba-na-hills.jpeg" alt="The Golden Bridge at Ba Na Hills, a walkway held by two giant stone hands above the forested ridge" loading="lazy" width="678" height="452">
       <p class="bnh-gb-caption">The bridge everyone came to see: a walkway held by two giant stone hands, high above the forested ridge.</p>
     </div>
     <p style="font-size:.95rem;color:var(--ink-soft);line-height:1.75;max-width:70ch">This is the giant-hands bridge you've seen in photos. In person it holds up. What determines your experience isn't the bridge, it's the crowd and the weather when you're standing on it.</p>
@@ -1222,7 +1186,7 @@ a{text-decoration:none;color:inherit}
     <h2 class="bnh-h2">What's Actually <em>Open</em></h2>
     <div class="bnh-food-grid">
       <div class="bnh-food-card">
-        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">🍽️</div></div>
+        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">Buffet</div></div>
         <div class="bnh-food-body">
           <div class="bnh-food-type">Buffet</div>
           <div class="bnh-food-name">Main Restaurant (Mercure)</div>
@@ -1230,7 +1194,7 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div class="bnh-food-card">
-        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">🥖</div></div>
+        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">Dining Row</div></div>
         <div class="bnh-food-body">
           <div class="bnh-food-type">French Village Restaurants</div>
           <div class="bnh-food-name">Village Dining Row</div>
@@ -1238,7 +1202,7 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div class="bnh-food-card">
-        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">🍺</div></div>
+        <div class="bnh-food-img"><img src="images/beer-plaza-ba-na-hills.jpeg" alt="Ba Na Brew House beer garden plaza, Ba Na Hills" loading="lazy" width="516" height="387" style="width:100%;height:100%;object-fit:cover"></div>
         <div class="bnh-food-body">
           <div class="bnh-food-type">German-Style Brewery</div>
           <div class="bnh-food-name">Ba Na Brew House</div>
@@ -1246,7 +1210,7 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div class="bnh-food-card">
-        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">☕</div></div>
+        <div class="bnh-food-img"><div class="bnh-food-icon-fallback">Coffee</div></div>
         <div class="bnh-food-body">
           <div class="bnh-food-type">Quick Service / Coffee</div>
           <div class="bnh-food-name">Kiosks Around The Park</div>
@@ -1279,6 +1243,9 @@ a{text-decoration:none;color:inherit}
     <p class="bnh-label on-dark">Part Of The Experience</p>
     <h2 class="bnh-h2 on-dark">The Ride Up <em>Is Part Of The Experience</em></h2>
     <p class="bnh-dek on-dark">Ba Na Hills runs multiple cable car lines connecting the base to different areas of the mountain. The main line is one of the reasons this place is on the map in the first place, Ba Na Hills holds several Guinness World Records tied to its cable car system, including longest single-wire line and largest elevation gap between stations.</p>
+    <div class="bnh-cable-photo">
+      <img src="images/ba-na-hills-aerial.png" alt="Aerial view of the Ba Na Hills cable car line running up the forested mountainside" loading="lazy" width="600" height="375">
+    </div>
     <div class="bnh-info-grid-4">
       <div class="bnh-info-card">
         <div class="bnh-info-label">Time</div>
@@ -1469,27 +1436,22 @@ a{text-decoration:none;color:inherit}
     <h2 class="bnh-h2">Related <em>Guides</em></h2>
     <div class="bnh-related-grid">
       <a class="bnh-related-card" href="da-nang-weather-by-month.html">
-        <span class="bnh-related-icon">🌤️</span>
         <span class="bnh-related-name">Da Nang Weather By Month</span>
         <span class="bnh-related-link">Read guide &#8594;</span>
       </a>
       <a class="bnh-related-card" href="da-nang-with-kids-guide.html">
-        <span class="bnh-related-icon">👨‍👩‍👧</span>
         <span class="bnh-related-name">Da Nang With Kids</span>
         <span class="bnh-related-link">Read guide &#8594;</span>
       </a>
       <a class="bnh-related-card" href="da-nang-with-teenagers.html">
-        <span class="bnh-related-icon">🎒</span>
         <span class="bnh-related-name">Da Nang With Teenagers</span>
         <span class="bnh-related-link">Read guide &#8594;</span>
       </a>
       <a class="bnh-related-card" href="things-to-do-in-da-nang.html">
-        <span class="bnh-related-icon">🗺️</span>
         <span class="bnh-related-name">Things To Do In Da Nang</span>
         <span class="bnh-related-link">Read guide &#8594;</span>
       </a>
       <a class="bnh-related-card" href="da-nang-grab-guide.html">
-        <span class="bnh-related-icon">🚗</span>
         <span class="bnh-related-name">Da Nang Grab Guide</span>
         <span class="bnh-related-link">Read guide &#8594;</span>
       </a>
