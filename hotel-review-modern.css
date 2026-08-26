@@ -44,11 +44,12 @@
 .hr-snap-val{font-family:var(--font-serif);font-size:1.15rem;color:var(--ink);letter-spacing:-.01em;line-height:1.2}
 
 /* ── OUR TAKE (editor's verdict) ────────────────────────── */
-.hr-take{background:var(--night);color:#fff}
-.hr-take-inner{max-width:820px;margin:0 auto}
-.hr-take .hr-label{color:var(--coral-light)}
-.hr-take .hr-h2{color:#fff}
-.hr-take-text{font-family:var(--font-serif);font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.55;color:rgba(255,255,255,.92);letter-spacing:-.01em}
+.hr-take{background:var(--white);color:var(--ink)}
+.hr-take-inner{max-width:700px;margin:0 auto}
+.hr-take .hr-label{color:var(--coral)}
+.hr-take .hr-h2{color:var(--ink)}
+.hr-take-text{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.1rem,1.6vw,1.25rem);line-height:1.75;color:var(--ink);letter-spacing:0;margin-bottom:1.2rem}
+.hr-take-text:last-child{margin-bottom:0}
 
 /* ── WHAT WE LIKE ───────────────────────────────────────── */
 .hr-like-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem}
