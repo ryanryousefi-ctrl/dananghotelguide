@@ -831,7 +831,7 @@ function cardHtml(h){
     +'<div class="bb-card-meta"><span>'+h.areaLabel+'</span></div>'
     +'<p class="bb-card-desc">'+h.description+'</p>'
     +'<div class="bb-card-links">'
-    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link">Check Rates &rarr;</a>'
+    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
     +'</div>'
     +'</div></article>';
 }
@@ -867,7 +867,7 @@ document.getElementById('bbHoianaGrid').innerHTML = HOIANA_HOTELS.map(function(h
     +'<p class="bb-hoiana-card-tag">'+h.tag+'</p>'
     +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="affiliate-link" style="color:inherit"><h3 class="bb-hoiana-card-name">'+h.name+'</h3></a>'
     +'<p class="bb-hoiana-card-desc">'+h.description+'</p>'
-    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-hoiana-card-cta affiliate-link">Check Rates &rarr;</a>'
+    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-hoiana-card-cta affiliate-link" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
     +'</div></div>';
 }).join('');
 
@@ -908,5 +908,6 @@ if(ham&&mob){
 </script>
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js"></script>
 </body>
 </html>
