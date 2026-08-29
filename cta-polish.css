@@ -310,32 +310,75 @@ nav .nav-stays-btn,
   font-size: 1rem !important;
 }
 
-/* ─── HOTEL SCORE BUTTON — inline text link, not a box ───────────────────── */
+/* ─── HOTEL STRIP CTA — nested inside .hs-card (a Booking.com wrapper link),
+   given real button styling matching the shared Booking.com CTA system. ── */
 
 .hs-btn {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: var(--cta-text, #073f3d) !important;
-  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: flex-start !important;
+  gap: 6px !important;
+  width: auto !important;
+  background: var(--bkg-secondary-bg, #ffffff) !important;
+  border: 2px solid var(--bkg-secondary-border, #0D3535) !important;
+  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
+  color: var(--bkg-secondary-text, #0D3535) !important;
+  font-weight: 800 !important;
   font-size: .8rem !important;
-  text-decoration: underline !important;
-  text-underline-offset: 2px !important;
-  text-decoration-color: rgba(7,63,61,.4) !important;
-  transition: color .18s ease, text-decoration-color .18s ease !important;
+  text-decoration: none !important;
   letter-spacing: .01em !important;
-  padding: 0 !important;
+  padding: 8px 16px !important;
+  border-radius: var(--bkg-radius, 8px) !important;
+  min-height: 40px !important;
+  margin-top: 10px !important;
+  transition: background .18s ease, color .18s ease, border-color .18s ease,
+              transform .18s ease, box-shadow .18s ease !important;
   transform: none !important;
 }
 
 .hs-btn:hover {
-  background: transparent !important;
-  color: #0a5452 !important;
-  text-decoration: underline !important;
-  text-decoration-color: rgba(7,63,61,.7) !important;
-  transform: none !important;
-  box-shadow: none !important;
-  border: none !important;
+  background: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  color: #fff !important;
+  border-color: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
+}
+
+/* ─── SHORTLIST / COMPARISON CARD CTA — nested inside a whole-card Booking.com
+   wrapper link (.bb-shortlist-card, .hc-card), given the same button
+   treatment as the shared system instead of plain colored text. ────────── */
+
+.bb-shortlist-cta,
+.hc-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: flex-start !important;
+  gap: 6px !important;
+  width: auto !important;
+  background: var(--bkg-secondary-bg, #ffffff) !important;
+  border: 2px solid var(--bkg-secondary-border, #0D3535) !important;
+  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
+  color: var(--bkg-secondary-text, #0D3535) !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  letter-spacing: .01em !important;
+  padding: 8px 16px !important;
+  border-radius: var(--bkg-radius, 8px) !important;
+  min-height: 40px !important;
+  margin-top: 8px !important;
+  transition: background .18s ease, color .18s ease, border-color .18s ease,
+              transform .18s ease, box-shadow .18s ease !important;
+}
+
+.bb-shortlist-cta:hover,
+.hc-cta:hover {
+  background: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  color: #fff !important;
+  border-color: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
 }
 
 /* ─── DECISION BUTTONS ────────────────────────────────────────────────────── */
@@ -417,6 +460,127 @@ nav .nav-stays-btn,
 .premium-booking-btn:focus-visible {
   outline: 3px solid rgba(7,63,61,.45) !important;
   outline-offset: 3px !important;
+}
+
+/* ─── BOOKING.COM CTA BUTTON SYSTEM ───────────────────────────────────────────
+ * Targets every tracked Booking.com CTA sitewide via [data-cta-location],
+ * the attribute added during the CTA copy/tracking rollout. This is a
+ * universal, safe selector: verified against every page that no non-
+ * Booking.com link carries data-cta-location. Overrides legacy per-page
+ * classes and inline style="" attributes with !important, matching this
+ * file's existing convention. Wording, hrefs, tracking attrs untouched.
+ * ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --bkg-primary-bg:      var(--ocean-deep, #0D3535);
+  --bkg-primary-bg-hover: var(--ocean, #1B5C5C);
+  --bkg-primary-text:    #ffffff;
+  --bkg-primary-border:  rgba(255, 255, 255, .75);
+  --bkg-secondary-bg:       #ffffff;
+  --bkg-secondary-bg-hover: var(--ocean-deep, #0D3535);
+  --bkg-secondary-text:     var(--ocean-deep, #0D3535);
+  --bkg-secondary-border:   var(--ocean-deep, #0D3535);
+  --bkg-radius: 8px;
+}
+
+/* Exclude whole-card wrapper links: on these, data-cta-location sits on the
+   full clickable card (image + name + description), not a compact button —
+   the real visible button is a nested span/div (.bb-shortlist-cta, .hc-cta,
+   .hs-btn) styled separately by each page and left untouched here. Applying
+   button styling to the wrapper itself would break the card layout. Every
+   selector below repeats this :not() guard so the exclusion always holds. */
+:is(
+  a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card)
+) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em !important;
+  text-decoration: none !important;
+  border-radius: var(--bkg-radius) !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  transition: background .18s ease, color .18s ease, border-color .18s ease,
+              transform .18s ease, box-shadow .18s ease !important;
+  white-space: normal !important;
+  min-height: 44px !important;
+  line-height: 1.25 !important;
+  /* Secondary (default): white bg, dark teal text + border. Covers
+     booking_hotel_card, booking_comparison, booking_trip_type,
+     booking_quick_pick, and any location not explicitly primary below. */
+  background: var(--bkg-secondary-bg) !important;
+  color: var(--bkg-secondary-text) !important;
+  border-color: var(--bkg-secondary-border) !important;
+  padding: 10px 20px !important;
+  font-size: .84rem !important;
+  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
+}
+
+a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover {
+  background: var(--bkg-secondary-bg-hover) !important;
+  color: #fff !important;
+  border-color: var(--bkg-secondary-bg-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
+}
+
+a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):active {
+  transform: translateY(0) scale(.99) !important;
+  box-shadow: none !important;
+}
+
+a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible {
+  outline: 3px solid var(--ocean, #1B5C5C) !important;
+  outline-offset: 3px !important;
+}
+
+/* Primary: solid dark teal bg, white text + white border. Reserved for the
+   strongest booking moments — full review verdict, featured/editor's-pick
+   hotel, and page-level "search all hotels" CTAs. */
+a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+a[data-cta-location="booking_featured_hotel"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+a[data-cta-location="booking_editor_pick"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+a[data-cta-location="booking_page_search"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card) {
+  background: var(--bkg-primary-bg) !important;
+  color: var(--bkg-primary-text) !important;
+  border-color: var(--bkg-primary-border) !important;
+  padding: 14px 30px !important;
+  font-size: .92rem !important;
+  box-shadow: 0 4px 14px rgba(13, 53, 53, .28) !important;
+}
+
+a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover,
+a[data-cta-location="booking_featured_hotel"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover,
+a[data-cta-location="booking_editor_pick"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover,
+a[data-cta-location="booking_page_search"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover,
+a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover {
+  background: var(--bkg-primary-bg-hover) !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 26px rgba(13, 53, 53, .34) !important;
+}
+
+a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible,
+a[data-cta-location="booking_featured_hotel"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible,
+a[data-cta-location="booking_editor_pick"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible,
+a[data-cta-location="booking_page_search"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible,
+a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible {
+  outline-color: var(--bkg-primary-bg) !important;
+}
+
+@media (max-width: 600px) {
+  a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+  a[data-cta-location="booking_featured_hotel"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+  a[data-cta-location="booking_editor_pick"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+  a[data-cta-location="booking_page_search"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card),
+  a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card) {
+    width: 100% !important;
+    padding: 14px 20px !important;
+  }
 }
 
 /* ─── MOBILE TOUCH TARGETS ────────────────────────────────────────────────── */
