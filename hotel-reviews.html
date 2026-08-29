@@ -455,7 +455,7 @@ details[open].bb-faq-item .bb-faq-q::after{transform:rotate(45deg)}
       </div>
       <div class="bb-top-pick-links">
         <a href="intercontinental-da-nang.html" class="bb-top-pick-link primary">Read Full Review &rarr;</a>
-        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=hotel-reviews--intercontinental-danang" class="bb-top-pick-link affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates &rarr;</a>
+        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=hotel-reviews--intercontinental-danang" class="bb-top-pick-link affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_editor_pick" data-hotel="InterContinental Danang Sun Peninsula Resort">See InterContinental Prices &rarr;</a>
       </div>
     </div>
     <div class="bb-top-pick-img">
@@ -483,7 +483,7 @@ details[open].bb-faq-item .bb-faq-q::after{transform:rotate(45deg)}
       </div>
       <div class="bb-top-pick-links">
         <a href="tms-hotel-da-nang.html" class="bb-sig-pick-link">Read Full Review &rarr;</a>
-        <a href="https://www.booking.com/searchresults.en-us.html?ss=TMS+Hotel+Da+Nang+Beach&aid=1784897&sid=hotel-reviews--tms-hotel-da-nang" class="bb-sig-pick-link affiliate-link" style="margin-left:1rem" target="_blank" rel="nofollow noopener sponsored">Check Rates &rarr;</a>
+        <a href="https://www.booking.com/searchresults.en-us.html?ss=TMS+Hotel+Da+Nang+Beach&aid=1784897&sid=hotel-reviews--tms-hotel-da-nang" class="bb-sig-pick-link affiliate-link" style="margin-left:1rem" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_editor_pick" data-hotel="TMS Hotel Da Nang Beach">See TMS Hotel Prices &rarr;</a>
       </div>
     </div>
     <div class="bb-sig-pick-img">
@@ -818,7 +818,7 @@ function renderCards(hs){
       +'<p class="bb-card-bestfor"><strong>Best for:</strong> '+h.bestFor+'</p>'
       +'<div class="bb-card-links">'
       +'<a href="'+h.url+'" class="bb-ext-link">Read Full Review &rarr;</a>'
-      +'<a href="'+h.bookingUrl+'" class="bb-ext-link-sec affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates &rarr;</a>'
+      +'<a href="'+h.bookingUrl+'" class="bb-ext-link-sec affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
       +'</div>'
       +'</div></article>';
   }).join('');
@@ -978,5 +978,6 @@ applyFilters();
 </script>
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js"></script>
 </body>
 </html>

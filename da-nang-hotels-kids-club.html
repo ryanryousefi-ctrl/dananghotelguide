@@ -417,7 +417,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
       <div class="bb-top-pick-links">
         <a href="mikazuki-da-nang.html" class="bb-top-pick-link primary">Read Full Review &rarr;</a>
-        <a href="https://www.booking.com/searchresults.html?ss=Mikazuki+Japanese+Resorts+%26+Spa+Da+Nang&aid=1784897" class="bb-top-pick-link affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates on Booking.com &rarr;</a>
+        <a href="https://www.booking.com/searchresults.html?ss=Mikazuki+Japanese+Resorts+%26+Spa+Da+Nang&aid=1784897" class="bb-top-pick-link affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Mikazuki Japanese Resorts & Spa Da Nang">See Mikazuki Prices &rarr;</a>
       </div>
     </div>
     <div class="bb-top-pick-img">
@@ -740,7 +740,7 @@ function renderCards(hs){
       +'<p class="bb-fact"><strong>Tradeoff:</strong> '+h.tradeoff+'</p>'
       +'</div>'
       +'<div class="bb-card-links">'
-      +'<a href="'+h.bookingUrl+'" class="bb-ext-link affiliate-link" target="_blank" rel="nofollow noopener sponsored">Check Rates on Booking.com &rarr;</a>'
+      +'<a href="'+h.bookingUrl+'" class="bb-ext-link affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
       +'</div>'
       +'</div></article>';
   }).join('');
@@ -909,5 +909,6 @@ applyFilters();
 </script>
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js"></script>
 </body>
 </html>
