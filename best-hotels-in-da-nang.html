@@ -291,10 +291,55 @@ a{color:inherit}
 .footer-link:hover{color:#fff}
 .footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.3)}
 @media(max-width:640px){.footer-inner{grid-template-columns:1fr}}
+
+/* ─── MONETIZATION TEST (this page only) ─────────────────── */
+.bhdn-page .panel-cta-block{display:inline-flex;flex-direction:column;align-items:flex-start}
+.bhdn-page .panel-cta{padding:16px 30px;font-size:.86rem;letter-spacing:.05em}
+.bhdn-page .cta-sub{display:block;font-size:.72rem;font-weight:600;letter-spacing:.02em;text-transform:none;margin-top:.55rem;opacity:.7}
+.bhdn-page .dark .cta-sub{color:rgba(255,255,255,.55)}
+.bhdn-page .sand .cta-sub{color:var(--ink-muted)}
+.bhdn-page .hotel-card-cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:.5rem}
+.bhdn-page .hotel-card-cta{padding:14px 28px !important;font-size:.85rem !important;border-radius:8px !important;box-shadow:0 3px 10px rgba(200,96,74,.22) !important;min-height:48px}
+.bhdn-page .hotel-card-cta:hover{box-shadow:0 6px 18px rgba(200,96,74,.3) !important}
+.bhdn-page .hotel-card-cta-sub{font-size:.74rem;color:var(--ink-muted);font-weight:500}
+
+.bhdn-page .qp-card{display:flex;flex-direction:column}
+.bhdn-page .qp-link{display:block;text-decoration:none;color:inherit}
+.bhdn-page .qp-price-row{padding:0 1.1rem 1rem;margin-top:-.2rem}
+.bhdn-page .qp-price-cta{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--ocean-deep);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--ocean-deep)}
+.bhdn-page .qp-price-cta:hover{color:var(--coral);border-color:var(--coral)}
+
+.bhdn-page .trip-card{display:flex;flex-direction:column}
+.bhdn-page .trip-card-actions{margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.bhdn-page .trip-price-cta{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:800;letter-spacing:.04em;color:var(--ocean-deep);text-decoration:none;padding:5px 0;border-bottom:1px solid var(--ocean-deep)}
+.bhdn-page .trip-price-cta:hover{color:var(--coral);border-color:var(--coral)}
+
+.bhdn-page .book-strip{background:var(--sand-mid);border-top:1px solid var(--sand-dark);border-bottom:1px solid var(--sand-dark);padding:1.75rem var(--gutter)}
+.bhdn-page .book-strip-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.bhdn-page .book-strip-text h2{font-family:'Instrument Serif',Georgia,serif;font-size:1.3rem;color:var(--ink);margin-bottom:.3rem}
+.bhdn-page .book-strip-text p{font-size:.88rem;color:var(--ink-muted)}
+.bhdn-page .book-strip-cta{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--ocean);color:#fff;font-size:.85rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-radius:8px;text-decoration:none;transition:background .15s,transform .12s;box-shadow:0 3px 10px rgba(27,92,92,.25)}
+.bhdn-page .book-strip-cta:hover{background:var(--ocean-deep);transform:translateY(-1px)}
+
+.bhdn-page .panel-cta:focus-visible,
+.bhdn-page .qp-price-cta:focus-visible,
+.bhdn-page .trip-price-cta:focus-visible,
+.bhdn-page .book-strip-cta:focus-visible{outline:3px solid rgba(7,63,61,.45);outline-offset:3px}
+
+@media(max-width:768px){
+  .bhdn-page .book-strip-inner{flex-direction:column;align-items:stretch;text-align:center}
+  .bhdn-page .book-strip-cta{justify-content:center;width:100%}
+}
+@media(max-width:600px){
+  .bhdn-page .panel-cta-block{width:100%;align-items:center;text-align:center}
+  .bhdn-page .panel-cta{width:100%;justify-content:center}
+  .bhdn-page .hotel-card-cta{width:100%;justify-content:center;font-size:.78rem !important;padding:14px 16px !important;white-space:nowrap}
+  .bhdn-page .qp-price-row{padding-bottom:1.1rem}
+}
 </style>
 <link rel="stylesheet" href="search-ui.css">
 </head>
-<body>
+<body class="bhdn-page">
 
 <!-- NAV -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
@@ -500,7 +545,10 @@ a{color:inherit}
         <div class="panel-tradeoff-label">The Tradeoff</div>
         <p>You are 25-30 minutes from the city by taxi. Restaurants and bars are on-site only. If you need Da Nang's street food scene, Dragon Bridge, or easy Hoi An day trips, the isolation that makes this hotel special will frustrate you. Book a city-side hotel for that trip. Book this one when the hotel is the trip.</p>
       </div>
-      <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--intercontinental-danang-sun-pe" class="panel-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+      <div class="panel-cta-block">
+        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--intercontinental-danang-sun-pe" class="panel-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_featured_hotel" data-hotel="InterContinental Danang Sun Peninsula">See InterContinental Prices &rarr;</a>
+        <span class="cta-sub">View current rooms and rates on Booking.com</span>
+      </div>
     </div>
     <div class="panel-img-wrap">
       <img src="images/review-intercontinental-da-nang-hero.jpg" alt="InterContinental Danang Sun Peninsula — aerial view of resort and private beach cove">
@@ -525,7 +573,10 @@ a{color:inherit}
         <div class="panel-tradeoff-label">The Tradeoff</div>
         <p>The scale works against it for couples seeking intimacy. With its waterslides and family infrastructure, peak season can feel like a family resort that also has romantic corners — not the other way around. If you want a smaller, quieter pool experience with the same beach access, Pullman is a better fit.</p>
       </div>
-      <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sheraton-grand-danang-resort" class="panel-cta ocean-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+      <div class="panel-cta-block">
+        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sheraton-grand-danang-resort" class="panel-cta ocean-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_featured_hotel" data-hotel="Sheraton Grand Danang Resort">See Sheraton Rooms &amp; Prices &rarr;</a>
+        <span class="cta-sub">View current rooms and rates on Booking.com</span>
+      </div>
     </div>
     <div class="panel-img-wrap">
       <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang Resort — massive pool complex leading to the ocean">
@@ -540,71 +591,122 @@ a{color:inherit}
     <h2 class="section-title">Quick Picks by Category</h2>
     <p class="section-sub">Can't read the full guide right now? These are the hotels that earn their category without asterisks.</p>
     <div class="qp-grid">
-      <a href="#intercontinental" class="qp-card">
-        <img src="images/review-intercontinental-da-nang-hero.jpg" alt="InterContinental Danang" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best Overall</div>
-          <div class="qp-name">InterContinental Sun Peninsula</div>
-          <div class="qp-desc">The best hotel experience in Da Nang, full stop.</div>
+      <div class="qp-card">
+        <a href="#intercontinental" class="qp-link">
+          <img src="images/review-intercontinental-da-nang-hero.jpg" alt="InterContinental Danang" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best Overall</div>
+            <div class="qp-name">InterContinental Sun Peninsula</div>
+            <div class="qp-desc">The best hotel experience in Da Nang, full stop.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--qp-intercontinental" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="InterContinental Danang Sun Peninsula">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#sheraton" class="qp-card">
-        <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best All-Rounder</div>
-          <div class="qp-name">Sheraton Grand Danang</div>
-          <div class="qp-desc">The most consistently excellent resort on My Khe Beach.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#sheraton" class="qp-link">
+          <img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Danang" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best All-Rounder</div>
+            <div class="qp-name">Sheraton Grand Danang</div>
+            <div class="qp-desc">The most consistently excellent resort on My Khe Beach.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--qp-sheraton" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="Sheraton Grand Danang Resort">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#hyatt" class="qp-card">
-        <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best Luxury Beach</div>
-          <div class="qp-name">Hyatt Regency Danang</div>
-          <div class="qp-desc">Quieter than Sheraton, more polished than Pullman.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#hyatt" class="qp-link">
+          <img src="images/hotels/hyatt-regency-da-nang.jpg" alt="Hyatt Regency Danang" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best Luxury Beach</div>
+            <div class="qp-name">Hyatt Regency Danang</div>
+            <div class="qp-desc">Quieter than Sheraton, more polished than Pullman.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=best-hotels-in-da-nang--qp-hyatt" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="Hyatt Regency Danang Resort & Spa">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#tia" class="qp-card">
-        <img src="images/hotels/furama-resort-da-nang.jpg" alt="TIA Wellness Resort" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best Wellness</div>
-          <div class="qp-name">TIA Wellness Resort</div>
-          <div class="qp-desc">All-inclusive spa resort — the best spa program in Da Nang.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#tia" class="qp-link">
+          <img src="images/hotels/furama-resort-da-nang.jpg" alt="TIA Wellness Resort" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best Wellness</div>
+            <div class="qp-name">TIA Wellness Resort</div>
+            <div class="qp-desc">All-inclusive spa resort — the best spa program in Da Nang.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/fusion-maia-danang.html?aid=1784897&sid=best-hotels-in-da-nang--qp-tia" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="TIA Wellness Resort Da Nang">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#wink" class="qp-card">
-        <img src="images/hotels/wink-hotel-da-nang.jpg" alt="Wink Hotel Danang" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best City Hotel</div>
-          <div class="qp-name">Wink Hotel Danang Centre</div>
-          <div class="qp-desc">Dragon Bridge views, rooftop bar, urban energy.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#wink" class="qp-link">
+          <img src="images/hotels/wink-hotel-da-nang.jpg" alt="Wink Hotel Danang" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best City Hotel</div>
+            <div class="qp-name">Wink Hotel Danang Centre</div>
+            <div class="qp-desc">Dragon Bridge views, rooftop bar, urban energy.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/wink-hotel-danang-centre.html?aid=1784897&sid=best-hotels-in-da-nang--qp-wink" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="Wink Hotel Danang Centre">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#premier-village" class="qp-card">
-        <img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best for Families</div>
-          <div class="qp-name">Premier Village Da Nang</div>
-          <div class="qp-desc">Private beach villas — the best family setup in the city.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#premier-village" class="qp-link">
+          <img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best for Families</div>
+            <div class="qp-name">Premier Village Da Nang</div>
+            <div class="qp-desc">Private beach villas — the best family setup in the city.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--qp-premier-village" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="Premier Village Da Nang Resort">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#tms" class="qp-card">
-        <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best Rooftop Pool</div>
-          <div class="qp-name">TMS Hotel Da Nang Beach</div>
-          <div class="qp-desc">Ocean infinity pool 15 floors up. Hardest to beat for the view.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#tms" class="qp-link">
+          <img src="images/hotels/tms-hotel-da-nang.jpg" alt="TMS Hotel Da Nang Beach" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best Rooftop Pool</div>
+            <div class="qp-name">TMS Hotel Da Nang Beach</div>
+            <div class="qp-desc">Ocean infinity pool 15 floors up. Hardest to beat for the view.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--qp-tms" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="TMS Hotel Da Nang Beach">See Prices &rarr;</a>
         </div>
-      </a>
-      <a href="#marriott" class="qp-card">
-        <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort" class="qp-img">
-        <div class="qp-body">
-          <div class="qp-label">Best for Points</div>
-          <div class="qp-name">Da Nang Marriott Resort</div>
-          <div class="qp-desc">Non Nuoc Beach villas. Best Bonvoy redemption in Vietnam.</div>
+      </div>
+      <div class="qp-card">
+        <a href="#marriott" class="qp-link">
+          <img src="images/hotels/marriott-da-nang.jpg" alt="Da Nang Marriott Resort" class="qp-img">
+          <div class="qp-body">
+            <div class="qp-label">Best for Points</div>
+            <div class="qp-name">Da Nang Marriott Resort</div>
+            <div class="qp-desc">Non Nuoc Beach villas. Best Bonvoy redemption in Vietnam.</div>
+          </div>
+        </a>
+        <div class="qp-price-row">
+          <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=best-hotels-in-da-nang--qp-marriott" class="qp-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_quick_pick" data-hotel="Da Nang Marriott Resort & Spa">See Prices &rarr;</a>
         </div>
-      </a>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- PAGE-LEVEL BOOKING.COM CTA -->
+<section class="book-strip">
+  <div class="book-strip-inner">
+    <div class="book-strip-text">
+      <h2>Already know your dates?</h2>
+      <p>Compare current room prices for our recommended Da Nang hotels on Booking.com.</p>
+    </div>
+    <a href="https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality,+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897&sid=best-hotels-in-da-nang--page-search" class="book-strip-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_page_search">Search Da Nang Hotel Prices &rarr;</a>
   </div>
 </section>
 
@@ -645,7 +747,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Bill Bensley's terraced resort descends the Son Tra hillside in a series of open-air walkways, villa clusters, and sun decks that manage to feel both grand and private. The private beach cove below is genuinely sheltered — no wind chop, no crowds. Breakfast on the hilltop terrace at sunrise is one of the better meals you can have in Vietnam, and not because the food is exceptional. It's because the location is.</p>
         <p class="hotel-card-desc">The pool setup is the best in Da Nang: multiple tiers, each progressively quieter and more removed. By the second pool level you are essentially alone in the jungle above the ocean.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> 25-30 minutes from city by taxi. You are not walking to street food. On-site dining is excellent but expensive. Best when the hotel is the point of the trip, not the base for city exploration.</div>
-        <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--intercontinental-danang-sun-pe" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--intercontinental-danang-sun-pe" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="InterContinental Danang Sun Peninsula">See InterContinental Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -668,7 +770,7 @@ a{color:inherit}
         <p class="hotel-card-desc">The biggest pool complex on My Khe Beach, the widest beach frontage, multiple dining outlets that are actually competent, and rooms large enough that you don't feel like you're paying for a view you can't enjoy. The Marriott Bonvoy redemption here is solid — one of the better point values in the Da Nang market.</p>
         <p class="hotel-card-desc">At peak season, the family energy is high. The waterslides make it excellent for children and slightly less ideal for couples who want something quieter. Off-peak this problem mostly disappears.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The scale can overwhelm the intimacy. Families love it. Couples who want a quieter, more curated experience should look at Hyatt Regency or Pullman instead.</div>
-        <a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sheraton-grand-danang-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sheraton-grand-danang-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Sheraton Grand Danang Resort">See Sheraton Rooms &amp; Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -691,7 +793,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Five pools, a long private beach strip, well-proportioned rooms, and a World of Hyatt points program that is genuinely useful. The location on Non Nuoc Beach puts you near Marble Mountains and Hoi An without the city-center chaos — a real advantage for day-trippers who still want a proper beach resort base.</p>
         <p class="hotel-card-desc">The service is more consistent here than at Sheraton, in the sense that the gap between a good day and a bad day is narrower. The spa program is among the better ones in Da Nang — worth booking even if you're not a spa person, just for the setting.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> Non Nuoc Beach can have stronger surf than My Khe during monsoon shoulder seasons, which limits swimming. The location also means a longer taxi ride to An Thuong's restaurant strip. Best for guests who prioritize Hoi An day trips or Marble Mountains access.</div>
-        <a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=best-hotels-in-da-nang--hyatt-regency-danang-resort-and-s" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html?aid=1784897&sid=best-hotels-in-da-nang--hyatt-regency-danang-resort-and-s" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Hyatt Regency Danang Resort & Spa">See Hyatt Regency Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -714,7 +816,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Pullman sits in the sweet spot between big-resort infrastructure and manageable scale. The pool and beach setup are not as grand as Sheraton Grand, but for a couple or a small group who wants a proper beachfront resort without the family-waterpark energy, Pullman often makes more sense. The rooms are consistently well-maintained and better-appointed than the price point suggests.</p>
         <p class="hotel-card-desc">Central My Khe location is one of its real advantages — An Thuong restaurant strip is within walking distance, and the downtown taxi ride is under 10 minutes.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The pool is smaller than at Sheraton and Hyatt. If the pool is the main event of your trip, Sheraton Grand wins. Pullman wins on location convenience and atmosphere for couples and smaller groups.</div>
-        <a href="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=best-hotels-in-da-nang--pullman-danang-beach-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=best-hotels-in-da-nang--pullman-danang-beach-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Pullman Danang Beach Resort">See Pullman Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -737,7 +839,7 @@ a{color:inherit}
         <p class="hotel-card-desc">TIA is the most serious wellness resort in Da Nang by a significant margin. The program is genuinely comprehensive — spa treatments are included in the stay, the food is designed around health without being punishing, and the staff are trained for wellness hospitality rather than generic resort service. Adults only, which matters here — the atmosphere depends on it.</p>
         <p class="hotel-card-desc">The beachfront setting on My Khe means you are not locked into the bubble — but the pull of the property design is strong enough that many guests barely leave.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> Adults only means families are out. The all-inclusive wellness angle also makes it feel expensive if you're not actively using the spa program. If you are here to party, eat street food every night, and see the city, this is the wrong hotel.</div>
-        <a href="https://www.booking.com/hotel/vn/fusion-maia-danang.html?aid=1784897&sid=best-hotels-in-da-nang--tia-wellness-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/fusion-maia-danang.html?aid=1784897&sid=best-hotels-in-da-nang--tia-wellness-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="TIA Wellness Resort Da Nang">See TIA Wellness Rates &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -760,7 +862,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Furama has been one of Da Nang's top resorts for two decades, and the age shows in the right ways — the gardens are mature, the operations are efficient, the staff have been here long enough to know what they're doing. The villas at Furama Villas next door are among the better private villa products in Da Nang at the price point.</p>
         <p class="hotel-card-desc">The main resort has a large pool, proper beach access, and multiple dining outlets that are competent without being exceptional. At the right rate, it offers luxury-resort infrastructure at a meaningful discount to Hyatt and Sheraton.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The main resort building is showing its age in some areas. Sheraton and Hyatt have more modern facilities for comparable or sometimes lower nightly rates. Furama wins when you want a villa or when you catch it at a good rate.</div>
-        <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=best-hotels-in-da-nang--furama-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=best-hotels-in-da-nang--furama-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Furama Resort Da Nang">See Furama Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -783,7 +885,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Private pool beach villas on Non Nuoc Beach — the Marriott Bonvoy redemption value here is legitimately excellent, making it one of the better points plays in Vietnam. The villa layout means privacy and space that a conventional hotel room can't replicate. Two-bedroom villas are a real option for families who want their own pool.</p>
         <p class="hotel-card-desc">The property is newer than Furama and the facilities show it. Location on Non Nuoc Beach means you're close to Marble Mountains and well-positioned for Hoi An day trips.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> Non Nuoc Beach is quieter than My Khe — which is either a feature or a bug depending on what you want. The An Thuong restaurant scene is a meaningful taxi ride away. Go here for the villa experience and the beach; not as a base for city nights out.</div>
-        <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=best-hotels-in-da-nang--danang-marriott-resort-spa-non-n" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=best-hotels-in-da-nang--danang-marriott-resort-spa-non-n" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Da Nang Marriott Resort & Spa">Check Marriott Villa Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -805,7 +907,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Sandy Beach fills the mid-tier gap on Non Nuoc Beach — proper beachfront access, a functional pool, and rates that sit well below Marriott and Hyatt. The rooms are not the most modern but are clean and adequately sized. The beach itself on this stretch of Non Nuoc is excellent — quieter and often less crowded than My Khe in peak season.</p>
         <p class="hotel-card-desc">For guests who want Non Nuoc Beach proximity without the luxury-resort price tag, Sandy Beach is the honest answer.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The facilities are showing their age and won't compete with Hyatt or Marriott on design or amenities. The F&B program is serviceable but not a reason to stay. Book this for the beach and the rate — not the hotel experience itself.</div>
-        <a href="https://www.booking.com/hotel/vn/sandy-beach-non-nuoc-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sandy-beach-non-nuoc-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/sandy-beach-non-nuoc-resort.html?aid=1784897&sid=best-hotels-in-da-nang--sandy-beach-non-nuoc-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Sandy Beach Non Nuoc Resort">See Sandy Beach Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -828,7 +930,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Individual beach villas with private pools, direct beach access, and enough space for a family to actually spread out. Each villa has its own gate to the beach, which is a genuine differentiator — no poolside jostling, no shared beach towel drama. The kids club is among the more competent ones in Da Nang.</p>
         <p class="hotel-card-desc">For a family that wants a private villa experience without the full InterContinental price point, Premier Village is the answer that most people haven't thought to look at.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The Son Tra location means you're away from the main city strip. The villas are excellent but the communal facilities (lobby, main pool area) are not the resort's strength. Best when the villa is the point — not the resort infrastructure around it.</div>
-        <a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--premier-village-danang-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--premier-village-danang-resort" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Premier Village Da Nang Resort">See Premier Village Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -851,7 +953,7 @@ a{color:inherit}
         <p class="hotel-card-desc">The rooftop infinity pool at TMS is 15 floors up and faces the South China Sea directly. At sunset it is one of the better views in Da Nang. The hotel below it is a solid 4-star beach property with well-appointed rooms, beach access, and a central My Khe location that makes An Thuong restaurants a short walk.</p>
         <p class="hotel-card-desc">TMS appeals most to guests who want a city-adjacent beach hotel with genuine architectural ambition — the rooftop is the reason to be here.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The rooftop pool can get crowded at peak times — it's popular both with guests and social media. The beach access, while good, involves crossing a road. If a ground-level pool with direct sand access matters more than views, Pullman or Hyatt is a better fit.</div>
-        <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--tms-hotel-da-nang-beach" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--tms-hotel-da-nang-beach" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="TMS Hotel Da Nang Beach">See TMS Hotel Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -874,7 +976,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Wyndham Soleil is the most consistently recommended mid-range beachfront hotel on the An Thuong strip, which is high praise given the competition. The location directly on My Khe Beach with An Thuong's restaurant scene a five-minute walk is its main card. Rooms are modern, service is attentive, and the pool is well-maintained.</p>
         <p class="hotel-card-desc">Popular with Korean visitors — the largest tourist group in Da Nang — and the property caters to that market well without alienating other nationalities.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> At peak season the pool and beach areas get busy. The property doesn't have the resort infrastructure of Sheraton or Hyatt — it's a good beach hotel, not a full resort. If you need a waterslide, spa, or multiple pools, move up the list.</div>
-        <a href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=best-hotels-in-da-nang--wyndham-soleil-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/wyndham-soleil-danang.html?aid=1784897&sid=best-hotels-in-da-nang--wyndham-soleil-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Wyndham Soleil Da Nang">See Wyndham Soleil Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -896,7 +998,7 @@ a{color:inherit}
         <p class="hotel-card-desc">A La Carte's rooftop pool bar is one of the better sunset drinking spots on My Khe Beach and draws non-guests as well as hotel guests. The hotel below it is a solid 4-star with beach access and a central location that makes it practical for people who want to split time between beach and city.</p>
         <p class="hotel-card-desc">Rooms are well-designed and most have sea views. The apartment-style room layouts are useful for guests who want a bit more space or are staying more than a few nights.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The rooftop bar can be noisy in peak season, which means the floors directly below it can hear it. If you're a light sleeper, ask for a mid-building room. The beach access, while good, is shared with Wyndham Soleil and other properties on the strip.</div>
-        <a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--a-la-carte-da-nang-beach" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/a-la-carte-da-nang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--a-la-carte-da-nang-beach" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="A La Carte Da Nang Beach">See A La Carte Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -918,7 +1020,7 @@ a{color:inherit}
         <p class="hotel-card-desc">SALA is the design-forward option on My Khe Beach — smaller than the resort properties, with considered interiors and a service approach that feels more attentive at the boutique scale. The beach access is direct and the pool area is quieter than at the big-resort neighbours.</p>
         <p class="hotel-card-desc">For couples who want a beachfront property without the resort-hotel feel, SALA is worth considering as an alternative to Pullman or Wyndham Soleil.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The smaller scale means fewer facilities — no waterslide, smaller pool, less dining variety. If resort infrastructure matters, look at Pullman. SALA wins on atmosphere, not amenities.</div>
-        <a href="https://www.booking.com/hotel/vn/sala-danang-beach-hotel.html?aid=1784897&sid=best-hotels-in-da-nang--sala-danang-beach-hotel" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/sala-danang-beach-hotel.html?aid=1784897&sid=best-hotels-in-da-nang--sala-danang-beach-hotel" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="SALA Danang Beach Hotel">See SALA Danang Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -941,7 +1043,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Wink is the best city hotel in Da Nang by some distance. The rooftop bar has a direct view of Dragon Bridge — close enough that when the fire-breathing happens on weekends, guests on the rooftop feel it as much as see it. The rooms are compact but well-designed, and the smart-hotel technology (app-controlled everything) is executed well enough to feel like a feature rather than a gimmick.</p>
         <p class="hotel-card-desc">The location makes Dragon Bridge, Han Market, and Da Nang's food halls walkable. For business travellers or guests who want the city over the beach, Wink is not a compromise — it is the right call.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> No beach. You are 15-20 minutes from My Khe by taxi. Rooms are small by resort standards — the design compensates but the square footage doesn't grow. Not for guests who want a pool-and-beach-resort day.</div>
-        <a href="https://www.booking.com/hotel/vn/wink-hotel-danang-centre.html?aid=1784897&sid=best-hotels-in-da-nang--wink-hotel-danang-centre" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/wink-hotel-danang-centre.html?aid=1784897&sid=best-hotels-in-da-nang--wink-hotel-danang-centre" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Wink Hotel Danang Centre">See Wink Hotel Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -964,7 +1066,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Mikazuki is a Japanese-branded full-service resort with a water park, an onsen, and a Japanese F&B program that is better than what you'd expect. The target market is clearly Japanese and Korean families, and the facilities reflect that — the onsen is serious, the water park is well-maintained, and the Japanese restaurant is actually worth eating at.</p>
         <p class="hotel-card-desc">For families traveling with children who want more activities than a standard beach resort pool, Mikazuki offers genuine variety without the chaos of a full theme park.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The Japanese branding and onsen focus gives it a specific identity that won't suit everyone. The location on the south end of Non Nuoc Beach is remote from the city. It's a self-contained resort — lean into that or it becomes a constraint.</div>
-        <a href="https://www.booking.com/hotel/vn/mikazuki-japanese-resorts-spa-da-nang.html?aid=1784897&sid=best-hotels-in-da-nang--mikazuki-japanese-resorts-spa-da" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/mikazuki-japanese-resorts-spa-da-nang.html?aid=1784897&sid=best-hotels-in-da-nang--mikazuki-japanese-resorts-spa-da" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Mikazuki Japanese Resorts & Spa Da Nang">See Mikazuki Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -987,7 +1089,7 @@ a{color:inherit}
         <p class="hotel-card-desc">Novotel Han River is the most established city-center hotel in Da Nang — the Han River views from the upper floors are genuine, the rooftop pool area at night is one of the better urban hotel experiences in the city, and the Accor infrastructure means reliability you can predict. Business travellers who come through Da Nang regularly often default here.</p>
         <p class="hotel-card-desc">The location in the center of the city is unambiguously useful — Dragon Bridge, Han Market, and the city's restaurant streets are all walkable.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> No beach access. The rooms are Novotel-standard — competent rather than exceptional. At rates that approach what Wink charges, Wink's design and technology advantage becomes relevant. Novotel wins on scale, brand reliability, and the rooftop pool.</div>
-        <a href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=best-hotels-in-da-nang--novotel-danang-premier-han-river" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/novotel-danang-premier-han-river.html?aid=1784897&sid=best-hotels-in-da-nang--novotel-danang-premier-han-river" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Novotel Danang Premier Han River">See Novotel Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -1010,7 +1112,7 @@ a{color:inherit}
         <p class="hotel-card-desc">The Vivid Rooftop Bar at Radisson Blu has become one of the better sunset spots on My Khe Beach — the combination of the infinity pool, the bar programming, and the unobstructed ocean view is a genuine draw. The resort below it is solid: beachfront, good pool, reliable service, and rooms that are well-maintained.</p>
         <p class="hotel-card-desc">Radisson Blu sits in the upper mid-range tier — above Wyndham Soleil and A La Carte on facilities, below Sheraton and Hyatt on scale and prestige. For guests who want a proper resort with a rooftop-bar personality, it delivers.</p>
         <div class="hotel-card-tradeoff"><strong>Tradeoff:</strong> The Vivid bar's popularity means the rooftop can get crowded on weekend evenings. The hotel's profile is strongest for younger guests and social-media-aware travelers. Families or guests wanting quiet evenings may find TMS or Pullman a better fit.</div>
-        <a href="https://www.booking.com/hotel/vn/radisson-blu-resort-da-nang.html?aid=1784897&sid=best-hotels-in-da-nang--radisson-blu-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored">Check Availability</a>
+        <div class="hotel-card-cta-row"><a href="https://www.booking.com/hotel/vn/radisson-blu-resort-da-nang.html?aid=1784897&sid=best-hotels-in-da-nang--radisson-blu-resort-da-nang" class="hotel-card-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Radisson Blu Resort Da Nang">See Radisson Blu Prices &rarr;</a><span class="hotel-card-cta-sub">on Booking.com</span></div>
       </div>
     </div>
 
@@ -1029,48 +1131,62 @@ a{color:inherit}
         <div class="trip-card-type">Beach + Resort Life</div>
         <div class="trip-card-hotel">Sheraton Grand Danang</div>
         <div class="trip-card-why">Largest pool complex on My Khe, wide beach, Bonvoy points. Everything works.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/sheraton-grand-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--tt-sheraton" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Sheraton Grand Danang Resort">See Sheraton Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">✨</div>
         <div class="trip-card-type">Best Experience, Full Stop</div>
         <div class="trip-card-hotel">InterContinental Sun Peninsula</div>
         <div class="trip-card-why">No other hotel in Da Nang competes on architecture, setting, or service depth.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--tt-intercontinental" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="InterContinental Danang Sun Peninsula">See Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">👨‍👩‍👧‍👦</div>
         <div class="trip-card-type">Family with Children</div>
         <div class="trip-card-hotel">Premier Village Da Nang</div>
         <div class="trip-card-why">Private beach villas with individual pool access. Kids club. Space to actually spread out.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=best-hotels-in-da-nang--tt-premier-village" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Premier Village Da Nang Resort">See Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">💆</div>
         <div class="trip-card-type">Wellness / Spa Focus</div>
         <div class="trip-card-hotel">TIA Wellness Resort</div>
         <div class="trip-card-why">All-inclusive spa treatments. Adults only. The most serious wellness program in the city.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/fusion-maia-danang.html?aid=1784897&sid=best-hotels-in-da-nang--tt-tia" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="TIA Wellness Resort Da Nang">See Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">🏙️</div>
         <div class="trip-card-type">City Explorer</div>
         <div class="trip-card-hotel">Wink Hotel Danang Centre</div>
         <div class="trip-card-why">Dragon Bridge views, rooftop bar, walkable to everything urban. No beach — intentional.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/wink-hotel-danang-centre.html?aid=1784897&sid=best-hotels-in-da-nang--tt-wink" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Wink Hotel Danang Centre">See Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">🎯</div>
         <div class="trip-card-type">Points Redemption</div>
         <div class="trip-card-hotel">Da Nang Marriott Resort</div>
         <div class="trip-card-why">Best Bonvoy redemption value in Vietnam. Private pool beach villas at the right points rate.</div>
+        <div class="trip-card-actions"><a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=best-hotels-in-da-nang--tt-marriott" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Da Nang Marriott Resort & Spa">See Prices &rarr;</a></div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">💑</div>
         <div class="trip-card-type">Couples / Honeymoon</div>
         <div class="trip-card-hotel">InterContinental or Pullman</div>
         <div class="trip-card-why">InterContinental for seclusion and drama. Pullman for beach location with more manageable cost.</div>
+        <div class="trip-card-actions">
+          <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=best-hotels-in-da-nang--tt-intercontinental2" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="InterContinental Danang Sun Peninsula">InterContinental &rarr;</a>
+          <a href="https://www.booking.com/hotel/vn/danang-beach-resort.html?aid=1784897&sid=best-hotels-in-da-nang--tt-pullman" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Pullman Danang Beach Resort">Pullman &rarr;</a>
+        </div>
       </div>
       <div class="trip-card">
         <div class="trip-card-icon">🌅</div>
         <div class="trip-card-type">Sunset Rooftop Drinks</div>
         <div class="trip-card-hotel">TMS Hotel or Wink Hotel</div>
         <div class="trip-card-why">TMS: ocean infinity pool 15 floors up. Wink: Dragon Bridge fire show from the rooftop.</div>
+        <div class="trip-card-actions">
+          <a href="https://www.booking.com/hotel/vn/tms-luxury-danang-beach.html?aid=1784897&sid=best-hotels-in-da-nang--tt-tms" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="TMS Hotel Da Nang Beach">TMS &rarr;</a>
+          <a href="https://www.booking.com/hotel/vn/wink-hotel-danang-centre.html?aid=1784897&sid=best-hotels-in-da-nang--tt-wink2" class="trip-price-cta" target="_blank" rel="noopener sponsored" data-cta-location="booking_trip_type" data-hotel="Wink Hotel Danang Centre">Wink &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1275,6 +1391,19 @@ filterBtns.forEach(btn => {
         card.style.display = 'none';
       }
     });
+  });
+});
+
+/* Booking.com CTA click tracking — differentiates click location for analytics */
+document.querySelectorAll('a[data-cta-location]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'booking_click', {
+        cta_location: link.dataset.ctaLocation,
+        hotel_name: link.dataset.hotel || null,
+        page: 'best-hotels-in-da-nang'
+      });
+    }
   });
 });
 </script>
