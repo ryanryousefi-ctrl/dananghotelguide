@@ -517,7 +517,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <span class="bb-detail-tag">Rehahn artwork</span>
       </div>
       <div class="bb-top-pick-links">
-        <a href="https://www.booking.com/searchresults.html?ss=Anantara+Hoi+An+Resort&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-cta affiliate-link">Check Rates &rarr;</a>
+        <a href="https://www.booking.com/searchresults.html?ss=Anantara+Hoi+An+Resort&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-cta affiliate-link" data-cta-location="booking_hotel_card" data-hotel="Anantara Hoi An Resort">See Anantara Prices &rarr;</a>
       </div>
     </div>
     <a href="https://www.booking.com/searchresults.html?ss=Anantara+Hoi+An+Resort&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-img affiliate-link">
@@ -543,7 +543,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <span class="bb-sig-detail-tag">Riverside</span>
         <span class="bb-sig-detail-tag">Rooftop pool</span>
       </div>
-      <a href="https://www.booking.com/searchresults.html?ss=Hotel+Royal+Hoi+An+MGallery&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-sig-pick-cta affiliate-link">Check Rates &rarr;</a>
+      <a href="https://www.booking.com/searchresults.html?ss=Hotel+Royal+Hoi+An+MGallery&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-sig-pick-cta affiliate-link" data-cta-location="booking_hotel_card" data-hotel="Hotel Royal Hoi An MGallery">See Hotel Royal Prices &rarr;</a>
     </div>
   </div>
 </section>
@@ -789,7 +789,7 @@ function cardHtml(h){
     +'<p class="bb-card-desc">'+h.description+'</p>'
     +'<p class="bb-card-bestfor"><strong>Best for:</strong> '+h.bestFor+'</p>'
     +'<div class="bb-card-links">'
-    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link">Check Rates &rarr;</a>'
+    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
     +'</div>'
     +'</div></article>';
 }
@@ -957,5 +957,6 @@ applyFilters();
 </script>
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js"></script>
 </body>
 </html>

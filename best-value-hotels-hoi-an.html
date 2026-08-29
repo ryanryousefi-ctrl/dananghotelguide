@@ -524,7 +524,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <span class="bb-detail-tag">Reliable value</span>
       </div>
       <div class="bb-top-pick-links">
-        <a href="https://www.booking.com/searchresults.html?ss=Belle+Maison+Hadana+Hoi+An&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-cta affiliate-link">Check Rates &rarr;</a>
+        <a href="https://www.booking.com/searchresults.html?ss=Belle+Maison+Hadana+Hoi+An&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-cta affiliate-link" data-cta-location="booking_hotel_card" data-hotel="Belle Maison Hadana Hoi An">See Belle Maison Hadana Prices &rarr;</a>
       </div>
     </div>
     <a href="https://www.booking.com/searchresults.html?ss=Belle+Maison+Hadana+Hoi+An&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-top-pick-img affiliate-link">
@@ -551,7 +551,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <span class="bb-sig-detail-tag">Walkable, Old Town edge</span>
         <span class="bb-sig-detail-tag">Pool included</span>
       </div>
-      <a href="https://www.booking.com/searchresults.html?ss=Vinh+Hung+Library+Hotel&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-sig-pick-cta affiliate-link">Check Rates &rarr;</a>
+      <a href="https://www.booking.com/searchresults.html?ss=Vinh+Hung+Library+Hotel&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-sig-pick-cta affiliate-link" data-cta-location="booking_hotel_card" data-hotel="Vinh Hung Library Hotel">See Vinh Hung Library Prices &rarr;</a>
     </div>
   </div>
 </section>
@@ -626,13 +626,13 @@ button{font-family:var(--font-sans);cursor:pointer}
     <h2 class="bb-section-h2">What If You Want <em>Resort Infrastructure?</em></h2>
     <p class="bb-section-intro">Value doesn't have to mean small. New World Hoiana Hotel is usually the most approachable way into the Hoiana ecosystem, golf, casino, beach, at a rate well under the flagship properties around it.</p>
     <div class="bb-shortlist-grid" style="grid-template-columns:1fr">
-      <a href="https://www.booking.com/searchresults.html?ss=New+World+Hoiana+Hotel&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-shortlist-card affiliate-link" style="display:grid;grid-template-columns:280px 1fr;align-items:stretch">
+      <a href="https://www.booking.com/searchresults.html?ss=New+World+Hoiana+Hotel&aid=1784897" target="_blank" rel="nofollow noopener sponsored" class="bb-shortlist-card affiliate-link" style="display:grid;grid-template-columns:280px 1fr;align-items:stretch" data-cta-location="booking_hotel_card" data-hotel="New World Hoiana Hotel">
         <div class="bb-shortlist-img" style="aspect-ratio:auto"><img src="assets/img/best-hotels-in-hoi-an-c43a09ae52e1.jpg" alt="New World Hoiana Hotel balcony rooms" loading="lazy" width="400" height="300" style="height:100%"></div>
         <div class="bb-shortlist-body" style="display:flex;flex-direction:column;justify-content:center;padding:1.5rem 1.75rem">
           <p class="bb-shortlist-cat">Resort Value</p>
           <h3 class="bb-shortlist-name" style="margin-bottom:.6rem">New World Hoiana Hotel</h3>
           <p style="font-size:.85rem;color:var(--ink-soft);line-height:1.7;margin-bottom:.85rem">476 rooms with private balconies, full access to Hoiana's golf, casino and beach infrastructure at a fraction of the flagship rate.</p>
-          <span class="bb-shortlist-cta">Check Rates &rarr;</span>
+          <span class="bb-shortlist-cta">See New World Hoiana Prices &rarr;</span>
         </div>
       </a>
     </div>
@@ -772,7 +772,7 @@ function cardHtml(h){
     +'<p class="bb-card-desc">'+h.description+'</p>'
     +'<p class="bb-card-bestfor"><strong>Best for:</strong> '+h.bestFor+'</p>'
     +'<div class="bb-card-links">'
-    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link">Check Rates &rarr;</a>'
+    +'<a href="'+h.bookingUrl+'" target="_blank" rel="nofollow noopener sponsored" class="bb-ext-link affiliate-link" data-cta-location="booking_hotel_card" data-hotel="'+h.name+'">See '+(h.name.split(' ').slice(0,2).join(' '))+' Prices &rarr;</a>'
     +'</div>'
     +'</div></article>';
 }
@@ -940,5 +940,6 @@ applyFilters();
 </script>
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js"></script>
 </body>
 </html>
