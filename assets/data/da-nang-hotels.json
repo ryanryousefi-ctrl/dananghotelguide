@@ -17,7 +17,8 @@
     "boutique": false,
     "address": "303 Nguyen Van Linh, Thanh Khe",
     "notes": "Airport-side business hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/samdihoteldanangvietnam/"
   },
   {
     "name": "Avatar Danang Hotel",
@@ -37,7 +38,8 @@
     "boutique": false,
     "address": "Nguyen Van Thoai, Ngu Hanh Son",
     "notes": "3.5-star near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/AvatarDananghotel/"
   },
   {
     "name": "Balcona Hotel Da Nang",
@@ -57,7 +59,8 @@
     "boutique": false,
     "address": "288 Vo Nguyen Giap, My An",
     "notes": "Beach-road tower [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/balconahoteldanang/"
   },
   {
     "name": "Cozy Danang Boutique Hotel",
@@ -97,7 +100,9 @@
     "boutique": false,
     "address": "",
     "notes": "An Thuong boutique linked on site. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/daisyboutiquehotel.dn/",
+    "instagramUrl": "https://www.instagram.com/daisyboutiquehotel.dn/"
   },
   {
     "name": "Full House Homestay Da Nang",
@@ -177,7 +182,8 @@
     "boutique": false,
     "address": "An Thuong area",
     "notes": "An Thuong value [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/goldenlinehoteldanang/"
   },
   {
     "name": "HAIAN Beach Hotel & Spa",
@@ -217,7 +223,8 @@
     "boutique": true,
     "address": "Do Ba, My An, Ngu Hanh Son",
     "notes": "Boutique near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/hadanaboutique/"
   },
   {
     "name": "Holiday Beach Da Nang Hotel & Resort",
@@ -237,7 +244,9 @@
     "boutique": false,
     "address": "",
     "notes": "Beach-road hotel linked from best-my-khe-hotels. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/HolidayBeachHotelDanang.Official/",
+    "instagramUrl": "https://www.instagram.com/holidaybeachdanang/"
   },
   {
     "name": "Jolia Hotel & Apartment",
@@ -257,7 +266,8 @@
     "boutique": false,
     "address": "An Thuong, My An",
     "notes": "Budget apartment [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/JoliaHotel/"
   },
   {
     "name": "King's Finger Hotel",
@@ -277,7 +287,8 @@
     "boutique": false,
     "address": "Nguyen Van Thoai, Ngu Hanh Son",
     "notes": "Budget-mid near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/kingsfingerluxury/"
   },
   {
     "name": "Le Hoang Beach Hotel",
@@ -297,7 +308,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, My An",
     "notes": "Beach-road value [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/LeHoangBeachHotel/"
   },
   {
     "name": "Like Backpacker Hostel",
@@ -317,7 +329,8 @@
     "boutique": false,
     "address": "An Thuong, My An",
     "notes": "An Thuong dorms [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/likebackpackerhosteldanang/"
   },
   {
     "name": "M Boutique Hotel Danang",
@@ -357,7 +370,8 @@
     "boutique": false,
     "address": "",
     "notes": "Site map pin + An Thuong signature pick. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/mhoteldanangvn/"
   },
   {
     "name": "Minh Boutique Hotel",
@@ -497,7 +511,8 @@
     "boutique": false,
     "address": "An Thuong, My An",
     "notes": "Apartment-hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/rolivahoteldanang/"
   },
   {
     "name": "Royal Lotus Hotel Danang",
@@ -517,7 +532,8 @@
     "boutique": false,
     "address": "120A Nguyen Van Thoai, Ngu Hanh Son",
     "notes": "4-star near beach junction [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/royallotushoteldanang/"
   },
   {
     "name": "Saha Casa Boutique Hotel",
@@ -537,7 +553,8 @@
     "boutique": false,
     "address": "",
     "notes": "Site map pin; An Thuong boutique. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/p/Saha-Casa-Boutique-Hotel-61554763206774/"
   },
   {
     "name": "Sea Phoenix Hotel",
@@ -557,7 +574,8 @@
     "boutique": false,
     "address": "Le Quang Dao, My An",
     "notes": "Near beach south end [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/seaphoenixhotel/"
   },
   {
     "name": "Seahorse Signature Danang Hotel",
@@ -577,7 +595,8 @@
     "boutique": false,
     "address": "",
     "notes": "Haviland-managed An Thuong property linked on site. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/Seahorsesignaturebyhaviland/"
   },
   {
     "name": "Seahorse Tropical Natalie Danang Hotel",
@@ -617,7 +636,9 @@
     "boutique": false,
     "address": "",
     "notes": "Linked from boutique / An Thuong / where-to-stay guides. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/sofianamykhehotel/",
+    "instagramUrl": "https://www.instagram.com/sofianamykhehotel/"
   },
   {
     "name": "TIA Wellness Resort",
@@ -657,7 +678,9 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, My An",
     "notes": "Suite-style beachfront [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/YarraOceanSuites.Official/",
+    "instagramUrl": "https://www.instagram.com/yarraoceansuitesdanang/"
   },
   {
     "name": "Azura Da Nang",
@@ -697,7 +720,8 @@
     "boutique": false,
     "address": "158 Phan Chau Trinh, Hai Chau",
     "notes": "Vitours legacy hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/bamboogreencentral/"
   },
   {
     "name": "Bay Capital Da Nang Hotel",
@@ -757,7 +781,8 @@
     "boutique": false,
     "address": "",
     "notes": "City hotel linked on site. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/brownbeanhoteldanang/"
   },
   {
     "name": "Caro Hotel Da Nang",
@@ -777,7 +802,8 @@
     "boutique": false,
     "address": "",
     "notes": "Riverfront hotel linked from da-nang-riverfront-hotels.html and boutique guide. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/caropremiumdananghotel/"
   },
   {
     "name": "Citadines Blue Cove Danang",
@@ -797,7 +823,8 @@
     "boutique": false,
     "address": "Lot A2-2, 3/2 Street, Thuan Phuoc, Hai Chau",
     "notes": "Ascott serviced residence [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/CitadinesBlueCoveDanang/"
   },
   {
     "name": "Continent Hotel Da Nang",
@@ -837,7 +864,8 @@
     "boutique": false,
     "address": "Duong Tu Minh, Hai Chau",
     "notes": "City 3-star (verify address) [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/Cordialhoteldn/"
   },
   {
     "name": "Courtyard by Marriott Danang Han River",
@@ -877,7 +905,8 @@
     "boutique": false,
     "address": "Nguyen Van Linh, Hai Chau",
     "notes": "Newer IHG city tower [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/crowneplazadanangcitycentre/"
   },
   {
     "name": "Danang Backpackers Hostel",
@@ -917,7 +946,8 @@
     "boutique": false,
     "address": "Bach Dang area, Hai Chau",
     "notes": "River-view mid hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/dananghanriverhotel/"
   },
   {
     "name": "Danang Riverside Hotel",
@@ -937,7 +967,8 @@
     "boutique": false,
     "address": "Tran Hung Dao, Son Tra",
     "notes": "East-bank river hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/Danangriverside.vn/"
   },
   {
     "name": "Fivitel Da Nang",
@@ -1037,7 +1068,8 @@
     "boutique": false,
     "address": "",
     "notes": "Third HAIAN property in Da Nang, distinct from HAIAN Beach and HAIAN Riverfront. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/haianriverfronthotel/"
   },
   {
     "name": "HAIAN Riverfront Hotel",
@@ -1117,7 +1149,8 @@
     "boutique": false,
     "address": "",
     "notes": "Hilton focused-service property linked from rooftop-pool and quiet-hotels guides. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/hiltongardeninndanang/"
   },
   {
     "name": "Le House Boutique Hotel",
@@ -1197,7 +1230,9 @@
     "boutique": false,
     "address": "Tran Phu area, Hai Chau",
     "notes": "Design hostel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/p/Memory-Hostel-Danang-Vietnam-100064416233014/",
+    "instagramUrl": "https://www.instagram.com/memory_hostel_danang/"
   },
   {
     "name": "Minh Toan Galaxy Hotel",
@@ -1217,7 +1252,8 @@
     "boutique": false,
     "address": "306 2/9 Street, Hai Chau",
     "notes": "Near Asia Park; MICE [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/MinhToanGalaxyHotel/"
   },
   {
     "name": "Monarque Hotel",
@@ -1237,7 +1273,8 @@
     "boutique": false,
     "address": "",
     "notes": "Riverside/boutique hotel with Booking.com page used on site. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/MonarqueHotel.Official/"
   },
   {
     "name": "Moonlight Hotel Suites & Spa",
@@ -1377,7 +1414,8 @@
     "boutique": false,
     "address": "29 Hoang Dieu, Hai Chau",
     "notes": "Long-running city 3-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/danangorangehotel/"
   },
   {
     "name": "Palazzo Hotel Da Nang",
@@ -1417,7 +1455,8 @@
     "boutique": false,
     "address": "5 Dong Da, Hai Chau",
     "notes": "Saigontourist property [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/saigontourane/"
   },
   {
     "name": "Sanouva Danang Hotel",
@@ -1477,7 +1516,8 @@
     "boutique": false,
     "address": "132-134 Bach Dang, Hai Chau",
     "notes": "Riverfront value pick [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/sunriverhoteldn/"
   },
   {
     "name": "The Blossom Resort & Villas Da Nang",
@@ -1497,7 +1537,8 @@
     "boutique": true,
     "address": "Con Dau islet, Cam Le",
     "notes": "Villa resort on Han River islet [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/theblossomvn/"
   },
   {
     "name": "The Herriott Hotel & Suite",
@@ -1517,7 +1558,8 @@
     "boutique": false,
     "address": "Nhu Nguyet, Hai Chau",
     "notes": "Riverside suites near Thuan Phuoc [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/theherriott/"
   },
   {
     "name": "The Vietnam Hostel",
@@ -1657,7 +1699,8 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/adalinehoteldanang/"
   },
   {
     "name": "Adamo Hotel Da Nang",
@@ -1717,7 +1760,8 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "4-star with spa [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/ariagrandhotel/"
   },
   {
     "name": "Awaken Danang Hotel",
@@ -1777,7 +1821,8 @@
     "boutique": false,
     "address": "216 Vo Nguyen Giap, Phuoc My, Son Tra",
     "notes": "H&K Hospitality beachfront [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/bellemaisondanang/"
   },
   {
     "name": "Bien Nho Hotel",
@@ -1857,7 +1902,8 @@
     "boutique": false,
     "address": "Vo Van Kiet area, Son Tra",
     "notes": "Rooftop infinity pool [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/ciciliadanang/"
   },
   {
     "name": "DLG Hotel Danang",
@@ -1877,7 +1923,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Son Tra",
     "notes": "Twin-tower beachfront hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/dlghoteldanang/"
   },
   {
     "name": "Diamond Sea Hotel",
@@ -1917,7 +1964,8 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Solid 3-star near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/dylanhoteldanang/"
   },
   {
     "name": "Eco Green Boutique Hotel",
@@ -1937,7 +1985,9 @@
     "boutique": true,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Boutique 3-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/ecogreenboutique/",
+    "instagramUrl": "https://www.instagram.com/ecogreendanang/"
   },
   {
     "name": "Four Points by Sheraton Danang",
@@ -1997,7 +2047,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Phuoc My",
     "notes": "Sea-road hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/gicluxury/"
   },
   {
     "name": "Golden Lotus Grand Da Nang",
@@ -2017,7 +2068,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Son Tra",
     "notes": "Beachfront tower hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/goldenlotusgrandhoteldanang/"
   },
   {
     "name": "Grand Sea Hotel",
@@ -2037,7 +2089,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Son Tra",
     "notes": "Sea-road hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/GrandSeaHotelDanang/"
   },
   {
     "name": "Grand Sunrise Boutique Hotel",
@@ -2057,7 +2110,8 @@
     "boutique": true,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Small upscale near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/GrandSunriseBoutique/"
   },
   {
     "name": "Grand Tourane Hotel",
@@ -2137,7 +2191,8 @@
     "boutique": false,
     "address": "Vo Van Kiet, Son Tra",
     "notes": "Near beach gateway road [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/lavencos/"
   },
   {
     "name": "Le Sands Oceanfront Danang Hotel",
@@ -2157,7 +2212,9 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Phuoc My",
     "notes": "Oceanfront tower [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/lesandsoceanfrontdananghotel/",
+    "instagramUrl": "https://www.instagram.com/lesandsoceanfront.danang/"
   },
   {
     "name": "Luxtery Hotel",
@@ -2177,7 +2234,8 @@
     "boutique": false,
     "address": "Ho Nghinh, Phuoc My, Son Tra",
     "notes": "Near beach; rooftop pool [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/luxteryhotel/"
   },
   {
     "name": "Mandila Beach Hotel Danang",
@@ -2197,7 +2255,8 @@
     "boutique": false,
     "address": "",
     "notes": "Subject of a dedicated site comparison page (mandila-beach-vs-stella-maris). [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/mandilabeachhotel/"
   },
   {
     "name": "Maximilan Danang Beach Hotel",
@@ -2217,7 +2276,8 @@
     "boutique": false,
     "address": "222 Vo Nguyen Giap, Phuoc My",
     "notes": "Beachfront 4-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/maximilanhoteldanang/"
   },
   {
     "name": "Merry Hotel",
@@ -2277,7 +2337,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap & Duong Dinh Nghe, Son Tra",
     "notes": "Corner tower near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/nhuminhplazadananghotel/"
   },
   {
     "name": "Packo Hostel",
@@ -2297,7 +2358,9 @@
     "boutique": false,
     "address": "Morrison, An Don, Son Tra",
     "notes": "Design hostel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/packohostel/",
+    "instagramUrl": "https://www.instagram.com/packohostel/"
   },
   {
     "name": "Paracel Hotel Da Nang",
@@ -2317,7 +2380,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Phuoc My",
     "notes": "Sea-road 3-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/paraceldananghotel/"
   },
   {
     "name": "Paris Deli Danang Beach Hotel",
@@ -2337,7 +2401,8 @@
     "boutique": false,
     "address": "236 Vo Nguyen Giap, Phuoc My",
     "notes": "Beachfront with bakery brand [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/Parisdelihotel/"
   },
   {
     "name": "Parze Ocean Hotel & Spa",
@@ -2377,7 +2442,9 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Near My Khe Beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/peninsula.hotel.dn/",
+    "instagramUrl": "https://www.instagram.com/peninsulahotel_danang/"
   },
   {
     "name": "Radisson Hotel Danang",
@@ -2417,7 +2484,9 @@
     "boutique": false,
     "address": "",
     "notes": "Newer Radisson RED property linked on site. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/RadissonREDDanang/",
+    "instagramUrl": "https://www.instagram.com/radissonred.danang/"
   },
   {
     "name": "Raon Danang Beach Hotel",
@@ -2457,7 +2526,9 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Container-style hostel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/Rom.Casa.Da.Nang.Hostel/",
+    "instagramUrl": "https://www.instagram.com/romcasahosteldanang/"
   },
   {
     "name": "Rosamia Da Nang Hotel",
@@ -2517,7 +2588,9 @@
     "boutique": false,
     "address": "",
     "notes": "Linked on site with a Booking.com property page. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/santaluxuryhotel/",
+    "instagramUrl": "https://www.instagram.com/santaluxuryhotel/"
   },
   {
     "name": "Santori Hotel & Spa",
@@ -2537,7 +2610,8 @@
     "boutique": false,
     "address": "Pham Van Dong, Son Tra",
     "notes": "Value spa hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/santorihotelspadanang/"
   },
   {
     "name": "Sea Garden Hotel",
@@ -2557,7 +2631,8 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Guesthouse-style [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/seagardenhoteldanangvietnam/"
   },
   {
     "name": "Sea Queen Hotel Da Nang",
@@ -2577,7 +2652,8 @@
     "boutique": false,
     "address": "",
     "notes": "Linked on site with a Booking.com property page. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/seaqueenhoteldanang/"
   },
   {
     "name": "Seashore Hotel & Apartment",
@@ -2597,7 +2673,8 @@
     "boutique": false,
     "address": "An Don, Son Tra",
     "notes": "Apartment-hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/seashoredanang/"
   },
   {
     "name": "Sekong Hotel Da Nang",
@@ -2617,7 +2694,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Son Tra",
     "notes": "Beach-road 3-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/hotelsekongdanang/"
   },
   {
     "name": "Sel de Mer Hotel & Suites",
@@ -2637,7 +2715,8 @@
     "boutique": false,
     "address": "Vo Nguyen Giap, Phuoc My",
     "notes": "Beachfront suites [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/seldemerhotelandsuites.vn/"
   },
   {
     "name": "Silk Path Grand Resort & Spa Danang",
@@ -2737,7 +2816,9 @@
     "boutique": false,
     "address": "220 Vo Nguyen Giap, Phuoc My",
     "notes": "Beachfront family hotel [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/stellamarisbeachdanang/",
+    "instagramUrl": "https://www.instagram.com/stellamarisbeachdn/"
   },
   {
     "name": "Sunset Sea Hotel",
@@ -2797,7 +2878,8 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "Value 3-star [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/TITANHOTELDANANG/"
   },
   {
     "name": "Val Soleil Hotel",
@@ -2817,7 +2899,9 @@
     "boutique": false,
     "address": "Duong Dinh Nghe, Son Tra",
     "notes": "3.5-star near beach [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/ValSoleilHotel/",
+    "instagramUrl": "https://www.instagram.com/valsoleilhoteldanang/"
   },
   {
     "name": "Valentine Hotel",
@@ -2857,7 +2941,8 @@
     "boutique": false,
     "address": "",
     "notes": "Linked on site with a Booking.com property page. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/khachsandanang2023/"
   },
   {
     "name": "Wyndham Soleil Danang",
@@ -2877,7 +2962,8 @@
     "boutique": false,
     "address": "",
     "notes": "Site-reviewed 5-star beachfront tower; has a DHG review page and score.",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/wyndhamsoleildananghotel/"
   },
   {
     "name": "voco Ma Belle Danang",
@@ -2897,7 +2983,9 @@
     "boutique": false,
     "address": "",
     "notes": "IHG voco conversion on the beach road; linked from multiple site pages. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/vocodanang/",
+    "instagramUrl": "https://www.instagram.com/vocomabelledanang/"
   },
   {
     "name": "Crowne Plaza Danang",
@@ -2977,7 +3065,9 @@
     "boutique": false,
     "address": "",
     "notes": "Route Inn Japanese-brand resort on the southern beach strip; on the site map pin array. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/grandvrioresortdanang/",
+    "instagramUrl": "https://www.instagram.com/grandvrioresortdanang/"
   },
   {
     "name": "Hyatt Regency Danang Resort & Spa",
@@ -3017,7 +3107,9 @@
     "boutique": false,
     "address": "Truong Sa, Hoa Hai, Ngu Hanh Son",
     "notes": "Apartment-style beachfront resort [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/koiresortdanang/",
+    "instagramUrl": "https://www.instagram.com/koiresortdanang/"
   },
   {
     "name": "Melia Danang Beach Resort",
@@ -3077,7 +3169,8 @@
     "boutique": false,
     "address": "",
     "notes": "Long-standing Non Nuoc resort linked across multiple site pages. [priceTier estimated from tier positioning]",
-    "source": "added"
+    "source": "added",
+    "facebookUrl": "https://www.facebook.com/sandybeachresortdanang/"
   },
   {
     "name": "Sheraton Grand Danang Resort & Spa",
@@ -3217,6 +3310,7 @@
     "boutique": true,
     "address": "Hoang Sa, Tho Quang, Son Tra",
     "notes": "Villas on Son Tra's south coast [priceTier estimated from spreadsheet tier]",
-    "source": "spreadsheet"
+    "source": "spreadsheet",
+    "facebookUrl": "https://www.facebook.com/www.sontraresort.com.vn/"
   }
 ]
