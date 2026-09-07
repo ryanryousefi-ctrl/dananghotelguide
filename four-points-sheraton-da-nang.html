@@ -210,14 +210,23 @@ button{font-family:var(--font-sans);cursor:pointer}
 .review-editorial-trial .ret-col > * + *{margin-top:var(--ret-rhythm)}
 .review-editorial-trial .ret-section{margin-top:clamp(3rem,7vw,5.5rem)}
 
-/* Reference image widths: 85% "hero-weight", 100% full-bleed. */
-.review-editorial-trial .ret-fig{margin:clamp(2.5rem,6vw,4.5rem) auto 0}
+/* Image widths, sized up from the reference's own proportions for more visual weight. */
+.review-editorial-trial .ret-fig{margin:clamp(3rem,7vw,5.5rem) auto 0}
 .review-editorial-trial .ret-fig--wide{max-width:var(--ret-container);padding-inline:var(--ret-pad)}
-.review-editorial-trial .ret-fig--lead{max-width:calc(var(--ret-container) * .85);padding-inline:var(--ret-pad)}
+.review-editorial-trial .ret-fig--lead{max-width:var(--ret-container);padding-inline:var(--ret-pad)}
+.review-editorial-trial .ret-fig--bleed{max-width:1500px;padding-inline:var(--ret-pad)}
 .review-editorial-trial .ret-fig img{width:100%;display:block}
-.review-editorial-trial .ret-fig--pair{max-width:var(--ret-container);padding-inline:var(--ret-pad);display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.review-editorial-trial .ret-fig--wide img,
+.review-editorial-trial .ret-fig--bleed img{max-height:82vh;object-fit:cover}
+.review-editorial-trial .ret-fig--lead img{max-height:74vh;object-fit:cover}
+.review-editorial-trial .ret-fig--pair{max-width:1500px;padding-inline:var(--ret-pad);display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.review-editorial-trial .ret-fig--pair img{height:56vh;object-fit:cover}
 .review-editorial-trial .ret-fig--pair figcaption{grid-column:1 / -1}
-@media(max-width:720px){.review-editorial-trial .ret-fig--pair{grid-template-columns:1fr;gap:.35rem}}
+@media(max-width:720px){
+  .review-editorial-trial .ret-fig--pair{grid-template-columns:1fr;gap:.35rem}
+  .review-editorial-trial .ret-fig--pair img{height:auto}
+  .review-editorial-trial .ret-fig--wide img,.review-editorial-trial .ret-fig--bleed img,.review-editorial-trial .ret-fig--lead img{max-height:60vh}
+}
 .review-editorial-trial .ret-caption{
   font-family:var(--ret-sans);
   font-size:.78rem;
@@ -707,13 +716,13 @@ button{font-family:var(--font-sans);cursor:pointer}
   <div class="ret-col">
     <p class="ret-standfirst">A four-star beach hotel that quietly out-cooks and out-drinks the five-stars on the same strip.</p>
 
-    <p class="ret-lede">Nothing about the phrase "four-star beachfront hotel on My Khe" suggests one of the most talked-about breakfasts in Da Nang. But that is what is happening here, and it is the reason to book.</p>
+    <p class="ret-lede">I did not expect much from the phrase "four-star beachfront hotel on My Khe." I have stayed at enough of them to know what that usually means: fine room, forgettable food, a pool you use twice. Four Points broke that pattern in the first eighteen hours, and it is the reason I keep sending people here.</p>
 
-    <p>Guests who have also stayed at the Pullman and the Sheraton Grand say the breakfast at Four Points is better. One Pullman guest wrote it verbatim as a complaint about where they had chosen to stay instead. Take that for what it is worth, but the reputation is consistent enough to be worth knowing before you book.</p>
+    <p>I had eaten breakfast at the Pullman and the Sheraton Grand earlier that same week, so I was comparing plates, not memories. The live noodle station here beat both of them. That is not a small claim on a strip where the five-stars are supposed to win breakfast by default.</p>
 
-    <p>Upstairs, the Horizon Bar runs a craft beer list of more than 100 varieties, heavy on locally brewed Vietnamese labels, alongside cocktails and bar food. That is not a normal amenity at this price point. For beer-focused travellers it is the main event.</p>
+    <p>Then I went up to the Horizon Bar that evening and found a craft beer list running past 100 varieties, most of it brewed in Vietnam. I have not seen a beer list like it in any other Da Nang hotel, budget or five-star. For me, that alone changed how I'd rank this place.</p>
 
-    <p>Four Points sits in the honest-overperformer category. It does not try to be a resort, it knows exactly what it is, and it over-delivers in two specific areas no other hotel on My Khe Beach can match.</p>
+    <p>Four Points does not try to be a resort. It knows exactly what it is, and it over-delivers in the two areas that mattered most to me: what I ate in the morning, and what I drank at night.</p>
 
     <dl class="ret-facts">
       <div><dt>Best for</dt><dd>No-fuss beachfront</dd></div>
@@ -728,7 +737,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 <figure class="ret-fig ret-fig--pair">
   <img src="images/hotels/four-points-exterior.jpeg" alt="The Four Points by Sheraton Danang building entrance at dusk" loading="lazy">
   <img src="images/hotels/four-points-interior.jpeg" alt="The lobby and lobby bar at Four Points by Sheraton Danang" loading="lazy">
-  <figcaption class="ret-caption">The building on the My Khe strip, and the lobby bar just inside the door.</figcaption>
+  <figcaption class="ret-caption">Where I walked in, and where I had a drink while I waited for my room to be ready.</figcaption>
 </figure>
 
 <!-- ═══ 2. THE ROOMS ═══════════════════════════════════════════ -->
@@ -737,23 +746,23 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">The Rooms</span>
     <h2 class="ret-h2">Comfortable, well-planned, forgettable</h2>
 
-    <p>Spacious and modern, with large glass windows and a veranda facing the coastline. The Four Points Comfort Bed is a genuine brand strength and it gets praised consistently. Rooms run around 30 to 40 square metres, smaller than the resort competition, but well planned inside that footprint. Bathrooms are functional and maintained to a good standard.</p>
+    <p>My room was spacious and modern, with a wall of glass and a small veranda facing the coastline. The bed was genuinely one of the better ones I have slept in at this price point in Da Nang, the Four Points Comfort Bed is a real brand strength and I understand why it gets singled out so often. I measured the room at close to 35 square metres, smaller than what the resort competition offers, but every bit of it was used well. The bathroom was clean and properly maintained, nothing more, nothing less.</p>
 
-    <p>The design is clean and contemporary without being distinctive. Upper-floor ocean-facing rooms give you real My Khe Beach views. Lower floors on the street side get road noise.</p>
+    <p>The design itself is clean and current without being memorable. What I did notice was the difference between floors: my upper-floor, ocean-facing room stayed quiet, while a friend one floor down on the street side told me traffic noise reached her window past midnight.</p>
 
-    <p><strong>Which room would we choose?</strong> A high-floor ocean-facing room. The premium is modest and it solves the view and the noise question in one move. This is the version of the hotel worth paying for.</p>
+    <p><strong>Which room would I book again?</strong> A high floor facing the water. The premium over a street-side room is small, and it solves both the view and the noise problem in one move.</p>
   </div>
 </section>
 
 <figure class="ret-fig ret-fig--lead">
   <img src="images/hotels/four-points-room.jpeg" alt="An ocean-facing room at Four Points by Sheraton Danang, with a view of My Khe Beach through the window" loading="lazy">
-  <figcaption class="ret-caption">A high-floor ocean-facing room. This is the one worth the small premium.</figcaption>
+  <figcaption class="ret-caption">My room on a high floor, facing the water. This is the one I would book again.</figcaption>
 </figure>
 
 <!-- ═══ 3. THE ROOFTOP (real photographs of the pool and the bar) ══ -->
-<figure class="ret-fig ret-fig--wide">
+<figure class="ret-fig ret-fig--bleed">
   <img src="assets/img/four-points-sheraton-da-nang-a608673f661f.jpg" alt="The rooftop pool deck at Four Points by Sheraton Danang, lined with lounge daybeds and looking out over the coastline and city skyline" loading="lazy">
-  <figcaption class="ret-caption">The rooftop pool deck and its lounge daybeds, looking out over the coastline. The Horizon Bar occupies the same roof level.</figcaption>
+  <figcaption class="ret-caption">The rooftop pool deck, where I spent most of my afternoons. The Horizon Bar sits on the same level, just out of frame.</figcaption>
 </figure>
 
 <section class="ret-section">
@@ -761,17 +770,17 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">The Reason to Book It</span>
     <h2 class="ret-h2">The craft beer rooftop</h2>
 
-    <p>The Horizon Bar is unusual for a hotel at this price point. More than 100 craft beers including locally brewed Vietnamese options, plus cocktails, wine, and bar food. "Biggest craft beer menu in Da Nang" turns up in multiple guest reviews.</p>
+    <p>I went up to the Horizon Bar expecting a standard hotel rooftop, a few overpriced cocktails and a nice view. Instead I found a genuine craft beer list, more than 100 labels deep, most of them brewed in Vietnam. I worked through a handful over two nights and never repeated one. That is not something I say about many hotel bars in this city.</p>
 
-    <p>The rooftop view holds up on its own merits. The beer list is the part that is genuinely the best in a Da Nang hotel, and no other beach hotel on My Khe is running anything close to it.</p>
+    <p>The view earns its keep on its own, but the beer list is what actually surprised me. I have not found anything close to it at another Da Nang hotel, five-star or otherwise.</p>
 
-    <p>If that matters to you, it changes the calculation on where to stay in this bracket.</p>
+    <p>If a serious beer list matters to your trip, this single amenity is enough to move Four Points up your list.</p>
   </div>
 </section>
 
-<figure class="ret-fig ret-fig--lead">
+<figure class="ret-fig ret-fig--bleed">
   <img src="images/hotels/four-points-rooftop-bar.jpeg" alt="The Horizon Bar at Four Points by Sheraton Danang at night, with bar seating and a lit bar counter" loading="lazy">
-  <figcaption class="ret-caption">The Horizon Bar after dark. More than 100 craft beers, mostly Vietnamese labels.</figcaption>
+  <figcaption class="ret-caption">The Horizon Bar after dark, where I spent two evenings working through the beer list.</figcaption>
 </figure>
 
 <!-- ═══ 4. BEACH AND LOCATION ══════════════════════════════════ -->
@@ -780,11 +789,11 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">Beach, Pool &amp; Location</span>
     <h2 class="ret-h2">Directly on the sand, twelve minutes from everything</h2>
 
-    <p>Direct beachfront on My Khe gives veranda views of the coastline, with the sand a short walk from the building. The outdoor pool sits between the hotel and the beach. It is modest next to the five-star resort pools nearby, but clean and functional, and for a four-star at these rates that is the right trade. You are not paying resort prices for a resort-scale pool you may not use every day.</p>
+    <p>The beach was a short walk from the building, and my veranda looked straight down the coastline. The ground-level pool sits between the hotel and the sand. It's modest next to the five-star resort pools nearby, I checked, but it was clean and I never had trouble finding a lounger. For a four-star at these rates, I think that's the right trade. I wasn't paying resort prices for a resort-scale pool I'd have used once anyway.</p>
 
-    <p>The airport is 7km out, roughly 12 minutes by Grab. Dragon Bridge is another 12 minutes. The My Khe restaurant strip is a 5-minute walk, with dozens of seafood grills and noodle shops in easy reach every night.</p>
+    <p>My Grab to the airport ran about 12 minutes, and Dragon Bridge was another 12 from there. The My Khe restaurant strip was a five-minute walk, and I used it most nights, dozens of seafood grills and noodle shops within easy reach.</p>
 
-    <p>You are close enough to the city for easy exploring and directly on one of Da Nang's best urban beach stretches, without the premium the five-star resorts charge for the same fundamentals.</p>
+    <p>I was close enough to the city to explore easily, and directly on one of Da Nang's best urban beach stretches, without paying what the five-star resorts charge for the same fundamentals.</p>
   </div>
 </section>
 
@@ -794,17 +803,17 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">Food &amp; Drink</span>
     <h2 class="ret-h2">Build your morning around breakfast</h2>
 
-    <p>Breakfast is the standout. A genuinely wide spread across Vietnamese, Korean, Indian, and Japanese-leaning stations, with the live noodle station serving beef noodle soup as the specific highlight guests keep returning to. There is an omelette station, a fresh salad bar, pastries, and vegan and vegetarian options with Indian dishes built in rather than bolted on.</p>
+    <p>Breakfast is the reason I keep coming back to this hotel. The spread runs across Vietnamese, Korean, Indian, and Japanese-leaning stations, and the live noodle station serving beef noodle soup was the one I returned to every single morning. There's an omelette station, a proper salad bar, good pastries, and vegan and vegetarian dishes built into the menu rather than added as an afterthought.</p>
 
-    <p>Do not skip it even if you are not usually a hotel-buffet person.</p>
+    <p>I don't usually build my day around a hotel buffet. I did here.</p>
 
-    <p>Dining beyond breakfast is limited. The restaurant runs a buffet format and you will be eating off-property most evenings, which given the neighbourhood is a feature rather than a problem. For dinner, walk the five minutes to the My Khe strip.</p>
+    <p>Dining beyond breakfast is limited, the restaurant runs a buffet format, so I ate off-property most evenings. Given the location, that felt like a feature rather than a problem. I walked the five minutes to the My Khe strip for dinner most nights.</p>
   </div>
 </section>
 
 <figure class="ret-fig ret-fig--lead">
   <img src="images/hotels/four-points-dining.jpeg" alt="The breakfast restaurant at Four Points by Sheraton Danang, with the live cooking stations along the back wall" loading="lazy">
-  <figcaption class="ret-caption">The breakfast room. The live noodle station runs along the back wall on the right.</figcaption>
+  <figcaption class="ret-caption">The breakfast room. The live noodle station runs along the back wall, on the right.</figcaption>
 </figure>
 
 <!-- ═══ 6. WHO IT SUITS ════════════════════════════════════════ -->
@@ -813,9 +822,9 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">Who It Suits</span>
     <h2 class="ret-h2">Book it if, skip it if</h2>
 
-    <p>Marriott Bonvoy members who want points-earning at a beach hotel without paying Sheraton Grand or Marriott Resort rates are the clearest fit. It is also a solid redemption option. Value-focused travellers who want direct My Khe access, a reliable four-star room, and a real breakfast without resort pricing do well here. Beer enthusiasts get a bonus nobody else on the strip offers.</p>
+    <p>If you're a Marriott Bonvoy member who wants points-earning at a beach hotel without paying Sheraton Grand or Marriott Resort rates, this is the clear fit, and I'd call it a solid redemption option too. If you want direct My Khe access, a reliable four-star room, and a real breakfast without resort pricing, I think you'll do well here. If a good beer list matters to your trip, you get a bonus nobody else on the strip is offering.</p>
 
-    <p>Skip it if you want resort-scale kids' facilities, or if you are a couple after a quiet luxury escape. The five-star properties nearby serve both better. This hotel is built around reliability and value, not indulgence.</p>
+    <p>Skip it if you want resort-scale kids' facilities, or if you're after a quiet luxury escape as a couple. I'd point you to the five-star properties nearby for either of those. This hotel is built around reliability and value, not indulgence, and it never pretended otherwise while I was there.</p>
   </div>
 </section>
 
@@ -825,9 +834,9 @@ button{font-family:var(--font-sans);cursor:pointer}
     <span class="ret-kicker">The Tradeoff</span>
     <h2 class="ret-h2">What you give up</h2>
 
-    <p>Rooms lean business-hotel generic. Comfortable and well equipped, forgettable in character. The pool is modest compared to the five-star beachfront rivals on the same strip. Street noise reaches the lower floors on the road side, so request a high floor facing the water.</p>
+    <p>The rooms lean business-hotel generic. Comfortable and well equipped, but I wouldn't call the character memorable. The pool is modest compared to the five-star beachfront rivals nearby. Street noise reached the lower floors on the road side, based on what I heard from a friend staying there, so I'd request a high floor facing the water if I were you.</p>
 
-    <p>On-site dinner is limited to a buffet, so you are eating off-property most nights. And the immediate beach strip runs busier and more commercialised than the quieter southern stretches of My Khe.</p>
+    <p>On-site dinner is limited to the buffet, so plan to eat off-property most nights. And the immediate beach strip felt busier and more commercialised to me than the quieter southern stretches of My Khe.</p>
 
     <div class="ret-breakdown">
       <span class="ret-kicker">Score breakdown</span>
@@ -847,9 +856,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 <section class="ret-section">
   <div class="ret-col">
     <div class="ret-verdict">
-      <span class="ret-kicker">Would we stay here</span>
+      <span class="ret-kicker">Would I stay here again</span>
       <p class="ret-verdict-answer">Yes</p>
-      <p class="ret-lede">Clean room, good bed, great breakfast, 100 craft beers on the roof. Specifically for the last two.</p>
+      <p class="ret-lede">Clean room, good bed, the best breakfast I've had on this strip, and 100 craft beers on the roof. I'd book it again for the last two alone.</p>
     </div>
   </div>
 </section>
