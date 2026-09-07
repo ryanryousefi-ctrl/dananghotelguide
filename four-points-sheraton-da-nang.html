@@ -17,17 +17,20 @@
 <link rel="alternate" hreflang="en" href="https://www.dananghotelguide.com/four-points-sheraton-da-nang.html"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Page-specific editorial body serif for the review-editorial-trial layout -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&display=swap" rel="stylesheet">
 <meta property="og:title" content="Four Points by Sheraton Danang Review (2026)">
 <meta property="og:description" content="Four Points by Sheraton Danang review 2026: reliable 4-star on My Khe Beach, strong breakfast, from $80/night. Worth it vs better-value alternatives?">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.dananghotelguide.com/four-points-sheraton-da-nang.html">
-<meta property="og:image" content="https://images.unsplash.com/photo-1537572568851-e68ad5e1b4bc?w=1200&h=630&fit=crop&auto=format">
+<meta property="og:image" content="https://www.dananghotelguide.com/assets/img/four-points-sheraton-da-nang-a608673f661f.jpg">
+<meta property="og:image:alt" content="The rooftop infinity pool at Four Points by Sheraton Danang, looking out over My Khe Beach and the city.">
 
 <meta name="twitter:title" content="Four Points by Sheraton Danang Review (2026)">
 <meta name="twitter:description" content="Four Points by Sheraton Danang review 2026: reliable 4-star on My Khe Beach, strong breakfast, from $80/night. Worth it vs better-value alternatives?">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Four Points by Sheraton Danang Review (2026)","description":"Independent review of Four Points by Sheraton Danang. My Khe Beach, Marriott Bonvoy, rooms, and 2026 rates.","url":"https://dananghotelguide.com/four-points-sheraton-da-nang.html","datePublished":"2026-01-15","dateModified":"2026-01-15","author":{"@type":"Person","name":"Ryan Yousefi","jobTitle":"Da Nang Travel Editor"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"image":"https://images.unsplash.com/photo-1537572568851-e68ad5e1b4bc?w=1200&h=630&fit=crop"}
+{"@context":"https://schema.org","@type":"Article","headline":"Four Points by Sheraton Danang Review (2026)","description":"Independent review of Four Points by Sheraton Danang. My Khe Beach, Marriott Bonvoy, rooms, and 2026 rates.","url":"https://dananghotelguide.com/four-points-sheraton-da-nang.html","datePublished":"2026-01-15","dateModified":"2026-01-15","author":{"@type":"Person","name":"Ryan Yousefi","jobTitle":"Da Nang Travel Editor"},"publisher":{"@type":"Organization","name":"Da Nang Hotel Guide","url":"https://dananghotelguide.com"},"image":"https://www.dananghotelguide.com/assets/img/four-points-sheraton-da-nang-a608673f661f.jpg"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dananghotelguide.com/"},{"@type":"ListItem","position":2,"name":"Hotel Reviews","item":"https://dananghotelguide.com/hotel-reviews.html"},{"@type":"ListItem","position":3,"name":"Four Points by Sheraton Danang Review","item":"https://dananghotelguide.com/four-points-sheraton-da-nang.html"}]}
@@ -102,7 +105,9 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
+/* Legacy sand canvas retained for reference; the editorial trial overrides
+   background/colour/type via the scoped .review-editorial-trial block below. */
+body{font-family:var(--font-sans);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}
 ::selection{background:var(--ocean);color:#fff}
 img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
@@ -152,8 +157,418 @@ button{font-family:var(--font-sans);cursor:pointer}
 <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
 
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE-SPECIFIC EDITORIAL TRIAL STYLES
+     Scoped entirely under .review-editorial-trial so nothing here can
+     leak to another page even if this CSS were loaded globally.
+     Do not move this into a shared stylesheet.
+     ══════════════════════════════════════════════════════════════ -->
+<style>
+.review-editorial-trial{
+  --ret-bg:#151515;
+  --ret-bg-lift:#1c1c1c;
+  --ret-ink:#e4e4e4;
+  --ret-ink-dim:#a5a5a0;
+  --ret-ink-faint:#7d7d78;
+  --ret-rule:rgba(228,228,228,.16);
+  --ret-accent:#c8a24a;
+  --ret-serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --ret-display:'Instrument Serif',Georgia,serif;
+  --ret-sans:'Satoshi',system-ui,-apple-system,sans-serif;
+  /* Reference container = 1150px. Text column ~65ch. */
+  --ret-container:1150px;
+  --ret-text:65ch;
+  --ret-pad:clamp(1.25rem,5vw,3rem);
+  --ret-rhythm:1.8em;
+}
+.review-editorial-trial{
+  background:var(--ret-bg);
+  color:var(--ret-ink);
+  font-family:var(--ret-serif);
+  font-size:1.075rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.review-editorial-trial ::selection{background:var(--ret-accent);color:#151515}
+.review-editorial-trial img{display:block;max-width:100%;height:auto}
+
+/* ── Layout primitives (mirroring the reference's width vocabulary) ── */
+.review-editorial-trial .ret-article{padding-bottom:4rem}
+.review-editorial-trial .ret-wrap{
+  max-width:var(--ret-container);
+  margin-inline:auto;
+  padding-inline:var(--ret-pad);
+}
+/* box-sizing:border-box is inherited from the legacy reset, so the padding
+   would otherwise eat into the measure. Add it back on top of 65ch. */
+.review-editorial-trial .ret-col{
+  max-width:calc(var(--ret-text) + (var(--ret-pad) * 2));
+  margin-inline:auto;
+  padding-inline:var(--ret-pad);
+}
+.review-editorial-trial .ret-col > * + *{margin-top:var(--ret-rhythm)}
+.review-editorial-trial .ret-section{margin-top:clamp(3rem,7vw,5.5rem)}
+
+/* Reference image widths: 85% "hero-weight", 100% full-bleed. */
+.review-editorial-trial .ret-fig{margin:clamp(2.5rem,6vw,4.5rem) auto 0}
+.review-editorial-trial .ret-fig--wide{max-width:var(--ret-container);padding-inline:var(--ret-pad)}
+.review-editorial-trial .ret-fig--lead{max-width:calc(var(--ret-container) * .85);padding-inline:var(--ret-pad)}
+.review-editorial-trial .ret-fig img{width:100%}
+.review-editorial-trial .ret-caption{
+  font-family:var(--ret-sans);
+  font-size:.78rem;
+  line-height:1.55;
+  letter-spacing:.01em;
+  color:var(--ret-ink-faint);
+  margin-top:.85rem;
+  max-width:60ch;
+}
+
+/* ── Typography ───────────────────────────────────────────────── */
+.review-editorial-trial .ret-h2{
+  font-family:var(--ret-display);
+  font-weight:400;
+  font-size:clamp(2rem,4.4vw,3rem);
+  line-height:1.08;
+  letter-spacing:-.012em;
+  color:#f2f2f0;
+  margin-bottom:.15em;
+}
+.review-editorial-trial .ret-h3{
+  font-family:var(--ret-display);
+  font-weight:400;
+  font-size:clamp(1.45rem,2.6vw,1.9rem);
+  line-height:1.15;
+  color:#f2f2f0;
+}
+.review-editorial-trial .ret-kicker{
+  display:block;
+  font-family:var(--ret-sans);
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ret-ink-faint);
+  margin-bottom:.9rem;
+}
+.review-editorial-trial .ret-col p{
+  font-family:var(--ret-serif);
+  font-size:1.075rem;
+  line-height:1.72;
+  color:var(--ret-ink);
+}
+.review-editorial-trial .ret-lede{
+  font-size:clamp(1.2rem,2.1vw,1.42rem);
+  line-height:1.55;
+  color:#efefec;
+}
+.review-editorial-trial .ret-col p strong{font-weight:600;color:#f5f5f2}
+.review-editorial-trial .ret-col p em{font-style:italic}
+.review-editorial-trial .ret-standfirst{
+  font-family:var(--ret-display);
+  font-size:clamp(1.5rem,3vw,2.05rem);
+  line-height:1.28;
+  color:#f4f4f1;
+  border-left:2px solid var(--ret-accent);
+  padding-left:clamp(1rem,2.5vw,1.6rem);
+}
+.review-editorial-trial .ret-col a:not(.ret-book){
+  color:var(--ret-ink);
+  text-decoration:underline;
+  text-decoration-color:rgba(200,162,74,.55);
+  text-underline-offset:3px;
+}
+.review-editorial-trial .ret-col a:not(.ret-book):hover{text-decoration-color:var(--ret-accent)}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.review-editorial-trial .ret-hero{
+  position:relative;
+  min-height:clamp(30rem,82vh,46rem);
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#0d0d0d;
+}
+.review-editorial-trial .ret-hero-img{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center 42%;
+}
+/* Legibility gradient only. Reference uses a top-to-transparent black
+   overlay behind lower-third title text. No decorative filters. */
+.review-editorial-trial .ret-hero::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 32%,rgba(0,0,0,.15) 62%,rgba(0,0,0,.4) 100%);
+}
+.review-editorial-trial .ret-hero-inner{
+  position:relative;z-index:2;
+  width:100%;
+  max-width:var(--ret-container);
+  margin-inline:auto;
+  padding:0 var(--ret-pad) clamp(2.5rem,6vw,4.5rem);
+}
+.review-editorial-trial .ret-hero-eyebrow{
+  font-family:var(--ret-sans);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.72);
+  margin-bottom:1.1rem;
+}
+.review-editorial-trial .ret-hero h1{
+  font-family:var(--ret-display);
+  font-weight:400;
+  /* Reference scales its hero title with the viewport (~3.8vw). */
+  font-size:clamp(2.6rem,6.4vw,5.2rem);
+  line-height:1.02;
+  letter-spacing:-.02em;
+  color:#fff;
+  max-width:16ch;
+}
+.review-editorial-trial .ret-hero-meta{
+  font-family:var(--ret-sans);
+  font-size:.85rem;
+  letter-spacing:.03em;
+  color:rgba(255,255,255,.7);
+  margin-top:1.2rem;
+}
+.review-editorial-trial .ret-hero-meta span{white-space:nowrap}
+.review-editorial-trial .ret-hero-meta span + span::before{content:'·';margin:0 .6em;color:rgba(255,255,255,.4)}
+
+/* ── Score: an elegant numeral, not a scorecard grid ──────────── */
+.review-editorial-trial .ret-score{
+  display:flex;
+  align-items:baseline;
+  gap:.55rem;
+  margin-top:2rem;
+}
+.review-editorial-trial .ret-score-num{
+  font-family:var(--ret-display);
+  font-size:clamp(3.2rem,7vw,4.6rem);
+  line-height:.85;
+  color:#fff;
+  letter-spacing:-.03em;
+}
+.review-editorial-trial .ret-score-max{
+  font-family:var(--ret-sans);
+  font-size:.9rem;
+  color:rgba(255,255,255,.6);
+}
+.review-editorial-trial .ret-score-label{
+  font-family:var(--ret-sans);
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+  margin-left:.35rem;
+  align-self:center;
+}
+
+/* ── Snapshot: a minimal inline definition list, not stat cards ── */
+.review-editorial-trial .ret-facts{
+  font-family:var(--ret-sans);
+  font-size:.82rem;
+  line-height:1.75;
+  color:var(--ret-ink-dim);
+  border-top:1px solid var(--ret-rule);
+  border-bottom:1px solid var(--ret-rule);
+  padding:1.5rem 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));
+  gap:.9rem 2rem;
+  margin:0;
+}
+.review-editorial-trial .ret-facts div{display:flex;flex-direction:column;gap:.15rem}
+.review-editorial-trial .ret-facts dt{
+  font-size:.64rem;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ret-ink-faint);
+}
+.review-editorial-trial .ret-facts dd{margin:0;color:var(--ret-ink);font-weight:500}
+
+/* ── Score breakdown: quiet ruled rows, kept accessible ───────── */
+.review-editorial-trial .ret-breakdown{
+  border-top:1px solid var(--ret-rule);
+  padding-top:1.4rem;
+}
+.review-editorial-trial .ret-breakdown-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-family:var(--ret-sans);
+  font-size:.84rem;
+  columns:2;
+  column-gap:2.5rem;
+}
+.review-editorial-trial .ret-breakdown-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:1rem;
+  padding:.5rem 0;
+  border-bottom:1px solid rgba(228,228,228,.08);
+  break-inside:avoid;
+  color:var(--ret-ink-dim);
+}
+.review-editorial-trial .ret-breakdown-list b{
+  font-weight:600;
+  color:var(--ret-ink);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── Verdict block ────────────────────────────────────────────── */
+.review-editorial-trial .ret-verdict{
+  border-top:1px solid var(--ret-rule);
+  border-bottom:1px solid var(--ret-rule);
+  padding:2.2rem 0;
+}
+.review-editorial-trial .ret-verdict-answer{
+  font-family:var(--ret-display);
+  font-size:clamp(3rem,8vw,4.8rem);
+  line-height:1;
+  letter-spacing:.02em;
+  color:var(--ret-accent);
+  margin:.2rem 0 .8rem;
+}
+
+/* ── Booking call: a text-weight link, not a slab button ──────── */
+.review-editorial-trial .ret-book{
+  display:inline-block;
+  font-family:var(--ret-sans);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ret-ink);
+  text-decoration:none;
+  border:1px solid var(--ret-rule);
+  padding:1rem 1.9rem;
+  transition:border-color .18s,color .18s,background .18s;
+}
+.review-editorial-trial .ret-book:hover,
+.review-editorial-trial .ret-book:focus-visible{
+  border-color:var(--ret-accent);
+  color:#fff;
+  background:rgba(200,162,74,.1);
+}
+
+/* ── Compare rail: plain ruled text links, no cards ───────────── */
+.review-editorial-trial .ret-compare{
+  list-style:none;margin:0;padding:0;
+  border-top:1px solid var(--ret-rule);
+}
+.review-editorial-trial .ret-compare li{border-bottom:1px solid var(--ret-rule)}
+.review-editorial-trial .ret-compare a{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.3rem 1rem;
+  padding:1.15rem 0;
+  text-decoration:none;
+  color:var(--ret-ink);
+  transition:color .18s;
+}
+.review-editorial-trial .ret-compare a:hover,
+.review-editorial-trial .ret-compare a:focus-visible{color:var(--ret-accent)}
+.review-editorial-trial .ret-compare-name{
+  font-family:var(--ret-display);
+  font-size:1.3rem;
+  line-height:1.2;
+}
+.review-editorial-trial .ret-compare-cat{
+  font-family:var(--ret-sans);
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--ret-ink-faint);
+  margin-left:auto;
+}
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+.review-editorial-trial .ret-faq{border-top:1px solid var(--ret-rule)}
+.review-editorial-trial .ret-faq > div{
+  border-bottom:1px solid var(--ret-rule);
+  padding:1.5rem 0;
+}
+.review-editorial-trial .ret-faq h3{
+  font-family:var(--ret-display);
+  font-weight:400;
+  font-size:1.28rem;
+  line-height:1.25;
+  color:#f2f2f0;
+  margin-bottom:.5rem;
+}
+.review-editorial-trial .ret-faq p{color:var(--ret-ink-dim);font-size:1rem}
+
+/* ── Nav restyled for the black canvas (this page only) ───────── */
+/* headroom-style hide-on-scroll-down / reveal-on-scroll-up. */
+.review-editorial-trial .site-nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(21,21,21,.92);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--ret-rule);
+  transition:transform .3s cubic-bezier(.4,0,.2,1);
+  will-change:transform;
+}
+.review-editorial-trial .site-nav.ret-nav-pinned{transform:translateY(0)}
+.review-editorial-trial .site-nav.ret-nav-unpinned{transform:translateY(-100%)}
+.review-editorial-trial .ret-nav-spacer{height:68px}
+.review-editorial-trial .nav-dropdown-menu{background:#1c1c1c;border-color:var(--ret-rule);border-top-color:var(--ret-accent)}
+.review-editorial-trial .nav-link.active::after{background:var(--ret-accent)}
+.review-editorial-trial .nav-stays-btn{
+  background:transparent;
+  border:1px solid var(--ret-rule);
+  color:var(--ret-ink);
+  border-radius:0;
+  font-weight:700;
+}
+.review-editorial-trial .nav-stays-btn:hover{background:rgba(200,162,74,.12);border-color:var(--ret-accent);transform:none}
+.review-editorial-trial .mobile-menu{background:var(--ret-bg)}
+.review-editorial-trial .mobile-nav-link:hover,
+.review-editorial-trial .mobile-nav-link.active{color:var(--ret-accent)}
+.review-editorial-trial .mobile-stays-btn{background:transparent;border:1px solid var(--ret-rule);color:var(--ret-ink);border-radius:0}
+.review-editorial-trial .shr-bar{background:#1c1c1c;box-shadow:0 4px 24px rgba(0,0,0,.5)}
+.review-editorial-trial .shr-btn:hover{background:var(--ret-accent);color:#151515}
+
+/* ── Footer on black ──────────────────────────────────────────── */
+.review-editorial-trial .site-footer{background:#101010;color:var(--ret-ink-dim);border-top:1px solid var(--ret-rule)}
+.review-editorial-trial .site-footer a{color:var(--ret-ink-dim)}
+.review-editorial-trial .site-footer a:hover{color:var(--ret-ink)}
+
+/* ── Focus visibility (keyboard access) ───────────────────────── */
+.review-editorial-trial a:focus-visible,
+.review-editorial-trial button:focus-visible,
+.review-editorial-trial input:focus-visible,
+.review-editorial-trial summary:focus-visible{
+  outline:2px solid var(--ret-accent);
+  outline-offset:3px;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  .review-editorial-trial .site-nav{transition:none}
+  .review-editorial-trial .site-nav.ret-nav-unpinned{transform:none}
+  .review-editorial-trial *{scroll-behavior:auto}
+}
+
+/* ── Narrow viewports ─────────────────────────────────────────── */
+@media(max-width:640px){
+  .review-editorial-trial{font-size:1.02rem}
+  .review-editorial-trial .ret-breakdown-list{columns:1}
+  .review-editorial-trial .ret-hero h1{max-width:none}
+  .review-editorial-trial .ret-facts{grid-template-columns:1fr 1fr;gap:.9rem 1.2rem}
+}
+</style>
 </head>
-<body>
+<body class="review-editorial-trial">
 <!-- NAV -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="https://www.dananghotelguide.com/" class="nav-logo" aria-label="Da Nang Hotel Guide home"><img src="images/dhg-logo.png" alt="Da Nang Hotel Guide" class="nav-logo-img" width="48" height="48"></a>
@@ -265,140 +680,199 @@ button{font-family:var(--font-sans);cursor:pointer}
   </div>
 </div>
 
-<header class="hr-hero">
-  <div class="hr-hero-img" style="background-image:url('assets/img/four-points-sheraton-da-nang-a608673f661f.jpg')" role="img" aria-label="Four Points by Sheraton Danang Da Nang"></div>
-  <div class="hr-hero-content">
-    <div class="hr-hero-eyebrow">Hotel Review &mdash; 2026</div>
+<div class="ret-nav-spacer" aria-hidden="true"></div>
+
+<article class="ret-article">
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+<header class="ret-hero">
+  <div class="ret-hero-img" style="background-image:url('assets/img/four-points-sheraton-da-nang-a608673f661f.jpg')" role="img" aria-label="The rooftop infinity pool at Four Points by Sheraton Danang, with lounge daybeds and a view over the coastline"></div>
+  <div class="ret-hero-inner">
+    <p class="ret-hero-eyebrow">Hotel Review &middot; 2026</p>
     <h1>Four Points by Sheraton Danang</h1>
-    <p class="hr-hero-meta">4-Star Beachfront Hotel · My Khe Beach</p>
-    <p class="hr-hero-line">&ldquo;Better breakfast than hotels twice its price, and 100 craft beers on the roof.&rdquo;</p>
-    <div class="hr-score-wrap">
-      <div class="hr-score-main"><span class="hr-score-num">8.2</span><span class="hr-score-max">/ 10</span></div>
-      <span class="hr-score-label">Editorial Score</span>
-      <div class="hr-score-breakdown">
-        <span class="hr-score-item">Rooms <strong>7.8</strong></span>
-        <span class="hr-score-item">Location <strong>8.6</strong></span>
-        <span class="hr-score-item">Facilities <strong>7.7</strong></span>
-        <span class="hr-score-item">Food+Drink <strong>8.9</strong></span>
-        <span class="hr-score-item">Service <strong>8.0</strong></span>
-        <span class="hr-score-item">Value <strong>8.7</strong></span>
-      </div>
+    <p class="ret-hero-meta"><span>4-star beachfront</span><span>My Khe Beach</span><span>From $80 a night</span></p>
+    <div class="ret-score">
+      <span class="ret-score-num">8.2</span>
+      <span class="ret-score-max">/ 10</span>
+      <span class="ret-score-label">Editorial score</span>
     </div>
   </div>
 </header>
-<section class="hr-snapshot"><div class="hr-section-inner" style="padding:1.5rem var(--gutter)"><div class="hr-snapshot-grid"><div class="hr-snap-card"><div class="hr-snap-key">Best for</div><div class="hr-snap-val">No-fuss beachfront</div></div><div class="hr-snap-card"><div class="hr-snap-key">Area</div><div class="hr-snap-val">My Khe Beach</div></div><div class="hr-snap-card"><div class="hr-snap-key">Beach</div><div class="hr-snap-val">Direct access</div></div><div class="hr-snap-card"><div class="hr-snap-key">Vibe</div><div class="hr-snap-val">Reliable, four-star</div></div><div class="hr-snap-card"><div class="hr-snap-key">Value</div><div class="hr-snap-val">Excellent</div></div></div></div></section>
-<section class="hr-section hr-take">
-  <div class="hr-section-inner hr-take-inner">
-    <span class="hr-label">Our Take</span>
-    <p class="hr-take-text">The Four Points Sheraton Danang is a four-star beachfront hotel on My Khe Beach. Nothing about that sentence suggests it would have one of the most talked-about breakfasts in Da Nang.</p>
-    <p class="hr-take-text">But it does. The live noodle station serving beef noodle soup, the vegan and vegetarian options with Indian dishes built in, the omelette station, the pastries, the fresh salad bar, multiple guests who have also stayed at the Pullman, the Sheraton Grand, and others specifically say the breakfast at Four Points is better.</p>
-    <p class="hr-take-text">One Pullman guest wrote it verbatim as a complaint about where they'd chosen to stay instead. That reputation is worth knowing.</p>
-    <p class="hr-take-text">The Horizon Bar rooftop runs a craft beer selection over 100 varieties, locally brewed Vietnamese craft alongside cocktails and bar food.</p>
-    <p class="hr-take-text">This is not typical of a mid-tier beach hotel. For beer-focused travellers, it's the main event.</p>
-    <p class="hr-take-text">Four Points sits in the honest-overperformer category: a hotel that doesn't try to be a resort, knows exactly what it is, and then over-delivers in two specific areas that no other hotel on My Khe Beach can match.</p>
-    <p class="hr-take-text">Clean room, good bed, great breakfast, 100 craft beers on the roof. That's a winning combination.</p>
+
+<!-- ═══ 1. OPENING IMPRESSION + VERDICT ════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <p class="ret-standfirst">A four-star beach hotel that quietly out-cooks and out-drinks the five-stars on the same strip.</p>
+
+    <p class="ret-lede">Nothing about the phrase "four-star beachfront hotel on My Khe" suggests one of the most talked-about breakfasts in Da Nang. But that is what is happening here, and it is the reason to book.</p>
+
+    <p>Guests who have also stayed at the Pullman and the Sheraton Grand say the breakfast at Four Points is better. One Pullman guest wrote it verbatim as a complaint about where they had chosen to stay instead. Take that for what it is worth, but the reputation is consistent enough to be worth knowing before you book.</p>
+
+    <p>Upstairs, the Horizon Bar runs a craft beer list of more than 100 varieties, heavy on locally brewed Vietnamese labels, alongside cocktails and bar food. That is not a normal amenity at this price point. For beer-focused travellers it is the main event.</p>
+
+    <p>Four Points sits in the honest-overperformer category. It does not try to be a resort, it knows exactly what it is, and it over-delivers in two specific areas no other hotel on My Khe Beach can match.</p>
+
+    <dl class="ret-facts">
+      <div><dt>Best for</dt><dd>No-fuss beachfront</dd></div>
+      <div><dt>Area</dt><dd>My Khe Beach</dd></div>
+      <div><dt>Beach</dt><dd>Direct access</dd></div>
+      <div><dt>Vibe</dt><dd>Reliable, four-star</dd></div>
+      <div><dt>Value</dt><dd>Excellent</dd></div>
+    </dl>
   </div>
 </section>
-<figure class="hr-photo"><img src="assets/img/four-points-sheraton-da-nang-a608673f661f.jpg" alt="Four Points by Sheraton Danang breakfast spread and rooftop bar" loading="lazy"></figure>
-<section class="hr-section">
-  <div class="hr-section-inner hr-split-text-only">
-    <span class="hr-label">The Rooms</span>
-    <h2 class="hr-h2">The Rooms</h2>
-    <p class="hr-body-text">Spacious and modern with large glass windows and a veranda facing the coastline. The Four Points Comfort Bed is a brand strength, consistently praised. Upper-floor ocean-facing rooms give genuine My Khe Beach views; lower-floor rooms on the street side get road noise, so specify a higher floor facing the water when you book if quiet matters. The design is clean and contemporary without being particularly distinctive. Rooms run around 30-40 square metres, smaller than resort competitors, but well-planned within that footprint, and bathrooms are functional and maintained to a good standard.</p>
-    <p class="hr-body-text"><strong>Which room would we choose?</strong> A high-floor ocean-facing room. The premium is modest and it solves both the view and the noise question in one move, this is the version of the hotel worth paying for.</p>
+
+<!-- ═══ 2. THE ROOMS (text-forward: no room photograph exists) ══ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">The Rooms</span>
+    <h2 class="ret-h2">Comfortable, well-planned, forgettable</h2>
+
+    <p>Spacious and modern, with large glass windows and a veranda facing the coastline. The Four Points Comfort Bed is a genuine brand strength and it gets praised consistently. Rooms run around 30 to 40 square metres, smaller than the resort competition, but well planned inside that footprint. Bathrooms are functional and maintained to a good standard.</p>
+
+    <p>The design is clean and contemporary without being distinctive. Upper-floor ocean-facing rooms give you real My Khe Beach views. Lower floors on the street side get road noise.</p>
+
+    <p><strong>Which room would we choose?</strong> A high-floor ocean-facing room. The premium is modest and it solves the view and the noise question in one move. This is the version of the hotel worth paying for.</p>
   </div>
 </section>
-<section class="hr-section" style="background:var(--sand)">
-  <div class="hr-section-inner">
-    <div class="hr-split">
+
+<!-- ═══ 3. THE ROOFTOP (the one real photograph does its work) ══ -->
+<figure class="ret-fig ret-fig--wide">
+  <img src="assets/img/four-points-sheraton-da-nang-a608673f661f.jpg" alt="The rooftop pool deck at Four Points by Sheraton Danang, lined with lounge daybeds and looking out over the coastline and city skyline" loading="lazy">
+  <figcaption class="ret-caption">The rooftop pool deck and its lounge daybeds, looking out over the coastline. The Horizon Bar occupies the same roof level.</figcaption>
+</figure>
+
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">The Reason to Book It</span>
+    <h2 class="ret-h2">The craft beer rooftop</h2>
+
+    <p>The Horizon Bar is unusual for a hotel at this price point. More than 100 craft beers including locally brewed Vietnamese options, plus cocktails, wine, and bar food. "Biggest craft beer menu in Da Nang" turns up in multiple guest reviews.</p>
+
+    <p>The rooftop view holds up on its own merits. The beer list is the part that is genuinely the best in a Da Nang hotel, and no other beach hotel on My Khe is running anything close to it.</p>
+
+    <p>If that matters to you, it changes the calculation on where to stay in this bracket.</p>
+  </div>
+</section>
+
+<!-- ═══ 4. BEACH AND LOCATION ══════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Beach, Pool &amp; Location</span>
+    <h2 class="ret-h2">Directly on the sand, twelve minutes from everything</h2>
+
+    <p>Direct beachfront on My Khe gives veranda views of the coastline, with the sand a short walk from the building. The outdoor pool sits between the hotel and the beach. It is modest next to the five-star resort pools nearby, but clean and functional, and for a four-star at these rates that is the right trade. You are not paying resort prices for a resort-scale pool you may not use every day.</p>
+
+    <p>The airport is 7km out, roughly 12 minutes by Grab. Dragon Bridge is another 12 minutes. The My Khe restaurant strip is a 5-minute walk, with dozens of seafood grills and noodle shops in easy reach every night.</p>
+
+    <p>You are close enough to the city for easy exploring and directly on one of Da Nang's best urban beach stretches, without the premium the five-star resorts charge for the same fundamentals.</p>
+  </div>
+</section>
+
+<!-- ═══ 5. BREAKFAST AND DINING (text-forward: no photo exists) ═ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Food &amp; Drink</span>
+    <h2 class="ret-h2">Build your morning around breakfast</h2>
+
+    <p>Breakfast is the standout. A genuinely wide spread across Vietnamese, Korean, Indian, and Japanese-leaning stations, with the live noodle station serving beef noodle soup as the specific highlight guests keep returning to. There is an omelette station, a fresh salad bar, pastries, and vegan and vegetarian options with Indian dishes built in rather than bolted on.</p>
+
+    <p>Do not skip it even if you are not usually a hotel-buffet person.</p>
+
+    <p>Dining beyond breakfast is limited. The restaurant runs a buffet format and you will be eating off-property most evenings, which given the neighbourhood is a feature rather than a problem. For dinner, walk the five minutes to the My Khe strip.</p>
+  </div>
+</section>
+
+<!-- ═══ 6. WHO IT SUITS ════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Who It Suits</span>
+    <h2 class="ret-h2">Book it if, skip it if</h2>
+
+    <p>Marriott Bonvoy members who want points-earning at a beach hotel without paying Sheraton Grand or Marriott Resort rates are the clearest fit. It is also a solid redemption option. Value-focused travellers who want direct My Khe access, a reliable four-star room, and a real breakfast without resort pricing do well here. Beer enthusiasts get a bonus nobody else on the strip offers.</p>
+
+    <p>Skip it if you want resort-scale kids' facilities, or if you are a couple after a quiet luxury escape. The five-star properties nearby serve both better. This hotel is built around reliability and value, not indulgence.</p>
+  </div>
+</section>
+
+<!-- ═══ 7. TRADEOFFS ═══════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">The Tradeoff</span>
+    <h2 class="ret-h2">What you give up</h2>
+
+    <p>Rooms lean business-hotel generic. Comfortable and well equipped, forgettable in character. The pool is modest compared to the five-star beachfront rivals on the same strip. Street noise reaches the lower floors on the road side, so request a high floor facing the water.</p>
+
+    <p>On-site dinner is limited to a buffet, so you are eating off-property most nights. And the immediate beach strip runs busier and more commercialised than the quieter southern stretches of My Khe.</p>
+
+    <div class="ret-breakdown">
+      <span class="ret-kicker">Score breakdown</span>
+      <ul class="ret-breakdown-list">
+        <li><span>Rooms</span> <b>7.8</b></li>
+        <li><span>Location</span> <b>8.6</b></li>
+        <li><span>Facilities</span> <b>7.7</b></li>
+        <li><span>Food + Drink</span> <b>8.9</b></li>
+        <li><span>Service</span> <b>8.0</b></li>
+        <li><span>Value</span> <b>8.7</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. VERDICT ═════════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <div class="ret-verdict">
+      <span class="ret-kicker">Would we stay here</span>
+      <p class="ret-verdict-answer">Yes</p>
+      <p class="ret-lede">Clean room, good bed, great breakfast, 100 craft beers on the roof. Specifically for the last two.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. BOOKING ═════════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Check your dates</span>
+    <p>Low season starts around $80 to $110 a night, peak season runs $140 to $220. Prices move constantly, so if you are a Bonvoy member or a beer drinker, ask for a high-floor ocean-facing room and <a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&amp;sid=four-points-sheraton-da-nang--four-points-by-sheraton-danang" class="affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_review_inline" data-hotel="Four Points by Sheraton Danang">check the current rate on Booking.com</a> before you decide whether the value works for your trip.</p>
+    <p><a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&amp;sid=four-points-sheraton-da-nang--four-points-by-sheraton-danang" class="ret-book affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_review" data-hotel="Four Points by Sheraton Danang">See Four Points prices &rarr;</a></p>
+  </div>
+</section>
+
+<!-- ═══ 10. FAQ ════════════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Common questions</span>
+    <div class="ret-faq">
       <div>
-        <span class="hr-label">The Reason to Book It</span>
-        <h2 class="hr-h2">The Craft Beer Rooftop</h2>
-        <p class="hr-body-text">The Horizon Bar on the rooftop is unusual for a hotel at this price point. Over 100 craft beers including locally brewed Vietnamese options, alongside cocktails, wine, and bar food, "biggest craft beer menu in Da Nang" appears in multiple guest reviews. The view from the rooftop is good on its own merits, but the beer selection is genuinely the best in a Da Nang hotel.</p>
-        <p class="hr-body-text">If that matters to you, it changes the calculation on where to stay in this price bracket. No other beach hotel on My Khe is running anything close to this list.</p>
+        <h3>Is Four Points by Sheraton Danang worth staying at?</h3>
+        <p>Yes, particularly for Marriott Bonvoy members. Clean, reliable, and well located on My Khe Beach at rates well below the five-star competitors nearby.</p>
       </div>
-      <div class="hr-split-img"><img src="assets/img/four-points-sheraton-da-nang-a608673f661f.jpg" alt="Four Points by Sheraton Danang Horizon Bar rooftop craft beer selection" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-<section class="hr-section">
-  <div class="hr-section-inner hr-split-text-only">
-    <span class="hr-label">Pool + Beach</span>
-    <h2 class="hr-h2">The Beach and Pool</h2>
-    <p class="hr-body-text">Direct beachfront on My Khe Beach gives veranda views of the coastline, and the sand is a short walk from the hotel building. The outdoor pool sits between the building and the beach, modest in size compared to five-star resort pools nearby, but clean and functional. For a four-star beach hotel at these rates, this is the right trade-off, you're not paying resort prices for a resort-scale pool you may not use every day anyway.</p>
-  </div>
-</section>
-<section class="hr-section" style="background:var(--sand)">
-  <div class="hr-section-inner">
-    <div class="hr-split">
-      <div class="hr-split-img"><img src="assets/img/four-points-sheraton-da-nang-a608673f661f.jpg" alt="Four Points by Sheraton Danang live noodle breakfast station" loading="lazy"></div>
       <div>
-        <span class="hr-label">Food + Breakfast</span>
-        <h2 class="hr-h2">Food + Drink</h2>
-        <p class="hr-body-text">Breakfast is the standout, a genuinely wide spread across Vietnamese, Korean, Indian, and Japanese-leaning stations, with the live noodle station as the specific highlight guests keep mentioning. On-site dining beyond breakfast is limited, the restaurant runs a buffet format, and you'll be eating outside most evenings, which given the neighborhood is a feature rather than a problem.</p>
-        <p class="hr-body-text">Our recommendation: don't skip breakfast here even if you're not usually a hotel-buffet person, it's genuinely worth building your morning around. For dinner, the My Khe restaurant strip is a five-minute walk with dozens of good seafood grills and noodle shops.</p>
+        <h3>How much does it cost per night?</h3>
+        <p>Low season rates start around $80 to $110 a night. Peak season runs $140 to $220.</p>
+      </div>
+      <div>
+        <h3>Where is it located?</h3>
+        <p>On My Khe Beach, about 5km from Dragon Bridge and 7km from Da Nang Airport.</p>
       </div>
     </div>
   </div>
 </section>
-<section class="hr-section">
-  <div class="hr-section-inner hr-split-text-only">
-    <span class="hr-label">Who It's For</span>
-    <h2 class="hr-h2">Families, Couples &amp; <em>Who It Suits</em></h2>
-    <p class="hr-body-text">Marriott Bonvoy members who want points-earning at a beach hotel without paying Sheraton Grand or Marriott Resort rates are the clearest fit. Value-focused travellers who want direct My Khe Beach access, a reliable four-star room, and genuinely good breakfast without resort pricing do well here too. Beer enthusiasts get a bonus nobody else on the strip offers. Families wanting resort-scale kids' facilities or couples wanting a quiet luxury escape would be better served by the five-star properties nearby, this hotel is built around reliability and value, not indulgence.</p>
+
+<!-- ═══ 11. COMPARE ════════════════════════════════════════════ -->
+<section class="ret-section">
+  <div class="ret-col">
+    <span class="ret-kicker">Compare before you book</span>
+    <ul class="ret-compare">
+      <li><a href="intercontinental-da-nang.html"><span class="ret-compare-name">InterContinental Danang Sun Peninsula</span><span class="ret-compare-cat">5-star luxury resort</span></a></li>
+      <li><a href="hyatt-regency-da-nang.html"><span class="ret-compare-name">Hyatt Regency Danang Resort and Spa</span><span class="ret-compare-cat">5-star beach resort</span></a></li>
+      <li><a href="sheraton-grand-da-nang.html"><span class="ret-compare-name">Sheraton Grand Danang Resort</span><span class="ret-compare-cat">5-star beach resort</span></a></li>
+    </ul>
   </div>
 </section>
-<section class="hr-section" style="background:var(--sand)">
-  <div class="hr-section-inner">
-    <span class="hr-label">What We Like</span>
-    <h2 class="hr-h2">What We <em>Like</em></h2>
-    <div class="hr-like-grid">
-      <div class="hr-like-card"><div class="hr-like-title">The breakfast</div><p class="hr-like-text">Vietnamese, Korean, Indian, and Japanese-leaning stations, with a live noodle station guests say beats the Pullman and Sheraton Grand.</p></div>
-      <div class="hr-like-card"><div class="hr-like-title">The Horizon Bar</div><p class="hr-like-text">Over 100 craft beers, mostly Vietnamese, the best beer list in a Da Nang hotel by a clear margin.</p></div>
-      <div class="hr-like-card"><div class="hr-like-title">Direct beach access</div><p class="hr-like-text">My Khe frontage with sea-view balconies on upper-floor rooms and a five-minute walk to the restaurant strip.</p></div>
-      <div class="hr-like-card"><div class="hr-like-title">The Four Points Comfort Bed</div><p class="hr-like-text">A genuine brand strength, consistently praised across guest reviews.</p></div>
-      <div class="hr-like-card"><div class="hr-like-title">Bonvoy value</div><p class="hr-like-text">Solid redemption option and a logical points-earning stay without paying five-star Sheraton rates.</p></div>
-    </div>
-  </div>
-</section>
-<section class="hr-section">
-  <div class="hr-section-inner">
-    <div class="hr-tradeoff">
-      <div class="hr-tradeoff-label">The Tradeoff</div>
-      <p class="hr-tradeoff-text">Rooms run a compact 30-40 square metres and lean business-hotel generic rather than distinctive, comfortable and well-equipped, forgettable in character. The pool is modest compared to the five-star beachfront rivals on the same strip. Street noise reaches lower floors on the road side, request a high floor facing the water. On-site dinner is limited to a buffet format, so you're eating off-property most nights, and the immediate beach strip can feel busier and more commercialized than the quieter southern stretches of My Khe.</p>
-    </div>
-  </div>
-</section>
-<section class="hr-section" style="background:var(--sand)">
-  <div class="hr-section-inner hr-split-text-only">
-    <span class="hr-label">Location</span>
-    <h2 class="hr-h2">Location</h2>
-    <p class="hr-body-text">Direct My Khe Beach access, 7km from the airport, about 12 minutes by Grab, and 12 minutes from Dragon Bridge. The My Khe restaurant strip is a 5-minute walk, dozens of good seafood grills and noodle shops within easy reach every night. What this means for the trip: you're close enough to the city for easy exploration and directly on one of Da Nang's best urban beach stretches, without paying the premium the five-star resorts nearby charge for the same fundamentals.</p>
-    <div class="hr-loc-chips"><span class="hr-loc-chip"><strong>Beach:</strong> Direct</span><span class="hr-loc-chip"><strong>Airport:</strong> 7 km / 12 min</span><span class="hr-loc-chip"><strong>Dragon Bridge:</strong> 12 min</span></div>
-  </div>
-</section>
-<section class="hr-section hr-wwsh">
-  <div class="hr-section-inner hr-wwsh-inner">
-    <span class="hr-label">Would We Stay Here</span>
-    <p class="hr-wwsh-answer">YES</p>
-    <p class="hr-body-text">Yes, specifically for the breakfast and the rooftop bar. Four Points sits in the honest-overperformer category, a hotel that doesn't try to be a resort, knows exactly what it is, and then over-delivers in two specific areas that no other hotel on My Khe Beach can match. Clean room, good bed, great breakfast, 100 craft beers on the roof. That's a winning combination.</p>
-  </div>
-</section>
-<section class="hr-section hr-cta">
-  <div class="hr-section-inner hr-cta-inner">
-    <span class="hr-label">Check Your Dates</span>
-    <h2 class="hr-h2">Check Your Dates</h2>
-    <p class="hr-cta-text">Hotel prices change constantly. Check the current rate before deciding whether the value makes sense for your trip.</p>
-    <a href="https://www.booking.com/hotel/vn/four-points-by-sheraton-danang.html?aid=1784897&amp;sid=four-points-sheraton-da-nang--four-points-by-sheraton-danang" class="hr-cta-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_review" data-hotel="Four Points by Sheraton Danang">See Prices for Your Dates &rarr;</a>
-  </div>
-</section>
-<section class="hr-section" style="background:var(--sand)">
-  <div class="hr-section-inner">
-    <span class="hr-label">Compare Before You Book</span>
-    <h2 class="hr-h2">Compare Before You <em>Book</em></h2>
-    <div class="hr-related-grid"><a href="intercontinental-da-nang.html" class="hr-related-card"><div class="hr-related-img"><img src="images/review-intercontinental-da-nang-hero.jpg" alt="InterContinental Danang Sun Peninsula Resort" loading="lazy" width="400" height="300"></div><div class="hr-related-body"><div class="hr-related-cat">5-Star Luxury Resort</div><div class="hr-related-name">InterContinental Danang Sun Peninsula Resort</div></div></a><a href="hyatt-regency-da-nang.html" class="hr-related-card"><div class="hr-related-img"><img src="assets/img/hyatt-regency-da-nang-e4a67bf832f1.jpg" alt="Hyatt Regency Danang Resort and Spa" loading="lazy" width="400" height="300"></div><div class="hr-related-body"><div class="hr-related-cat">5-Star Beach Resort</div><div class="hr-related-name">Hyatt Regency Danang Resort and Spa</div></div></a><a href="sheraton-grand-da-nang.html" class="hr-related-card"><div class="hr-related-img"><img src="assets/img/sheraton-grand-da-nang-ac672d9e0195.jpg" alt="Sheraton Grand Danang Resort" loading="lazy" width="400" height="300"></div><div class="hr-related-body"><div class="hr-related-cat">5-Star Beach Resort</div><div class="hr-related-name">Sheraton Grand Danang Resort</div></div></a></div>
-  </div>
-</section>
+
+</article>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -506,6 +980,41 @@ button{font-family:var(--font-sans);cursor:pointer}
       var expanded=this.getAttribute('aria-expanded')==='true';
       this.setAttribute('aria-expanded',!expanded);
     });
+  });
+})();
+</script>
+
+<!-- Page-scoped headroom-style nav: hide on scroll down, reveal on scroll up.
+     Matches the one confirmed scroll behaviour of the design reference
+     (offset ~500, tolerance ~50). No parallax, no scroll-triggered reveals.
+     Progressive enhancement only: with JS off the nav stays fixed and visible. -->
+<script>
+(function(){
+  var nav=document.querySelector('.review-editorial-trial .site-nav');
+  if(!nav)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce)return; // always-visible nav, no slide
+  var OFFSET=500,TOL=50,last=window.pageYOffset,ticking=false;
+  function update(){
+    ticking=false;
+    var y=window.pageYOffset;
+    if(Math.abs(y-last)<TOL){return;}
+    if(y>last&&y>OFFSET){
+      nav.classList.add('ret-nav-unpinned');
+      nav.classList.remove('ret-nav-pinned');
+    }else if(y<last){
+      nav.classList.add('ret-nav-pinned');
+      nav.classList.remove('ret-nav-unpinned');
+    }
+    last=y;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;window.requestAnimationFrame(update);}
+  },{passive:true});
+  // Never leave the nav hidden while a keyboard user is tabbing into it.
+  nav.addEventListener('focusin',function(){
+    nav.classList.remove('ret-nav-unpinned');
+    nav.classList.add('ret-nav-pinned');
   });
 })();
 </script>
