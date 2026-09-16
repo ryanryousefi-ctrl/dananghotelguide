@@ -186,8 +186,9 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-area-guide-link:hover{color:var(--ocean-deep);border-color:var(--ocean-deep)}
 
 /* HOTEL MINI-CARDS — styled to match .hotel-card on best-hotels-in-da-nang.html */
-.ws-hotels-title{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.9rem;margin-top:1.5rem;display:block}
-.ws-hotel-mini-list{display:flex;flex-direction:column;gap:1.25rem}
+.ws-hotels-group-title{font-family:var(--font-serif);font-size:1.35rem;color:var(--ink);display:block;margin-top:2.5rem;margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--sand-dark)}
+.ws-hotels-group-title:first-of-type{margin-top:0}
+.ws-hotel-mini-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start}
 .ws-hotel-mini{background:#fff;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--sand-dark);transition:box-shadow .2s}
 .ws-hotel-mini:hover{box-shadow:0 8px 32px rgba(0,0,0,.1)}
 .ws-hotel-mini-img{position:relative;overflow:hidden;height:180px}
@@ -287,12 +288,14 @@ button{font-family:var(--font-sans);cursor:pointer}
   .ws-compare-grid{grid-template-columns:1fr}
   .ws-decision-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
+  .ws-hotel-mini-list{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
   .ws-hero{min-height:420px}
   .ws-quick-grid{grid-template-columns:1fr 1fr}
   .ws-decision-grid{grid-template-columns:repeat(2,1fr)}
   .ws-area-stats{grid-template-columns:repeat(2,1fr)}
+  .ws-hotel-mini-list{grid-template-columns:1fr}
 }
 @media(max-width:580px){
   .ws-quick-grid{grid-template-columns:1fr}
@@ -597,37 +600,6 @@ button{font-family:var(--font-sans);cursor:pointer}
           <p class="ws-area-tradeoff">Tradeoff: Touristy and hotel-heavy. The most commercial stretch of Da Nang.</p>
           <p class="ws-area-verdict">If you're reading this guide because you genuinely don't know where to stay — <strong>book My Khe.</strong></p>
           <a href="da-nang-beach-hotels.html" class="ws-area-guide-link">See our full My Khe beach hotel guide &rarr;</a>
-
-          <span class="ws-hotels-title">Hotels to consider</span>
-          <div class="ws-hotel-mini-list">
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/chicland-da-nang.jpg" alt="CHICLAND Hotel Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">CHICLAND Hotel</div>
-                <div class="ws-hotel-mini-line">Vertical garden, rooftop infinity pool, direct My Khe access. The boutique statement on the beach.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Design-focused couples</div>
-                <a href="https://www.booking.com/hotel/vn/chicland-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--chicland-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="CHICLAND Hotel">See CHICLAND Hotel Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/m-hotel-da-nang.webp" alt="M Hotel Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">M Hotel Da Nang</div>
-                <div class="ws-hotel-mini-line">Reliable mid-range My Khe property. Good pool, consistent quality, easy beach access.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples and solo travelers</div>
-                <a href="https://www.booking.com/hotel/vn/m-hotel-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--m-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="M Hotel Da Nang">See M Hotel Da Nang Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/grandvrio-ocean-da-nang.avif" alt="Grandvrio Ocean Resort Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Grandvrio Ocean Resort</div>
-                <div class="ws-hotel-mini-line">Japanese-managed beachfront. Service precision that most My Khe hotels don't match.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Those who value service quality</div>
-                <a href="https://www.booking.com/hotel/vn/grandvrio-ocean-resort-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--grandvrio-ocean-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Grandvrio Ocean Resort">See Grandvrio Ocean Resort Prices &rarr;</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -650,37 +622,6 @@ button{font-family:var(--font-sans);cursor:pointer}
           <p class="ws-area-tradeoff">Tradeoff: Increasingly international and tourist-heavy. Busier than it was five years ago.</p>
           <p class="ws-area-verdict">If you hate needing transportation every time you want coffee, dinner or a drink — <strong>stay here.</strong></p>
           <a href="da-nang-nightlife-guide.html" class="ws-area-guide-link">See An Thuong restaurants and nightlife &rarr;</a>
-
-          <span class="ws-hotels-title">Hotels to consider</span>
-          <div class="ws-hotel-mini-list">
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-b64-02.webp" alt="Saha Casa Boutique Hotel Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Saha Casa Boutique Hotel</div>
-                <div class="ws-hotel-mini-line">Contemporary boutique near An Thuong. Pool, considered design, strong location for the neighborhood.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples, longer stays</div>
-                <a href="https://www.booking.com/hotel/vn/saha-casa-boutique-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--saha-casa-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Saha Casa Boutique Hotel">See Saha Casa Boutique Hotel Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-b64-04.jpg" alt="Hadana Boutique Hotel Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Hadana Boutique Hotel</div>
-                <div class="ws-hotel-mini-line">Punches above its price in the An Thuong area. Pool, compact boutique, best value in the neighborhood.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Value-focused travelers</div>
-                <a href="https://www.booking.com/hotel/vn/hadana-boutique.html?aid=1784897&sid=where-to-stay-in-da-nang--hadana-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Hadana Boutique Hotel">See Hadana Boutique Hotel Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-79e68188.jpg" alt="Sofiana My Khe Hotel Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Sofiana My Khe Hotel &amp; Spa</div>
-                <div class="ws-hotel-mini-line">Rooftop pool, spa, more style than the price suggests. An Thuong and beach both within easy reach.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples on a budget</div>
-                <a href="https://www.booking.com/hotel/vn/sofiana-my-khe-amp-spa.html?aid=1784897&sid=where-to-stay-in-da-nang--sofiana-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Sofiana My Khe Hotel &amp; Spa">See Sofiana My Khe Hotel &amp; Spa Prices &rarr;</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -703,37 +644,6 @@ button{font-family:var(--font-sans);cursor:pointer}
           <p class="ws-area-tradeoff">Tradeoff: You don't have My Khe outside the door. The beach requires transportation every time.</p>
           <p class="ws-area-verdict">Choose the river if experiencing the city matters more to you than waking up beside the beach.</p>
           <a href="da-nang-riverfront-hotels.html" class="ws-area-guide-link">See our full Han River hotel guide &rarr;</a>
-
-          <span class="ws-hotels-title">Hotels to consider</span>
-          <div class="ws-hotel-mini-list">
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/caro-hotel-da-nang.webp" alt="Caro Hotel Da Nang riverfront" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Caro Hotel Da Nang</div>
-                <div class="ws-hotel-mini-line">The most considered hotel on the Han River. Bach Dang waterfront, rooftop pool, Dragon Bridge views.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples, design-focused travelers</div>
-                <a href="https://www.booking.com/hotel/vn/caro-premium-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--caro-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Caro Hotel Da Nang">See Caro Hotel Da Nang Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/wink-hotel-da-nang.jpg" alt="Wink Hotel Da Nang Riverside" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Wink Hotel Danang Riverside</div>
-                <div class="ws-hotel-mini-line">Smart design, river views, strong rooftop bar. Best value on the Han River strip.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Solo travelers, city-focused visitors</div>
-                <a href="https://www.booking.com/hotel/vn/wink-danang-riverside.html?aid=1784897&sid=where-to-stay-in-da-nang--wink-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Wink Hotel Danang Riverside">See Wink Hotel Danang Riverside Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/courtyard-marriott-da-nang.jpg" alt="Courtyard by Marriott Da Nang Han River" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Courtyard by Marriott Da Nang</div>
-                <div class="ws-hotel-mini-line">Reliable full-service hotel on the river. Best pick for business travelers or families needing Han River proximity.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Business stays, reliability</div>
-                <a href="https://www.booking.com/hotel/vn/courtyard-danang-han-river.html?aid=1784897&sid=where-to-stay-in-da-nang--courtyard-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Courtyard by Marriott Da Nang">See Courtyard by Marriott Da Nang Prices &rarr;</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -756,37 +666,6 @@ button{font-family:var(--font-sans);cursor:pointer}
           <p class="ws-area-tradeoff">Tradeoff: Not walkable for Da Nang's restaurant and nightlife scene. You need a car or Grab to explore the city.</p>
           <p class="ws-area-verdict">Choose Non Nuoc when the resort itself is the vacation — pools, beach and space over urban exploration.</p>
           <a href="family-hotels-da-nang.html" class="ws-area-guide-link">See our full family resort guide &rarr;</a>
-
-          <span class="ws-hotels-title">Hotels to consider</span>
-          <div class="ws-hotel-mini-list">
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/marriott-da-nang.jpg" alt="Danang Marriott Resort Non Nuoc" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Danang Marriott Resort &amp; Spa</div>
-                <div class="ws-hotel-mini-line">Full Non Nuoc resort experience. Large pools, direct beachfront, comprehensive facilities.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, resort stays</div>
-                <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=where-to-stay-in-da-nang--marriott-resort-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Danang Marriott Resort &amp; Spa">See Danang Marriott Resort &amp; Spa Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/furama-resort-da-nang.jpg" alt="Furama Resort Da Nang Non Nuoc" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Furama Resort Da Nang</div>
-                <div class="ws-hotel-mini-line">Established Non Nuoc resort with strong pools and beachfront access. Good family credentials.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, classic resort stays</div>
-                <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--furama-resort-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Furama Resort Da Nang">See Furama Resort Da Nang Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/sandy-beach-non-nuoc-da-nang.webp" alt="Sandy Beach Non Nuoc Resort Da Nang" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Sandy Beach Non Nuoc Resort</div>
-                <div class="ws-hotel-mini-line">More affordable Non Nuoc option. Beachfront, pool, quieter environment than the big brand resorts.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Value-conscious resort seekers</div>
-                <a href="https://www.booking.com/hotel/vn/sandy-beach-non-nuoc-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--sandy-beach-non-nuoc" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Sandy Beach Non Nuoc Resort">See Sandy Beach Non Nuoc Resort Prices &rarr;</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -810,32 +689,165 @@ button{font-family:var(--font-sans);cursor:pointer}
           <p class="ws-area-tradeoff">Tradeoff: Depending on location, very removed from restaurants and nightlife. Verify distances before booking.</p>
           <p class="ws-area-verdict">For an extraordinary resort trip Son Tra is unbeatable. For a first visit centered on exploring Da Nang, choose My Khe instead.</p>
           <a href="luxury-hotels-da-nang.html" class="ws-area-guide-link">See our luxury hotel guide &rarr;</a>
-
-          <span class="ws-hotels-title">Hotels to consider</span>
-          <div class="ws-hotel-mini-list">
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/intercontinental-da-nang.avif" alt="InterContinental Da Nang Sun Peninsula Resort" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">InterContinental Da Nang Sun Peninsula</div>
-                <div class="ws-hotel-mini-line">One of the finest resorts in Vietnam. Jungle hillside, private coves, extraordinary design. Deep on the peninsula.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Honeymoon, luxury splurge, seclusion</div>
-                <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--intercontinental-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="InterContinental Da Nang Sun Peninsula">See InterContinental Da Nang Sun Peninsula Prices &rarr;</a>
-              </div>
-            </div>
-            <div class="ws-hotel-mini">
-              <div class="ws-hotel-mini-img"><img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang Resort" loading="lazy" width="400" height="260"></div>
-              <div class="ws-hotel-mini-body">
-                <div class="ws-hotel-mini-name">Premier Village Da Nang Resort</div>
-                <div class="ws-hotel-mini-line">Villa-style on the Son Tra tip. Private pools, beach on both sides, strong family credentials.</div>
-                <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, villa stays</div>
-                <a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--premier-village-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Premier Village Da Nang Resort">See Premier Village Da Nang Resort Prices &rarr;</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
     </div><!-- /ws-area-grid -->
+  </div>
+</section>
+
+<!-- HOTELS TO CONSIDER -->
+<section class="ws-section" style="background:var(--sand)">
+  <div class="ws-section-inner">
+    <span class="ws-section-eyebrow">Hotels to consider</span>
+    <h2 class="ws-section-h2">Specific Hotels, <em>By Area</em></h2>
+    <p class="ws-section-intro">Once you've picked an area above, here's where to actually book.</p>
+
+    <span class="ws-hotels-group-title">My Khe Beach</span>
+    <div class="ws-hotel-mini-list">
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/chicland-da-nang.jpg" alt="CHICLAND Hotel Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">CHICLAND Hotel</div>
+          <div class="ws-hotel-mini-line">CHICLAND is the boutique statement on My Khe: a vertical garden climbs the tower's facade, and the rooftop infinity pool looks straight down the beach. It's a smaller property than the resort brands nearby, which means fewer facilities but a more design-led feel in the public spaces. Access to the sand is direct, no road crossing required. Rooms lean compact rather than spacious, in keeping with its boutique positioning.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Design-focused couples</div>
+          <a href="https://www.booking.com/hotel/vn/chicland-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--chicland-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="CHICLAND Hotel">See CHICLAND Hotel Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/m-hotel-da-nang.webp" alt="M Hotel Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">M Hotel Da Nang</div>
+          <div class="ws-hotel-mini-line">M Hotel sits squarely in the mid-range My Khe bracket: a straightforward tower property with a pool, easy beach access, and none of the surprises that can come with cheaper independents. It won't compete with the big beachfront resorts on facilities, but the location and consistency make it a safe default. Good fit if you want a reliable base without paying resort prices.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples and solo travelers</div>
+          <a href="https://www.booking.com/hotel/vn/m-hotel-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--m-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="M Hotel Da Nang">See M Hotel Da Nang Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/grandvrio-ocean-da-nang.avif" alt="Grandvrio Ocean Resort Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Grandvrio Ocean Resort</div>
+          <div class="ws-hotel-mini-line">Grandvrio is Japanese-managed, and it shows in the level of operational polish: a tighter, more consistent standard of service than most independent My Khe properties manage. It's beachfront, with the pool and public areas oriented toward the water. The trade-off for that consistency is a slightly more formal, less lively atmosphere than some of the beach's younger boutique competitors.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Those who value service quality</div>
+          <a href="https://www.booking.com/hotel/vn/grandvrio-ocean-resort-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--grandvrio-ocean-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Grandvrio Ocean Resort">See Grandvrio Ocean Resort Prices &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <span class="ws-hotels-group-title">An Thuong / My An</span>
+    <div class="ws-hotel-mini-list">
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-b64-02.webp" alt="Saha Casa Boutique Hotel Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Saha Casa Boutique Hotel</div>
+          <div class="ws-hotel-mini-line">Saha Casa is a small, contemporary-design property sitting inside the An Thuong grid, close enough to walk to the restaurant and bar cluster without needing a Grab. The pool is compact, in keeping with a boutique footprint, but the location does most of the work here. Suits travelers who want to be based in the neighborhood itself rather than on the beach strip proper.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples, longer stays</div>
+          <a href="https://www.booking.com/hotel/vn/saha-casa-boutique-da-nang.html?aid=1784897&sid=where-to-stay-in-da-nang--saha-casa-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Saha Casa Boutique Hotel">See Saha Casa Boutique Hotel Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-b64-04.jpg" alt="Hadana Boutique Hotel Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Hadana Boutique Hotel</div>
+          <div class="ws-hotel-mini-line">Hadana is one of the better value plays in An Thuong: a compact boutique property with a pool, priced below what the location and design level would suggest. It won't have the scale or facilities of a resort, but for a couple who mainly wants a comfortable base to walk out from, it punches above its price point. Book direct comparisons against Saha Casa and Sofiana before deciding, since all three sit in a similar bracket.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Value-focused travelers</div>
+          <a href="https://www.booking.com/hotel/vn/hadana-boutique.html?aid=1784897&sid=where-to-stay-in-da-nang--hadana-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Hadana Boutique Hotel">See Hadana Boutique Hotel Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-79e68188.jpg" alt="Sofiana My Khe Hotel Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Sofiana My Khe Hotel &amp; Spa</div>
+          <div class="ws-hotel-mini-line">Sofiana adds a rooftop pool and an on-site spa to the An Thuong boutique bracket, at a price that undercuts what those two features usually cost elsewhere in the neighborhood. It sits close enough to both the beach and the restaurant strip that either is an easy walk. The styling reads more upscale than the rate, which is the main reason it gets recommended here.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples on a budget</div>
+          <a href="https://www.booking.com/hotel/vn/sofiana-my-khe-amp-spa.html?aid=1784897&sid=where-to-stay-in-da-nang--sofiana-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Sofiana My Khe Hotel &amp; Spa">See Sofiana My Khe Hotel &amp; Spa Prices &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <span class="ws-hotels-group-title">Han River / Hai Chau</span>
+    <div class="ws-hotel-mini-list">
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/caro-hotel-da-nang.webp" alt="Caro Hotel Da Nang riverfront" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Caro Hotel Da Nang</div>
+          <div class="ws-hotel-mini-line">Caro is the most considered hotel on the Bach Dang waterfront, with a rooftop pool that looks directly across the river at the Dragon Bridge. Design and finish are noticeably more current than most of the Han River competition, which skews older and more generic. It's a city hotel first, not a beach one, so factor in the 15 to 20 minute Grab to My Khe if you want sand time too.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Couples, design-focused travelers</div>
+          <a href="https://www.booking.com/hotel/vn/caro-premium-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--caro-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Caro Hotel Da Nang">See Caro Hotel Da Nang Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/wink-hotel-da-nang.jpg" alt="Wink Hotel Da Nang Riverside" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Wink Hotel Danang Riverside</div>
+          <div class="ws-hotel-mini-line">Wink brings a smart, modern design sensibility to the Han River strip at a rate well below Caro or the international chains nearby. River-view rooms are worth the small upcharge, and the rooftop bar is genuinely one of the better ones downtown, not just a hotel amenity. It's the best value option on this stretch of the river if design and location matter more to you than resort-scale facilities.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Solo travelers, city-focused visitors</div>
+          <a href="https://www.booking.com/hotel/vn/wink-danang-riverside.html?aid=1784897&sid=where-to-stay-in-da-nang--wink-hotel-da-nang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Wink Hotel Danang Riverside">See Wink Hotel Danang Riverside Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/courtyard-marriott-da-nang.jpg" alt="Courtyard by Marriott Da Nang Han River" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Courtyard by Marriott Da Nang</div>
+          <div class="ws-hotel-mini-line">Courtyard by Marriott is the dependable, full-service option on the river: predictable Marriott standards, Bonvoy points, and the kind of consistency business travelers and families both value over boutique character. It sits close to the Han River bridges and downtown, which makes it a practical base for anyone whose trip is centered on the city rather than the beach. Not a design destination, but it does what it promises.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Business stays, reliability</div>
+          <a href="https://www.booking.com/hotel/vn/courtyard-danang-han-river.html?aid=1784897&sid=where-to-stay-in-da-nang--courtyard-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Courtyard by Marriott Da Nang">See Courtyard by Marriott Da Nang Prices &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <span class="ws-hotels-group-title">Non Nuoc</span>
+    <div class="ws-hotel-mini-list">
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/marriott-da-nang.jpg" alt="Danang Marriott Resort Non Nuoc" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Danang Marriott Resort &amp; Spa</div>
+          <div class="ws-hotel-mini-line">The Marriott sits on Non Nuoc Beach with over 200 rooms, arranged as low-rise villa buildings through tropical gardens rather than a single tower, which keeps it from feeling like it's processing guests at that scale. Garden-view rooms are a genuine surprise: quieter, more private, and better value than the beach villas most people book by default. It delivers a full five-star resort experience, pools, multiple restaurants, direct beach access, without the intimidating size some competitors carry.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, resort stays</div>
+          <a href="https://www.booking.com/hotel/vn/danang-marriott-resort-spa-non-nuoc-beach-villas.html?aid=1784897&sid=where-to-stay-in-da-nang--marriott-resort-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Danang Marriott Resort &amp; Spa">See Danang Marriott Resort &amp; Spa Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/furama-resort-da-nang.jpg" alt="Furama Resort Da Nang Non Nuoc" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Furama Resort Da Nang</div>
+          <div class="ws-hotel-mini-line">Furama was one of Da Nang's first international resorts, open since 1997, and the three decades since have given the grounds time few newer properties can match: the palm garden between the pools and the beach is genuine tropical density, not recent landscaping. That heritage also means operationally it has had a long time to get the details right. It's the property people describe as "old school" and mean as a compliment, consistently full for a reason.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, classic resort stays</div>
+          <a href="https://www.booking.com/hotel/vn/furama-resort-danang.html?aid=1784897&sid=where-to-stay-in-da-nang--furama-resort-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Furama Resort Da Nang">See Furama Resort Da Nang Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/sandy-beach-non-nuoc-da-nang.webp" alt="Sandy Beach Non Nuoc Resort Da Nang" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Sandy Beach Non Nuoc Resort</div>
+          <div class="ws-hotel-mini-line">Sandy Beach is the more affordable route into Non Nuoc's resort format: beachfront, a pool, and the same quieter stretch of coastline as the Marriott and Furama, at a lower rate than either big-brand neighbor. The trade-off is fewer dining outlets and a less polished facilities list. Reasonable pick if the Non Nuoc setting matters more to you than the specific brand attached to it.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Value-conscious resort seekers</div>
+          <a href="https://www.booking.com/hotel/vn/sandy-beach-non-nuoc-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--sandy-beach-non-nuoc" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Sandy Beach Non Nuoc Resort">See Sandy Beach Non Nuoc Resort Prices &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <span class="ws-hotels-group-title">Son Tra Peninsula</span>
+    <div class="ws-hotel-mini-list">
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/intercontinental-da-nang.avif" alt="InterContinental Da Nang Sun Peninsula Resort" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">InterContinental Da Nang Sun Peninsula</div>
+          <div class="ws-hotel-mini-line">The InterContinental is Bill Bensley's clifftop resort deep on Son Tra, and it earns the reputation: a funicular descends through 200 metres of jungle to a private bay that no one outside the hotel can access. Rates start around $350 a night, reflecting a category above Da Nang's other resorts rather than competing with them directly. It's genuinely isolated, jungle hillside, private coves, extraordinary architecture, which is exactly what makes it one of the finest resort experiences in Vietnam and exactly why it's the wrong pick for anyone wanting easy access to the city.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Honeymoon, luxury splurge, seclusion</div>
+          <a href="https://www.booking.com/hotel/vn/intercontinental-danang-sun-peninsula-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--intercontinental-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="InterContinental Da Nang Sun Peninsula">See InterContinental Da Nang Sun Peninsula Prices &rarr;</a>
+        </div>
+      </div>
+      <div class="ws-hotel-mini">
+        <div class="ws-hotel-mini-img"><img src="images/hotels/premier-village-da-nang.webp" alt="Premier Village Da Nang Resort" loading="lazy" width="400" height="260"></div>
+        <div class="ws-hotel-mini-body">
+          <div class="ws-hotel-mini-name">Premier Village Da Nang Resort</div>
+          <div class="ws-hotel-mini-line">Premier Village is Da Nang's private-villa resort: every room category is a two-storey villa with its own pool, no standard rooms and no shared hotel corridors anywhere on the property. It sits on the rocky headland between My Khe and Non Nuoc, giving it sea views uninterrupted by neighboring resort towers, a position unique to this stretch of Son Tra. Because every unit has a private pool, it works unusually well for families who want space without needing to negotiate a shared pool deck with other guests.</div>
+          <div class="ws-hotel-mini-bf"><strong>Best for:</strong> Families, villa stays</div>
+          <a href="https://www.booking.com/hotel/vn/premier-village-danang-resort.html?aid=1784897&sid=where-to-stay-in-da-nang--premier-village-danang" target="_blank" rel="nofollow noopener sponsored" class="ws-hotel-mini-cta" data-cta-location="booking_hotel_card" data-hotel="Premier Village Da Nang Resort">See Premier Village Da Nang Resort Prices &rarr;</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
