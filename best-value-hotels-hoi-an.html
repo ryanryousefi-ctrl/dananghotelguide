@@ -548,7 +548,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       <h2>Vinh Hung Library Hotel</h2>
       <p class="bb-sig-pick-type">Old Town Edge &middot; Value &middot; $</p>
       <p class="bb-sig-pick-desc">Walkable to the Ancient Town with a pool, at a rate well below the riverside luxury tier. A dependable base for anyone who'd rather spend on experiences than the room.</p>
-      <p class="bb-sig-pick-desc">Hoi An's hotel market gets surprisingly good once you stop chasing five-star brands, and this is the proof.</p>
+      <p class="bb-sig-pick-desc">Skip it if you want a big pool or resort grounds. This is a location play, not a facilities play.</p>
       <div class="bb-sig-pick-detail">
         <span class="bb-sig-detail-tag">Walkable, Old Town edge</span>
         <span class="bb-sig-detail-tag">Pool included</span>
@@ -563,7 +563,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   <div class="bb-finder" id="bbFinder">
     <div class="bb-finder-header">
       <h2 class="bb-finder-h2">Best Value Hotels</h2>
-      <span class="bb-finder-total" id="bbFinderTotal">&mdash; 2026</span>
+      <span class="bb-finder-total" id="bbFinderTotal">2026</span>
     </div>
     <div class="bb-bar" role="search">
       <div class="bb-search-wrap">
@@ -805,7 +805,7 @@ function renderCards(hs){
 function updateCount(n){
   var c = document.getElementById('bbCount'); if(c) c.textContent=n;
   var d = document.getElementById('bbDrawerCount'); if(d) d.textContent=n;
-  var t = document.getElementById('bbFinderTotal'); if(t) t.textContent = HOTELS.length+' hotels — 2026';
+  var t = document.getElementById('bbFinderTotal'); if(t) t.textContent = HOTELS.length+' hotels, 2026';
 }
 
 function renderChips(){
