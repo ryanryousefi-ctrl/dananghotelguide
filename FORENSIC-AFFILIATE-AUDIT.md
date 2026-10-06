@@ -5,6 +5,34 @@
 
 ---
 
+## ADDENDUM (same day, follow-up investigation before implementing the fix)
+
+The user flagged that their live CJ account dashboard shows "Deep Link Automation" **unchecked**, with only "Page-Based Impression Reporting" checked, and that the dashboard's currently-generated script is `https://www.anrdoezrs.net/am/101820678/impressions/page/am.js` (no `/include/allCj/` in the path) — different from the script URL actually referenced in this site's HTML. This required direct reconciliation before any sitewide change.
+
+**Findings, with evidence:**
+
+1. **Two distinct scripts exist on CJ's CDN for the same account (`websiteId=101820678`, `publisherId=8008393`):**
+   - `https://www.anrdoezrs.net/am/101820678/impressions/page/am.js` — 72 lines. Contains only a `trackImpressions()` call: collects every `<a href>` and matching `<img>` src on the page and POSTs them to `origin.cjtrack.me/pageImpression` on load. **No click listener. No domain allowlist. No href rewriting of any kind.** This is pure impression/page-view tracking, confirming the user's suspicion.
+   - `https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js` — 243 lines. Contains the same `trackImpressions()` block **plus** a 22,401-domain allowlist and the full click-rewrite logic (`autoMonetizeLink`, `createClickHandlerFor`) described in the original audit.
+
+2. **The live site's HTML hardcodes the second (`/include/allCj/`) URL**, confirmed via direct `grep` of production HTML on `naman-retreat-da-nang.html` and `best-hotels-in-da-nang.html`. This script is being served fresh (not from stale cache — `X-Cache: Miss from cloudfront` on a fetch performed during this follow-up) regardless of the dashboard toggle's current state. CJ's dashboard toggle appears to control what URL the *account's script generator* currently recommends for new installs; it does not appear to retroactively disable content already being served at a previously-generated script URL still referenced by a site's HTML. This reconciles the apparent contradiction: the dashboard is accurately describing the *currently recommended* configuration, but it is not describing what script this specific site is actually loading.
+
+3. **Fresh, live re-verification of the click-race bug, run again during this follow-up (separate from the original audit's test run):** 6 of 6 real native clicks on the live `naman-retreat-da-nang.html` hero CTA opened the new tab at the bare, parameter-stripped `booking.com` URL. This is a stronger reproduction than the original audit's 4/5, not weaker — the bug is current and highly consistent.
+
+4. **A previously-missed commit materially changes the historical timeline and explains part of the 251-click puzzle:**
+   - `ee0bc3f` (Jul 13, 2026): AWIN → CJ migration, DLA script added sitewide.
+   - `b96a20b` (**Aug 10, 2026**): A prior session found the DLA script's rewrite target (`qksrv.net`) was returning `ERR_TUNNEL_CONNECTION_FAILED` — a hard connection failure, not merely a race condition — and **deliberately removed the CJ script sitewide**, leaving plain `booking.com?aid=1784897` links with no CJ wrapper at all, explicitly as "the fix" for that failure.
+   - `ab76b7f` (**Aug 13, 2026**): Three days later, a separate pass found the script "missing" from English-language pages (present only on `/kr/` pages) and **re-added it sitewide**, apparently without the context that it had just been deliberately removed for breaking checkouts, and without re-verifying whether the underlying `qksrv.net` failure was still present.
+   - The user's CJ reporting window (~Aug 12 – Oct 6) therefore begins 1–2 days *before* the script was re-added, meaning nearly the entire reporting window (Aug 13 onward, ~55 of ~57 days) had the click-race-affected DLA script live.
+
+5. **Resolving why CJ still shows 251 clicks despite the bug (the user's Q8), with evidence rather than speculation:** The script's click-handling code (`autoMonetizeLink`/`createClickHandlerFor`) contains **zero network calls of its own** — confirmed by reading the full 8,317-character real-code portion of the script line by line. The only XHR in the entire file is `trackImpressions()`, which fires once on page load (an impression, not a click) and is unrelated to click behavior. This means CJ has no independent "a click happened" signal from this script — the only way a click gets counted is if the browser's navigation **actually reaches `origin.cjtrack.me/links/.../type/am/...`**, which only happens when the href-rewrite race is won. **This directly supports explanation (A) from the original audit's Phase 8 list: the 251 clicks are the minority of real clicks where the rewrite race was won**, not a separate counting mechanism, not stale configuration, and not a different script running elsewhere.
+
+6. **The static CJ link format was re-verified fresh and traced through its full real redirect chain** (not just a 302 status check): `qksrv.net` → `cj.dotomi.com` → `emjcd.com` → `booking.com`, landing correctly on the intended property in 3 of 3 sampled hotels (Naman Retreat, InterContinental, Sheraton Grand). **Important new finding:** on the final Booking.com landing page, our own `aid=1784897` is **not** what appears — CJ substitutes its own Booking.com partner `aid` (observed: `aid=811995`) plus a `label=affnetcj-..._pub-8008393_site-101820678_pname-DaNang+Hotel+Guide_...cjevent-...` parameter block, which is the actual mechanism Booking.com uses to attribute a sale back to CJ, and CJ in turn attributes it back to this publisher account. This means `aid=1784897` in the original `href` is not the live attribution parameter once a click is correctly routed through CJ — it only matters for the (presumably rare/unintended) case of a user reaching Booking.com directly, bypassing CJ entirely, which is exactly what the race-condition bug causes to happen on most clicks today.
+
+**Conclusion carried into the fix:** the static-link architecture (Section S of the original audit) remains the correct fix, now with end-to-end verification of the real redirect chain and confirmed correct publisher/property attribution, not just a verified 302 response. The CJ account's current dashboard toggle state is not blocking this approach — the impression-only script was never the one this site relies on, and the full DLA script (which contains the correct tracking-redirect logic, just with a client-side-only delivery mechanism that doesn't work) remains live at the URL this site already references.
+
+---
+
 ## EXECUTIVE SUMMARY
 
 **1. Is the site fundamentally healthy?**
