@@ -1,7 +1,10 @@
 # CJ Static Link Fix — Implementation Report
 
 **Date:** October 6, 2026
-**Status:** Implemented in the working tree, not yet deployed (per instruction — awaiting review before push)
+**Status:** DEPLOYED TO PRODUCTION. This is the clean before/after point for affiliate revenue tracking.
+
+**Commit 1 (sitewide fix):** `774924e` — pushed 2026-10-06T09:38:04Z, confirmed live 2026-10-06T09:38:37Z
+**Commit 2 (gap closure — see Section 17):** `8e33e86` — pushed 2026-10-06T09:45:16Z, confirmed live 2026-10-06T09:45:40Z
 
 ---
 
@@ -154,3 +157,38 @@ Per the requested audit categories:
 | JSON-LD `"url":"https://www.booking.com/..."` | 17 | **intentionally not wrapped** | n/a — structured data read by crawlers, not clicked by users; CJ-wrapping it would misrepresent the declared resource to Google |
 
 **Target "zero unintended direct Booking.com booking paths" — met.** The only remaining plain `booking.com` strings in the codebase are the 17 JSON-LD `url` fields, which are intentionally excluded for the reason stated above (not a booking path a user can click).
+
+---
+
+## 16. Production Smoke Test (performed immediately after deployment)
+
+All tests run against `https://www.dananghotelguide.com` directly (not local files), with a real Chrome browser driven by Puppeteer, real `page.click()` native clicks (not synthetic `dispatchEvent`).
+
+**10 live pages inspected, href present before any interaction (all confirmed via direct `curl` of the live HTML):**
+`naman-retreat-da-nang.html` (4 links), `best-hotels-in-da-nang.html` (40), `luxury-hotels-da-nang.html` (17), `family-hotels-da-nang.html` (16), `da-nang-beach-hotels.html` (19), `where-to-stay-in-da-nang.html` (16), `hotel-reviews.html` (28), `boutique-hotels-da-nang.html` (16), `non-nuoc-beach-da-nang.html` (15), `da-nang-hotels-map.html` (60). All ten: CJ link present, zero raw `booking.com` hrefs.
+
+**10 real desktop clicks (1440×900, real Chrome click):** **10/10 PASS.** Every click: href was already a `kqzyfj.com` link before the click; a new tab opened; where the new tab was caught mid-redirect, full CJ attribution was visible live (one captured example: `aid=8133101&label=affnetcj-17293132_pub-8008393_site-101820678_pname-DaNang+Hotel+Guide_clkid-da-nang-beach-hotels_cjevent-e8e391fbc16911f183ae00120a18b8f8`).
+
+**10 real mobile clicks (390×844, touch-enabled viewport):** **10/10 PASS**, same methodology, same result pattern, including a second live attribution-parameter capture for `luxury-hotels-da-nang` with a distinct `cjevent` ID, confirming the mechanism works independent of viewport.
+
+**Booking widget (`bk-widget.js`) test:** confirmed loaded on production; real button click (`.sw-bk-btn`) on `hotel-reviews.html` (the widget only renders on pages with a matching hero class, per its own `heroConfig` logic — confirmed `.bb-hero` qualifies) opened a new tab landing on Booking.com's search results page, confirming the dynamically-built URL correctly routes through the CJ wrapper before `window.open()`.
+
+**JS-generated link test (`bookingUrl`/`bk` fields):** confirmed on production that `da-nang-hotels-map.html`'s inline JS data array contains CJ-wrapped `kqzyfj.com` links (34 already rendered into live map-popup anchors in the DOM on page load).
+
+## 17. Gap Found and Closed During the Smoke Test
+
+The full 202-page production audit (Section 18) initially found **14 unwrapped links across 4 live pages**: `furama-resort-da-nang.html` (3), `furama-vs-pullman-da-nang.html` (5), `fusion-suites-da-nang.html` (3), `grand-mercure-da-nang.html` (3). These 4 files had been excluded from the first commit out of caution, because they also carried unrelated, separately in-progress editorial changes in the working tree at the time the fix was built. On inspection, their actual working-tree diff at commit time was **100% the CJ fix with zero unrelated content** — the caution was unwarranted. Committed and deployed separately as `8e33e86`, confirmed live 2026-10-06T09:45:40Z. Re-running the full production audit afterward (Section 18) confirms zero remaining.
+
+## 18. Final Production Audit Result
+
+All 202 URLs in the live sitemap (`https://www.dananghotelguide.com/sitemap.xml`) downloaded directly from production and scanned with the same unwrapped-link detection logic as `scripts/audit-cj-affiliate.js`:
+
+```
+Pages scanned: 202
+Total kqzyfj.com CJ links found across all live pages: 1528
+Pages with UNWRAPPED raw booking.com href=: 0
+Pages with UNWRAPPED raw bookingUrl/bk JS fields: 0
+Pages with any awin1.com reference: 0
+```
+
+**Total remaining untracked Booking.com paths on live production: ZERO.**
