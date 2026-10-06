@@ -179,14 +179,19 @@
     if (!ciVal || !coVal) return;
     var cp = ciVal.split('-');
     var op = coVal.split('-');
-    var url = 'https://www.booking.com/searchresults.en-us.html' +
+    var destUrl = 'https://www.booking.com/searchresults.en-us.html' +
       '?ss=' + destSS +
       '&dest_id=' + destId +
       '&dest_type=' + destType +
       '&checkin=' + cp[0] + '-' + cp[1] + '-' + cp[2] +
       '&checkout=' + op[0] + '-' + op[1] + '-' + op[2] +
-      '&aid=1784897' +
       '&lang=en-us';
+    /* Static CJ tracking URL (click-101820678-17293132, this account's
+       Evergreen Link ID for Booking.com), built up front rather than
+       relying on any click-time rewrite — see CJ-STATIC-LINK-FIX.md. */
+    var url = 'https://www.kqzyfj.com/click-101820678-17293132' +
+      '?sid=' + encodeURIComponent('booking_widget--' + path.replace(/^\//, '').replace(/\.html$/, '')) +
+      '&url=' + encodeURIComponent(destUrl);
     if (window.gtag) {
       window.gtag('event', 'sitewide_booking_widget_click', {
         event_category: 'booking_widget',
