@@ -5,6 +5,7 @@
 
 **Commit 1 (sitewide fix):** `774924e` — pushed 2026-10-06T09:38:04Z, confirmed live 2026-10-06T09:38:37Z
 **Commit 2 (gap closure — see Section 17):** `8e33e86` — pushed 2026-10-06T09:45:16Z, confirmed live 2026-10-06T09:45:40Z
+**Commit 3 (one more file, zero live impact — see Section 19):** fixes `guides-da-nang-hotel-prices-by-month.html`, a URL that 308-redirects to `/da-nang-hotel-prices-by-month.html` and is not in the live sitemap, so its internal links were never reachable by a real visitor; fixed anyway for completeness.
 
 ---
 
@@ -192,3 +193,7 @@ Pages with any awin1.com reference: 0
 ```
 
 **Total remaining untracked Booking.com paths on live production: ZERO.**
+
+## 19. One Additional File, Zero Live Impact
+
+`guides-da-nang-hotel-prices-by-month.html` also had the old unwrapped-link pattern locally, same as the 4 files in Section 17. Unlike those 4, this file's URL itself 308-redirects to `/da-nang-hotel-prices-by-month.html` on production and does not appear in the live sitemap — meaning no real visitor ever reaches its content or its internal links directly; the redirect happens before the page body is served. Fixed for completeness and consistency with the rest of the codebase, but this one carried zero actual revenue risk, unlike Section 17's 4 pages which were real, live, directly-served content.
