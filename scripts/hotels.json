@@ -286,23 +286,5 @@
     "district": "My Khe Beach",
     "active": true,
     "verifiedAt": "2026-07-13"
-  },
-  {
-    "id": "sanouva-danang",
-    "name": "Sanouva Da Nang Hotel",
-    "slug": "sanouva-da-nang",
-    "city": "Da Nang",
-    "district": "Hai Chau",
-    "active": true,
-    "verifiedAt": "2026-10-06"
-  },
-  {
-    "id": "pavilion-danang",
-    "name": "Pavilion Hotel Da Nang",
-    "slug": "pavilion-da-nang",
-    "city": "Da Nang",
-    "district": "Son Tra",
-    "active": true,
-    "verifiedAt": "2026-10-06"
   }
 ]
