@@ -5,8 +5,8 @@
          crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Da Nang Travel News 2026, Latest Flights & Updates</title>
-<meta name="description" content="Latest Da Nang travel news for 2026, new flight routes, tourism developments, fireworks festival dates, and hotel openings. Updated by a local expat.">
+<title>Da Nang Travel News: Tourism, Food, Events & Flights</title>
+<meta name="description" content="The latest Da Nang news for travellers: tourism, food, festivals, flights and city-life guides from Da Nang Voice, plus our own hotel and travel reporting.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Satoshi:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Open Graph -->
-<meta property="og:title" content="Da Nang Travel News 2026, Latest Flights & Updates">
-<meta property="og:description" content="Latest Da Nang travel news for 2026, new flight routes, tourism developments, fireworks festival dates, and hotel openings. Updated by a local expat.">
+<meta property="og:title" content="Da Nang Travel News: Tourism, Food, Events & Flights">
+<meta property="og:description" content="The latest Da Nang news for travellers: tourism, food, festivals, flights and city-life guides from Da Nang Voice, plus our own hotel and travel reporting.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dananghotelguide.com/news.html">
 <meta property="og:image" content="https://www.dananghotelguide.com/assets/img/news-98abd7f00a8f.webp">
@@ -419,6 +419,53 @@ a{text-decoration:none;color:inherit}
   gtag('js', new Date());
   gtag('config', 'G-0T1H4G2N80');
 </script>
+<style>
+/* ─── DA NANG VOICE FEED (lib/dnv-news.js) ───────────────── */
+.dnv-news{max-width:var(--max);margin:0 auto;padding:clamp(2.5rem,6vh,4rem) var(--gutter) 0}
+.dnv-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1.75rem;border-bottom:1px solid var(--sand-dark);padding-bottom:1rem}
+.dnv-kicker{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin:0 0 .35rem}
+.dnv-heading,.dnv-own-heading{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin:0}
+.dnv-attrib{font-size:.85rem;color:var(--ink-muted);margin:0}
+.dnv-attrib a{color:var(--ocean);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.dnv-link{display:flex;flex-direction:column;height:100%;color:inherit;text-decoration:none}
+.dnv-lead,.dnv-card{position:relative;background:var(--white,#fff);border-radius:var(--r-lg,16px);overflow:hidden;box-shadow:var(--shadow-card);transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column}
+.dnv-lead:hover,.dnv-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.dnv-link:focus-visible{outline:3px solid var(--coral);outline-offset:-3px}
+.dnv-img{aspect-ratio:16/10;overflow:hidden;background:var(--sand-mid)}
+.dnv-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.dnv-lead:hover .dnv-img img,.dnv-card:hover .dnv-img img{transform:scale(1.04)}
+.dnv-body{padding:1.4rem 1.5rem 1.1rem;display:flex;flex-direction:column;flex:1}
+.dnv-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem .9rem;margin-bottom:.8rem;font-size:.75rem;font-weight:600;color:var(--ink-muted)}
+.dnv-cat{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);background:var(--ocean-pale);padding:4px 10px;border-radius:100px}
+.dnv-title{font-family:var(--font-serif);font-weight:400;font-size:1.35rem;line-height:1.25;letter-spacing:-.01em;color:var(--ink);margin:0 0 .7rem;transition:color .2s}
+.dnv-link:hover .dnv-title{color:var(--ocean)}
+.dnv-excerpt{font-size:.9rem;line-height:1.6;color:var(--ink-soft);margin:0 0 1rem;flex:1;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.dnv-more{font-size:.84rem;font-weight:700;color:var(--ocean)}
+.dnv-more::after{content:' \2197'}
+.dnv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dnv-credit{font-size:.66rem;color:var(--ink-muted);margin:0;padding:0 1.5rem .9rem;line-height:1.4}
+.dnv-lead{margin-bottom:clamp(1.5rem,3vw,2.25rem)}
+@media(min-width:860px){
+  .dnv-lead .dnv-link{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+  .dnv-lead .dnv-img{aspect-ratio:auto;min-height:420px}
+  .dnv-lead .dnv-body{padding:2.25rem 2.25rem 1.25rem;justify-content:center}
+  .dnv-lead .dnv-credit{position:absolute;left:0;bottom:0;padding:.35rem .7rem;background:rgba(0,0,0,.55);color:rgba(255,255,255,.85);border-top-right-radius:8px}
+}
+.dnv-lead .dnv-title{font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.12}
+.dnv-lead .dnv-excerpt{font-size:1rem;-webkit-line-clamp:6}
+.dnv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(1.25rem,2.5vw,2rem)}
+.dnv-details{margin-top:2rem}
+.dnv-details>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.9rem;color:#fff;background:var(--ocean);padding:11px 22px;border-radius:100px;margin-bottom:1.75rem}
+.dnv-details>summary::-webkit-details-marker{display:none}
+.dnv-details>summary::after{content:'+';font-size:1.1em}
+.dnv-details[open]>summary::after{content:'\2212'}
+.dnv-all{margin:2rem 0 0;text-align:center;font-size:.9rem}
+.dnv-all a{color:var(--ocean);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.dnv-empty{font-size:1rem;color:var(--ink-soft)}
+.dnv-own{max-width:var(--max);margin:0 auto;padding:clamp(3rem,7vh,4.5rem) var(--gutter) 0}
+.dnv-own + .guides-grid{padding-top:1.75rem}
+@media(max-width:400px){.guides-grid{grid-template-columns:1fr}}
+</style>
 <link rel="stylesheet" href="cta-polish.css">
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
@@ -616,7 +663,321 @@ a{text-decoration:none;color:inherit}
   </div>
 </header>
 
-<!-- ── NEWS GRID ──────────────────────────────────────────── -->
+<!-- Rendered server-side by api/news.js from the Da Nang Voice feed; the block
+     below is the last-known-good snapshot (node scripts/build-dnv-news.js). -->
+<!-- DNV-NEWS:START -->
+<section class="dnv-news" aria-labelledby="dnv-heading" data-generated="2026-10-13T09:17:37.592Z" data-count="24">
+<div class="dnv-head">
+  <div>
+    <p class="dnv-kicker">Latest Da Nang news for travellers</p>
+    <h2 id="dnv-heading" class="dnv-heading">This week in Da Nang</h2>
+  </div>
+  <p class="dnv-attrib">News provided by <a href="https://www.danangvoice.com/" target="_blank" rel="noopener">Da Nang Voice</a></p>
+</div>
+<article class="dnv-lead">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-burger-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/cheeseburger-with-fries.jpg" srcset="https://www.danangvoice.com/images/stories/cheeseburger-with-fries-480.jpg 480w, https://www.danangvoice.com/images/stories/cheeseburger-with-fries.jpg 1600w" sizes="(min-width: 900px) 640px, 100vw" alt="A cheeseburger with melted cheese on a plate with french fries, lettuce, tomato and onion" width="1600" height="1600" loading="eager" fetchpriority="high" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Food &amp; Drink</span><time datetime="2026-10-13T07:20:00.000Z">October 13, 2026</time></div>
+      <h2 class="dnv-title">Where to find a good burger in Da Nang: smash, Wagyu, pub and steakhouse</h2>
+      <p class="dnv-excerpt">A guide to burgers in Da Nang: smash burgers at Bikini Bottom and Chops, pub and sports-bar burgers, steakhouse burgers and vegetarian options, with prices.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Daderot / Wikimedia Commons, CC0</p>
+</article>
+<div class="dnv-grid">
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-craft-beer-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/beer-tasting-tray-480.jpg" srcset="https://www.danangvoice.com/images/stories/beer-tasting-tray-480.jpg 480w, https://www.danangvoice.com/images/stories/beer-tasting-tray.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A wooden tasting tray holding a row of small glasses of beer in shades from pale gold to amber" width="1600" height="1101" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Food &amp; Drink</span><time datetime="2026-10-13T07:15:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">Craft beer in Da Nang: the breweries, taprooms and bars worth knowing</h3>
+      <p class="dnv-excerpt">Craft beer in Da Nang: East West Brewing, BREWHAHA and 5 Elements Brewing, 7 Bridges and bars with local drafts. Addresses, hours, beers and history.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: LandskronBrauerei / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-pizza-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/pizza-margherita-neapolitan-480.jpg" srcset="https://www.danangvoice.com/images/stories/pizza-margherita-neapolitan-480.jpg 480w, https://www.danangvoice.com/images/stories/pizza-margherita-neapolitan.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A round Neapolitan-style margherita pizza with a puffy, charred crust, tomato, mozzarella and basil on a plate" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Food &amp; Drink</span><time datetime="2026-10-13T07:10:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">Where to find good pizza in Da Nang, from wood-fired Neapolitan to New York slices and Detroit pans</h3>
+      <p class="dnv-excerpt">Pizza in Da Nang by style: Pizza 4P's, Gordon's New York Pizza, Cardi, CinCin, Luna Pub, Limoncello and Motor City Detroit-style, with prices and hours.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Lombroso / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/bikini-bottom-express-da-nang-smash-burgers/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/double-smash-burger-480.jpg" srcset="https://www.danangvoice.com/images/stories/double-smash-burger-480.jpg 480w, https://www.danangvoice.com/images/stories/double-smash-burger.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A double smash burger with melted cheese, tomato and greens in a toasted bun, with fries on the side" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Food &amp; Drink</span><time datetime="2026-10-13T07:05:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">Bikini Bottom Express: the hostel breakfast that became Da Nang's smash-burger habit</h3>
+      <p class="dnv-excerpt">Bikini Bottom Express in Da Nang: its hostel origins and founders, smash burgers, poutine and all-day breakfast, prices and its three Da Nang locations.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: JIP / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/east-west-brewing-history-da-nang/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/craft-beer-flight-row-480.jpg" srcset="https://www.danangvoice.com/images/stories/craft-beer-flight-row-480.jpg 480w, https://www.danangvoice.com/images/stories/craft-beer-flight-row.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A row of small tasting glasses of craft beer, from pale gold to near black, on a wooden paddle on a bar counter" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Food &amp; Drink</span><time datetime="2026-10-13T07:00:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">East West Brewing: how a San Diego-raised Saigonese built one of Vietnam's craft beer pioneers, and put it on My Khe Beach</h3>
+      <p class="dnv-excerpt">The story of East West Brewing: founder Loc Truong, the Saigon brewery that opened in 2017, its flagship beers and its Da Nang taproom at 1A Vo Nguyen Giap.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Aparkswv / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/danaff-v-dates-announced-busan/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/han-river-bridge-night-480.jpg" srcset="https://www.danangvoice.com/images/stories/han-river-bridge-night-480.jpg 480w, https://www.danangvoice.com/images/stories/han-river-bridge-night.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A cable-stayed bridge over the Han River lit up at night with city lights along the bank" width="1600" height="900" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Culture</span><time datetime="2026-10-13T06:15:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">Da Nang sets June 27 to July 3, 2027 for its fifth film festival and pitches it in Busan</h3>
+      <p class="dnv-excerpt">Da Nang says DANAFF V will run June 27 to July 3, 2027, with an industry program tied to APEC 2027; the city pitched it at Busan.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: kizamaya / Wikimedia Commons, CC BY 2.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-nine-month-stays-up-26-percent/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-palm-beach-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-palm-beach-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-palm-beach.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Coconut palms on a grassy strip above a sandy Da Nang beach, with a wooden boat on the sand and hills across the bay" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Tourism</span><time datetime="2026-10-13T06:10:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">Da Nang logged 15.86 million lodging guests in nine months, up 26.4%</h3>
+      <p class="dnv-excerpt">Da Nang recorded about 15.86 million lodging guests in the first nine months of 2026, up 26.4%, with international guests up 28.7%, state media reports.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Dragfyre / Wikimedia Commons, CC BY-SA 3.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/aeon-mall-hoa-xuan-groundbreaking-november/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-aerial-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-aerial-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-aerial.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Hazy aerial view of Da Nang's urban grid and coastline seen from an airplane window" width="1600" height="1066" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Business</span><time datetime="2026-10-13T01:50:00.000Z">October 13, 2026</time></div>
+      <h3 class="dnv-title">AEON's second Da Nang mall, in Hòa Xuân, is set to break ground in November</h3>
+      <p class="dnv-excerpt">AEON Mall Vietnam told Da Nang leaders on Oct. 7 it plans to break ground on its Hòa Xuân mall in November 2026. The project costs about 4,381 billion dong.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Gary Todd / Wikimedia Commons, CC0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-airport-runway-renovation/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/vietnam-airlines-da-nang-480.jpg" srcset="https://www.danangvoice.com/images/stories/vietnam-airlines-da-nang-480.jpg 480w, https://www.danangvoice.com/images/stories/vietnam-airlines-da-nang.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A Vietnam Airlines Airbus A321neo on the apron at Da Nang International Airport" width="1600" height="899" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Transport</span><time datetime="2026-10-12T12:40:00.000Z">October 12, 2026</time></div>
+      <h3 class="dnv-title">Da Nang airport's older runway is due for a 1,696-billion-dong rebuild, with work reported to start in late November</h3>
+      <p class="dnv-excerpt">Da Nang airport's runway 17R/35L and taxiways will be rebuilt for 1,696 billion dong over 2026–2028; work is reported to start in late November.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Bahnfrend / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/halloween-2026-da-nang-hoi-an-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/halloween-pumpkins-candles-480.jpg" srcset="https://www.danangvoice.com/images/stories/halloween-pumpkins-candles-480.jpg 480w, https://www.danangvoice.com/images/stories/halloween-pumpkins-candles.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Orange pumpkins and lit white candles arranged among dry branches and small tea lights on dark ground at dusk" width="1600" height="1066" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Events</span><time datetime="2026-10-12T04:48:00.000Z">October 12, 2026</time></div>
+      <h3 class="dnv-title">Halloween 2026 in Da Nang and Hoi An: The Ultimate Guide to Parties, Buffets, Trick-or-Treating and Family Fun</h3>
+      <p class="dnv-excerpt">Halloween 2026 in Da Nang and Hoi An: confirmed hotel buffets, family events and parties, with dates, prices and booking links. Updated through Oct 31.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: freestocks.org / Wikimedia Commons, CC0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-vs-hoi-an-long-stay/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/hoi-an-ancient-town-street-480.jpg" srcset="https://www.danangvoice.com/images/stories/hoi-an-ancient-town-street-480.jpg 480w, https://www.danangvoice.com/images/stories/hoi-an-ancient-town-street.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Low yellow shophouses and trees in Hoi An's ancient town reflected in still water under a pale sky" width="1600" height="931" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:10:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Da Nang or Hoi An for a long stay? Same city now, very different lives</h3>
+      <p class="dnv-excerpt">Da Nang or Hoi An for a long stay? What the 2025 merger changed, how far apart they are, flood risk, transport and costs, with sources. Last verified Oct 2026.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Steffen Schmitz / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/vietnam-visa-options-long-stay/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-airport-arrivals-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-airport-arrivals-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-airport-arrivals.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A long, bright arrivals hall at Da Nang International Airport with a polished floor, potted plants and baggage claim signs" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T13:09:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Staying longer in Vietnam: which visas actually allow what, according to the law</h3>
+      <p class="dnv-excerpt">Vietnam visa options for long stays in 2026: the 90-day e-visa, 45-day exemptions, temporary residence cards and visa conversion rules.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Dragfyre / Wikimedia Commons, CC BY-SA 3.0</p>
+</article>
+</div>
+<details class="dnv-details">
+  <summary>More Da Nang Voice stories (12)</summary>
+  <div class="dnv-grid">
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-cost-of-living-2026-regulated-prices/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/han-market-produce-480.jpg" srcset="https://www.danangvoice.com/images/stories/han-market-produce-480.jpg 480w, https://www.danangvoice.com/images/stories/han-market-produce.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Baskets of cucumbers, bitter melon, cabbages and bundles of leafy greens stacked on a vegetable stall" width="1600" height="1066" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T13:08:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">What it really costs to live in Da Nang in 2026: start with the numbers the government sets</h3>
+      <p class="dnv-excerpt">Cost of living in Da Nang in 2026: official electricity and water prices, the 2026 minimum wage and rent trends from city statistics.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Daderot / Wikimedia Commons, CC0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-rainy-season-what-to-expect/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-skyline-beach-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-skyline-beach-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-skyline-beach.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Grey waves breaking on a Da Nang beach under an overcast sky, with the city's high-rises hazy in the distance" width="1600" height="1061" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:07:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Da Nang in the rainy season: what the numbers say and what visitors should actually expect</h3>
+      <p class="dnv-excerpt">Da Nang's rainy season, September to December: average rainfall by month, floods, landslides, closures and how to plan a trip.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: RThiele / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/son-tra-peninsula-visitor-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/son-tra-douc-langur-480.jpg" srcset="https://www.danangvoice.com/images/stories/son-tra-douc-langur-480.jpg 480w, https://www.danangvoice.com/images/stories/son-tra-douc-langur.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A red-shanked douc langur with a grey body, white face ruff and maroon lower legs sitting on a branch among green leaves" width="1600" height="1066" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:06:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Son Tra, the city's mountain: monkeys, a 67-meter Buddha and rules you should read first</h3>
+      <p class="dnv-excerpt">Son Tra Peninsula guide: reopened routes, vehicle rules, opening hours, red-shanked douc langurs, the Lady Buddha and no-go zones.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Charles J. Sharp / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-beaches-guide-each-different/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-palm-beach-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-palm-beach-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-palm-beach.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Coconut palms on a grassy strip above a sandy Da Nang beach, with a wooden boat on the sand and hills across the bay" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:05:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Not one beach but a coastline: how Da Nang's beaches actually differ</h3>
+      <p class="dnv-excerpt">A guide to Da Nang's beaches after the 2025 merger: My Khe, Tan Tra, Son Tra, Nam O reef, Cua Dai and Tam Thanh, plus erosion and swimming-safety rules.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Dragfyre / Wikimedia Commons, CC BY-SA 3.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/getting-around-da-nang-without-motorbike/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-railway-station-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-railway-station-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-railway-station.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Passengers walking along a platform at Da Nang railway station beside a blue and red Vietnam Railways passenger train" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:04:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">No motorbike, no problem (mostly): getting around Da Nang on apps, buses, trains and foot</h3>
+      <p class="dnv-excerpt">How to get around Da Nang without a motorbike: ride-hailing apps, bus routes to Hoi An and Tam Ky, the Hue heritage train and walking.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Christophe95 / Wikimedia Commons, CC BY-SA 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-airport-arrival-guide/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-airport-t2-2024-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-airport-t2-2024-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-airport-t2-2024.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="The glass-fronted international terminal at Da Nang International Airport with jet bridges and a parked aircraft on the apron under a blue sky" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T13:03:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Landing at DAD: what to know about Da Nang's airport before you arrive</h3>
+      <p class="dnv-excerpt">Da Nang International Airport guide: domestic T1 and international T2, e-visa entry, the 2026 pre-arrival declaration, getting downtown and expansion plans.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Chainwit. / Wikimedia Commons, CC BY 4.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/renting-apartment-da-nang-contracts-deposits/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-skyline-bright-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-skyline-bright-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-skyline-bright.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="Da Nang's riverside towers lit up at night under a purple sky, with a cable-stayed bridge glowing over the Han River" width="1600" height="900" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T13:02:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Renting in Da Nang: what the law actually says about your lease, your deposit and your registration</h3>
+      <p class="dnv-excerpt">Renting in Da Nang as a foreigner: written leases under the 2023 Housing Law, deposits under the Civil Code, registration and a checklist.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: NGO TUNG thanhtungo / Wikimedia Commons, CC0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/healthcare-da-nang-foreign-residents/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/hospital-c-da-nang-480.jpg" srcset="https://www.danangvoice.com/images/stories/hospital-c-da-nang-480.jpg 480w, https://www.danangvoice.com/images/stories/hospital-c-da-nang.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="The white multi-story front building of Hospital C in Da Nang with its red name sign, palm trees and flags at the gate" width="1600" height="896" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T13:01:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Getting sick in Da Nang: emergency numbers, public versus private, and the insurance question</h3>
+      <p class="dnv-excerpt">Healthcare in Da Nang for foreign residents: emergency numbers, public and private hospitals, costs, insurance and dengue risks.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Linhcandng / Wikimedia Commons, CC BY-SA 3.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/driving-in-da-nang-foreigners-license-rules/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-motorbike-wall-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-motorbike-wall-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-motorbike-wall.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A row of parked motorbikes and scooters against a yellow wall on a Da Nang street, with a red flag above them" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T13:00:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Renting a motorbike in Da Nang? The license rules and fines nobody at the rental shop mentions</h3>
+      <p class="dnv-excerpt">Can foreigners legally drive in Da Nang? License conversion under Circular 12/2025, international driving permits, and motorbike fines under Decree 168/2024.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Dragfyre / Wikimedia Commons, CC BY-SA 3.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/da-nang-with-children-schools-family-life/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/asia-park-da-nang-480.jpg" srcset="https://www.danangvoice.com/images/stories/asia-park-da-nang-480.jpg 480w, https://www.danangvoice.com/images/stories/asia-park-da-nang.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A large, brightly painted lion statue in green, yellow and blue standing among plants and trees at an amusement park in Da Nang" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T12:59:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Raising kids in Da Nang: schools, fees, flood days and what to do on a Saturday</h3>
+      <p class="dnv-excerpt">Living in Da Nang with children: international school curricula and 2026/27 fees, rainy-season school closures, family outings and health.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Martin Lewison / Wikimedia Commons, CC BY 2.0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/remote-work-da-nang-internet-reality/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/da-nang-cafe-phin-480.jpg" srcset="https://www.danangvoice.com/images/stories/da-nang-cafe-phin-480.jpg 480w, https://www.danangvoice.com/images/stories/da-nang-cafe-phin.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="The open front of a Da Nang café with a yellow PHIN sign, umbrellas, wooden tables and a few customers seated inside" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">City Life</span><time datetime="2026-10-11T12:58:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Working remotely from Da Nang: the cable problem, the café question and the visa fine print</h3>
+      <p class="dnv-excerpt">Remote work in Da Nang: how undersea cable faults slow international internet, how to build backups, where to work and visa limits.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Phương Huy / Wikimedia Commons, CC0</p>
+</article>
+<article class="dnv-card">
+  <a class="dnv-link" href="https://www.danangvoice.com/stories/day-trips-from-da-nang/" target="_blank" rel="noopener">
+    <div class="dnv-img"><img src="https://www.danangvoice.com/images/stories/my-son-temple-e7-480.jpg" srcset="https://www.danangvoice.com/images/stories/my-son-temple-e7-480.jpg 480w, https://www.danangvoice.com/images/stories/my-son-temple-e7.jpg 1600w" sizes="(min-width: 1100px) 360px, (min-width: 700px) 45vw, 100vw" alt="A small red-brick Cham temple with carved walls and a curved roof standing among trees and grass at My Son Sanctuary" width="1600" height="1200" loading="lazy" decoding="async"></div>
+    <div class="dnv-body">
+      <div class="dnv-meta"><span class="dnv-cat">Travel</span><time datetime="2026-10-11T12:57:00.000Z">October 11, 2026</time></div>
+      <h3 class="dnv-title">Leave town: the day trips from Da Nang worth an early alarm</h3>
+      <p class="dnv-excerpt">Day trips from Da Nang: My Son Sanctuary, Hue, Cu Lao Cham, Hai Van Pass, Hoi An and Ba Na Hills, with distances, 2026 admission prices and timing tips.</p>
+      <span class="dnv-more">Read on Da Nang Voice<span class="dnv-sr"> (opens in a new tab)</span></span>
+    </div>
+  </a>
+  <p class="dnv-credit">Photo: Chainwit. / Wikimedia Commons, CC BY 4.0</p>
+</article>
+  </div>
+</details>
+<p class="dnv-all"><a href="https://www.danangvoice.com/" target="_blank" rel="noopener">See all stories on Da Nang Voice &rarr;</a></p>
+</section>
+<!-- DNV-NEWS:END -->
+
+<!-- ── OUR OWN NEWS GRID ──────────────────────────────────── -->
+<div class="dnv-own">
+  <p class="dnv-kicker">Da Nang Hotel Guide reporting</p>
+  <h2 class="dnv-own-heading">Our travel news &amp; updates</h2>
+</div>
 <section class="guides-grid">
 
   <!-- Da Nang National Day Celebration Aug-Sep 2026 -->

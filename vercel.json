@@ -144,6 +144,23 @@
       "source": "/review-wyndham-soleil-da-nang.html",
       "destination": "/wyndham-soleil-da-nang.html",
       "permanent": true
+    },
+    {
+      "source": "/lib/news-template.html",
+      "destination": "/news.html",
+      "permanent": true
     }
-  ]
+  ],
+  "rewrites": [
+    {
+      "source": "/news.html",
+      "destination": "/api/news"
+    }
+  ],
+  "functions": {
+    "api/news.js": {
+      "includeFiles": "lib/**",
+      "maxDuration": 15
+    }
+  }
 }
