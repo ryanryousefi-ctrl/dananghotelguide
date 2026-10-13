@@ -85,6 +85,8 @@ async function get(u) {
       }
       for (const m of noLd.matchAll(/["'`](https:\/\/www\.kqzyfj\.com\/click-[^"'`\s]+)["'`]/g)) {
         const pre = noLd.slice(Math.max(0, m.index - 6), m.index);
+        // Bare prefix in a URL builder ('…17293132' + '?sid=' + …) is assembled at runtime.
+        if (m[1] === 'https://www.kqzyfj.com/click-101820678-17293132' && /^["'`]\s*\n?\s*\+/.test(noLd.slice(m.index + m[0].length - 1, m.index + m[0].length + 20))) continue;
         if (!/href=$/.test(pre)) { const c = checkCj(u, m[1], 'js'); if (c) { pages[u].cj++; links.push({ page: u, ...c }); } }
       }
       if (/window\.open\([^)]*booking\.com/.test(noLd)) issue(u, 'window.open-raw-booking', '');
