@@ -116,6 +116,17 @@ button{font-family:var(--font-sans);cursor:pointer}
 <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
 
+<style id="nav-fit">
+/* Nav needs ~1440px for the full link row; below that use the menu button so the booking button never overflows. */
+@media (max-width:1439px){.site-nav .nav-links{display:none!important}.site-nav .nav-hamburger{display:flex!important}.nav-stays-btn .btn-text{display:inline!important}}
+@media (max-width:480px){.site-nav .nav-x-link,.site-nav .nav-fb-link,.site-nav .nav-pin-link,.site-nav .nav-ig-link{display:none!important}}
+@media (max-width:345px){.nav-stays-btn .btn-text{display:none!important}}
+@media (pointer:coarse){.nav-stays-btn,.mobile-stays-btn,.hotel-btn,.hotel-cta,.ch-card-cta,.bb-sig-pick-link,.bb-top-pick-link,.bb-hotel-pick-cta,.splurge-cta,.gd-related-btn,.booking-button{min-height:44px;box-sizing:border-box}.bb-card-body>a.affiliate-link{min-height:44px;display:flex;align-items:center}.bb-hoiana-card-body>a.affiliate-link{display:inline-block;padding:6px 0}}
+.search-overlay{overflow-x:hidden;overflow-y:auto}
+.guide-layout>*,.page-wrap>*{min-width:0}.footer-legal{flex-wrap:wrap}.footer-legal>*{min-width:0}
+@media (max-width:700px){:is(div,section,article,main):has(> table.cmp-table, > table.data-table){overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
+.footer-legal-links{max-width:100%}
+</style>
 </head>
 <body>
 <!-- NAV -->
@@ -206,6 +217,8 @@ button{font-family:var(--font-sans);cursor:pointer}
   <a href="news.html" class="mobile-nav-link">News</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=premier-village-da-nang&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
+
+  <div class="mobile-social" style="display:flex;flex-wrap:wrap;gap:8px 18px;padding:18px 0 6px;font-size:.85rem"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Instagram</a></div>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
@@ -250,6 +263,8 @@ button{font-family:var(--font-sans);cursor:pointer}
     </div>
   </div>
 </header>
+<div class="aff-disclosure" role="note" style="background:#f4efe6;border-bottom:1px solid rgba(7,63,61,.12)"><p style="max-width:1100px;margin:0 auto;padding:10px 20px;font-size:13px;line-height:1.5;color:#3a4747;font-family:inherit">We may earn a commission when you book through our links, at no additional cost to you. <a href="editorial-policy.html" style="color:#073f3d;text-decoration:underline">How we choose hotels</a></p></div>
+
 <section class="hr-snapshot"><div class="hr-section-inner" style="padding:1.5rem var(--gutter)"><div class="hr-snapshot-grid"><div class="hr-snap-card"><div class="hr-snap-key">Best for</div><div class="hr-snap-val">Families &amp; villa stays</div></div><div class="hr-snap-card"><div class="hr-snap-key">Area</div><div class="hr-snap-val">Son Tra Peninsula</div></div><div class="hr-snap-card"><div class="hr-snap-key">Pools</div><div class="hr-snap-val">Private + communal</div></div><div class="hr-snap-card"><div class="hr-snap-key">Beach</div><div class="hr-snap-val">Direct beachfront</div></div><div class="hr-snap-card"><div class="hr-snap-key">Value</div><div class="hr-snap-val">Strong</div></div></div></div></section>
 <section class="hr-section hr-take">
   <div class="hr-section-inner hr-take-inner">
@@ -445,11 +460,11 @@ button{font-family:var(--font-sans);cursor:pointer}
   var m=document.querySelector('meta[property="og:title"]');
   var t=encodeURIComponent(m?m.content:document.title);
   var d=document;
-  d.getElementById('shr-x').href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
-  d.getElementById('shr-fb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
-  d.getElementById('shr-rd').href='https://www.reddit.com/submit?url='+u+'&title='+t;
-  d.getElementById('shr-wa').href='https://wa.me/?text='+t+'%20'+u;
-  d.getElementById('shr-li').href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
+  (d.getElementById('shr-x')||{}).href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
+  (d.getElementById('shr-fb')||{}).href='https://www.facebook.com/sharer/sharer.php?u='+u;
+  (d.getElementById('shr-rd')||{}).href='https://www.reddit.com/submit?url='+u+'&title='+t;
+  (d.getElementById('shr-wa')||{}).href='https://wa.me/?text='+t+'%20'+u;
+  (d.getElementById('shr-li')||{}).href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
 })();
 </script>
 <script>

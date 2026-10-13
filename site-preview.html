@@ -2200,6 +2200,17 @@ footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3rem cla
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
 <link rel="stylesheet" href="search-ui.css">
+<style id="nav-fit">
+/* Nav needs ~1440px for the full link row; below that use the menu button so the booking button never overflows. */
+@media (max-width:1439px){.site-nav .nav-links{display:none!important}.site-nav .nav-hamburger{display:flex!important}.nav-stays-btn .btn-text{display:inline!important}}
+@media (max-width:480px){.site-nav .nav-x-link,.site-nav .nav-fb-link,.site-nav .nav-pin-link,.site-nav .nav-ig-link{display:none!important}}
+@media (max-width:345px){.nav-stays-btn .btn-text{display:none!important}}
+@media (pointer:coarse){.nav-stays-btn,.mobile-stays-btn,.hotel-btn,.hotel-cta,.ch-card-cta,.bb-sig-pick-link,.bb-top-pick-link,.bb-hotel-pick-cta,.splurge-cta,.gd-related-btn,.booking-button{min-height:44px;box-sizing:border-box}.bb-card-body>a.affiliate-link{min-height:44px;display:flex;align-items:center}.bb-hoiana-card-body>a.affiliate-link{display:inline-block;padding:6px 0}}
+.search-overlay{overflow-x:hidden;overflow-y:auto}
+.guide-layout>*,.page-wrap>*{min-width:0}.footer-legal{flex-wrap:wrap}.footer-legal>*{min-width:0}
+@media (max-width:700px){:is(div,section,article,main):has(> table.cmp-table, > table.data-table){overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
+.footer-legal-links{max-width:100%}
+</style>
 </head>
 <body>
 
@@ -2489,7 +2500,7 @@ footer { background: var(--ink); color: rgba(255,255,255,.35); padding: 3rem cla
         <a href="index.html" class="footer-brand">DaNang<em>Stays</em></a>
         <p class="footer-brand-desc">Curated hotels, beach resorts, dining guides, and travel resources for Da Nang, Vietnam. Independently maintained since 2021.</p>
         <div class="footer-affiliate" role="note">
-          <strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Hotel booking links on this site go to Booking.com and Airbnb. We earn a small commission on completed bookings at no additional cost to you. This does not influence our editorial rankings.
+          <strong style="color:inherit">Affiliate disclosure:</strong> Hotel booking links on this site go to Booking.com and Airbnb. We earn a small commission on completed bookings at no additional cost to you. This does not influence our editorial rankings.
         </div>
       </div>
       <div class="footer-col">

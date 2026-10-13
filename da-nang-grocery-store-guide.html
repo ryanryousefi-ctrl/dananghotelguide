@@ -247,7 +247,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem}
 .footer-brand em{font-style:italic;color:var(--coral-light)}
 .footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem}
-.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.22);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
+.footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.72);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
 .footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem}
 .footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s}
 .footer-col a:hover{color:rgba(255,255,255,.75)}
@@ -295,6 +295,17 @@ button{font-family:var(--font-sans);cursor:pointer}
 </style>
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<style id="nav-fit">
+/* Nav needs ~1440px for the full link row; below that use the menu button so the booking button never overflows. */
+@media (max-width:1439px){.site-nav .nav-links{display:none!important}.site-nav .nav-hamburger{display:flex!important}.nav-stays-btn .btn-text{display:inline!important}}
+@media (max-width:480px){.site-nav .nav-x-link,.site-nav .nav-fb-link,.site-nav .nav-pin-link,.site-nav .nav-ig-link{display:none!important}}
+@media (max-width:345px){.nav-stays-btn .btn-text{display:none!important}}
+@media (pointer:coarse){.nav-stays-btn,.mobile-stays-btn,.hotel-btn,.hotel-cta,.ch-card-cta,.bb-sig-pick-link,.bb-top-pick-link,.bb-hotel-pick-cta,.splurge-cta,.gd-related-btn,.booking-button{min-height:44px;box-sizing:border-box}.bb-card-body>a.affiliate-link{min-height:44px;display:flex;align-items:center}.bb-hoiana-card-body>a.affiliate-link{display:inline-block;padding:6px 0}}
+.search-overlay{overflow-x:hidden;overflow-y:auto}
+.guide-layout>*,.page-wrap>*{min-width:0}.footer-legal{flex-wrap:wrap}.footer-legal>*{min-width:0}
+@media (max-width:700px){:is(div,section,article,main):has(> table.cmp-table, > table.data-table){overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
+.footer-legal-links{max-width:100%}
+</style>
 </head>
 <body>
 
@@ -360,6 +371,8 @@ button{font-family:var(--font-sans);cursor:pointer}
   <a href="da-nang-digital-nomad-guide.html" class="mobile-nav-link">Digital Nomads</a>
   <a href="about.html" class="mobile-nav-link">About</a>
   <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=da-nang-grocery-store-guide&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us" class="mobile-stays-btn affiliate-link" target="_blank" rel="nofollow noopener sponsored">Search Stays on Booking.com &rarr;</a>
+
+  <div class="mobile-social" style="display:flex;flex-wrap:wrap;gap:8px 18px;padding:18px 0 6px;font-size:.85rem"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8;padding:6px 0">Instagram</a></div>
 </div>
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search Da Nang Hotel Guide">
   <button class="search-close" id="searchCloseBtn" aria-label="Close search">✕</button>
@@ -683,7 +696,7 @@ button{font-family:var(--font-sans);cursor:pointer}
         <a href="index.html" class="footer-brand">Da Nang <em>Hotel Guide</em></a>
         <p class="footer-brand-desc">The independent guide to hotels, neighborhoods, and travel in Da Nang, Vietnam. Locally maintained since 2021.</p>
         <div class="footer-disclosure-box">
-          <strong style="color:rgba(255,255,255,.4)">Affiliate disclosure:</strong> Booking links go to Booking.com. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.
+          <strong style="color:inherit">Affiliate disclosure:</strong> Booking links go to Booking.com. We earn a small commission on completed bookings at no extra cost to you. This never influences our editorial rankings.
         </div>
       </div>
       <div class="footer-col">
@@ -864,11 +877,11 @@ if(ham&&mob){
   var d=document,u=encodeURIComponent(location.href);
   var m=d.querySelector('meta[property="og:title"]');
   var t=encodeURIComponent(m?m.content:d.title);
-  d.getElementById('shr-x').href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
-  d.getElementById('shr-fb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
-  d.getElementById('shr-rd').href='https://www.reddit.com/submit?url='+u+'&title='+t;
-  d.getElementById('shr-wa').href='https://wa.me/?text='+t+'%20'+u;
-  d.getElementById('shr-li').href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
+  (d.getElementById('shr-x')||{}).href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
+  (d.getElementById('shr-fb')||{}).href='https://www.facebook.com/sharer/sharer.php?u='+u;
+  (d.getElementById('shr-rd')||{}).href='https://www.reddit.com/submit?url='+u+'&title='+t;
+  (d.getElementById('shr-wa')||{}).href='https://wa.me/?text='+t+'%20'+u;
+  (d.getElementById('shr-li')||{}).href='https://www.linkedin.com/shareArticle?mini=true&url='+u+'&title='+t;
 })();
 </script>
 <script src="search-engine.js"></script>

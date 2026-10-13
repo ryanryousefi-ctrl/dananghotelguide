@@ -115,7 +115,7 @@ img{max-width:100%;display:block}
 .footer-col-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:.75rem;font-weight:600}
 .footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.45);padding:.2rem 0;transition:color .15s}
 .footer-col a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;font-size:.72rem;color:rgba(255,255,255,.25)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;font-size:.72rem;color:rgba(255,255,255,.65)}
 @media(max-width:768px){
   .footer-grid{grid-template-columns:1fr}
   .hotel-card-header{flex-direction:column}
@@ -135,6 +135,17 @@ img{max-width:100%;display:block}
 @media(max-width:500px){.author-trust-block{flex-direction:column;gap:.75rem}.atb-avatar{width:38px;height:38px}}
 </style>
 <link rel="stylesheet" href="../phase10.css">
+<style id="nav-fit">
+/* Nav needs ~1440px for the full link row; below that use the menu button so the booking button never overflows. */
+@media (max-width:1439px){.site-nav .nav-links{display:none!important}.site-nav .nav-hamburger{display:flex!important}.nav-stays-btn .btn-text{display:inline!important}}
+@media (max-width:430px){.site-nav .nav-x-link,.site-nav .nav-fb-link,.site-nav .nav-pin-link{display:none!important}}
+@media (max-width:345px){.nav-stays-btn .btn-text{display:none!important}}
+@media (pointer:coarse){.nav-stays-btn,.mobile-stays-btn,.hotel-btn,.hotel-cta,.ch-card-cta,.bb-sig-pick-link,.bb-top-pick-link,.bb-hotel-pick-cta,.splurge-cta,.gd-related-btn,.booking-button{min-height:44px;box-sizing:border-box}.bb-card-body>a.affiliate-link{min-height:44px;display:flex;align-items:center}.bb-hoiana-card-body>a.affiliate-link{display:inline-block;padding:6px 0}}
+.search-overlay{overflow-x:hidden;overflow-y:auto}
+.guide-layout>*,.page-wrap>*{min-width:0}.footer-legal{flex-wrap:wrap}.footer-legal>*{min-width:0}
+@media (max-width:700px){:is(div,section,article,main):has(> table.cmp-table, > table.data-table){overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
+.footer-legal-links{max-width:100%}
+</style>
 </head>
 <body>
 
@@ -200,7 +211,9 @@ img{max-width:100%;display:block}
     </table>
   </div>
 
-  <div class="section">
+  
+<div class="aff-disclosure" role="note" style="background:#f4efe6;border-bottom:1px solid rgba(7,63,61,.12)"><p style="max-width:1100px;margin:0 auto;padding:10px 20px;font-size:13px;line-height:1.5;color:#3a4747;font-family:inherit">이 페이지의 링크를 통해 예약하시면 추가 비용 없이 저희가 수수료를 받을 수 있습니다. <a href="../editorial-policy.html" style="color:#073f3d;text-decoration:underline">호텔 선정 방식</a></p></div>
+<div class="section">
     <h2 class="section-title">호텔별 상세 비교</h2>
 
     <div class="hotel-card">
@@ -365,6 +378,7 @@ img{max-width:100%;display:block}
       <span>© 2026 Da Nang Hotel Guide · 제휴 공개: Booking.com 링크를 통해 예약 시 소정의 수수료를 받습니다. 추가 비용 없음.</span>
     </div>
   </div>
+<div class="footer-social" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;padding:12px 16px;font-size:.85rem"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">Pinterest</a></div>
 </footer>
 
 <script>

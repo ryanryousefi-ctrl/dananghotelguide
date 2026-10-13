@@ -131,7 +131,7 @@
 .footer-brand{font-family:var(--font-serif);font-size:1.4rem;color:#fff;display:block;margin-bottom:.6rem}
 .footer-brand em{font-style:italic;color:var(--coral)}
 .footer-brand-desc{font-size:.8rem;line-height:1.8;max-width:260px;margin-bottom:1.5rem;color:rgba(255,255,255,.35)}
-.footer-disclosure-box{font-size:.7rem;line-height:1.75;color:rgba(255,255,255,.2);background:rgba(255,255,255,.03);padding:.85rem 1rem;border:1px solid rgba(255,255,255,.06)}
+.footer-disclosure-box{font-size:.7rem;line-height:1.75;color:rgba(255,255,255,.72);background:rgba(255,255,255,.03);padding:.85rem 1rem;border:1px solid rgba(255,255,255,.06)}
 .footer-col-title{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
 .footer-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.3);padding:4px 0;transition:color .15s}
 .footer-col a:hover{color:#fff}
