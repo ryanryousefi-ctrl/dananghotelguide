@@ -22,8 +22,8 @@ import sys
 from urllib.parse import unquote, urlparse, parse_qs, urlencode, urlunparse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-CJ_SCRIPT_TAG = '<script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>'
-CJ_MARKER = "anrdoezrs.net/am/101820678"  # used to detect if already injected
+CJ_SCRIPT_TAG = '<script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>'
+CJ_MARKER = "am/101820678/impressions/page/am.js"  # used to detect if already injected
 
 # Awin patterns to match — HTML href attributes
 AWIN_HREF_RE = re.compile(

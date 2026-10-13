@@ -2258,17 +2258,17 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
 </script>
 
 <script>
-var STATIC_DA_NANG_BOOKING = 'https://www.booking.com/searchresults.en-us.html?ss=Da+Nang+Municipality%2C+Vietnam&dest_id=6232&dest_type=region&lang=en-us&aid=1784897';
+var STATIC_DA_NANG_BOOKING = 'https://www.kqzyfj.com/click-101820678-17293132?sid=homepage--booking-widget&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us';
 
 function handleBookingWidgetSubmit(e) {
   e.preventDefault();
-  window.open(STATIC_DA_NANG_BOOKING, '_blank', 'noopener,noreferrer');
+  window.open(STATIC_DA_NANG_BOOKING, '_blank', 'noopener');
   return false;
 }
 
 function handleNbwSubmit(e) {
   e.preventDefault();
-  window.open(STATIC_DA_NANG_BOOKING, '_blank', 'noopener,noreferrer');
+  window.open(STATIC_DA_NANG_BOOKING, '_blank', 'noopener');
   return false;
 }
 
@@ -2325,7 +2325,7 @@ function handleNbwSubmit(e) {
 })();
 </script>
   
-  <script src="https://www.anrdoezrs.net/am/101820678/include/allCj/impressions/page/am.js"></script>
+  <script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>
 
 <script>
 (function(){
@@ -2423,10 +2423,13 @@ function handleNbwSubmit(e) {
       +'&dest_id=6232&dest_type=region'
       +'&checkin='+parts[0]+'-'+parts[1]+'-'+parts[2]
       +'&checkout='+oparts[0]+'-'+oparts[1]+'-'+oparts[2]
-      +'&aid=1784897'
       +'&lang=en-us';
+    /* Static CJ tracking URL, same as bk-widget.js; see CJ-STATIC-LINK-FIX.md. */
+    var cjUrl='https://www.kqzyfj.com/click-101820678-17293132'
+      +'?sid=homepage--booking-widget'
+      +'&url='+encodeURIComponent(url);
     if(window.gtag){window.gtag('event','homepage_booking_widget_click',{event_category:'booking_widget',checkin:ciVal,checkout:coVal});}
-    window.open(url,'_blank','noopener,noreferrer');
+    window.open(cjUrl,'_blank','noopener');
   });
 })();
 </script>

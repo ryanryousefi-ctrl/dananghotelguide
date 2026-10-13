@@ -224,8 +224,8 @@ for (const { file, rel } of htmlFiles) {
 
   // --- CJ affiliate script check (for non-utility pages) ---
   if (!isUtilityPage) {
-    if (!html.includes('anrdoezrs.net')) {
-      warn(rel, 'CJ affiliate script (anrdoezrs.net) not found');
+    if (!html.includes('yceml.net/am_gen/101820678/impressions/page/am.js')) {
+      warn(rel, 'CJ page script (yceml.net am.js) not found');
     }
   }
 

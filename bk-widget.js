@@ -201,6 +201,7 @@
         checkout: coVal
       });
     }
-    window.open(url, '_blank', 'noopener,noreferrer');
+    /* noopener only: CJ records the referring page on the click. */
+    window.open(url, '_blank', 'noopener');
   });
 })();
