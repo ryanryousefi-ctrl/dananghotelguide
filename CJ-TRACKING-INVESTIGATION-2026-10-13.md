@@ -1,5 +1,7 @@
 # CJ Tracking Investigation — October 13, 2026
 
+> **Update (same day):** the dashboard zero was caused by viewing the wrong CJ publisher account (79770…). Under CID 8008393, CJ reports 97 clicks for Oct 1–13. See `CJ-TRACKING-RESOLUTION-FINAL.md`.
+
 **Trigger:** CJ dashboard shows 0 clicks / 0 actions / $0 for Oct 1–13, 2026, one week after the Oct 6 static-link fix (`CJ-STATIC-LINK-FIX.md`).
 
 **Bottom line:** CJ's click server is working for this account right now. A test click on Oct 13 produced a fresh `cjevent`, and Booking.com received `label=affnetcj-17293132_pub-8008393_site-101820678_...`. So the Oct 6 link format was not the reason the dashboard shows zero. This pass found and fixed three problems the Oct 6 audit missed. Two of them sent bookings to Booking.com with no CJ tracking at all. The third stopped CJ's page script from loading on every page. What can't be checked from here is the CJ dashboard itself: the filter, the selected property, and whether clicks are counted or rejected. That needs the account owner (Section 4).
