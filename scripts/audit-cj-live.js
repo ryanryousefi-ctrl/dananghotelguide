@@ -64,7 +64,7 @@ async function get(u) {
       pages[u] = { status: r.status, inSitemap: fromSitemap.has(u), cj: 0 };
       if (r.status !== 200) { if (fromSitemap.has(u)) issue(u, 'sitemap-url-not-200', r.status + ' ' + (r.loc || '')); return; }
       const html = r.body;
-      for (const m of html.matchAll(/href\s*=\s*["']([^"']+)["']/g)) add(m[1]);
+      for (const m of html.matchAll(/href\s*=\s*["']([^"']+)["']/g)) { try { add(new URL(m[1], u).toString()); } catch {} } // resolve relative to the page, not the site root
       for (const m of html.matchAll(/<script[^>]+src=["']([^"']+)["']/g)) scripts.add(new URL(m[1], u).toString());
       // all hrefs
       for (const m of html.matchAll(/<a\b[^>]*?href\s*=\s*["']([^"']+)["'][^>]*>/g)) {
