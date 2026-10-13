@@ -1404,21 +1404,10 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* Booking.com CTA click tracking: differentiates click location for analytics */
-document.querySelectorAll('a[data-cta-location]').forEach(link => {
-  link.addEventListener('click', () => {
-    if (typeof gtag === 'function') {
-      gtag('event', 'booking_click', {
-        cta_location: link.dataset.ctaLocation,
-        hotel_name: link.dataset.hotel || null,
-        page: 'best-hotels-in-da-nang'
-      });
-    }
-  });
-});
 </script>
 
 <script src="search-engine.js"></script>
 <script src="search-ui.js"></script>
+<script src="booking-cta-tracking.js" defer></script>
 </body>
 </html>
