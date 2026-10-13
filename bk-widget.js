@@ -123,7 +123,7 @@
   wrap.className = 'sw-bk-wrap' + (heroConfig.placement === 'below' ? ' sw-bk-wrap--below' : '');
 
   wrap.innerHTML =
-    '<div class="sw-bk-widget" aria-label="Search ' + destLabel + ' hotels">' +
+    '<div class="sw-bk-widget" role="search" aria-label="Search ' + destLabel + ' hotels">' +
       '<span class="sw-bk-label">Hotel Search</span>' +
       '<div class="sw-bk-dest">&#x1F4CD; ' + destLabel + '</div>' +
       '<div class="sw-bk-dates">' +
@@ -150,6 +150,17 @@
   } else {
     /* below: append after the last child of the hero container */
     hero.appendChild(wrap);
+  }
+
+  /* Fixed-height heroes with overflow:hidden (e.g. .review-hero) clip the
+     widget once it stacks under the text on phones: move it below the hero. */
+  if (window.matchMedia('(max-width: 700px)').matches) {
+    var heroBox = hero.getBoundingClientRect();
+    var hs = window.getComputedStyle(hero);
+    if (/hidden|clip/.test(hs.overflow + hs.overflowY) && wrap.getBoundingClientRect().bottom > heroBox.bottom + 1) {
+      wrap.classList.add('sw-bk-wrap--after');
+      hero.parentNode.insertBefore(wrap, hero.nextSibling);
+    }
   }
 
   /* ── Populate dates ─────────────────────────────────────────── */

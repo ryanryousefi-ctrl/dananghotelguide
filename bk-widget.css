@@ -183,4 +183,49 @@
     width: calc(100% - 2 * var(--gutter, 1.25rem));
     margin: 0.75rem auto 0;
   }
+
+  /* Many heroes are horizontal flex rows: without wrapping, the widget sat
+     beside the hero text and was clipped off the right edge on phones. */
+  :is(header, section, div):has(> .sw-bk-wrap) {
+    flex-wrap: wrap;
+  }
+  .sw-bk-wrap {
+    flex: 0 0 calc(100% - 2 * var(--gutter, 1.25rem));
+  }
+
+  /* Comfortable tap targets */
+  .sw-bk-btn {
+    min-height: 44px;
+    font-size: .75rem;
+  }
+  .sw-bk-date-field {
+    min-width: 0;
+  }
+  .sw-bk-date-input {
+    min-height: 40px;
+    font-size: 16px; /* also stops iOS zooming into the field */
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Widget moved below a fixed-height hero (phones): solid panel for contrast */
+.sw-bk-wrap--after {
+  margin: 0 auto;
+  padding: 0.75rem var(--gutter, 1.25rem);
+  width: 100%;
+  box-sizing: border-box;
+  background: #0d2a2a;
+}
+.sw-bk-wrap--after .sw-bk-widget {
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Touch screens of any size: comfortable booking button */
+@media (pointer: coarse) {
+  .sw-bk-btn { min-height: 44px; }
 }
