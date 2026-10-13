@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/kr",
+      "destination": "/kr/",
+      "permanent": true
+    },
+    {
       "source": "/guides-da-nang-hotel-prices-by-month.html",
       "destination": "/da-nang-hotel-prices-by-month.html",
       "permanent": true

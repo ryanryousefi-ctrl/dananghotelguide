@@ -370,7 +370,7 @@ button{font-family:var(--font-sans);cursor:pointer}
     <button class="nav-search-btn" id="searchOpenBtn" aria-label="Search site" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
     </button>
-    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=where-to-stay-in-da-nang&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us" class="nav-stays-btn" target="_blank" rel="nofollow noopener sponsored">
+    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=where-to-stay-in-da-nang&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us" class="nav-stays-btn" aria-label="Search stays on Booking.com (opens in a new tab)" target="_blank" rel="nofollow noopener sponsored">
       <span class="btn-text">Search Stays</span>
     </a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
@@ -479,7 +479,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   <div class="ws-section-inner">
     <span class="ws-section-eyebrow">30-second decision</span>
     <h2 class="ws-section-h2">Where Should <em>You</em> Stay?</h2>
-    <p class="ws-section-intro">Pick what matters most to you. Each card links to the area below.</p>
+    <p class="ws-section-intro">Pick what matters most to you. Each card links to the area below. Already know your area? <a href="#hotels" class="ws-area-guide-link">Jump to hotel picks by area &darr;</a></p>
     <div class="ws-quick-grid">
       <a href="#area-my-khe" class="ws-quick-card">
         <img src="images/my-khe-beach-aerial-da-nang.jpeg" alt="My Khe Beach Da Nang" loading="lazy" width="400" height="533">
@@ -599,6 +599,7 @@ button{font-family:var(--font-sans);cursor:pointer}
           </div>
           <p class="ws-area-tradeoff">Tradeoff: Touristy and hotel-heavy. The most commercial stretch of Da Nang.</p>
           <p class="ws-area-verdict">If you're reading this guide because you genuinely don't know where to stay — <strong>book My Khe.</strong></p>
+          <a href="#hotels-my-khe" class="ws-area-guide-link">Hotel picks in My Khe &darr;</a><br>
           <a href="da-nang-beach-hotels.html" class="ws-area-guide-link">See our full My Khe beach hotel guide &rarr;</a>
         </div>
       </div>
@@ -621,6 +622,7 @@ button{font-family:var(--font-sans);cursor:pointer}
           </div>
           <p class="ws-area-tradeoff">Tradeoff: Increasingly international and tourist-heavy. Busier than it was five years ago.</p>
           <p class="ws-area-verdict">If you hate needing transportation every time you want coffee, dinner or a drink — <strong>stay here.</strong></p>
+          <a href="#hotels-an-thuong" class="ws-area-guide-link">Hotel picks in An Thuong &darr;</a><br>
           <a href="da-nang-nightlife-guide.html" class="ws-area-guide-link">See An Thuong restaurants and nightlife &rarr;</a>
         </div>
       </div>
@@ -643,6 +645,7 @@ button{font-family:var(--font-sans);cursor:pointer}
           </div>
           <p class="ws-area-tradeoff">Tradeoff: You don't have My Khe outside the door. The beach requires transportation every time.</p>
           <p class="ws-area-verdict">Choose the river if experiencing the city matters more to you than waking up beside the beach.</p>
+          <a href="#hotels-han-river" class="ws-area-guide-link">Hotel picks in Han River &darr;</a><br>
           <a href="da-nang-riverfront-hotels.html" class="ws-area-guide-link">See our full Han River hotel guide &rarr;</a>
         </div>
       </div>
@@ -665,6 +668,7 @@ button{font-family:var(--font-sans);cursor:pointer}
           </div>
           <p class="ws-area-tradeoff">Tradeoff: Not walkable for Da Nang's restaurant and nightlife scene. You need a car or Grab to explore the city.</p>
           <p class="ws-area-verdict">Choose Non Nuoc when the resort itself is the vacation — pools, beach and space over urban exploration.</p>
+          <a href="#hotels-non-nuoc" class="ws-area-guide-link">Hotel picks in Non Nuoc &darr;</a><br>
           <a href="family-hotels-da-nang.html" class="ws-area-guide-link">See our full family resort guide &rarr;</a>
         </div>
       </div>
@@ -688,6 +692,7 @@ button{font-family:var(--font-sans);cursor:pointer}
           </div>
           <p class="ws-area-tradeoff">Tradeoff: Depending on location, very removed from restaurants and nightlife. Verify distances before booking.</p>
           <p class="ws-area-verdict">For an extraordinary resort trip Son Tra is unbeatable. For a first visit centered on exploring Da Nang, choose My Khe instead.</p>
+          <a href="#hotels-son-tra" class="ws-area-guide-link">Hotel picks in Son Tra &darr;</a><br>
           <a href="luxury-hotels-da-nang.html" class="ws-area-guide-link">See our luxury hotel guide &rarr;</a>
         </div>
       </div>
@@ -699,11 +704,11 @@ button{font-family:var(--font-sans);cursor:pointer}
 <!-- HOTELS TO CONSIDER -->
 <section class="ws-section" style="background:var(--sand)">
   <div class="ws-section-inner">
-    <span class="ws-section-eyebrow">Hotels to consider</span>
+    <span class="ws-section-eyebrow" id="hotels">Hotels to consider</span>
     <h2 class="ws-section-h2">Specific Hotels, <em>By Area</em></h2>
     <p class="ws-section-intro">Once you've picked an area above, here's where to actually book.</p>
 
-    <span class="ws-hotels-group-title">My Khe Beach</span>
+    <span class="ws-hotels-group-title" id="hotels-my-khe">My Khe Beach</span>
     <div class="ws-hotel-mini-list">
       <div class="ws-hotel-mini">
         <div class="ws-hotel-mini-img"><img src="images/hotels/chicland-da-nang.jpg" alt="CHICLAND Hotel Da Nang" loading="lazy" width="400" height="260"></div>
@@ -734,7 +739,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
     </div>
 
-    <span class="ws-hotels-group-title">An Thuong / My An</span>
+    <span class="ws-hotels-group-title" id="hotels-an-thuong">An Thuong / My An</span>
     <div class="ws-hotel-mini-list">
       <div class="ws-hotel-mini">
         <div class="ws-hotel-mini-img"><img src="images/boutique-hotels-da-nang-b64-02.webp" alt="Saha Casa Boutique Hotel Da Nang" loading="lazy" width="400" height="260"></div>
@@ -765,7 +770,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
     </div>
 
-    <span class="ws-hotels-group-title">Han River / Hai Chau</span>
+    <span class="ws-hotels-group-title" id="hotels-han-river">Han River / Hai Chau</span>
     <div class="ws-hotel-mini-list">
       <div class="ws-hotel-mini">
         <div class="ws-hotel-mini-img"><img src="images/hotels/caro-hotel-da-nang.webp" alt="Caro Hotel Da Nang riverfront" loading="lazy" width="400" height="260"></div>
@@ -796,7 +801,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
     </div>
 
-    <span class="ws-hotels-group-title">Non Nuoc</span>
+    <span class="ws-hotels-group-title" id="hotels-non-nuoc">Non Nuoc</span>
     <div class="ws-hotel-mini-list">
       <div class="ws-hotel-mini">
         <div class="ws-hotel-mini-img"><img src="images/hotels/marriott-da-nang.jpg" alt="Danang Marriott Resort Non Nuoc" loading="lazy" width="400" height="260"></div>
@@ -827,7 +832,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       </div>
     </div>
 
-    <span class="ws-hotels-group-title">Son Tra Peninsula</span>
+    <span class="ws-hotels-group-title" id="hotels-son-tra">Son Tra Peninsula</span>
     <div class="ws-hotel-mini-list">
       <div class="ws-hotel-mini">
         <div class="ws-hotel-mini-img"><img src="images/hotels/intercontinental-da-nang.avif" alt="InterContinental Da Nang Sun Peninsula Resort" loading="lazy" width="400" height="260"></div>
