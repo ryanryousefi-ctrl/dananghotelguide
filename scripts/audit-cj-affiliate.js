@@ -83,6 +83,14 @@ const BAD_PATTERNS = [
     label: 'Duplicate aid= param',
     test: (line) => /aid=1784897[^"']*aid=1784897/.test(line),
   },
+  // The sitewide top-of-page disclosure bar (removed 2026-10-14 at the
+  // owner's request). Matches only that bar's markup/sentence, not the
+  // footer or in-content disclosures.
+  {
+    label: 'Removed sitewide disclosure bar (.aff-disclosure) reintroduced',
+    test: (line) => /class="aff-disclosure"/.test(line) ||
+      /We may earn a commission when you book through our links, at no additional cost to you\./.test(line),
+  },
   // A kqzyfj.com link whose website/evergreen-link ID doesn't match this
   // account — would indicate a copy/paste error from another site/account.
   {

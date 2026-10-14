@@ -4,6 +4,8 @@
 **Scope:** every item in the "resolve all remaining actionable issues" brief.
 **Untouched:** the CJ affiliate system (IDs, link format, programme). **No** clicks were sent through live CJ links during testing; test browsers blocked every CJ and Booking.com request.
 
+> **Update 2026-10-14:** at the owner's request, the sitewide top-of-content disclosure bar (`.aff-disclosure`, 201 pages) was removed together with its generator `scripts/add-top-disclosure.js`. `scripts/audit-cj-affiliate.js` now fails if it reappears. The footer and in-content disclosures, including the contrast fixes, remain on all 175 pages that carry in-content affiliate links.
+
 | Issue | Action Taken | Status | Commit |
 |---|---|---|---|
 | GitHub exposed token | Scanned config, credential stores, worktrees, tracked files and full history (values never printed). Found **two** exposures: (1) the old `ghp_` token in the `origin` URL, already removed and rejected by GitHub (push failed: "Invalid username or token"); (2) **a fine-grained `github_pat_` token committed to `translate-parallel.sh` in `d83bb12` (May 16), removed in `9b0083b`, in this PUBLIC repo**. GitHub's API returns **401** for it, so it is no longer valid. History left unrewritten: a force-push would overwrite other sessions' work and cannot un-publish a token already exposed. | VERIFIED ALREADY CORRECT (both tokens dead); OWNER ACTION REQUIRED to delete the dead entries from GitHub settings | — (local config only) |
