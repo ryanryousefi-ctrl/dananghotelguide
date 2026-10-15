@@ -175,8 +175,17 @@ echo "Total Korean HTML files: $done_count | Failed: $failed_count" | tee -a "$L
 if [ $total -gt 0 ] && [ $done_count -gt 0 ]; then
     echo "Pushing to GitHub..." | tee -a "$LOG"
     cd "$REPO"
-    git remote set-url origin "https://${GITHUB_TOKEN}@github.com/ryanryousefi-ctrl/dananghotelguide.git"
     git add kr/
     git commit -m "Add/update Korean translations ($(date '+%Y-%m-%d'))" 2>/dev/null || echo "Nothing new to commit"
-    git push origin main && echo "Pushed to GitHub." | tee -a "$LOG"
+    # Never write the token into the remote URL or .git/config. With GITHUB_TOKEN
+    # set, a one-shot credential helper reads it from the environment for this
+    # push only; otherwise the configured helper (gh auth setup-git) is used.
+    if [ -n "$GITHUB_TOKEN" ]; then
+        export GITHUB_TOKEN
+        git -c credential.helper= \
+            -c 'credential.helper=!f() { echo username=x-access-token; echo "password=$GITHUB_TOKEN"; }; f' \
+            push origin main && echo "Pushed to GitHub." | tee -a "$LOG"
+    else
+        git push origin main && echo "Pushed to GitHub." | tee -a "$LOG"
+    fi
 fi
