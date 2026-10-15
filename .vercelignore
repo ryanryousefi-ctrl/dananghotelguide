@@ -1,0 +1,43 @@
+# Deploy allowlist. Everything at the repo root is excluded from the Vercel
+# deployment unless re-included below, so internal reports, data exports,
+# archives, patches, logs and maintenance scripts are never published.
+# When adding a new public file type or folder, add it here explicitly.
+/*
+
+# Pages
+!/*.html
+/site-preview.html
+/favicon-html-snippet.html
+!/kr/
+
+# Static assets
+!/images/
+!/assets/
+!/*.css
+!/bk-widget.js
+!/booking-cta-tracking.js
+!/hotel-image-system.js
+!/search-engine.js
+!/search-ui.js
+!/booking-logo.svg
+!/favicon.ico
+!/favicon.svg
+!/favicon-*.png
+!/android-chrome-*.png
+!/apple-touch-icon.png
+!/site.webmanifest
+
+# Crawler and ads files
+!/robots.txt
+!/sitemap.xml
+!/ads.txt
+
+# Serverless: /news.html is rendered by api/news.js from lib/ (lib/ is not
+# served publicly; see the /lib redirect in vercel.json)
+!/api/
+!/lib/
+
+# Build/deploy configuration (not served)
+!/vercel.json
+!/package.json
+!/package-lock.json
