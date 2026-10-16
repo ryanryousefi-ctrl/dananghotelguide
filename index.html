@@ -1283,6 +1283,16 @@ h1.hero-h1{font-size:clamp(3.2rem,7.5vw,5.8rem);letter-spacing:-.05em;max-width:
   .p5-final-cta{min-height:480px;}
   .cin-break{min-height:420px;}
 }
+
+/* Mobile hero (≤700px): the widget cluster switches to normal flow here
+   (position:static, see .hero-widgets above), so the row-direction, fixed-height
+   hero placed it beside the headline and pushed the headline off-screen.
+   Stack vertically, headline first, and let the hero grow to fit. */
+@media(max-width:700px){
+  .hero{flex-direction:column;justify-content:flex-end;height:auto;max-height:none;}
+  .hero-content{order:1;}
+  .hero-widgets{order:2;padding-bottom:1.5rem;}
+}
 </style>
 <link rel="stylesheet" href="search-ui.css">
 <style id="nav-fit">
