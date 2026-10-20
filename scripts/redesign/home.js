@@ -124,6 +124,7 @@ ${overlayHtml}
       ${lg ? `<a class="dh-g dh-g--lead" href="${lg.page}"><span class="dh-g__img">${pic(lg.img, lg.w, lg.alt, true, '(min-width:900px) 50vw, 100vw')}</span><span class="dh-g__title">${lg.title}</span><span class="dh-g__desc">${desc(lg.page, 150)}</span></a>` : ''}
       <ul class="dh-gd__list">${rest.map(g => `<li><a class="dh-g" href="${g.page}">${g.img ? `<span class="dh-g__img">${pic(g.img, g.w, g.alt, true, '140px')}</span>` : ''}<span class="dh-g__text"><span class="dh-g__title">${g.title}</span><span class="dh-g__desc">${desc(g.page, 96)}</span></span></a></li>`).join('')}</ul>
     </div>
+    <p class="dh-more">Also useful: ${[['da-nang-weather-by-month.html', 'Da Nang weather by month'], ['da-nang-guide-for-korean-travelers.html', 'Guide for Korean travellers'], ['kr/index.html', '한국어 가이드']].filter(([p]) => exists(p)).map(([p, l]) => `<a href="${p}">${l}</a>`).join(' · ')}</p>
   </div>
 </section>
 

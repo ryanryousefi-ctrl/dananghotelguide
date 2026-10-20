@@ -1,0 +1,1630 @@
+{
+ "baseline": "7ed26a79075410fbec242b51ddf654110ed101d5",
+ "pages": 202,
+ "pagesWithIssues": 1,
+ "cjRemovedTotal": 36,
+ "results": [
+  {
+   "page": "a-la-carte-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1220,
+   "wordsAfter": 1220
+  },
+  {
+   "page": "a-la-carte-vs-tms-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 714,
+   "wordsAfter": 714
+  },
+  {
+   "page": "about.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1124,
+   "wordsAfter": 1124
+  },
+  {
+   "page": "airbnb.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 368,
+   "wordsAfter": 368
+  },
+  {
+   "page": "an-bang-beach-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 407,
+   "wordsAfter": 407
+  },
+  {
+   "page": "arbora-luxury-collection-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1883,
+   "wordsAfter": 1883
+  },
+  {
+   "page": "azura-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1447,
+   "wordsAfter": 1447
+  },
+  {
+   "page": "ba-na-hills-guide.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 2870,
+   "wordsAfter": 2870
+  },
+  {
+   "page": "beachfront-vs-city-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 718,
+   "wordsAfter": 718
+  },
+  {
+   "page": "best-areas-da-nang-families.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2119,
+   "wordsAfter": 2119
+  },
+  {
+   "page": "best-bars-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1299,
+   "wordsAfter": 1299
+  },
+  {
+   "page": "best-beach-hotel-under-100-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1287,
+   "wordsAfter": 1287
+  },
+  {
+   "page": "best-budget-hotels-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1586,
+   "wordsAfter": 1586
+  },
+  {
+   "page": "best-cafes-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1478,
+   "wordsAfter": 1478
+  },
+  {
+   "page": "best-esim-vietnam-airalo-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2005,
+   "wordsAfter": 2005
+  },
+  {
+   "page": "best-family-resort-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1684,
+   "wordsAfter": 1684
+  },
+  {
+   "page": "best-han-river-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1791,
+   "wordsAfter": 1791
+  },
+  {
+   "page": "best-hotels-an-thuong-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1936,
+   "wordsAfter": 1936
+  },
+  {
+   "page": "best-hotels-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 4891,
+   "wordsAfter": 4891
+  },
+  {
+   "page": "best-hotels-in-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 325,
+   "wordsAfter": 325
+  },
+  {
+   "page": "best-hotels-near-my-khe-beach.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1997,
+   "wordsAfter": 1997
+  },
+  {
+   "page": "best-luxury-resort-couples-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2229,
+   "wordsAfter": 2229
+  },
+  {
+   "page": "best-night-markets-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2380,
+   "wordsAfter": 2380
+  },
+  {
+   "page": "best-resort-breakfast-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2781,
+   "wordsAfter": 2781
+  },
+  {
+   "page": "best-resorts-son-tra-peninsula.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 803,
+   "wordsAfter": 803
+  },
+  {
+   "page": "best-shopping-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2362,
+   "wordsAfter": 2362
+  },
+  {
+   "page": "best-time-to-visit-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1757,
+   "wordsAfter": 1757
+  },
+  {
+   "page": "best-value-hotels-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 421,
+   "wordsAfter": 421
+  },
+  {
+   "page": "boutique-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2389,
+   "wordsAfter": 2389
+  },
+  {
+   "page": "brilliant-hotel-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1270,
+   "wordsAfter": 1270
+  },
+  {
+   "page": "contact.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 189,
+   "wordsAfter": 189
+  },
+  {
+   "page": "da-nang-3-day-itinerary.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1993,
+   "wordsAfter": 1993
+  },
+  {
+   "page": "da-nang-5-day-itinerary.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2164,
+   "wordsAfter": 2164
+  },
+  {
+   "page": "da-nang-7-day-itinerary.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3019,
+   "wordsAfter": 3019
+  },
+  {
+   "page": "da-nang-adults-only-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2051,
+   "wordsAfter": 2051
+  },
+  {
+   "page": "da-nang-airport-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2434,
+   "wordsAfter": 2434
+  },
+  {
+   "page": "da-nang-airport-to-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1526,
+   "wordsAfter": 1526
+  },
+  {
+   "page": "da-nang-airport-to-my-khe.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1928,
+   "wordsAfter": 1928
+  },
+  {
+   "page": "da-nang-beach-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2380,
+   "wordsAfter": 2380
+  },
+  {
+   "page": "da-nang-budget-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2384,
+   "wordsAfter": 2384
+  },
+  {
+   "page": "da-nang-digital-nomad-forbes-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 511,
+   "wordsAfter": 511
+  },
+  {
+   "page": "da-nang-digital-nomad-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1573,
+   "wordsAfter": 1573
+  },
+  {
+   "page": "da-nang-eco-city-merger-2050.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 827,
+   "wordsAfter": 827
+  },
+  {
+   "page": "da-nang-fireworks-festival-diff-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 899,
+   "wordsAfter": 899
+  },
+  {
+   "page": "da-nang-fireworks-festival-guide.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 5538,
+   "wordsAfter": 5538
+  },
+  {
+   "page": "da-nang-fireworks-festival-hotels.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 3014,
+   "wordsAfter": 3014
+  },
+  {
+   "page": "da-nang-first-time-travel-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3582,
+   "wordsAfter": 3582
+  },
+  {
+   "page": "da-nang-first-time-visitors-area-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2266,
+   "wordsAfter": 2266
+  },
+  {
+   "page": "da-nang-first-time-visitors.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1410,
+   "wordsAfter": 1410
+  },
+  {
+   "page": "da-nang-food-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2691,
+   "wordsAfter": 2691
+  },
+  {
+   "page": "da-nang-grab-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2586,
+   "wordsAfter": 2586
+  },
+  {
+   "page": "da-nang-grocery-store-guide.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 885,
+   "wordsAfter": 885
+  },
+  {
+   "page": "da-nang-guide-for-australian-travelers.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1269,
+   "wordsAfter": 1269
+  },
+  {
+   "page": "da-nang-guide-for-korean-travelers.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1467,
+   "wordsAfter": 1467
+  },
+  {
+   "page": "da-nang-guide-for-russian-travelers.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 3859,
+   "wordsAfter": 3859
+  },
+  {
+   "page": "da-nang-guide-for-singapore-travelers.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1020,
+   "wordsAfter": 1020
+  },
+  {
+   "page": "da-nang-hoi-an-markets-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1555,
+   "wordsAfter": 1555
+  },
+  {
+   "page": "da-nang-honeymoon-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3475,
+   "wordsAfter": 3475
+  },
+  {
+   "page": "da-nang-hotel-directory.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 2105,
+   "wordsAfter": 2105
+  },
+  {
+   "page": "da-nang-hotel-prices-by-month.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1683,
+   "wordsAfter": 1683
+  },
+  {
+   "page": "da-nang-hotel-prices.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1131,
+   "wordsAfter": 1131
+  },
+  {
+   "page": "da-nang-hotels-connecting-rooms.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2340,
+   "wordsAfter": 2340
+  },
+  {
+   "page": "da-nang-hotels-infinity-pool.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2323,
+   "wordsAfter": 2323
+  },
+  {
+   "page": "da-nang-hotels-kids-club.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1039,
+   "wordsAfter": 1039
+  },
+  {
+   "page": "da-nang-hotels-map.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 3676,
+   "wordsAfter": 3676
+  },
+  {
+   "page": "da-nang-hotels-near-airport.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1765,
+   "wordsAfter": 1765
+  },
+  {
+   "page": "da-nang-hotels-private-beach.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1923,
+   "wordsAfter": 1923
+  },
+  {
+   "page": "da-nang-hotels-private-pool-villa.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3217,
+   "wordsAfter": 3217
+  },
+  {
+   "page": "da-nang-hotels-rooftop-pool.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2183,
+   "wordsAfter": 2183
+  },
+  {
+   "page": "da-nang-hotels-spa-packages.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1777,
+   "wordsAfter": 1777
+  },
+  {
+   "page": "da-nang-hotels-with-lazy-river.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1189,
+   "wordsAfter": 1189
+  },
+  {
+   "page": "da-nang-international-tourism-growth-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 759,
+   "wordsAfter": 759
+  },
+  {
+   "page": "da-nang-itinerary.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1833,
+   "wordsAfter": 1833
+  },
+  {
+   "page": "da-nang-malls-guide-ko.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3752,
+   "wordsAfter": 3752
+  },
+  {
+   "page": "da-nang-malls-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3119,
+   "wordsAfter": 3119
+  },
+  {
+   "page": "da-nang-money-exchange-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2317,
+   "wordsAfter": 2317
+  },
+  {
+   "page": "da-nang-national-day-celebration-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1625,
+   "wordsAfter": 1625
+  },
+  {
+   "page": "da-nang-nightlife-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1190,
+   "wordsAfter": 1190
+  },
+  {
+   "page": "da-nang-quiet-areas-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2067,
+   "wordsAfter": 2067
+  },
+  {
+   "page": "da-nang-riverfront-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1926,
+   "wordsAfter": 1926
+  },
+  {
+   "page": "da-nang-russia-cis-air-links-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 647,
+   "wordsAfter": 647
+  },
+  {
+   "page": "da-nang-tet-2027-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 770,
+   "wordsAfter": 770
+  },
+  {
+   "page": "da-nang-time-converter.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1736,
+   "wordsAfter": 1736
+  },
+  {
+   "page": "da-nang-tourist-mistakes.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1714,
+   "wordsAfter": 1714
+  },
+  {
+   "page": "da-nang-transport-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1896,
+   "wordsAfter": 1896
+  },
+  {
+   "page": "da-nang-travel-budget-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2231,
+   "wordsAfter": 2231
+  },
+  {
+   "page": "da-nang-travel-mistakes.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2019,
+   "wordsAfter": 2019
+  },
+  {
+   "page": "da-nang-urban-railway-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 784,
+   "wordsAfter": 784
+  },
+  {
+   "page": "da-nang-videos.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1550,
+   "wordsAfter": 1550
+  },
+  {
+   "page": "da-nang-visa-run-guide.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1409,
+   "wordsAfter": 1409
+  },
+  {
+   "page": "da-nang-vladivostok-flight-russian-tourism-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 602,
+   "wordsAfter": 602
+  },
+  {
+   "page": "da-nang-vs-bali.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1685,
+   "wordsAfter": 1685
+  },
+  {
+   "page": "da-nang-vs-hanoi.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1223,
+   "wordsAfter": 1223
+  },
+  {
+   "page": "da-nang-vs-ho-chi-minh-city.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1262,
+   "wordsAfter": 1262
+  },
+  {
+   "page": "da-nang-vs-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1164,
+   "wordsAfter": 1164
+  },
+  {
+   "page": "da-nang-vs-nha-trang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1580,
+   "wordsAfter": 1580
+  },
+  {
+   "page": "da-nang-vs-phu-quoc.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1193,
+   "wordsAfter": 1193
+  },
+  {
+   "page": "da-nang-vs-phuket.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1614,
+   "wordsAfter": 1614
+  },
+  {
+   "page": "da-nang-weather-by-month.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2999,
+   "wordsAfter": 2999
+  },
+  {
+   "page": "da-nang-with-kids-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2956,
+   "wordsAfter": 2956
+  },
+  {
+   "page": "da-nang-with-teenagers.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 3591,
+   "wordsAfter": 3591
+  },
+  {
+   "page": "dining.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 899,
+   "wordsAfter": 899
+  },
+  {
+   "page": "dragon-bridge-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2809,
+   "wordsAfter": 2809
+  },
+  {
+   "page": "editorial-policy.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 711,
+   "wordsAfter": 711
+  },
+  {
+   "page": "family-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2567,
+   "wordsAfter": 2567
+  },
+  {
+   "page": "four-points-sheraton-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1462,
+   "wordsAfter": 1462
+  },
+  {
+   "page": "four-points-vs-novotel-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 679,
+   "wordsAfter": 679
+  },
+  {
+   "page": "furama-resort-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1248,
+   "wordsAfter": 1248
+  },
+  {
+   "page": "furama-vs-pullman-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 663,
+   "wordsAfter": 663
+  },
+  {
+   "page": "fusion-suites-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1228,
+   "wordsAfter": 1228
+  },
+  {
+   "page": "grand-mercure-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1136,
+   "wordsAfter": 1136
+  },
+  {
+   "page": "guides.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 3099,
+   "wordsAfter": 3099
+  },
+  {
+   "page": "han-river-night-cruise-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3276,
+   "wordsAfter": 3276
+  },
+  {
+   "page": "hilton-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1357,
+   "wordsAfter": 1357
+  },
+  {
+   "page": "hoi-an-da-nang-travel-leisure-hidden-gems-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 687,
+   "wordsAfter": 687
+  },
+  {
+   "page": "hoi-an-first-time-visitors.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3651,
+   "wordsAfter": 3651
+  },
+  {
+   "page": "hoi-an-old-town-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 444,
+   "wordsAfter": 444
+  },
+  {
+   "page": "hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1496,
+   "wordsAfter": 1496
+  },
+  {
+   "page": "hotel-review-methodology.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 742,
+   "wordsAfter": 742
+  },
+  {
+   "page": "hotel-reviews.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 569,
+   "wordsAfter": 569
+  },
+  {
+   "page": "how-many-days-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2007,
+   "wordsAfter": 2007
+  },
+  {
+   "page": "how-to-live-in-da-nang-under-1000-a-month.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3823,
+   "wordsAfter": 3823
+  },
+  {
+   "page": "hyatt-regency-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1649,
+   "wordsAfter": 1649
+  },
+  {
+   "page": "hyatt-regency-vs-furama-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 656,
+   "wordsAfter": 656
+  },
+  {
+   "page": "hyatt-regency-vs-sheraton-grand-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 684,
+   "wordsAfter": 684
+  },
+  {
+   "page": "hyatt-vs-marriott-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1008,
+   "wordsAfter": 1008
+  },
+  {
+   "page": "index.html",
+   "issues": [
+    "h1 changed: \"Where to stay in Da Nang\" -> \"Where to stay in Da Nang and Hoi An\"",
+    "headings missing: Da Nang at a Glance | 30 km of sand.One honest guide. | More Hotel Collections",
+    "links missing (17): where-to-stay-in-da-nang.html (x2) | best-hotels-in-da-nang.html (x3) | da-nang-beach-hotels.html | luxury-hotels-da-nang.html",
+    "images missing: images/da-nang-beach-hotels-5c163732.webp | images/boutique-hotels-da-nang-b64-01.jpg | images/luxury-hotels-da-nang-ea87d5cc.jpg",
+    "text loss 41.7% (188/451 words), e.g. 01, 05, c, vietnam, check, out"
+   ],
+   "cjRemoved": 2,
+   "textLossPct": 41.69,
+   "wordsBefore": 451,
+   "wordsAfter": 679
+  },
+  {
+   "page": "intercontinental-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1710,
+   "wordsAfter": 1710
+  },
+  {
+   "page": "intercontinental-vs-furama-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1050,
+   "wordsAfter": 1050
+  },
+  {
+   "page": "intercontinental-vs-hyatt-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 819,
+   "wordsAfter": 819
+  },
+  {
+   "page": "intercontinental-vs-pullman-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 807,
+   "wordsAfter": 807
+  },
+  {
+   "page": "is-da-nang-walkable.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1614,
+   "wordsAfter": 1614
+  },
+  {
+   "page": "is-hoi-an-cheaper-than-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 776,
+   "wordsAfter": 776
+  },
+  {
+   "page": "kr/best-areas-for-korean-families.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 993,
+   "wordsAfter": 993
+  },
+  {
+   "page": "kr/best-areas-to-stay-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 786,
+   "wordsAfter": 786
+  },
+  {
+   "page": "kr/best-budget-hotels-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 822,
+   "wordsAfter": 822
+  },
+  {
+   "page": "kr/best-cafes-popular-with-korean-travelers.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 924,
+   "wordsAfter": 924
+  },
+  {
+   "page": "kr/best-hotels-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 718,
+   "wordsAfter": 718
+  },
+  {
+   "page": "kr/best-hotels-near-dragon-bridge.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 702,
+   "wordsAfter": 702
+  },
+  {
+   "page": "kr/best-hotels-near-korean-restaurants.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 936,
+   "wordsAfter": 936
+  },
+  {
+   "page": "kr/best-hotels-near-my-khe-beach.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 821,
+   "wordsAfter": 821
+  },
+  {
+   "page": "kr/best-korean-bbq-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 832,
+   "wordsAfter": 832
+  },
+  {
+   "page": "kr/best-shopping-for-korean-tourists.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 771,
+   "wordsAfter": 771
+  },
+  {
+   "page": "kr/boutique-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 801,
+   "wordsAfter": 801
+  },
+  {
+   "page": "kr/da-nang-beach-hotels.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 889,
+   "wordsAfter": 889
+  },
+  {
+   "page": "kr/da-nang-vs-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 675,
+   "wordsAfter": 675
+  },
+  {
+   "page": "kr/family-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 867,
+   "wordsAfter": 867
+  },
+  {
+   "page": "kr/index.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1054,
+   "wordsAfter": 1054
+  },
+  {
+   "page": "kr/korean-convenience-store-guide-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 824,
+   "wordsAfter": 824
+  },
+  {
+   "page": "kr/korean-friendly-resorts-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 960,
+   "wordsAfter": 960
+  },
+  {
+   "page": "kr/luxury-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1074,
+   "wordsAfter": 1074
+  },
+  {
+   "page": "kr/olive-young-alternatives-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 883,
+   "wordsAfter": 883
+  },
+  {
+   "page": "kr/where-koreans-stay-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 958,
+   "wordsAfter": 958
+  },
+  {
+   "page": "kr/where-to-stay-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 927,
+   "wordsAfter": 927
+  },
+  {
+   "page": "kr/why-koreans-love-my-khe-beach.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1269,
+   "wordsAfter": 1269
+  },
+  {
+   "page": "living-in-da-nang-expat-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2902,
+   "wordsAfter": 2902
+  },
+  {
+   "page": "luxury-hotels-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2541,
+   "wordsAfter": 2541
+  },
+  {
+   "page": "mandila-beach-vs-stella-maris-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 838,
+   "wordsAfter": 838
+  },
+  {
+   "page": "marble-mountains-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2405,
+   "wordsAfter": 2405
+  },
+  {
+   "page": "marriott-resort-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1478,
+   "wordsAfter": 1478
+  },
+  {
+   "page": "marriott-vs-intercontinental-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 838,
+   "wordsAfter": 838
+  },
+  {
+   "page": "marriott-vs-sheraton-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 707,
+   "wordsAfter": 707
+  },
+  {
+   "page": "melia-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1401,
+   "wordsAfter": 1401
+  },
+  {
+   "page": "melia-vinpearl-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1155,
+   "wordsAfter": 1155
+  },
+  {
+   "page": "melia-vs-hyatt-regency-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 753,
+   "wordsAfter": 753
+  },
+  {
+   "page": "melia-vs-radisson-blu-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 738,
+   "wordsAfter": 738
+  },
+  {
+   "page": "mikazuki-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1509,
+   "wordsAfter": 1509
+  },
+  {
+   "page": "muong-thanh-luxury-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1135,
+   "wordsAfter": 1135
+  },
+  {
+   "page": "my-khe-beach-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 2970,
+   "wordsAfter": 2970
+  },
+  {
+   "page": "naman-retreat-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2932,
+   "wordsAfter": 2932
+  },
+  {
+   "page": "nhaan-resort-hoi-an-hilton-tapestry-opens-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 704,
+   "wordsAfter": 704
+  },
+  {
+   "page": "non-nuoc-beach-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 2732,
+   "wordsAfter": 2732
+  },
+  {
+   "page": "novotel-da-nang-han-river.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1115,
+   "wordsAfter": 1115
+  },
+  {
+   "page": "novotel-vs-hilton-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 741,
+   "wordsAfter": 741
+  },
+  {
+   "page": "premier-village-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1428,
+   "wordsAfter": 1428
+  },
+  {
+   "page": "premier-village-vs-sheraton-grand-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 874,
+   "wordsAfter": 874
+  },
+  {
+   "page": "privacy.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 309,
+   "wordsAfter": 309
+  },
+  {
+   "page": "pullman-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1269,
+   "wordsAfter": 1269
+  },
+  {
+   "page": "pullman-vs-hyatt-regency-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 974,
+   "wordsAfter": 974
+  },
+  {
+   "page": "pullman-vs-sheraton-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 848,
+   "wordsAfter": 848
+  },
+  {
+   "page": "radisson-blu-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1136,
+   "wordsAfter": 1136
+  },
+  {
+   "page": "rainy-season-da-nang-guide.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2256,
+   "wordsAfter": 2256
+  },
+  {
+   "page": "search.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 408,
+   "wordsAfter": 408
+  },
+  {
+   "page": "sheraton-grand-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1388,
+   "wordsAfter": 1388
+  },
+  {
+   "page": "sheraton-vs-hyatt-regency-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 907,
+   "wordsAfter": 907
+  },
+  {
+   "page": "silk-path-grand-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1535,
+   "wordsAfter": 1535
+  },
+  {
+   "page": "son-tra-peninsula-da-nang.html",
+   "issues": [],
+   "cjRemoved": 1,
+   "textLossPct": 0,
+   "wordsBefore": 1920,
+   "wordsAfter": 1920
+  },
+  {
+   "page": "terms.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 276,
+   "wordsAfter": 276
+  },
+  {
+   "page": "things-to-do-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1561,
+   "wordsAfter": 1561
+  },
+  {
+   "page": "tia-wellness-resort-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1311,
+   "wordsAfter": 1311
+  },
+  {
+   "page": "tia-wellness-vs-naman-retreat-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 984,
+   "wordsAfter": 984
+  },
+  {
+   "page": "tms-hotel-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1388,
+   "wordsAfter": 1388
+  },
+  {
+   "page": "tms-hotel-vs-sala-danang-beach.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 822,
+   "wordsAfter": 822
+  },
+  {
+   "page": "vietnam-high-tech-economy-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1263,
+   "wordsAfter": 1263
+  },
+  {
+   "page": "vietnam-tourism-boom-record-growth-2026.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 994,
+   "wordsAfter": 994
+  },
+  {
+   "page": "vinpearl-luxury-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1612,
+   "wordsAfter": 1612
+  },
+  {
+   "page": "what-to-pack-for-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 2297,
+   "wordsAfter": 2297
+  },
+  {
+   "page": "where-to-stay-in-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 3302,
+   "wordsAfter": 3302
+  },
+  {
+   "page": "where-to-stay-in-hoi-an.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 958,
+   "wordsAfter": 958
+  },
+  {
+   "page": "why-trust-us.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 811,
+   "wordsAfter": 811
+  },
+  {
+   "page": "worst-time-to-visit-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1133,
+   "wordsAfter": 1133
+  },
+  {
+   "page": "wyndham-soleil-da-nang.html",
+   "issues": [],
+   "cjRemoved": 0,
+   "textLossPct": 0,
+   "wordsBefore": 1079,
+   "wordsAfter": 1079
+  }
+ ]
+}

@@ -117,38 +117,36 @@ function buildHero($, hero, html, page) {
   if (!h1.length) return null;
   const content = h1.parent();
   const isVs = hero.is('.hvh-hero, .vs-hero') || hero.find('.hvh-split, .vs-hero-split').length > 0;
-  let eyebrow = content.find('[class*="eyebrow"], [class*="kicker"]').first();
+  const free = (i, e) => !$(e).closest('a, button').length;
+  let eyebrow = content.find('[class*="eyebrow"], [class*="kicker"]').filter(free).first();
   if (!eyebrow.length) { const p = h1.prevAll('p, span, div').first(); if (p.length && text(p.html()).length && text(p.html()).length < 90 && !p.find('p, div, h1').length) eyebrow = p; }
-  let sub = content.find('[class*="-sub"], [class*="hero-line"], [class*="lede"]').not(eyebrow).first();
+  let sub = content.find('[class*="-sub"], [class*="hero-line"], [class*="lede"]').filter(free).not(eyebrow).first();
   if (!sub.length) { const p = h1.nextAll('p').first(); if (p.length) sub = p; }
-  const meta = content.find('[class$="-meta"], [class*="hero-meta"]').not(eyebrow).not(sub).first();
+  const meta = content.find('[class$="-meta"], [class*="hero-meta"]').filter(free).not(eyebrow).not(sub).first();
   const used = new Set([eyebrow[0], h1[0], sub[0], meta[0]].filter(Boolean));
+  const heroImg = isVs ? null : hero.find('img').filter((i, e) => !$(e).closest('.hvh-split, .vs-hero-split, .vs-hero-half').length).first()[0];
+  const MEDIA = /hero-(img|slides?|overlay|grain|bg|nav|counter)\b|-hero-img\b/;
   const extras = [];
-  content.children().each((i, c) => {
+  // Everything in the hero that is not eyebrow/title/sub/meta/background media is kept (nothing is dropped silently).
+  const walk = el => el.children().each((i, c) => {
     if (used.has(c)) return;
-    const el = $(c);
-    if (el.hasClass('hero-overlay') || el.hasClass('hero-grain') || /hero-img/.test(el.attr('class') || '')) return;
-    if (!text(el.html()) && !el.find('img, a, svg').length) return;
-    extras.push(el.toString());
+    const n = $(c);
+    if ([...used].some(u => $.contains(c, u))) { walk(n); return; }
+    if (MEDIA.test(n.attr('class') || '')) return;
+    const imgs = n.find('img').addBack('img');
+    if (heroImg && imgs.length === 1 && imgs[0] === heroImg && !text(n.html())) return;
+    if (!text(n.html()) && !n.find('a[href], img, svg').length && !n.is('img, svg')) return;
+    extras.push($.html(c));
   });
-  // Any other link inside the hero (e.g. a CTA that is a sibling of the content block) is kept.
-  const includedEls = [eyebrow[0], h1[0], sub[0], meta[0]].filter(Boolean);
-  content.children().each((i, c) => { if (!used.has(c)) includedEls.push(c); });
-  const seen = new Set();
-  hero.find('a[href]').each((i, a) => {
-    if (includedEls.some(n => n === a || $.contains(n, a))) return;
-    if ($(a).closest('.hvh-split, .vs-hero-split').length) return;
-    const h = $.html(a); if (seen.has(h)) return; seen.add(h);
-    extras.push(h);
-  });
+  walk(hero);
   const image = isVs ? null : resolveHeroImage($, hero, html, page);
   const deepOnly = !image && extras.length && !isVs;
   const mode = image ? 'image' : (deepOnly ? 'deep' : 'plain');
   const media = image ? `<div class="dn-hero__media"><img src="${chrome.esc(image.src)}" alt="${chrome.esc(image.alt)}" fetchpriority="high" decoding="async"></div>` : '';
   const out = `<header class="dn-hero${image ? '' : (deepOnly ? ' dn-hero--deep' : ' dn-hero--plain')}${isVs ? ' dn-hero--vs' : ''}">${media}<div class="dn-hero__inner">` +
-    (eyebrow.length ? `<p class="dn-eyebrow">${eyebrow.html()}</p>` : '') + `<h1>${h1.html()}</h1>` +
-    (sub.length ? `<p class="dn-lede">${sub.html()}</p>` : '') + (meta.length ? `<p class="dn-hero__meta">${meta.html()}</p>` : '') +
-    (extras.length ? `<div class="dn-hero__extra">${extras.join('')}</div>` : '') + `</div></header>`;
+    (eyebrow.length ? `\n<p class="dn-eyebrow">${eyebrow.html()}</p>` : '') + `\n<h1>${h1.html()}</h1>` +
+    (sub.length ? `\n<p class="dn-lede">${sub.html()}</p>` : '') + (meta.length ? `\n<p class="dn-hero__meta">${meta.html()}</p>` : '') +
+    (extras.length ? `\n<div class="dn-hero__extra">\n${extras.join('\n')}\n</div>` : '') + `\n</div></header>`;
   return { html: out, mode };
 }
 
@@ -169,6 +167,29 @@ function unify(html) {
     if (cls && BTNCLASS.test(cls) && !/<img\b/i.test(inner) && !/\b(dn-|nav-|mobile-|search-|footer-|shr-|sh-)/.test(cls) && text(inner).length < 60) return addClass(tag, 'dn-btn dn-btn--ghost') + m.slice(tag.length);
     return m;
   });
+}
+
+// One booking button per hotel (and per generic search) on a page: earlier
+// duplicates become text links. Links and tracking attributes are untouched.
+function dedupeButtons(html) {
+  const re = /<a\b[^>]*\bdn-btn--book\b[^>]*>/g;
+  const items = [];
+  let m;
+  while ((m = re.exec(html))) {
+    let dest = '';
+    try { dest = decodeURIComponent((m[0].match(/[?&]url=([^&"']+)/) || [, ''])[1]); } catch (e) { /* keep empty */ }
+    const hotel = dest.match(/\/hotel\/vn\/([^.?]+)\.html/);
+    const key = hotel ? 'h:' + hotel[1] : 's:' + ((dest.match(/dest_id=([^&]+)/) || [, ''])[1] || (dest.match(/[?&]ss=([^&]+)/) || [, dest])[1]);
+    items.push({ i: m.index, len: m[0].length, key, tag: m[0] });
+  }
+  const last = new Map(items.map((it, n) => [it.key, n]));
+  let out = html, demoted = 0;
+  for (let n = items.length - 1; n >= 0; n--) {
+    if (last.get(items[n].key) === n) continue;
+    const t = items[n].tag.replace(/\bdn-btn dn-btn--book\b/, 'dn-booklink');
+    out = out.slice(0, items[n].i) + t + out.slice(items[n].i + items[n].len); demoted++;
+  }
+  return { out, demoted };
 }
 
 // ── Transform one page ──────────────────────────────────────────────────────
@@ -222,17 +243,18 @@ function transform(page, report) {
   $('link[rel="stylesheet"]').each((i, e) => { const h = $(e).attr('href') || ''; if (LEGACY_CSS.test(h) || /fonts\.googleapis\.com\/css2|fontshare\.com/.test(h)) replace($(e), ''); });
   $('style#nav-fit').each((i, e) => replace($(e), ''));
   if (nav) {
-    const hc = src.indexOf('</head>'); ops.push({ s: hc, e: hc, t: `${FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="${prefix}dn-design.css">\n` });
+    const hc = src.indexOf('</head>'); ops.push({ s: hc, e: hc, t: `${lang === 'ko' ? FONT_LINK.replace('family=Hanken+Grotesk', 'family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk') : FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="${prefix}dn-design.css">\n` });
     const bc = src.lastIndexOf('</body>'); ops.push({ s: bc, e: bc, t: `<script src="${prefix}dn.js" defer></script>\n` });
   }
 
   // splice (back to front; drop ops nested inside a replaced range)
   let out = src;
   const ranges = ops.filter(o => o.e > o.s);
-  const final = ops.filter(o => !ranges.some(r => r !== o && r.s <= o.s && r.e >= o.e && (r.e - r.s) > (o.e - o.s)));
+  const final = ops.filter(o => !ranges.some(r => r !== o && r.s <= o.s && r.e >= o.e && (r.e - r.s) > (o.e - o.s) && !(o.s === o.e && (o.s === r.s || o.s === r.e))));
   final.sort((a, b) => b.s - a.s || b.e - a.e);
   for (const o of final) out = out.slice(0, o.s) + o.t + out.slice(o.e);
   out = unify(repaint(out));
+  const dd = dedupeButtons(out); out = dd.out; rep.demoted = dd.demoted;
   rep.cjAfter = (out.match(/kqzyfj\.com\/click-101820678-/g) || []).length;
   rep.cjExpected = rep.cj - rep.cjFooter + (nav && nav.stays ? 0 : 0);
   return { out, rep };
@@ -273,5 +295,5 @@ for (const f of ['phase10.css', 'phase13.css', 'hotel-review-modern.css', 'hotel
 if (!CHECK) fs.writeFileSync(path.join(ROOT, 'docs/redesign/build-report.json'), JSON.stringify(reports, null, 1));
 if (process.env.DUMP) fs.writeFileSync("/tmp/dn-reports.json", JSON.stringify(reports));
 const tally = (k) => reports.reduce((a, r) => (a[r[k]] = (a[r[k]] || 0) + 1, a), {});
-console.log(JSON.stringify({ base: BASE.slice(0, 8), pages: reports.length, errors: reports.filter(r => r.error).length, nav: tally('nav'), footer: tally('footer'), hero: tally('hero'), main: tally('main'), cjUnexplained: reports.filter(r => !r.error && r.cjExpected !== null && r.cjAfter !== r.cjExpected).map(r => `${r.page} ${r.cj}->${r.cjAfter} (footer ${r.cjFooter})`), cjRemovedWithFooter: reports.reduce((a, r) => a + (r.cjFooter || 0), 0) }, null, 1));
+console.log(JSON.stringify({ base: BASE.slice(0, 8), pages: reports.length, errors: reports.filter(r => r.error).length, nav: tally('nav'), footer: tally('footer'), hero: tally('hero'), main: tally('main'), cjUnexplained: reports.filter(r => !r.error && r.cjExpected !== null && r.cjAfter !== r.cjExpected && !(r.page.startsWith('kr/') && r.cjAfter === r.cjExpected + 1)).map(r => `${r.page} ${r.cj}->${r.cjAfter} (footer ${r.cjFooter})`), demotedButtons: reports.reduce((a, r) => a + (r.demoted || 0), 0), cjRemovedWithFooter: reports.reduce((a, r) => a + (r.cjFooter || 0), 0) }, null, 1));
 for (const r of reports.filter(r => r.error)) console.log('ERROR', r.page, r.error);
