@@ -38,6 +38,28 @@ const GUIDES = [
 const AREAS = [['', 'Anywhere'], ['best-hotels-near-my-khe-beach.html', 'My Khe Beach'], ['best-hotels-an-thuong-da-nang.html', 'An Thuong'], ['best-han-river-hotels-da-nang.html', 'Han River & City Centre'], ['best-resorts-son-tra-peninsula.html', 'Son Tra'], ['non-nuoc-beach-da-nang.html', 'Non Nuoc Beach'], ['hoi-an-old-town-hotels.html', 'Hoi An Ancient Town'], ['an-bang-beach-hotels.html', 'An Bang Beach']];
 const STYLES = [['best-hotels-in-da-nang.html', 'Any style'], ['luxury-hotels-da-nang.html', 'Luxury'], ['da-nang-beach-hotels.html', 'Beachfront'], ['boutique-hotels-da-nang.html', 'Boutique'], ['family-hotels-da-nang.html', 'Family'], ['best-budget-hotels-in-da-nang.html', 'Affordable'], ['best-luxury-resort-couples-da-nang.html', 'Romantic']];
 
+
+// Hero slider: five editorial slides, each linking to an existing guide. Widths are the real pixel widths of the derivatives.
+const SLIDES = [
+  { page: 'best-hotels-in-da-nang.html', img: 'slide-1', w: [640, 1000, 1600], pos: '50% 62%', kicker: 'Hotel guide', title: 'The Best Hotels in Da Nang', cta: 'Explore the Hotels', alt: 'A beachfront resort above a quiet sandy bay on the Son Tra Peninsula' },
+  { page: 'where-to-stay-in-da-nang.html', img: 'slide-2', w: [640, 1000, 1600], pos: '42% 50%', kicker: 'Neighbourhoods', title: 'Where to Stay in Da Nang', cta: 'Explore the Neighbourhoods', alt: 'The Da Nang coastline and the Lady Buddha on the Son Tra Peninsula seen from above' },
+  { page: 'luxury-hotels-da-nang.html', img: 'slide-3', w: [640, 1000, 1600], pos: '48% 50%', kicker: 'Luxury', title: 'Da Nang\u2019s Luxury Escapes', cta: 'Discover Luxury Resorts', alt: 'A beachfront resort with palm gardens and a pool seen from above' },
+  { page: 'best-hotels-in-hoi-an.html', img: 'slide-4', w: [640, 1000, 1250], pos: '35% 55%', kicker: 'Hoi An', title: 'Stay Somewhere Extraordinary in Hoi An', cta: 'Explore Hoi An Hotels', alt: 'Hoi An Ancient Town rooftops and streets at sunset' },
+  { page: 'da-nang-beach-hotels.html', img: 'slide-5', w: [640, 1000, 1600], pos: '46% 55%', kicker: 'Beachfront', title: 'Wake Up by the Sea', cta: 'Explore Beachfront Hotels', alt: 'A beachfront resort with a long pool leading to the ocean' },
+];
+const ARROW = (d) => `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>`;
+const slideImg = (s, i) => {
+  const ws = s.w;
+  const f = x => `images/dn/${s.img}-${x === ws[2] ? 1600 : x}.webp`;
+  const set = ws.map(x => `${f(x)} ${x}w`).join(', ');
+  const mob = `images/dn/${s.img}-m-780.webp`;   // portrait crop around the subject, for phones
+  const eager = i === 0;
+  return `<picture><source media="(max-width: 700px)" ${eager ? 'srcset' : 'data-srcset'}="${mob}">` +
+    (eager
+      ? `<img src="${f(1000)}" srcset="${set}" sizes="100vw" alt="${esc(s.alt)}" style="object-position:${s.pos}" fetchpriority="high" decoding="async">`
+      : `<img data-src="${f(1000)}" data-srcset="${set}" sizes="100vw" alt="${esc(s.alt)}" style="object-position:${s.pos}" decoding="async">`) + '</picture>';
+};
+
 const pic = (name, w, alt, lazy = true, sizes = '100vw') => {
   const ws = Array.isArray(w) ? w : [w];
   const src = `images/dn/${name}-${ws[ws.length - 1]}.webp`;
@@ -58,6 +80,24 @@ function render({ headerHtml, menuHtml, overlayHtml, footerHtml, meta, stats, st
   const rvs = REVIEWS.filter(ok);
   const gds = GUIDES.filter(ok);
   const lg = gds.find(g => g.lead), rest = gds.filter(g => !g.lead);
+  const slides = SLIDES.filter(s => exists(s.page));
+  const slider = `<section class="dh-hero dh-slider" id="dhSlider" aria-roledescription="carousel" aria-label="Featured hotel guides">
+  <h1 class="dh-sr">Where to stay in Da Nang and Hoi An</h1>
+  <div class="dh-slides" id="dhSlides">
+${slides.map((s, i) => `    <div class="dh-slide${i === 0 ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">
+      <div class="dh-slide__media">${slideImg(s, i)}</div>
+      <div class="dh-slide__txt"><p class="dh-kicker dh-kicker--light">${s.kicker}</p><h2 class="dh-slide__t">${s.title}</h2><a class="dn-btn" href="${s.page}">${s.cta}</a></div>
+    </div>`).join('\n')}
+  </div>
+  <div class="dh-slider__ui">
+    <div class="dh-dots" role="group" aria-label="Choose a slide">${slides.map((s, i) => `<button type="button" class="dh-dot${i === 0 ? ' is-active' : ''}" aria-label="Slide ${i + 1}: ${esc(s.title)}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('')}</div>
+    <div class="dh-ctl">
+      <button type="button" class="dh-sl-btn dh-pause" aria-label="Pause slideshow"><svg class="i-pause" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="i-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
+      <button type="button" class="dh-sl-btn dh-prev" aria-label="Previous slide">${ARROW('M15 5l-7 7 7 7')}</button>
+      <button type="button" class="dh-sl-btn dh-next" aria-label="Next slide">${ARROW('M9 5l7 7-7 7')}</button>
+    </div>
+  </div>
+</section>`;
   const opt = (arr) => arr.filter(([p]) => !p || exists(p)).map(([p, l]) => `<option value="${esc(p)}">${esc(l)}</option>`).join('');
 
   return `${headerHtml}
@@ -65,16 +105,7 @@ ${menuHtml}
 ${overlayHtml}
 <main id="dn-main" class="dh">
 
-<section class="dh-hero" aria-labelledby="dh-title">
-  <div class="dh-hero__media"><img src="images/dn/hero-son-tra-1920.webp" srcset="images/dn/hero-son-tra-1000.webp 1000w, images/dn/hero-son-tra-1920.webp 1920w" sizes="100vw" alt="The Son Tra Peninsula and the Da Nang coastline from above" fetchpriority="high" decoding="async"></div>
-  <div class="dh-hero__inner">
-    <p class="dh-kicker dh-kicker--light">Independent since 2021 · Da Nang &amp; Hoi An</p>
-    <h1 id="dh-title">Where to stay in <em>Da Nang</em> and Hoi An</h1>
-    <p class="dh-hero__lede">My Khe, Son Tra, Han River, Non Nuoc, five neighbourhoods, one honest guide. Find the right part of the city before you book.</p>
-    <div class="dh-hero__actions"><a class="dn-btn" href="where-to-stay-in-da-nang.html">Read the guide</a><a class="dn-btn dn-btn--ghost" href="best-hotels-in-da-nang.html">Best hotels 2026</a></div>
-  </div>
-  <p class="dh-hero__cap">Son Tra Peninsula, Da Nang</p>
-</section>
+${slider}
 
 <form class="dh-find" id="dhFind" aria-label="Find a hotel guide">
   <p class="dh-find__label">Find your hotel</p>
@@ -82,30 +113,6 @@ ${overlayHtml}
   <label class="dh-find__field"><span>Style</span><select id="dhStyle">${opt(STYLES)}</select></label>
   <button class="dh-find__go" type="submit">Show hotels</button>
 </form>
-
-<section class="dh-start" aria-labelledby="dh-h-start">
-  <div class="dh-wrap">
-    <h2 class="dh-start__head" id="dh-h-start">New to Da Nang? Start here.</h2>
-    <ol class="dh-start__list">
-      <li><a href="where-to-stay-in-da-nang.html"><span class="dh-start__q">Where should I stay?</span><span class="dh-start__a">Five neighbourhoods compared honestly.</span><span class="dh-start__go">Where to stay</span></a></li>
-      <li><a href="#dh-h-nb"><span class="dh-start__q">Which neighbourhood suits me?</span><span class="dh-start__a">Beach, river, peninsula or Old Town.</span><span class="dh-start__go">Browse areas</span></a></li>
-      <li><a href="best-hotels-in-da-nang.html"><span class="dh-start__q">Which hotels are worth it?</span><span class="dh-start__a">The ranked list, with the trade-offs.</span><span class="dh-start__go">Best hotels</span></a></li>
-      <li><a href="best-budget-hotels-in-da-nang.html"><span class="dh-start__q">What fits my budget?</span><span class="dh-start__a">Affordable picks, and where to splurge.</span><span class="dh-start__go">Budget hotels</span></a></li>
-      <li><a href="#dh-h-book"><span class="dh-start__q">How do I book?</span><span class="dh-start__a">Every guide links to live rates.</span><span class="dh-start__go">Ready to book</span></a></li>
-    </ol>
-  </div>
-</section>
-
-<section class="dh-intro">
-  <div class="dh-wrap dh-intro__grid">
-    <p class="dh-intro__lead">Independent hotel and travel advice for Da Nang and Hoi An. No sponsored content. Locally maintained since 2021.</p>
-    <ul class="dh-stats" aria-label="The guide in numbers">
-      <li><b>${stats.directory}</b><span>hotels in the directory</span></li>
-      <li><b>${stats.reviews}</b><span>full hotel reviews</span></li>
-      <li><b>${stats.comparisons}</b><span>head-to-head comparisons</span></li>
-    </ul>
-  </div>
-</section>
 
 <section class="dh-section" aria-labelledby="dh-h-coll">
   <div class="dh-wrap">

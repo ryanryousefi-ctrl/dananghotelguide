@@ -20,5 +20,15 @@
  {"name":"g-itinerary","src":"assets/img/da-nang-itinerary-ef6089485fde.jpg","widths":[900]},
  {"name":"g-things","src":"images/dragon-bridge-da-nang-323fd6e7.webp","widths":[500]},
  {"name":"g-transport","src":"images/da-nang-transport-guide-8c98784a.webp","widths":[500]},
- {"name":"g-dining","src":"images/dining-79e68188.jpg","widths":[500]}
+ {"name":"g-dining","src":"images/dining-79e68188.jpg","widths":[500]},
+ {"name":"slide-1","src":"images/review-intercontinental-da-nang-hero.jpg","widths":[1600,1000,640],"q":0.72},
+ {"name":"slide-2","src":"images/hotels/son-tra-peninsula-da-nang.jpg","widths":[1600,1000,640],"q":0.72},
+ {"name":"slide-3","src":"images/review-hyatt-regency-da-nang-exterior.jpg","widths":[1600,1000,640],"q":0.72},
+ {"name":"slide-4","src":"images/hoi-an-first-time-visitors-e25abed6.jpg","widths":[1600,1000,640],"q":0.72},
+ {"name":"slide-5","src":"images/review-sheraton-grand-da-nang-exterior.jpg","widths":[1600,1000,640],"q":0.72},
+ {"name":"slide-1-m","src":"images/review-intercontinental-da-nang-hero.jpg","widths":[780],"q":0.7,"crop":[0.696,0.45]},
+ {"name":"slide-2-m","src":"images/hotels/son-tra-peninsula-da-nang.jpg","widths":[780],"q":0.7,"crop":[0.696,0.45]},
+ {"name":"slide-3-m","src":"images/review-hyatt-regency-da-nang-exterior.jpg","widths":[780],"q":0.7,"crop":[0.696,0.4]},
+ {"name":"slide-4-m","src":"images/hoi-an-first-time-visitors-e25abed6.jpg","widths":[780],"q":0.7,"crop":[0.696,0.41]},
+ {"name":"slide-5-m","src":"images/review-sheraton-grand-da-nang-exterior.jpg","widths":[780],"q":0.7,"crop":[0.696,0.5]}
 ]
