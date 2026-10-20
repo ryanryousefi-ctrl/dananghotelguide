@@ -55,7 +55,7 @@
 .nav-x-link{
   display:inline-flex;align-items:center;justify-content:center;
   width:28px;height:28px;
-  color:rgba(255,255,255,.5);
+  color:rgba(255,255,255,.72);
   flex-shrink:0;
   margin-right:6px;
   border-radius:50%;
@@ -65,7 +65,7 @@
 .nav-fb-link{
   display:inline-flex;align-items:center;justify-content:center;
   width:28px;height:28px;
-  color:rgba(255,255,255,.5);
+  color:rgba(255,255,255,.72);
   flex-shrink:0;
   margin-right:6px;
   border-radius:50%;
@@ -75,14 +75,14 @@
 .nav-pin-link{
   display:inline-flex;align-items:center;justify-content:center;
   width:28px;height:28px;
-  color:rgba(255,255,255,.5);
+  color:rgba(255,255,255,.72);
   flex-shrink:0;
   margin-right:6px;
   border-radius:50%;
   transition:color .18s,background .18s;
 }
 .nav-pin-link:hover{color:#fff;background:rgba(255,255,255,.1)}
-.nav-ig-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:rgba(255,255,255,.5);flex-shrink:0;margin-right:6px;border-radius:50%;transition:color .18s,background .18s}
+.nav-ig-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:rgba(255,255,255,.72);flex-shrink:0;margin-right:6px;border-radius:50%;transition:color .18s,background .18s}
 .nav-ig-link:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-links{display:flex;align-items:center;gap:0;flex:1;}
 .nav-link{
@@ -90,7 +90,7 @@
   padding:8px 14px;
   font-size:.8rem;font-weight:700;letter-spacing:.03em;
   text-transform:uppercase;
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.72);
   transition:color .18s;
   white-space:nowrap;
 }
@@ -129,21 +129,21 @@
   display:flex;align-items:center;gap:8px;
   padding:9px 12px;
   font-size:.78rem;font-weight:600;
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.72);
   border-radius:4px;
   transition:color .12s,background .12s;
   letter-spacing:.02em;text-transform:uppercase;
 }
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-dropdown-item .di-icon{font-size:.85rem;width:18px;text-align:center;flex-shrink:0;display:none}
-.nav-dd-group-label{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);padding:8px 12px 4px;margin-top:2px}
+.nav-dd-group-label{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);padding:8px 12px 4px;margin-top:2px}
 .nav-dd-divider{height:1px;background:rgba(255,255,255,.07);margin:4px 8px}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
 .nav-search-btn{
   display:flex;align-items:center;justify-content:center;
   width:36px;height:36px;border:1px solid rgba(255,255,255,.15);cursor:pointer;
   background:transparent;border-radius:4px;
-  color:rgba(255,255,255,.6);transition:background .15s,color .15s;
+  color:rgba(255,255,255,.72);transition:background .15s,color .15s;
 }
 .nav-search-btn:hover{background:rgba(255,255,255,.1);color:#fff}
 .nav-search-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2}
@@ -175,12 +175,12 @@
   padding:calc(68px + 1.5rem) var(--gutter) 2rem;overflow-y:auto;
 }
 .mobile-menu.open{transform:translateX(0)}
-.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s;}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s;}
 .mobile-nav-link:hover{color:#fff}
 .mobile-nav-link.active{color:var(--coral)}
 .mobile-dropdown-items{padding-left:1rem;max-height:0;overflow:hidden;transition:max-height .3s cubic-bezier(.4,0,.2,1);}
 .mobile-dropdown-items.open{max-height:500px}
-.mobile-sub-link{display:block;padding:10px 0;font-size:.85rem;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s;}
+.mobile-sub-link{display:block;padding:10px 0;font-size:.85rem;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.04);transition:color .15s;}
 .mobile-sub-link:hover{color:#fff}
 .mobile-stays-btn{display:block;margin-top:2rem;padding:16px;background:var(--coral);color:#fff;text-align:center;font-size:.88rem;font-weight:800;border-radius:4px;letter-spacing:.05em;text-transform:uppercase;}
 @media(max-width:1100px){
@@ -191,22 +191,22 @@
 /* ─── RESET & BASE ──────────────────────────────────────── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --sand:        #F6F1E9;
-  --sand-mid:    #EDE5D8;
-  --sand-dark:   #D9CDBB;
+  --sand:        #f0f0f0;
+  --sand-mid:    #e6e6e6;
+  --sand-dark:   #d9d9d9;
   --white:       #FFFFFF;
-  --ocean:       #1B5C5C;
-  --ocean-light: #217070;
-  --ocean-deep:  #0D3535;
-  --ocean-pale:  #EAF4F4;
-  --coral:       #C8604A;
-  --coral-light: #E07A62;
-  --ink:         #1A1A18;
-  --ink-soft:    #3C3C38;
-  --ink-muted:   #7A7A70;
-  --gold:        #B8901E;
-  --font-serif:  'Instrument Serif', Georgia, serif;
-  --font-sans:   'Satoshi', system-ui, sans-serif;
+  --ocean:       #4d4d4d;
+  --ocean-light: #595959;
+  --ocean-deep:  #111111;
+  --ocean-pale:  #f0f0f0;
+  --coral:       #666666;
+  --coral-light: #666666;
+  --ink:         #111111;
+  --ink-soft:    #333333;
+  --ink-muted:   #666666;
+  --gold:        #666666;
+  --font-serif:  'Newsreader', Georgia, serif;
+  --font-sans:   'Hanken Grotesk', system-ui, sans-serif;
   --max:         1160px;
   --gutter:      clamp(1.25rem, 5vw, 3rem);
   --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px;
@@ -229,7 +229,7 @@ a{text-decoration:none;color:inherit}
 }
 .page-header::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg, rgba(27,92,92,.15) 0%, transparent 60%);
+  background:linear-gradient(135deg, rgba(77,77,77,.15) 0%, transparent 60%);
   pointer-events:none;
 }
 .header-inner{
@@ -251,7 +251,7 @@ a{text-decoration:none;color:inherit}
 }
 .header-subtitle{
   font-size:1.05rem;
-  color:rgba(255,255,255,.65);
+  color:rgba(255,255,255,.72);
   line-height:1.6;
   max-width:680px;
 }
@@ -370,7 +370,7 @@ a{text-decoration:none;color:inherit}
 /* ─── FOOTER ─────────────────────────────────────────────── */
 .site-footer{
   background:var(--ocean-deep);
-  color:rgba(255,255,255,.65);
+  color:rgba(255,255,255,.72);
   padding:3rem var(--gutter) 2rem;
   margin-top:4rem;
 }
@@ -394,7 +394,7 @@ a{text-decoration:none;color:inherit}
 .footer-links a{
   font-size:.85rem;
   font-weight:500;
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.72);
   transition:color .2s;
 }
 .footer-links a:hover{
@@ -402,7 +402,7 @@ a{text-decoration:none;color:inherit}
 }
 .footer-copy{
   font-size:.75rem;
-  color:rgba(255,255,255,.4);
+  color:rgba(255,255,255,.72);
 }
 
 @media (max-width: 768px){
@@ -445,7 +445,7 @@ a{text-decoration:none;color:inherit}
 .dnv-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .dnv-credit{font-size:.66rem;color:var(--ink-muted);margin:0;padding:0 1.5rem .9rem;line-height:1.4}
 .dnv-lead{margin-bottom:clamp(1.5rem,3vw,2.25rem)}
-.dnv-noimg{border-top:5px solid var(--ocean,#0b5d7a)}
+.dnv-noimg{border-top:5px solid var(--ocean,#4d4d4d)}
 @media(min-width:860px){.dnv-lead.dnv-noimg .dnv-link{display:block}}
 @media(min-width:860px){
   .dnv-lead .dnv-link{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
@@ -474,6 +474,115 @@ a{text-decoration:none;color:inherit}
 <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="bk-widget.css">
 <link rel="stylesheet" href="search-ui.css">
+<style id="dn-dark">:is(.page-header,
+.dnv-lead .dnv-credit,
+.dnv-details>summary,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay){--coral:#d9d9d9;--coral-light:#e6e6e6;--gold:#d9d9d9;--p10-coral:#d9d9d9;--p10-gold:#d9d9d9;--dn-brass:#d9d9d9;--ink-muted:#c4c4c4;--text-muted:#c4c4c4;--dn-on-accent:#111}
+:is(.nav-stays-btn,.nav-stays-btn:hover,.mobile-stays-btn,.ep-card-badge,.ep-card-badge--gold,.ep-card-cta--coral,.bp-badge,.bp-badge--gold,.bp-cta,.dst-cta-primary,.booking-band--coral,.nbhd-card-tag,.ep-badge-coral,.p13-intro-cta,.p13-hotel-badge){color:var(--dn-on-accent,#fff)}
+:is(.page-header,
+.dnv-lead .dnv-credit,
+.dnv-details>summary,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) *{--ocean:#d9d9d9;--ocean-light:#e6e6e6;--dn-link:#fff}
+html body :is(.page-header,
+.dnv-lead .dnv-credit,
+.dnv-details>summary,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) a.dn-btn:not(.tc-btn){background:#fff !important;color:#111 !important;border-color:#fff !important}
+html body :is(.page-header,
+.dnv-lead .dnv-credit,
+.dnv-details>summary,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#fff !important;border-color:rgba(255,255,255,.7) !important}
+:is(.nav-hamburger span,.guide-card,.guide-card-image,.guide-category,.dnv-img,.dnv-cat,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality){--coral:#111;--coral-light:#333;--gold:#111;--p10-coral:#111;--p10-gold:#111;--dn-brass:#111;--ink-muted:#595959;--text-muted:#595959;--dn-on-accent:#fff}
+:is(.nav-hamburger span,.guide-card,.guide-card-image,.guide-category,.dnv-img,.dnv-cat,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) *{--ocean:#333;--ocean-light:#595959;--dn-link:#111}
+html body :is(.nav-hamburger span,.guide-card,.guide-card-image,.guide-category,.dnv-img,.dnv-cat,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) a.dn-btn:not(.tc-btn){background:#111 !important;color:#fff !important;border-color:#111 !important}
+html body :is(.nav-hamburger span,.guide-card,.guide-card-image,.guide-category,.dnv-img,.dnv-cat,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#111 !important;border-color:#111 !important}</style>
 </head>
 <body>
 
@@ -489,38 +598,38 @@ a{text-decoration:none;color:inherit}
     <div class="nav-dropdown">
       <a href="best-hotels-in-da-nang.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hotels</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
-        <a href="da-nang-beach-hotels.html"    class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Beachfront</a>
-        <a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Riverside</a>
-        <a href="luxury-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Luxury</a>
-        <a href="family-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Family</a>
-        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Boutique</a>
-        <a href="da-nang-hotels-map.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Hotels Map</a>
-        <a href="da-nang-hotel-directory.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Hotel Directory</a>
+        <a href="best-hotels-in-da-nang.html" class="nav-dropdown-item" role="menuitem">Best Hotels</a>
+        <a href="da-nang-beach-hotels.html"    class="nav-dropdown-item" role="menuitem">Beachfront</a>
+        <a href="da-nang-riverfront-hotels.html" class="nav-dropdown-item" role="menuitem">Riverside</a>
+        <a href="luxury-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem">Luxury</a>
+        <a href="family-hotels-da-nang.html"   class="nav-dropdown-item" role="menuitem">Family</a>
+        <a href="boutique-hotels-da-nang.html" class="nav-dropdown-item" role="menuitem">Boutique</a>
+        <a href="da-nang-hotels-map.html" class="nav-dropdown-item" role="menuitem">Hotels Map</a>
+        <a href="da-nang-hotel-directory.html" class="nav-dropdown-item" role="menuitem">Hotel Directory</a>
       </div>
     </div>
     <a href="where-to-stay-in-da-nang.html" class="nav-link">Where to Stay</a>
     <div class="nav-dropdown">
       <a href="guides.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guides</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="things-to-do-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🗺</span>Things To Do</a>
-        <a href="da-nang-itinerary.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">📅</span>Itineraries</a>
-        <a href="da-nang-transport-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🚗</span>Getting Around</a>
-        <a href="da-nang-first-time-visitors.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">✈</span>First Timers</a>
-        <a href="best-time-to-visit-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">☀</span>Best Time to Visit</a>
-        <a href="da-nang-budget-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">💰</span>Budget Guide</a>
-        <a href="da-nang-digital-nomad-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">💻</span>Digital Nomads</a>
-        <a href="guides.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">📋</span>All Guides</a>
+        <a href="things-to-do-in-da-nang.html" class="nav-dropdown-item" role="menuitem">Things To Do</a>
+        <a href="da-nang-itinerary.html" class="nav-dropdown-item" role="menuitem">Itineraries</a>
+        <a href="da-nang-transport-guide.html" class="nav-dropdown-item" role="menuitem">Getting Around</a>
+        <a href="da-nang-first-time-visitors.html" class="nav-dropdown-item" role="menuitem">First Timers</a>
+        <a href="best-time-to-visit-da-nang.html" class="nav-dropdown-item" role="menuitem">Best Time to Visit</a>
+        <a href="da-nang-budget-guide.html" class="nav-dropdown-item" role="menuitem">Budget Guide</a>
+        <a href="da-nang-digital-nomad-guide.html" class="nav-dropdown-item" role="menuitem">Digital Nomads</a>
+        <a href="guides.html" class="nav-dropdown-item" role="menuitem">All Guides</a>
       </div>
     </div>
     <div class="nav-dropdown">
       <a href="dining.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Food &amp; Nightlife</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="dining.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🍜</span>Dining Guide</a>
-        <a href="best-bars-in-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🍸</span>Best Bars</a>
-        <a href="da-nang-nightlife-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🌙</span>Nightlife Guide</a>
-        <a href="best-cafes-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">☕</span>Best Cafes</a>
-        <a href="da-nang-hoi-an-markets-guide.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">🛒</span>Markets Guide</a>
+        <a href="dining.html" class="nav-dropdown-item" role="menuitem">Dining Guide</a>
+        <a href="best-bars-in-da-nang.html" class="nav-dropdown-item" role="menuitem">Best Bars</a>
+        <a href="da-nang-nightlife-guide.html" class="nav-dropdown-item" role="menuitem">Nightlife Guide</a>
+        <a href="best-cafes-da-nang.html" class="nav-dropdown-item" role="menuitem">Best Cafes</a>
+        <a href="da-nang-hoi-an-markets-guide.html" class="nav-dropdown-item" role="menuitem">Markets Guide</a>
       </div>
     </div>
     <a href="hotel-reviews.html" class="nav-link">Reviews</a>
@@ -528,25 +637,25 @@ a{text-decoration:none;color:inherit}
       <a href="hoi-an.html" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Hoi An</a>
       <div class="nav-dropdown-menu" role="menu">
         <div class="nav-dd-group-label">Hoi An</div>
-        <a href="hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Travel Guide</a>
-        <a href="da-nang-vs-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Da Nang vs Hoi An</a>
+        <a href="hoi-an.html" class="nav-dropdown-item" role="menuitem">Travel Guide</a>
+        <a href="da-nang-vs-hoi-an.html" class="nav-dropdown-item" role="menuitem">Da Nang vs Hoi An</a>
         <div class="nav-dd-divider"></div>
         <div class="nav-dd-group-label">Hotels</div>
-        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Hotels</a>
-        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Where to Stay</a>
-        <a href="best-value-hotels-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Best Value</a>
-        <a href="hoi-an-old-town-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Old Town</a>
-        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>An Bang Beach</a>
+        <a href="best-hotels-in-hoi-an.html" class="nav-dropdown-item" role="menuitem">Best Hotels</a>
+        <a href="where-to-stay-in-hoi-an.html" class="nav-dropdown-item" role="menuitem">Where to Stay</a>
+        <a href="best-value-hotels-hoi-an.html" class="nav-dropdown-item" role="menuitem">Best Value</a>
+        <a href="hoi-an-old-town-hotels.html" class="nav-dropdown-item" role="menuitem">Old Town</a>
+        <a href="an-bang-beach-hotels.html" class="nav-dropdown-item" role="menuitem">An Bang Beach</a>
         <div class="nav-dd-divider"></div>
         <div class="nav-dd-group-label">Planning</div>
-        <a href="da-nang-airport-to-hoi-an.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Airport to Hoi An</a>
-        <a href="is-hoi-an-cheaper-than-da-nang.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Cost Comparison</a>
+        <a href="da-nang-airport-to-hoi-an.html" class="nav-dropdown-item" role="menuitem">Airport to Hoi An</a>
+        <a href="is-hoi-an-cheaper-than-da-nang.html" class="nav-dropdown-item" role="menuitem">Cost Comparison</a>
       </div>
     </div>
     <div class="nav-dropdown">
       <a href="news.html" class="nav-link nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">News</a>
       <div class="nav-dropdown-menu" role="menu">
-        <a href="news.html" class="nav-dropdown-item" role="menuitem"><span class="di-icon">★</span>Latest News</a>
+        <a href="news.html" class="nav-dropdown-item" role="menuitem">Latest News</a>
       </div>
     </div>
     <a href="about.html" class="nav-link">About</a>
@@ -652,7 +761,7 @@ a{text-decoration:none;color:inherit}
 <header class="page-header">
   <div class="header-inner">
     <p class="header-kicker">Stay Informed</p>
-<div style="background:var(--ocean-pale);border:1px solid rgba(27,92,92,.2);border-radius:14px;padding:1.1rem 1.4rem;margin:1.5rem 0 1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.85rem;">
+<div style="background:var(--ocean-pale);border:1px solid rgba(77,77,77,.2);border-radius:14px;padding:1.1rem 1.4rem;margin:1.5rem 0 1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.85rem;">
   <div>
     <p style="font-weight:700;color:var(--ocean);font-size:.93rem;margin:0 0 .2rem;">Check prices for your dates in Da Nang</p>
     <p style="font-size:.8rem;color:var(--ink-muted);margin:0;">Live rates &middot; Free cancellation on most hotels &middot; Instant confirmation</p>
@@ -1178,10 +1287,10 @@ a{text-decoration:none;color:inherit}
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 
-<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;">
+<section style="background:var(--ocean-deep);padding:clamp(2.5rem,5vw,4rem) var(--gutter);text-align:center;" class="dn-dark">
   <div style="max-width:680px;margin:0 auto;">
     <p style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2rem);color:#fff;margin:0 0 .75rem;line-height:1.2;letter-spacing:-.025em;">Ready to book your Da&nbsp;Nang stay?</p>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Where to stay guide</a></p>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.72);margin:0 0 2rem;line-height:1.7;">Compare top hotels, check live rates, and book with free cancellation on most properties. <a href="best-hotels-in-da-nang.html" style="color:rgba(255,255,255,.72);text-decoration:underline;">Best hotels in Da Nang</a> &middot; <a href="where-to-stay-in-da-nang.html" style="color:rgba(255,255,255,.72);text-decoration:underline;">Where to stay guide</a></p>
     <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=news&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Den-us" target="_blank" rel="nofollow noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;font-size:.92rem;font-weight:700;padding:13px 26px;border-radius:100px;text-decoration:none;">Compare all Da Nang hotels on Booking.com &#8594;</a>
     <p style="margin:1.5rem 0 0;font-size:.73rem;color:rgba(255,255,255,.25);">Affiliate disclosure: we earn a small commission when you book via our links, at no extra cost to you.</p>
   </div>
@@ -1259,10 +1368,10 @@ a{text-decoration:none;color:inherit}
   <a class="shr-btn" id="shr-li" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
 </aside>
 <style>
-.shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#0D3535;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
-.shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Satoshi',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
+.shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#111111;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
+.shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#C8604A;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#666666;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}

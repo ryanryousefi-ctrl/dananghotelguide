@@ -7,20 +7,20 @@
 
 /* ─── CANONICAL BREADCRUMB ─────────────────────────────────────────────────── */
 /* Fixes browser-default numbered list rendering on all pages using .breadcrumb */
-.breadcrumb{background:var(--white,#fff);border-bottom:1px solid var(--sand-dark,#D9CDBB);padding:10px var(--gutter,clamp(1.25rem,5vw,3rem))}
-.breadcrumb ol{max-width:var(--max,1200px);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted,#7A7A70)}
+.breadcrumb{background:var(--white,#fff);border-bottom:1px solid var(--sand-dark,#cccccc);padding:10px var(--gutter,clamp(1.25rem,5vw,3rem))}
+.breadcrumb ol{max-width:var(--max,1200px);margin:0 auto;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:.76rem;color:var(--ink-muted,#666666)}
 .breadcrumb li+li::before{content:'›';margin-right:4px;opacity:.5}
-.breadcrumb a{color:var(--ocean,#1B5C5C);transition:opacity .15s}
+.breadcrumb a{color:var(--ocean,#4d4d4d);transition:opacity .15s}
 .breadcrumb a:hover{opacity:.7}
-.breadcrumb li:last-child span{color:var(--ink-soft,#3C3C38);font-weight:600}
+.breadcrumb li:last-child span{color:var(--ink-soft,#333333);font-weight:600}
 
 /* ─── Shared white-button variables ───────────────────────────────────────── */
 :root {
   --cta-bg:           #ffffff;
-  --cta-text:         #073f3d;
-  --cta-border:       rgba(7, 63, 61, 0.18);
-  --cta-shadow:       0 2px 8px rgba(7,63,61,.10), 0 1px 3px rgba(0,0,0,.07);
-  --cta-shadow-hover: 0 8px 22px rgba(7,63,61,.16), 0 2px 6px rgba(0,0,0,.09);
+  --cta-text:         #333333;
+  --cta-border:       rgba(51,51,51, 0.18);
+  --cta-shadow:       0 2px 8px rgba(51,51,51,.10), 0 1px 3px rgba(0,0,0,.07);
+  --cta-shadow-hover: 0 8px 22px rgba(51,51,51,.16), 0 2px 6px rgba(0,0,0,.09);
   --cta-transition:   background .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   --cta-radius-pill:  100px;
   --cta-radius-md:    10px;
@@ -66,8 +66,8 @@
 .premium-cta-secondary,
 .premium-hero-cta {
   background: var(--cta-bg, #ffffff) !important;
-  color: var(--cta-text, #073f3d) !important;
-  border: 1px solid var(--cta-border, rgba(7,63,61,.18)) !important;
+  color: var(--cta-text, #333333) !important;
+  border: 1px solid var(--cta-border, rgba(51,51,51,.18)) !important;
   box-shadow: var(--cta-shadow) !important;
   font-weight: 800 !important;
   text-decoration: none !important;
@@ -114,9 +114,9 @@
 .premium-booking-btn:hover,
 .premium-cta-secondary:hover,
 .premium-hero-cta:hover {
-  background: #f5fafa !important;
-  color: var(--cta-text, #073f3d) !important;
-  border-color: rgba(7,63,61,.32) !important;
+  background: #fafafa !important;
+  color: var(--cta-text, #333333) !important;
+  border-color: rgba(51,51,51,.32) !important;
   box-shadow: var(--cta-shadow-hover) !important;
   transform: translateY(-2px) !important;
   text-decoration: none !important;
@@ -321,9 +321,9 @@ nav .nav-stays-btn,
   gap: 6px !important;
   width: auto !important;
   background: var(--bkg-secondary-bg, #ffffff) !important;
-  border: 2px solid var(--bkg-secondary-border, #0D3535) !important;
-  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
-  color: var(--bkg-secondary-text, #0D3535) !important;
+  border: 2px solid var(--bkg-secondary-border, #333333) !important;
+  box-shadow: 0 2px 8px rgba(51,51,51, .10) !important;
+  color: var(--bkg-secondary-text, #333333) !important;
   font-weight: 800 !important;
   font-size: .8rem !important;
   text-decoration: none !important;
@@ -338,11 +338,11 @@ nav .nav-stays-btn,
 }
 
 .hs-btn:hover {
-  background: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  background: var(--bkg-secondary-bg-hover, #333333) !important;
   color: #fff !important;
-  border-color: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  border-color: var(--bkg-secondary-bg-hover, #333333) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
+  box-shadow: 0 8px 20px rgba(51,51,51, .22) !important;
 }
 
 /* ─── SHORTLIST / COMPARISON CARD CTA — nested inside a whole-card Booking.com
@@ -358,9 +358,9 @@ nav .nav-stays-btn,
   gap: 6px !important;
   width: auto !important;
   background: var(--bkg-secondary-bg, #ffffff) !important;
-  border: 2px solid var(--bkg-secondary-border, #0D3535) !important;
-  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
-  color: var(--bkg-secondary-text, #0D3535) !important;
+  border: 2px solid var(--bkg-secondary-border, #333333) !important;
+  box-shadow: 0 2px 8px rgba(51,51,51, .10) !important;
+  color: var(--bkg-secondary-text, #333333) !important;
   font-weight: 800 !important;
   text-decoration: none !important;
   letter-spacing: .01em !important;
@@ -374,11 +374,11 @@ nav .nav-stays-btn,
 
 .bb-shortlist-cta:hover,
 .hc-cta:hover {
-  background: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  background: var(--bkg-secondary-bg-hover, #333333) !important;
   color: #fff !important;
-  border-color: var(--bkg-secondary-bg-hover, #0D3535) !important;
+  border-color: var(--bkg-secondary-bg-hover, #333333) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
+  box-shadow: 0 8px 20px rgba(51,51,51, .22) !important;
 }
 
 /* ─── DECISION BUTTONS ────────────────────────────────────────────────────── */
@@ -393,16 +393,16 @@ nav .nav-stays-btn,
 .decision-btn.coral,
 .decision-btn.outline {
   background: var(--cta-bg, #ffffff) !important;
-  color: var(--cta-text, #073f3d) !important;
-  border: 1px solid var(--cta-border, rgba(7,63,61,.18)) !important;
+  color: var(--cta-text, #333333) !important;
+  border: 1px solid var(--cta-border, rgba(51,51,51,.18)) !important;
   box-shadow: var(--cta-shadow) !important;
 }
 
 .decision-btn.primary:hover,
 .decision-btn.coral:hover,
 .decision-btn.outline:hover {
-  background: #f5fafa !important;
-  border-color: rgba(7,63,61,.32) !important;
+  background: #fafafa !important;
+  border-color: rgba(51,51,51,.32) !important;
   box-shadow: var(--cta-shadow-hover) !important;
   transform: translateY(-2px) !important;
 }
@@ -424,7 +424,7 @@ nav .nav-stays-btn,
 
 .premium-inline-cta {
   background: transparent !important;
-  color: var(--cta-text, #073f3d) !important;
+  color: var(--cta-text, #333333) !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
@@ -438,7 +438,7 @@ nav .nav-stays-btn,
 
 .premium-inline-cta:hover {
   background: transparent !important;
-  color: #0a5452 !important;
+  color: #4d4d4d !important;
   text-decoration: underline !important;
   transform: none !important;
   box-shadow: none !important;
@@ -458,7 +458,7 @@ nav .nav-stays-btn,
 .hotel-card-cta:focus-visible,
 .premium-cta-primary:focus-visible,
 .premium-booking-btn:focus-visible {
-  outline: 3px solid rgba(7,63,61,.45) !important;
+  outline: 3px solid rgba(51,51,51,.45) !important;
   outline-offset: 3px !important;
 }
 
@@ -472,14 +472,14 @@ nav .nav-stays-btn,
  * ────────────────────────────────────────────────────────────────────────── */
 
 :root {
-  --bkg-primary-bg:      var(--ocean-deep, #0D3535);
-  --bkg-primary-bg-hover: var(--ocean, #1B5C5C);
+  --bkg-primary-bg:      var(--ocean-deep, #333333);
+  --bkg-primary-bg-hover: var(--ocean, #4d4d4d);
   --bkg-primary-text:    #ffffff;
   --bkg-primary-border:  rgba(255, 255, 255, .75);
   --bkg-secondary-bg:       #ffffff;
-  --bkg-secondary-bg-hover: var(--ocean-deep, #0D3535);
-  --bkg-secondary-text:     var(--ocean-deep, #0D3535);
-  --bkg-secondary-border:   var(--ocean-deep, #0D3535);
+  --bkg-secondary-bg-hover: var(--ocean-deep, #333333);
+  --bkg-secondary-text:     var(--ocean-deep, #333333);
+  --bkg-secondary-border:   var(--ocean-deep, #333333);
   --bkg-radius: 8px;
 }
 
@@ -515,7 +515,7 @@ nav .nav-stays-btn,
   border-color: var(--bkg-secondary-border) !important;
   padding: 10px 20px !important;
   font-size: .84rem !important;
-  box-shadow: 0 2px 8px rgba(13, 53, 53, .10) !important;
+  box-shadow: 0 2px 8px rgba(51,51,51, .10) !important;
 }
 
 a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover {
@@ -523,7 +523,7 @@ a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover {
   color: #fff !important;
   border-color: var(--bkg-secondary-bg-hover) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(13, 53, 53, .22) !important;
+  box-shadow: 0 8px 20px rgba(51,51,51, .22) !important;
 }
 
 a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):active {
@@ -532,7 +532,7 @@ a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):active 
 }
 
 a[data-cta-location]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible {
-  outline: 3px solid var(--ocean, #1B5C5C) !important;
+  outline: 3px solid var(--ocean, #4d4d4d) !important;
   outline-offset: 3px !important;
 }
 
@@ -549,7 +549,7 @@ a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not
   border-color: var(--bkg-primary-border) !important;
   padding: 14px 30px !important;
   font-size: .92rem !important;
-  box-shadow: 0 4px 14px rgba(13, 53, 53, .28) !important;
+  box-shadow: 0 4px 14px rgba(51,51,51, .28) !important;
 }
 
 a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):hover,
@@ -561,7 +561,7 @@ a[data-cta-location="booking_primary"]:not(.bb-shortlist-card):not(.hc-card):not
   color: #fff !important;
   border-color: #fff !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 10px 26px rgba(13, 53, 53, .34) !important;
+  box-shadow: 0 10px 26px rgba(51,51,51, .34) !important;
 }
 
 a[data-cta-location="booking_review"]:not(.bb-shortlist-card):not(.hc-card):not(.hs-card):focus-visible,

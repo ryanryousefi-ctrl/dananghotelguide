@@ -41,3 +41,11 @@
 !/vercel.json
 !/package.json
 !/package-lock.json
+
+# Redesign 2.0 assets
+!/dn-design.css
+!/dn-home.css
+!/dn.js
+!/dn-home.js
+
+!/dn-consent.js

@@ -42,7 +42,7 @@
   font-weight: 800;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .42);
+  color: rgba(255, 255, 255, .72);
   margin-bottom: .45rem;
   line-height: 1;
 }
@@ -51,7 +51,7 @@
 .sw-bk-dest {
   font-size: .75rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, .65);
+  color: rgba(255, 255, 255, .72);
   margin-bottom: .5rem;
   line-height: 1.2;
   display: flex;
@@ -78,7 +78,7 @@
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .35);
+  color: rgba(255, 255, 255, .72);
   line-height: 1;
 }
 
@@ -113,7 +113,7 @@
 .sw-bk-btn {
   display: block;
   width: 100%;
-  background: #C8604A;
+  background: #666666;
   border: none;
   border-radius: 8px;
   color: #fff;
@@ -130,7 +130,7 @@
 }
 
 .sw-bk-btn:hover {
-  background: #E07A62;
+  background: #999999;
   transform: translateY(-1px);
 }
 
@@ -216,7 +216,7 @@
   padding: 0.75rem var(--gutter, 1.25rem);
   width: 100%;
   box-sizing: border-box;
-  background: #0d2a2a;
+  background: #111111;
 }
 .sw-bk-wrap--after .sw-bk-widget {
   background: transparent;
