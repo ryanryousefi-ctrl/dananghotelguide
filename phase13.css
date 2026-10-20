@@ -67,7 +67,7 @@ section#quick-answer {
 
 /* Quick-answer box: make it visually strong, not a pale ghost */
 .quick-answer {
-  background: var(--ocean-deep, #0D3535) !important;
+  background: var(--ocean-deep, #12201f) !important;
   border: none !important;
   border-left: none !important;
   border-radius: 14px !important;
@@ -86,7 +86,7 @@ section#quick-answer {
   font-weight: 800 !important;
   letter-spacing: .18em !important;
   text-transform: uppercase !important;
-  color: var(--coral, #C8604A) !important;
+  color: var(--coral, #93702f) !important;
   margin-bottom: .65rem !important;
 }
 .quick-answer .qa-text { font-size: .88rem; line-height: 1.75; }
@@ -129,11 +129,11 @@ section#quick-answer {
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--coral, #C8604A);
+  color: var(--coral, #93702f);
   margin-bottom: .5rem;
 }
 .editors-picks-section .ep-headline {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.5rem,2.8vw,2.2rem);
   letter-spacing: -.025em;
   line-height: 1.1;
@@ -180,9 +180,9 @@ section#quick-answer {
   flex-direction: column;
 }
 .editors-picks-section .ep-card-name {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: 1rem;
-  color: var(--ocean-deep, #0D3535);
+  color: var(--ocean-deep, #12201f);
   line-height: 1.2;
   margin-bottom: .3rem;
 }
@@ -202,7 +202,7 @@ section#quick-answer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ocean, #1B5C5C);
+  background: var(--ocean, #25544f);
   color: #fff;
   font-size: .73rem;
   font-weight: 700;
@@ -212,13 +212,13 @@ section#quick-answer {
   transition: background .15s;
   text-align: center;
 }
-.editors-picks-section .ep-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
+.editors-picks-section .ep-cta-primary:hover { background: var(--ocean-deep, #12201f); }
 .editors-picks-section .ep-cta-ghost {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1.5px solid rgba(27,92,92,.25);
-  color: var(--ocean, #1B5C5C);
+  color: var(--ocean, #25544f);
   font-size: .73rem;
   font-weight: 700;
   padding: 8px 12px;
@@ -227,7 +227,7 @@ section#quick-answer {
   transition: all .15s;
   text-align: center;
 }
-.editors-picks-section .ep-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; border-color: var(--ocean); }
+.editors-picks-section .ep-cta-ghost:hover { background: var(--ocean, #25544f); color: #fff; border-color: var(--ocean); }
 
 /* EP badge system */
 .ep-badge {
@@ -240,8 +240,8 @@ section#quick-answer {
   border-radius: 100px;
   margin-bottom: .55rem;
 }
-.ep-badge-coral { background: var(--coral, #C8604A); color: #fff; }
-.ep-badge-ocean { background: var(--ocean, #1B5C5C); color: #fff; }
+.ep-badge-coral { background: var(--coral, #93702f); color: #fff; }
+.ep-badge-ocean { background: var(--ocean, #25544f); color: #fff; }
 
 @media (max-width: 768px) {
   .editors-picks-section .ep-grid { grid-template-columns: 1fr !important; }
@@ -354,10 +354,10 @@ section#quick-answer {
 .wid-hcard-body {
   padding: .85rem 1rem 1rem;
 }
-.wid-hotel-fit { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--ocean, #1B5C5C); margin-bottom: .2rem; }
-.wid-hotel-name { font-weight: 700; font-size: .9rem; color: var(--ocean-deep, #0D3535); margin-bottom: .2rem; }
+.wid-hotel-fit { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--ocean, #25544f); margin-bottom: .2rem; }
+.wid-hotel-name { font-weight: 700; font-size: .9rem; color: var(--ocean-deep, #12201f); margin-bottom: .2rem; }
 .wid-hotel-why { font-size: .76rem; color: var(--ink-muted, #666); line-height: 1.5; }
-.wid-hotel-btn { font-size: .73rem; font-weight: 700; color: var(--coral, #C8604A); margin-top: .4rem; display: block; }
+.wid-hotel-btn { font-size: .73rem; font-weight: 700; color: var(--coral, #93702f); margin-top: .4rem; display: block; }
 
 /* ══════════════════════════════════════════════════════════
    HOTEL STRIP HEADER — section header fix
@@ -370,16 +370,16 @@ section#quick-answer {
   margin-bottom: 1.5rem;
 }
 .p5-strip-title {
-  font-family: var(--p5-serif, 'Instrument Serif', serif);
+  font-family: var(--p5-serif, 'Newsreader', serif);
   font-size: clamp(1.4rem, 2.8vw, 2rem);
   letter-spacing: -.025em;
   line-height: 1.1;
 }
-.p5-strip-title em { font-style: italic; color: var(--ocean, #1B5C5C); }
+.p5-strip-title em { font-style: italic; color: var(--ocean, #25544f); }
 .p5-strip-all {
   font-size: .75rem;
   font-weight: 700;
-  color: var(--ocean, #1B5C5C);
+  color: var(--ocean, #25544f);
   border-bottom: 1px solid rgba(27,92,92,.3);
   padding-bottom: 1px;
   white-space: nowrap;
@@ -439,7 +439,7 @@ section#quick-answer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--ocean-deep, #0D3535);
+  background: var(--ocean-deep, #12201f);
   color: #fff;
 }
 .p13-intro-eyebrow {
@@ -451,7 +451,7 @@ section#quick-answer {
   margin-bottom: .7rem;
 }
 .p13-intro-heading {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.5rem, 2.8vw, 2.2rem);
   line-height: 1.15;
   letter-spacing: -.025em;
@@ -465,7 +465,7 @@ section#quick-answer {
   align-items: center;
   gap: 6px;
   margin-top: 1.5rem;
-  background: var(--coral, #C8604A);
+  background: var(--coral, #93702f);
   color: #fff;
   font-size: .8rem;
   font-weight: 700;
@@ -478,7 +478,7 @@ section#quick-answer {
 
 /* Quick-verdict visual card (replaces bland sand box) */
 .p13-verdict-strip {
-  background: var(--ocean-deep, #0D3535);
+  background: var(--ocean-deep, #12201f);
   padding: clamp(2rem,4vw,3rem) var(--gutter, 1.5rem);
 }
 .p13-verdict-strip-inner {
@@ -494,7 +494,7 @@ section#quick-answer {
   margin-bottom: .8rem;
 }
 .p13-vs-heading {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.4rem,2.5vw,2rem);
   color: #fff;
   letter-spacing: -.025em;
@@ -536,7 +536,7 @@ section#quick-answer {
 .p13-vs-card:hover .p13-vs-img img { transform: scale(1.05); }
 .p13-vs-body { padding: .9rem 1.1rem 1.1rem; flex: 1; display: flex; flex-direction: column; }
 .p13-vs-label { font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .3rem; }
-.p13-vs-name { font-family: 'Instrument Serif', Georgia, serif; font-size: 1.05rem; color: #fff; line-height: 1.2; margin-bottom: .35rem; }
+.p13-vs-name { font-family: 'Newsreader', Georgia, serif; font-size: 1.05rem; color: #fff; line-height: 1.2; margin-bottom: .35rem; }
 .p13-vs-desc { font-size: .78rem; color: rgba(255,255,255,.5); line-height: 1.6; flex: 1; }
 .p13-vs-btn {
   display: inline-block;
@@ -563,12 +563,12 @@ section#quick-answer {
   margin-bottom: 1.75rem;
 }
 .p13-showcase-heading {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.4rem,2.8vw,2rem);
   letter-spacing: -.025em;
   line-height: 1.1;
 }
-.p13-showcase-heading em { font-style: italic; color: var(--ocean, #1B5C5C); }
+.p13-showcase-heading em { font-style: italic; color: var(--ocean, #25544f); }
 .p13-showcase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -607,7 +607,7 @@ section#quick-answer {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: var(--coral, #C8604A);
+  background: var(--coral, #93702f);
   color: #fff;
   font-size: .6rem;
   font-weight: 800;
@@ -619,9 +619,9 @@ section#quick-answer {
 .p13-hotel-body { padding: 1.1rem 1.2rem 1.25rem; flex: 1; display: flex; flex-direction: column; }
 .p13-hotel-stars { font-size: .7rem; color: #c8a050; margin-bottom: .35rem; }
 .p13-hotel-name {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: 1.05rem;
-  color: var(--ocean-deep, #0D3535);
+  color: var(--ocean-deep, #12201f);
   line-height: 1.2;
   margin-bottom: .25rem;
 }
@@ -633,7 +633,7 @@ section#quick-answer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ocean, #1B5C5C);
+  background: var(--ocean, #25544f);
   color: #fff;
   font-size: .75rem;
   font-weight: 700;
@@ -643,13 +643,13 @@ section#quick-answer {
   transition: background .15s;
   text-align: center;
 }
-.p13-hotel-cta-primary:hover { background: var(--ocean-deep, #0D3535); }
+.p13-hotel-cta-primary:hover { background: var(--ocean-deep, #12201f); }
 .p13-hotel-cta-ghost {
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1.5px solid rgba(27,92,92,.25);
-  color: var(--ocean, #1B5C5C);
+  color: var(--ocean, #25544f);
   font-size: .75rem;
   font-weight: 700;
   padding: 8px 14px;
@@ -658,7 +658,7 @@ section#quick-answer {
   transition: all .15s;
   text-align: center;
 }
-.p13-hotel-cta-ghost:hover { background: var(--ocean, #1B5C5C); color: #fff; border-color: var(--ocean, #1B5C5C); }
+.p13-hotel-cta-ghost:hover { background: var(--ocean, #25544f); color: #fff; border-color: var(--ocean, #25544f); }
 
 /* Cinematic section separator — full-width image band */
 .p13-cin-band {
@@ -695,7 +695,7 @@ section#quick-answer {
   margin-bottom: .65rem;
 }
 .p13-cin-band-headline {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   color: #fff;
   line-height: 1.15;
@@ -744,7 +744,7 @@ section#quick-answer {
   margin-bottom: .6rem;
 }
 .verdict-block-question {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: 'Newsreader', Georgia, serif;
   font-size: clamp(1.15rem, 2.2vw, 1.5rem);
   color: #fff;
   line-height: 1.2;
@@ -776,7 +776,7 @@ section#quick-answer {
 /* ── LOCAL PERSPECTIVE BLOCK ─────────────────────────────── */
 .local-perspective {
   background: #F2F7F5;
-  border-left: 4px solid #1B5C5C;
+  border-left: 4px solid #25544f;
   border-radius: 0 12px 12px 0;
   padding: 1.4rem 1.6rem;
   margin: 2rem 0;
@@ -789,7 +789,7 @@ section#quick-answer {
   font-weight: 800;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #1B5C5C;
+  color: #25544f;
   margin-bottom: .6rem;
   opacity: .7;
 }
@@ -800,11 +800,11 @@ section#quick-answer {
   margin: 0;
 }
 .local-perspective strong {
-  color: #1B5C5C;
+  color: #25544f;
 }
 .local-reality {
   background: #FDF6F0;
-  border-left: 4px solid #C8604A;
+  border-left: 4px solid #93702f;
   border-radius: 0 12px 12px 0;
   padding: 1.4rem 1.6rem;
   margin: 2rem 0;
@@ -816,7 +816,7 @@ section#quick-answer {
   font-weight: 800;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #C8604A;
+  color: #93702f;
   margin-bottom: .6rem;
   opacity: .7;
 }
