@@ -213,3 +213,31 @@ html body :is(.hotel-image, .bb-card-img img, .hotel-card img, [class*="card-img
 
 /* print */
 @media print { .dn-header, .dn-menu, .dn-footer, .shr-bar { display: none !important; } }
+
+/* consent banner (dn-consent.js): equal-weight choices, no dark patterns */
+.dn-consent { position: fixed; z-index: 1200; left: 1rem; right: 1rem; bottom: 1rem; max-width: 46rem; margin-inline: auto; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between; padding: 1.1rem 1.3rem; background: #fff; color: var(--dn-ink-2); border: 1px solid var(--dn-ink); box-shadow: 0 24px 60px -24px rgba(18, 32, 31, .55); font: 400 .9rem/1.5 var(--dn-sans); }
+.dn-consent__txt { flex: 1 1 18rem; min-width: 0; } .dn-consent p { margin: 0; } .dn-consent__t { font: 400 1.15rem/1.2 var(--dn-serif); color: var(--dn-ink); margin-bottom: .25rem !important; }
+.dn-consent a { color: var(--dn-ink); text-decoration-color: var(--dn-brass); }
+.dn-consent__btns { display: flex; gap: .6rem; flex: 0 0 auto; }
+.dn-consent__b { appearance: none; cursor: pointer; min-height: 44px; padding: .6rem 1.3rem; background: #fff; color: var(--dn-ink); border: 1px solid var(--dn-ink); font: 700 .74rem var(--dn-sans); letter-spacing: .1em; text-transform: uppercase; }
+.dn-consent__b:hover { background: var(--dn-ink); color: #fff; }
+.dn-consent__b:focus-visible { outline: 2px solid var(--dn-brass); outline-offset: 2px; }
+@media (max-width: 520px) { .dn-consent { left: .6rem; right: .6rem; bottom: .6rem; } .dn-consent__btns { width: 100%; } .dn-consent__b { flex: 1; } }
+.dn-consent-open { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: .2em; color: rgba(255, 255, 255, .85); font-size: .8rem; }
+.dn-consent-open:focus-visible { outline: 2px solid var(--dn-brass-soft); outline-offset: 2px; }
+
+/* Trip.com mode (tripcom-cta.css, loaded only after the affiliate cutover): same square geometry
+   as the rest of the system. The Trip.com blue and logo badge are left untouched. */
+html body a.tc-btn:not(#tc-n) { border-radius: 2px !important; font-family: var(--dn-sans) !important; letter-spacing: .08em !important; text-transform: uppercase !important; font-size: .74rem !important; }
+html body a.tc-btn.tc-btn--compact:not(#tc-n) { border-radius: 2px !important; padding-right: 1rem !important; }
+html body a.tc-btn:not(#tc-n) .tc-btn__logo { border-radius: 2px; }
+html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { height: 44px !important; }
+html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !important; }
+
+/* Korean labels are wider: keep the menu button until there is room for the full bar. */
+@media (min-width: 1240px) and (max-width: 1359px) {
+  html[lang="ko"] .dn-nav { display: none; }
+  html[lang="ko"] body .dn-header .dn-burger { display: inline-flex; }
+  html[lang="ko"] body .dn-header .nav-stays-btn { display: none !important; }
+  html[lang="ko"] .dn-header__bar .dn-brand { margin-right: auto; }
+}

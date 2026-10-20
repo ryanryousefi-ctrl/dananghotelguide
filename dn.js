@@ -15,7 +15,9 @@
     d.body.style.overflow = open ? 'hidden' : '';
   }
   if (ham && menu) {
-    ham.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    // Capture phase + stopImmediatePropagation: pages that still carry the old inline hamburger
+    // script (inside larger script blocks) must not toggle the menu a second time.
+    ham.addEventListener('click', function (e) { e.stopImmediatePropagation(); setMenu(!menu.classList.contains('open')); }, true);
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); ham.focus(); } });
     var mq = window.matchMedia('(min-width:1240px)');

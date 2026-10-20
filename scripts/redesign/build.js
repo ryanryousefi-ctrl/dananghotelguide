@@ -45,6 +45,12 @@ const repaint = s => PALETTE.reduce((a, [re, to]) => a.replace(re, to), s);
 
 const FONT_LINK = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
   '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap">';
+// Consent Mode v2 defaults, written before any Google tag runs. Denied where consent is
+// required or the law needs a refusal option (EEA, UK, Switzerland, Vietnam); granted elsewhere.
+const NO_CONSENT = process.argv.includes('--no-consent');
+const REGIONS = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH','VN'];
+const CONSENT_HEAD = NO_CONSENT ? '' : `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:${JSON.stringify(REGIONS)},wait_for_update:500});gtag('consent','default',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});try{var c=JSON.parse(localStorage.getItem('dn_consent')||'null');if(c&&Date.now()-c.t<31536e6){var v=c.v==='granted'?'granted':'denied';gtag('consent','update',{ad_storage:v,ad_user_data:v,ad_personalization:v,analytics_storage:v});(window.adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=v==='granted'?0:1}}catch(e){}</script>\n`;
+const CONSENT_JS = NO_CONSENT ? '' : p => `<script src="${p}dn-consent.js" defer></script>\n`;
 const LEGACY_CSS = /(?:cta-polish|bk-widget|premium|phase10_5)\.css/;
 
 const exists = f => fs.existsSync(path.join(ROOT, f));
@@ -192,9 +198,34 @@ function dedupeButtons(html) {
   return { out, demoted };
 }
 
+
+// ── Content overrides applied to the baseline source before transformation ──
+// Each replacement must match exactly once or the build reports it (nothing is edited silently).
+const OVERRIDES = {
+  'privacy.html': [
+    ['Last updated: February 2026', 'Last updated: October 2026'],
+    ['<p>Images are served via <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Unsplash</a>. We do not use Google Analytics, advertising pixels, or any other tracking scripts.</p>',
+     '<p>Some images are served via <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Unsplash</a>, videos via YouTube, and map tiles via OpenStreetMap, Esri and CARTO. These services receive your IP address when they deliver content.</p>\n    <h2>Analytics and advertising</h2>\n    <p>We use Google Analytics to understand how the site is used: which pages are read and which hotel booking buttons are clicked, together with your device type (mobile, tablet or desktop). We use Google AdSense to show ads. Some pages also use Ahrefs Web Analytics, which its provider describes as cookieless. We do not use other advertising pixels.</p>'],
+    ['<p>Da Nang Hotel Guide itself does not set any cookies. Third-party services (Booking.com, Google Fonts) may set cookies according to their own policies when you navigate to their services or load their resources.</p>',
+     '<p>This site uses these cookies and similar technologies:</p>\n    <ul>\n      <li><strong>Google Analytics</strong> sets first-party cookies (<code>_ga</code> and <code>_ga_0T1H4G2N80</code>, lasting up to two years) to measure visits and button clicks.</li>\n      <li><strong>Google AdSense</strong> may set advertising cookies to serve and measure ads.</li>\n      <li><strong>Booking.com and the CJ Affiliate network</strong> may set cookies when you follow a booking link, so a booking can be credited to us. A CJ script on our pages also reports page views to CJ.</li>\n      <li><strong>YouTube, Google Maps and Google Fonts</strong> may set cookies or log your IP address when they load.</li>\n    </ul>\n    <p><strong>Your choice.</strong> A banner on your first visit lets you accept or reject Google Analytics and Google advertising cookies. In the European Economic Area, the United Kingdom, Switzerland and Vietnam these stay off until you accept. Elsewhere they are on unless you reject. You can change your choice at any time with &ldquo;Privacy settings&rdquo; in the footer. Refusing does not affect how the site works. Cookies set by sites you visit through our links (Booking.com, CJ) or embeds (YouTube) follow those services&rsquo; own policies and are not controlled by this choice. You can also block or delete cookies in your browser settings.</p>'],
+  ],
+};
+function applyOverrides(page, src, rep) {
+  let out = src;
+  for (const [from, to] of OVERRIDES[page] || []) {
+    const n = out.split(from).length - 1;
+    if (n !== 1) { (rep.overrideMissing = rep.overrideMissing || []).push(from.slice(0, 50)); continue; }
+    out = out.replace(from, () => to);
+  }
+  // YouTube embeds: the privacy-enhanced domain sets no cookies until the video is played.
+  out = out.replace(/(<iframe[^>]+src=["'])https:\/\/www\.youtube\.com\/embed\//g, (m, a) => { rep.ytNoCookie = (rep.ytNoCookie || 0) + 1; return a + 'https://www.youtube-nocookie.com/embed/'; });
+  return out;
+}
+
 // ── Transform one page ──────────────────────────────────────────────────────
 function transform(page, report) {
-  const src = show(page);
+  const rep0 = {};
+  const src = applyOverrides(page, show(page), rep0);
   const $ = cheerio.load(src, { sourceCodeLocationInfo: true });
   const lang = $('html').attr('lang') || 'en';
   const prefix = page.startsWith('kr/') ? '../' : '';
@@ -202,7 +233,7 @@ function transform(page, report) {
   const loc = el => el[0].sourceCodeLocation;
   const span = el => [loc(el).startOffset, loc(el).endOffset];
   const replace = (el, html) => { const [s, e] = span(el); ops.push({ s, e, t: html }); };
-  const rep = { page, lang, cjFooter: 0, nav: false, footer: false, hero: 'none', main: false, cj: (src.match(/kqzyfj\.com\/click-101820678-/g) || []).length };
+  const rep = { ...rep0, page, lang, cjFooter: 0, nav: false, footer: false, hero: 'none', main: false, cj: (src.match(/kqzyfj\.com\/click-101820678-/g) || []).length };
 
   // chrome
   const nav = extractNav($, page);
@@ -242,9 +273,10 @@ function transform(page, report) {
   });
   $('link[rel="stylesheet"]').each((i, e) => { const h = $(e).attr('href') || ''; if (LEGACY_CSS.test(h) || /fonts\.googleapis\.com\/css2|fontshare\.com/.test(h)) replace($(e), ''); });
   $('style#nav-fit').each((i, e) => replace($(e), ''));
+  if (nav && CONSENT_HEAD) { const m = src.match(/<head[^>]*>/); const hs = m.index + m[0].length; ops.push({ s: hs, e: hs, t: '\n' + CONSENT_HEAD }); }
   if (nav) {
     const hc = src.indexOf('</head>'); ops.push({ s: hc, e: hc, t: `${lang === 'ko' ? FONT_LINK.replace('family=Hanken+Grotesk', 'family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk') : FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="${prefix}dn-design.css">\n` });
-    const bc = src.lastIndexOf('</body>'); ops.push({ s: bc, e: bc, t: `<script src="${prefix}dn.js" defer></script>\n` });
+    const bc = src.lastIndexOf('</body>'); ops.push({ s: bc, e: bc, t: `<script src="${prefix}dn.js" defer></script>\n${CONSENT_JS ? CONSENT_JS(prefix) : ''}` });
   }
 
   // splice (back to front; drop ops nested inside a replaced range)
@@ -275,8 +307,9 @@ function buildHome(page, served) {
     footerHtml, meta, stats, staysHref: nav.stays.href, exists });
   let head = src.slice(0, src.indexOf('</head>'));
   head = head.replace(/<style[\s\S]*?<\/style>/g, '').replace(/<link rel="stylesheet"[^>]*>/g, '').replace(/<link [^>]*fonts\.googleapis\.com[^>]*>/g, '').replace(/<link rel="preconnect"[^>]*fonts[^>]*>/g, '');
+  head = head.replace(/<head[^>]*>/, m => m + '\n' + CONSENT_HEAD);
   head = repaint(head) + `${FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="search-ui.css"><link rel="stylesheet" href="dn-design.css"><link rel="stylesheet" href="dn-home.css">\n</head>\n<body class="dn-home">\n`;
-  const tail = `\n<script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>\n<script src="search-engine.js"></script>\n<script src="search-ui.js"></script>\n<script src="booking-cta-tracking.js"></script>\n<script src="dn.js" defer></script>\n<script src="dn-home.js" defer></script>\n</body>\n</html>\n`;
+  const tail = `\n<script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>\n<script src="search-engine.js"></script>\n<script src="search-ui.js"></script>\n<script src="booking-cta-tracking.js"></script>\n<script src="dn.js" defer></script>\n<script src="dn-home.js" defer></script>\n${CONSENT_JS ? CONSENT_JS('') : ''}</body>\n</html>\n`;
   const out = unify(head + body + tail);
   return { out, rep: { page, lang: 'en', nav: true, footer: true, hero: 'home', main: 'own', cj: (src.match(/kqzyfj\.com\/click-101820678-/g) || []).length, cjAfter: (out.match(/kqzyfj\.com\/click-101820678-/g) || []).length, cjFooter: 0, cjExpected: null } };
 }
@@ -295,5 +328,5 @@ for (const f of ['phase10.css', 'phase13.css', 'hotel-review-modern.css', 'hotel
 if (!CHECK) fs.writeFileSync(path.join(ROOT, 'docs/redesign/build-report.json'), JSON.stringify(reports, null, 1));
 if (process.env.DUMP) fs.writeFileSync("/tmp/dn-reports.json", JSON.stringify(reports));
 const tally = (k) => reports.reduce((a, r) => (a[r[k]] = (a[r[k]] || 0) + 1, a), {});
-console.log(JSON.stringify({ base: BASE.slice(0, 8), pages: reports.length, errors: reports.filter(r => r.error).length, nav: tally('nav'), footer: tally('footer'), hero: tally('hero'), main: tally('main'), cjUnexplained: reports.filter(r => !r.error && r.cjExpected !== null && r.cjAfter !== r.cjExpected && !(r.page.startsWith('kr/') && r.cjAfter === r.cjExpected + 1)).map(r => `${r.page} ${r.cj}->${r.cjAfter} (footer ${r.cjFooter})`), demotedButtons: reports.reduce((a, r) => a + (r.demoted || 0), 0), cjRemovedWithFooter: reports.reduce((a, r) => a + (r.cjFooter || 0), 0) }, null, 1));
+console.log(JSON.stringify({ base: BASE.slice(0, 8), pages: reports.length, errors: reports.filter(r => r.error).length, nav: tally('nav'), footer: tally('footer'), hero: tally('hero'), main: tally('main'), cjUnexplained: reports.filter(r => !r.error && r.cjExpected !== null && r.cjAfter !== r.cjExpected && !(r.page.startsWith('kr/') && r.cjAfter === r.cjExpected + 1)).map(r => `${r.page} ${r.cj}->${r.cjAfter} (footer ${r.cjFooter})`), overrideProblems: reports.filter(r => r.overrideMissing).map(r => `${r.page}: ${r.overrideMissing.join(' | ')}`), youtubeEmbedsMoved: reports.reduce((a, r) => a + (r.ytNoCookie || 0), 0), demotedButtons: reports.reduce((a, r) => a + (r.demoted || 0), 0), cjRemovedWithFooter: reports.reduce((a, r) => a + (r.cjFooter || 0), 0) }, null, 1));
 for (const r of reports.filter(r => r.error)) console.log('ERROR', r.page, r.error);
