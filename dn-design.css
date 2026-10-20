@@ -13,7 +13,7 @@
   --dn-paper: #faf8f3; --dn-paper-2: #f3efe6; --dn-paper-3: #ebe6da;
   --dn-ink: #161d1c; --dn-ink-2: #38413f; --dn-muted: #5b6563; --dn-line: #e0dacc;
   --dn-deep: #12201f; --dn-deep-2: #1b2e2c; --dn-sea: #25544f;
-  --dn-brass: #8a6a2d;        /* text on paper: 5.0:1 */
+  --dn-brass: #80622a;        /* text on paper 5.35:1, on tinted paper 4.95:1 */
   --dn-brass-soft: #c8a762;   /* text on deep: 7.9:1 */
   --dn-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --dn-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -24,14 +24,14 @@
 
   /* legacy names used throughout existing page CSS */
   --ocean-deep: #12201f; --ocean: #25544f; --ocean-light: #3a7a73; --ocean-pale: #e6edea;
-  --coral: #93702f; --coral-light: #a98341;
+  --coral: #80622a; --coral-light: #97762f;
   --sand: #f3efe6; --sand-mid: #ebe6da; --sand-dark: #e0dacc;
   --ink: #161d1c; --ink-soft: #38413f; --ink-muted: #5b6563; --white: #fff;
-  --gold: #93702f; --night: #0d1514; --border: #e0dacc; --rule: #e0dacc;
+  --gold: #80622a; --night: #0d1514; --border: #e0dacc; --rule: #e0dacc;
   --text: #38413f; --text-muted: #5b6563;
   --font-serif: var(--dn-serif); --font-sans: var(--dn-sans);
   --p10-serif: var(--dn-serif); --p10-sans: var(--dn-sans);
-  --p10-ocean: #12201f; --p10-ocean-mid: #25544f; --p10-coral: #93702f; --p10-gold: #93702f;
+  --p10-ocean: #12201f; --p10-ocean-mid: #25544f; --p10-coral: #80622a; --p10-gold: #80622a;
   --p10-ink: #161d1c; --p10-sand: #f3efe6; --p10-shadow-card: none;
   --r-sm: 2px; --r-md: 2px; --r-lg: 3px; --r-xl: 4px; --p10-r: 2px; --p10-r-lg: 3px; --radius: 2px;
   --shadow-card: none; --shadow-hover: none;
@@ -43,6 +43,9 @@ html[lang="ko"] body :is(h1, h2, h3, h4) { font-weight: 700; letter-spacing: -.0
 html[lang="ko"] .dn-hero h1 { font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.4rem); }
 .dn-brand b, .dn-menu__link, .dn-menu__group > summary { font-family: 'Newsreader', Georgia, serif; }
 html[lang="ko"] :is(.dn-menu__link, .dn-menu__group > summary) { font-family: var(--dn-serif); font-size: 1.4rem; font-weight: 700; }
+
+/* Dark grounds get the light brass through the same variables, so legacy accent text keeps AA contrast. */
+:is([class*="dark"], [class*="night"], .dn-hero, .dn-hero--deep, .dn-footer, .dh-hero, .dh-book, .cin-break, .search-overlay) { --coral: #c8a762; --coral-light: #d9b978; --gold: #c8a762; --p10-coral: #c8a762; --p10-gold: #c8a762; --dn-brass: #c8a762; }
 
 /* 2 ── Base ─────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }

@@ -34,7 +34,7 @@
 .search-input-wrap{position:relative;width:100%;max-width:700px;margin-bottom:1.5rem;}
 .search-input{
   width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);
-  border-bottom:2px solid var(--coral,#93702f);
+  border-bottom:2px solid var(--coral,#80622a);
   border-radius:0;
   padding:18px 60px 18px 0;
   font-family:var(--font-serif,'Newsreader',Georgia,serif);font-size:clamp(1.5rem,3vw,2.2rem);
@@ -47,7 +47,7 @@
 .search-results-inline{width:100%;max-width:700px;display:flex;flex-direction:column;gap:2px;max-height:50vh;overflow-y:auto;}
 .sri{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);padding:16px 0;cursor:pointer;transition:background .12s;text-decoration:none;color:inherit;}
 .sri:hover{background:rgba(255,255,255,.07)}
-.sri-cat{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral,#93702f);white-space:nowrap;margin-top:3px;min-width:80px;}
+.sri-cat{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral,#80622a);white-space:nowrap;margin-top:3px;min-width:80px;}
 .sri-body{flex:1;min-width:0}
 .sri-title{font-family:var(--font-serif,'Newsreader',Georgia,serif);font-size:1rem;color:#fff;margin-bottom:4px}
 .sri-excerpt{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.5;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}

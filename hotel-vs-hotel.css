@@ -167,7 +167,7 @@
 .hvh-winner-badge::before{content:'🏆';font-size:.8em}
 .hvh-winner-badge.hvh-tie{background:var(--sand-mid);color:var(--ink-muted)}
 .hvh-winner-badge.hvh-tie::before{content:'—'}
-.hvh-winner-badge.hvh-coral{background:rgba(147,112,47,.14);color:var(--coral)}
+.hvh-winner-badge.hvh-coral{background:rgba(128,98,42,.14);color:var(--coral)}
 
 
 /* ── 8. "WHICH SHOULD YOU BOOK?" CHECKLIST ─────────────────────────────── */
@@ -211,7 +211,7 @@
 /* ── 11. BOOKING CTA BUTTON ─────────────────────────────────────────────── */
 
 .hvh-cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
-.hvh-cta-btn{flex:1;min-width:220px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;background:var(--coral);color:#fff;font-family:var(--font-sans);font-size:.88rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:var(--r-md);border:none;cursor:pointer;text-decoration:none;text-align:center;transition:background .15s,transform .12s;box-shadow:0 4px 16px rgba(147,112,47,.28)}
+.hvh-cta-btn{flex:1;min-width:220px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;background:var(--coral);color:#fff;font-family:var(--font-sans);font-size:.88rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:var(--r-md);border:none;cursor:pointer;text-decoration:none;text-align:center;transition:background .15s,transform .12s;box-shadow:0 4px 16px rgba(128,98,42,.28)}
 .hvh-cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
 .hvh-cta-btn.hvh-cta-secondary{background:transparent;color:var(--ocean-deep);border:1.5px solid var(--ocean-deep);box-shadow:none}
 .hvh-cta-btn.hvh-cta-secondary:hover{background:var(--ocean-deep);color:#fff}

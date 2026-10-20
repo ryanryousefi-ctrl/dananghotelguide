@@ -37,9 +37,9 @@ const BASE = fs.readFileSync(path.join(ROOT, 'docs/redesign/BASELINE.txt'), 'utf
 const show = f => cp.execFileSync('git', ['show', `${BASE}:${f}`], { cwd: ROOT, maxBuffer: 64 << 20 }).toString('utf8');
 
 // ── Palette: literal colours in page and legacy CSS follow the new tokens ───
-const PALETTE = [[/#0D3535/gi, '#12201f'], [/#1B5C5C/gi, '#25544f'], [/#C8604A/gi, '#93702f'], [/#E07A62/gi, '#a98341'], [/#F6F1E9/gi, '#f3efe6'], [/#D9CDBB/gi, '#e0dacc'],
-  [/#1A1A18/gi, '#161d1c'], [/#3C3C38/gi, '#38413f'], [/#7A7A70/gi, '#5b6563'], [/#B8901E/gi, '#93702f'],
-  [/rgba\(\s*13\s*,\s*53\s*,\s*53\s*,/g, 'rgba(18,32,31,'], [/rgba\(\s*200\s*,\s*96\s*,\s*74\s*,/g, 'rgba(147,112,47,'],
+const PALETTE = [[/#0D3535/gi, '#12201f'], [/#1B5C5C/gi, '#25544f'], [/#C8604A/gi, '#80622a'], [/#E07A62/gi, '#97762f'], [/#F6F1E9/gi, '#f3efe6'], [/#D9CDBB/gi, '#e0dacc'],
+  [/#1A1A18/gi, '#161d1c'], [/#3C3C38/gi, '#38413f'], [/#7A7A70/gi, '#5b6563'], [/#B8901E/gi, '#80622a'],
+  [/rgba\(\s*13\s*,\s*53\s*,\s*53\s*,/g, 'rgba(18,32,31,'], [/rgba\(\s*200\s*,\s*96\s*,\s*74\s*,/g, 'rgba(128,98,42,'],
   [/'Instrument Serif'/g, "'Newsreader'"], [/"Instrument Serif"/g, '"Newsreader"'], [/'Satoshi'/g, "'Hanken Grotesk'"], [/"Satoshi"/g, '"Hanken Grotesk"']];
 const repaint = s => PALETTE.reduce((a, [re, to]) => a.replace(re, to), s);
 

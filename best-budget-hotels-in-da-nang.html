@@ -58,7 +58,7 @@
   --sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;
   --white:#FFFFFF;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;
   --ocean:#25544f;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;
-  --coral:#93702f;--coral-light:#a98341;
+  --coral:#80622a;--coral-light:#97762f;
   --night:#0A0A0A;--night-border:rgba(255,255,255,.08);
   --font-serif:'Newsreader',Georgia,serif;
   --font-sans:'Hanken Grotesk',system-ui,sans-serif;
@@ -501,7 +501,7 @@ button{font-family:var(--font-sans);cursor:pointer}
       <p>Cheap-hotel shoppers often care less about where they sleep than what the room costs, and that's perfectly reasonable in Da Nang, where inexpensive hotels can cost less than a meal in many Western cities. But the location still changes the trip. A cheap room near My Khe lets you walk to the beach, while a cheap room downtown puts the Han River, restaurants and city sights closer. If your hotel is mainly somewhere to shower, sleep and leave your luggage, use the map before worrying about anything else.</p>
       <div class="ch-map-legend">
         <span class="ch-legend-chip"><span class="ch-legend-dot" style="background:#0D9488"></span>My Khe / Beach</span>
-        <span class="ch-legend-chip"><span class="ch-legend-dot" style="background:#93702f"></span>An Thuong</span>
+        <span class="ch-legend-chip"><span class="ch-legend-dot" style="background:#80622a"></span>An Thuong</span>
         <span class="ch-legend-chip"><span class="ch-legend-dot" style="background:#D97706"></span>Han River / City Center</span>
         <span class="ch-legend-chip"><span class="ch-legend-dot" style="background:#7C3AED"></span>Da Nang Bay</span>
       </div>
@@ -603,7 +603,7 @@ button{font-family:var(--font-sans);cursor:pointer}
     <article class="ch-card" data-area="beach" data-name="rom casa da nang" id="rom-casa-da-nang">
       <div class="ch-card-img-link">
         <img src="images/cheap-hotels-da-nang-placeholder.jpg" alt="Da Nang coastline" loading="lazy" width="400" height="300">
-        <span class="ch-card-area-badge" style="background:#93702f">An Thuong</span>
+        <span class="ch-card-area-badge" style="background:#80622a">An Thuong</span>
       </div>
       <div class="ch-card-body">
         <h3 class="ch-card-name">Rom Casa Da Nang</h3>
@@ -927,7 +927,7 @@ window.CH_HOIAN_HOTELS = [
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#12201f;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#93702f;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#80622a;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}
@@ -950,7 +950,7 @@ window.CH_HOIAN_HOTELS = [
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
 <script>
 (function(){
-  var COLOURS = { beach:'#0D9488', anthuong:'#93702f', city:'#D97706', hanriver:'#D97706', bay:'#7C3AED', hoian:'#25544f' };
+  var COLOURS = { beach:'#0D9488', anthuong:'#80622a', city:'#D97706', hanriver:'#D97706', bay:'#7C3AED', hoian:'#25544f' };
 
   function makeIcon(colour){
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" viewBox="0 0 26 36">'

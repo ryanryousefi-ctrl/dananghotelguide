@@ -48,7 +48,7 @@
   --sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;
   --white:#FFFFFF;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;
   --ocean:#25544f;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;
-  --coral:#93702f;--coral-light:#a98341;
+  --coral:#80622a;--coral-light:#97762f;
   --night:#0A0A0A;--night-border:rgba(255,255,255,.08);
   --font-serif:'Newsreader',Georgia,serif;
   --font-sans:'Hanken Grotesk',system-ui,sans-serif;
@@ -188,11 +188,11 @@ button{font-family:var(--font-sans);cursor:pointer}
 .td-card p{font-size:.87rem;line-height:1.75;color:var(--ink-soft);flex:1}
 .td-card-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.75rem}
 .td-tag{font-size:.65rem;font-weight:600;padding:.2rem .55rem;border-radius:100px;background:var(--sand-mid);color:var(--ink-soft)}
-.td-tag-coral{background:rgba(147,112,47,.1);color:var(--coral)}
+.td-tag-coral{background:rgba(128,98,42,.1);color:var(--coral)}
 .td-tag-ocean{background:var(--ocean-pale);color:var(--ocean-deep)}
 .td-note{font-size:.8rem;font-weight:600;padding:.55rem .8rem;border-radius:var(--r-sm);margin-top:.8rem;display:block;line-height:1.55}
 .td-note-know{background:var(--ocean-pale);color:var(--ocean-deep)}
-.td-note-tradeoff{background:rgba(147,112,47,.08);color:var(--coral)}
+.td-note-tradeoff{background:rgba(128,98,42,.08);color:var(--coral)}
 
 /* ── NIGHT SECTION ──────────────────────────────────────── */
 .td-night{background:var(--ocean-deep);padding:clamp(3rem,6vw,5rem) var(--gutter)}
@@ -207,7 +207,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .td-night-item-detail{font-size:.72rem;color:rgba(255,255,255,.4)}
 .td-night-item-badge{font-size:.58rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;white-space:nowrap;flex-shrink:0}
 .td-night-item-badge-free{background:rgba(27,92,92,.6);color:#fff}
-.td-night-item-badge-paid{background:rgba(147,112,47,.6);color:#fff}
+.td-night-item-badge-paid{background:rgba(128,98,42,.6);color:#fff}
 
 /* ── DAY TRIPS ──────────────────────────────────────────── */
 .td-trips{background:var(--sand-mid);padding:clamp(3rem,6vw,5rem) var(--gutter);border-top:1px solid var(--sand-dark)}
@@ -833,7 +833,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#12201f;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#93702f;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#80622a;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}

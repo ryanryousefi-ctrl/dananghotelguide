@@ -51,7 +51,7 @@ const BLOCK = /yceml|cjtrack|kqzyfj|booking\.com|google-analytics|googletagmanag
             out.main = document.querySelectorAll('main').length;
             out.header = !!document.querySelector('.dn-header');
             out.footer = !!document.querySelector('.dn-footer');
-            out.imgs = [...document.images].filter(i => i.complete && i.naturalWidth === 0 && i.src && i.src.startsWith(location.origin) && getComputedStyle(i).display !== 'none').map(i => (i.getAttribute('src') || '').slice(0, 70));
+            out.imgs = [...document.images].filter(i => i.complete && i.naturalWidth === 0 && i.getAttribute('src') && i.src.startsWith(location.origin) && getComputedStyle(i).display !== 'none').map(i => (i.getAttribute('src') || '').slice(0, 70));
             out.emptyLinks = [...document.querySelectorAll('a[href]')].filter(a => !a.textContent.trim() && !a.querySelector('img, svg') && !a.getAttribute('aria-label')).length;
             out.noAltImg = [...document.querySelectorAll('main img, .dn-hero img')].filter(i => !i.hasAttribute('alt')).length;
             return out;

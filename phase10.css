@@ -10,8 +10,8 @@
 :root {
   --p10-ocean:       #12201f;
   --p10-ocean-mid:   #25544f;
-  --p10-coral:       #93702f;
-  --p10-gold:        #93702f;
+  --p10-coral:       #80622a;
+  --p10-gold:        #80622a;
   --p10-sand:        #f3efe6;
   --p10-ink:         #161d1c;
   --p10-serif:       'Newsreader', Georgia, serif;
@@ -530,14 +530,14 @@
   letter-spacing: .03em;
   transition: background .18s, transform .18s, box-shadow .18s;
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(147,112,47,.35);
+  box-shadow: 0 3px 12px rgba(128,98,42,.35);
   align-self: flex-start;
 }
 
 .bp-cta:hover {
   background: #b04d3a;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(147,112,47,.4);
+  box-shadow: 0 8px 24px rgba(128,98,42,.4);
 }
 
 .bp-cta--ocean {

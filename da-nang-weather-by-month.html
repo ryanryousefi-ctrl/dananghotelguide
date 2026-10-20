@@ -57,12 +57,12 @@ a{text-decoration:none;color:inherit}
   --ocean-light:#217070;
   --ocean-deep:#12201f;
   --ocean-pale:#EAF4F4;
-  --coral:#93702f;
-  --coral-light:#a98341;
+  --coral:#80622a;
+  --coral-light:#97762f;
   --ink:#1C1C1A;
   --ink-soft:#3A3A36;
   --ink-muted:#5b6563;
-  --gold:#93702f;
+  --gold:#80622a;
   --rule:#E2DDD6;
   --max:1200px;
   --col:720px;
@@ -212,7 +212,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
 @media(max-width:500px){.season-cards{grid-template-columns:1fr}}
 .season-card{border-radius:var(--r-lg);padding:1.4rem;position:relative;overflow:hidden;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end}
 .season-card.sc-dry{background:linear-gradient(145deg,#0D5C4A 0%,#25544f 100%)}
-.season-card.sc-hot{background:linear-gradient(145deg,#7a2a0f 0%,#93702f 100%)}
+.season-card.sc-hot{background:linear-gradient(145deg,#7a2a0f 0%,#80622a 100%)}
 .season-card.sc-wet{background:linear-gradient(145deg,#1a3a6a 0%,#2a5caa 100%)}
 .season-card.sc-trans{background:linear-gradient(145deg,#3a3020 0%,#7a6040 100%)}
 .season-card-eyebrow{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem;position:relative;z-index:1}
@@ -851,7 +851,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
       <div class="chart-title">Monthly Temperature: Daily High &amp; Low (°C)</div>
       <canvas id="tempChart" width="1100" height="280" style="width:100%;max-width:100%;display:block"></canvas>
       <div class="chart-legend">
-        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#93702f"></div> Daily High</div>
+        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#80622a"></div> Daily High</div>
         <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#25544f"></div> Daily Low</div>
       </div>
     </div>
@@ -861,7 +861,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
       <canvas id="rainChart" width="1100" height="260" style="width:100%;max-width:100%;display:block"></canvas>
       <div class="chart-legend">
         <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#25544f;border-radius:2px"></div> Rainfall (mm)</div>
-        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#93702f;border-radius:2px"></div> Rain days</div>
+        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#80622a;border-radius:2px"></div> Rain days</div>
       </div>
     </div>
 
@@ -1568,7 +1568,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
     tCtx.closePath();
     tCtx.fillStyle='rgba(27,92,92,.08)';tCtx.fill();
 
-    tCtx.beginPath();tCtx.strokeStyle='#93702f';tCtx.lineWidth=2.5;tCtx.lineJoin='round';
+    tCtx.beginPath();tCtx.strokeStyle='#80622a';tCtx.lineWidth=2.5;tCtx.lineJoin='round';
     highs.forEach(function(v,i){i===0?tCtx.moveTo(xPos(i),yPos(v)):tCtx.lineTo(xPos(i),yPos(v));});
     tCtx.stroke();
 
@@ -1579,8 +1579,8 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
     highs.forEach(function(v,i){
       var x=xPos(i),y=yPos(v);
       tCtx.beginPath();tCtx.arc(x,y,4,0,Math.PI*2);
-      tCtx.fillStyle='#93702f';tCtx.fill();
-      tCtx.fillStyle='#93702f';tCtx.font='bold 11px sans-serif';tCtx.textAlign='center';
+      tCtx.fillStyle='#80622a';tCtx.fill();
+      tCtx.fillStyle='#80622a';tCtx.font='bold 11px sans-serif';tCtx.textAlign='center';
       tCtx.fillText(v+'°',x,y-9);
     });
     lows.forEach(function(v,i){
@@ -1631,7 +1631,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
       if(v>30)rCtx.fillText(v,x+barW/2,y-5);
     });
 
-    rCtx.beginPath();rCtx.strokeStyle='#93702f';rCtx.lineWidth=2;rCtx.lineJoin='round';
+    rCtx.beginPath();rCtx.strokeStyle='#80622a';rCtx.lineWidth=2;rCtx.lineJoin='round';
     days.forEach(function(d,i){
       var x=rxPos(i)+barW/2;
       var y=rPad.t+rch-(d/22)*rch;
@@ -1642,7 +1642,7 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--ink);-webkit-
       var x=rxPos(i)+barW/2;
       var y=rPad.t+rch-(d/22)*rch;
       rCtx.beginPath();rCtx.arc(x,y,3,0,Math.PI*2);
-      rCtx.fillStyle='#93702f';rCtx.fill();
+      rCtx.fillStyle='#80622a';rCtx.fill();
     });
 
     rCtx.fillStyle='#5b6563';rCtx.font='11px sans-serif';rCtx.textAlign='center';

@@ -41,7 +41,7 @@
 <link rel="stylesheet" href="phase10.css">
 <link rel="stylesheet" href="phase13.css">
 <style>
-:root{--sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;--white:#FFFFFF;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;--ocean:#25544f;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;--coral:#93702f;--coral-light:#a98341;--night:#0A0A0A;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;--max:1200px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:6px;--r-md:12px;--r-lg:18px}
+:root{--sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;--white:#FFFFFF;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;--ocean:#25544f;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;--coral:#80622a;--coral-light:#97762f;--night:#0A0A0A;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;--max:1200px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:6px;--r-md:12px;--r-lg:18px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{font-family:var(--font-sans);cursor:pointer}
 
 /* NAV */
@@ -127,7 +127,7 @@
 .bb-sig-pick h2{font-family:var(--font-serif);font-size:1.8rem;color:var(--ink);margin-bottom:.75rem;letter-spacing:-.03em}
 .bb-sig-pick p{font-size:.92rem;line-height:1.8;color:var(--ink-soft);margin-bottom:.6rem}
 .bb-sig-pick p:last-of-type{margin-bottom:0}
-.bb-tradeoff{background:rgba(147,112,47,.08);border:1px solid rgba(147,112,47,.2);border-radius:var(--r-md);padding:.75rem 1rem;margin-top:1.1rem;font-size:.84rem;color:var(--ink-soft)}
+.bb-tradeoff{background:rgba(128,98,42,.08);border:1px solid rgba(128,98,42,.2);border-radius:var(--r-md);padding:.75rem 1rem;margin-top:1.1rem;font-size:.84rem;color:var(--ink-soft)}
 .bb-tradeoff strong{color:var(--coral);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.2rem}
 
 /* SECTION HEADER */
@@ -146,7 +146,7 @@
 .ym-best{background:var(--ocean)}
 .ym-good{background:rgba(27,92,92,.5)}
 .ym-ok{background:rgba(217,205,187,.3)}
-.ym-wet{background:rgba(147,112,47,.4)}
+.ym-wet{background:rgba(128,98,42,.4)}
 .bb-ym-temp{font-size:.62rem;color:rgba(255,255,255,.4);font-variant-numeric:tabular-nums}
 .bb-year-legend{display:flex;gap:1.25rem;margin-top:1rem;flex-wrap:wrap}
 .bb-yr-leg{display:flex;align-items:center;gap:.35rem;font-size:.72rem;color:rgba(255,255,255,.35)}
@@ -407,7 +407,7 @@
       <span class="bb-yr-leg"><span class="bb-yr-dot" style="background:var(--ocean)"></span>Best</span>
       <span class="bb-yr-leg"><span class="bb-yr-dot" style="background:rgba(27,92,92,.5)"></span>Good</span>
       <span class="bb-yr-leg"><span class="bb-yr-dot" style="background:rgba(217,205,187,.3);border:1px solid rgba(217,205,187,.5)"></span>Manageable</span>
-      <span class="bb-yr-leg"><span class="bb-yr-dot" style="background:rgba(147,112,47,.4)"></span>High Rain Risk</span>
+      <span class="bb-yr-leg"><span class="bb-yr-dot" style="background:rgba(128,98,42,.4)"></span>High Rain Risk</span>
     </div>
   </div>
 
@@ -714,7 +714,7 @@
         <li style="font-size:.85rem;color:var(--ink-soft);padding-left:.9rem;position:relative"><span style="position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--ocean);display:block"></span>Low rain risk - plans are predictable</li>
       </ul>
     </div>
-    <div style="background:rgba(147,112,47,.05);border:1px solid rgba(147,112,47,.18);border-radius:var(--r-md);padding:1rem 1.15rem">
+    <div style="background:rgba(128,98,42,.05);border:1px solid rgba(128,98,42,.18);border-radius:var(--r-md);padding:1rem 1.15rem">
       <div style="font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.6rem">The tradeoff</div>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:.4rem">
         <li style="font-size:.85rem;color:var(--ink-soft);padding-left:.9rem;position:relative"><span style="position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--coral);display:block"></span>34-38C with humidity. Midday is not comfortable outside</li>
@@ -895,7 +895,7 @@ document.querySelectorAll('.bb-faq-item').forEach(function(item){var q=item.quer
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#12201f;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#93702f;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#80622a;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}

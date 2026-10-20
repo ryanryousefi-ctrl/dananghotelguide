@@ -86,7 +86,7 @@ section#quick-answer {
   font-weight: 800 !important;
   letter-spacing: .18em !important;
   text-transform: uppercase !important;
-  color: var(--coral, #93702f) !important;
+  color: var(--coral, #80622a) !important;
   margin-bottom: .65rem !important;
 }
 .quick-answer .qa-text { font-size: .88rem; line-height: 1.75; }
@@ -129,7 +129,7 @@ section#quick-answer {
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--coral, #93702f);
+  color: var(--coral, #80622a);
   margin-bottom: .5rem;
 }
 .editors-picks-section .ep-headline {
@@ -240,7 +240,7 @@ section#quick-answer {
   border-radius: 100px;
   margin-bottom: .55rem;
 }
-.ep-badge-coral { background: var(--coral, #93702f); color: #fff; }
+.ep-badge-coral { background: var(--coral, #80622a); color: #fff; }
 .ep-badge-ocean { background: var(--ocean, #25544f); color: #fff; }
 
 @media (max-width: 768px) {
@@ -357,7 +357,7 @@ section#quick-answer {
 .wid-hotel-fit { font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--ocean, #25544f); margin-bottom: .2rem; }
 .wid-hotel-name { font-weight: 700; font-size: .9rem; color: var(--ocean-deep, #12201f); margin-bottom: .2rem; }
 .wid-hotel-why { font-size: .76rem; color: var(--ink-muted, #666); line-height: 1.5; }
-.wid-hotel-btn { font-size: .73rem; font-weight: 700; color: var(--coral, #93702f); margin-top: .4rem; display: block; }
+.wid-hotel-btn { font-size: .73rem; font-weight: 700; color: var(--coral, #80622a); margin-top: .4rem; display: block; }
 
 /* ══════════════════════════════════════════════════════════
    HOTEL STRIP HEADER — section header fix
@@ -465,7 +465,7 @@ section#quick-answer {
   align-items: center;
   gap: 6px;
   margin-top: 1.5rem;
-  background: var(--coral, #93702f);
+  background: var(--coral, #80622a);
   color: #fff;
   font-size: .8rem;
   font-weight: 700;
@@ -607,7 +607,7 @@ section#quick-answer {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: var(--coral, #93702f);
+  background: var(--coral, #80622a);
   color: #fff;
   font-size: .6rem;
   font-weight: 800;
@@ -804,7 +804,7 @@ section#quick-answer {
 }
 .local-reality {
   background: #FDF6F0;
-  border-left: 4px solid #93702f;
+  border-left: 4px solid #80622a;
   border-radius: 0 12px 12px 0;
   padding: 1.4rem 1.6rem;
   margin: 2rem 0;
@@ -816,7 +816,7 @@ section#quick-answer {
   font-weight: 800;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: #93702f;
+  color: #80622a;
   margin-bottom: .6rem;
   opacity: .7;
 }

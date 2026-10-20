@@ -186,7 +186,7 @@
   .nav-stays-btn .btn-text{display:none}
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;--white:#FFFFFF;--ocean:#25544f;--ocean-light:#217070;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;--coral:#93702f;--coral-light:#a98341;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;--night:#0A0A0A;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);--shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
+:root{--sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;--white:#FFFFFF;--ocean:#25544f;--ocean-light:#217070;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;--coral:#80622a;--coral-light:#97762f;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;--night:#0A0A0A;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;--max:1160px;--gutter:clamp(1.25rem,5vw,3rem);--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);--shadow-hover:0 8px 32px rgba(26,26,24,.12),0 2px 8px rgba(26,26,24,.07);--ease:cubic-bezier(.4,0,.2,1);}
 html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65}::selection{background:var(--ocean);color:#fff}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}body{flex:1;min-width:0}.sri-title{font-family:var(--font-serif);font-size:1.05rem;color:#fff;margin-bottom:3px}.sri-excerpt{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.search-no-results{color:rgba(255,255,255,.45);font-size:.9rem;padding:1rem 0}.search-hint{margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;}.sh-pill{padding:6px 14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.5);cursor:pointer;}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--coral);color:#fff;font-size:.78rem;font-weight:700;border-radius:100px;white-space:nowrap;transition:background .18s,transform .15s;border:none;cursor:pointer;text-decoration:none;}.nav-stays-btn:hover{background:var(--coral-light);transform:translateY(-1px)}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:rgba(255,255,255,.08);border:none;cursor:pointer;border-radius:var(--r-sm);padding:10px;margin-left:8px;}.nav-hamburger span{display:block;height:1.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .25s;}.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}.nav-hamburger.open span:nth-child(2){opacity:0}.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}.page-hero,.page-body,.cmp-body,.guide-body{max-width:860px;margin:0 auto;padding:3rem var(--gutter) 0}.cmp-section{margin-bottom:3rem}.cmp-section h2{font-family:var(--font-serif);font-size:1.75rem;color:var(--ink);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:2px solid var(--sand-mid)}.cmp-section h2 em{font-style:italic;color:var(--ocean)}.cmp-section p{color:var(--ink-soft);line-height:1.8;margin-bottom:1rem;font-size:.97rem}
@@ -223,7 +223,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 .search-input-wrap{position:relative;width:100%;max-width:700px;margin-bottom:1.5rem;}
 .search-input{
   width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);
-  border-bottom:2px solid var(--coral,#93702f);
+  border-bottom:2px solid var(--coral,#80622a);
   border-radius:0;
   padding:18px 60px 18px 0;
   font-family:var(--font-serif,'Newsreader',Georgia,serif);font-size:clamp(1.5rem,3vw,2.2rem);
@@ -236,7 +236,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 .search-results-inline{width:100%;max-width:700px;display:flex;flex-direction:column;gap:2px;max-height:50vh;overflow-y:auto;}
 .sri{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);padding:16px 0;cursor:pointer;transition:background .12s;text-decoration:none;color:inherit;}
 .sri:hover{background:rgba(255,255,255,.07)}
-.sri-cat{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral,#93702f);white-space:nowrap;margin-top:3px;min-width:80px;}
+.sri-cat{font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--coral,#80622a);white-space:nowrap;margin-top:3px;min-width:80px;}
 .sri-body{flex:1;min-width:0}
 .sri-title{font-family:var(--font-serif,'Newsreader',Georgia,serif);font-size:1rem;color:#fff;margin-bottom:4px}
 .sri-excerpt{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.5;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
@@ -645,7 +645,7 @@ html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-sans);bac
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#12201f;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#93702f;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#80622a;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}

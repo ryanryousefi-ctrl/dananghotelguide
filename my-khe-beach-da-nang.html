@@ -108,8 +108,8 @@
 :root{
   --sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;--white:#FFFFFF;
   --ocean:#25544f;--ocean-light:#217070;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;
-  --coral:#93702f;--coral-light:#a98341;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;
-  --gold:#93702f;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;
+  --coral:#80622a;--coral-light:#97762f;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;
+  --gold:#80622a;--font-serif:'Newsreader',Georgia,serif;--font-sans:'Hanken Grotesk',system-ui,sans-serif;
   --max:1160px;--gutter:clamp(1.25rem,5vw,3rem);
   --r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;
   --shadow-card:0 2px 12px rgba(26,26,24,.07),0 1px 3px rgba(26,26,24,.05);
@@ -165,7 +165,7 @@ button{font-family:var(--font-sans)}
 .mk-map-stage{position:relative;border-radius:var(--r-xl);overflow:hidden;background:linear-gradient(180deg,#0A2E33 0%,#0D3D42 38%,#125157 58%,#1B6B67 72%,#2C8073 100%);box-shadow:0 20px 60px rgba(0,0,0,.4);aspect-ratio:3/4.2;border:1px solid rgba(255,255,255,.08)}
 .mk-map-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .mk-map-pin{cursor:pointer}
-.mk-map-pin circle.pin-halo{fill:rgba(147,112,47,.28);transition:r .2s}
+.mk-map-pin circle.pin-halo{fill:rgba(128,98,42,.28);transition:r .2s}
 .mk-map-pin circle.pin-dot{fill:var(--coral);stroke:#fff;stroke-width:1.5}
 .mk-map-pin text{font-family:var(--font-sans);font-weight:800;font-size:8px;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
 .mk-map-pin:hover circle.pin-halo,.mk-map-pin:focus circle.pin-halo{r:11}
@@ -407,7 +407,7 @@ button{font-family:var(--font-sans)}
 .shr-bar{position:fixed;right:1.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:95;background:#12201f;border-radius:3rem;padding:.8rem .55rem;box-shadow:0 4px 24px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.12)}
 .shr-label{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);font-family:'Hanken Grotesk',system-ui,sans-serif;writing-mode:vertical-lr;transform:rotate(180deg);margin-bottom:.15rem}
 .shr-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);text-decoration:none;transition:background .15s,transform .15s,color .15s;flex-shrink:0}
-.shr-btn:hover{background:#93702f;color:#fff;transform:scale(1.1)}
+.shr-btn:hover{background:#80622a;color:#fff;transform:scale(1.1)}
 .shr-btn svg{width:16px;height:16px;fill:currentColor}
 @media(max-width:1200px){.shr-bar{right:1rem}}
 @media(max-width:900px){.shr-bar{display:none}}
@@ -585,7 +585,7 @@ button{font-family:var(--font-sans)}
           <div><div class="mk-map-zone-name">North My Khe / Son Tra Side</div><div class="mk-map-zone-desc">Newer hotels, quieter sand, rooftops, less An Thuong chaos.</div></div>
         </div>
         <div class="mk-map-zone-item">
-          <span class="mk-map-zone-dot" style="background:#93702f"></span>
+          <span class="mk-map-zone-dot" style="background:#80622a"></span>
           <div><div class="mk-map-zone-name">Central My Khe</div><div class="mk-map-zone-desc">The classic beach day. Bars, easy hotel access, first-timer friendly.</div></div>
         </div>
         <div class="mk-map-zone-item">
@@ -1383,7 +1383,7 @@ document.querySelectorAll('.bb-faq-item').forEach(function(item){
     var dot = el.querySelector('.pin-dot');
     if(!dot) return;
     var orig = dot.getAttribute('fill');
-    dot.style.fill = '#a98341';
+    dot.style.fill = '#97762f';
     setTimeout(function(){ dot.style.fill = ''; }, 1200);
   };
 })();
