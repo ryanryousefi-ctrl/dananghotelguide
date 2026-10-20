@@ -1,7 +1,7 @@
 /* ============================================================================
    Da Nang Hotel Guide 2.0 · design system
-   Direction: independent travel magazine. Warm paper ground, ink type, one
-   brass accent, serif headlines (Newsreader), clean sans text (Hanken Grotesk),
+   Direction: black-and-white editorial travel publication. White ground, black type,
+   grey rules, no accent colour, serif headlines (Newsreader), clean sans text (Hanken Grotesk),
    large photography, hairline rules, flat cards, restrained motion.
    Trip.com blue is reserved for official booking buttons (tripcom-cta.css).
    Loaded last on every page. Section 1 defines tokens and remaps the legacy
@@ -10,11 +10,11 @@
 
 /* 1 ── Tokens ───────────────────────────────────────────────────────────── */
 :root {
-  --dn-paper: #faf8f3; --dn-paper-2: #f3efe6; --dn-paper-3: #ebe6da;
-  --dn-ink: #161d1c; --dn-ink-2: #38413f; --dn-muted: #5b6563; --dn-line: #e0dacc;
-  --dn-deep: #12201f; --dn-deep-2: #1b2e2c; --dn-sea: #25544f;
-  --dn-brass: #80622a;        /* text on paper 5.35:1, on tinted paper 4.95:1 */
-  --dn-brass-soft: #c8a762;   /* text on deep: 7.9:1 */
+  --dn-paper: #ffffff; --dn-paper-2: #f5f5f5; --dn-paper-3: #ebebeb;
+  --dn-ink: #111111; --dn-ink-2: #333333; --dn-muted: #595959; --dn-line: #dcdcdc;
+  --dn-deep: #111111; --dn-deep-2: #1c1c1c; --dn-sea: #333333;
+  --dn-brass: #111111;        /* accent = ink (name kept for existing rules) */
+  --dn-brass-soft: #d9d9d9;   /* accent text on black grounds */
   --dn-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
   --dn-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --dn-max: 1180px; --dn-wide: 1320px; --dn-read: 41.5rem;
@@ -23,16 +23,16 @@
   --dn-ease: cubic-bezier(.2, .7, .2, 1);
 
   /* legacy names used throughout existing page CSS */
-  --ocean-deep: #12201f; --ocean: #25544f; --ocean-light: #3a7a73; --ocean-pale: #e6edea;
-  --coral: #80622a; --coral-light: #97762f;
-  --sand: #f3efe6; --sand-mid: #ebe6da; --sand-dark: #e0dacc;
-  --ink: #161d1c; --ink-soft: #38413f; --ink-muted: #5b6563; --white: #fff;
-  --gold: #80622a; --night: #0d1514; --border: #e0dacc; --rule: #e0dacc;
-  --text: #38413f; --text-muted: #5b6563;
+  --ocean-deep: #111111; --ocean: #333333; --ocean-light: #595959; --ocean-pale: #f0f0f0;
+  --coral: #111111; --coral-light: #333333;
+  --sand: #f5f5f5; --sand-mid: #ebebeb; --sand-dark: #dcdcdc;
+  --ink: #111111; --ink-soft: #333333; --ink-muted: #595959; --white: #fff;
+  --gold: #111111; --night: #000000; --border: #dcdcdc; --rule: #dcdcdc;
+  --text: #333333; --text-muted: #595959;
   --font-serif: var(--dn-serif); --font-sans: var(--dn-sans);
   --p10-serif: var(--dn-serif); --p10-sans: var(--dn-sans);
-  --p10-ocean: #12201f; --p10-ocean-mid: #25544f; --p10-coral: #80622a; --p10-gold: #80622a;
-  --p10-ink: #161d1c; --p10-sand: #f3efe6; --p10-shadow-card: none;
+  --p10-ocean: #111111; --p10-ocean-mid: #333333; --p10-coral: #111111; --p10-gold: #111111;
+  --p10-ink: #111111; --p10-sand: #f5f5f5; --p10-shadow-card: none;
   --r-sm: 2px; --r-md: 2px; --r-lg: 3px; --r-xl: 4px; --p10-r: 2px; --p10-r-lg: 3px; --radius: 2px;
   --shadow-card: none; --shadow-hover: none;
   --gutter: var(--dn-gutter); --max: var(--dn-max);
@@ -45,7 +45,7 @@ html[lang="ko"] .dn-hero h1 { font-weight: 700; font-size: clamp(2rem, 4.6vw, 3.
 html[lang="ko"] :is(.dn-menu__link, .dn-menu__group > summary) { font-family: var(--dn-serif); font-size: 1.4rem; font-weight: 700; }
 
 /* Dark grounds get the light brass through the same variables, so legacy accent text keeps AA contrast. */
-:is([class*="dark"], [class*="night"], .dn-hero, .dn-hero--deep, .dn-footer, .dh-hero, .dh-book, .cin-break, .search-overlay) { --coral: #c8a762; --coral-light: #d9b978; --gold: #c8a762; --p10-coral: #c8a762; --p10-gold: #c8a762; --dn-brass: #c8a762; }
+:is([class*="dark"], [class*="night"], .dn-hero, .dn-hero--deep, .dn-footer, .dh-hero, .dh-book, .cin-break, .search-overlay, .ws-top-pick, .ws-decision-card, .ws-bottom-line, .ws-compare-card, .ws-map-container, .trending-section, .trend-card, .editorial-panel, .bb-top-pick, .bb-compare-card, .dhm-mapsec, .dhm-wis, .dhm-wis-card, .dhm-map-shell, .dhd-map-shell, .filters-bar) { --coral: #d9d9d9; --coral-light: #e6e6e6; --gold: #d9d9d9; --p10-coral: #d9d9d9; --p10-gold: #d9d9d9; --dn-brass: #d9d9d9; --ocean: #d9d9d9; --ocean-light: #e6e6e6; --ink-muted: #c4c4c4; --text-muted: #c4c4c4; }
 
 /* 2 ── Base ─────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -70,8 +70,8 @@ html body :is([class*="eyebrow"], [class*="kicker"]) {
 }
 
 /* 3 ── Masthead ─────────────────────────────────────────────────────────── */
-.dn-header { position: sticky; top: 0; z-index: 900; background: rgba(250, 248, 243, .94); -webkit-backdrop-filter: saturate(1.2) blur(14px); backdrop-filter: saturate(1.2) blur(14px); border-bottom: 1px solid var(--dn-line); transition: box-shadow .25s; }
-.dn-header.is-scrolled { box-shadow: 0 10px 30px -22px rgba(18, 32, 31, .5); }
+.dn-header { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255, .94); -webkit-backdrop-filter: saturate(1.2) blur(14px); backdrop-filter: saturate(1.2) blur(14px); border-bottom: 1px solid var(--dn-line); transition: box-shadow .25s; }
+.dn-header.is-scrolled { box-shadow: 0 10px 30px -22px rgba(17,17,17, .5); }
 .dn-header__bar { max-width: var(--dn-wide); margin: 0 auto; height: var(--dn-header-h); display: flex; align-items: center; gap: 1.25rem; padding-inline: var(--dn-gutter); }
 .dn-brand { display: flex; flex-direction: column; line-height: 1; text-decoration: none; color: var(--dn-ink); flex: 0 0 auto; }
 .dn-brand b { font: 500 1.6rem/1 var(--dn-serif); letter-spacing: -.02em; }
@@ -85,7 +85,7 @@ html body :is([class*="eyebrow"], [class*="kicker"]) {
 .dn-top:hover, .dn-top.is-active { border-bottom-color: var(--dn-brass); }
 .dn-caret { opacity: .55; transition: transform .2s; }
 .dn-has-drop:hover .dn-caret, .dn-has-drop:focus-within .dn-caret { transform: rotate(180deg); }
-.dn-drop { position: absolute; top: calc(100% + 1px); left: -.5rem; min-width: 15rem; background: #fff; border: 1px solid var(--dn-line); box-shadow: 0 24px 40px -24px rgba(18, 32, 31, .45); padding: .5rem 0; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s, transform .18s var(--dn-ease), visibility .18s; }
+.dn-drop { position: absolute; top: calc(100% + 1px); left: -.5rem; min-width: 15rem; background: #fff; border: 1px solid var(--dn-line); box-shadow: 0 24px 40px -24px rgba(17,17,17, .45); padding: .5rem 0; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s, transform .18s var(--dn-ease), visibility .18s; }
 .dn-drop ul { list-style: none; margin: 0; padding: 0; }
 .dn-drop a { display: block; padding: .55rem 1.1rem; font: 500 .875rem/1.3 var(--dn-sans); color: var(--dn-ink-2); text-decoration: none; }
 .dn-drop a:hover { background: var(--dn-paper-2); color: var(--dn-ink); }
@@ -126,7 +126,7 @@ html body .dn-menu .dn-menu__cta { all: unset !important; box-sizing: border-box
 .dn-menu__social a { color: var(--dn-muted); padding: .4rem 0; }
 
 /* search overlay (markup and behaviour unchanged: search-ui.js) */
-html body .search-overlay { background: rgba(250, 248, 243, .985) !important; color: var(--dn-ink) !important; }
+html body .search-overlay { background: rgba(255,255,255, .985) !important; color: var(--dn-ink) !important; }
 html body .search-overlay-label { color: var(--dn-brass) !important; font: 700 .72rem var(--dn-sans) !important; letter-spacing: .16em !important; text-transform: uppercase; }
 html body .search-input { font-family: var(--dn-serif) !important; background: transparent !important; color: var(--dn-ink) !important; border: 0 !important; border-bottom: 1px solid var(--dn-ink) !important; border-radius: 0 !important; }
 html body .search-input::placeholder { color: var(--dn-muted) !important; }
@@ -156,13 +156,13 @@ html body .dn-share .shr-btn:hover { color: #fff !important; text-decoration: un
 .dn-hero { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: clamp(22rem, 52vh, 36rem); color: #fff; background: var(--dn-deep); overflow: hidden; }
 .dn-hero__media { position: absolute; inset: 0; z-index: -2; }
 .dn-hero__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.dn-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(12, 22, 21, .82) 0%, rgba(12, 22, 21, .45) 42%, rgba(12, 22, 21, .12) 100%); }
+.dn-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(17,17,17, .82) 0%, rgba(17,17,17, .45) 42%, rgba(17,17,17, .12) 100%); }
 .dn-hero__inner { width: 100%; max-width: var(--dn-wide); margin: 0 auto; padding: 4rem var(--dn-gutter) clamp(2rem, 5vw, 3.5rem); }
 .dn-hero__inner > * { max-width: 46rem; }
 .dn-hero__inner > .dn-hero__extra { max-width: none; margin-top: 1.6rem; }
 .dn-hero--vs .dn-hero__inner > * { max-width: none; } .dn-hero--vs h1, .dn-hero--vs .dn-lede { max-width: 54rem; }
 .dn-hero--deep { background: var(--dn-deep); color: #fff; } .dn-hero--deep::after { display: none; }
-.dn-hero .dn-eyebrow { margin: 0 0 1rem; font: 700 .72rem var(--dn-sans); letter-spacing: .18em; text-transform: uppercase; color: #ecd39a; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
+.dn-hero .dn-eyebrow { margin: 0 0 1rem; font: 700 .72rem var(--dn-sans); letter-spacing: .18em; text-transform: uppercase; color: #e6e6e6; text-shadow: 0 1px 10px rgba(0,0,0,.55); }
 .dn-hero h1 { margin: 0; font: 400 clamp(2.3rem, 5.4vw, 4.3rem)/1.04 var(--dn-serif); letter-spacing: -.02em; color: #fff; }
 .dn-hero h1 em { font-style: italic; color: inherit; }
 .dn-hero .dn-lede { margin: 1.1rem 0 0; font: 400 clamp(1.05rem, 1.6vw, 1.25rem)/1.55 var(--dn-sans); color: rgba(255, 255, 255, .88); }
@@ -184,8 +184,8 @@ html body a.dn-btn:focus-visible { outline: 2px solid var(--dn-brass) !important
 /* secondary / navigational */
 html body a.dn-btn--ghost { background: transparent !important; color: var(--dn-ink) !important; border-color: var(--dn-ink) !important; }
 html body a.dn-btn--ghost:hover { background: var(--dn-ink) !important; color: #fff !important; border-color: var(--dn-ink) !important; }
-html body :is([class*="dark"], [class*="night"], [class*="deep"], .dn-hero, .dh-hero, .dh-book, .dn-footer, .cin-break) a.dn-btn:not(.tc-btn) { background: #fff !important; color: var(--dn-ink) !important; border-color: #fff !important; }
-html body :is([class*="dark"], [class*="night"], [class*="deep"], .dn-hero, .dh-hero, .dh-book, .cin-break) a.dn-btn--ghost:not(.tc-btn) { background: transparent !important; color: #fff !important; border-color: rgba(255, 255, 255, .7) !important; }
+html body :is([class*="dark"], [class*="night"], [class*="deep"], .dn-hero, .dh-hero, .dh-book, .dn-footer, .cin-break, .ws-top-pick, .ws-decision-card, .ws-bottom-line, .trending-section, .editorial-panel, .bb-top-pick, .dhm-mapsec, .dhm-wis, .it-short) a.dn-btn:not(.tc-btn), html body a.dn-btn[class*="dark"]:not(.tc-btn) { background: #fff !important; color: var(--dn-ink) !important; border-color: #fff !important; }
+html body :is([class*="dark"], [class*="night"], [class*="deep"], .dn-hero, .dh-hero, .dh-book, .cin-break, .ws-top-pick, .ws-decision-card, .ws-bottom-line, .trending-section, .editorial-panel, .bb-top-pick, .dhm-mapsec, .dhm-wis, .it-short) a.dn-btn--ghost:not(.tc-btn), html body a.dn-btn--ghost[class*="dark"]:not(.tc-btn) { background: transparent !important; color: #fff !important; border-color: rgba(255, 255, 255, .7) !important; }
 /* text links to a hotel */
 html body a.dn-booklink { color: var(--dn-ink) !important; text-decoration: underline !important; text-decoration-color: var(--dn-brass) !important; text-decoration-thickness: 1.5px !important; text-underline-offset: .22em !important; font-weight: 600; }
 html body a.dn-booklink:hover { color: var(--dn-sea) !important; }
@@ -218,7 +218,7 @@ html body :is(.hotel-image, .bb-card-img img, .hotel-card img, [class*="card-img
 @media print { .dn-header, .dn-menu, .dn-footer, .shr-bar { display: none !important; } }
 
 /* consent banner (dn-consent.js): equal-weight choices, no dark patterns */
-.dn-consent { position: fixed; z-index: 1200; left: 1rem; right: 1rem; bottom: 1rem; max-width: 46rem; margin-inline: auto; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between; padding: 1.1rem 1.3rem; background: #fff; color: var(--dn-ink-2); border: 1px solid var(--dn-ink); box-shadow: 0 24px 60px -24px rgba(18, 32, 31, .55); font: 400 .9rem/1.5 var(--dn-sans); }
+.dn-consent { position: fixed; z-index: 1200; left: 1rem; right: 1rem; bottom: 1rem; max-width: 46rem; margin-inline: auto; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; justify-content: space-between; padding: 1.1rem 1.3rem; background: #fff; color: var(--dn-ink-2); border: 1px solid var(--dn-ink); box-shadow: 0 24px 60px -24px rgba(17,17,17, .55); font: 400 .9rem/1.5 var(--dn-sans); }
 .dn-consent__txt { flex: 1 1 18rem; min-width: 0; } .dn-consent p { margin: 0; } .dn-consent__t { font: 400 1.15rem/1.2 var(--dn-serif); color: var(--dn-ink); margin-bottom: .25rem !important; }
 .dn-consent a { color: var(--dn-ink); text-decoration-color: var(--dn-brass); }
 .dn-consent__btns { display: flex; gap: .6rem; flex: 0 0 auto; }
@@ -255,7 +255,7 @@ html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !im
 /* comparison pair captions sit on photos */
 html body :is(.hvh-split-label, .hvh-split-side) :is(span, div, p) { text-shadow: 0 1px 12px rgba(0, 0, 0, .7); }
 html body .hvh-split-label { color: #fff; }
-html body .hvh-split-label > :first-child { color: #ecd39a; }
+html body .hvh-split-label > :first-child { color: #e6e6e6; }
 /* sticky legacy filter bar must clear the masthead */
 html body .filters-bar { top: var(--dn-header-h) !important; }
 /* touch: bigger hit areas without changing layouts */
@@ -273,3 +273,26 @@ html body .filters-bar { top: var(--dn-header-h) !important; }
 /* consent: sits under the open menu, smaller on phones */
 .dn-consent { z-index: 880; }
 @media (max-width: 520px) { .dn-consent { padding: .8rem .9rem; gap: .6rem; font-size: .82rem; } .dn-consent__t { display: none; } .dn-consent__b { min-height: 44px; padding: .5rem .8rem; } }
+
+/* ── Monochrome pass ─────────────────────────────────────────────────────
+   Third-party map widget (Leaflet): neutral links and flag. Map tiles stay in colour (data, not UI chrome). */
+.leaflet-container a, .leaflet-control-attribution a { color: var(--dn-ink); }
+.leaflet-attribution-flag { filter: grayscale(1); }
+/* Focus ring on black grounds is white so it stays visible. */
+:is(.dn-footer, .dn-hero, .dh-hero, .dh-book, .dn-consent--dark) :focus-visible { outline-color: #fff !important; }
+
+/* Demoted booking links are plain text links, whatever legacy button class they still carry. */
+html body a.dn-booklink { background: none !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; min-height: 0 !important; display: inline !important; transform: none !important; }
+/* A table header keeps one ground: the row decides, the cells do not repaint it. */
+html body thead th { background: transparent; color: inherit; }
+
+/* Masthead: the brand never wraps; it may only shrink on phones. Dark-ground link colour is variable. */
+.dn-brand b, .dn-brand small { white-space: nowrap; }
+@media (min-width: 900px) { .dn-brand { flex: 0 0 auto; } }
+html body a.dn-booklink { color: var(--dn-link, var(--dn-ink)) !important; text-decoration-color: var(--dn-link, var(--dn-ink)) !important; }
+:is([class*="dark"], [class*="night"], .dn-hero, .dn-footer, .dh-hero, .dh-book, .ws-top-pick, .ws-decision-card, .ws-bottom-line, .trending-section, .editorial-panel, .bb-top-pick, .dhm-mapsec, .dhm-wis, .dhm-map-shell, .dhd-map-shell, .filters-bar, .it-short) * { --dn-link: #fff; }
+.it-short { --coral: #d9d9d9; --dn-brass: #d9d9d9; }
+@media (min-width: 1240px) and (max-width: 1359px) { .dn-header__bar { gap: .9rem; } .dn-top { padding-inline: .6rem; } }
+
+/* Selected filter on a dark filter bar: white chip, black text (state stays obvious without colour). */
+html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.active { background: #fff; border-color: #fff; color: var(--dn-ink); }

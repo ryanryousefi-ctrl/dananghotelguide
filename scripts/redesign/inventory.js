@@ -14,7 +14,9 @@ const redirected = new Set((vj.redirects || []).map(r => r.source.replace(/^\//,
 const pages = cp.execFileSync('git', ['ls-tree', '-r', '--name-only', BASE], { cwd: ROOT }).toString().split('\n')
   .filter(f => /^(kr\/)?[^/]+\.html$/.test(f) && !['site-preview.html', 'favicon-html-snippet.html'].includes(f) && !redirected.has(f)).sort();
 
-const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+const { strip } = require('./mono');
+// Decorative emojis are removed on purpose (see mono.js), so text is compared without them.
+const norm = s => strip(s || '').text.replace(/\s+/g, ' ').trim();
 const CHROME = 'nav.site-nav, #mobileMenu, #searchOverlay, footer, .dn-header, .dn-menu, .dn-footer, aside.shr-bar, .dn-skip';
 const words = t => (t.toLowerCase().match(/[\p{L}\p{N}$%]+/gu) || []);
 function facts(html, isNew) {

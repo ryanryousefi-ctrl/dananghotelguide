@@ -96,8 +96,29 @@ const t = (name, ok, detail = '') => { results.push({ name, ok, detail }); conso
     await c.close(); }
 
   // 9. Affiliate safety on the built pages
-  { const fs2 = fs.readFileSync(path.join(ROOT, 'best-hotels-in-da-nang.html'), 'utf8');
+  { const fs2 = fs.readFileSync(path.join(ROOT, 'best-hotels-in-da-nang.html'), 'utf8').replace(/<style id="dn-dark">[\s\S]*?<\/style>/, '');   // the generated dark-ground CSS mentions :not(.tc-btn) on purpose
     t('No Trip.com branding or provider attributes in the CJ build', !/tripcom-logo|data-provider="tripcom"|tc-btn/.test(fs2) && !/trip\.com\/hotels/.test(fs2)); }
+
+  // 10. Monochrome identity and no emojis in the rendered interface
+  { const EMO = /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B50}\u{2B55}\u{1F1E6}-\u{1F1FF}]/u;
+    const chroma = `(() => { const bad = []; const parse = s => { const m = s.match(/rgba?\\((\\d+)[, ]+(\\d+)[, ]+(\\d+)(?:[, /]+([\\d.]+))?/); return m ? [+m[1], +m[2], +m[3], m[4] === undefined ? 1 : +m[4]] : null; };
+      for (const e of document.querySelectorAll('.dn-header *, .dn-header, #mobileMenu *, .dn-footer *, .dn-footer, a.dn-btn, .dn-consent *, .dn-hero h1, main h1, main h2, main p')) { const cs = getComputedStyle(e);
+        for (const pr of ['color', 'backgroundColor', 'borderTopColor', 'borderBottomColor']) { const c = parse(cs[pr]); if (c && c[3] > 0 && Math.max(c[0], c[1], c[2]) - Math.min(c[0], c[1], c[2]) >= 4) bad.push(e.className + ' ' + pr + ' ' + cs[pr]); } }
+      return bad.slice(0, 5); })()`;
+    const c = await mk(); const p = await c.newPage();
+    for (const pg of ['index.html', 'hilton-da-nang.html', 'best-hotels-in-da-nang.html', 'da-nang-hotel-directory.html', 'kr/index.html']) {
+      await p.goto(base + pg); await p.waitForTimeout(300);
+      const txt = await p.evaluate(() => document.body.innerText + [...document.querySelectorAll('[alt],[title],[aria-label],[placeholder]')].map(e => (e.alt || '') + (e.title || '') + (e.getAttribute('aria-label') || '') + (e.placeholder || '')).join(' '));
+      t(`No emoji characters in rendered text: ${pg}`, !EMO.test(txt), (txt.match(EMO) || [''])[0]);
+      const bad = await p.evaluate(chroma);
+      t(`UI is monochrome (header, menu, footer, buttons, headings): ${pg}`, bad.length === 0, bad[0] || '');
+    }
+    await p.goto(base + 'hilton-da-nang.html'); await p.hover('.dn-has-drop:first-child > a'); await p.waitForTimeout(300);
+    t('Desktop dropdown items are plain text (no icon spans)', await p.evaluate(() => !document.querySelector('.dn-drop .di-icon') && [...document.querySelectorAll('.dn-drop a')].every(a => !a.querySelector('span'))));
+    const st = await p.evaluate(() => { const b = document.querySelector('a.dn-btn'); const cs = getComputedStyle(b); return [cs.backgroundColor, cs.color]; });
+    t('Primary booking button is black with white text', /rgb\(17, 17, 17\)/.test(st[0]) && /rgb\(255, 255, 255\)/.test(st[1]), st.join(' / '));
+    t('Page background is pure white', await p.evaluate(() => getComputedStyle(document.body).backgroundColor === 'rgb(255, 255, 255)'));
+    await c.close(); }
 
   await browser.close(); srv.close();
   const bad = results.filter(r => !r.ok);

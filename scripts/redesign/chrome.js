@@ -38,7 +38,7 @@ function mobileMenu(nav, lang) {
     if (!items) return `<a class="dn-menu__link${t.active ? ' is-active' : ''}" href="${esc(t.href)}">${t.label}</a>`;
     return `<details class="dn-menu__group"${t.active ? ' open' : ''}><summary>${t.label}</summary><div><a href="${esc(t.href)}">${kr ? '전체 보기' : 'Overview'}</a>${items.map(i => `<a href="${esc(i.href)}">${i.label}</a>`).join('')}</div></details>`;
   };
-  const stays = nav.stays ? `<a href="${esc(nav.stays.href)}" class="mobile-stays-btn affiliate-link dn-menu__cta" target="_blank" rel="nofollow noopener sponsored">${nav.stays.mobileText || nav.stays.text} &rarr;</a>` : '';
+  const stays = nav.stays ? `<a href="${esc(nav.stays.href)}" class="mobile-stays-btn affiliate-link dn-menu__cta" target="_blank" rel="nofollow noopener sponsored">${String(nav.stays.mobileText || nav.stays.text).replace(/\s*(→|&rarr;)\s*$/, '')} &rarr;</a>` : '';
   return `<div class="dn-menu" id="mobileMenu" aria-hidden="true">
   <div class="dn-menu__inner">
     <a class="dn-menu__link" href="${esc(nav.home)}">${kr ? '홈' : 'Home'}</a>

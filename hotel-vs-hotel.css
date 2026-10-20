@@ -42,15 +42,15 @@
 .hvh-hero-inner{max-width:var(--max);margin:0 auto}
 .hvh-hero-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);text-align:center;margin-bottom:.9rem}
 .hvh-hero-title{font-family:var(--font-serif);font-size:clamp(1.9rem,4.4vw,3.1rem);color:#fff;text-align:center;line-height:1.08;letter-spacing:-.03em;margin-bottom:.6rem}
-.hvh-hero-title em{font-style:italic;color:rgba(255,255,255,.55)}
-.hvh-hero-sub{font-size:clamp(.92rem,1.4vw,1.05rem);color:rgba(255,255,255,.55);text-align:center;max-width:62ch;margin:0 auto 2rem;line-height:1.7}
+.hvh-hero-title em{font-style:italic;color:rgba(255,255,255,.72)}
+.hvh-hero-sub{font-size:clamp(.92rem,1.4vw,1.05rem);color:rgba(255,255,255,.72);text-align:center;max-width:62ch;margin:0 auto 2rem;line-height:1.7}
 
 .hvh-split{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
 .hvh-split-side{position:relative;aspect-ratio:4/5;overflow:hidden}
 .hvh-split-side img{width:100%;height:100%;object-fit:cover;display:block}
 .hvh-split-side::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.88) 0%,rgba(10,10,10,.25) 55%,rgba(10,10,10,.05) 100%)}
 .hvh-split-label{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:1.5rem 1.5rem 1.75rem;text-align:center}
-.hvh-split-hotel-eyebrow{font-size:.6rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.4rem}
+.hvh-split-hotel-eyebrow{font-size:.6rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.4rem}
 .hvh-split-hotel-name{font-family:var(--font-serif);font-size:clamp(1.3rem,2.6vw,1.9rem);color:#fff;line-height:1.15;letter-spacing:-.02em}
 
 .hvh-split-divider{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:64px;height:64px;border-radius:50%;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.15rem;font-weight:400;letter-spacing:.02em;box-shadow:0 8px 28px rgba(0,0,0,.4);border:3px solid var(--night)}
@@ -134,9 +134,9 @@
 
 .hvh-overall-scores{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0}
 .hvh-overall-score-card{background:var(--ocean-deep);border-radius:var(--r-lg);padding:2rem 1.5rem;text-align:center}
-.hvh-overall-score-hotel{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.85rem}
+.hvh-overall-score-hotel{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.85rem}
 .hvh-overall-score-num{font-family:var(--font-serif);font-size:clamp(3rem,7vw,4.25rem);color:#fff;line-height:1;letter-spacing:-.02em}
-.hvh-overall-score-num span{font-size:.42em;color:rgba(255,255,255,.4);font-family:var(--font-sans);font-weight:600}
+.hvh-overall-score-num span{font-size:.42em;color:rgba(255,255,255,.72);font-family:var(--font-sans);font-weight:600}
 .hvh-overall-score-card.hvh-is-winner{background:var(--coral)}
 .hvh-overall-score-card.hvh-is-winner .hvh-overall-score-hotel{color:rgba(255,255,255,.8)}
 
@@ -164,10 +164,10 @@
 /* ── 7. WINNER BADGE ───────────────────────────────────────────────────── */
 
 .hvh-winner-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px;background:var(--ocean-pale);color:var(--ocean-deep)}
-.hvh-winner-badge::before{content:'🏆';font-size:.8em}
+.hvh-winner-badge::before{content:'';font-size:.8em}
 .hvh-winner-badge.hvh-tie{background:var(--sand-mid);color:var(--ink-muted)}
 .hvh-winner-badge.hvh-tie::before{content:'—'}
-.hvh-winner-badge.hvh-coral{background:rgba(128,98,42,.14);color:var(--coral)}
+.hvh-winner-badge.hvh-coral{background:rgba(102,102,102,.14);color:var(--coral)}
 
 
 /* ── 8. "WHICH SHOULD YOU BOOK?" CHECKLIST ─────────────────────────────── */
@@ -177,7 +177,7 @@
 .hvh-book-check-title{font-family:var(--font-serif);font-size:1.2rem;color:var(--ink);margin-bottom:1.1rem;letter-spacing:-.02em}
 .hvh-book-check-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.65rem}
 .hvh-book-check-list li{font-size:.9rem;line-height:1.55;color:var(--ink-soft);padding-left:1.6rem;position:relative}
-.hvh-book-check-list li::before{content:'';position:absolute;left:0;top:.15rem;width:1.05rem;height:1.05rem;border-radius:4px;background:var(--ocean-pale);border:1px solid rgba(27,92,92,.25)}
+.hvh-book-check-list li::before{content:'';position:absolute;left:0;top:.15rem;width:1.05rem;height:1.05rem;border-radius:4px;background:var(--ocean-pale);border:1px solid rgba(77,77,77,.25)}
 .hvh-book-check-list li::after{content:'✓';position:absolute;left:.19rem;top:.02rem;color:var(--ocean);font-size:.7rem;font-weight:700}
 
 @media(max-width:600px){
@@ -211,7 +211,7 @@
 /* ── 11. BOOKING CTA BUTTON ─────────────────────────────────────────────── */
 
 .hvh-cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
-.hvh-cta-btn{flex:1;min-width:220px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;background:var(--coral);color:#fff;font-family:var(--font-sans);font-size:.88rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:var(--r-md);border:none;cursor:pointer;text-decoration:none;text-align:center;transition:background .15s,transform .12s;box-shadow:0 4px 16px rgba(128,98,42,.28)}
+.hvh-cta-btn{flex:1;min-width:220px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.5rem;background:var(--coral);color:#fff;font-family:var(--font-sans);font-size:.88rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:var(--r-md);border:none;cursor:pointer;text-decoration:none;text-align:center;transition:background .15s,transform .12s;box-shadow:0 4px 16px rgba(102,102,102,.28)}
 .hvh-cta-btn:hover{background:var(--coral-light);transform:translateY(-2px)}
 .hvh-cta-btn.hvh-cta-secondary{background:transparent;color:var(--ocean-deep);border:1.5px solid var(--ocean-deep);box-shadow:none}
 .hvh-cta-btn.hvh-cta-secondary:hover{background:var(--ocean-deep);color:#fff}
@@ -225,12 +225,12 @@
 /* ── 12. FINAL VERDICT MODULE ───────────────────────────────────────────── */
 
 .hvh-final-verdict{background:var(--ocean-deep);border-radius:var(--r-lg);padding:clamp(2rem,4vw,3rem);margin:2.5rem 0}
-.hvh-final-verdict-eyebrow{font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem}
+.hvh-final-verdict-eyebrow{font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.75rem}
 .hvh-final-verdict-h2{font-family:var(--font-serif);font-size:clamp(1.5rem,2.8vw,2rem);color:#fff;margin-bottom:1.1rem;letter-spacing:-.02em;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.15)}
 .hvh-final-verdict-body{color:rgba(255,255,255,.75);line-height:1.8;font-size:.96rem;margin-bottom:1rem}
 .hvh-final-verdict-body:last-of-type{margin-bottom:1.5rem}
 .hvh-final-verdict-pick{display:flex;align-items:center;gap:.6rem;font-size:.95rem;font-weight:700;color:#fff;margin-bottom:1.25rem}
-.hvh-final-verdict-pick::before{content:'🏆';font-size:1rem}
+.hvh-final-verdict-pick::before{content:'';font-size:1rem}
 .hvh-final-verdict .hvh-cta-row{margin-top:0}
 .hvh-final-verdict .hvh-cta-btn.hvh-cta-secondary{color:#fff;border-color:rgba(255,255,255,.4)}
 .hvh-final-verdict .hvh-cta-btn.hvh-cta-secondary:hover{background:rgba(255,255,255,.12);border-color:#fff}

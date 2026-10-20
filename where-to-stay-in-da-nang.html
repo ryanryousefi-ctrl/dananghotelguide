@@ -45,10 +45,10 @@
 <link rel="stylesheet" href="phase13.css">
 <style>
 :root{
-  --sand:#f3efe6;--sand-mid:#EDE5D8;--sand-dark:#e0dacc;
-  --white:#FFFFFF;--ink:#161d1c;--ink-soft:#38413f;--ink-muted:#5b6563;
-  --ocean:#25544f;--ocean-deep:#12201f;--ocean-pale:#EAF4F4;
-  --coral:#80622a;--coral-light:#97762f;
+  --sand:#f0f0f0;--sand-mid:#e6e6e6;--sand-dark:#d9d9d9;
+  --white:#FFFFFF;--ink:#111111;--ink-soft:#333333;--ink-muted:#666666;
+  --ocean:#4d4d4d;--ocean-deep:#111111;--ocean-pale:#f0f0f0;
+  --coral:#666666;--coral-light:#666666;
   --night:#0A0A0A;
   --font-serif:'Newsreader',Georgia,serif;
   --font-sans:'Hanken Grotesk',system-ui,sans-serif;
@@ -67,10 +67,10 @@ button{font-family:var(--font-sans);cursor:pointer}
 .site-nav{position:sticky;top:0;z-index:500;height:68px;background:#0A0A0A;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 var(--gutter)}
 .nav-logo{flex-shrink:0;margin-right:clamp(1rem,2.5vw,2rem);display:inline-flex;align-items:center}
 .nav-logo-img{display:block;height:44px;width:44px;object-fit:contain;border-radius:50%}
-.nav-x-link,.nav-fb-link,.nav-pin-link,.nav-ig-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:rgba(255,255,255,.5);flex-shrink:0;margin-right:6px;border-radius:50%;transition:color .18s,background .18s}
+.nav-x-link,.nav-fb-link,.nav-pin-link,.nav-ig-link{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:rgba(255,255,255,.72);flex-shrink:0;margin-right:6px;border-radius:50%;transition:color .18s,background .18s}
 .nav-x-link:hover,.nav-fb-link:hover,.nav-pin-link:hover,.nav-ig-link:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav-links{display:flex;align-items:center;gap:0;flex:1}
-.nav-link{position:relative;padding:8px 14px;font-size:.8rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .18s;white-space:nowrap}
+.nav-link{position:relative;padding:8px 14px;font-size:.8rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,.72);transition:color .18s;white-space:nowrap}
 .nav-link:hover,.nav-link.active{color:#fff}
 .nav-link.active::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--coral);border-radius:1px}
 .nav-dropdown{position:relative}
@@ -78,7 +78,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .nav-dropdown:hover .nav-dropdown-toggle::after{transform:rotate(-135deg) translateY(-2px)}
 .nav-dropdown-menu{position:absolute;top:calc(100% + 4px);left:0;min-width:210px;background:#111;border:1px solid rgba(255,255,255,.1);border-top:2px solid var(--coral);border-radius:0 0 8px 8px;padding:.4rem;opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .18s,visibility .18s,transform .18s;box-shadow:0 20px 48px rgba(0,0,0,.5);z-index:600}
 .nav-dropdown:hover .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-.nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.55);border-radius:4px;transition:color .12s,background .12s;letter-spacing:.02em;text-transform:uppercase}
+.nav-dropdown-item{display:flex;align-items:center;gap:8px;padding:9px 12px;font-size:.78rem;font-weight:600;color:rgba(255,255,255,.72);border-radius:4px;transition:color .12s,background .12s;letter-spacing:.02em;text-transform:uppercase}
 .nav-dropdown-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;background:var(--coral);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;white-space:nowrap;transition:background .15s,transform .12s;border:none}
@@ -90,7 +90,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{position:fixed;inset:0;z-index:450;background:#0A0A0A;transform:translateX(100%);transition:transform .28s var(--ease);display:flex;flex-direction:column;padding:calc(68px + 1.5rem) var(--gutter) 2rem;overflow-y:auto}
 .mobile-menu.open{transform:translateX(0)}
-.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
+.mobile-nav-link{display:flex;align-items:center;justify-content:space-between;padding:15px 0;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.06);transition:color .15s}
 .mobile-nav-link:hover,.mobile-nav-link.active{color:var(--coral)}
 .mobile-stays-btn{display:block;margin-top:2rem;padding:16px;background:var(--coral);color:#fff;text-align:center;font-size:.88rem;font-weight:800;border-radius:4px;letter-spacing:.05em;text-transform:uppercase}
 @media(max-width:1100px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-stays-btn .btn-text{display:none}}
@@ -102,8 +102,8 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-hero-content{position:relative;z-index:1;width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--gutter)}
 .ws-hero-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:.75rem}
 .ws-hero h1{font-family:var(--font-serif);font-size:clamp(2.8rem,7vw,4.5rem);color:#fff;line-height:1.05;letter-spacing:-.035em;margin-bottom:.9rem}
-.ws-hero h1 em{font-style:italic;color:rgba(255,255,255,.55)}
-.ws-hero-sub{font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.6);max-width:56ch;line-height:1.6;margin-bottom:1.25rem}
+.ws-hero h1 em{font-style:italic;color:rgba(255,255,255,.72)}
+.ws-hero-sub{font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.72);max-width:56ch;line-height:1.6;margin-bottom:1.25rem}
 .ws-hero-sub strong{color:rgba(255,255,255,.85);font-weight:600}
 .ws-hero-meta{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28)}
 
@@ -114,11 +114,11 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-pick-badge::before{content:'';width:24px;height:1px;background:var(--coral);flex-shrink:0}
 .ws-top-pick h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);color:#fff;letter-spacing:-.03em;line-height:1.1;margin-bottom:.3rem}
 .ws-top-pick-sub{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin-bottom:1.1rem}
-.ws-top-pick-desc{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:1.25rem}
+.ws-top-pick-desc{font-size:.97rem;line-height:1.8;color:rgba(255,255,255,.72);margin-bottom:1.25rem}
 .ws-top-pick-tags{display:flex;flex-wrap:wrap;gap:.4rem .65rem;margin-bottom:1.4rem}
-.ws-tag-dark{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(255,255,255,.12);border-radius:100px;color:rgba(255,255,255,.45)}
-.ws-top-pick-tradeoff{font-size:.85rem;color:rgba(255,255,255,.35);margin-bottom:1.4rem;font-style:italic}
-.ws-cta-dark{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.6);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:2px;transition:color .15s,border-color .15s}
+.ws-tag-dark{font-size:.68rem;font-weight:600;letter-spacing:.05em;padding:.25rem .65rem;border:1px solid rgba(255,255,255,.12);border-radius:100px;color:rgba(255,255,255,.72)}
+.ws-top-pick-tradeoff{font-size:.85rem;color:rgba(255,255,255,.72);margin-bottom:1.4rem;font-style:italic}
+.ws-cta-dark{display:inline-flex;align-items:center;gap:.35rem;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:2px;transition:color .15s,border-color .15s}
 .ws-cta-dark:hover{color:#fff;border-color:#fff}
 .ws-pick-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;position:relative}
 .ws-pick-img img{width:100%;height:100%;object-fit:cover}
@@ -157,7 +157,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-quick-body{position:relative;z-index:1;padding:1rem}
 .ws-quick-tag{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:.25rem;display:block}
 .ws-quick-name{font-family:var(--font-serif);font-size:1.15rem;color:#fff;line-height:1.15;margin-bottom:.2rem}
-.ws-quick-desc{font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.5}
+.ws-quick-desc{font-size:.72rem;color:rgba(255,255,255,.72);line-height:1.5}
 
 /* AREA FILTER */
 .ws-filter-bar{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:2rem}
@@ -184,7 +184,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-area-stat-lbl{font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-muted)}
 .ws-area-tradeoff{font-size:.8rem;color:var(--ink-muted);font-style:italic;margin-bottom:.9rem}
 .ws-area-verdict{font-size:.88rem;font-weight:600;color:var(--ink);padding:.75rem 1rem;background:var(--ocean-pale);border-left:3px solid var(--ocean);border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:1rem}
-.ws-area-guide-link{font-size:.75rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(27,92,92,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
+.ws-area-guide-link{font-size:.75rem;font-weight:700;color:var(--ocean);border-bottom:1px solid rgba(77,77,77,.25);padding-bottom:1px;transition:color .15s,border-color .15s}
 .ws-area-guide-link:hover{color:var(--ocean-deep);border-color:var(--ocean-deep)}
 
 /* HOTEL MINI-CARDS — styled to match .hotel-card on best-hotels-in-da-nang.html */
@@ -209,7 +209,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-compare-dark{background:var(--ocean-deep);padding:clamp(3rem,5vw,4rem) var(--gutter)}
 .ws-compare-dark-inner{max-width:var(--max);margin:0 auto}
 .ws-compare-dark h2{font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.3rem);color:#fff;letter-spacing:-.025em;margin-bottom:.5rem}
-.ws-compare-dark-sub{font-size:.92rem;color:rgba(255,255,255,.45);margin-bottom:2rem}
+.ws-compare-dark-sub{font-size:.92rem;color:rgba(255,255,255,.72);margin-bottom:2rem}
 .ws-compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem}
 .ws-compare-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:var(--r-lg);overflow:hidden}
 .ws-compare-card-img{aspect-ratio:16/7;overflow:hidden}
@@ -217,17 +217,17 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-compare-card-body{padding:1.25rem}
 .ws-compare-card-eyebrow{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:.4rem}
 .ws-compare-card h3{font-family:var(--font-serif);font-size:1.2rem;color:#fff;margin-bottom:.3rem}
-.ws-compare-card-where{font-size:.72rem;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:.65rem}
-.ws-compare-card-desc{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.7}
+.ws-compare-card-where{font-size:.72rem;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.72);text-transform:uppercase;margin-bottom:.65rem}
+.ws-compare-card-desc{font-size:.83rem;color:rgba(255,255,255,.72);line-height:1.7}
 .ws-compare-verdict{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:1.5rem}
-.ws-compare-verdict p{font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.8}
+.ws-compare-verdict p{font-size:.92rem;color:rgba(255,255,255,.72);line-height:1.8}
 .ws-compare-verdict strong{color:#fff;font-weight:600}
 
 /* COMPARISON TABLE */
 .ws-table-wrap{overflow-x:auto;border-radius:var(--r-md);box-shadow:0 1px 4px rgba(26,26,24,.06)}
 .ws-table{width:100%;border-collapse:collapse;background:var(--white);font-size:.82rem;min-width:640px}
 .ws-table thead{background:var(--ocean-deep)}
-.ws-table th{padding:.75rem 1rem;text-align:left;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.ws-table th{padding:.75rem 1rem;text-align:left;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72)}
 .ws-table th:first-child{color:#fff}
 .ws-table tbody tr:nth-child(even){background:var(--sand)}
 .ws-table tbody tr:hover{background:var(--ocean-pale)}
@@ -235,7 +235,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-table td:first-child{font-weight:700;color:var(--ink);font-family:var(--font-serif);font-size:.9rem}
 .ws-tval{display:inline-flex;align-items:center;gap:.25rem;font-size:.75rem;font-weight:600}
 .ws-tval.ex{color:var(--ocean)}
-.ws-tval.gd{color:#5a7a5a}
+.ws-tval.gd{color:#666666}
 .ws-tval.lm{color:var(--ink-muted)}
 
 /* MAP */
@@ -251,7 +251,7 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-bottom-line h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;letter-spacing:-.03em;margin-bottom:2rem}
 .ws-decision-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;text-align:left}
 .ws-decision-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-md);padding:1.15rem}
-.ws-decision-q{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.4rem}
+.ws-decision-q{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:.4rem}
 .ws-decision-a{font-family:var(--font-serif);font-size:1.1rem;color:var(--coral);line-height:1.2}
 
 /* FAQ */
@@ -267,15 +267,15 @@ button{font-family:var(--font-sans);cursor:pointer}
 .ws-faq-item.open .ws-faq-a{max-height:400px;padding:.5rem 0 .25rem}
 
 /* FOOTER */
-.site-footer{background:var(--ink);color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
+.site-footer{background:var(--ink);color:rgba(255,255,255,.72);padding:clamp(3rem,6vw,5rem) var(--gutter) 0}
 .footer-inner{max-width:var(--max);margin:0 auto}
 .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:clamp(1.5rem,3vw,3rem);padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07)}
 .footer-brand{font-family:var(--font-serif);font-size:1.35rem;color:#fff;display:block;margin-bottom:.5rem}
 .footer-brand em{font-style:italic;color:var(--coral-light)}
 .footer-brand-desc{font-size:.8rem;line-height:1.75;max-width:240px;margin-bottom:1.4rem}
 .footer-disclosure-box{font-size:.72rem;line-height:1.7;color:rgba(255,255,255,.72);background:rgba(255,255,255,.03);padding:.75rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
-.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:1rem}
-.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.32);padding:3px 0;transition:color .18s}
+.footer-col-title{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.72);margin-bottom:1rem}
+.footer-col a{display:block;font-size:.82rem;color:rgba(255,255,255,.72);padding:3px 0;transition:color .18s}
 .footer-col a:hover{color:rgba(255,255,255,.75)}
 .footer-legal{border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 0 2rem;display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:1rem}
 .footer-legal-text{font-size:.7rem;line-height:1.7;color:rgba(255,255,255,.25);max-width:60ch}
@@ -308,7 +308,132 @@ button{font-family:var(--font-sans);cursor:pointer}
 
 <link rel="stylesheet" href="search-ui.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
+<style id="dn-dark">:is(.ws-top-pick,
+.ws-quick-overlay,
+.ws-filter-btn.active,
+.ws-compare-dark,
+.ws-table thead,
+.ws-map-container,
+.ws-bottom-line,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay){--coral:#d9d9d9;--coral-light:#e6e6e6;--gold:#d9d9d9;--p10-coral:#d9d9d9;--p10-gold:#d9d9d9;--dn-brass:#d9d9d9;--ink-muted:#c4c4c4;--text-muted:#c4c4c4;--dn-on-accent:#111}
+:is(.nav-stays-btn,.nav-stays-btn:hover,.mobile-stays-btn,.ws-area-badge,.ep-card-badge,.ep-card-badge--gold,.ep-card-cta--coral,.bp-badge,.bp-badge--gold,.bp-cta,.dst-cta-primary,.booking-band--coral,.nbhd-card-tag,.ep-badge-coral,.p13-intro-cta,.p13-hotel-badge){color:var(--dn-on-accent,#fff)}
+:is(.ws-top-pick,
+.ws-quick-overlay,
+.ws-filter-btn.active,
+.ws-compare-dark,
+.ws-table thead,
+.ws-map-container,
+.ws-bottom-line,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) *{--ocean:#d9d9d9;--ocean-light:#e6e6e6;--dn-link:#fff}
+html body :is(.ws-top-pick,
+.ws-quick-overlay,
+.ws-filter-btn.active,
+.ws-compare-dark,
+.ws-table thead,
+.ws-map-container,
+.ws-bottom-line,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) a.dn-btn:not(.tc-btn){background:#fff !important;color:#111 !important;border-color:#fff !important}
+html body :is(.ws-top-pick,
+.ws-quick-overlay,
+.ws-filter-btn.active,
+.ws-compare-dark,
+.ws-table thead,
+.ws-map-container,
+.ws-bottom-line,
+.cin-break-overlay,
+.cin-break--mood .cin-break-overlay,
+.cin-break--split .cin-break-content-side,
+.ep-card-badge--ocean,
+.ep-card-cta,
+.bp-badge--ocean,
+.bp-cta--ocean,
+.dst-section--dark,
+.pw-card-overlay,
+.mood-quote--ocean,
+.booking-band,
+.hs-card-star,
+.hs-card-btn,
+.stats-bar,
+.nbhd-card-overlay,
+.verdict-block,
+.quick-answer,
+.editors-picks-section .ep-cta-primary,
+.ep-badge-ocean,
+.p13-intro-text,
+.p13-verdict-strip,
+.p13-hotel-cta-primary,
+.p13-cin-band-overlay) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#fff !important;border-color:rgba(255,255,255,.7) !important}
+:is(.nav-hamburger span,.ws-sig-pick,.ws-filter-btn,.ws-area-card,.ws-area-stat,.ws-area-verdict,.ws-hotel-mini,.ws-table,.ws-map-section,.ws-faq,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality){--coral:#111;--coral-light:#333;--gold:#111;--p10-coral:#111;--p10-gold:#111;--dn-brass:#111;--ink-muted:#595959;--text-muted:#595959;--dn-on-accent:#fff}
+:is(.nav-hamburger span,.ws-sig-pick,.ws-filter-btn,.ws-area-card,.ws-area-stat,.ws-area-verdict,.ws-hotel-mini,.ws-table,.ws-map-section,.ws-faq,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) *{--ocean:#333;--ocean-light:#595959;--dn-link:#111}
+html body :is(.nav-hamburger span,.ws-sig-pick,.ws-filter-btn,.ws-area-card,.ws-area-stat,.ws-area-verdict,.ws-hotel-mini,.ws-table,.ws-map-section,.ws-faq,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) a.dn-btn:not(.tc-btn){background:#111 !important;color:#fff !important;border-color:#111 !important}
+html body :is(.nav-hamburger span,.ws-sig-pick,.ws-filter-btn,.ws-area-card,.ws-area-stat,.ws-area-verdict,.ws-hotel-mini,.ws-table,.ws-map-section,.ws-faq,.cin-break-cta,.ep-card,.bp-content-side,.bp-spec,.pathways-section,.bb-cta-primary,.hs-card,.editors-picks-section .ep-card,.wid-hotel-card,.p13-hotel-card,.local-perspective,.local-reality) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#111 !important;border-color:#111 !important}</style>
 </head>
 <body>
 
@@ -929,13 +1054,13 @@ button{font-family:var(--font-sans);cursor:pointer}
     <div class="ws-map-container" aria-label="Da Nang orientation map showing key areas">
       <svg class="ws-map-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic map of Da Nang areas">
         <!-- Ocean background -->
-        <rect width="900" height="400" fill="#12201f"/>
+        <rect width="900" height="400" fill="#111111"/>
         <!-- Land mass schematic -->
-        <path d="M0,0 L0,400 L380,400 L390,370 L400,340 L420,300 L440,260 L430,200 L420,150 L410,100 L400,60 L390,30 L380,0 Z" fill="#2a4a3a" opacity="0.7"/>
+        <path d="M0,0 L0,400 L380,400 L390,370 L400,340 L420,300 L440,260 L430,200 L420,150 L410,100 L400,60 L390,30 L380,0 Z" fill="#4d4d4d" opacity="0.7"/>
         <!-- Son Tra Peninsula -->
-        <path d="M390,30 L400,10 L440,0 L480,20 L490,50 L470,80 L450,100 L430,110 L420,100 L410,80 L400,60 Z" fill="#1e3a2a" opacity="0.85"/>
+        <path d="M390,30 L400,10 L440,0 L480,20 L490,50 L470,80 L450,100 L430,110 L420,100 L410,80 L400,60 Z" fill="#333333" opacity="0.85"/>
         <!-- My Khe coastline -->
-        <path d="M390,370 L400,340 L420,300 L440,260 L430,200 L420,150 L420,150" stroke="#4a9a9a" stroke-width="3" fill="none" opacity="0.6" stroke-dasharray="5,3"/>
+        <path d="M390,370 L400,340 L420,300 L440,260 L430,200 L420,150 L420,150" stroke="#999999" stroke-width="3" fill="none" opacity="0.6" stroke-dasharray="5,3"/>
 
         <!-- LABELS -->
         <!-- Ocean -->
@@ -943,13 +1068,13 @@ button{font-family:var(--font-sans);cursor:pointer}
         <!-- Arrow toward Hoi An -->
         <text x="200" y="380" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="11" letter-spacing="1">&#8595; toward Hoi An</text>
         <!-- Airport -->
-        <circle cx="140" cy="210" r="6" fill="#80622a" opacity="0.9"/>
+        <circle cx="140" cy="210" r="6" fill="#666666" opacity="0.9"/>
         <text x="155" y="215" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="12" font-weight="600">Airport</text>
         <!-- Han River -->
-        <path d="M200,120 Q240,140 280,130 Q320,120 360,140" stroke="#4a9a9a" stroke-width="2.5" fill="none" opacity="0.7"/>
+        <path d="M200,120 Q240,140 280,130 Q320,120 360,140" stroke="#999999" stroke-width="2.5" fill="none" opacity="0.7"/>
         <text x="220" y="115" fill="rgba(255,255,255,0.65)" font-family="sans-serif" font-size="12" font-weight="600">Han River</text>
         <!-- Dragon Bridge marker -->
-        <circle cx="310" cy="132" r="5" fill="#97762f" opacity="0.9"/>
+        <circle cx="310" cy="132" r="5" fill="#666666" opacity="0.9"/>
         <text x="320" y="128" fill="rgba(255,255,255,0.55)" font-family="sans-serif" font-size="10">Dragon Bridge</text>
         <!-- Hai Chau label -->
         <text x="180" y="170" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="11">Hai Chau / City</text>
@@ -957,18 +1082,18 @@ button{font-family:var(--font-sans);cursor:pointer}
         <text x="430" y="240" fill="#fff" font-family="Georgia,serif" font-size="15" font-weight="bold">My Khe</text>
         <text x="430" y="258" fill="rgba(255,255,255,0.45)" font-family="sans-serif" font-size="10">Beach</text>
         <!-- An Thuong -->
-        <circle cx="400" cy="220" r="5" fill="#f3efe6" opacity="0.8"/>
+        <circle cx="400" cy="220" r="5" fill="#f0f0f0" opacity="0.8"/>
         <text x="348" y="218" fill="rgba(255,255,255,0.75)" font-family="sans-serif" font-size="11">An Thuong</text>
         <!-- Son Tra -->
         <text x="430" y="55" fill="rgba(255,255,255,0.8)" font-family="Georgia,serif" font-size="13" font-style="italic">Son Tra</text>
         <text x="433" y="70" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">Peninsula</text>
         <!-- Non Nuoc -->
-        <circle cx="430" cy="330" r="5" fill="#f3efe6" opacity="0.7"/>
+        <circle cx="430" cy="330" r="5" fill="#f0f0f0" opacity="0.7"/>
         <text x="443" y="334" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="11">Non Nuoc</text>
         <!-- Marble Mountains -->
         <text x="330" y="320" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">Marble Mtns</text>
         <!-- Lady Buddha -->
-        <circle cx="435" cy="90" r="4" fill="#97762f" opacity="0.8"/>
+        <circle cx="435" cy="90" r="4" fill="#666666" opacity="0.8"/>
         <text x="445" y="93" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="10">Lady Buddha</text>
         <!-- Compass -->
         <text x="820" y="40" fill="rgba(255,255,255,0.35)" font-family="sans-serif" font-size="11">N &#8593;</text>

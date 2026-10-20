@@ -305,7 +305,7 @@ function transform(page, report) {
   $('style#nav-fit').each((i, e) => replace($(e), ''));
   if (nav && CONSENT_HEAD) { const m = src.match(/<head[^>]*>/); const hs = m.index + m[0].length; ops.push({ s: hs, e: hs, t: '\n' + CONSENT_HEAD }); }
   if (nav) {
-    const hc = src.indexOf('</head>'); ops.push({ s: hc, e: hc, t: `${lang === 'ko' ? FONT_LINK.replace('family=Hanken+Grotesk', 'family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk') : FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="${prefix}dn-design.css">\n` });
+    const hc = src.indexOf('</head>'); ops.push({ s: hc, e: hc, t: `${lang === 'ko' ? FONT_LINK.replace('family=Hanken+Grotesk', 'family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk') : FONT_LINK}<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="${prefix}dn-design.css">\n` });
     const bc = src.lastIndexOf('</body>'); ops.push({ s: bc, e: bc, t: `<script src="${prefix}dn.js" defer></script>\n${CONSENT_JS ? CONSENT_JS(prefix) : ''}` });
   }
 
@@ -338,24 +338,101 @@ function buildHome(page, served) {
   let head = src.slice(0, src.indexOf('</head>'));
   head = head.replace(/<style[\s\S]*?<\/style>/g, '').replace(/<link rel="stylesheet"[^>]*>/g, '').replace(/<link [^>]*fonts\.googleapis\.com[^>]*>/g, '').replace(/<link rel="preconnect"[^>]*fonts[^>]*>/g, '');
   head = head.replace(/<head[^>]*>/, m => m + '\n' + CONSENT_HEAD);
-  head = repaint(head) + `${FONT_LINK}<meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="search-ui.css"><link rel="stylesheet" href="dn-design.css"><link rel="stylesheet" href="dn-home.css">\n</head>\n<body class="dn-home">\n`;
+  head = repaint(head) + `${FONT_LINK}<meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="search-ui.css"><link rel="stylesheet" href="dn-design.css"><link rel="stylesheet" href="dn-home.css">\n</head>\n<body class="dn-home">\n`;
   const tail = `\n<script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>\n<script src="search-engine.js"></script>\n<script src="search-ui.js"></script>\n<script src="booking-cta-tracking.js"></script>\n<script src="dn.js" defer></script>\n<script src="dn-home.js" defer></script>\n${CONSENT_JS ? CONSENT_JS('') : ''}</body>\n</html>\n`;
   const out = unify(head + body + tail);
   return { out, rep: { page, lang: 'en', nav: true, footer: true, hero: 'home', main: 'own', cj: (src.match(/kqzyfj\.com\/click-101820678-/g) || []).length, cjAfter: (out.match(/kqzyfj\.com\/click-101820678-/g) || []).length, cjFooter: 0, cjExpected: null } };
 }
 
 // ── Run ─────────────────────────────────────────────────────────────────────
+const { mono, strip } = require('./mono');
+let emojiRemoved = 0; const emojiPages = new Set();
+// Legacy sections painted dark through an inline style get the dn-dark class, so light text, links and buttons switch automatically.
+const DARK_BG = /background(?:-color)?\s*:\s*(?:var\(--(?:ocean-deep|night|ocean|ink)\)|#(?:000|111|222|333)(?:[0-9a-f]{3})?\b)/i;
+const markDark = html => html.replace(/<(section|div|header|aside|article)\b([^>]*?)>/g, (m, tag, attrs) => {
+  const st = attrs.match(/\sstyle="([^"]*)"/); if (!st || !DARK_BG.test(st[1]) || /gradient\(/.test(st[1]) && !DARK_BG.test(st[1].replace(/gradient\([^)]*\)/g, ''))) return m;
+  if (/\bclass="[^"]*\bdn-dark\b/.test(attrs)) return m;
+  return /\sclass="/.test(attrs) ? `<${tag}${attrs.replace(/\sclass="/, ' class="dn-dark ')}>` : `<${tag}${attrs} class="dn-dark">`;
+});
+// Per-page dark scope: selectors whose own CSS paints them dark get light-text variables and inverted buttons.
+const DARK_VARS = new Set(['ocean-deep', 'night', 'ocean', 'ink', 'p10-ocean', 'p10-ocean-mid', 'p10-ink', 'dn-deep', 'dn-deep-2', 'dn-ink', 'dn-sea']);
+const lumHex = h => { h = h.replace('#', ''); if (h.length === 3) h = [...h].map(c => c + c).join(''); return 0.2126 * parseInt(h.slice(0, 2), 16) + 0.7152 * parseInt(h.slice(2, 4), 16) + 0.0722 * parseInt(h.slice(4, 6), 16); };
+function isDarkBg(v) {
+  v = v.trim().replace(/!important/i, '').trim();
+  if (/url\(/.test(v)) return false;
+  let m = v.match(/var\(--([\w-]+)/); if (m && !/gradient/.test(v)) return DARK_VARS.has(m[1]);
+  m = v.match(/#([0-9a-f]{6}|[0-9a-f]{3})\b/i); if (m) return lumHex(m[0]) < 90;
+  m = v.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*([\d.]+))?/); if (m) return (m[4] === undefined || +m[4] >= .5) && 0.2126 * m[1] + 0.7152 * m[2] + 0.0722 * m[3] < 90;
+  return /^(black)$/i.test(v);
+}
+const legacyCss = {};
+const legacySheet = f => legacyCss[f] || (legacyCss[f] = (() => { try { return mono(repaint(show(f))); } catch (e) { return ''; } })());
+function darkSelectors(css) {
+  css = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const sel = new Set();
+  for (const m of css.matchAll(/([^{}@;]+)\{([^{}]*)\}/g)) {
+    const decl = [...m[2].matchAll(/(?:^|;)\s*background(?:-color)?\s*:\s*([^;]+)/gi)].pop();
+    if (!decl || !isDarkBg(decl[1])) continue;
+    for (let x of m[1].split(',')) {
+      x = x.trim().replace(/\s+/g, ' ');
+      if (!x || /::|:hover|:focus|:active|:before|:after|:not\(|:nth|^(html|body|\*|:root)\b/.test(x) || /^[a-z]+$/.test(x) && !/^(section|header|footer|aside|thead|table|tr|td|th)$/.test(x)) continue;
+      if (/^(\.dn-|\.dh-|\.search-|\.site-nav|\.nav-|\.mobile-|\.site-footer|\.shr-|\.footer|\.hero-overlay)/.test(x)) continue;          // owned by dn-design.css / dn-home.css
+      sel.add(x);
+    }
+  }
+  return [...sel];
+}
+// Elements filled with the accent variable (white text on --coral): on a dark ground the fill turns light, so the text turns dark.
+const FILL_VARS = /var\(--(?:coral|coral-light|gold|p10-coral|p10-gold)\b/;
+function filledSelectors(css) {
+  css = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const sel = new Set();
+  for (const m of css.matchAll(/([^{}@;]+)\{([^{}]*)\}/g)) {
+    const bg = [...m[2].matchAll(/(?:^|;)\s*background(?:-color)?\s*:\s*([^;]+)/gi)].pop();
+    const fg = [...m[2].matchAll(/(?:^|;)\s*color\s*:\s*([^;]+)/gi)].pop();
+    if (!bg || !FILL_VARS.test(bg[1])) continue;
+    for (let x of m[1].split(',')) { x = x.trim().replace(/\s+/g, ' '); if (x && !/::|:before|:after|:not\(|^(html|body|\*)\b/.test(x) && !/^(\.dn-|\.dh-|\.search-)/.test(x)) sel.add(x); }
+  }
+  return [...sel];
+}
+const isLightBg = v => { v = v.trim().replace(/!important/i, '').trim(); if (/url\(|gradient/.test(v)) return false; if (/^(#fff(?:fff)?|white|var\(--(?:white|paper|sand|dn-paper(?:-\d)?|sand-mid|ocean-pale)\))$/i.test(v)) return true; const m = v.match(/^#([0-9a-f]{6}|[0-9a-f]{3})$/i); return !!m && lumHex(v) > 200; };
+function lightSelectors(css) {
+  css = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const sel = new Set();
+  for (const m of css.matchAll(/([^{}@;]+)\{([^{}]*)\}/g)) {
+    const bg = [...m[2].matchAll(/(?:^|;)\s*background(?:-color)?\s*:\s*([^;]+)/gi)].pop();
+    if (!bg || !isLightBg(bg[1])) continue;
+    for (let x of m[1].split(',')) { x = x.trim().replace(/\s+/g, ' '); if (x && !/::|:hover|:focus|:active|:before|:after|:not\(|:nth|^(html|body|\*|:root)\b/.test(x) && !/^[a-z]+$/.test(x) && !/^(\.dn-|\.dh-|\.search-)/.test(x)) sel.add(x); }
+  }
+  return [...sel];
+}
+function darkScope(html) {
+  const css = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(m => m[1]).join('\n') + [...html.matchAll(/<link[^>]*href="([\w-]+\.css)"/g)].map(m => m[1]).filter(f => /^(phase10|phase13|hotel-review-modern|hotel-vs-hotel)\.css$/.test(f)).map(legacySheet).join('\n');
+  const S = darkSelectors(css); if (!S.length) return html;
+  const F = filledSelectors(css);
+  const W = lightSelectors(css).filter(x => !S.includes(x));
+  const L = S.join(',\n');
+  const block = `<style id="dn-dark">:is(${L}){--coral:#d9d9d9;--coral-light:#e6e6e6;--gold:#d9d9d9;--p10-coral:#d9d9d9;--p10-gold:#d9d9d9;--dn-brass:#d9d9d9;--ink-muted:#c4c4c4;--text-muted:#c4c4c4;--dn-on-accent:#111}\n${F.length ? `:is(${F.join(',')}){color:var(--dn-on-accent,#fff)}\n` : ''}:is(${L}) *{--ocean:#d9d9d9;--ocean-light:#e6e6e6;--dn-link:#fff}\nhtml body :is(${L}) a.dn-btn:not(.tc-btn){background:#fff !important;color:#111 !important;border-color:#fff !important}\nhtml body :is(${L}) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#fff !important;border-color:rgba(255,255,255,.7) !important}</style>`;
+  const light = W.length ? `\n:is(${W.join(',')}){--coral:#111;--coral-light:#333;--gold:#111;--p10-coral:#111;--p10-gold:#111;--dn-brass:#111;--ink-muted:#595959;--text-muted:#595959;--dn-on-accent:#fff}\n:is(${W.join(',')}) *{--ocean:#333;--ocean-light:#595959;--dn-link:#111}\nhtml body :is(${W.join(',')}) a.dn-btn:not(.tc-btn){background:#111 !important;color:#fff !important;border-color:#111 !important}\nhtml body :is(${W.join(',')}) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#111 !important;border-color:#111 !important}` : '';
+  return html.replace('</head>', block.replace('</style>', light + '</style>') + '\n</head>');
+}
+const finish = (page, html) => { const r = strip(html); if (r.removed) { emojiRemoved += r.removed; emojiPages.add(page); } const out = mono(r.text.replace(/<span class="di-icon">[^<]*<\/span>\s*/g, '')); return /\.html$/.test(page) ? darkScope(markDark(out)) : out; };
 const pages = servedPages();
 const reports = [];
 for (const p of pages) {
-  try { const { out, rep } = p === 'index.html' ? buildHome(p, pages) : transform(p); reports.push(rep); if (!CHECK) fs.writeFileSync(path.join(ROOT, p), out); }
+  try { const { out, rep } = p === 'index.html' ? buildHome(p, pages) : transform(p); reports.push(rep); if (!CHECK) fs.writeFileSync(path.join(ROOT, p), finish(p, out)); }
   catch (e) { reports.push({ page: p, error: e.message.slice(0, 160) }); }
 }
 // Shared legacy stylesheets follow the new palette (still referenced by pages).
 for (const f of ['phase10.css', 'phase13.css', 'hotel-review-modern.css', 'hotel-vs-hotel.css', 'search-ui.css']) {
-  if (!CHECK) fs.writeFileSync(path.join(ROOT, f), repaint(show(f)));
+  if (!CHECK) fs.writeFileSync(path.join(ROOT, f), finish(f, repaint(show(f))));
+}
+// Unreferenced legacy sheets, the logo mark and the /news template get the same colour and emoji rules.
+for (const f of ['premium.css', 'cta-polish.css', 'phase10_5.css', 'bk-widget.css', 'lib/news-template.html']) {
+  if (!CHECK) fs.writeFileSync(path.join(ROOT, f), finish(f, f.endsWith('.html') ? repaint(show(f)) : show(f)));
 }
 if (!CHECK) fs.writeFileSync(path.join(ROOT, 'docs/redesign/build-report.json'), JSON.stringify(reports, null, 1));
+console.log('Emojis removed:', emojiRemoved, 'on', emojiPages.size, 'pages');
 if (process.env.DUMP) fs.writeFileSync("/tmp/dn-reports.json", JSON.stringify(reports));
 const tally = (k) => reports.reduce((a, r) => (a[r[k]] = (a[r[k]] || 0) + 1, a), {});
 console.log(JSON.stringify({ base: BASE.slice(0, 8), pages: reports.length, errors: reports.filter(r => r.error).length, nav: tally('nav'), footer: tally('footer'), hero: tally('hero'), main: tally('main'), cjUnexplained: reports.filter(r => !r.error && r.cjExpected !== null && r.cjAfter !== r.cjExpected && !(r.page.startsWith('kr/') && r.cjAfter === r.cjExpected + 1)).map(r => `${r.page} ${r.cj}->${r.cjAfter} (footer ${r.cjFooter})`), overrideProblems: reports.filter(r => r.overrideMissing).map(r => `${r.page}: ${r.overrideMissing.join(' | ')}`), youtubeEmbedsMoved: reports.reduce((a, r) => a + (r.ytNoCookie || 0), 0), demotedButtons: reports.reduce((a, r) => a + (r.demoted || 0), 0), cjRemovedWithFooter: reports.reduce((a, r) => a + (r.cjFooter || 0), 0) }, null, 1));

@@ -15,14 +15,22 @@ Branch `sitewide-redesign` · baseline (production at the time) `7ed26a79075410f
 
 ## Design system
 
-Independent travel magazine: warm paper ground, ink type, one brass accent, flat hairline cards, large photography.
+Black-and-white editorial travel publication: white ground, black type, grey hairline rules, flat cards, large full-colour photography. No accent colour.
 - **Type:** Newsreader (serif headlines, reading text in reviews) + Hanken Grotesk (UI/body); Noto Sans KR on Korean pages.
-- **Colour:** paper `#faf8f3`, ink `#161d1c`, deep `#12201f`, accent brass `#80622a` (light brass `#c8a762` on dark grounds). All text pairs ≥ 4.5:1 (checked). Trip.com blue appears only on official booking buttons (after the cutover).
+- **Colour (strictly monochrome):** white `#fff`, ink `#111`, greys `#333 / #595959 / #dcdcdc / #f5f5f5`; `#d9d9d9` is the accent on black grounds. Tokens live in the `:root` block of `dn-design.css`; legacy token names (`--coral`, `--ocean`, `--gold`, `--sand`) are remapped there. Photographs keep their colour. Trip.com blue appears only on official booking buttons, and only after the later cutover.
 - **Chrome:** one masthead (sticky, dropdown panels, "More" collapses About/Videos), full-screen accordion mobile menu, one footer. All generated from `scripts/redesign/chrome.js`.
 - **Hero:** every inner page's hero is normalised to one editorial hero (image / plain / dark variants, comparison pair).
 - **Buttons (rebuilt from scratch):** `dn-btn` (ink, booking), `dn-btn--ghost` (secondary), `dn-booklink` (in-text), `dn-imglink` (photo links). One booking button per hotel and per generic search on a page; earlier duplicates became text links (117 links; none removed). Runtime-rendered links (map popups, JS cards) are classified by `dn.js`.
 - **Homepage:** editorial hero, "Find your hotel" chooser (links to our own guides: no widget, no dates), asymmetric collections, neighbourhood mosaic, reviews, guides, one booking band, one eSIM line (affiliate kept).
 - **Reference site:** travelcurator.com blocks automated browsers (Cloudflare bot check), so it could not be viewed. The design follows the brief's description of its qualities, not its actual layouts.
+
+## Monochrome and emoji rules (enforced at build time)
+
+`scripts/redesign/mono.js` runs on every generated page and legacy stylesheet, so a rebuild cannot bring either back:
+- **Colour:** every chromatic hex or rgb literal is snapped to a 16-step neutral ladder (numeric entities such as `&#226;`, `href="#abc"` anchors and `url(#id)` are never touched). Faint white text on dark grounds (alpha .3-.69) is raised to .72.
+- **Dark grounds:** `build.js` derives each page's dark containers from its own CSS (and the inline `style="background:..."` sections) and injects `<style id="dn-dark">`, which switches accent text, text links and buttons to the light variants there.
+- **Emoji:** pictographs, flags, keycaps and variation selectors are removed from page HTML, inline scripts and CSS (an icon-only `<span>` is removed whole; otherwise the emoji and one following space go). Kept: arrows (`→ ↗`), `©`, `®`, check marks and bullets. `inventory.js` compares text with emojis removed on both sides, so any other text change is still caught.
+- **Deliberate colour exceptions:** photographs; map tiles (functional data); the Leaflet attribution flag is greyscaled; the DHG badge in `favicon.ico`/`apple-touch-icon.png`/`android-chrome-*.png` and `favicon.svg` (brand artwork, not page UI); the Airalo and Booking.com partner artwork (`images/airalo-esim-phone-signal.svg`, `booking-logo.svg`); the future Trip.com blue buttons. Redirect-only legacy pages (`review-*.html`, `hotels.html`, `where-to-stay.html`, `guides-da-nang-hotel-prices-by-month.html`) still contain the old markup but are never served (they 301 elsewhere).
 
 ## How it is built (repeatable)
 

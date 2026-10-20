@@ -37,7 +37,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --sand:#f3efe6;--ocean:#25544f;--ocean-deep:#12201f;--coral:#80622a;--gold:#80622a;
+  --sand:#f0f0f0;--ocean:#4d4d4d;--ocean-deep:#111111;--coral:#666666;--gold:#666666;
   --text:#1a1a1a;--text-muted:#5a5a5a;--border:rgba(0,0,0,.08);
   --font-serif:'Newsreader',serif;--font-sans:'Noto Sans KR','Hanken Grotesk',sans-serif;
   --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:20px;
@@ -50,31 +50,31 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
 /* NAV */
-.site-nav{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;background:#12201f;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:100;gap:1rem}
+.site-nav{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;background:#111111;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:100;gap:1rem}
 .nav-logo{font-family:var(--font-serif);font-size:1.1rem;color:#fff;font-weight:400;white-space:nowrap}
-.nav-logo em{font-style:italic;color:rgba(255,255,255,.6)}
+.nav-logo em{font-style:italic;color:rgba(255,255,255,.72)}
 .nav-lang{display:flex;align-items:center;gap:.4rem;font-size:.8rem}
-.nav-lang a{padding:.25rem .6rem;border-radius:4px;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.15);transition:all .15s}
+.nav-lang a{padding:.25rem .6rem;border-radius:4px;color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.15);transition:all .15s}
 .nav-lang a.active{background:var(--ocean);color:#fff;border-color:var(--ocean)}
 .nav-lang a:hover:not(.active){color:#fff;border-color:rgba(255,255,255,.3)}
 .nav-stays-btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--coral);color:#fff;padding:.5rem 1rem;border-radius:var(--r-sm);font-size:.82rem;font-weight:600;white-space:nowrap;transition:background .15s}
-.nav-stays-btn:hover{background:#b04d3a}
+.nav-stays-btn:hover{background:#666666}
 
 /* HERO */
 .kr-hero{position:relative;background:var(--ocean-deep);color:#fff;padding:5rem 1.5rem 4rem;overflow:hidden}
 .kr-hero::before{content:'';position:absolute;inset:0;background:url('../images/da-nang-beach-hotels-064608a4.jpg') center/cover no-repeat;opacity:.18;z-index:0}
 .kr-hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center}
-.kr-hero-kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.45);margin-bottom:1.25rem;font-weight:600}
+.kr-hero-kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.72);margin-bottom:1.25rem;font-weight:600}
 .kr-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,5.5vw,3.25rem);font-weight:400;line-height:1.15;margin-bottom:1.1rem}
-.kr-hero p{color:rgba(255,255,255,.65);max-width:52ch;margin:0 auto 2.25rem;font-size:1rem;line-height:1.75}
+.kr-hero p{color:rgba(255,255,255,.72);max-width:52ch;margin:0 auto 2.25rem;font-size:1rem;line-height:1.75}
 .hero-btn-row{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 .hero-btn-primary{background:var(--coral);color:#fff;padding:.75rem 1.6rem;border-radius:var(--r-sm);font-size:.88rem;font-weight:700;transition:background .15s,transform .12s}
-.hero-btn-primary:hover{background:#b04d3a;transform:translateY(-1px)}
+.hero-btn-primary:hover{background:#666666;transform:translateY(-1px)}
 .hero-btn-secondary{background:rgba(255,255,255,.1);color:#fff;padding:.75rem 1.6rem;border-radius:var(--r-sm);font-size:.88rem;border:1px solid rgba(255,255,255,.2);transition:background .15s}
 .hero-btn-secondary:hover{background:rgba(255,255,255,.18)}
 .hero-stats{display:flex;justify-content:center;gap:2.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
 .hero-stat-val{font-family:var(--font-serif);font-size:1.6rem;color:#fff;display:block;line-height:1}
-.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;display:block}
+.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;display:block}
 
 /* QUICK TRUST BAR */
 .trust-bar{background:var(--sand);border-bottom:1px solid var(--border);padding:.75rem 1.5rem}
@@ -97,11 +97,11 @@ img{max-width:100%;display:block}
 .feat-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.2)}
 .feat-card-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .4s var(--ease)}
 .feat-card:hover .feat-card-img{transform:scale(1.04)}
-.feat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(18,32,31,.92) 0%,rgba(18,32,31,.4) 55%,rgba(0,0,0,.1) 100%)}
+.feat-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,17,17,.92) 0%,rgba(17,17,17,.4) 55%,rgba(0,0,0,.1) 100%)}
 .feat-card-body{position:absolute;bottom:0;left:0;right:0;padding:1.25rem;z-index:1}
-.feat-card-cat{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.55);font-weight:700;margin-bottom:.4rem;display:block}
+.feat-card-cat{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.72);font-weight:700;margin-bottom:.4rem;display:block}
 .feat-card-title{font-family:var(--font-serif);font-size:1rem;color:#fff;font-weight:400;line-height:1.3;margin-bottom:.5rem}
-.feat-card-cta{font-size:.72rem;color:rgba(255,255,255,.6);font-weight:600;display:inline-flex;align-items:center;gap:.3rem;transition:color .15s}
+.feat-card-cta{font-size:.72rem;color:rgba(255,255,255,.72);font-weight:600;display:inline-flex;align-items:center;gap:.3rem;transition:color .15s}
 .feat-card:hover .feat-card-cta{color:#fff}
 .feat-card-wide{grid-column:span 2;aspect-ratio:16/9}
 
@@ -111,21 +111,21 @@ img{max-width:100%;display:block}
 .feat-row-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.18)}
 .feat-row-card .feat-card-img{transition:transform .4s var(--ease)}
 .feat-row-card:hover .feat-card-img{transform:scale(1.04)}
-.feat-row-card .feat-card-overlay{background:linear-gradient(to top,rgba(18,32,31,.9) 0%,rgba(18,32,31,.35) 60%,transparent 100%)}
+.feat-row-card .feat-card-overlay{background:linear-gradient(to top,rgba(17,17,17,.9) 0%,rgba(17,17,17,.35) 60%,transparent 100%)}
 .feat-row-card .feat-card-body{padding:1.5rem}
 .feat-row-card .feat-card-title{font-size:1.1rem}
 
 /* DARK TRENDING SECTION */
 .trending-section{background:var(--ocean-deep);padding:4rem 1.5rem;margin:0}
-.trending-section .section-label{color:rgba(255,255,255,.4)}
+.trending-section .section-label{color:rgba(255,255,255,.72)}
 .trending-section .section-title{color:#fff}
-.trending-section .section-sub{color:rgba(255,255,255,.5)}
+.trending-section .section-sub{color:rgba(255,255,255,.72)}
 .trending-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.75rem}
 .trend-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:1.5rem;transition:background .2s,border-color .2s;display:block}
 .trend-card:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.15)}
 .trend-card-num{font-family:var(--font-serif);font-size:1.6rem;color:rgba(255,255,255,.12);line-height:1;margin-bottom:.75rem;font-weight:400}
 .trend-card-title{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:.4rem;line-height:1.35}
-.trend-card-desc{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.65}
+.trend-card-desc{font-size:.8rem;color:rgba(255,255,255,.72);line-height:1.65}
 .trend-card-link{font-size:.75rem;color:var(--coral);font-weight:600;margin-top:.75rem;display:block}
 
 /* REALITY CHECK SECTION */
@@ -180,21 +180,21 @@ img{max-width:100%;display:block}
 /* CTA BLOCK */
 .cta-section{background:var(--ocean-deep);padding:4rem 1.5rem;text-align:center}
 .cta-section h2{font-family:var(--font-serif);font-size:clamp(1.4rem,3vw,2rem);color:#fff;margin-bottom:.75rem;font-weight:400}
-.cta-section p{color:rgba(255,255,255,.55);margin-bottom:1.75rem;font-size:.9rem;max-width:42ch;margin-left:auto;margin-right:auto}
+.cta-section p{color:rgba(255,255,255,.72);margin-bottom:1.75rem;font-size:.9rem;max-width:42ch;margin-left:auto;margin-right:auto}
 
 /* FOOTER */
-.site-footer{background:#0a0a0a;color:rgba(255,255,255,.45);padding:3rem 1.5rem 2rem}
+.site-footer{background:#0a0a0a;color:rgba(255,255,255,.72);padding:3rem 1.5rem 2rem}
 .footer-inner{max-width:var(--max);margin:0 auto}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
 .footer-brand{font-family:var(--font-serif);font-size:1.1rem;color:#fff;display:block;margin-bottom:.75rem}
-.footer-brand em{font-style:italic;color:rgba(255,255,255,.5)}
-.footer-brand-desc{font-size:.77rem;line-height:1.7;color:rgba(255,255,255,.3);max-width:28ch}
+.footer-brand em{font-style:italic;color:rgba(255,255,255,.72)}
+.footer-brand-desc{font-size:.77rem;line-height:1.7;color:rgba(255,255,255,.72);max-width:28ch}
 .footer-lang-note{font-size:.72rem;color:rgba(255,255,255,.25);margin-top:.75rem}
-.footer-lang-note a{color:rgba(255,255,255,.4);text-decoration:underline}
-.footer-col-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.3);margin-bottom:.75rem;font-weight:700}
-.footer-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.4);padding:.2rem 0;transition:color .15s}
+.footer-lang-note a{color:rgba(255,255,255,.72);text-decoration:underline}
+.footer-col-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.72);margin-bottom:.75rem;font-weight:700}
+.footer-col a{display:block;font-size:.8rem;color:rgba(255,255,255,.72);padding:.2rem 0;transition:color .15s}
 .footer-col a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;font-size:.7rem;color:rgba(255,255,255,.65);display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;font-size:.7rem;color:rgba(255,255,255,.72);display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between}
 
 /* DIVIDER */
 .divider{border:none;border-top:1px solid var(--border);margin:0}
@@ -223,7 +223,52 @@ img{max-width:100%;display:block}
 </style>
 <link rel="stylesheet" href="../phase10.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#faf8f3"><link rel="stylesheet" href="../dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="../dn-design.css">
+<style id="dn-dark">:is(.kr-hero,
+.trust-dot,
+.feat-card,
+.feat-card-overlay,
+.feat-row-card,
+.feat-row-card .feat-card-overlay,
+.trending-section,
+.hgc-img,
+.quick-table th,
+.cta-section){--coral:#d9d9d9;--coral-light:#e6e6e6;--gold:#d9d9d9;--p10-coral:#d9d9d9;--p10-gold:#d9d9d9;--dn-brass:#d9d9d9;--ink-muted:#c4c4c4;--text-muted:#c4c4c4;--dn-on-accent:#111}
+:is(.nav-stays-btn,.hero-btn-primary){color:var(--dn-on-accent,#fff)}
+:is(.kr-hero,
+.trust-dot,
+.feat-card,
+.feat-card-overlay,
+.feat-row-card,
+.feat-row-card .feat-card-overlay,
+.trending-section,
+.hgc-img,
+.quick-table th,
+.cta-section) *{--ocean:#d9d9d9;--ocean-light:#e6e6e6;--dn-link:#fff}
+html body :is(.kr-hero,
+.trust-dot,
+.feat-card,
+.feat-card-overlay,
+.feat-row-card,
+.feat-row-card .feat-card-overlay,
+.trending-section,
+.hgc-img,
+.quick-table th,
+.cta-section) a.dn-btn:not(.tc-btn){background:#fff !important;color:#111 !important;border-color:#fff !important}
+html body :is(.kr-hero,
+.trust-dot,
+.feat-card,
+.feat-card-overlay,
+.feat-row-card,
+.feat-row-card .feat-card-overlay,
+.trending-section,
+.hgc-img,
+.quick-table th,
+.cta-section) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#fff !important;border-color:rgba(255,255,255,.7) !important}
+:is(.trust-bar,.reality-section,.reality-card,.hotel-guide-card,.faq-q,.author-trust-block){--coral:#111;--coral-light:#333;--gold:#111;--p10-coral:#111;--p10-gold:#111;--dn-brass:#111;--ink-muted:#595959;--text-muted:#595959;--dn-on-accent:#fff}
+:is(.trust-bar,.reality-section,.reality-card,.hotel-guide-card,.faq-q,.author-trust-block) *{--ocean:#333;--ocean-light:#595959;--dn-link:#111}
+html body :is(.trust-bar,.reality-section,.reality-card,.hotel-guide-card,.faq-q,.author-trust-block) a.dn-btn:not(.tc-btn){background:#111 !important;color:#fff !important;border-color:#111 !important}
+html body :is(.trust-bar,.reality-section,.reality-card,.hotel-guide-card,.faq-q,.author-trust-block) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#111 !important;border-color:#111 !important}</style>
 </head>
 <body>
 
@@ -243,7 +288,7 @@ img{max-width:100%;display:block}
   <div class="dn-menu__inner">
     <a class="dn-menu__link" href="../index.html">홈</a>
     
-    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=index&amp;url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%26lang%3Dko" class="mobile-stays-btn affiliate-link dn-menu__cta" target="_blank" rel="nofollow noopener sponsored">다낭 호텔 검색 → &rarr;</a>
+    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=index&amp;url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%26lang%3Dko" class="mobile-stays-btn affiliate-link dn-menu__cta" target="_blank" rel="nofollow noopener sponsored">다낭 호텔 검색 &rarr;</a>
     <p class="dn-menu__social"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
   </div>
 </div>
@@ -358,7 +403,7 @@ img{max-width:100%;display:block}
         <div class="feat-card-body">
           <span class="feat-card-cat">다낭 한식</span>
           <div class="feat-card-title">한국 BBQ 맛집</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin:.4rem 0 .6rem;line-height:1.5">An Thuong 거리부터 미케 비치 인근까지. 현지 거주자가 직접 검증한 한국 BBQ 레스토랑.</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.72);margin:.4rem 0 .6rem;line-height:1.5">An Thuong 거리부터 미케 비치 인근까지. 현지 거주자가 직접 검증한 한국 BBQ 레스토랑.</p>
           <span class="feat-card-cta">가이드 보기 →</span>
         </div>
       </a>
@@ -369,7 +414,7 @@ img{max-width:100%;display:block}
         <div class="feat-card-body">
           <span class="feat-card-cat">K뷰티 쇼핑</span>
           <div class="feat-card-title">올리브영 대체 쇼핑</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin:.4rem 0 .6rem;line-height:1.5">다낭에는 올리브영이 없습니다. Watsons, Guardian, Cocoon 베트남 브랜드로 대체하는 법.</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.72);margin:.4rem 0 .6rem;line-height:1.5">다낭에는 올리브영이 없습니다. Watsons, Guardian, Cocoon 베트남 브랜드로 대체하는 법.</p>
           <span class="feat-card-cta">가이드 보기 →</span>
         </div>
       </a>
@@ -385,7 +430,7 @@ img{max-width:100%;display:block}
         <div class="feat-card-body">
           <span class="feat-card-cat">숙소 선택</span>
           <div class="feat-card-title">한국 음식 근처 호텔</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin:.4rem 0 .6rem;line-height:1.5">An Thuong 한식 거리까지 도보 5분. A La Carte, Wyndham, TMS 등 한식 접근성 기준 숙소 정리.</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.72);margin:.4rem 0 .6rem;line-height:1.5">An Thuong 한식 거리까지 도보 5분. A La Carte, Wyndham, TMS 등 한식 접근성 기준 숙소 정리.</p>
           <span class="feat-card-cta">가이드 보기 →</span>
         </div>
       </a>
@@ -396,7 +441,7 @@ img{max-width:100%;display:block}
         <div class="feat-card-body">
           <span class="feat-card-cat">쇼핑 가이드</span>
           <div class="feat-card-title">한국인 쇼핑 가이드</div>
-          <p style="font-size:.8rem;color:rgba(255,255,255,.55);margin:.4rem 0 .6rem;line-height:1.5">롯데마트, 빈콤 플라자, 한 시장, 콘 시장. 무엇을 사고 무엇을 건너뛸지 솔직하게 정리.</p>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.72);margin:.4rem 0 .6rem;line-height:1.5">롯데마트, 빈콤 플라자, 한 시장, 콘 시장. 무엇을 사고 무엇을 건너뛸지 솔직하게 정리.</p>
           <span class="feat-card-cta">가이드 보기 →</span>
         </div>
       </a>
@@ -410,7 +455,7 @@ img{max-width:100%;display:block}
   <div style="max-width:var(--max);margin:0 auto">
     <div class="section-label">지금 인기</div>
     <h2 class="section-title" style="color:#fff">한국 여행자들이 지금 많이 찾는 것</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,.45)">계절과 트렌드에 따라 바뀌는 실시간 관심사입니다.</p>
+    <p class="section-sub" style="color:rgba(255,255,255,.72)">계절과 트렌드에 따라 바뀌는 실시간 관심사입니다.</p>
 
     <div class="trending-grid">
       <a href="korean-friendly-resorts-da-nang.html" class="trend-card">
