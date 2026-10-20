@@ -48,12 +48,13 @@ Known adaptation: none needed after a boolean-attribute fix (`defer`) made durin
 
 | | Links |
 |---|---|
-| Original booking links on served pages (the earlier audit said 1,583; `main` has gained one since) | 1,584 |
-| Footer "Book via Booking.com" links replaced by the new footer | −34 |
-| Homepage rebuilt (old widget and bands → one booking band; header/menu buttons stay) | −5 |
+| Original booking links on served pages (strict count of CJ links; the earlier "1,584" was a loose-regex miscount) | 1,583 |
+| Footer "Book via Booking.com" and homepage widget/band links replaced by the new footer and one booking band (all generic search links; **0 hotel-specific links lost**) | −38 |
 | Korean pages: the mobile menu now repeats the header button (22 pages had none) | +22 |
 | **Result** | **1,567** |
 | Duplicates demoted from button to text link (kept and tracked, so not a change in count) | 117 |
+
+Every CJ link now carries `target="_blank"` and `rel="nofollow noopener sponsored"` (64 links in production had incomplete attributes; fixed in the build and at runtime in `dn.js`). `booking-cta-tracking.js` ignores a second click on the same link within 700 ms, so double-taps log one `booking_click`. `scripts/redesign/link-audit.js` re-checks all of this and fails on any lost hotel link or attribute violation.
 
 `inventory.js` lists the exact per-page differences and fails on any other loss or addition.
 

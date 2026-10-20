@@ -71,6 +71,8 @@
     if (a.__dn) return; a.__dn = true;
     if ((a.getAttribute('href') || '').indexOf(CJ) < 0) return;
     if (/\b(dn-btn|dn-booklink|dn-imglink|nav-stays-btn|mobile-stays-btn|dn-menu__cta|dn-header__cta)\b/.test(a.className)) return;
+    // same attribute hygiene as the build, for links rendered at runtime
+    a.target = '_blank'; var rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean); ['nofollow', 'noopener', 'sponsored'].forEach(function (t) { if (rel.indexOf(t) < 0) rel.push(t); }); a.setAttribute('rel', rel.join(' '));
     if (a.querySelector('img')) { a.classList.add('dn-imglink'); return; }
     var cls = String(a.className || '').replace(/affiliate-link/g, '');
     var btn = BTN.test(cls) || (a.hasAttribute('data-cta-location') && a.textContent.trim().length < 60 && !a.querySelector('p, div'));

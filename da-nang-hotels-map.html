@@ -2041,7 +2041,7 @@ function hotelPopup(h){
   const a = AREA[h.a];
   let links = '';
   if (h.page) links += '<a href="' + h.page + '" class="dhm-pop-link">Read review</a>';
-  if (h.bk) links += '<a href="' + esc(h.bk) + '" class="dhm-pop-link book affiliate-link" target="_blank" ' +
+  if (h.bk) links += '<a rel="noopener" href="' + esc(h.bk) + '" class="dhm-pop-link book affiliate-link" target="_blank" ' +
            'rel="nofollow noopener sponsored" data-cta-location="map_popup" data-hotel="' + esc(h.n) + '">Check rates &rarr;</a>';
   return '<img class="dhm-pop-img" src="' + h.img + '" alt="' + esc(h.n) + '" loading="lazy">' +
          '<div class="dhm-pop-body">' +

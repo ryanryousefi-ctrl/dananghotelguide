@@ -13,6 +13,10 @@
     if (e.type === 'auxclick' && e.button !== 1) return;
     var link = e.target.closest && e.target.closest('a[href*="kqzyfj.com/click-101820678-"]');
     if (!link || typeof gtag !== 'function') return;
+    // A double-click on one link is one intent: count it once (a later, separate click still counts).
+    var now = Date.now();
+    if (link.__dnLast && now - link.__dnLast < 700) return;
+    link.__dnLast = now;
     var href = link.getAttribute('href');
     var sid = (href.match(/[?&]sid=([^&]*)/) || [])[1] || '';
     var dest = decodeURIComponent((href.match(/[?&]url=([^&]*)/) || [])[1] || '');

@@ -134,3 +134,23 @@
 /* restrained reveal */
 .dn-reveal-on [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--dn-ease), transform .7s var(--dn-ease); }
 .dn-reveal-on [data-reveal].is-in { opacity: 1; transform: none; }
+
+/* ── Final polish ─────────────────────────────────────────────────────────── */
+.dh-c--lead .dh-kicker { color: #ecd39a; text-shadow: 0 1px 10px rgba(0,0,0,.6); }
+.dh-c__desc { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dh-c--s .dh-c__desc { -webkit-line-clamp: 3; }
+@media (max-width: 980px) {
+  .dh-c--lead::after, .dh-c--a::after, .dh-c--b::after { background: linear-gradient(to top, rgba(12,22,21,.9) 0%, rgba(12,22,21,.62) 48%, rgba(12,22,21,.12) 100%); }
+}
+/* start here */
+.dh-start { padding-block: clamp(3rem, 6vw, 4.5rem) 0; }
+.dh-start__head { margin: 0 0 1.4rem; font: 400 clamp(1.5rem, 3vw, 2.1rem)/1.15 var(--dn-serif); letter-spacing: -.015em; color: var(--dn-ink); }
+.dh-start__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--dn-ink); }
+.dh-start__list li { border-right: 1px solid var(--dn-line); } .dh-start__list li:last-child { border-right: 0; }
+.dh-start__list a { display: flex; flex-direction: column; gap: .5rem; height: 100%; padding: 1.1rem 1.1rem 1.2rem 0; color: var(--dn-ink-2); text-decoration: none; min-height: 44px; }
+.dh-start__list li + li a { padding-left: 1.1rem; }
+.dh-start__q { font: 400 1.25rem/1.15 var(--dn-serif); color: var(--dn-ink); letter-spacing: -.01em; }
+.dh-start__a { font-size: .9rem; line-height: 1.45; color: var(--dn-muted); }
+.dh-start__go { margin-top: auto; font: 700 .68rem var(--dn-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--dn-brass); }
+.dh-start__list a:hover .dh-start__q { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+@media (max-width: 980px) { .dh-start__list { grid-template-columns: 1fr; } .dh-start__list li { border-right: 0; border-bottom: 1px solid var(--dn-line); } .dh-start__list li + li a { padding-left: 0; } .dh-start__list a { padding-right: 0; flex-direction: row; align-items: baseline; flex-wrap: wrap; gap: .3rem .9rem; } .dh-start__q { flex: 1 1 100%; } .dh-start__go { margin-top: 0; } }

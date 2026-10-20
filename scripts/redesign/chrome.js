@@ -57,7 +57,7 @@ const EN_COLUMNS = [
 ];
 
 // legal: HTML of the page's own disclosure / legal lines (kept verbatim)
-function footer({ home, prefix, lang, columns, legalHtml, exists }) {
+function footer({ home, prefix, lang, columns, legalHtml, exists, consent = true }) {
   const kr = lang === 'ko';
   const cols = kr && columns && columns.length ? columns
     : EN_COLUMNS.map(([t, ls]) => ({ title: t, links: ls.filter(([f]) => !exists || exists(f)).map(([f, l]) => ({ href: prefix + f, label: l })) }));
@@ -78,7 +78,7 @@ function footer({ home, prefix, lang, columns, legalHtml, exists }) {
   <nav class="dn-footer__cols" aria-label="${kr ? '사이트 맵' : 'Site map'}">
     ${cols.map(c => `<div><p class="dn-footer__title">${c.title}</p>${c.links.map(l => `<a href="${esc(l.href)}">${l.label}</a>`).join('')}</div>`).join('\n    ')}
   </nav>
-  <div class="dn-footer__legal">${legalHtml}<p class="dn-footer__settings"><button type="button" class="dn-consent-open">${kr ? '개인정보 설정' : 'Privacy settings'}</button></p></div>
+  <div class="dn-footer__legal">${legalHtml}${consent ? `<p class="dn-footer__settings"><button type="button" class="dn-consent-open">${kr ? '개인정보 설정' : 'Privacy settings'}</button></p>` : ''}</div>
 </footer>`;
 }
 module.exports = { header, mobileMenu, footer, EN_COLUMNS, esc };

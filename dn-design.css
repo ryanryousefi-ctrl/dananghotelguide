@@ -244,3 +244,32 @@ html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !im
   html[lang="ko"] body .dn-header .nav-stays-btn { display: none !important; }
   html[lang="ko"] .dn-header__bar .dn-brand { margin-right: auto; }
 }
+
+/* ── Final polish: small screens, touch, legibility ───────────────────────── */
+.dn-burger, .dn-iconbtn { flex: 0 0 42px; }
+.dn-brand { min-width: 0; flex: 0 1 auto; min-height: 44px; justify-content: center; }
+@media (max-width: 360px) {
+  .dn-header__bar { gap: .4rem; padding-inline: .9rem; }
+  .dn-brand b { font-size: 1.18rem; } .dn-brand small { display: none; }
+}
+/* comparison pair captions sit on photos */
+html body :is(.hvh-split-label, .hvh-split-side) :is(span, div, p) { text-shadow: 0 1px 12px rgba(0, 0, 0, .7); }
+html body .hvh-split-label { color: #fff; }
+html body .hvh-split-label > :first-child { color: #ecd39a; }
+/* sticky legacy filter bar must clear the masthead */
+html body .filters-bar { top: var(--dn-header-h) !important; }
+/* touch: bigger hit areas without changing layouts */
+@media (pointer: coarse) {
+  .dn-footer__cols a { padding: .65rem 0; }
+  html body .dn-share .shr-btn { padding: .65rem 0; }
+  .dn-footer__legal a, .dn-consent-open { padding-block: .45rem; display: inline-block; }
+  html body :is(.dhd-social, .dhd-pinbtn, .dhd-site, .mk-view-map) { position: relative; }
+  html body :is(.dhd-social, .dhd-pinbtn, .dhd-site, .mk-view-map)::after { content: ''; position: absolute; inset: -12px; }
+  html body :is(.bb-fchip, .dhm-pill, .filter-btn, .dhm-key, .bb-drawer-opt) { min-height: 44px; }
+  html body summary.bb-faq-q { min-height: 44px; display: flex; align-items: center; }
+  html body .leaflet-touch .leaflet-bar a { width: 40px; height: 40px; line-height: 40px; }
+  html body .breadcrumb a { display: inline-block; padding-block: .5rem; }
+}
+/* consent: sits under the open menu, smaller on phones */
+.dn-consent { z-index: 880; }
+@media (max-width: 520px) { .dn-consent { padding: .8rem .9rem; gap: .6rem; font-size: .82rem; } .dn-consent__t { display: none; } .dn-consent__b { min-height: 44px; padding: .5rem .8rem; } }

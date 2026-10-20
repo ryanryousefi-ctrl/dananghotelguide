@@ -162,8 +162,22 @@ function buildHero($, hero, html, page) {
 const CJ = /kqzyfj\.com\/click-101820678-/;
 const BTNCLASS = /(^|[\s_-])(btn|button|cta)([\s_-]|$)|-(btn|cta)\b|\b(btn|cta)-/;
 function addClass(tag, cls) { return /\sclass="/.test(tag) ? tag.replace(/\sclass="([^"]*)"/, (m, c) => ` class="${c} ${cls}"`) : tag.replace(/^<a\b/, `<a class="${cls}"`); }
+// External-link hygiene: affiliate links always open in a new tab with nofollow noopener sponsored;
+// any other target=_blank link gets noopener. hrefs and tracking attributes are never touched.
+function secure(tag) {
+  const cj = CJ.test(tag), blank = /\starget="_blank"/.test(tag);
+  if (!cj && !blank) return tag;
+  const want = cj ? ['nofollow', 'noopener', 'sponsored'] : ['noopener'];
+  const m = tag.match(/\srel="([^"]*)"/);
+  const have = m ? m[1].split(/\s+/).filter(Boolean) : [];
+  const rel = [...new Set([...have, ...want])].join(' ');
+  let t = m ? tag.replace(/\srel="[^"]*"/, ` rel="${rel}"`) : tag.replace(/^<a\b/, `<a rel="${rel}"`);
+  if (cj && !blank) t = t.replace(/^<a\b/, '<a target="_blank"');
+  return t;
+}
 function unify(html) {
-  return html.replace(/<a\b[^>]*>([\s\S]*?)<\/a>/g, (m, inner) => {
+  return html.replace(/<a\b[^>]*>([\s\S]*?)<\/a>/g, (m0, inner) => {
+    const m = secure(m0.slice(0, m0.indexOf('>') + 1)) + m0.slice(m0.indexOf('>') + 1);
     const tag = m.slice(0, m.indexOf('>') + 1);
     if (/\bdn-(btn|booklink|imglink)\b|nav-stays-btn|mobile-stays-btn|dn-menu__cta/.test(tag)) return m;
     const cls = (tag.match(/\sclass="([^"]*)"/) || [, ''])[1];
@@ -209,7 +223,7 @@ const OVERRIDES = {
     ['<p>Images are served via <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Unsplash</a>. We do not use Google Analytics, advertising pixels, or any other tracking scripts.</p>',
      '<p>Some images are served via <a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Unsplash</a>, videos via YouTube, and map tiles via OpenStreetMap, Esri and CARTO. These services receive your IP address when they deliver content.</p>\n    <h2>Analytics and advertising</h2>\n    <p>We use Google Analytics to understand how the site is used: which pages are read and which hotel booking buttons are clicked, together with your device type (mobile, tablet or desktop). We use Google AdSense to show ads. Some pages also use Ahrefs Web Analytics, which its provider describes as cookieless. We do not use other advertising pixels.</p>'],
     ['<p>Da Nang Hotel Guide itself does not set any cookies. Third-party services (Booking.com, Google Fonts) may set cookies according to their own policies when you navigate to their services or load their resources.</p>',
-     '<p>This site uses these cookies and similar technologies:</p>\n    <ul>\n      <li><strong>Google Analytics</strong> sets first-party cookies (<code>_ga</code> and <code>_ga_0T1H4G2N80</code>, lasting up to two years) to measure visits and button clicks.</li>\n      <li><strong>Google AdSense</strong> may set advertising cookies to serve and measure ads.</li>\n      <li><strong>Booking.com and the CJ Affiliate network</strong> may set cookies when you follow a booking link, so a booking can be credited to us. A CJ script on our pages also reports page views to CJ.</li>\n      <li><strong>YouTube, Google Maps and Google Fonts</strong> may set cookies or log your IP address when they load.</li>\n    </ul>\n    <p><strong>Your choice.</strong> A banner on your first visit lets you accept or reject Google Analytics and Google advertising cookies. In the European Economic Area, the United Kingdom, Switzerland and Vietnam these stay off until you accept. Elsewhere they are on unless you reject. You can change your choice at any time with &ldquo;Privacy settings&rdquo; in the footer. Refusing does not affect how the site works. Cookies set by sites you visit through our links (Booking.com, CJ) or embeds (YouTube) follow those services&rsquo; own policies and are not controlled by this choice. You can also block or delete cookies in your browser settings.</p>'],
+     '<p>This site uses these cookies and similar technologies:</p>\n    <ul>\n      <li><strong>Google Analytics</strong> sets first-party cookies (<code>_ga</code> and <code>_ga_0T1H4G2N80</code>, lasting up to two years) to measure visits and button clicks.</li>\n      <li><strong>Google AdSense</strong> may set advertising cookies to serve and measure ads.</li>\n      <li><strong>Booking.com and the CJ Affiliate network</strong> may set cookies when you follow a booking link, so a booking can be credited to us. A CJ script on our pages also reports page views to CJ.</li>\n      <li><strong>YouTube, Google Maps and Google Fonts</strong> may set cookies or log your IP address when they load.</li>\n    </ul>\n    <p><strong>Your choice.</strong> ' + (NO_CONSENT ? 'Google Analytics and Google advertising cookies are used as described above.' : 'A banner on your first visit lets you accept or reject Google Analytics and Google advertising cookies. In the European Economic Area, the United Kingdom, Switzerland and Vietnam these stay off until you accept. Elsewhere they are on unless you reject. You can change your choice at any time with &ldquo;Privacy settings&rdquo; in the footer. Refusing does not affect how the site works.') + ' Cookies set by sites you visit through our links (Booking.com, CJ) or embeds (YouTube) follow those services&rsquo; own policies and are not controlled by this choice. You can also block or delete cookies in your browser settings.</p>'],
   ],
 };
 function applyOverrides(page, src, rep) {
@@ -246,13 +260,27 @@ function transform(page, report) {
     const mob = $('#mobileMenu').first();
     if (mob.length) replace(mob, chrome.mobileMenu(nav, lang)); else ops.push({ s: span(navEl)[1], e: span(navEl)[1], t: chrome.mobileMenu(nav, lang) });
   }
-  const foot = extractFooter($);
+  let foot = extractFooter($);
   const footEl = foot ? foot.el : $();
+  let footUnclosed = false;
   if (foot) {
-    rep.footer = true; rep.cjFooter = foot.cjFooter;
-    replace(footEl, chrome.footer({ home: nav ? nav.home : 'index.html', prefix, lang, columns: foot.columns.map(c => ({ title: c.title, links: c.links })), legalHtml: foot.legalHtml, exists }));
+    rep.footer = true;
+    const [fs0, fe0] = span(footEl);
+    // Some baseline pages never close <footer>; the parser then swallows the share bar, styles,
+    // scripts and </body>. Bound the footer at the first of those and keep the rest of the page.
+    if (!src.slice(fs0, fe0).includes('</footer>')) {
+      footUnclosed = true; rep.footerUnclosed = true;
+      const rest = src.slice(fs0);
+      const cut = [/<aside\b/, /<style\b/, /<script\b/, /<\/body>/].map(r => { const m = rest.search(r); return m < 0 ? Infinity : m; });
+      const end = fs0 + Math.min(...cut);
+      const f2 = extractFooter(cheerio.load(src.slice(fs0, end) + '</footer>'));
+      foot = f2 || foot; ops.push({ s: fs0, e: end, t: '' });
+      ops.push({ s: fs0, e: end, t: chrome.footer({ home: nav ? nav.home : 'index.html', prefix, lang, columns: foot.columns.map(c => ({ title: c.title, links: c.links })), legalHtml: foot.legalHtml, exists, consent: !NO_CONSENT }) });
+      ops.splice(ops.length - 2, 1); // keep only the replacement
+    } else replace(footEl, chrome.footer({ home: nav ? nav.home : 'index.html', prefix, lang, columns: foot.columns.map(c => ({ title: c.title, links: c.links })), legalHtml: foot.legalHtml, exists, consent: !NO_CONSENT }));
+    rep.cjFooter = foot.cjFooter;
   }
-  $('aside.shr-bar').each((i, e) => { if (!$(e).closest('footer').length) replace($(e), ''); });
+  $('aside.shr-bar').each((i, e) => { if (footUnclosed || !$(e).closest('footer').length) replace($(e), ''); });
 
   // <main>
   const overlay = $('#searchOverlay').length ? $('#searchOverlay').first() : ($('#mobileMenu').length ? $('#mobileMenu').first() : navEl);
@@ -303,7 +331,7 @@ function buildHome(page, served) {
   const meta = p => metaCache[p] || (metaCache[p] = (() => { try { const h = show(p); return { desc: (h.match(/<meta name="description" content="([^"]*)"/) || [, ''])[1].replace(/&amp;/g, '&').replace(/&#39;/g, "'") }; } catch (e) { return { desc: '' }; } })());
   const grep = pat => cp.execFileSync('git', ['grep', '-l', pat, BASE, '--', '*.html'], { cwd: ROOT }).toString().split('\n').map(l => l.replace(`${BASE}:`, '')).filter(f => served.includes(f)).length;
   const stats = { directory: JSON.parse(show('assets/data/da-nang-hotels.json')).length, reviews: grep('class="hr-hero"'), comparisons: grep('class="hvh-hero"') };
-  const footerHtml = chrome.footer({ home: 'index.html', prefix: '', lang: 'en', columns: null, legalHtml: foot.legalHtml, exists });
+  const footerHtml = chrome.footer({ home: 'index.html', prefix: '', lang: 'en', columns: null, legalHtml: foot.legalHtml, exists, consent: !NO_CONSENT });
   const body = require('./home').render({
     headerHtml: chrome.header(nav, 'en'), menuHtml: chrome.mobileMenu(nav, 'en'), overlayHtml: $('#searchOverlay').toString(),
     footerHtml, meta, stats, staysHref: nav.stays.href, exists });
