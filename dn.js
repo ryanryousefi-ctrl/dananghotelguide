@@ -63,6 +63,27 @@
   set('shr-wa', 'https://wa.me/?text=' + t + '%20' + u);
   set('shr-li', 'https://www.linkedin.com/shareArticle?mini=true&url=' + u + '&title=' + t);
 
+  // Booking links rendered at runtime (map popups, JS-built cards) get the same button system
+  // as the static ones. Same classification as the build; hrefs and tracking are never touched.
+  var CJ = 'kqzyfj.com/click-101820678-';
+  var BTN = /(^|[\s_-])(btn|button|cta|book)([\s_-]|$)|-(btn|cta)\b|\b(btn|cta)-/;
+  function classify(a) {
+    if (a.__dn) return; a.__dn = true;
+    if ((a.getAttribute('href') || '').indexOf(CJ) < 0) return;
+    if (/\b(dn-btn|dn-booklink|dn-imglink|nav-stays-btn|mobile-stays-btn|dn-menu__cta|dn-header__cta)\b/.test(a.className)) return;
+    if (a.querySelector('img')) { a.classList.add('dn-imglink'); return; }
+    var cls = String(a.className || '').replace(/affiliate-link/g, '');
+    var btn = BTN.test(cls) || (a.hasAttribute('data-cta-location') && a.textContent.trim().length < 60 && !a.querySelector('p, div'));
+    a.classList.add(btn ? 'dn-btn' : 'dn-booklink'); if (btn) a.classList.add('dn-btn--book');
+  }
+  function scan(root) { (root || d).querySelectorAll('a[href*="' + CJ + '"]').forEach(classify); }
+  scan();
+  if (window.MutationObserver) {
+    var pending = false;
+    new MutationObserver(function () { if (pending) return; pending = true; requestAnimationFrame(function () { pending = false; scan(); }); })
+      .observe(d.body, { childList: true, subtree: true });
+  }
+
   // Restrained reveal for elements that opt in.
   var rv = d.querySelectorAll('[data-reveal]');
   if (rv.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {

@@ -20,7 +20,7 @@ function header(nav, lang) {
   return `<a class="dn-skip" href="#dn-main">${kr ? '본문으로 건너뛰기' : 'Skip to content'}</a>
 <header class="dn-header" id="dnHeader">
   <div class="dn-header__bar">
-    <button class="nav-hamburger dn-burger" id="navHamburger" type="button" aria-label="${kr ? '메뉴 열기' : 'Open menu'}" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    <button class="dn-burger" id="navHamburger" type="button" aria-label="${kr ? '메뉴 열기' : 'Open menu'}" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
     <a class="dn-brand" href="${esc(nav.home)}" aria-label="Da Nang Hotel Guide ${kr ? '홈' : 'home'}"><b>Da Nang <i>Hotel Guide</i></b><small>${kr ? '독립 여행 가이드' : 'Independent · Da Nang &amp; Hoi An'}</small></a>
     <nav class="dn-nav" aria-label="${kr ? '주 메뉴' : 'Main navigation'}"><ul>${nav.top.map(li).join('')}</ul></nav>
     <div class="dn-header__actions">

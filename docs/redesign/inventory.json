@@ -1,7 +1,7 @@
 {
  "baseline": "7ed26a79075410fbec242b51ddf654110ed101d5",
  "pages": 202,
- "pagesWithIssues": 1,
+ "pagesWithIssues": 0,
  "cjRemovedTotal": 36,
  "results": [
   {
@@ -1014,17 +1014,19 @@
   },
   {
    "page": "index.html",
-   "issues": [
+   "issues": [],
+   "intentional": "Homepage rebuilt from scratch (new editorial layout; every old target stays reachable via header/footer/new sections)",
+   "reviewedDifferences": [
     "h1 changed: \"Where to stay in Da Nang\" -> \"Where to stay in Da Nang and Hoi An\"",
     "headings missing: Da Nang at a Glance | 30 km of sand.One honest guide. | More Hotel Collections",
-    "links missing (17): where-to-stay-in-da-nang.html (x2) | best-hotels-in-da-nang.html (x3) | da-nang-beach-hotels.html | luxury-hotels-da-nang.html",
+    "links missing (16): where-to-stay-in-da-nang.html (x2) | best-hotels-in-da-nang.html (x3) | da-nang-beach-hotels.html | luxury-hotels-da-nang.html",
     "images missing: images/da-nang-beach-hotels-5c163732.webp | images/boutique-hotels-da-nang-b64-01.jpg | images/luxury-hotels-da-nang-ea87d5cc.jpg",
-    "text loss 41.7% (188/451 words), e.g. 01, 05, c, vietnam, check, out"
+    "text loss 41.2% (186/451 words), e.g. 01, 05, c, vietnam, check, out"
    ],
    "cjRemoved": 2,
-   "textLossPct": 41.69,
+   "textLossPct": 41.24,
    "wordsBefore": 451,
-   "wordsAfter": 679
+   "wordsAfter": 692
   },
   {
    "page": "intercontinental-da-nang.html",
@@ -1421,10 +1423,14 @@
   {
    "page": "privacy.html",
    "issues": [],
+   "intentional": "Privacy policy corrected: it claimed no analytics or cookies (see docs/redesign/CONSENT.md)",
+   "reviewedDifferences": [
+    "text loss 4.9% (15/309 words), e.g. february, da, nang, guide, any, third"
+   ],
    "cjRemoved": 0,
-   "textLossPct": 0,
+   "textLossPct": 4.85,
    "wordsBefore": 309,
-   "wordsAfter": 309
+   "wordsAfter": 540
   },
   {
    "page": "pullman-da-nang.html",

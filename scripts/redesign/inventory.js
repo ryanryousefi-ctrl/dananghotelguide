@@ -40,6 +40,11 @@ function facts(html, isNew) {
 const multiset = a => a.reduce((m, k) => (m.set(k, (m.get(k) || 0) + 1), m), new Map());
 function missing(before, after) { const A = multiset(after), out = []; for (const [k, n] of multiset(before)) { const d = n - (A.get(k) || 0); if (d > 0) out.push(d > 1 ? `${k} (x${d})` : k); } return out; }
 
+// Pages whose content is intentionally different. They are reported, never silently passed.
+const INTENTIONAL = {
+  'index.html': 'Homepage rebuilt from scratch (new editorial layout; every old target stays reachable via header/footer/new sections)',
+  'privacy.html': 'Privacy policy corrected: it claimed no analytics or cookies (see docs/redesign/CONSENT.md)',
+};
 const results = []; let hard = 0;
 for (const p of pages) {
   const issues = [], notes = [];
@@ -63,12 +68,13 @@ for (const p of pages) {
   // Korean pages had no mobile-menu booking button; the new menu repeats the header one (+1, intentional).
   const allowedAdd = p.startsWith('kr/') ? 1 : 0;
   if (cjAdded.length > allowedAdd) issues.push(`affiliate links ADDED: ${cjAdded.length}`); else if (cjAdded.length) notes.push('mobile-menu CTA added');
+  if (INTENTIONAL[p] && issues.length) { notes.push('INTENTIONAL: ' + INTENTIONAL[p]); results.push({ page: p, issues: [], intentional: INTENTIONAL[p], reviewedDifferences: issues, cjRemoved: cjMissing.length, textLossPct: +lossPct.toFixed(2), wordsBefore: total, wordsAfter: a.words.length }); continue; }
   results.push({ page: p, issues, cjRemoved: cjMissing.length, textLossPct: +lossPct.toFixed(2), wordsBefore: total, wordsAfter: a.words.length });
   if (issues.length) hard++;
 }
 const out = { baseline: BASE, pages: pages.length, pagesWithIssues: hard, cjRemovedTotal: results.reduce((s, r) => s + (r.cjRemoved || 0), 0), results };
 const jf = process.argv.indexOf('--json'); if (jf > -1) fs.writeFileSync(path.join(ROOT, process.argv[jf + 1]), JSON.stringify(out, null, 1));
-console.log(`Pages: ${pages.length} | with issues: ${hard} | footer-only affiliate links removed: ${out.cjRemovedTotal}`);
+console.log(`Pages: ${pages.length} | unexplained differences: ${hard} | intentional exceptions: ${results.filter(r => r.intentional).length} | footer-only affiliate links removed: ${out.cjRemovedTotal}`);
 for (const r of results.filter(r => r.issues.length).slice(0, 40)) console.log(' ', r.page, '→', r.issues.join(' ; '));
 if (results.filter(r => r.issues.length).length > 40) console.log(`  … ${results.filter(r => r.issues.length).length - 40} more`);
 process.exit(hard ? 1 : 0);

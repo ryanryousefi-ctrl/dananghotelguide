@@ -56,6 +56,8 @@ const LEGACY_CSS = /(?:cta-polish|bk-widget|premium|phase10_5)\.css/;
 const exists = f => fs.existsSync(path.join(ROOT, f));
 const norm = h => (h || '').split('#')[0].replace(/^\.\//, '').replace(/^https?:\/\/(www\.)?dananghotelguide\.com\/?/, '');
 const base = h => norm(h).split('/').pop() || 'index.html';
+// cheerio re-serialises boolean attributes as defer=""; keep the original bare form.
+const fixBool = h => h.replace(/\s(defer|async|hidden|disabled|checked|selected|controls|autoplay|muted|loop|required)=""/g, ' $1');
 const text = s => (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 
 // ── Extraction ──────────────────────────────────────────────────────────────
@@ -95,7 +97,7 @@ function extractFooter($) {
   clone.find('.footer-inner, .footer-grid').each((i, e) => { $(e).replaceWith($(e).contents()); });
   clone.find('.footer-inner, .footer-grid').each((i, e) => { $(e).replaceWith($(e).contents()); });
   const cjFooter = (f.html().match(/kqzyfj\.com\/click-101820678-/g) || []).length;
-  return { columns, legalHtml: clone.html().trim(), cjFooter, el: f };
+  return { columns, legalHtml: fixBool(clone.html().trim()), cjFooter, el: f };
 }
 
 const HERO_SELECTORS = ['header.hr-hero', 'header.bb-hero', 'section.hero', 'header.hero', '.hvh-hero', '.vs-hero', 'header.gd-guides-hero', 'header[class*="-hero"]', 'section[class*="-hero"]', 'div[class*="-hero"]', 'header.dhd-head', 'header:has(h1)'];
@@ -152,7 +154,7 @@ function buildHero($, hero, html, page) {
   const out = `<header class="dn-hero${image ? '' : (deepOnly ? ' dn-hero--deep' : ' dn-hero--plain')}${isVs ? ' dn-hero--vs' : ''}">${media}<div class="dn-hero__inner">` +
     (eyebrow.length ? `\n<p class="dn-eyebrow">${eyebrow.html()}</p>` : '') + `\n<h1>${h1.html()}</h1>` +
     (sub.length ? `\n<p class="dn-lede">${sub.html()}</p>` : '') + (meta.length ? `\n<p class="dn-hero__meta">${meta.html()}</p>` : '') +
-    (extras.length ? `\n<div class="dn-hero__extra">\n${extras.join('\n')}\n</div>` : '') + `\n</div></header>`;
+    (extras.length ? `\n<div class="dn-hero__extra">\n${fixBool(extras.join('\n'))}\n</div>` : '') + `\n</div></header>`;
   return { html: out, mode };
 }
 
