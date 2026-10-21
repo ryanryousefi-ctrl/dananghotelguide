@@ -1,0 +1,6 @@
+paste_into_link_generator,tripcom_type,tripcom_id,name,site_links,registry_keys,affiliate_url,generated_on,opens_correct_property,property_seen_on_trip_com,notes
+"https://www.trip.com/hotels/list?city=1356","city","1356","Da Nang Municipality, Vietnam","597","search:Da Nang Municipality, Vietnam|6232|region search:Da Nang||","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=713826","hotel","713826","Hyatt Regency Danang Resort and Spa","55","hotel:hyatt-regency-da-nang-resort-and-spa hotel:hyatt-regency-danang-resort-and-spa search:Hyatt Regency Danang Resort||","","","","",""
+"https://www.trip.com/hotels/list?city=1775","city","1775","Hoi An, Vietnam","27","search:Hoi An, Vietnam|-3723930|city search:Hoi An|-3723930|city","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=993558","hotel","993558","Da Nang Marriott Resort & Spa","26","hotel:danang-marriott-resort-spa-non-nuoc-beach-villas","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=713871","hotel","713871","Brilliant Hotel","11","hotel:brilliant","","","","",""

@@ -1,0 +1,171 @@
+/*
+ * tripcom-cta.css: Trip.com hotel-booking button component.
+ *
+ * One add-on class, .tc-btn, sits next to a button's existing layout class
+ * (nav-stays-btn, dhd-book, bb-book-btn, ...). Those classes keep their size
+ * and placement; .tc-btn supplies the Trip.com look: blue fill, white text,
+ * official logo on a white badge. cta-polish.css forces booking buttons white
+ * with !important, and a sitewide [data-cta-location] rule there reaches
+ * specificity (0,4,1). Every rule here therefore carries :not(#tc-n), which adds
+ * ID-level specificity (1,0,0) without matching anything, plus !important. Load this file AFTER cta-polish.css.
+ *
+ * Markup (static pages, written by scripts/tripcom/apply.js; JS-rendered
+ * buttons get the same markup from tripcom-cta.js at runtime):
+ *   <a class="<layout-class> tc-btn" href="<official Trip.com link>"
+ *      data-provider="tripcom" data-hotel="Hotel Name" data-cta-location="..."
+ *      aria-label="Check Prices for Hotel Name on Trip.com, opens in a new tab"
+ *      target="_blank" rel="nofollow noopener sponsored">
+ *     <span class="tc-btn__logo"><img src="/assets/brand/tripcom-logo.webp" alt="" width="58" height="14"></span>
+ *     <span class="tc-btn__text">Check Prices</span>
+ *   </a>
+ *
+ * Only hotel-booking links get this class. Navigation, newsletter and other
+ * non-hotel buttons are never touched.
+ */
+
+:root {
+  --tc-blue:        #1d4ed8; /* white text contrast 6.70:1 */
+  --tc-blue-hover:  #1e40af; /* 8.72:1 */
+  --tc-blue-active: #1e3a8a;
+  --tc-focus:       #fbbf24; /* echoes the yellow dot in the Trip.com logo */
+  --tc-radius:      10px;
+}
+
+/* ── Base button ─────────────────────────────────────────────────────────── */
+a.tc-btn:not(#tc-n) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 10px !important;
+  min-height: 44px !important;
+  padding: 8px 16px 8px 8px !important;
+  background: var(--tc-blue) !important;
+  color: #fff !important;
+  border: 1px solid var(--tc-blue) !important;
+  border-radius: var(--tc-radius) !important;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, .22), 0 1px 2px rgba(0, 0, 0, .08) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  letter-spacing: .005em !important;
+  white-space: normal !important;
+  text-align: center !important;
+  cursor: pointer;
+  transition: background .15s ease, box-shadow .15s ease, transform .15s ease !important;
+}
+a.tc-btn:not(#tc-n):hover {
+  background: var(--tc-blue-hover) !important;
+  border-color: var(--tc-blue-hover) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(29, 78, 216, .28), 0 2px 4px rgba(0, 0, 0, .1) !important;
+  transform: translateY(-1px) !important;
+}
+a.tc-btn:not(#tc-n):active {
+  background: var(--tc-blue-active) !important;
+  transform: none !important;
+}
+a.tc-btn:not(#tc-n):focus-visible {
+  outline: 3px solid var(--tc-focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Logo badge: the logo is blue, so it always sits on white. */
+a.tc-btn .tc-btn__logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 5px 7px;
+  background: #fff;
+  border-radius: 6px;
+  line-height: 0;
+}
+a.tc-btn .tc-btn__logo img {
+  display: block;
+  width: auto !important;
+  height: 14px !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+a.tc-btn .tc-btn__text {
+  color: inherit !important;
+  min-width: 0; /* long labels wrap onto two lines beside the logo */
+  text-wrap: balance; /* no orphaned arrow on the second line */
+}
+
+/* ── Variants ────────────────────────────────────────────────────────────── */
+
+/* Compact: header nav, map popups, directory rows. */
+a.tc-btn:not(#tc-n)--compact:not(#tc-n) {
+  min-height: 36px !important;
+  padding: 5px 12px 5px 5px !important;
+  gap: 8px !important;
+  font-size: .8rem !important;
+  border-radius: 999px !important;
+}
+a.tc-btn--compact .tc-btn__logo { padding: 4px 6px; border-radius: 999px; }
+a.tc-btn--compact .tc-btn__logo img { height: 12px !important; }
+
+/* Block: full-width card and mobile-menu buttons. */
+a.tc-btn:not(#tc-n)--block:not(#tc-n) { display: flex !important; width: 100% !important; }
+
+/* Large: page-level primary calls to action. */
+a.tc-btn:not(#tc-n)--lg:not(#tc-n) { min-height: 52px !important; padding: 10px 22px 10px 10px !important; font-size: 1rem !important; }
+a.tc-btn--lg .tc-btn__logo img { height: 17px !important; }
+
+/* Inline: booking links inside running text stay links, with a small logo
+   after the text instead of a button. */
+a.tc-link:not(#tc-n) {
+  display: inline;
+  white-space: normal;
+}
+a.tc-link .tc-link__logo {
+  display: inline-block;
+  height: .95em !important;
+  width: auto !important;
+  margin: 0 0 0 .3em !important;
+  vertical-align: -.2em;
+  border: 0 !important;
+  /* White backing keeps the blue wordmark legible on dark footers too. */
+  background: #fff;
+  border-radius: 3px;
+  padding: 1px 3px !important;
+  box-sizing: content-box;
+}
+
+/* Header nav: the nav already hides .btn-text on narrow screens; keep the
+   logo visible so the button is never unbranded. */
+.site-nav a.tc-btn--compact .btn-text { white-space: nowrap; }
+
+/* Touch screens: every booking button keeps a 44px tap target. */
+@media (pointer: coarse) {
+  a.tc-btn:not(#tc-n)--compact:not(#tc-n) { min-height: 44px !important; }
+}
+
+/* Narrow phones: let long labels wrap instead of overflowing cards. */
+@media (max-width: 380px) {
+  a.tc-btn:not(#tc-n) { gap: 8px !important; padding-right: 12px !important; font-size: .85rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.tc-btn:not(#tc-n), a.tc-btn:not(#tc-n):hover { transition: none !important; transform: none !important; }
+}
+
+/* Windows high-contrast mode: keep a visible boundary. */
+@media (forced-colors: active) {
+  a.tc-btn:not(#tc-n) { border: 2px solid ButtonText !important; }
+  a.tc-btn .tc-btn__logo { forced-color-adjust: none; }
+}
+
+/* ── Sitewide hotel widget (tripcom-widget.js, link mode) ────────────────── */
+.tc-widget .tc-widget-note { margin: .35rem 0 .8rem; font-size: .82rem; line-height: 1.4; opacity: .85; }
+.tc-widget a.tc-btn:not(#tc-n) { width: 100% !important; margin-top: .25rem; }
+
+/* Homepage hero widget sits on a dark card. */
+.bk-widget .tc-widget-note { color: rgba(255, 255, 255, .78); margin: .35rem 0 .8rem; font-size: .82rem; line-height: 1.4; }
+
+/* Narrow hero widgets: stack the logo above the label instead of squeezing it. */
+.bk-widget a.tc-btn:not(#tc-n), .tc-widget a.tc-btn:not(#tc-n) { flex-wrap: wrap !important; row-gap: 6px !important; }
