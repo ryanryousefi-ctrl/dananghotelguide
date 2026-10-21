@@ -1,15 +1,27 @@
 {
- "purpose": "Official Trip.com dynamic banner (300x250) for the 30-day experiment on best-hotels-in-da-nang.html only.",
+ "purpose": "Official Trip.com dynamic banner (728x90, desktop only) for the 30-day experiment on best-hotels-in-da-nang.html only.",
  "banner_id": "DB20401215",
  "type": "dynamic banner",
- "size": "300x250",
+ "size": "728x90",
  "alliance_id": "11013066",
  "site_id": "333523744",
  "page": "best-hotels-in-da-nang.html",
  "source_url": "https://www.trip.com/partners/ad/DB20401215?Allianceid=11013066&SID=333523744&trip_sub1=",
  "source_url_sha256": "650fd8ef87d125c16772969434c7f35442a1b177094f6ffddcbd24613d2b1ab2",
  "provenance": "URL supplied by the account owner from the Trip.com Affiliate Platform (2026-10-21). The URL is used byte for byte.",
- "embed_code": "<iframe border=\"0\" src=\"https://www.trip.com/partners/ad/DB20401215?Allianceid=11013066&SID=333523744&trip_sub1=\" style=\"width:300px;height:250px;border:none\" frameborder=\"0\" scrolling=\"no\" id=\"DB20401215\" title=\"Trip.com hotel offers (advertisement)\"></iframe>",
- "sha256": "2be61789178d6e7fc399c72d3b8e5e9db9da22ec9fcfa18acc7c1b7f6ecfa710",
- "embed_note": "Official iframe pattern; the duplicate style attribute is merged into one (width, height, border:none) and a title is added for accessibility. The src is untouched."
+ "embed_code": "<iframe border=\"0\" src=\"https://www.trip.com/partners/ad/DB20401215?Allianceid=11013066&SID=333523744&trip_sub1=\" style=\"width:728px;height:90px;border:none\" frameborder=\"0\" scrolling=\"no\" id=\"DB20401215\" title=\"Trip.com hotel offers (advertisement)\"></iframe>",
+ "sha256": "676794d97fd24909a642edfa5844755e898d59289a9c816753dfbbc68bb468db",
+ "embed_note": "Official iframe pattern as supplied for the 728x90 version; the duplicate style attribute is merged into one (width, height, border:none) and a title is added for accessibility. The src is untouched and identical to the 300x250 version (the size is set by the iframe style, the destination by the banner configuration on Trip.com).",
+ "history": [
+  {
+   "date": "2026-10-21",
+   "size": "300x250",
+   "note": "first version (replaced)"
+  },
+  {
+   "date": "2026-10-21",
+   "size": "728x90",
+   "note": "current"
+  }
+ ]
 }

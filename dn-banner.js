@@ -6,6 +6,7 @@
   var box = document.querySelector('.dn-adbox[data-banner]'); if (!box) return;
   var t = box.querySelector('template'), ph = box.querySelector('.dn-adbox__ph'); if (!t) return;
   var id = box.getAttribute('data-banner'), loaded = false, viewed = false;
+  if (!box.offsetWidth) return;   // hidden on narrow screens (728x90 has no responsive version): never view-tracked, never loaded
   function ev(name, extra) { if (typeof window.gtag !== 'function') return; var p = { provider: 'tripcom', banner_id: id, page_path: location.pathname }; for (var k in extra) p[k] = extra[k]; window.gtag('event', name, p); }
   function load(trigger) { if (loaded) return; loaded = true; if (ph && ph.parentNode) ph.parentNode.removeChild(ph); box.appendChild(t.content.cloneNode(true)); box.setAttribute('data-loaded', '1'); ev('affiliate_banner_load', { trigger: trigger }); }
   var go = box.querySelector('.dn-adbox__go'); if (go) go.addEventListener('click', function () { load('click'); });
