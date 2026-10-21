@@ -30,9 +30,8 @@ gate('2c', 'Owner + support', 'Link-format profile derived, reviewed and approve
 const dry = run('apply.js');
 gate('3a', 'Engineering', 'apply.js dry run reports 0 blockers (needs real links)', dry.status === 0, (dry.stdout.match(/Blocked: .*/) || ['(n/a)'])[0]);
 const st = run('selftest.js'); gate('3b', 'Engineering', 'Pipeline self-test (synthetic fixtures: accepts good, rejects 15 kinds of bad)', st.status === 0, (st.stdout.match(/\d+\/\d+ passed/) || ['failed'])[0]);
-const tmp = fs.mkdtempSync(path.join(require('os').tmpdir(), 'tc-ready-'));
-const pv = run('apply.js', '--preview', path.join(tmp, 'site')); const pvv = run('validate.js', '--dir', path.join(tmp, 'site'), '--preview');
-gate('3c', 'Engineering', 'All served pages convert in a plain-URL preview (no affiliate tracking) and validate', pv.status === 0 && pvv.status === 0, (pvv.stdout.match(/Pages: .*/) || [''])[0] + ' | ' + (pvv.stdout.match(/Failures: .*/) || [''])[0].slice(0, 80));
+const cut = run('validate.js', '--cutover');
+gate('3c', 'Engineering', 'Strict cutover validation of the converted tree (exact links, hashes, no CJ/Booking leftovers, no redirects, rel, disclosures, search box)', cut.status === 0, ((cut.stdout.match(/Pages: .*/) || [''])[0] + ' | ' + (cut.stdout.match(/Failures: .*/) || [''])[0]).slice(0, 220));
 
 // 4 Pilot
 const bk = ev.booking_report_rows.filter(r => r.genuine_customer), cm = ev.commission_report_rows.filter(r => r.matches_booking_row);

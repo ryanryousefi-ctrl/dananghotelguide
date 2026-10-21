@@ -1,5 +1,7 @@
 # Booking.com (CJ) → Trip.com migration
 
+> **2026-10-21 (later): links generated and the conversion is built on the redesign.** Read `STATUS-2026-10-21.md` first.
+
 > **2026-10-21 update.** Rebased onto the live 2.0 redesign as branch `tripcom-on-redesign` (from production `a882153`).
 > Start with **ATTRIBUTION-VALIDATION.md** (what is proven and what is not), then `OWNER-DASHBOARD-GUIDE.md`,
 > `PILOT-PLAN.md`, `ACCOUNT-READINESS-CHECKLIST.md`, and `CUTOVER-READINESS.md` (regenerate with `node scripts/tripcom/readiness.js`).

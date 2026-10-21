@@ -30,11 +30,13 @@ fs.mkdirSync(DIR, { recursive: true });
     try { url = page.url(); const t = await page.evaluate(() => document.body.innerText.slice(0, 4000)); loggedIn = /Sign Out|Log Out|Logout|Dashboard|Affiliate Tools|Manage My Sites/i.test(t) && !/^\s*Help\s+EN\s+Join us\s+Sign In/i.test(t.trim()); } catch (e) {}
     fs.writeFileSync(path.join(DIR, 'status.json'), JSON.stringify({ at: new Date().toISOString(), url, loggedIn, pages: context.pages().length }));
   };
-  const done = new Set();
+  // Only commands written AFTER this driver started are run (a restart must never replay old command files).
+  const startedAt = Date.now(); const done = new Set();
   for (;;) {
     await beat();
     for (const f of fs.readdirSync(DIR).filter(x => /^cmd-.*\.js$/.test(x)).sort()) {
       if (done.has(f)) continue; done.add(f);
+      if (fs.statSync(path.join(DIR, f)).mtimeMs < startedAt) continue;
       const out = path.join(DIR, f.replace(/^cmd-/, 'out-').replace(/\.js$/, '.json'));
       try { const file = path.join(DIR, f); delete require.cache[require.resolve(file)]; const r = await require(file)({ page: context.pages().slice(-1)[0] || page, context, fs, path }); fs.writeFileSync(out, JSON.stringify({ ok: true, result: r }, null, 1)); }
       catch (e) { fs.writeFileSync(out, JSON.stringify({ ok: false, error: String(e && e.stack || e).slice(0, 1500) })); }
