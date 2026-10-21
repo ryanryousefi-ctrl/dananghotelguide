@@ -304,7 +304,8 @@ function applyEditorial(src, page) {
   return out;
 }
 // Official Trip.com Search Box (data/tripcom/search-box.json): the exact embed code from the Affiliate Platform, kept
-// inert inside a <template> and inserted by dn-home.js only when the section nears the viewport (no third-party load at first paint).
+// inert inside a <template>. dn-home.js inserts it only after the visitor clicks "Show the search box" (or has already accepted
+// cookies): no contact with Trip.com's servers, and no Trip.com cookies, before that.
 // The booking-band button stays as the no-JavaScript fallback.
 function injectSearchBox(src, report) {
   const f = path.join(ROOT, 'data', 'tripcom', 'search-box.json');
@@ -314,7 +315,7 @@ function injectSearchBox(src, report) {
   const re = /(<div class="dh-book__act">\s*)(<a [^>]*data-cta-location="home_book_band"[^>]*>[\s\S]*?<\/a>)/;
   if (!re.test(src)) { report.searchBox = 'not injected (booking band not found)'; return src; }
   report.searchBox = 'injected';
-  return src.replace(re, (m, a, btn) => `${a}<div class="dh-sbox" id="dhSbox" aria-label="Search hotels on Trip.com"><template>${sb.embed_code}</template></div><noscript>${btn}</noscript>`);
+  return src.replace(re, (m, a, btn) => `${a}<div class="dh-sbox" id="dhSbox"><div class="dh-sbox__ph"><p class="dh-sbox__t">Search hotels on Trip.com</p><p class="dh-sbox__n">This loads Trip.com's own search box. Trip.com may set cookies when it loads.</p><button type="button" class="dh-sbox__go">Show the search box</button></div><template>${sb.embed_code}</template></div><noscript>${btn}</noscript>`);
 }
 function transformPage(page, src, report) {
   const links = findCjLinks(src).sort((a, b) => b.index - a.index); // back to front
