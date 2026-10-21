@@ -13,8 +13,8 @@ const results = []; const t = (n, ok, d = '') => { results.push(ok); console.log
 
 function fixture() {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'tc-selftest-'));
-  // Pages come from production (Booking.com/CJ originals), never from this working tree, which may already be converted.
-  const cpf = f => { const d = path.join(tmp, f); fs.mkdirSync(path.dirname(d), { recursive: true }); if (/\.html$/.test(f)) fs.writeFileSync(d, cp.execFileSync('git', ['show', 'origin/main:' + f], { cwd: REPO, maxBuffer: 1 << 26 })); else fs.copyFileSync(path.join(REPO, f), d); };
+  // Pages come from commit a882153, the last production state with the Booking.com/CJ originals (main itself is converted now).
+  const cpf = f => { const d = path.join(tmp, f); fs.mkdirSync(path.dirname(d), { recursive: true }); if (/\.html$/.test(f)) fs.writeFileSync(d, cp.execFileSync('git', ['show', 'a882153:' + f], { cwd: REPO, maxBuffer: 1 << 26 })); else fs.copyFileSync(path.join(REPO, f), d); };
   const pilot = JSON.parse(fs.readFileSync(path.join(REPO, 'data/tripcom/pilot.json'), 'utf8'));
   ['vercel.json', 'tripcom-cta.js', 'tripcom-cta.css', 'tripcom-widget.js', 'data/tripcom/decisions.json', 'data/tripcom/pilot.json', 'best-hotels-in-da-nang.html', 'privacy.html', ...pilot.pages].forEach(cpf);
   const reg = JSON.parse(fs.readFileSync(path.join(REPO, 'data/tripcom/registry.json'), 'utf8'));
