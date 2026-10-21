@@ -235,7 +235,10 @@ html body a.tc-btn:not(#tc-n) { border-radius: 2px !important; font-family: var(
 html body a.tc-btn.tc-btn--compact:not(#tc-n) { border-radius: 2px !important; padding-right: 1rem !important; }
 html body a.tc-btn:not(#tc-n) .tc-btn__logo { border-radius: 2px; }
 html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { height: 44px !important; }
-html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !important; }
+html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !important; display: none !important; }
+html body .dn-header a.tc-btn.nav-stays-btn .tc-btn__text { white-space: nowrap !important; }
+@media (min-width: 1240px) { html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { display: inline-flex !important; } html[lang="ko"] body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { display: none !important; } }
+@media (min-width: 1360px) { html[lang="ko"] body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { display: inline-flex !important; } }
 
 /* Korean labels are wider: keep the menu button until there is room for the full bar. */
 @media (min-width: 1240px) and (max-width: 1359px) {
@@ -296,3 +299,10 @@ html body a.dn-booklink { color: var(--dn-link, var(--dn-ink)) !important; text-
 
 /* Selected filter on a dark filter bar: white chip, black text (state stays obvious without colour). */
 html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.active { background: #fff; border-color: #fff; color: var(--dn-ink); }
+
+/* Trip.com mode only: the header button carries the Trip.com wordmark and is wider, so the nav tightens to keep the masthead on one line. */
+@media (min-width: 1240px) {
+  .dn-header:has(a.tc-btn.nav-stays-btn) .dn-header__bar { gap: .8rem; }
+  .dn-header:has(a.tc-btn.nav-stays-btn) .dn-top { padding-inline: .5rem; }
+  .dn-header:has(a.tc-btn.nav-stays-btn) .dn-nav > ul { gap: 0; }
+}
