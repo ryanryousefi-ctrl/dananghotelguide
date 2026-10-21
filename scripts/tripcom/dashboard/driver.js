@@ -2,8 +2,13 @@
 // Keeps ONE authenticated Trip.com Partners browser session open so the dashboard link-generation workflow can
 // be driven step by step without asking the owner to log in again.
 //
-//   node scripts/tripcom/dashboard/driver.js          opens a visible Chrome window on the Partners site.
-//        THE OWNER LOGS IN THEMSELVES (password, any verification). Nothing here reads or stores credentials.
+//   Preferred (Google sign-in refuses automation-launched browsers, and we never try to get around that):
+//     1. bash scripts/tripcom/dashboard/open-chrome.sh      starts an ordinary Chrome window (own profile folder,
+//                                                           DevTools port 9222 on localhost only)
+//     2. THE OWNER SIGNS IN THEMSELVES in that window (Google or email, any verification).
+//     3. node scripts/tripcom/dashboard/driver.js --attach  attaches AFTER sign-in; sign-in was never automated.
+//   node scripts/tripcom/dashboard/driver.js                (legacy) launches a Playwright browser; Google blocks sign-in there.
+//   Nothing here reads, stores or exports credentials or cookies.
 //
 // Commands are small JS files dropped into /tmp/tc-driver/cmd-<n>.js, each `module.exports = async ({page, context}) => result`;
 // the result is written to out-<n>.json. The session profile lives OUTSIDE the repo (~/.dnhg-tripcom-profile, mode 700)
@@ -13,11 +18,13 @@ const fs = require('fs'), path = require('path'), os = require('os');
 let pw; try { pw = require('playwright'); } catch (e) { pw = require('/Users/ryanyousefi/dananghotelguide/node_modules/playwright'); }
 const PROFILE = path.join(os.homedir(), '.dnhg-tripcom-profile');
 const DIR = '/tmp/tc-driver';
-fs.mkdirSync(PROFILE, { recursive: true, mode: 0o700 }); fs.mkdirSync(DIR, { recursive: true });
+if (!process.argv.includes('--attach')) fs.mkdirSync(PROFILE, { recursive: true, mode: 0o700 });
+fs.mkdirSync(DIR, { recursive: true });
 (async () => {
-  const context = await pw.chromium.launchPersistentContext(PROFILE, { channel: 'chrome', headless: false, viewport: null, args: ['--window-size=1320,900'] });
-  const page = context.pages()[0] || await context.newPage();
-  await page.goto('https://www.trip.com/partners/index?locale=en_xx', { waitUntil: 'domcontentloaded' }).catch(() => {});
+  const ATTACH = process.argv.includes('--attach');
+  const context = ATTACH ? (await pw.chromium.connectOverCDP('http://127.0.0.1:9222')).contexts()[0] : await pw.chromium.launchPersistentContext(PROFILE, { channel: 'chrome', headless: false, viewport: null, args: ['--window-size=1320,900'] });
+  const page = context.pages().find(p => /trip\.com\/partners/.test(p.url())) || context.pages()[0] || await context.newPage();
+  if (!ATTACH) await page.goto('https://www.trip.com/partners/index?locale=en_xx', { waitUntil: 'domcontentloaded' }).catch(() => {});
   const beat = async () => {
     let url = '', loggedIn = false;
     try { url = page.url(); const t = await page.evaluate(() => document.body.innerText.slice(0, 4000)); loggedIn = /Sign Out|Log Out|Logout|Dashboard|Affiliate Tools|Manage My Sites/i.test(t) && !/^\s*Help\s+EN\s+Join us\s+Sign In/i.test(t.trim()); } catch (e) {}
@@ -35,5 +42,6 @@ fs.mkdirSync(PROFILE, { recursive: true, mode: 0o700 }); fs.mkdirSync(DIR, { rec
     if (fs.existsSync(path.join(DIR, 'STOP'))) break;
     await new Promise(r => setTimeout(r, 1500));
   }
-  await context.close();
+  if (!ATTACH) await context.close();
+  process.exit(0);
 })();

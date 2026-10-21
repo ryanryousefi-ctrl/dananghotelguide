@@ -15,6 +15,11 @@ We run Da Nang Hotel Guide (https://www.dananghotelguide.com), Alliance ID 11013
 6. What does `trip_sub3` (for example D20397190 on our generated links) represent? Is it constant per account/site?
 7. May the Trip.com wordmark appear on our booking buttons, and which asset should we use?
 
-Attached: link-worksheet.csv (106 rows).
+Attached: support-bulk-request.csv (106 rows: destination URL, type, Trip.com ID, name; last column for the generated link).
 
 Thank you.
+
+## How the returned links are imported (no hand-editing)
+
+Paste each returned link, exactly as received, into `affiliate_url` of `data/tripcom/link-worksheet.csv` (matching row), set `generation_method` to `support-bulk`, then run
+`node scripts/tripcom/worksheet.js import`. The importer stores the exact string, its SHA-256, the date and method, checks host/path/parameters against the learned profile and that the destination ID in the path equals the row's Trip.com ID. Keep Trip.com's reply email as the provenance evidence.
