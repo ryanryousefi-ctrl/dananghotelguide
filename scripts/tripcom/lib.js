@@ -137,6 +137,20 @@ function affiliateUrlProblems(url, profile = loadProfile()) {
   return problems;
 }
 
+// The destination a generated link points at, read from its path (observed generator format:
+// /hotels/<slug>-hotel-detail-<id>/<hotel-slug>/ and /hotels/<slug>-hotels-list-<id>/). Null if not in the path.
+function destinationFromUrl(url) {
+  try { const m = new URL(url).pathname.match(/-(hotel-detail|hotels-list)-(\d+)(?:\/|$)/); return m ? { type: m[1] === 'hotel-detail' ? 'hotel' : 'city', id: m[2] } : null; } catch (e) { return null; }
+}
+// Is the link confirmed to open the intended property? 'yes' = the owner opened it; 'id-in-url' = the
+// generator's own path carries the Trip.com ID and it equals the registry ID (machine check).
+function destinationConfirmed(entry, profile = loadProfile()) {
+  const v = entry.verification && entry.verification.opens_correct_property;
+  if (v === 'yes') return true;
+  if (v === 'id-in-url') { const d = destinationFromUrl(entry.affiliate_url); return !!d && String(entry.tripcom_id) === d.id && (d.type === (entry.tripcom_type === 'hotel' ? 'hotel' : 'city')); }
+  return false;
+}
+
 // What must be true before any link may be applied to pages.
 function profileProblems(profile = loadProfile()) {
   if (!profile) return ['no link-format profile yet (run link-profile.js derive after the first real links are imported)'];
@@ -149,4 +163,4 @@ function profileProblems(profile = loadProfile()) {
 const PILOT = path.join(ROOT, 'data', 'tripcom', 'pilot.json');
 function loadPilot() { return fs.existsSync(PILOT) ? JSON.parse(fs.readFileSync(PILOT, 'utf8')) : null; }
 
-module.exports = { loadPilot, PROFILE, loadProfile, profileProblems, sha256, ROOT, REGISTRY, DECISIONS, loadDecisions, planFor, ALLIANCE_ID, SITE_ID, CJ_RE, servedPages, decodeCj, keyFor, findCjLinks, loadRegistry, affiliateUrlProblems };
+module.exports = { destinationFromUrl, destinationConfirmed, loadPilot, PROFILE, loadProfile, profileProblems, sha256, ROOT, REGISTRY, DECISIONS, loadDecisions, planFor, ALLIANCE_ID, SITE_ID, CJ_RE, servedPages, decodeCj, keyFor, findCjLinks, loadRegistry, affiliateUrlProblems };

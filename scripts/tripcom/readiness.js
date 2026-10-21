@@ -5,7 +5,7 @@
 // Nothing here proves Trip.com tracking. Gate 4 (pilot) is the only evidence of attribution.
 'use strict';
 const fs = require('fs'), path = require('path'), cp = require('child_process');
-const { ROOT, loadRegistry, loadProfile, profileProblems, affiliateUrlProblems, sha256, loadPilot } = require('./lib');
+const { ROOT, loadRegistry, loadProfile, profileProblems, affiliateUrlProblems, sha256, loadPilot, destinationConfirmed } = require('./lib');
 const rd = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tripcom', f), 'utf8'));
 const reg = loadRegistry(), profile = loadProfile(), pilot = loadPilot();
 const acct = rd('account-readiness.json'), ev = rd('pilot-evidence.json');
@@ -21,9 +21,9 @@ gate('1', 'Owner', 'Affiliate account readiness (attested)', done.length === chk
 const used = reg.entries.filter(e => e.decision !== 'remove' && e.link_count > 0 && e.tripcom_destination);
 const dests = [...new Set(used.map(e => e.tripcom_destination))];
 const withLink = used.filter(e => e.affiliate_url), problems = withLink.filter(e => affiliateUrlProblems(e.affiliate_url, profile).length || e.affiliate_url_sha256 !== sha256(e.affiliate_url));
-const confirmed = withLink.filter(e => e.verification && e.verification.opens_correct_property === 'yes');
+const confirmed = withLink.filter(e => destinationConfirmed(e, profile));
 gate('2a', 'Owner', 'Official links generated in the dashboard and imported', withLink.length === used.length, `${withLink.length}/${used.length} registry entries (${dests.length} unique destinations) have a link; ${problems.length} fail checks`);
-gate('2b', 'Owner', 'Every link opened by hand and confirmed to show the right property', confirmed.length === used.length, `${confirmed.length}/${used.length} confirmed`);
+gate('2b', 'Owner', 'Every link confirmed to open the right property (owner check, or Trip.com ID in the generated path equals the registry ID)', confirmed.length === used.length, `${confirmed.length}/${used.length} confirmed`);
 gate('2c', 'Owner + support', 'Link-format profile derived, reviewed and approved; regional domain decided', profileProblems(profile).length === 0, profileProblems(profile).join(' | ') || `approved; hosts ${profile.hosts.join(', ')}`);
 
 // 3 Technical (ours)

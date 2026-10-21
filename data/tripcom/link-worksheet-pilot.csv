@@ -1,7 +1,7 @@
-paste_into_link_generator,tripcom_type,tripcom_id,name,site_links,registry_keys,affiliate_url,generated_on,opens_correct_property,property_seen_on_trip_com,notes
-"https://www.trip.com/hotels/list?city=1356","city","1356","Da Nang Municipality, Vietnam","597","search:Da Nang Municipality, Vietnam|6232|region search:Da Nang||","","","","",""
-"https://www.trip.com/hotels/detail/?hotelId=713826","hotel","713826","Hyatt Regency Danang Resort and Spa","55","hotel:hyatt-regency-da-nang-resort-and-spa hotel:hyatt-regency-danang-resort-and-spa search:Hyatt Regency Danang Resort||","","","","",""
-"https://www.trip.com/hotels/detail/?hotelId=1571261","hotel","1571261","InterContinental DANANG SUN PENINSULA RESORT by IHG","52","hotel:intercontinental-danang-sun-peninsula-resort","","","","",""
-"https://www.trip.com/hotels/detail/?hotelId=999113","hotel","999113","Furama Resort Danang","28","hotel:furama-resort-danang","","","","",""
-"https://www.trip.com/hotels/detail/?hotelId=22153383","hotel","22153383","Four Points by Sheraton Danang","12","hotel:four-points-by-sheraton-danang","","","","",""
-"https://www.trip.com/hotels/detail/?hotelId=713871","hotel","713871","Brilliant Hotel","11","hotel:brilliant","","","","",""
+paste_into_link_generator,tripcom_type,tripcom_id,name,site_links,registry_keys,affiliate_url,generated_on,opens_correct_property,property_seen_on_trip_com,notes,generation_method
+"https://www.trip.com/hotels/list?city=1356","city","1356","Da Nang Municipality, Vietnam","597","search:Da Nang Municipality, Vietnam|6232|region ;; search:Da Nang||","","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=713826","hotel","713826","Hyatt Regency Danang Resort and Spa","55","hotel:hyatt-regency-da-nang-resort-and-spa ;; hotel:hyatt-regency-danang-resort-and-spa ;; search:Hyatt Regency Danang Resort||","https://www.trip.com/hotels/da-nang-hotel-detail-713826/hyatt-regency-danang-resort-and-spa/?Allianceid=11013066&SID=333523744&trip_sub1=&trip_sub3=D20397190","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=1571261","hotel","1571261","InterContinental DANANG SUN PENINSULA RESORT by IHG","52","hotel:intercontinental-danang-sun-peninsula-resort","","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=999113","hotel","999113","Furama Resort Danang","28","hotel:furama-resort-danang","","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=22153383","hotel","22153383","Four Points by Sheraton Danang","12","hotel:four-points-by-sheraton-danang","","","","","",""
+"https://www.trip.com/hotels/detail/?hotelId=713871","hotel","713871","Brilliant Hotel","11","hotel:brilliant","","","","","",""

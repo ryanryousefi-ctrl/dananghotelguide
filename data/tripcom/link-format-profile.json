@@ -1,0 +1,36 @@
+{
+ "approved": false,
+ "derived_at": "2026-10-21T05:40:04.570Z",
+ "derived_from": [
+  "search:Hyatt Regency Danang Resort||",
+  "search:Da Nang||"
+ ],
+ "hosts": [
+  "www.trip.com"
+ ],
+ "path_shapes": [
+  "/hotels/[a-z0-9-]+-hotel-detail-\\d+/[a-z0-9-]+/",
+  "/hotels/[a-z0-9-]+-hotels-list-\\d+/"
+ ],
+ "params_allowed": [
+  "Allianceid",
+  "SID",
+  "trip_sub1",
+  "trip_sub3"
+ ],
+ "params_required": [
+  "Allianceid",
+  "SID",
+  "trip_sub1",
+  "trip_sub3"
+ ],
+ "identity": {
+  "evidence": "params",
+  "note": "Alliance ID and SID appear as query parameters in every sample."
+ },
+ "destination_verifiable_from_url": true,
+ "accept_dated": false,
+ "dated_samples": 0,
+ "domain_decision": "",
+ "warnings": []
+}

@@ -61,4 +61,20 @@ r = run(d, 'apply.js', '--pilot'); t('Blocks links the owner has not confirmed o
 d = fixture(); fs.unlinkSync(path.join(d, 'data/tripcom/link-format-profile.json')); r = run(d, 'apply.js', '--pilot'); t('Blocks everything until a link-format profile exists and is approved', r.status === 2 && /profile/.test(r.stdout));
 d = fixture(); const pf = path.join(d, 'data/tripcom/link-format-profile.json'); const prof = JSON.parse(fs.readFileSync(pf, 'utf8')); prof.hosts = ['vn.trip.com']; prof.domain_decision = ''; fs.writeFileSync(pf, JSON.stringify(prof)); r = run(d, 'apply.js', '--pilot'); t('Flags a non-www host until the regional-domain decision is recorded', r.status === 2 && /host/.test(r.stdout));
 
+// 4. Real generator output (two links the owner generated in the dashboard on 2026-10-21): format checks only
+const lib = require('./lib');
+const HY = 'https://www.trip.com/hotels/da-nang-hotel-detail-713826/hyatt-regency-danang-resort-and-spa/?Allianceid=11013066&SID=333523744&trip_sub1=&trip_sub3=D20397190';
+const CT = 'https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&SID=333523744&trip_sub1=&trip_sub3=D20397190';
+const realProfile = { approved: true, hosts: ['www.trip.com'], path_shapes: ['/hotels/[a-z0-9-]+-hotel-detail-\\d+/[a-z0-9-]+/', '/hotels/[a-z0-9-]+-hotels-list-\\d+/'], params_allowed: ['Allianceid', 'SID', 'trip_sub1', 'trip_sub3'], params_required: ['Allianceid', 'SID', 'trip_sub1', 'trip_sub3'], identity: { evidence: 'params' }, accept_dated: false };
+t('Real generated hotel link passes the learned format', lib.affiliateUrlProblems(HY, realProfile).length === 0, lib.affiliateUrlProblems(HY, realProfile).join('; '));
+t('Real generated city link passes the learned format', lib.affiliateUrlProblems(CT, realProfile).length === 0, lib.affiliateUrlProblems(CT, realProfile).join('; '));
+t('Destination ID is read from the generated path (713826 hotel, 1356 city)', JSON.stringify([lib.destinationFromUrl(HY), lib.destinationFromUrl(CT)]) === JSON.stringify([{ type: 'hotel', id: '713826' }, { type: 'city', id: '1356' }]));
+t('A hand-built look-alike with an extra parameter is rejected', lib.affiliateUrlProblems(HY + '&utm_source=x', realProfile).some(x => /not in the approved profile/.test(x)));
+t('A look-alike without trip_sub3 is rejected', lib.affiliateUrlProblems(HY.replace('&trip_sub3=D20397190', ''), realProfile).some(x => /required parameter/.test(x)));
+t('A dated variant is rejected', lib.affiliateUrlProblems(HY + '&checkIn=2026-12-01', realProfile).length > 0);
+t('Another account\'s Alliance ID is rejected', lib.affiliateUrlProblems(HY.replace('11013066', '12345678'), realProfile).some(x => /wrong/.test(x)));
+t('vn.trip.com host is rejected until the profile approves it', lib.affiliateUrlProblems(HY.replace('www.trip.com', 'vn.trip.com'), realProfile).some(x => /host/.test(x)));
+const e = { affiliate_url: HY, tripcom_id: '713826', tripcom_type: 'hotel', verification: { opens_correct_property: 'id-in-url' } };
+t('id-in-url confirmation accepted only when the path ID equals the registry ID', lib.destinationConfirmed(e, realProfile) && !lib.destinationConfirmed({ ...e, tripcom_id: '999' }, realProfile));
+
 const bad = results.filter(x => !x).length; console.log(`\n${results.length - bad}/${results.length} passed`); process.exit(bad ? 1 : 0);

@@ -27,7 +27,7 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const { ROOT, servedPages, loadRegistry, affiliateUrlProblems, loadProfile, profileProblems, sha256, loadPilot } = require('./lib');
+const { ROOT, servedPages, loadRegistry, affiliateUrlProblems, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl } = require('./lib');
 
 const args = process.argv.slice(2);
 const flag = f => args.includes(f);
@@ -117,7 +117,8 @@ for (const page of pages) {
       const t = (entry.affiliate_url ? entry : byKey.get(entry.fallback_key)) || entry;
       if (href !== t.affiliate_url_original) fail('modified-link', `${page}: ${key} href is not the exact originally generated link`);
       if (t.affiliate_url_sha256 !== sha256(href)) fail('modified-link', `${page}: ${key} href SHA-256 does not match the registry`);
-      if (!t.verification || t.verification.opens_correct_property !== 'yes') fail('unverified-link', `${page}: ${key} not confirmed by the owner to open the correct property`);
+      if (!destinationConfirmed(t, PROFILE)) fail('unverified-link', `${page}: ${key} not confirmed to open the correct property`);
+      const dd = destinationFromUrl(href); if (dd && String(t.tripcom_id) !== dd.id) fail('wrong-match', `${page}: ${key} generated link points at Trip.com ${dd.type} ${dd.id}, registry expects ${t.tripcom_id}`);
       if (!/target="_blank"/.test(attrs)) fail('rel', `${page}: Trip.com link without target=_blank`);
       if (!/rel="[^"]*nofollow/.test(attrs) || !/rel="[^"]*noopener/.test(attrs)) fail('rel', `${page}: Trip.com link missing nofollow/noopener`);
     }

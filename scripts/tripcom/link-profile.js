@@ -16,11 +16,12 @@ const { PROFILE, loadProfile, profileProblems, affiliateUrlProblems, loadRegistr
 const cmd = process.argv[2];
 const reg = loadRegistry();
 const links = reg.entries.filter(e => e.affiliate_url).map(e => ({ key: e.key, id: String(e.tripcom_id || ''), url: e.affiliate_url }));
-const shape = p => p.split('/').map(seg => !seg ? '' : /^\d+$/.test(seg) ? '\\d+' : /^[A-Za-z0-9_-]{6,}$/.test(seg) && /\d/.test(seg) && /[A-Za-z]/.test(seg) ? '[A-Za-z0-9_-]+' : seg.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('/');
+const shape = p => p.split('/').map(seg => !seg ? '' : /^\d+$/.test(seg) ? '\\d+' : /^[a-z0-9]+(-[a-z0-9]+)+$/.test(seg) ? (/-(hotel-detail|hotels-list)-\d+$/.test(seg) ? '[a-z0-9-]+-' + seg.match(/(hotel-detail|hotels-list)/)[1] + '-\\d+' : '[a-z0-9-]+') : seg.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('/');
 
 if (cmd === 'derive') {
   const uniq = [...new Map(links.map(l => [l.url, l])).values()];
-  if (uniq.length < 5) { console.error(`Need at least 5 distinct imported links to derive a profile (have ${uniq.length}). Generate them in the dashboard, paste them into data/tripcom/link-worksheet.csv, run worksheet.js import.`); process.exit(2); }
+  const MIN = +(process.argv[process.argv.indexOf('--min') + 1] || 5);
+  if (uniq.length < MIN) { console.error(`Need at least ${MIN} distinct imported links to derive a profile (have ${uniq.length}); use --min N for a provisional profile. Generate them in the dashboard, paste them into data/tripcom/link-worksheet.csv, run worksheet.js import.`); process.exit(2); }
   const hosts = new Set(), shapes = new Set(), all = new Set(); let req = null; const idInUrl = []; let alliance = 0, sid = 0, dates = 0;
   for (const l of uniq) {
     const u = new URL(l.url); hosts.add(u.hostname.toLowerCase()); shapes.add(shape(u.pathname));

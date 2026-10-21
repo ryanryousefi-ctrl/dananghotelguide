@@ -27,7 +27,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { ROOT, REGISTRY, servedPages, findCjLinks, loadRegistry, affiliateUrlProblems, planFor, loadProfile, profileProblems, sha256, loadPilot } = require('./lib');
+const { ROOT, REGISTRY, servedPages, findCjLinks, loadRegistry, affiliateUrlProblems, planFor, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl } = require('./lib');
 
 const args = process.argv.slice(2);
 const MODE = args.includes('--write') ? 'write' : args.includes('--preview') ? 'preview' : 'dry';
@@ -51,7 +51,8 @@ function linkProblems(entry) {
   if (entry.affiliate_url_sha256 !== sha256(entry.affiliate_url)) p.push('link was modified after import (SHA-256 mismatch)');
   if (entry.affiliate_url_original && entry.affiliate_url_original !== entry.affiliate_url) p.push('differs from the originally generated link');
   if (!/dashboard link generator/i.test(entry.affiliate_url_source || '')) p.push('no dashboard-generator provenance');
-  if (!entry.verification || entry.verification.opens_correct_property !== 'yes') p.push('owner has not confirmed that it opens the correct property');
+  if (!destinationConfirmed(entry, PROFILE)) p.push('not confirmed to open the correct property (owner check, or Trip.com ID in the generated path matching the registry)');
+  const d = destinationFromUrl(entry.affiliate_url); if (d && String(entry.tripcom_id) !== d.id) p.push(`generated path points at Trip.com ${d.type} ${d.id}, registry expects ${entry.tripcom_id}`);
   return p;
 }
 function urlFor(entry) {
