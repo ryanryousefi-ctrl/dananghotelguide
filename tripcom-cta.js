@@ -15,6 +15,8 @@
   if (window.DNHG_TRIP) return;
 
   var LOGO = '/assets/brand/tripcom-logo.webp';
+  // Wordmark only with Trip.com's written consent (agreement 9.2); apply.js sets this from data/tripcom/branding.json.
+  var USE_LOGO = /*@tripcom-logo*/false/*@end-tripcom-logo*/;
   // Hotel pages only: editorial links to other Trip.com pages (travel guides)
   // are not booking buttons and are left alone.
   // Short links (/t/...) and any URL with the Alliance ID count as booking links.
@@ -62,7 +64,7 @@
     });
     if (a.querySelector('img') && !a.querySelector('.tc-btn__logo, .tc-link__logo')) return; // image-card link
     if (!a.hasAttribute('aria-label')) a.setAttribute('aria-label', label(a));
-    if (a.querySelector('.tc-btn__logo, .tc-link__logo')) return; // static markup already complete
+    if (a.querySelector('.tc-btn__logo, .tc-link__logo') || a.hasAttribute('data-tc-key')) return; // static markup already complete
     if (isButton(a)) {
       var cls = a.getAttribute('class') || '';
       // No white-to-blue fade on buttons upgraded after first paint.
@@ -73,16 +75,18 @@
       var text = document.createElement('span');
       text.className = 'tc-btn__text';
       while (a.firstChild) text.appendChild(a.firstChild);
-      var badge = document.createElement('span');
-      badge.className = 'tc-btn__logo';
-      badge.appendChild(logoImg('', 58, 14));
-      a.appendChild(badge);
+      if (USE_LOGO) {
+        var badge = document.createElement('span');
+        badge.className = 'tc-btn__logo';
+        badge.appendChild(logoImg('', 58, 14));
+        a.appendChild(badge);
+      }
       a.appendChild(text);
       void a.offsetWidth;
       a.style.removeProperty('transition');
     } else {
       a.classList.add('tc-link');
-      a.appendChild(logoImg('tc-link__logo', 41, 10));
+      if (USE_LOGO) a.appendChild(logoImg('tc-link__logo', 41, 10));
     }
   }
 

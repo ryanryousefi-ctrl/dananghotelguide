@@ -69,6 +69,9 @@ const realProfile = { approved: true, hosts: ['www.trip.com'], path_shapes: ['/h
 t('Real generated hotel link passes the learned format', lib.affiliateUrlProblems(HY, realProfile).length === 0, lib.affiliateUrlProblems(HY, realProfile).join('; '));
 t('Real generated city link passes the learned format', lib.affiliateUrlProblems(CT, realProfile).length === 0, lib.affiliateUrlProblems(CT, realProfile).join('; '));
 t('Destination ID is read from the generated path (713826 hotel, 1356 city)', JSON.stringify([lib.destinationFromUrl(HY), lib.destinationFromUrl(CT)]) === JSON.stringify([{ type: 'hotel', id: '713826' }, { type: 'city', id: '1356' }]));
+const HQ = 'https://www.trip.com/hotels/detail/?hotelId=713826&Allianceid=11013066&SID=333523744&trip_sub1=&trip_sub3=D20397442';
+t('Query-style generated link: destination ID read from hotelId', JSON.stringify(lib.destinationFromUrl(HQ)) === JSON.stringify({ type: 'hotel', id: '713826' }));
+t('Two URLs pasted into one generation (corrupt output) is rejected', lib.affiliateUrlProblems('https://www.trip.com/hotels/detail/?hotelId=999113 https://www.trip.com/hotels/detail/?hotelId=1571261&Allianceid=11013066&SID=333523744&trip_sub1=&trip_sub3=D20397463', null).some(x => /whitespace/.test(x)));
 t('A hand-built look-alike with an extra parameter is rejected', lib.affiliateUrlProblems(HY + '&utm_source=x', realProfile).some(x => /not in the approved profile/.test(x)));
 t('A look-alike without trip_sub3 is rejected', lib.affiliateUrlProblems(HY.replace('&trip_sub3=D20397190', ''), realProfile).some(x => /required parameter/.test(x)));
 t('A dated variant is rejected', lib.affiliateUrlProblems(HY + '&checkIn=2026-12-01', realProfile).length > 0);

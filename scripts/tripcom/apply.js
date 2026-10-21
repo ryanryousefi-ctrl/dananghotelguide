@@ -27,7 +27,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { ROOT, REGISTRY, servedPages, findCjLinks, loadRegistry, affiliateUrlProblems, planFor, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl } = require('./lib');
+const { ROOT, REGISTRY, servedPages, findCjLinks, loadRegistry, affiliateUrlProblems, planFor, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl, useLogo } = require('./lib');
 
 const args = process.argv.slice(2);
 const MODE = args.includes('--write') ? 'write' : args.includes('--preview') ? 'preview' : 'dry';
@@ -129,9 +129,11 @@ function upgradeAnchor(openTag, inner, url, entry, before = '', opts = {}) {
     if (!/trip\.com/i.test(name)) name += ' on Trip.com';
     tag = tag.replace(/\saria-label="[^"]*"/, '');
     attrs.push(`aria-label="${esc(name + ', opens in a new tab')}"`);
-    newInner = isButton
-      ? `<span class="tc-btn__logo"><img src="${LOGO}" alt="" width="58" height="14"></span><span class="tc-btn__text">${newInner}</span>`
-      : `${newInner}<img class="tc-link__logo" src="${LOGO}" alt="" width="41" height="10">`;
+    newInner = !useLogo()
+      ? (isButton ? `<span class="tc-btn__text">${newInner}</span>` : newInner)          // text-only until Trip.com consents to logo use (agreement 9.2)
+      : isButton
+        ? `<span class="tc-btn__logo"><img src="${LOGO}" alt="" width="58" height="14"></span><span class="tc-btn__text">${newInner}</span>`
+        : `${newInner}<img class="tc-link__logo" src="${LOGO}" alt="" width="41" height="10">`;
   }
   tag = tag.replace(/^<a\b/, `<a ${attrs.join(' ')}`);
   return tag + newInner;
@@ -373,6 +375,8 @@ for (const page of pages) {
   if (out.length < src.length * 0.85) throw new Error(`${page}: output ${src.length - out.length} bytes shorter than input; aborting`);
   if (out !== src) { fs.writeFileSync(path.join(outRoot, page), out); report.pages++; }
 }
+const ctaPath = path.join(outRoot, 'tripcom-cta.js');
+fs.writeFileSync(ctaPath, fs.readFileSync(ctaPath, 'utf8').replace(/\/\*@tripcom-logo\*\/[\s\S]*?\/\*@end-tripcom-logo\*\//, `/*@tripcom-logo*/${useLogo()}/*@end-tripcom-logo*/`));
 const widgetPath = path.join(outRoot, 'tripcom-widget.js');
 const w = fs.readFileSync(widgetPath, 'utf8');
 if (WIDGET_USED) fs.writeFileSync(widgetPath, w.replace(/\/\*@tripcom-config\*\/[\s\S]*?\/\*@end-tripcom-config\*\//, `/*@tripcom-config*/${widgetConfig()}/*@end-tripcom-config*/`));

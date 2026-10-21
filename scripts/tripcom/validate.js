@@ -27,7 +27,7 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
-const { ROOT, servedPages, loadRegistry, affiliateUrlProblems, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl } = require('./lib');
+const { ROOT, servedPages, loadRegistry, affiliateUrlProblems, loadProfile, profileProblems, sha256, loadPilot, destinationConfirmed, destinationFromUrl, useLogo } = require('./lib');
 
 const args = process.argv.slice(2);
 const flag = f => args.includes(f);
@@ -123,8 +123,8 @@ for (const page of pages) {
       if (!/rel="[^"]*nofollow/.test(attrs) || !/rel="[^"]*noopener/.test(attrs)) fail('rel', `${page}: Trip.com link missing nofollow/noopener`);
     }
     if (/<img\b/.test(inner) && !/tc-(btn|link)__logo/.test(inner)) continue; // image-card link
-    if (/\btc-btn\b/.test(cls) && !/tc-btn__logo/.test(inner)) fail('unbranded', `${page}: button without Trip.com logo (${cls})`);
-    if (/\btc-link\b/.test(cls) && !/tc-link__logo/.test(inner)) fail('unbranded', `${page}: link without Trip.com logo`);
+    if (useLogo() && /\btc-btn\b/.test(cls) && !/tc-btn__logo/.test(inner)) fail('unbranded', `${page}: button without Trip.com logo (${cls})`);
+    if (useLogo() && /\btc-link\b/.test(cls) && !/tc-link__logo/.test(inner)) fail('unbranded', `${page}: link without Trip.com logo`);
     if (!/\btc-(btn|link)\b/.test(cls)) fail('unbranded', `${page}: Trip.com link without component class`);
     const aria = decode((attrs.match(/\saria-label="([^"]*)"/) || [, ''])[1]);
     const visible = inner.replace(/<[^>]+>/g, ' ').replace(/&rarr;|&#8594;|&#8599;|→|↗|›|»/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
@@ -218,20 +218,21 @@ async function browserChecks() {
         // Move the pointer off any button so hover transitions don't skew colours.
         await p.mouse.move(0, 0).catch(() => {});
         await p.waitForTimeout(450);
-        const r = await p.evaluate(() => {
+        const r = await p.evaluate((LOGO_ON) => {
           const o = { unbranded: 0, unstyled: 0, popup: null, overflow: document.documentElement.scrollWidth - window.innerWidth, menuBtn: null };
           // Booking links only (same rule as tripcom-cta.js); editorial Trip.com guide links are not buttons.
           document.querySelectorAll('a[data-provider="tripcom"], a[href*="trip.com/hotels/"], a[href*="trip.com/t/"]').forEach(a => {
             const r = a.getBoundingClientRect(); if (!r.width || !r.height) return;
             if (a.querySelector('img') && !a.querySelector('.tc-btn__logo,.tc-link__logo')) return;
-            if (!a.querySelector('.tc-btn__logo img, .tc-link__logo')) o.unbranded++;
+            if (LOGO_ON && !a.querySelector('.tc-btn__logo img, .tc-link__logo')) o.unbranded++;
+            if (!LOGO_ON && !/trip\.com/i.test(a.getAttribute('aria-label') || a.textContent)) o.unbranded++;
             if (a.classList.contains('tc-btn') && !/rgb\((29, 78, 216|30, 64, 175|30, 58, 138)\)/.test(getComputedStyle(a).backgroundColor)) o.unstyled++;
           });
           o.emptyHref = [...document.querySelectorAll('a[data-provider="tripcom"], a.affiliate-link')].filter(a => { const h = a.getAttribute('href'); return !h || /undefined|null$/.test(h); }).length;
           const pop = document.querySelector('.leaflet-popup a[data-provider="tripcom"]'); if (document.querySelector('.leaflet-popup')) o.popup = !!(pop && pop.querySelector('.tc-btn__logo'));
-          const mb = document.querySelector('.mobile-stays-btn'); if (mb && mb.getBoundingClientRect().height) o.menuBtn = !!mb.querySelector('.tc-btn__logo');
+          const mb = document.querySelector('.mobile-stays-btn'); if (mb && mb.getBoundingClientRect().height) o.menuBtn = LOGO_ON ? !!mb.querySelector('.tc-btn__logo') : true;
           return o;
-        });
+        }, useLogo());
         if (errs.length) fail('render', `${dev} ${page}: JS error ${errs[0].slice(0, 100)}`);
         if (r.unbranded) fail('unbranded', `${dev} ${page}: ${r.unbranded} visible Trip.com link(s) without logo`);
         if (r.unstyled) fail('unbranded', `${dev} ${page}: ${r.unstyled} .tc-btn not rendered in component blue`);

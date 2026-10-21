@@ -140,7 +140,14 @@ function affiliateUrlProblems(url, profile = loadProfile()) {
 // The destination a generated link points at, read from its path (observed generator format:
 // /hotels/<slug>-hotel-detail-<id>/<hotel-slug>/ and /hotels/<slug>-hotels-list-<id>/). Null if not in the path.
 function destinationFromUrl(url) {
-  try { const m = new URL(url).pathname.match(/-(hotel-detail|hotels-list)-(\d+)(?:\/|$)/); return m ? { type: m[1] === 'hotel-detail' ? 'hotel' : 'city', id: m[2] } : null; } catch (e) { return null; }
+  try {
+    const u = new URL(url);
+    const m = u.pathname.match(/-(hotel-detail|hotels-list)-(\d+)(?:\/|$)/);
+    if (m) return { type: m[1] === 'hotel-detail' ? 'hotel' : 'city', id: m[2] };
+    if (/^\/hotels\/detail\/?$/.test(u.pathname) && /^\d+$/.test(u.searchParams.get('hotelId') || '')) return { type: 'hotel', id: u.searchParams.get('hotelId') };
+    if (/^\/hotels\/list\/?$/.test(u.pathname) && /^\d+$/.test(u.searchParams.get('city') || '')) return { type: 'city', id: u.searchParams.get('city') };
+    return null;
+  } catch (e) { return null; }
 }
 // Is the link confirmed to open the intended property? 'yes' = the owner opened it; 'id-in-url' = the
 // generator's own path carries the Trip.com ID and it equals the registry ID (machine check).
@@ -160,7 +167,10 @@ function profileProblems(profile = loadProfile()) {
   return p;
 }
 
+const BRANDING = path.join(ROOT, 'data', 'tripcom', 'branding.json');
+// Logo use needs Trip.com's written consent (agreement 9.2): off unless branding.json says on AND records the evidence.
+function useLogo() { try { const b = JSON.parse(fs.readFileSync(BRANDING, 'utf8')); return b.use_logo === true && !!b.consent_evidence; } catch (e) { return false; } }
 const PILOT = path.join(ROOT, 'data', 'tripcom', 'pilot.json');
 function loadPilot() { return fs.existsSync(PILOT) ? JSON.parse(fs.readFileSync(PILOT, 'utf8')) : null; }
 
-module.exports = { destinationFromUrl, destinationConfirmed, loadPilot, PROFILE, loadProfile, profileProblems, sha256, ROOT, REGISTRY, DECISIONS, loadDecisions, planFor, ALLIANCE_ID, SITE_ID, CJ_RE, servedPages, decodeCj, keyFor, findCjLinks, loadRegistry, affiliateUrlProblems };
+module.exports = { useLogo, destinationFromUrl, destinationConfirmed, loadPilot, PROFILE, loadProfile, profileProblems, sha256, ROOT, REGISTRY, DECISIONS, loadDecisions, planFor, ALLIANCE_ID, SITE_ID, CJ_RE, servedPages, decodeCj, keyFor, findCjLinks, loadRegistry, affiliateUrlProblems };
