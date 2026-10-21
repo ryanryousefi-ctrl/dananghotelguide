@@ -306,3 +306,12 @@ html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.act
   .dn-header:has(a.tc-btn.nav-stays-btn) .dn-top { padding-inline: .5rem; }
   .dn-header:has(a.tc-btn.nav-stays-btn) .dn-nav > ul { gap: 0; }
 }
+
+/* ── Logo masthead (supplied artwork, assets/brand/dnhg-logo-master.png) ──────────────────────────────
+   The image is 4:1 and carries its own margins; width/height attributes reserve the space, CSS sets the size. */
+.dn-brand--logo { display: block; min-height: 44px; flex: 0 1 auto; min-width: 0; line-height: 0; }
+.dn-brand--logo img { display: block; width: clamp(150px, 56vw, 216px); height: auto; max-width: 100%; }
+@media (min-width: 900px) { .dn-brand--logo img { width: 256px; } }
+@media (min-width: 1240px) and (max-width: 1359px) { .dn-brand--logo img { width: 232px; } }
+.dn-brand--light img { filter: invert(1); }                 /* black artwork on the dark footer, as white */
+.dn-footer__brand .dn-brand--logo img { width: 280px; max-width: 100%; }
