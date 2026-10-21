@@ -192,11 +192,18 @@ if (CUTOVER && !PREVIEW && !PILOT && fs.existsSync(path.join(DIR, 'data/tripcom/
   if (db.sha256 !== sha256(db.embed_code)) fail('dynamic-banner', 'dynamic-banner.json embed code was modified (SHA-256 mismatch)');
   if (db.source_url_sha256 !== sha256(db.source_url) || !db.embed_code.includes('src="' + db.source_url + '"')) fail('dynamic-banner', 'banner URL is not the exact recorded dashboard URL');
   if (!/Allianceid=11013066&SID=333523744/.test(db.source_url)) fail('dynamic-banner', 'banner URL does not carry the account identifiers');
+  // Sitewide rollout: banners only on the pages in banner-placements.json (and only while banner-config.json is enabled), exactly one each.
+  const bcfg = JSON.parse(fs.readFileSync(path.join(DIR, 'data/tripcom/banner-config.json'), 'utf8'));
+  const placed = bcfg.enabled ? new Set(Object.keys(JSON.parse(fs.readFileSync(path.join(DIR, 'data/tripcom/banner-placements.json'), 'utf8')).pages)) : new Set();
+  let nBanner = 0;
   for (const pg of pages) {
-    const n = (fs.readFileSync(path.join(DIR, pg), 'utf8').match(/id="DB20401215"/g) || []).length;
-    if (pg === db.page && n !== 1) fail('dynamic-banner', `${pg}: expected exactly one banner, found ${n}`);
-    if (pg !== db.page && n) fail('dynamic-banner', `${pg}: banner present outside its experiment page`);
+    const t = fs.readFileSync(path.join(DIR, pg), 'utf8'); const n = (t.match(/id="DB20401215"/g) || []).length;
+    const bandN = (t.match(/class="dn-adband"/g) || []).length, scriptN = (t.match(/dn-banner\.js/g) || []).length;
+    if (placed.has(pg)) { nBanner++; if (n !== 1 || bandN !== 1 || scriptN !== 1) fail('dynamic-banner', `${pg}: expected exactly one banner block, found iframe ${n}, band ${bandN}, script ${scriptN}`); }
+    else if (n || bandN || scriptN) fail('dynamic-banner', `${pg}: banner present on a page that is not in the placement list`);
+    if (bcfg.exclude_pages[pg] && n) fail('dynamic-banner', `${pg}: banner on an excluded page`);
   }
+  if (nBanner !== placed.size) fail('dynamic-banner', `placement list has ${placed.size} pages but ${nBanner} were found`);
 }
 const out = path.join(DIR, 'tripcom-editorial-review.csv');
 if (DIR !== ROOT) fs.writeFileSync(out, 'page,text\n' + editorial.map(r => r.map(c => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n') + '\n');

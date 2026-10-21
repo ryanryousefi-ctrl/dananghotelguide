@@ -1,3 +1,5 @@
+> **SUPERSEDED on 2026-10-21 by `trip-banner-sitewide-2026-10.md`** (sitewide rollout). Kept as the record of the single-page test.
+
 # Experiment: Trip.com dynamic banner on best-hotels-in-da-nang.html
 
 - **Banner:** official Trip.com dynamic banner `DB20401215`, now **728 x 90** (it was 300 x 250 for the first part of launch day, 2026-10-21; replaced the same day), Alliance ID 11013066, Site ID 333523744. URL used byte for byte: `https://www.trip.com/partners/ad/DB20401215?Allianceid=11013066&SID=333523744&trip_sub1=` (record, checksums and embed code: `data/tripcom/dynamic-banner.json`).
