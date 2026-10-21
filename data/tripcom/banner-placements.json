@@ -1,0 +1,1020 @@
+{
+ "generated": "2026-10-21",
+ "pages": {
+  "a-la-carte-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "a-la-carte-vs-tms-da-nang.html": {
+   "anchor": "<span class=\"hvh-eyebrow\">Which Should You Book</span>\n    <h2 class=\"hvh-h2\">Match it to your <em>trip</em></h2>\n    <div class=\"hvh-book-c",
+   "placement": "after-55pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "arbora-luxury-collection-da-nang.html": {
+   "anchor": "<section class=\"section\" id=\"bonvoy\">\n      <span class=\"section-label\">Loyalty Programme</span>\n      <p class=\"pull-quote\">\"Arbora Luxury ",
+   "placement": "after-49pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "ba-na-hills-guide.html": {
+   "anchor": "<section class=\"bnh-section on-white\" style=\"padding-top:0\">\n  <div class=\"bnh-section-inner\">\n    <p class=\"bnh-label\">Eating At Ba Na Hill",
+   "placement": "after-46pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "beachfront-vs-city-hotels-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">City: Novotel Da Nang Premier Han River</div>\n      <div class=\"h",
+   "placement": "after-46pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "best-areas-da-nang-families.html": {
+   "anchor": "<section class=\"bb-compare\">\n  <div class=\"bb-compare-inner\">\n    <h2>My Khe vs Non Nuoc for Families</h2>\n    <div class=\"bb-compare-grid\">",
+   "placement": "after-57pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-bars-in-da-nang.html": {
+   "anchor": "<section style=\"background:var(--sand)\">\n  <div class=\"bb-finder\" id=\"bbFinder\">\n    <div class=\"bb-finder-header\">\n      <h2 class=\"bb-find",
+   "placement": "after-45pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-beach-hotel-under-100-da-nang.html": {
+   "anchor": "<div class=\"guide-section\" id=\"booking-tips\">\n    <p class=\"pull-quote\">\"Under $100/night on My Khe Beach still gets you a pool, breakfast, ",
+   "placement": "after-78pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-budget-hotels-in-da-nang.html": {
+   "anchor": "<section class=\"ch-area-section\">\n  <h2 class=\"ch-area-heading\">Cheap Hotels Around Da Nang Bay</h2>\n  <div class=\"ch-grid\">\n\n    <article c",
+   "placement": "after-46pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-cafes-da-nang.html": {
+   "anchor": "<section style=\"background:var(--sand)\">\n  <div class=\"bc-finder\" id=\"bcFinder\">\n    <div class=\"bc-finder-header\">\n      <h2 class=\"bc-find",
+   "placement": "after-42pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-esim-vietnam-airalo-guide.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\" style=\"max-width:900px\">\n    <span class=\"bb",
+   "placement": "after-43pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-family-resort-da-nang.html": {
+   "anchor": "<div class=\"guide-section\" id=\"kids-clubs\">\n    <p class=\"pull-quote\">\"The best family resorts in Da Nang get the boring things right: beach",
+   "placement": "after-78pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-han-river-hotels-da-nang.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">Filter Hotels</h2>\n    <span class=\"bb-finder-total\" i",
+   "placement": "after-31pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-hotels-an-thuong-da-nang.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">Find Your Hotel</h2>\n    <span id=\"hotelTotal\">10 hote",
+   "placement": "after-26pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-hotels-in-da-nang.html": {
+   "anchor": "<!-- QUICK PICKS GRID -->",
+   "placement": "original-experiment",
+   "type": "hotel-list",
+   "lang": "en",
+   "pinned": true
+  },
+  "best-hotels-near-my-khe-beach.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">Find Your Hotel</h2>\n    <span id=\"hotelTotal\">11 hote",
+   "placement": "after-24pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-luxury-resort-couples-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"ranked\">\n    <h2>Da Nang Couples Resorts <em>Ranked</em></h2>\n\n    \n<!-- Phase 11: Verdict block -->\n<div clas",
+   "placement": "after-14pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-night-markets-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"son-tra\">\n    <h2>Son Tra Night Market - <em>Seafood Focus</em></h2>\n    <p>Son Tra Night Market is where you ",
+   "placement": "after-36pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-resort-breakfast-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"what-to-skip\">\n    <h2>When to <em>Skip Hotel Breakfast</em></h2>\n    <p>The simple decision framework: if you",
+   "placement": "after-64pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-resorts-son-tra-peninsula.html": {
+   "anchor": "<div class=\"cmp-section\">\n    <h2>Which Resort Is <em>Right for You</em>?</h2>\n    <div class=\"cmp-grid\">\n      <div class=\"cmp-card\">\n     ",
+   "placement": "after-49pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-shopping-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"malls\">\n    <h2>Shopping Malls in <em>Da Nang</em></h2>\n\n    <h3>Vincom Plaza Da Nang</h3>\n    <p>Vincom Plaza",
+   "placement": "after-49pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "best-time-to-visit-da-nang.html": {
+   "anchor": "<div class=\"bb-section\">\n    <div class=\"bb-section-label\">Decision Guide</div>\n    <h2>What Month <em>Fits You?</em></h2>\n  </div>\n\n  <div ",
+   "placement": "after-57pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "boutique-hotels-da-nang.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">All Da Nang Boutique Hotels</h2>\n  </div>\n  <div class",
+   "placement": "after-17pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "brilliant-hotel-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "da-nang-3-day-itinerary.html": {
+   "anchor": "<section class=\"bb-section\" id=\"day-3\">\n  <div class=\"bb-section-inner\" style=\"max-width:900px\">\n    <span class=\"bb-section-label\">Day 3</s",
+   "placement": "after-36pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-5-day-itinerary.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\" id=\"day-4\">\n  <div class=\"bb-section-inner\" style=\"max-width:900px\">\n    <div",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-7-day-itinerary.html": {
+   "anchor": "<section class=\"bb-section\" id=\"day-5\">\n  <div class=\"bb-section-inner\" style=\"max-width:900px\">\n    <div class=\"day-card\">\n      <div class",
+   "placement": "after-41pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-adults-only-hotels.html": {
+   "anchor": "<section class=\"ao-section\" style=\"background:var(--white)\">\n  <div class=\"ao-section-inner\">\n    <span class=\"ao-section-label\">Side By Sid",
+   "placement": "after-46pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-airport-guide.html": {
+   "anchor": "<section class=\"ag-section\" style=\"background:var(--sand)\">\n  <div class=\"ag-narrow\">\n    <div class=\"ag-label\">Cash</div>\n    <h2 class=\"ag",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-airport-to-hoi-an.html": {
+   "anchor": "<section class=\"cmp-section\" id=\"compare\">\n  <div class=\"cmp-inner\">\n    <span class=\"bb-section-label\">Side by side</span>\n    <h2 class=\"b",
+   "placement": "after-45pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "da-nang-airport-to-my-khe.html": {
+   "anchor": "<div class=\"page-section\" id=\"travel-times\">\n    <h2>Travel Times from Da Nang Airport</h2>\n    <p>Da Nang airport sits roughly 3-4 kilometr",
+   "placement": "after-50pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-beach-hotels.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">All Beach Hotels</h2>\n  </div>\n  <div class=\"bb-bar\">\n",
+   "placement": "after-27pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-budget-guide.html": {
+   "anchor": "<div class=\"bb-section\">\n    <div class=\"bb-section-label\">Bars and Nightlife</div>\n    <h2>What a Night Out <em>Costs</em></h2>\n  </div>\n\n ",
+   "placement": "after-46pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-fireworks-festival-guide.html": {
+   "anchor": "<section id=\"hotels\" aria-labelledby=\"hotels-h\">\n    <span class=\"section-label\">Where to Stay</span>\n    <p class=\"pull-quote\">\"The Da Nang",
+   "placement": "after-38pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-fireworks-festival-hotels.html": {
+   "anchor": "<hr style=\"border:none;border-top:1px solid var(--sand-dark);margin:3rem 0\">\n\n    <section id=\"luxury\" aria-labelledby=\"lux-h\">\n      <span ",
+   "placement": "after-51pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-first-time-travel-guide.html": {
+   "anchor": "<div class=\"page-section\" id=\"top-5\">\n    <h2>Top 5 Things to Do in <em>Da Nang</em></h2>\n\n    <h3>1. My Khe Beach</h3>\n    <p>The obvious o",
+   "placement": "after-50pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-first-time-visitors-area-guide.html": {
+   "anchor": "<section class=\"bb-not-my-khe\">\n  <div class=\"bb-not-my-khe-inner\">\n    <h2>If My Khe isn't for you</h2>\n    <p>My Khe suits most first-time",
+   "placement": "after-56pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-first-time-visitors.html": {
+   "anchor": "<div class=\"bb-section\">\n    <div class=\"bb-section-label\">Relax</div>\n    <h2>Things First-Time Visitors <em>Overthink</em></h2>\n  </div>\n\n",
+   "placement": "after-56pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-food-guide.html": {
+   "anchor": "<div class=\"page-section\" id=\"prices\">\n    <h2>Food <em>Price Guide</em></h2>\n    <p>Da Nang food is genuinely affordable if you eat where l",
+   "placement": "after-54pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-grab-guide.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">A Real S",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-grocery-store-guide.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Match your trip</span>\n    <h2 class=\"bb-se",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-guide-for-australian-travelers.html": {
+   "anchor": "<h2>Hotel Prices in AUD</h2>\n    <p>Approximate hotel price ranges in Australian dollars for 2026. Rates shift with season and booking lead ",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-guide-for-korean-travelers.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Popular ",
+   "placement": "after-50pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-guide-for-singapore-travelers.html": {
+   "anchor": "<h2>Hotel Prices in SGD</h2>\n    <p>Approximate 2026 hotel pricing in Singapore dollars. These are rack rates. Rates are often lower with ad",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-hoi-an-markets-guide.html": {
+   "anchor": "<section class=\"mg-section\" style=\"background:var(--sand-mid);padding-top:0;padding-bottom:clamp(2.5rem,5vw,4rem)\">\n  <div class=\"mg-inner\">\n    <div class=\"bargain-box\">\n      <h3>How to Bargain Without Being Annoying</h3>\n      <p>At souvenir and clothing stalls, bargaining is ",
+   "placement": "after-49pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "da-nang-honeymoon-hotels.html": {
+   "anchor": "<div class=\"page-section\" id=\"hotels\">\n    <h2>The Best Honeymoon Hotels in <em>Da Nang</em></h2>\n\n    <div class=\"hotel-card\">\n      <img c",
+   "placement": "after-23pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotel-prices.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Editoria",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-hotels-connecting-rooms.html": {
+   "anchor": "<div class=\"guide-section\" id=\"alternatives\">\n    <p class=\"pull-quote\">\"A connecting room lets you split into two households for the night ",
+   "placement": "after-66pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-infinity-pool.html": {
+   "anchor": "<div class=\"guide-section\" id=\"elevated-pools\">\n    <p class=\"pull-quote\">\"An infinity pool with an open sea view is one of the defining vis",
+   "placement": "after-57pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-kids-club.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Match your family</span>\n    <h2 class=\"bb-",
+   "placement": "after-51pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-near-airport.html": {
+   "anchor": "<div class=\"guide-section\" id=\"hotels\">\n    <p class=\"pull-quote\">\"Hotels near Da Nang airport earn their keep for short layovers and very e",
+   "placement": "after-43pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-private-beach.html": {
+   "anchor": "<div class=\"guide-section\" id=\"less-direct\">\n    <p class=\"pull-quote\">\"A managed beach section in Da Nang comes down to beds, umbrellas, an",
+   "placement": "after-69pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-private-pool-villa.html": {
+   "anchor": "<div class=\"page-section\" id=\"comparison-table\">\n    <h2><em>Comparison Table</em></h2>\n    <table class=\"cmp-table\">\n      <thead>\n        ",
+   "placement": "after-71pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-rooftop-pool.html": {
+   "anchor": "<section class=\"bb-compare\">\n  <div class=\"bb-compare-inner\">\n    <h2>Quick Comparison</h2>\n    <div class=\"bb-compare-wrap\">\n      <table c",
+   "placement": "after-65pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-spa-packages.html": {
+   "anchor": "<div class=\"guide-section\" id=\"resort-spa\">\n    <p class=\"pull-quote\">\"Da Nang spa packages at 5-star resorts cost 60–80% less than equivale",
+   "placement": "after-48pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-hotels-with-lazy-river.html": {
+   "anchor": "<div class=\"guide-section\" id=\"seasonal\">\n    <p class=\"pull-quote\">\"A lazy river sounds like a minor amenity until you're actually floating",
+   "placement": "after-82pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-itinerary.html": {
+   "anchor": "<section class=\"it-day-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"it-day-section-inner\">\n    <span class=\"it-section-label\">",
+   "placement": "after-50pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-malls-guide-ko.html": {
+   "anchor": "<div class=\"mall-card\">\n      <div class=\"mall-card-header\">\n        <div class=\"mall-card-title-wrap\">\n          <div class=\"mall-card-eyebrow\">저가형 하이퍼마켓</div>\n          <h2>Big C Da Nang</h2>\n          <div class=\"mall-card-sub\">257 Hùng Vương, Thanh Khê District · West of city",
+   "placement": "after-48pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-malls-guide.html": {
+   "anchor": "<div class=\"mall-card\">\n      <div class=\"mall-card-header\">\n        <div class=\"mall-card-title-wrap\">\n          <div class=\"mall-card-eyebrow\">Best Grocery &amp; Local Products</div>\n          <h2>Lotte Mart Da Nang</h2>\n          <div class=\"mall-card-sub\">6 Nại Nam, Hoà Cường",
+   "placement": "after-41pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-money-exchange-guide.html": {
+   "anchor": "<div class=\"page-section\" id=\"atms\">\n    <h2>ATMs in Da Nang: <em>Which to Use and Fees</em></h2>\n    <p>ATMs are everywhere in Da Nang: alo",
+   "placement": "after-36pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-nightlife-guide.html": {
+   "anchor": "<section style=\"background:var(--sand)\">\n  <div class=\"bb-finder\" id=\"bbFinder\">\n    <div class=\"bb-finder-header\">\n      <h2 class=\"bb-find",
+   "placement": "after-43pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-quiet-areas-hotels.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">Find Your Quiet Stay</h2>\n  </div>\n  <div class=\"bb-ba",
+   "placement": "after-30pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-riverfront-hotels.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">All Han River Hotels</h2>\n  </div>\n  <div class=\"bb-ba",
+   "placement": "after-20pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-tet-2027-hotels.html": {
+   "anchor": "<div style=\"background:var(--sand);border-radius:16px;padding:1.5rem;margin:1.5rem 0;border-left:4px solid var(--coral);\">\n      <p style=\"font-weight:700;color:var(--ocean);margin:0 0 .4rem;font-size:.93rem;\">★ Best Full-Service Resort: Hyatt Regency Da Nang</p>\n      <p style=\"",
+   "placement": "after-50pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "da-nang-tourist-mistakes.html": {
+   "anchor": "<div class=\"mistake-card\">\n      <div class=\"mistake-header\">\n        <div class=\"mistake-number\">5</div>\n        <div class=\"mistake-title\"",
+   "placement": "after-41pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-transport-guide.html": {
+   "anchor": "<section class=\"tr-compare\">\n  <div class=\"tr-compare-inner\">\n    <span class=\"tr-compare-label\">Side by side</span>\n    <h2>Which transport",
+   "placement": "after-51pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-travel-budget-guide.html": {
+   "anchor": "<div class=\"page-section\" id=\"food\">\n    <h2><em>Food</em> Costs in Da Nang</h2>\n    <p>Food is where Da Nang is genuinely cheap. Even if yo",
+   "placement": "after-35pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-travel-mistakes.html": {
+   "anchor": "<div class=\"bb-mistake-list\">\n\n    <!-- 1 -->\n    <div class=\"bb-mistake\">\n      <div class=\"bb-mistake-img\"><img src=\"images/broll-my-khe-b",
+   "placement": "after-28pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-visa-run-guide.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Two ways to do this</span>\n    <h2 class=\"b",
+   "placement": "after-54pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-vs-bali.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Match by trip type</span>\n    <h2 class=\"bb",
+   "placement": "after-47pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-hanoi.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <div class=\"ci-section\">\n      <div cla",
+   "placement": "after-46pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-ho-chi-minh-city.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <div class=\"ci-section\">\n      <div cla",
+   "placement": "after-45pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-hoi-an.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Match your trip</span>\n    <h2 class=\"bb-se",
+   "placement": "after-51pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-nha-trang.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <div class=\"ci-section\">\n      <div cla",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-phu-quoc.html": {
+   "anchor": "<section class=\"bb-section\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Match your trip</span>\n    <h2 class=\"bb-se",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-vs-phuket.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <div class=\"ci-section\">\n      <div cla",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "da-nang-weather-by-month.html": {
+   "anchor": "<section class=\"wx-section\" style=\"background:var(--sand)\">\n  <div class=\"wx-narrow\">\n    <div class=\"wx-section-label\">Water conditions</di",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-with-kids-guide.html": {
+   "anchor": "<div class=\"bb-section\">\n    <div class=\"bb-section-label\">Age Guide</div>\n    <h2>Best <em>by Age</em></h2>\n  </div>\n\n  <div class=\"bb-age-",
+   "placement": "after-59pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "da-nang-with-teenagers.html": {
+   "anchor": "<section class=\"bb-section\" id=\"active-teens\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-secti",
+   "placement": "after-43pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "dining.html": {
+   "anchor": "<section class=\"drf-editorial\">\n  <div class=\"drf-editorial-inner\">\n    <h2 class=\"drf-ed-h2\">About the 2026 <em>Michelin Guide</em> in Da N",
+   "placement": "after-47pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "dragon-bridge-da-nang.html": {
+   "anchor": "<h2 id=\"night-market\">The Market and What's Around the Area</h2>\n\n    <p>Directly across on the <a href=\"son-tra-peninsula-da-nang.html\">Son",
+   "placement": "after-57pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "family-hotels-da-nang.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">All Da Nang Family Hotels</h2>\n  </div>\n  <div class=\"",
+   "placement": "after-17pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "four-points-sheraton-da-nang.html": {
+   "anchor": "<section class=\"ret-section\">\n  <div class=\"ret-col\">\n    <span class=\"ret-kicker\">Beach, Pool &amp; Location</span>\n    <h2 class=\"ret-h2\">",
+   "placement": "after-44pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "four-points-vs-novotel-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Views</div>\n      <div class=\"hvh-photo-compare-grid\">\n      ",
+   "placement": "after-45pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "furama-resort-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-46pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "furama-vs-pullman-da-nang.html": {
+   "anchor": "<span class=\"hvh-eyebrow\">Which Should You Book</span>\n    <h2 class=\"hvh-h2\">Match it to your <em>trip</em></h2>\n    <div class=\"hvh-book-c",
+   "placement": "after-58pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "fusion-suites-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-45pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "grand-mercure-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-48pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "han-river-night-cruise-da-nang.html": {
+   "anchor": "<h2 id=\"buying-tickets\">Where to Buy Tickets</h2>\n\n    <p>There is no centralised ticketing system for Han River cruises, each operator sell",
+   "placement": "after-44pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "hilton-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-43pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "hoi-an-old-town-hotels.html": {
+   "anchor": "<section style=\"background:var(--sand)\" id=\"hotels\">\n  <div class=\"bb-finder\" id=\"bbFinder\">\n    <div class=\"bb-finder-header\">\n      <h2 cl",
+   "placement": "after-66pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "hoi-an.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\" id=\"areas\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-labe",
+   "placement": "after-42pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "how-many-days-in-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"five-days\">\n    <h2>5 Days in <em>Da Nang</em></h2>\n    <div class=\"duration-card\">\n      <div class=\"duration",
+   "placement": "after-41pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "how-to-live-in-da-nang-under-1000-a-month.html": {
+   "anchor": "<h2 id=\"transport\">Getting Around: Grab vs Scooter vs Walking</h2>\n\n    <p>Transport is the cost that sneaks up on people. The decision of w",
+   "placement": "after-44pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "hyatt-regency-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div>\n        ",
+   "placement": "after-43pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "hyatt-regency-vs-furama-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Pools</div>\n      <div class=\"hvh-photo-compare-grid\">\n      ",
+   "placement": "after-38pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "hyatt-regency-vs-sheraton-grand-da-nang.html": {
+   "anchor": "<span class=\"hvh-eyebrow\">Which Should You Book</span>\n    <h2 class=\"hvh-h2\">Match it to your <em>trip</em></h2>\n    <div class=\"hvh-book-c",
+   "placement": "after-59pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "hyatt-vs-marriott-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <h3 class=\"hvh-photo-compare-label\">The Beach &amp; Grounds</h3>\n      <div class=\"hvh-photo-compare-g",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "intercontinental-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-42pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "intercontinental-vs-furama-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <h3 class=\"hvh-photo-compare-label\">InterContinental, Up Close</h3>\n      <div class=\"hvh-photo-compar",
+   "placement": "after-45pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "intercontinental-vs-hyatt-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <h3 class=\"hvh-photo-compare-label\">The Beach</h3>\n      <div class=\"hvh-photo-compare-grid\">\n        ",
+   "placement": "after-42pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "intercontinental-vs-pullman-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <h3 class=\"hvh-photo-compare-label\">InterContinental, Up Close</h3>\n      <div class=\"hvh-photo-compar",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "is-da-nang-walkable.html": {
+   "anchor": "<div class=\"bb-section\">\n    <div class=\"bb-section-label\">Common Questions</div>\n    <h2>Can I Walk <em>There?</em></h2>\n  </div>\n\n  <div c",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "is-hoi-an-cheaper-than-da-nang.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">Food &am",
+   "placement": "after-37pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "kr/best-areas-for-korean-families.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">유모차 이동 현실</h2>\n\n  <div class=\"reality-box\">\n    <div class=\"reality-box-title\">현지 현실 (Loca",
+   "placement": "after-45pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-areas-to-stay-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2>성수기 vs 비수기 지역 선택 전략</h2>\n\n    <table class=\"season-table\">\n      <thead>\n        <tr>\n          <th>시기</th>\n  ",
+   "placement": "after-64pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-budget-hotels-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2>이런 패턴으로 실망하는 경우가 많습니다</h2>\n    <p>후기가 좋아도 실망하는 경우가 있어요. 미리 알고 가면 피할 수 있습니다.</p>\n\n    <div class=\"warning-box\">",
+   "placement": "after-62pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-cafes-popular-with-korean-travelers.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">안트엉 거리 카페 클러스터</h2>\n\n  <p style=\"font-size:.92rem;color:var(--text-muted);line-height:1.75",
+   "placement": "after-53pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-hotels-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2 class=\"section-title\">4성급 · 중간 가격대</h2>\n    <p class=\"section-sub\">$80~150/박 구간. 시설과 위치를 모두 챙기고 싶은 여행자에게 적합합니다",
+   "placement": "after-60pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-hotels-near-dragon-bridge.html": {
+   "anchor": "<div class=\"section\">\n    <h2>솔직한 선택 가이드 — 용다리 호텔이 꼭 필요한가요?</h2>\n    <p>용다리 불쇼는 분명 매력적인 볼거리입니다. 하지만 다낭 여행의 핵심이 해변이라면, 미케 비치에 숙소를 두고 불쇼 날 그랩으",
+   "placement": "after-57pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-hotels-near-korean-restaurants.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">한식당 접근성 기준 호텔 추천</h2>\n  <p class=\"section-sub\">An Thuong 한식 거리까지의 실제 거리와 이동 방법 기준으로 정리합니다.",
+   "placement": "after-33pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-hotels-near-my-khe-beach.html": {
+   "anchor": "<div class=\"section\">\n    <h2>미케 비치 수영 실용 가이드</h2>\n\n    <h3>시간대별 추천</h3>\n    <div class=\"swim-times\">\n      <div class=\"swim-time\">\n        ",
+   "placement": "after-70pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-korean-bbq-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">식당 유형별 추천</h2>\n\n  <div class=\"area-section\">\n    <div class=\"area-tag\">가족형</div>\n    <div ",
+   "placement": "after-45pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/best-shopping-for-korean-tourists.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">진짜 살 만한 것 vs 피해야 할 것</h2>\n  <p class=\"section-sub\">다낭에서 쇼핑할 때 현실적인 기준.</p>\n\n  <div class=\"",
+   "placement": "after-42pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/boutique-hotels-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2 class=\"section-title\">자주 묻는 질문</h2>\n    <div class=\"faq-list\">\n      <div class=\"faq-item\">\n        <div class",
+   "placement": "after-80pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/da-nang-beach-hotels.html": {
+   "anchor": "<div class=\"section\">\n    <h2 class=\"section-title\">자주 묻는 질문</h2>\n    <div class=\"faq-list\">\n      <div class=\"faq-item\">\n        <div class",
+   "placement": "after-81pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/da-nang-vs-hoi-an.html": {
+   "anchor": "<div class=\"section\">\n    <h2>자주 묻는 질문</h2>\n    <div class=\"faq-section\">\n\n      <div class=\"faq-item\">\n        <button class=\"faq-question\"",
+   "placement": "after-70pct",
+   "type": "comparison",
+   "lang": "ko"
+  },
+  "kr/family-hotels-da-nang.html": {
+   "anchor": "<div class=\"info-box\">\n    <div class=\"info-box-title\">가족 여행 실용 팁</div>\n    <p><strong>그랩 앱:</strong> 다낭에서 유모차를 포함한 짐이 많은 가족은 그랩 택시(GrabCar)",
+   "placement": "after-71pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/korean-convenience-store-guide-da-nang.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">베트남 편의점에서 꼭 먹어봐야 할 로컬 아이템</h2>\n  <p class=\"section-sub\">한국에서 구하기 어려운 베트남 편의점 명품 목록.</p>\n\n ",
+   "placement": "after-49pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/korean-friendly-resorts-da-nang.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">자주 묻는 질문</h2>\n  <div class=\"faq-list\">\n    <div class=\"faq-item\">\n      <div class=\"faq-q\"",
+   "placement": "after-82pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/luxury-hotels-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2 class=\"section-title\">자주 묻는 질문</h2>\n    <div class=\"faq-list\">\n      <div class=\"faq-item\">\n        <div class",
+   "placement": "after-84pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/olive-young-alternatives-da-nang.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">다낭에서 살 만한 것 vs 한국에서 가져와야 할 것</h2>\n  <p class=\"section-sub\">뷰티 제품 기준, 현지 구매가 유리한 것과 그렇지 않은 ",
+   "placement": "after-40pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/where-koreans-stay-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">DIFF 불꽃 축제 기간 주의사항</h2>\n\n  <div class=\"info-box\">\n    <div class=\"info-box-title\">DIFF (다낭",
+   "placement": "after-52pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/where-to-stay-in-da-nang.html": {
+   "anchor": "<div class=\"section\">\n    <h2>여행 목적별 빠른 선택 가이드</h2>\n\n    <table class=\"decision-table\">\n      <thead>\n        <tr>\n          <th>여행 목적</th>\n",
+   "placement": "after-73pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "kr/why-koreans-love-my-khe-beach.html": {
+   "anchor": "<div class=\"section\">\n  <h2 class=\"section-title\">야간 분위기 vs 리조트 고립감</h2>\n\n  <p style=\"font-size:.92rem;color:var(--text-muted);line-height:1",
+   "placement": "after-42pct",
+   "type": "korean-article",
+   "lang": "ko"
+  },
+  "luxury-hotels-da-nang.html": {
+   "anchor": "<div class=\"bb-finder\">\n  <div class=\"bb-finder-header\">\n    <h2 class=\"bb-finder-h2\">All Da Nang Luxury Hotels</h2>\n  </div>\n  <div class=\"",
+   "placement": "after-17pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "mandila-beach-vs-stella-maris-da-nang.html": {
+   "anchor": "<div class=\"hvh-scorecard-cards\">\n      <div class=\"hvh-scorecard-card\">\n        <p class=\"hvh-scorecard-card-cat\">Pool</p>\n        <div cla",
+   "placement": "after-40pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "marble-mountains-da-nang.html": {
+   "anchor": "<h2>Recommended Route</h2>\n    <p>Follow this sequence to see everything in the right order, avoiding backtracking and hitting Huyen Khong C",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "marriott-resort-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div>\n        ",
+   "placement": "after-43pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "marriott-vs-intercontinental-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Grounds</div>\n      <div class=\"hvh-photo-compare-grid\">\n    ",
+   "placement": "after-47pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "marriott-vs-sheraton-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>photo</em> comparison</h2>\n\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Pr",
+   "placement": "after-39pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "melia-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-43pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "melia-vinpearl-da-nang.html": {
+   "anchor": "<section class=\"hr-section\">\n  <div class=\"hr-section-inner hr-split-text-only\">\n    <span class=\"hr-label\">Pool + Beach</span>\n    <h2 clas",
+   "placement": "after-43pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "melia-vs-hyatt-regency-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>photo</em> comparison</h2>\n\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Pr",
+   "placement": "after-39pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "melia-vs-radisson-blu-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Properties</div>\n      <div class=\"hvh-photo-compare-grid\">\n ",
+   "placement": "after-38pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "mikazuki-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "muong-thanh-luxury-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-48pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "my-khe-beach-da-nang.html": {
+   "anchor": "<section class=\"mk-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"mk-section-inner\">\n    <p class=\"mk-section-label\">Transport</",
+   "placement": "after-43pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "naman-retreat-da-nang.html": {
+   "anchor": "<section class=\"hr-section\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr-split-img\"><img src=\"images/hotels/naman-retreat-main-pool.jpg\" alt=\"Naman Retreat's long infinity pool lined with palms, running toward the ocean\" width=\"1536\" height=\"1",
+   "placement": "after-45pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "non-nuoc-beach-da-nang.html": {
+   "anchor": "<section class=\"bb-section\" style=\"background:var(--sand-mid)\">\n  <div class=\"bb-section-inner\">\n    <span class=\"bb-section-label\">For the ",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "novotel-da-nang-han-river.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "novotel-vs-hilton-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>photo</em> comparison</h2>\n\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-label\">The Pr",
+   "placement": "after-41pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "premier-village-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div>\n        ",
+   "placement": "after-41pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "premier-village-vs-sheraton-grand-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>Property</em></h2>\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div cl",
+   "placement": "after-44pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "pullman-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-46pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "pullman-vs-hyatt-regency-da-nang.html": {
+   "anchor": "<div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div class=\"hvh-photo-compare-item\">\n          <img src=\"images/review-pullman-da-nang-exterior.jpg\" alt=\"Pullman Danang Beach Resort exterior view\">\n          <span class=\"hvh-photo-compare-tag\">P",
+   "placement": "after-42pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "pullman-vs-sheraton-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>Property</em></h2>\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div cl",
+   "placement": "after-42pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "radisson-blu-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "rainy-season-da-nang-guide.html": {
+   "anchor": "<div class=\"page-section\" id=\"what-you-can-do\">\n    <h2>What You <em>Can and Cannot</em> Do in Rainy Season</h2>\n\n    <h3>What Is Still Poss",
+   "placement": "after-42pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "sheraton-grand-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div>\n        ",
+   "placement": "after-41pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "sheraton-vs-hyatt-regency-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>Property</em></h2>\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div cl",
+   "placement": "after-42pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "son-tra-peninsula-da-nang.html": {
+   "anchor": "<h2>Red-shanked Douc Langurs: How to See Them</h2>\n    <p>The Red-shanked Douc langur (Pygathrix nemaeus) is one of the world's most strikin",
+   "placement": "after-48pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "things-to-do-in-da-nang.html": {
+   "anchor": "<section class=\"td-night\">\n  <div class=\"td-night-inner\">\n    <div>\n      <span class=\"td-night-label\">After dark</span>\n      <h2>Best Thin",
+   "placement": "after-56pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "tia-wellness-resort-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div>\n        ",
+   "placement": "after-46pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "tia-wellness-vs-naman-retreat-da-nang.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>Property</em></h2>\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div cl",
+   "placement": "after-45pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "tms-hotel-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-46pct",
+   "type": "hotel-review",
+   "lang": "en"
+  },
+  "tms-hotel-vs-sala-danang-beach.html": {
+   "anchor": "<h2 class=\"hvh-h2\">The <em>Property</em></h2>\n    <div class=\"hvh-photo-compare\">\n      <div class=\"hvh-photo-compare-grid\">\n        <div cl",
+   "placement": "after-45pct",
+   "type": "comparison",
+   "lang": "en"
+  },
+  "what-to-pack-for-da-nang.html": {
+   "anchor": "<div class=\"page-section\" id=\"electronics\">\n    <h2><em>Electronics</em> and Power Adapters</h2>\n\n    <h3>Power Plugs</h3>\n    <p>Vietnam of",
+   "placement": "after-44pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "where-to-stay-in-da-nang.html": {
+   "anchor": "<section class=\"ws-section\" style=\"background:var(--sand)\">\n  <div class=\"ws-section-inner\">\n    <span class=\"ws-section-eyebrow\" id=\"hotels",
+   "placement": "after-40pct",
+   "type": "hotel-list",
+   "lang": "en"
+  },
+  "where-to-stay-in-hoi-an.html": {
+   "anchor": "<section class=\"bb-hoiana\" id=\"hoiana\">\n  <div class=\"bb-hoiana-inner\">\n    <p class=\"bb-hoiana-label\">Duy Hai &middot; 10km south of Hoi An",
+   "placement": "after-47pct",
+   "type": "hoi-an",
+   "lang": "en"
+  },
+  "worst-time-to-visit-da-nang.html": {
+   "anchor": "<h2>If You Have to Visit in Bad-Weather Months</h2>\n    <p>Sometimes dates are fixed. Here's how to make it work:</p>\n    <ul>\n      <li><st",
+   "placement": "after-45pct",
+   "type": "guide",
+   "lang": "en"
+  },
+  "wyndham-soleil-da-nang.html": {
+   "anchor": "<section class=\"hr-section\" style=\"background:var(--sand)\">\n  <div class=\"hr-section-inner\">\n    <div class=\"hr-split\">\n      <div class=\"hr",
+   "placement": "after-47pct",
+   "type": "hotel-review",
+   "lang": "en"
+  }
+ },
+ "excluded": {
+  "about.html": "about / trust page",
+  "airbnb.html": "short page (2097 characters of text)",
+  "an-bang-beach-hotels.html": "short page (2297 characters of text)",
+  "azura-da-nang.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":580,\"h\":90,\"ovf\":0,\"bandW\":580,\"bad\":false}@1024",
+  "best-hotels-in-hoi-an.html": "short page (1920 characters of text)",
+  "best-value-hotels-hoi-an.html": "short page (2375 characters of text)",
+  "contact.html": "short utility page",
+  "da-nang-digital-nomad-forbes-2026.html": "short page (2376 characters of text)",
+  "da-nang-digital-nomad-guide.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":704,\"h\":90,\"ovf\":0,\"bandW\":704,\"bad\":false}@1024",
+  "da-nang-eco-city-merger-2050.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":728,\"h\":90,\"ovf\":215,\"bandW\":728,\"bad\":false}@1024",
+  "da-nang-fireworks-festival-diff-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "da-nang-guide-for-russian-travelers.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":628,\"h\":90,\"ovf\":0,\"bandW\":628,\"bad\":false}@1024",
+  "da-nang-hotel-directory.html": "interactive directory (tables, filters, many booking buttons)",
+  "da-nang-hotel-prices-by-month.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":720,\"h\":90,\"ovf\":0,\"bandW\":720,\"bad\":false}@1024",
+  "da-nang-hotels-map.html": "interactive map with booking popups",
+  "da-nang-international-tourism-growth-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "da-nang-national-day-celebration-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "da-nang-russia-cis-air-links-2026.html": "no natural boundary between top-level sections",
+  "da-nang-time-converter.html": "tool page",
+  "da-nang-urban-railway-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":728,\"h\":90,\"ovf\":215,\"bandW\":728,\"bad\":false}@1024",
+  "da-nang-videos.html": "video page",
+  "da-nang-vladivostok-flight-russian-tourism-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "editorial-policy.html": "policy page",
+  "guides.html": "hub / index page",
+  "hoi-an-da-nang-travel-leisure-hidden-gems-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":728,\"h\":90,\"ovf\":215,\"bandW\":728,\"bad\":false}@1024",
+  "hoi-an-first-time-visitors.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":728,\"h\":90,\"ovf\":84,\"bandW\":728,\"bad\":false}@1024",
+  "hotel-review-methodology.html": "methodology page",
+  "hotel-reviews.html": "hub / index page",
+  "index.html": "homepage: the Trip.com search box is already there and would compete with a banner",
+  "kr/index.html": "Korean homepage / hub",
+  "living-in-da-nang-expat-guide.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":720,\"h\":90,\"ovf\":0,\"bandW\":720,\"bad\":false}@1024",
+  "nhaan-resort-hoi-an-hilton-tapestry-opens-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "privacy.html": "legal page",
+  "search.html": "search utility",
+  "silk-path-grand-da-nang.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":580,\"h\":90,\"ovf\":0,\"bandW\":580,\"bad\":false}@1024",
+  "terms.html": "legal page",
+  "vietnam-high-tech-economy-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":688,\"h\":90,\"ovf\":0,\"bandW\":688,\"bad\":false}@1280",
+  "vietnam-tourism-boom-record-growth-2026.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":728,\"h\":90,\"ovf\":215,\"bandW\":728,\"bad\":false}@1024",
+  "vinpearl-luxury-da-nang.html": "no candidate position where a 728px band fits at 1024 and 1280 px wide {\"shown\":true,\"w\":580,\"h\":90,\"ovf\":0,\"bandW\":580,\"bad\":false}@1024",
+  "why-trust-us.html": "trust page"
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "_enabled_note": "false + `node scripts/banners/install-banners.js` removes every banner from the pages. For an INSTANT switch-off without touching pages, set --dn-adband-display to none in dn-design.css (one line): the bands are hidden and the loader never contacts Trip.com.",
+  "banner": "data/tripcom/dynamic-banner.json",
+  "max_per_page": 1,
+  "pinned": { "best-hotels-in-da-nang.html": "original experiment placement (kept exactly where it is)" },
+  "exclude_pages": {
+    "index.html": "homepage: the Trip.com search box is already there and would compete with a banner",
+    "kr/index.html": "Korean homepage / hub",
+    "privacy.html": "legal page", "terms.html": "legal page", "about.html": "about / trust page", "contact.html": "short utility page",
+    "editorial-policy.html": "policy page", "why-trust-us.html": "trust page", "hotel-review-methodology.html": "methodology page",
+    "search.html": "search utility", "guides.html": "hub / index page", "hotels.html": "hub / index page", "hotel-reviews.html": "hub / index page",
+    "da-nang-hotel-directory.html": "interactive directory (tables, filters, many booking buttons)", "da-nang-hotels-map.html": "interactive map with booking popups",
+    "da-nang-videos.html": "video page", "da-nang-time-converter.html": "tool page"
+  }
+}

@@ -422,7 +422,17 @@ html body :is(.comp-table,.comp-table th:first-child,.comp-table td:first-child,
     </div>
   </div>
 
-  <div class="section">
+  
+
+<!-- TRIP.COM DYNAMIC BANNER -->
+<aside class="dn-adband" aria-label="광고">
+  <p class="dn-adband__label">광고 &middot; Trip.com 제휴 상품</p>
+  <div class="dn-adbox" data-banner="DB20401215" data-placement="after-70pct" data-page-type="comparison"><div class="dn-adbox__ph"><p class="dn-adbox__t">Trip.com 호텔 특가</p><p class="dn-adbox__n">Trip.com 배너를 불러옵니다. Trip.com이 쿠키를 설정할 수 있습니다.</p><button type="button" class="dn-adbox__go">호텔 특가 보기</button></div><template><iframe border="0" src="https://www.trip.com/partners/ad/DB20401215?Allianceid=11013066&SID=333523744&trip_sub1=" style="width:728px;height:90px;border:none" frameborder="0" scrolling="no" id="DB20401215" title="Trip.com hotel offers (advertisement)"></iframe></template></div>
+  <p class="dn-adband__note">유료 제휴 광고입니다. Trip.com을 통해 예약하시면 당사가 수수료를 받을 수 있으며, 호텔 순위에는 영향을 주지 않습니다.</p>
+</aside>
+<!-- /TRIP.COM DYNAMIC BANNER -->
+
+<div class="section">
     <h2>자주 묻는 질문</h2>
     <div class="faq-section">
 
@@ -515,6 +525,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 </script>
 <script src="../tripcom-cta.js" defer></script>
 <script src="../dn.js" defer></script>
+<script src="../dn-banner.js" defer></script>
 <script src="../dn-consent.js" defer></script>
 </body>
 </html>
