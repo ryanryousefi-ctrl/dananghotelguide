@@ -54,7 +54,8 @@ function resolved(entry, seen = new Set()) {
 }
 
 // ── Static checks ───────────────────────────────────────────────────────────
-const pages = servedPages(DIR);
+const only = args.includes('--pages') ? args[args.indexOf('--pages') + 1].split(',') : null;
+const pages = only || servedPages(DIR);
 const decode = s => s.replace(/&amp;/g, '&');
 const editorial = [];
 const registryUrls = new Set(reg.entries.map(e => e.affiliate_url).filter(Boolean));
@@ -209,10 +210,10 @@ async function browserChecks() {
       for (const page of pages) {
         const p = await ctx.newPage(); const errs = [];
         p.on('pageerror', e => errs.push(e.message));
-        await p.goto(base + page, { waitUntil: 'load' }).catch(() => {});
+        await p.goto(base + page, { waitUntil: 'load', timeout: 20000 }).catch(() => {});
         await p.waitForTimeout(250);
         if (page === 'da-nang-hotels-map.html') await p.locator('.dhm-marker-hotel').first().click({ force: true, timeout: 4000 }).catch(() => fail('map-popup', `${dev}: could not open a hotel popup`));
-        if (dev === 'mobile') await p.locator('.nav-hamburger').first().click({ timeout: 2000 }).catch(() => {});
+        if (dev === 'mobile') await p.locator('#navHamburger, .nav-hamburger').first().click({ timeout: 2000 }).catch(() => {});
         // Move the pointer off any button so hover transitions don't skew colours.
         await p.mouse.move(0, 0).catch(() => {});
         await p.waitForTimeout(450);
