@@ -155,3 +155,7 @@
 @media (max-width: 980px) {
   .dh-c--lead::after, .dh-c--a::after, .dh-c--b::after { background: linear-gradient(to top, rgba(17,17,17,.9) 0%, rgba(17,17,17,.62) 48%, rgba(17,17,17,.12) 100%); }
 }
+
+/* official Trip.com search box (fixed 320x320 by Trip.com's embed code; space reserved so nothing shifts) */
+.dh-sbox { width: 320px; max-width: 100%; min-height: 320px; background: rgba(255,255,255,.06); }
+.dh-sbox iframe { display: block; max-width: 100%; }

@@ -303,6 +303,19 @@ function applyEditorial(src, page) {
   });
   return out;
 }
+// Official Trip.com Search Box (data/tripcom/search-box.json): the exact embed code from the Affiliate Platform, kept
+// inert inside a <template> and inserted by dn-home.js only when the section nears the viewport (no third-party load at first paint).
+// The booking-band button stays as the no-JavaScript fallback.
+function injectSearchBox(src, report) {
+  const f = path.join(ROOT, 'data', 'tripcom', 'search-box.json');
+  if (!fs.existsSync(f) || PILOT) return src;
+  const sb = JSON.parse(fs.readFileSync(f, 'utf8'));
+  if (sb.sha256 !== sha256(sb.embed_code) || !/Allianceid=11013066&SID=333523744/.test(sb.embed_code)) { report.unresolved.push('search-box.json: checksum or identifiers do not match'); return src; }
+  const re = /(<div class="dh-book__act">\s*)(<a [^>]*data-cta-location="home_book_band"[^>]*>[\s\S]*?<\/a>)/;
+  if (!re.test(src)) { report.searchBox = 'not injected (booking band not found)'; return src; }
+  report.searchBox = 'injected';
+  return src.replace(re, (m, a, btn) => `${a}<div class="dh-sbox" id="dhSbox" aria-label="Search hotels on Trip.com"><template>${sb.embed_code}</template></div><noscript>${btn}</noscript>`);
+}
 function transformPage(page, src, report) {
   const links = findCjLinks(src).sort((a, b) => b.index - a.index); // back to front
   let out = src;
@@ -343,6 +356,7 @@ function transformPage(page, src, report) {
   out = rewriteDisclosures(out, report);
   out = rewriteJsonLd(out, report);
   out = rewriteIncludes(out, page);
+  if (page === 'index.html') out = injectSearchBox(out, report);
   out = applyEditorial(out, page);
   const visible = out.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g, ' ');
   report.editorialMentions += (visible.match(/Booking\.com/g) || []).length;

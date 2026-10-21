@@ -73,3 +73,11 @@
   if (document.readyState === 'complete') warm(); else window.addEventListener('load', function () { setTimeout(warm, 3000); });
   tick();
 })();
+
+/* Official Trip.com Search Box: the untouched embed code sits in a <template> and is inserted when the section is near the viewport. */
+(function () {
+  var box = document.getElementById('dhSbox'); if (!box) return;
+  var t = box.querySelector('template'); if (!t) return;
+  function load() { if (box.getAttribute('data-loaded')) return; box.setAttribute('data-loaded', '1'); box.appendChild(t.content.cloneNode(true)); }
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (e, o) { if (e[0].isIntersecting) { load(); o.disconnect(); } }, { rootMargin: '300px' }).observe(box); else load();
+})();

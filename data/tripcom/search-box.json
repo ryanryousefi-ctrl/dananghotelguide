@@ -1,0 +1,11 @@
+{
+ "purpose": "Official Trip.com Search Box (hotels, Da Nang, English), copied exactly from the Affiliate Platform (Affiliate Tools > Search Box > Save and Generate Code). Must not be edited.",
+ "generated_on": "2026-10-21",
+ "generation_method": "dashboard-automation (owner-authenticated session)",
+ "alliance_id": "11013066",
+ "site_id": "333523744",
+ "banner_id": "S20398814",
+ "embed_code": "<iframe border=\"0\" src=\"https://www.trip.com/partners/ad/S20398814?Allianceid=11013066&SID=333523744&trip_sub1=\" style=\"width:320px;height:320px\" frameborder=\"0\" scrolling=\"no\" style=\"border:none\" id=\"S20398814\"></iframe>",
+ "sha256": "2bcd5f1e5b2aab682775e69c12cebb7d04532521074aa9ee84c40c8a48797239",
+ "note": "Saved in the account under Affiliate Tools > Search Box > My Website (can be deleted there). Defaults chosen: layout/theme/size as proposed by the tool (320x320)."
+}
