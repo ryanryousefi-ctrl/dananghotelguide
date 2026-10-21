@@ -58,7 +58,7 @@ const only = args.includes('--pages') ? args[args.indexOf('--pages') + 1].split(
 const pages = only || servedPages(DIR);
 const decode = s => s.replace(/&amp;/g, '&');
 const editorial = [];
-const SB = (() => { try { const m = JSON.parse(fs.readFileSync(path.join(DIR, 'data/tripcom/search-box.json'), 'utf8')).embed_code.match(/src="([^"]+)"/); return m ? m[1] : null; } catch (e) { return null; } })();   // the official search-box iframe URL
+const EMBED_SRCS = ['search-box.json', 'dynamic-banner.json'].map(f => { try { const m = JSON.parse(fs.readFileSync(path.join(DIR, 'data/tripcom', f), 'utf8')).embed_code.match(/src="([^"]+)"/); return m ? m[1] : null; } catch (e) { return null; } }).filter(Boolean);   // official iframe URLs (search box, dynamic banner)
 const registryUrls = new Set(reg.entries.map(e => e.affiliate_url).filter(Boolean));
 let tripLinks = 0;
 
@@ -90,7 +90,7 @@ for (const page of pages) {
   // 2. Every Trip.com URL (attribute or script string)
   const urls = [...src.matchAll(/https:\/\/(?:[a-z0-9-]+\.)*trip\.com\/[^"'\s<>\\)]*/g)].map(m => decode(m[0]));
   for (const u of urls) {
-    if (/\/assets\/|tripcdn/.test(u) || (SB && u === SB)) continue;
+    if (/\/assets\/|tripcdn/.test(u) || EMBED_SRCS.includes(u)) continue;
     if (!/trip\.com\/hotels\//.test(u) && !/allianceid=/i.test(u)) { warn('editorial-link', `${page}: non-hotel Trip.com link left as editorial: ${u.slice(0, 80)}`); continue; }
     tripLinks++;
     const problems = affiliateUrlProblems(u);
@@ -186,6 +186,17 @@ if (CUTOVER && !PREVIEW && !PILOT && fs.existsSync(path.join(DIR, 'data/tripcom/
   if (sb.sha256 !== sha256(sb.embed_code)) fail('search-box', 'search-box.json embed code was modified (SHA-256 mismatch)');
   if (!home.includes(sb.embed_code)) fail('search-box', 'index.html does not contain the exact official embed code');
   if (!/<iframe[^>]+src="https:\/\/www\.trip\.com\/partners\/ad\/[A-Za-z0-9]+\?Allianceid=11013066&SID=333523744/.test(sb.embed_code)) fail('search-box', 'embed code does not carry the account identifiers');
+}
+if (CUTOVER && !PREVIEW && !PILOT && fs.existsSync(path.join(DIR, 'data/tripcom/dynamic-banner.json'))) {
+  const db = JSON.parse(fs.readFileSync(path.join(DIR, 'data/tripcom/dynamic-banner.json'), 'utf8'));
+  if (db.sha256 !== sha256(db.embed_code)) fail('dynamic-banner', 'dynamic-banner.json embed code was modified (SHA-256 mismatch)');
+  if (db.source_url_sha256 !== sha256(db.source_url) || !db.embed_code.includes('src="' + db.source_url + '"')) fail('dynamic-banner', 'banner URL is not the exact recorded dashboard URL');
+  if (!/Allianceid=11013066&SID=333523744/.test(db.source_url)) fail('dynamic-banner', 'banner URL does not carry the account identifiers');
+  for (const pg of pages) {
+    const n = (fs.readFileSync(path.join(DIR, pg), 'utf8').match(/id="DB20401215"/g) || []).length;
+    if (pg === db.page && n !== 1) fail('dynamic-banner', `${pg}: expected exactly one banner, found ${n}`);
+    if (pg !== db.page && n) fail('dynamic-banner', `${pg}: banner present outside its experiment page`);
+  }
 }
 const out = path.join(DIR, 'tripcom-editorial-review.csv');
 if (DIR !== ROOT) fs.writeFileSync(out, 'page,text\n' + editorial.map(r => r.map(c => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n') + '\n');
