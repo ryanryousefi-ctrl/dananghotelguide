@@ -3,6 +3,7 @@
 // facts (nav links per language, the booking-button URL with its CJ sid, the
 // legal/disclosure text) are extracted from each page and passed in.
 'use strict';
+const LOGO = require('../branding/logo-markup');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 const ICON_SEARCH = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>';
 
@@ -21,7 +22,7 @@ function header(nav, lang) {
 <header class="dn-header" id="dnHeader">
   <div class="dn-header__bar">
     <button class="dn-burger" id="navHamburger" type="button" aria-label="${kr ? '메뉴 열기' : 'Open menu'}" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
-    <a class="dn-brand" href="${esc(nav.home)}" aria-label="Da Nang Hotel Guide ${kr ? '홈' : 'home'}"><b>Da Nang <i>Hotel Guide</i></b><small>${kr ? '독립 여행 가이드' : 'Independent · Da Nang &amp; Hoi An'}</small></a>
+    ${LOGO.header(esc(nav.home), `Da Nang Hotel Guide ${kr ? '홈' : 'home'}`, /^\.\.\//.test(nav.home) ? '../' : '')}
     <nav class="dn-nav" aria-label="${kr ? '주 메뉴' : 'Main navigation'}"><ul>${nav.top.map(li).join('')}</ul></nav>
     <div class="dn-header__actions">
       ${nav.search ? `<button class="nav-search-btn dn-iconbtn" id="searchOpenBtn" type="button" aria-label="${kr ? '사이트 검색' : 'Search site'}" aria-expanded="false">${ICON_SEARCH}</button>` : ''}
@@ -64,7 +65,7 @@ function footer({ home, prefix, lang, columns, legalHtml, exists, consent = true
   return `<footer class="dn-footer">
   <div class="dn-footer__top">
     <div class="dn-footer__brand">
-      <a class="dn-brand dn-brand--light" href="${esc(home)}"><b>Da Nang <i>Hotel Guide</i></b><small>${kr ? '독립 여행 가이드' : 'Independent · Da Nang &amp; Hoi An'}</small></a>
+      ${LOGO.footer(esc(home), prefix)}
       <p>${kr ? '다낭과 호이안의 호텔을 직접 확인하고 쓰는 독립 가이드입니다.' : 'Independent hotel and travel advice for Da Nang and Hoi An, written by a local editor. No paid placements.'}</p>
     </div>
     <aside class="shr-bar dn-share" aria-label="${kr ? '이 페이지 공유' : 'Share this page'}"><span class="shr-label">${kr ? '공유' : 'Share'}</span>
