@@ -140,7 +140,7 @@ for (const page of pages) {
     if (/\b(dn-btn--book|tc-btn)\b/.test(cls) && (!href || href === '#')) fail('missing-destination', `${page}: booking button without a destination`);
     if (/^https?:\/\/(bit\.ly|t\.co|tinyurl\.com|goo\.gl|ow\.ly|rebrand\.ly|is\.gd|buff\.ly)\//i.test(href) || /^(\/|https?:\/\/(www\.)?dananghotelguide\.com\/)(go|out|redirect|r|l|aff)\//i.test(href)) fail('unapproved-redirect', `${page}: redirect/shortener link ${href.slice(0, 80)}`);
     if (CUTOVER && !PREVIEW && /^https?:\/\/([a-z0-9-]+\.)*trip\.com\/(?!assets|.*tripcdn)/i.test(href) && !registryUrls.has(href)) {
-      const ed = /\/(partners|help|about|news)\b/i.test(href); if (!ed) fail('unregistered-url', `${page}: Trip.com URL not from the registry: ${href.slice(0, 90)}`);
+      const ed = /\/(partners|help|about|news|travel-guide)\b/i.test(href); if (!ed) fail('unregistered-url', `${page}: Trip.com URL not from the registry: ${href.slice(0, 90)}`);
     }
   }
   // 4. Disclosures: any page with Trip.com links needs a Trip.com disclosure

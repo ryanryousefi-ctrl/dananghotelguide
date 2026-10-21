@@ -289,6 +289,20 @@ function removeAnchor(out, start, end, report, page) {
   return out;
 }
 
+// Editorial and legal wording (scripts/tripcom/editorial.js): exact rules, each with an expected match count per run.
+const EDITORIAL = require('./editorial');
+const editorialHits = new Map();
+function applyEditorial(src, page) {
+  let out = src;
+  EDITORIAL.forEach(([only, re, to], i) => {
+    if (only && only !== page) return;
+    const n = (out.match(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g')) || []).length;
+    if (!n) return;
+    out = out.replace(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g'), to);
+    editorialHits.set(i, (editorialHits.get(i) || 0) + n);
+  });
+  return out;
+}
 function transformPage(page, src, report) {
   const links = findCjLinks(src).sort((a, b) => b.index - a.index); // back to front
   let out = src;
@@ -329,6 +343,7 @@ function transformPage(page, src, report) {
   out = rewriteDisclosures(out, report);
   out = rewriteJsonLd(out, report);
   out = rewriteIncludes(out, page);
+  out = applyEditorial(out, page);
   const visible = out.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>/g, ' ');
   report.editorialMentions += (visible.match(/Booking\.com/g) || []).length;
   return out;
@@ -377,6 +392,9 @@ for (const page of pages) {
 }
 const ctaPath = path.join(outRoot, 'tripcom-cta.js');
 fs.writeFileSync(ctaPath, fs.readFileSync(ctaPath, 'utf8').replace(/\/\*@tripcom-logo\*\/[\s\S]*?\/\*@end-tripcom-logo\*\//, `/*@tripcom-logo*/${useLogo()}/*@end-tripcom-logo*/`));
+const editorialMissing = EDITORIAL.map((r, i) => [r, i]).filter(([r, i]) => (editorialHits.get(i) || 0) < (PILOT && r[0] && !PILOT.pages.includes(r[0]) ? 0 : (PILOT ? 0 : r[3]))).map(([r, i]) => `rule ${i} (${r[0] || 'all pages'}): expected >= ${r[3]}, found ${editorialHits.get(i) || 0}`);
+if (editorialMissing.length) { console.error('Editorial rules out of sync with the pages:\n  ' + editorialMissing.join('\n  ')); process.exitCode = 3; }
+report.editorialRewrites = [...editorialHits.values()].reduce((a, b) => a + b, 0);
 const widgetPath = path.join(outRoot, 'tripcom-widget.js');
 const w = fs.readFileSync(widgetPath, 'utf8');
 if (WIDGET_USED) fs.writeFileSync(widgetPath, w.replace(/\/\*@tripcom-config\*\/[\s\S]*?\/\*@end-tripcom-config\*\//, `/*@tripcom-config*/${widgetConfig()}/*@end-tripcom-config*/`));
