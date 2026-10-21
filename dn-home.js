@@ -73,3 +73,13 @@
   if (document.readyState === 'complete') warm(); else window.addEventListener('load', function () { setTimeout(warm, 3000); });
   tick();
 })();
+
+/* Official Trip.com Search Box: the untouched embed code sits in a <template>. It is inserted only when the visitor clicks
+   "Show the search box", or has already accepted cookies on this site; until then nothing is requested from Trip.com. */
+(function () {
+  var box = document.getElementById('dhSbox'); if (!box) return;
+  var t = box.querySelector('template'), ph = box.querySelector('.dh-sbox__ph'); if (!t) return;
+  function load() { if (box.getAttribute('data-loaded')) return; box.setAttribute('data-loaded', '1'); if (ph) ph.parentNode.removeChild(ph); box.appendChild(t.content.cloneNode(true)); }
+  var go = box.querySelector('.dh-sbox__go'); if (go) go.addEventListener('click', load);
+  try { var c = JSON.parse(localStorage.getItem('dn_consent') || 'null'); if (c && c.v === 'granted') load(); } catch (e) { /* storage blocked: stays click-to-load */ }
+})();

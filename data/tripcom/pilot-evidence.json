@@ -1,0 +1,12 @@
+{
+  "_note": "Fill this in as real evidence arrives. Only genuine visitor bookings count: no self-referrals, no artificial reservations, no repeated test clicks. Keep the originals (screenshots/CSV exports) outside the repo; record what they show.",
+  "pilot_live_from": "",
+  "pilot_live_to": "",
+  "ga4_affiliate_clicks_on_pilot_pages": null,
+  "booking_report_rows": [],
+  "commission_report_rows": [],
+  "_row_examples": {
+    "booking_report_rows": [{ "booking_date": "YYYY-MM-DD", "report_seen_on": "YYYY-MM-DD", "hotel": "", "stay": "YYYY-MM-DD to YYYY-MM-DD", "amount_usd": 0, "order_ref_last4": "", "genuine_customer": true }],
+    "commission_report_rows": [{ "stay_checkout": "YYYY-MM-DD", "report_month": "YYYY-MM", "commission_usd": 0, "matches_booking_row": true }]
+  }
+}

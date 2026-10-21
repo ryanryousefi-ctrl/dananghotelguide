@@ -1,0 +1,17 @@
+{
+  "_note": "Owner-attested. A script cannot see inside the Trip.com account, so every flag starts false. Set true ONLY after checking it yourself in the Partners dashboard, and fill 'evidence' (where you looked / date). Successful login or link generation does not prove commission eligibility.",
+  "expected": { "alliance_id": "11013066", "site_id": "333523744", "site_name": "Da Nang Hotel Guide", "site_url": "https://www.dananghotelguide.com" },
+  "checks": {
+    "account_activated": { "confirmed": false, "evidence": "" },
+    "site_registered_as_intended": { "confirmed": false, "evidence": "Account > Manage My Sites shows the site name and URL above" },
+    "alliance_id_matches": { "confirmed": false, "evidence": "Account > Manage My Sites" },
+    "site_id_matches": { "confirmed": false, "evidence": "Account > Manage My Sites" },
+    "profile_and_payment_details_complete": { "confirmed": false, "evidence": "Account > Bank Details (USD or HKD bank transfer)" },
+    "commission_plan_read": { "confirmed": false, "evidence": "Account > Commission Plan (tiered by monthly confirmed bookings; recorded rate: )" },
+    "publisher_terms_read": { "confirmed": false, "evidence": "Policies / terms accepted at sign-up; note any restrictions on prices, logos, cookies, disclosure" },
+    "regional_domain_answered_by_support": { "confirmed": false, "evidence": "Reply from affiliation@trip.com: www.trip.com vs vn.trip.com for a Vietnam-focused site" },
+    "attribution_window_confirmed_in_writing": { "confirmed": false, "evidence": "30-day website / 7-day app cookie (public pages); confirm app-after-web behaviour" },
+    "date_neutral_links_confirmed_by_support": { "confirmed": false, "evidence": "FAQ says dated links are 'in development'; confirm date-less hotel links are credited normally" },
+    "logo_use_permission": { "confirmed": false, "evidence": "Permission to show the Trip.com wordmark on buttons; official asset" }
+  }
+}

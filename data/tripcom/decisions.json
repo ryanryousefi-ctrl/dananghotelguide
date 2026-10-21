@@ -1,0 +1,204 @@
+{
+ "about": "Owner decisions for the Booking.com to Trip.com migration. build-registry.js merges these over the verified matches. decision: map (own Trip.com link) | fallback (use fallback_key's link, optional relabel) | remove (drop the booking button, keep the content) | hold | investigate (both block cutover). overrides route specific occurrences (page + CJ sid, checked against expect) to another decision or target entry. deferred: true marks buttons removed only until a Trip.com listing is confirmed; to re-add, set decision to map with tripcom_id and remove deferred.",
+ "approved_on": "2026-10-16",
+ "entries": {
+  "hotel:the-tms-hotel": {
+   "decision": "map",
+   "tripcom_id": "24529624",
+   "status": "VERIFIED",
+   "note": "Second Booking slug for TMS Hotel Da Nang Beach (owner approved)."
+  },
+  "hotel:m-hotel-da-nang-beach": {
+   "decision": "map",
+   "tripcom_id": "117011133",
+   "status": "VERIFIED",
+   "note": "Second Booking slug for M Hotel Danang (owner approved)."
+  },
+  "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas": {
+   "decision": "map",
+   "tripcom_id": "993558",
+   "status": "VERIFIED",
+   "note": "Resort references map to 993558 (resort, 7 Truong Sa, rooms/suites/villas). Villa-specific references map to 7362595 (villa compound, 23 Truong Sa, 2-4 bedroom pool villas only), verified on Trip.com 2026-10-16.",
+   "overrides": [
+    {
+     "page": "best-hotels-in-da-nang.html",
+     "sid": "best-hotels-in-da-nang--danang-marriott-resort-spa-non-n",
+     "expect": 1,
+     "target_key": "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas",
+     "why": "\"Check Marriott Villa Prices\"; copy: go here for the villa experience"
+    },
+    {
+     "page": "best-hotels-in-da-nang.html",
+     "sid": "best-hotels-in-da-nang--tt-marriott",
+     "expect": 1,
+     "target_key": "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas",
+     "why": "Copy: private pool beach villas at the right points rate"
+    },
+    {
+     "page": "da-nang-beach-hotels.html",
+     "sid": "da-nang-beach-hotels--danang-marriott-resort-spa",
+     "expect": 1,
+     "target_key": "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas",
+     "why": "Copy: book a villa, not a standard room"
+    },
+    {
+     "page": "non-nuoc-beach-da-nang.html",
+     "sid": "non-nuoc-beach-da-nang--marriott-non-nuoc-villas",
+     "expect": 1,
+     "target_key": "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas",
+     "why": "Copy: the villa product is the reason to pick this one"
+    },
+    {
+     "page": "hoi-an.html",
+     "sid": "hoi-an",
+     "expect": 1,
+     "target_key": "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas",
+     "why": "Card: the luxury villa option, private pools included"
+    }
+   ]
+  },
+  "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas~villas": {
+   "synthetic": true,
+   "name": "Danang Marriott Resort & Spa, Non Nuoc Beach Villas",
+   "location": "Da Nang / Non Nuoc",
+   "decision": "map",
+   "tripcom_id": "7362595",
+   "tripcom_type": "hotel",
+   "tripcom_name": "Danang Marriott Resort & Spa, Non Nuoc Beach Villas",
+   "status": "VERIFIED",
+   "note": "Villa-only listing, used for villa-specific Marriott references only (owner instruction)."
+  },
+  "hotel:sel-de-mer-danang": {
+   "decision": "map",
+   "tripcom_id": "44098117",
+   "status": "VERIFIED",
+   "name": "Prince Hotel Da Nang",
+   "note": "Sel de Mer Hotel & Suites rebranded as Prince Hotel Da Nang, effective 2025-10-01 (owner confirmed). Site name updated."
+  },
+  "hotel:an-bang-seaside-village-hoi-an": {
+   "decision": "remove",
+   "note": "Hold until the Trip.com listing (6394813, Seaside An Bang Homestay) is confirmed as the identical property. Booking button removed for now (owner, 2026-10-16); re-add once confirmed.",
+   "deferred": true,
+   "deferred_from": "hold",
+   "candidate_tripcom": "6394813 (Seaside An Bang Homestay)",
+   "to_readd": "Confirm the Trip.com homestay is the same property as the reviewed An Bang Seaside Village."
+  },
+  "hotel:brown-bean-da-nang": {
+   "decision": "remove",
+   "note": "Owner: remove buttons; do not link to Brown Bean 2."
+  },
+  "hotel:seahorse-tropical-natalie-danang-haviland": {
+   "decision": "map",
+   "tripcom_id": "56856508",
+   "status": "VERIFIED",
+   "note": "Trip.com: Seahorse Natalie Da Nang Hotel By Sujet of Haviland, 29 Yen Bai, Hai Chau. Neighbourhood corrected from An Thuong to Hai Chau."
+  },
+  "hotel:azura-da-nang": {
+   "decision": "remove",
+   "note": "Not on Trip.com as a hotel (only individual apartments in the tower). Buttons removed except on its own review page.",
+   "overrides": [
+    {
+     "page": "azura-da-nang.html",
+     "expect": 3,
+     "decision": "fallback",
+     "fallback_key": "search:Da Nang Municipality, Vietnam|6232|region",
+     "relabel": "Compare Da Nang hotels",
+     "why": "Owner approved a relabelled general search on the review page"
+    }
+   ]
+  },
+  "search:Bali private villa||": {
+   "decision": "map",
+   "status": "VERIFIED",
+   "note": "Generic 'Browse Options' button; Trip.com Bali city list (owner approved)."
+  },
+  "search:Phuket beachfront resort||": {
+   "decision": "map",
+   "status": "VERIFIED",
+   "note": "Generic 'Browse Options' button; Trip.com Phuket city list (owner approved)."
+  },
+  "search:Nha Trang beachfront||": {
+   "decision": "map",
+   "status": "VERIFIED",
+   "note": "Generic 'Browse Options' button; Trip.com Nha Trang city list (owner approved)."
+  },
+  "hotel:grand-sunrise": {
+   "decision": "remove",
+   "editorial_flag": "Listed elsewhere as Hometown Beach Hotel; check the name and that it still operates as described."
+  },
+  "hotel:hoi-an-chic": {
+   "decision": "remove",
+   "editorial_flag": "Trip.com delisted it (old ID 713912 redirects); check it is still operating."
+  },
+  "hotel:orange-da-nang": {
+   "decision": "remove"
+  },
+  "hotel:han-riverine-amp-cafeteria": {
+   "decision": "remove"
+  },
+  "hotel:adamo-danang": {
+   "decision": "remove"
+  },
+  "hotel:daisy-boutique-da-nang": {
+   "decision": "remove"
+  },
+  "search:VNJ Capsule 159 Hoi An||": {
+   "decision": "remove"
+  },
+  "search:VNJ Capsule 216 Hoi An||": {
+   "decision": "remove"
+  },
+  "search:VNJ Capsule Hoi An||": {
+   "decision": "remove"
+  },
+  "search:Cua Dai Beach Hotel Hoi An||": {
+   "decision": "remove"
+  },
+  "search:Rosewood Hoi An||": {
+   "decision": "remove",
+   "editorial_flag": "No evidence Rosewood Hoi An has opened (announced for 2019, then 2024); check the copy does not present it as bookable."
+  },
+  "hotel:silk-path-grand-resort-spa-danang": {
+   "decision": "remove",
+   "editorial_flag": "No evidence this property exists in Da Nang (Silk Path Grand hotels are in Hue and Sapa). The review page may describe a non-existent hotel.",
+   "deferred": true,
+   "deferred_from": "investigate",
+   "candidate_tripcom": "none found",
+   "to_readd": "Confirm the property exists in Da Nang; Silk Path Grand hotels are only known in Hue and Sapa.",
+   "note": "Booking button removed for now (owner, 2026-10-16); re-add once confirmed."
+  },
+  "hotel:marriott-executive-apartments-danang-han-river": {
+   "decision": "remove",
+   "note": "Operating at 58 Bach Dang; no Trip.com listing found yet. Search the Partners dashboard or ask support. Booking button removed for now (owner, 2026-10-16); re-add once confirmed.",
+   "deferred": true,
+   "deferred_from": "investigate",
+   "candidate_tripcom": "none found",
+   "to_readd": "Operating at 58 Bach Dang; search the Trip.com Partners dashboard or ask support for its listing."
+  },
+  "hotel:haian-river-hotel-spa": {
+   "decision": "remove",
+   "editorial_flag": "No property by this name found; may be HAIAN Riverfront (62690509) under an old name. Do not substitute without confirmation.",
+   "deferred": true,
+   "deferred_from": "investigate",
+   "candidate_tripcom": "possibly 62690509 (HAIAN Riverfront)",
+   "to_readd": "Confirm whether this is HAIAN Riverfront under an old name; do not substitute without confirmation.",
+   "note": "Booking button removed for now (owner, 2026-10-16); re-add once confirmed."
+  },
+  "search:Shantira Beach Resort & Spa||": {
+   "decision": "remove",
+   "note": "Now Wyndham Shantira Resort Hoi An; no Trip.com listing found yet. Booking button removed for now (owner, 2026-10-16); re-add once confirmed.",
+   "deferred": true,
+   "deferred_from": "investigate",
+   "candidate_tripcom": "none found",
+   "to_readd": "Now Wyndham Shantira Resort Hoi An; ask Trip.com whether it is listed."
+  },
+  "search:Sunrise Premium Resort Hoi An||": {
+   "decision": "remove",
+   "note": "222-room resort on Cua Dai; no Trip.com listing found yet. Booking button removed for now (owner, 2026-10-16); re-add once confirmed.",
+   "deferred": true,
+   "deferred_from": "investigate",
+   "candidate_tripcom": "none found",
+   "to_readd": "222-room resort on Cua Dai; ask Trip.com whether it is listed."
+  }
+ }
+}

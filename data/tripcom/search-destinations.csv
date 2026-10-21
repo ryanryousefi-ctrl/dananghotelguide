@@ -1,0 +1,25 @@
+booking_search_term,booking_dest_id,booking_dest_type,links,of_which_nav_buttons,pages,sample_pages,tripcom_target_type,tripcom_id,tripcom_destination_unaffiliated,match_status,notes
+"Da Nang Municipality, Vietnam",6232,region,600,364,190,a-la-carte-da-nang.html; a-la-carte-vs-tms-da-nang.html; about.html,city,1356,https://www.trip.com/hotels/list?city=1356,VERIFIED,
+"Hoi An, Vietnam",-3723930,city,24,20,12,an-bang-beach-hotels.html; best-hotels-in-hoi-an.html; best-value-hotels-hoi-an.html,city,1775,https://www.trip.com/hotels/list?city=1775,VERIFIED,
+Da Nang,,,10,10,5,kr/best-hotels-near-korean-restaurants.html; kr/best-shopping-for-korean-tourists.html; kr/index.html,city,1356,https://www.trip.com/hotels/list?city=1356,VERIFIED,
+,12887663,hotel,5,0,3,best-hotels-in-hoi-an.html; hoi-an-old-town-hotels.html; hoi-an.html,hotel,1613763,https://www.trip.com/hotels/detail/?hotelId=1613763,VERIFIED,Hotel Royal Hoi An (Booking dest_id 12887663)
+Shantira Beach Resort & Spa,,,4,0,2,an-bang-beach-hotels.html; hoi-an.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""Shantira Beach Resort & Spa""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+Hoi An,-3723930,city,3,0,1,nhaan-resort-hoi-an-hilton-tapestry-opens-2026.html,city,1775,https://www.trip.com/hotels/list?city=1775,VERIFIED,
+VNJ Capsule 159 Hoi An,,,2,0,1,best-budget-hotels-in-da-nang.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""VNJ Capsule 159 Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+VNJ Capsule 216 Hoi An,,,2,0,1,best-budget-hotels-in-da-nang.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""VNJ Capsule 216 Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+VNJ Capsule Hoi An,,,2,0,1,best-budget-hotels-in-da-nang.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""VNJ Capsule Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+Cua Dai Beach Hotel Hoi An,,,2,0,1,best-budget-hotels-in-da-nang.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""Cua Dai Beach Hotel Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+Hyatt Regency Danang Resort,,,1,0,1,hotel-reviews.html,hotel,713826,https://www.trip.com/hotels/detail/?hotelId=713826,VERIFIED,Hyatt Regency Danang
+Phuket,,,1,0,1,da-nang-vs-phuket.html,city,725,https://www.trip.com/hotels/list?city=725,VERIFIED,
+Phuket beachfront resort,,,1,0,1,da-nang-vs-phuket.html,city,725,https://www.trip.com/hotels/list?city=725,REVIEW_COPY,"Booking free-text search ""Phuket beachfront resort""; Trip.com city list is the closest equivalent"
+Hanoi,,,1,0,1,da-nang-vs-hanoi.html,city,286,https://www.trip.com/hotels/list?city=286,VERIFIED,
+Bali,,,1,0,1,da-nang-vs-bali.html,city,723,https://www.trip.com/hotels/list?city=723,VERIFIED,
+Bali private villa,,,1,0,1,da-nang-vs-bali.html,city,723,https://www.trip.com/hotels/list?city=723,REVIEW_COPY,"Booking free-text search ""Bali private villa""; Trip.com city list is the closest equivalent"
+Rosewood Hoi An,,,1,0,1,where-to-stay-in-hoi-an.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""Rosewood Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+Hong Kong,,,1,0,1,da-nang-visa-run-guide.html,city,58,https://www.trip.com/hotels/list?city=58,VERIFIED,
+Phu Quoc,,,1,0,1,da-nang-vs-phu-quoc.html,city,5649,https://www.trip.com/hotels/list?city=5649,VERIFIED,
+Ho Chi Minh City,,,1,0,1,da-nang-vs-ho-chi-minh-city.html,city,301,https://www.trip.com/hotels/list?city=301,VERIFIED,
+Nha Trang,,,1,0,1,da-nang-vs-nha-trang.html,city,1777,https://www.trip.com/hotels/list?city=1777,VERIFIED,
+Nha Trang beachfront,,,1,0,1,da-nang-vs-nha-trang.html,city,1777,https://www.trip.com/hotels/list?city=1777,REVIEW_COPY,"Booking free-text search ""Nha Trang beachfront""; Trip.com city list is the closest equivalent"
+Sunrise Premium Resort Hoi An,,,1,0,1,hoi-an.html,city,1775,https://www.trip.com/hotels/list?city=1775,NEEDS_MANUAL,"Hotel-name search ""Sunrise Premium Resort Hoi An""; no Trip.com listing found. Fallback: Hoi An city list, or remove the link"
+Hoi An Ancient House Village Resort,,,1,0,1,hoi-an.html,hotel,711831,https://www.trip.com/hotels/detail/?hotelId=711831,VERIFIED,Hoi An Ancient House Resort & Spa

@@ -1,0 +1,17 @@
+{
+  "purpose": "Phase 2: five links to generate FIRST in the Trip.com dashboard and verify by hand before the rest are generated.",
+  "keys": [
+    "search:Da Nang Municipality, Vietnam|6232|region",
+    "search:Hoi An, Vietnam|-3723930|city",
+    "hotel:hyatt-regency-danang-resort-and-spa",
+    "hotel:brilliant",
+    "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas"
+  ],
+  "why": {
+    "search:Da Nang Municipality, Vietnam|6232|region": "City list (Trip.com city 1356). Carries 582 site links incl. the header button on every page: the single most important link.",
+    "search:Hoi An, Vietnam|-3723930|city": "Second city list (Trip.com city 1775, 27 links): confirms the generator handles city lists for both destinations.",
+    "hotel:hyatt-regency-danang-resort-and-spa": "Typical hotel detail page (50 links) and part of the pilot.",
+    "hotel:brilliant": "Name-collision check: must open Brilliant Hotel (713871), NOT Brilliant Majestic (8168671).",
+    "hotel:danang-marriott-resort-spa-non-nuoc-beach-villas": "Open question 9: resort listing 993558 vs villas listing 7362595. Confirm which listing the generator and Trip.com present."
+  }
+}

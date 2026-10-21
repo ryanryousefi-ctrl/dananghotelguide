@@ -35,7 +35,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"다낭에서 아이와 함께 가기 좋은 호텔은 어디인가요?","acceptedAnswer":{"@type":"Answer","text":"워터파크를 원한다면 미카즈키 일본 리조트 앤 스파가 독보적입니다. 워터파크가 리조트에 연결되어 있어 별도 이동 없이 이용 가능합니다. 키즈풀이 있는 대형 리조트를 원한다면 하얏트 리젠시(키즈풀과 어른 풀 분리)나 쉐라톤 그랜드 다낭을 추천합니다. 매리어트 다낭은 가족 패키지가 다양하고 공간이 넓습니다."}},
-{"@type":"Question","name":"다낭 호텔에서 어린이 요금이나 무료 숙박 정책은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"대부분의 다낭 5성급 리조트는 만 12세 이하 어린이를 기존 침대 사용 시 무료로 받습니다. 단, 침대를 추가하거나 별도 객실을 쓰면 차이가 납니다. 가족 여행이라면 '패밀리룸'이나 '코너 스위트'처럼 공간이 넓은 객실 타입을 선택하는 것이 좋습니다. 예약 시 어린이 나이를 정확히 입력하면 Booking.com에서 자동으로 어린이 요금이 반영됩니다."}},
+{"@type":"Question","name":"다낭 호텔에서 어린이 요금이나 무료 숙박 정책은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"대부분의 다낭 5성급 리조트는 만 12세 이하 어린이를 기존 침대 사용 시 무료로 받습니다. 단, 침대를 추가하거나 별도 객실을 쓰면 차이가 납니다. 가족 여행이라면 '패밀리룸'이나 '코너 스위트'처럼 공간이 넓은 객실 타입을 선택하는 것이 좋습니다. 예약 시 어린이 나이를 정확히 입력하면 예약 페이지에서 어린이 요금이 반영됩니다."}},
 {"@type":"Question","name":"다낭 워터파크는 호텔 안에 있나요, 따로 이동해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"일반 5성급 리조트(하얏트, 쉐라톤, 풀만 등)는 워터파크가 없고 키즈풀과 슬라이드 정도만 있습니다. 실내외 워터파크가 연결된 리조트는 미카즈키 일본 리조트 앤 스파가 대표적입니다. 아시아 파크(선월드 다낭) 같은 별도 워터파크는 그랩으로 30~40분 거리이며 추가 입장권이 필요합니다."}}
 ]}
 </script>
@@ -138,6 +138,7 @@ html body :is(.page-hero,
 :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-box,.faq-q) *{--ocean:#333;--ocean-light:#595959;--dn-link:#111}
 html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-box,.faq-q) a.dn-btn:not(.tc-btn){background:#111 !important;color:#fff !important;border-color:#111 !important}
 html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-box,.faq-q) a.dn-btn--ghost:not(.tc-btn){background:transparent !important;color:#111 !important;border-color:#111 !important}</style>
+<link rel="stylesheet" href="../tripcom-cta.css">
 </head>
 <body>
 
@@ -149,7 +150,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
     <nav class="dn-nav" aria-label="주 메뉴"><ul></ul></nav>
     <div class="dn-header__actions">
       
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang&amp;url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Dko" class="nav-stays-btn affiliate-link dn-header__cta" aria-label="Booking.com에서 숙소 검색 (새 탭)" target="_blank" rel="nofollow noopener sponsored"><span class="btn-text">다낭 호텔 검색 →</span></a>
+      <a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="다낭 호텔 검색 on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" class="nav-stays-btn affiliate-link dn-header__cta tc-btn tc-btn--compact" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text"><span class="btn-text">다낭 호텔 검색 →</span></span></a>
     </div>
   </div>
 </header>
@@ -157,7 +158,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
   <div class="dn-menu__inner">
     <a class="dn-menu__link" href="../index.html">홈</a>
     
-    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang&amp;url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Dko" class="mobile-stays-btn affiliate-link dn-menu__cta" target="_blank" rel="nofollow noopener sponsored">다낭 호텔 검색 &rarr;</a>
+    <a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="다낭 호텔 검색 on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" class="mobile-stays-btn affiliate-link dn-menu__cta tc-btn tc-btn--block" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">다낭 호텔 검색 &rarr;</span></a>
     <p class="dn-menu__social"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
   </div>
 </div>
@@ -205,7 +206,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <p class="hotel-desc">하얏트는 키즈풀, 어른 풀, 인피니티 풀이 각각 분리되어 있어 아이와 어른 모두 만족하기 좋습니다. 키즈풀 구역에는 슬라이드와 얕은 수영 구역이 있고, 전담 직원이 상주합니다. 논억 비치는 파도가 비교적 잔잔하고 물이 맑아 아이들이 해변에서 놀기 좋습니다. 조식 뷔페에 어린이 메뉴가 따로 마련되어 있습니다. 월드 오브 하얏트 포인트 사용 가능합니다.</p>
       <div class="hotel-tradeoff"><strong>이런 가족에게 맞음:</strong> 초등학생 이하 자녀, 키즈풀과 해변 안전을 중시하는 가족. <strong>주의:</strong> 논억 비치 위치라 저녁 외출 시 그랩이 필요합니다. 7~8월에는 키즈풀도 혼잡할 수 있으니 오전 일찍 이용을 권합니다.</div>
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang--hyatt-regency-danang-resort-an&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fhyatt-regency-danang-resort-and-spa.html" class="hotel-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">Booking.com에서 가격 보기 →</a>
+      <a data-provider="tripcom" data-tc-key="hotel:hyatt-regency-danang-resort-and-spa" aria-label="Trip.com에서 가격 보기, opens in a new tab" href="https://www.trip.com/hotels/da-nang-hotel-detail-713826/hyatt-regency-danang-resort-and-spa/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" class="hotel-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">Trip.com에서 가격 보기 →</span></a>
     </div>
 
     <div class="hotel-card">
@@ -222,7 +223,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <p class="hotel-desc">아이와 함께 다낭 곳곳을 탐방하고 싶은 가족에게 위치가 가장 편리합니다. 저녁에 아이들 손을 잡고 안트엉 거리 해산물 식당을 걸어서 이용할 수 있습니다. 한국인 여행자 비율이 높고 기본 한국어 안내가 가능한 직원도 있어 가족 여행 시 소통이 비교적 수월합니다. 메리어트 본보이 포인트 사용 가능합니다. 수영장 규모는 하얏트보다 작지만 해변이 바로 앞입니다.</p>
       <div class="hotel-tradeoff"><strong>이런 가족에게 맞음:</strong> 리조트 휴양과 관광지 탐방을 함께 원하는 가족, 한국어 지원이 중요한 분. <strong>주의:</strong> 키즈풀 규모가 하얏트나 매리어트보다 작습니다. 성수기에는 풀과 해변 모두 혼잡합니다.</div>
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang--sheraton-grand-danang-resort&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fsheraton-grand-danang-resort.html" class="hotel-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">Booking.com에서 가격 보기 →</a>
+      <a data-provider="tripcom" data-tc-key="hotel:sheraton-grand-danang-resort" aria-label="Trip.com에서 가격 보기, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=15691333&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397505" class="hotel-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">Trip.com에서 가격 보기 →</span></a>
     </div>
 
     <div class="hotel-card">
@@ -239,7 +240,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <p class="hotel-desc">대형 리조트로 객실과 공용 공간이 넓습니다. 패밀리룸과 커넥팅룸 옵션이 있어 아이와 함께 공간을 분리하기 좋습니다. 수영장이 여러 구역으로 나뉘어 있고 어린이 놀이 공간도 마련되어 있습니다. 조식 뷔페 규모가 크고 아이들이 좋아하는 메뉴가 다양합니다. 메리어트 본보이 포인트 사용 및 적립 가능합니다. 하얏트 리젠시와 논억 비치를 나란히 공유하며 조용한 환경입니다.</p>
       <div class="hotel-tradeoff"><strong>이런 가족에게 맞음:</strong> 패밀리룸이나 커넥팅룸이 필요한 가족, 조식 뷔페를 중시하는 분. <strong>주의:</strong> 하얏트보다 브랜드 인지도가 낮아 한국인 커뮤니티 후기가 적습니다. 시설 점검 후 예약하는 것을 권합니다.</div>
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang--danang-marriott-resort-spa-non&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fdanang-marriott-resort-spa-non-nuoc-beach-villas.html" class="hotel-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">Booking.com에서 가격 보기 →</a>
+      <a data-provider="tripcom" data-tc-key="hotel:danang-marriott-resort-spa-non-nuoc-beach-villas" aria-label="Trip.com에서 가격 보기, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=993558&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397575" class="hotel-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">Trip.com에서 가격 보기 →</span></a>
     </div>
 
     <div class="hotel-card">
@@ -256,7 +257,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <p class="hotel-desc">다낭 5성급 중 수영장이 크고 예산이 합리적입니다. 미케 비치 북쪽에 위치해 중심부보다 조용하고, 아이들이 해변과 수영장을 오가기 편합니다. 가족 여행 예산이 한정적이라면 이 호텔이 5성급 중 가성비가 가장 좋습니다. 수영장 슬라이드가 있어 아이들에게 인기입니다. 어콜 포인트(ALL) 사용 가능합니다.</p>
       <div class="hotel-tradeoff"><strong>이런 가족에게 맞음:</strong> 예산을 절약하면서 5성급 수준을 원하는 가족, 수영장을 많이 이용할 계획인 분. <strong>주의:</strong> 키즈풀이 하얏트처럼 별도 분리되어 있지 않습니다. 한국어 서비스는 기대하기 어렵습니다.</div>
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang--danang-beach-resort&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fdanang-beach-resort.html" class="hotel-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">Booking.com에서 가격 보기 →</a>
+      <a data-provider="tripcom" data-tc-key="hotel:danang-beach-resort" aria-label="Trip.com에서 가격 보기, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=1877388&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397547" class="hotel-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">Trip.com에서 가격 보기 →</span></a>
     </div>
 
     <div class="hotel-card">
@@ -273,7 +274,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <p class="hotel-desc">다낭에서 유일하게 워터파크가 리조트 건물에 직접 연결된 곳입니다. 일본 기업이 운영하는 리조트로, 실내 온천탕과 워터파크를 별도 이동 없이 이용할 수 있습니다. 초등학생 자녀를 둔 가족에게 단연 인기 있습니다. 워터파크 이용권이 숙박 요금에 포함되어 있어 실제 비용 대비 만족도가 높습니다. 일본어 서비스가 가능하지만 한국어는 제한적입니다.</p>
       <div class="hotel-tradeoff"><strong>이런 가족에게 맞음:</strong> 아이들이 워터파크를 원하는 가족, 2~3박 이상 머물면서 리조트 안에서 충분히 즐기고 싶은 분. <strong>주의:</strong> 일반 5성급 리조트보다 시설과 서비스 수준이 낮습니다. 고급스러운 분위기를 기대한다면 실망할 수 있습니다. 리조트가 시내에서 멀고 주변에 편의시설이 적습니다. 한국어 대응은 거의 없습니다.</div>
-      <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang--mikazuki-japanese-resorts-spa&url=https%3A%2F%2Fwww.booking.com%2Fhotel%2Fvn%2Fmikazuki-japanese-resorts-spa.html" class="hotel-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">Booking.com에서 가격 보기 →</a>
+      <a data-provider="tripcom" data-tc-key="hotel:mikazuki-japanese-resorts-spa" aria-label="Trip.com에서 가격 보기, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=5448550&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397610" class="hotel-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">Trip.com에서 가격 보기 →</span></a>
     </div>
   </div>
 
@@ -291,7 +292,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       </div>
       <div class="faq-item">
         <div class="faq-q" tabindex="0">다낭 호텔에서 어린이 요금이나 무료 숙박 정책은 어떻게 되나요?</div>
-        <div class="faq-a">대부분의 다낭 5성급 리조트는 만 12세 이하 어린이를 기존 침대 사용 시 무료로 받습니다. 단, 침대를 추가하거나 별도 객실을 쓰면 차이가 납니다. 가족 여행이라면 '패밀리룸'이나 '코너 스위트'처럼 공간이 넓은 객실 타입을 선택하는 것이 좋습니다. 예약 시 어린이 나이를 정확히 입력하면 Booking.com에서 자동으로 어린이 요금이 반영됩니다.</div>
+        <div class="faq-a">대부분의 다낭 5성급 리조트는 만 12세 이하 어린이를 기존 침대 사용 시 무료로 받습니다. 단, 침대를 추가하거나 별도 객실을 쓰면 차이가 납니다. 가족 여행이라면 '패밀리룸'이나 '코너 스위트'처럼 공간이 넓은 객실 타입을 선택하는 것이 좋습니다. 예약 시 어린이 나이를 정확히 입력하면 예약 페이지에서 어린이 요금이 반영됩니다.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" tabindex="0">다낭 워터파크는 호텔 안에 있나요, 따로 이동해야 하나요?</div>
@@ -303,7 +304,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
   <div class="cta-block">
     <h2>날짜별 호텔 요금 확인하기</h2>
     <p>가족 여행 성수기(7~8월, 구정)에는 가격이 크게 오릅니다. 원하는 날짜를 입력해 실시간 요금을 확인하세요.</p>
-    <a href="https://www.kqzyfj.com/click-101820678-17293132?sid=family-hotels-da-nang&url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.en-us.html%3Fss%3DDa%2BNang%2BMunicipality%2C%2BVietnam%26dest_id%3D6232%26dest_type%3Dregion%26lang%3Dko" class="cta-btn dn-btn dn-btn--book" target="_blank" rel="nofollow noopener sponsored">다낭 호텔 비교하기 →</a>
+    <a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="다낭 호텔 비교하기 on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" class="cta-btn dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored"><span class="tc-btn__text">다낭 호텔 비교하기 →</span></a>
   </div>
 
 </div>
@@ -336,7 +337,7 @@ html body :is(.site-nav,.hotel-tag,.hotel-tag-highlight,.hotel-tradeoff,.info-bo
       
     
     <div class="footer-bottom">
-      <span>© 2026 Da Nang Hotel Guide · 제휴 공개: Booking.com 링크를 통해 예약 시 소정의 수수료를 받습니다. 추가 비용 없음.</span>
+      <span>© 2026 Da Nang Hotel Guide · 제휴 공개: Trip.com 링크를 통해 예약 시 소정의 수수료를 받습니다. 추가 비용 없음.</span>
     </div>
   
 <div class="footer-social" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;padding:12px 16px;font-size:.85rem"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer" style="color:inherit;opacity:.8">Pinterest</a></div><p class="dn-footer__settings"><button type="button" class="dn-consent-open">개인정보 설정</button></p></div>
@@ -353,8 +354,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
   });
 });
 </script>
-  <script src="https://www.yceml.net/am_gen/101820678/impressions/page/am.js"></script>
-<script src="../booking-cta-tracking.js" defer></script>
+<script src="../tripcom-cta.js" defer></script>
 <script src="../dn.js" defer></script>
 <script src="../dn-consent.js" defer></script>
 </body>

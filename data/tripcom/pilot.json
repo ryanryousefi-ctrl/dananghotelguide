@@ -1,0 +1,13 @@
+{
+  "name": "Pilot A: five hotel review pages",
+  "status": "prepared, not deployed",
+  "pages": [
+    "hyatt-regency-da-nang.html",
+    "intercontinental-da-nang.html",
+    "brilliant-hotel-da-nang.html",
+    "furama-resort-da-nang.html",
+    "four-points-sheraton-da-nang.html"
+  ],
+  "why": "Each page carries exactly two destinations (its own hotel and the Da Nang city list), so the pilot needs six dashboard-generated links. Hotels are VERIFIED/high-confidence matches with no open owner decision. Marriott is excluded (two Trip.com listings, support question 9 is open). Ranked by Search Console impressions among eligible hotels.",
+  "caveat": "Search Console shows only 0-3 clicks per quarter on these pages (about 623 clicks across the whole site). A genuine pilot booking inside 30 days is unlikely: plan for a longer window or consider the traffic-weighted alternative in PILOT-PLAN.md."
+}
