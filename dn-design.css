@@ -330,3 +330,6 @@ html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.act
 .dn-adbox__go:focus-visible { outline: 2px solid var(--dn-ink); outline-offset: 3px; }
 .dn-adband__note { margin: .8rem auto 0; max-width: 40rem; font-size: .78rem; line-height: 1.5; color: var(--dn-muted); }
 @media (max-width: 839px) { .dn-adband { display: none; } }
+
+/* Contrast fix: light booking info cards inside the dark hero inherited the hero's pale text tokens (#d9d9d9 on #f0f0f0). Re-darken them for this card only. */
+.dn-hero__extra > div[style*="ocean-pale"] { --ocean: #111111; --ink-muted: #4d4d4d; --coral: #111111; }
