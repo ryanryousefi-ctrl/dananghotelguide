@@ -231,9 +231,7 @@ html body :is(.hotel-image, .bb-card-img img, .hotel-card img, [class*="card-img
 
 /* Trip.com mode (tripcom-cta.css, loaded only after the affiliate cutover): same square geometry
    as the rest of the system. The Trip.com blue and logo badge are left untouched. */
-html body a.tc-btn:not(#tc-n) { border-radius: 2px !important; font-family: var(--dn-sans) !important; letter-spacing: .08em !important; text-transform: uppercase !important; font-size: .74rem !important; }
-html body a.tc-btn.tc-btn--compact:not(#tc-n) { border-radius: 2px !important; padding-right: 1rem !important; }
-html body a.tc-btn:not(#tc-n) .tc-btn__logo { border-radius: 2px; }
+html body a.tc-btn:not(#tc-n) { font-family: var(--dn-sans) !important; }
 html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { height: 44px !important; }
 html body .dn-header a.tc-btn.nav-stays-btn:not(#tc-n) { white-space: nowrap !important; display: none !important; }
 html body .dn-header a.tc-btn.nav-stays-btn .tc-btn__text { white-space: nowrap !important; }
@@ -332,3 +330,6 @@ html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.act
 .dn-adbox__go:focus-visible { outline: 2px solid var(--dn-ink); outline-offset: 3px; }
 .dn-adband__note { margin: .8rem auto 0; max-width: 40rem; font-size: .78rem; line-height: 1.5; color: var(--dn-muted); }
 @media (max-width: 839px) { .dn-adband { display: none; } }
+
+/* Contrast fix: light booking info cards inside the dark hero inherited the hero's pale text tokens (#d9d9d9 on #f0f0f0). Re-darken them for this card only. */
+.dn-hero__extra > div[style*="ocean-pale"] { --ocean: #111111; --ink-muted: #4d4d4d; --coral: #111111; }
