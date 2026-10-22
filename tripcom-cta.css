@@ -27,94 +27,90 @@
   --tc-blue:        #1d4ed8; /* white text contrast 6.70:1 */
   --tc-blue-hover:  #1e40af; /* 8.72:1 */
   --tc-blue-active: #1e3a8a;
-  --tc-focus:       #fbbf24; /* echoes the yellow dot in the Trip.com logo */
-  --tc-radius:      10px;
+  --tc-focus:       #fbbf24;
+  --tc-radius:      8px;
 }
 
-/* ── Base button ─────────────────────────────────────────────────────────── */
+/* ── Base button: "Trip.com | <action>" ───────────────────────────────────────
+   The Trip.com name is drawn by ::before, so it appears on every booking button (static, JS-rendered, any language)
+   without touching a single link or page. With the logo switched on (a .tc-btn__logo child) the text badge is not drawn. */
 a.tc-btn:not(#tc-n) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-wrap: nowrap !important;
-  gap: 10px !important;
+  gap: .75em !important;
   min-height: 44px !important;
-  padding: 8px 16px 8px 8px !important;
+  padding: 9px 18px !important;
   background: var(--tc-blue) !important;
   color: #fff !important;
   border: 1px solid var(--tc-blue) !important;
   border-radius: var(--tc-radius) !important;
-  box-shadow: 0 2px 8px rgba(29, 78, 216, .22), 0 1px 2px rgba(0, 0, 0, .08) !important;
+  box-shadow: 0 2px 6px rgba(29, 78, 216, .22) !important;
+  font-size: .875rem !important;
   font-weight: 700 !important;
-  line-height: 1.2 !important;
+  line-height: 1.25 !important;
   text-decoration: none !important;
   text-transform: none !important;
-  letter-spacing: .005em !important;
+  letter-spacing: .01em !important;
   white-space: normal !important;
-  text-align: center !important;
+  text-align: left !important;
   cursor: pointer;
   transition: background .15s ease, box-shadow .15s ease, transform .15s ease !important;
+}
+a.tc-btn:not(#tc-n):not(:has(.tc-btn__logo))::before {
+  content: "Trip.com";
+  flex: 0 0 auto;
+  padding-right: .75em;
+  border-right: 1px solid rgba(255, 255, 255, .55);
+  font-weight: 800;
+  letter-spacing: .005em;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 a.tc-btn:not(#tc-n):hover {
   background: var(--tc-blue-hover) !important;
   border-color: var(--tc-blue-hover) !important;
   color: #fff !important;
-  box-shadow: 0 6px 18px rgba(29, 78, 216, .28), 0 2px 4px rgba(0, 0, 0, .1) !important;
+  box-shadow: 0 6px 16px rgba(29, 78, 216, .3) !important;
   transform: translateY(-1px) !important;
 }
-a.tc-btn:not(#tc-n):active {
-  background: var(--tc-blue-active) !important;
-  transform: none !important;
-}
-a.tc-btn:not(#tc-n):focus-visible {
-  outline: 3px solid var(--tc-focus) !important;
-  outline-offset: 2px !important;
-}
+a.tc-btn:not(#tc-n):active { background: var(--tc-blue-active) !important; transform: none !important; }
+a.tc-btn:not(#tc-n):focus-visible { outline: 3px solid var(--tc-focus) !important; outline-offset: 2px !important; }
 
-/* Logo badge: the logo is blue, so it always sits on white. */
-a.tc-btn .tc-btn__logo {
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
-  padding: 5px 7px;
-  background: #fff;
-  border-radius: 6px;
-  line-height: 0;
-}
-a.tc-btn .tc-btn__logo img {
-  display: block;
-  width: auto !important;
-  height: 14px !important;
-  max-width: none !important;
-  margin: 0 !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-a.tc-btn .tc-btn__text {
-  color: inherit !important;
-  min-width: 0; /* long labels wrap onto two lines beside the logo */
-  text-wrap: balance; /* no orphaned arrow on the second line */
-}
+/* Logo badge (only when written logo permission exists and the logo is switched on): the logo is blue, so it sits on white. */
+a.tc-btn .tc-btn__logo { display: inline-flex; align-items: center; flex: 0 0 auto; padding: 5px 7px; background: #fff; border-radius: 6px; line-height: 0; }
+a.tc-btn .tc-btn__logo img { display: block; width: auto !important; height: 14px !important; max-width: none !important; margin: 0 !important; border: 0 !important; box-shadow: none !important; }
+a.tc-btn .tc-btn__text { color: inherit !important; min-width: 0; text-wrap: balance; }
 
 /* ── Variants ────────────────────────────────────────────────────────────── */
 
-/* Compact: header nav, map popups, directory rows. */
-a.tc-btn:not(#tc-n)--compact:not(#tc-n) {
-  min-height: 36px !important;
-  padding: 5px 12px 5px 5px !important;
-  gap: 8px !important;
-  font-size: .8rem !important;
-  border-radius: 999px !important;
+/* General hotel SEARCH (city lists, "Search stays"): secondary look, so a button for one specific hotel is never mistaken for a search.
+   The header and mobile-menu "Search stays" buttons are primary calls to action and stay solid. */
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta),
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta) {
+  background: #fff !important; color: var(--tc-blue) !important; border-color: var(--tc-blue) !important; box-shadow: none !important;
 }
-a.tc-btn--compact .tc-btn__logo { padding: 4px 6px; border-radius: 999px; }
-a.tc-btn--compact .tc-btn__logo img { height: 12px !important; }
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta)::before,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta)::before { border-right-color: rgba(29, 78, 216, .4); }
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover {
+  background: var(--tc-blue) !important; color: #fff !important; border-color: var(--tc-blue) !important;
+}
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover::before,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover::before { border-right-color: rgba(255, 255, 255, .55); }
+
+/* Compact: header nav, map popups, directory rows. */
+a.tc-btn:not(#tc-n).tc-btn--compact { min-height: 40px !important; padding: 6px 12px !important; gap: .6em !important; font-size: .8rem !important; }
+a.tc-btn.tc-btn--compact .tc-btn__logo { padding: 4px 6px; }
+a.tc-btn.tc-btn--compact .tc-btn__logo img { height: 12px !important; }
 
 /* Block: full-width card and mobile-menu buttons. */
-a.tc-btn:not(#tc-n)--block:not(#tc-n) { display: flex !important; width: 100% !important; }
+a.tc-btn:not(#tc-n).tc-btn--block { display: flex !important; width: 100% !important; }
 
 /* Large: page-level primary calls to action. */
-a.tc-btn:not(#tc-n)--lg:not(#tc-n) { min-height: 52px !important; padding: 10px 22px 10px 10px !important; font-size: 1rem !important; }
-a.tc-btn--lg .tc-btn__logo img { height: 17px !important; }
+a.tc-btn:not(#tc-n).tc-btn--lg { min-height: 52px !important; padding: 11px 24px !important; font-size: 1rem !important; }
+a.tc-btn.tc-btn--lg .tc-btn__logo img { height: 17px !important; }
 
 /* Inline: booking links inside running text stay links, with a small logo
    after the text instead of a button. */
@@ -142,12 +138,12 @@ a.tc-link .tc-link__logo {
 
 /* Touch screens: every booking button keeps a 44px tap target. */
 @media (pointer: coarse) {
-  a.tc-btn:not(#tc-n)--compact:not(#tc-n) { min-height: 44px !important; }
+  a.tc-btn:not(#tc-n).tc-btn--compact { min-height: 44px !important; }
 }
 
 /* Narrow phones: let long labels wrap instead of overflowing cards. */
 @media (max-width: 380px) {
-  a.tc-btn:not(#tc-n) { gap: 8px !important; padding-right: 12px !important; font-size: .85rem !important; }
+  a.tc-btn:not(#tc-n) { padding-inline: 14px !important; font-size: .84rem !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {

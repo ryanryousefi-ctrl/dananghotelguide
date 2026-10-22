@@ -63,7 +63,11 @@
       if (n.nodeType === 3 && /Booking\.com/.test(n.nodeValue)) n.nodeValue = n.nodeValue.replace(/Booking\.com/g, 'Trip.com');
     });
     if (a.querySelector('img') && !a.querySelector('.tc-btn__logo, .tc-link__logo')) return; // image-card link
-    if (!a.hasAttribute('aria-label')) a.setAttribute('aria-label', label(a));
+    if (!a.hasAttribute('aria-label')) a.setAttribute('aria-label', label(a));   // (before the label below is shortened)
+    // Buttons draw "Trip.com |" themselves (tripcom-cta.css), so a label repeating the name loses the repeat.
+    if (isButton(a)) a.childNodes.forEach(function (n) {
+      if (n.nodeType === 3 && /Trip\.com/.test(n.nodeValue)) n.nodeValue = n.nodeValue.replace(/\s+on\s+Trip\.com/gi, '').replace(/Trip\.com에서\s*/g, '');
+    });
     if (a.querySelector('.tc-btn__logo, .tc-link__logo') || a.hasAttribute('data-tc-key')) return; // static markup already complete
     if (isButton(a)) {
       var cls = a.getAttribute('class') || '';

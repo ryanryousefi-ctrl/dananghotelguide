@@ -203,7 +203,7 @@ if (CUTOVER && !PREVIEW && !PILOT && fs.existsSync(path.join(DIR, 'data/tripcom/
     else if (n || bandN || scriptN) fail('dynamic-banner', `${pg}: banner present on a page that is not in the placement list`);
     if (bcfg.exclude_pages[pg] && n) fail('dynamic-banner', `${pg}: banner on an excluded page`);
   }
-  if (nBanner !== placed.size) fail('dynamic-banner', `placement list has ${placed.size} pages but ${nBanner} were found`);
+  if (!only && nBanner !== placed.size) fail('dynamic-banner', `placement list has ${placed.size} pages but ${nBanner} were found`);
 }
 const out = path.join(DIR, 'tripcom-editorial-review.csv');
 if (DIR !== ROOT) fs.writeFileSync(out, 'page,text\n' + editorial.map(r => r.map(c => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n') + '\n');
@@ -252,7 +252,7 @@ async function browserChecks() {
             if (a.querySelector('img') && !a.querySelector('.tc-btn__logo,.tc-link__logo')) return;
             if (LOGO_ON && !a.querySelector('.tc-btn__logo img, .tc-link__logo')) o.unbranded++;
             if (!LOGO_ON && !/trip\.com/i.test(a.getAttribute('aria-label') || a.textContent)) o.unbranded++;
-            if (a.classList.contains('tc-btn') && !/rgb\((29, 78, 216|30, 64, 175|30, 58, 138)\)/.test(getComputedStyle(a).backgroundColor)) o.unstyled++;
+            { const cs = getComputedStyle(a); const blue = /rgb\((29, 78, 216|30, 64, 175|30, 58, 138)\)/; if (a.classList.contains('tc-btn') && !(blue.test(cs.backgroundColor) || (/rgb\(255, 255, 255\)/.test(cs.backgroundColor) && blue.test(cs.color)))) o.unstyled++; }   // solid blue, or the white 'general search' variant with blue text
           });
           o.emptyHref = [...document.querySelectorAll('a[data-provider="tripcom"], a.affiliate-link')].filter(a => { const h = a.getAttribute('href'); return !h || /undefined|null$/.test(h); }).length;
           const pop = document.querySelector('.leaflet-popup a[data-provider="tripcom"]'); if (document.querySelector('.leaflet-popup')) o.popup = !!(pop && (LOGO_ON ? pop.querySelector('.tc-btn__logo') : pop.classList.contains('tc-btn') || pop.querySelector('.tc-btn__text')));
