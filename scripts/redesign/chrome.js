@@ -45,7 +45,7 @@ function mobileMenu(nav, lang) {
     <a class="dn-menu__link" href="${esc(nav.home)}">${kr ? '홈' : 'Home'}</a>
     ${nav.all.map(sec).join('\n    ')}
     ${stays}
-    <p class="dn-menu__social"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.facebook.com/profile.php?id=61572009361799" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+    <p class="dn-menu__social"><a href="https://x.com/DaNangHG" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.pinterest.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="https://www.instagram.com/dananghotelguide/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
   </div>
 </div>`;
 }
