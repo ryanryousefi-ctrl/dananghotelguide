@@ -1,0 +1,1058 @@
+[
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Pullman is a large beachfront hotel on the northern My Khe strip, about 10-12 minutes from the airport. That's the same drive time as A La Carte,",
+  "after": "Pullman is a large beachfront hotel on the southern My Khe / Bac My An beach strip, about 11 km by road from the airport (roughly 13 minutes without traffic, routing estimate). That's a similar drive to A La Carte,",
+  "reason": "Pullman area: Bac My An / southern My Khe (Ngu Hanh Son); routes.json 11.2 km/13 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Pullman is the clear answer on My Khe Beach.",
+  "after": "Pullman is the clear answer on the southern My Khe / Bac My An strip.",
+  "reason": "Pullman area: Bac My An / southern My Khe (Ngu Hanh Son); routes.json 11.2 km/13 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "The northern My Khe strip (Pullman, A La Carte area) is about 10-12 minutes.",
+  "after": "The My Khe strip hotels (A La Carte, and Pullman on the southern Bac My An stretch) are roughly 13-15 minutes by road without traffic (routing estimate).",
+  "reason": "Pullman area: Bac My An / southern My Khe (Ngu Hanh Son); routes.json 11.2 km/13 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "The northern My Khe strip (Pullman, A La Carte area) is closer to 10-12 minutes.",
+  "after": "The My Khe strip hotels (A La Carte, and Pullman on the southern Bac My An stretch) are roughly 13-15 minutes by road without traffic (routing estimate).",
+  "reason": "Pullman area: Bac My An / southern My Khe (Ngu Hanh Son); routes.json 11.2 km/13 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "My Khe Beach · 187 rooms · Accor ALL",
+  "after": "Southern My Khe / Bac My An · 187 rooms · Accor ALL",
+  "reason": "Pullman area wording"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "roughly 8 minutes by Grab, which",
+  "after": "roughly 14 minutes by road without traffic (about 10 km, routing estimate), which",
+  "reason": "routes.json Novotel 10.3 km/14 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Grand Mercure is a well-run city centre property, 8-10 minutes from the airport.",
+  "after": "Grand Mercure is a well-run city centre property, about 13 minutes by road without traffic (about 9.4 km, routing estimate) from the airport.",
+  "reason": "routes.json GM 9.4 km/13 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Han River · Rooftop pool · Budget-mid tier",
+  "after": "Han River · Indoor pool · Budget-mid tier",
+  "reason": "Brilliant has indoor pool, not rooftop"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Brilliant Hotel sits on the Han River, about 10 minutes from the airport, with a rooftop pool that takes in river and Dragon Bridge views.",
+  "after": "Brilliant Hotel sits on the Han River, about 14 minutes by road from the airport without traffic (about 10.6 km, routing estimate), with an indoor pool and a rooftop bar.",
+  "reason": "Brilliant indoor pool; routes 10.6 km/14 min"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "A La Carte is on My Khe Beach, about 10-12 minutes from the airport. It's 2-4 minutes further out than the Han River hotels above,",
+  "after": "A La Carte is across the road from My Khe Beach, about 12.8 km from the airport, roughly 15 minutes without traffic (routing estimate). That's about the same as the Han River hotels above,",
+  "reason": "routes A La Carte 12.7km/15 min; across the road"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "Melia Da Nang sits a little further south on My Khe Beach, 12-15 minutes from the airport.",
+  "after": "Melia Da Nang is on Non Nuoc Beach, about 16 km by road from the airport (roughly 19 minutes without traffic, routing estimate).",
+  "reason": "Melia Da Nang on Non Nuoc coast"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "My Khe Beach · Spanish chain · Melia Rewards",
+  "after": "Non Nuoc Beach · Spanish chain · Melia Rewards",
+  "reason": "wrong beach"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "anyone who wants a reliable European chain on My Khe at competitive pricing",
+  "after": "anyone who wants a reliable European chain on Non Nuoc Beach at competitive pricing",
+  "reason": "wrong beach"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "City centre hotels on the Han River and in the CBD sit closest to Da Nang Airport, around 8-10 minutes. Novotel",
+  "after": "City centre hotels on the Han River and in the CBD sit closest to Da Nang Airport, around 13-15 minutes by road without traffic (routing estimate). Novotel",
+  "reason": "Han River hotels 13-15 min by routes.json"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "City centre hotels on the Han River sit closest to Da Nang Airport, around 8-10 minutes out.",
+  "after": "City centre hotels on the Han River sit closest to Da Nang Airport, around 13-15 minutes by road without traffic (routing estimate).",
+  "reason": "same"
+ },
+ {
+  "file": "da-nang-hotels-near-airport.html",
+  "before": "To city centre hotels on the Han River, it's 8-10 minutes.",
+  "after": "To city centre hotels on the Han River, it's roughly 13-15 minutes without traffic (routing estimate).",
+  "reason": "same"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "(listings: Brilliant Hotel about 0.3 km, Novotel about 1 km, Melia Vinpearl about 1.3 km)",
+  "after": "(on foot: Brilliant Hotel about 0.3 km, Novotel about 1.2 km, Melia Vinpearl about 1.4 km)",
+  "reason": "walking distances routes.json"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "within roughly 0.3 to 1.3 km",
+  "after": "within roughly 0.3 to 1.4 km",
+  "reason": "walking distances routes.json"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Han River hotels are roughly 2 to 5 km from the airport in listings (Brilliant Hotel about 2 to 3.6 km, Novotel about 4.5 km, Grand Mercure about a 10-minute drive). Our reviews put Muong Thanh, Wyndham Soleil and Radisson Blu about 12 minutes away.",
+  "after": "Han River hotels are roughly 3 to 5 km from the airport in a straight line, or about 9 to 12 km by road, which is roughly 13 to 15 minutes without traffic (routing estimate): Brilliant Hotel about 10.6 km by road, Novotel about 10 km, Grand Mercure about 9.4 km. Our reviews put Muong Thanh, Wyndham Soleil and Radisson Hotel Danang about 12.5 to 13.3 km by road, roughly 14 to 16 minutes without traffic.",
+  "reason": "routes.json road vs straight line"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "From My Khe our reviews put it about 10 minutes by taxi from Wyndham Soleil, 12 from Muong Thanh and 14 from Radisson Blu.",
+  "after": "From My Khe our reviews put it about 4 to 4.7 km by road, roughly 5 to 6 minutes without traffic (routing estimate), from Wyndham Soleil, Muong Thanh and Radisson Hotel Danang.",
+  "reason": "routes.json"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "About 10 to 14 minutes by taxi in our reviews: roughly 10 minutes from Wyndham Soleil, 12 from Muong Thanh Luxury and 14 from Radisson Blu.",
+  "after": "About 4 to 4.7 km by road in our reviews, roughly 5 to 6 minutes without traffic (routing estimate): about 5 minutes from Wyndham Soleil and Radisson Hotel Danang, 6 from Muong Thanh Luxury.",
+  "reason": "routes.json (x2)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "roughly 2 to 5 km in listings (Brilliant Hotel about 2 to 3.6 km, Novotel about 4.5 km), against about 12 minutes for the My Khe hotels in our reviews.",
+  "after": "roughly 3 to 5 km in a straight line, or about 10 to 12 km by road (13 to 15 minutes without traffic, routing estimate), against about 14 to 16 minutes for the My Khe hotels in our reviews.",
+  "reason": "routes.json (x2)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Han Market: ~10 min walk",
+  "after": "Han Market: ~2.7 km (about 36 min walk)",
+  "reason": "GM 36 min walk"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Mercure’s guide describes about a 10-minute walk to Han Market; Dragon Bridge is a short taxi ride (around 2 km) and the airport roughly a 10-minute drive.",
+  "after": "Han Market is about 2.7 km away (a walk of roughly 36 minutes, so most people will take a taxi); Dragon Bridge is a short taxi ride (around 2 km) and the airport roughly 13 minutes by road without traffic (about 9.4 km, routing estimate).",
+  "reason": "GM walk 36 min, airport 13 min"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Han Market: ~1.3 km",
+  "after": "Han Market: ~1.4 km on foot",
+  "reason": "Melia Vinpearl walking 1.4 km/19 min"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Meliá lists Han Market at about 1.3 km and Dragon Bridge at about 1.8 km;",
+  "after": "Han Market is about 1.4 km on foot (roughly 19 minutes) and Dragon Bridge about 1.8 km on foot (roughly 24 minutes);",
+  "reason": "routes.json Melia Vinpearl walking"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "The airport and Dragon Bridge are each about 12 minutes by Grab.",
+  "after": "The airport is about 12.5 km by road (roughly 14 minutes without traffic, routing estimate) and Dragon Bridge about 4.7 km (roughly 6 minutes).",
+  "reason": "routes.json Muong Thanh"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "The airport is about 12 minutes away and Dragon Bridge about 10 minutes by taxi.",
+  "after": "The airport is about 13 km by road (roughly 16 minutes without traffic, routing estimate) and Dragon Bridge about 4 km (roughly 5 minutes).",
+  "reason": "routes.json Wyndham"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Radisson Blu Resort Danang",
+  "after": "Radisson Hotel Danang",
+  "reason": "name is Radisson Hotel Danang (x3) (data-hotel attr restored afterwards)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Check Radisson Blu Prices",
+  "after": "Check Radisson Hotel Danang Prices",
+  "reason": "name (x2)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Read our full Radisson Blu review",
+  "after": "Read our full Radisson Hotel Danang review",
+  "reason": "name"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "My Khe Beach · Family rooms",
+  "after": "My Khe, Son Tra side · Family rooms",
+  "reason": "Radisson area"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "A city-beach hotel on the My Khe strip: directly on the beach with the restaurant strip a short walk, the airport 12 minutes away and Dragon Bridge 14 minutes by taxi.",
+  "after": "A city-beach hotel on the My Khe strip, Son Tra side, across the road from the beach, with the restaurant strip a short walk, the airport about 13 km by road (roughly 16 minutes without traffic, routing estimate) and Dragon Bridge about 4 km (roughly 5 minutes).",
+  "reason": "Radisson across road; routes"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "The northern My Khe strip (Pullman, A La Carte area) is closer to 10-12 minutes.",
+  "after": "The My Khe strip hotels (A La Carte, and Pullman on the southern Bac My An stretch) are roughly 13-15 minutes by road without traffic (routing estimate).",
+  "reason": "Pullman area / routes"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "City centre hotels on the Han River sit closest to Da Nang Airport, around 8-10 minutes out.",
+  "after": "City centre hotels on the Han River sit closest to Da Nang Airport, around 13-15 minutes by road without traffic (routing estimate).",
+  "reason": "routes"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "from My Khe hotels our reviews put Dragon Bridge at roughly 10 to 14 minutes by taxi, so",
+  "after": "from My Khe hotels our reviews put Dragon Bridge at roughly 5 to 6 minutes by road without traffic (routing estimate), so",
+  "reason": "routes.json"
+ },
+ {
+  "file": "index.html",
+  "before": "Hilton Da Nang review 2026: Han River location near My Khe Beach, rooftop infinity pool.",
+  "after": "Hilton Da Nang review 2026: Han River city-centre location, outdoor pool and rooftop bar.",
+  "reason": "Hilton: no rooftop pool; My Khe is 2.4-4 km away"
+ },
+ {
+  "file": "index.html",
+  "before": "Sheraton Grand Da Nang 2026: Da Nang's top family water complex, 785 rooms, direct beachfront.",
+  "after": "Sheraton Grand Da Nang 2026: a family-focused resort with an infinity pool and water park on the Truong Sa coast, 258 rooms, direct beachfront.",
+  "reason": "Sheraton 258 rooms (not 785); Truong Sa coast"
+ },
+ {
+  "file": "index.html",
+  "before": "The best resorts on Son Tra Peninsula for 2026, InterContinental, Premier Village…",
+  "after": "The best resorts on Son Tra Peninsula for 2026, starting with the InterContinental…",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap (My Khe strip, Ngu Hanh Son), not on Son Tra; removed from Son Tra blurb"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "My Khe Beach · Beach club operation · Direct beachfront · 5-star",
+  "after": "Truong Sa coast, south of My Khe · Beach club operation · Direct beachfront · 5-star",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, Truong Sa coast south of My Khe, not on My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "a clearly managed area on My Khe Beach, sunbeds that don't run out, and service that stays consistent. The property sits directly on the sand at the northern end of the main My Khe strip.",
+  "after": "a clearly managed area on the Truong Sa coast south of My Khe, sunbeds that don't run out, and service that stays consistent. The property sits directly on the sand, with the beach in front rather than across a road.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, Truong Sa coast south of My Khe, not on My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "Sheraton Grand covers the My Khe side with a solid, professionally run beach club setup.",
+  "after": "Sheraton Grand covers the Truong Sa coast south of My Khe with a solid, professionally run beach club setup.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, Truong Sa coast south of My Khe, not on My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "Sheraton Grand covers the My Khe side with a solid beach club operation.",
+  "after": "Sheraton Grand covers the Truong Sa coast south of My Khe with a solid beach club operation.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, Truong Sa coast south of My Khe, not on My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "My Khe Beach · Garden-to-beach layout",
+  "after": "Southern My Khe / Bac My An · Garden-to-beach layout",
+  "reason": "Furama area wording"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "and the My Khe location, the main strip in Da Nang, puts you closer to city restaurants and nightlife than the Non Nuoc properties.",
+  "after": "and the southern My Khe / Bac My An location puts you closer to city restaurants and nightlife than the Non Nuoc properties.",
+  "reason": "Furama area wording"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "Non Nuoc Beach · Adults-only · Small intimate beach",
+  "after": "Truong Sa coast, south of My Khe · Adults-only · Small intimate beach",
+  "reason": "TIA area per TIA review page"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "The Non Nuoc frontage is already quieter than My Khe, and the all-inclusive spa focus pulls in",
+  "after": "The Truong Sa coast frontage south of My Khe is already quieter than the main My Khe strip, and the Wellness Inclusive spa focus (all-day breakfast and two treatments per person per night) pulls in",
+  "reason": "TIA: Wellness Inclusive, not all-inclusive"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "Non Nuoc Beach, home to Hyatt Regency, Naman Retreat, and Fusion Maia, stays",
+  "after": "Non Nuoc Beach and the Truong Sa coast around it, home to Hyatt Regency, Naman Retreat, and TIA Wellness Resort (formerly Fusion Maia), stay",
+  "reason": "TIA area wording"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "Non Nuoc Beach (where Hyatt Regency, Naman Retreat, and Fusion Maia are located) is quieter",
+  "after": "Non Nuoc Beach and the Truong Sa coast around it (where Hyatt Regency, Naman Retreat, and TIA Wellness Resort, formerly Fusion Maia, are located) are quieter",
+  "reason": "TIA area wording"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Direct My An beach access, multiple dining options, and enough resort ground",
+  "after": "Direct beach access on the Truong Sa coast south of My Khe, multiple dining options, and enough resort ground",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Sheraton Grand Danang Resort, enormous pool and My An beachfront",
+  "after": "Sheraton Grand Danang Resort, enormous pool and Truong Sa coast beachfront",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Sheraton Grand Danang Resort, pool and My An beach",
+  "after": "Sheraton Grand Danang Resort, pool and Truong Sa coast beach",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My An &middot; Kids club &middot; Direct beach &middot; IHG",
+  "after": "Truong Sa coast &middot; Kids club &middot; Direct beach &middot; Marriott Bonvoy",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Add direct My An beach access, a kids club",
+  "after": "Add direct beach access on the Truong Sa coast south of My Khe, a kids club",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Enormous pool + direct My An beach",
+  "after": "Enormous pool + direct beach (Truong Sa coast)",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Large pool, direct My An beach access, enough resort space",
+  "after": "Large pool, direct beach access on the Truong Sa coast south of My Khe, enough resort space",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Large pool, direct My An beach, kids club",
+  "after": "Large pool, direct beach on the Truong Sa coast south of My Khe, kids club",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe (35 Truong Sa St), Marriott Bonvoy brand not IHG"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Sheraton Grand and Premier Village also have kids clubs.",
+  "after": "Sheraton Grand also has a kids club.",
+  "reason": "Premier Village kids club unverified in research"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My An &middot; Private pool villas &middot; Beachfront",
+  "after": "Southern My Khe / Bac My An &middot; Private pool villas &middot; Beachfront",
+  "reason": "Premier Village at 99 Vo Nguyen Giap, southern My Khe / Bac My An strip"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Private pool villas on the My An beachfront give families",
+  "after": "Private pool villas on the beachfront on the southern My Khe / Bac My An strip give families",
+  "reason": "Premier Village at 99 Vo Nguyen Giap, southern My Khe / Bac My An strip"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Private villa pool + direct My An beach",
+  "after": "Private villa pool + direct beach",
+  "reason": "Premier Village at 99 Vo Nguyen Giap, southern My Khe / Bac My An strip"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "offers private pool villas directly on My An beach, making",
+  "after": "offers private pool villas directly on the beach on the southern My Khe / Bac My An strip, making",
+  "reason": "Premier Village at 99 Vo Nguyen Giap, southern My Khe / Bac My An strip (x2)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My Khe &middot; Multiple pools &middot; Direct beach &middot; Tropical grounds",
+  "after": "Bac My An (south of My Khe) &middot; Multiple pools &middot; Direct beach &middot; Tropical grounds",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "and direct My Khe beach access. The My Khe location gives better city proximity than My An or Non Nuoc, which matters",
+  "after": "and direct beach access on Bac My An Beach, south of My Khe. The location, about 11 km by road from the airport, gives better city proximity than the Truong Sa coast or Non Nuoc resorts, which matters",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Multiple pools + direct My Khe beach",
+  "after": "Multiple pools + direct beach (Bac My An)",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Tropical grounds, multiple pools, direct My Khe beach.",
+  "after": "Tropical grounds, multiple pools, direct beach on Bac My An, south of My Khe.",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Furama Resort at My Khe splits the difference",
+  "after": "Furama Resort on Bac My An, south of My Khe, splits the difference",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Furama at My Khe splits the difference",
+  "after": "Furama on Bac My An, south of My Khe, splits the difference",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An (south of My Khe)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My Khe &middot; Rooftop &amp; Beach",
+  "after": "Bac My An &middot; Pool &amp; Beach",
+  "reason": "Pullman at 101 Vo Nguyen Giap, Bac My An; one main infinity pool, no rooftop pool"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My Khe &middot; Rooftop pool &middot; Direct beach &middot; Accor loyalty",
+  "after": "Bac My An (south of My Khe) &middot; Infinity pool &middot; Direct beach &middot; Accor loyalty",
+  "reason": "Pullman at 101 Vo Nguyen Giap, Bac My An; one main infinity pool, no rooftop pool"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Rooftop pool has sea views, beach access is direct, and the My Khe location puts you within easy Grab distance of An Thuong restaurants.",
+  "after": "The ocean-facing infinity pool is the main pool, beach access is direct, and the Bac My An location on the southern My Khe strip puts you within easy Grab distance of An Thuong restaurants.",
+  "reason": "Pullman at 101 Vo Nguyen Giap, Bac My An; one main infinity pool, no rooftop pool"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Rooftop pool + direct My Khe beach",
+  "after": "Infinity pool + direct beach (Bac My An)",
+  "reason": "Pullman at 101 Vo Nguyen Giap, Bac My An; one main infinity pool, no rooftop pool"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "My Khe beach access with city proximity. Better for families with older kids",
+  "after": "Direct beach access on Bac My An with city proximity. Better for families with older kids",
+  "reason": "Pullman at 101 Vo Nguyen Giap, Bac My An; one main infinity pool, no rooftop pool"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Note: no dedicated kids club of the Hyatt standard.",
+  "after": "Note: it has a complimentary Planet Trekkers kids club for ages 4-12, though the setting suits older children best.",
+  "reason": "InterContinental has a kids club (Planet Trekkers, ages 4-12)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": "Private beach, villa space, pool; no structured kids club",
+  "after": "Private beach, villa space, pool, Planet Trekkers kids club (ages 4-12)",
+  "reason": "InterContinental kids club exists"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An Beach</span>",
+  "after": ">Truong Sa Coast</span>",
+  "reason": "Sheraton Truong Sa coast"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An Beach &middot; Private Pool Villas</span>",
+  "after": ">Bac My An Beach &middot; Private Pool Villas</span>",
+  "reason": "Premier Village area"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My Khe Beach</span></div>",
+  "after": ">Bac My An Beach</span></div>",
+  "reason": "Furama area"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">Best My Khe Family Hotel<",
+  "after": ">Best Beach-and-City Family Hotel<",
+  "reason": "Pullman is on Bac My An, not central My Khe"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An Beach &middot; Full-Service Family Resort &middot; IHG<",
+  "after": ">Truong Sa Coast &middot; Full-Service Family Resort &middot; Marriott Bonvoy<",
+  "reason": "Sheraton area and brand (Marriott Bonvoy)"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An beach</span>",
+  "after": ">Truong Sa coast beach</span>",
+  "reason": "Sheraton area"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An Beach &middot; Best Overall Family Resort<",
+  "after": ">Truong Sa Coast &middot; Best Overall Family Resort<",
+  "reason": "Sheraton area"
+ },
+ {
+  "file": "family-hotels-da-nang.html",
+  "before": ">My An Beach &middot; Private Pool Villas &middot; Family Space<",
+  "after": ">Southern My Khe / Bac My An &middot; Private Pool Villas &middot; Family Space<",
+  "reason": "Premier Village area"
+ },
+ {
+  "file": "non-nuoc-beach-da-nang.html",
+  "before": "Six pools, a lazy river, and a kids club that actually functions",
+  "after": "Five outdoor pools and a kids club that actually functions",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "non-nuoc-beach-da-nang.html",
+  "before": ">South Non Nuoc &middot; Best for a genuine reset<",
+  "after": ">Truong Sa coast, south of My Khe &middot; Best for a genuine reset<",
+  "reason": "TIA area: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "non-nuoc-beach-da-nang.html",
+  "before": "Naman Retreat and TIA Wellness Resort lean into this directly, and",
+  "after": "Naman Retreat and TIA Wellness Resort (on the Truong Sa coast, south of My Khe) lean into this directly, and",
+  "reason": "TIA area"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "the same property, same all-inclusive spa concept.",
+  "after": "the same property, same Wellness Inclusive spa concept.",
+  "reason": "TIA Wellness Inclusive rate: all-day breakfast + two treatments (80 min total) per person per night; full board only with Retreat Inclusive"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "Worth noting separately here because the two-treatments-a-day, breakfast-served-anywhere-until-noon format is specific enough",
+  "after": "Worth noting separately here because the Wellness Inclusive rate (all-day breakfast and two treatments, 80 minutes in total, per person per night) is specific enough",
+  "reason": "TIA Wellness Inclusive rate: all-day breakfast + two treatments (80 min total) per person per night; full board only with Retreat Inclusive"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "For couples the all-inclusive spa is the headline. You are not paying per treatment; the cost is baked into the room rate.",
+  "after": "For couples the Wellness Inclusive spa rate is the headline. TIA sells a Wellness Inclusive rate with all-day breakfast and two treatments (80 minutes in total) per person per night, so the cost is baked into the rate; full-board meals come with the Retreat Inclusive programme.",
+  "reason": "TIA Wellness Inclusive rate: all-day breakfast + two treatments (80 min total) per person per night; full board only with Retreat Inclusive"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "A 785-room mega-resort with packed pool decks",
+  "after": "A mega-resort with packed pool decks",
+  "reason": "785 rooms figure is wrong (Sheraton has 258 rooms) and was unsourced"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "The My Khe setting is pleasant if not as dramatic as the InterContinental's clifftop.",
+  "after": "The Truong Sa coast setting, south of My Khe, is pleasant if not as dramatic as the InterContinental's clifftop.",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "$180-380/night &middot; My Khe Beach (quieter northern section)",
+  "after": "$180-380/night &middot; Truong Sa coast, south of My Khe",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "$200-400/night &middot; My Khe Beach",
+  "after": "$200-400/night &middot; Truong Sa coast, south of My Khe",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "and its My Khe location sits on a section of beach that doesn't feel overwhelmed",
+  "after": "and its Truong Sa coast location, south of My Khe, sits on a section of beach that doesn't feel overwhelmed",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "<td>My Khe (north section)</td>",
+  "after": "<td>Truong Sa coast, south of My Khe</td>",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "It sits on a quieter stretch of My Khe beach and has",
+  "after": "It sits on a quieter stretch of the Truong Sa coast, south of My Khe, and has",
+  "reason": "TIA/Fusion Maia: 109 Vo Nguyen Giap, Truong Sa coast south of My Khe (x2)"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "$250-500/night &middot; Non Nuoc Beach",
+  "after": "$250-500/night &middot; Southern My Khe / Bac My An",
+  "reason": "Premier Village at 99 Vo Nguyen Giap, My Khe strip"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "<td>Non Nuoc Beach</td>\n          <td>$250-500</td>",
+  "after": "<td>Southern My Khe / Bac My An</td>\n          <td>$250-500</td>",
+  "reason": "Premier Village area"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "$300-600/night &middot; Non Nuoc / Son Tra Peninsula",
+  "after": "$300-600/night &middot; Son Tra Peninsula",
+  "reason": "InterContinental is on Son Tra"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": "concentrate on Non Nuoc Beach. The InterContinental Sun Peninsula, Premier Village, and Naman Retreat are each distinct",
+  "after": "concentrate on the coast south of the city and the Son Tra Peninsula. The InterContinental Sun Peninsula, Premier Village, and Naman Retreat are each distinct",
+  "reason": "Premier is on southern My Khe, Intercon on Son Tra"
+ },
+ {
+  "file": "best-luxury-resort-couples-da-nang.html",
+  "before": ">All-Inclusive Spa</span>",
+  "after": ">Wellness Inclusive Spa</span>",
+  "reason": "TIA sells Wellness Inclusive, not all-inclusive"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "My Khe Beach · Best connecting room setup",
+  "after": "Truong Sa coast, south of My Khe · Best connecting room setup",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "Family suites + connecting options · 6 pools · Strong",
+  "after": "Family suites + connecting options · 5 pools · Strong",
+  "reason": "Hyatt has 5 outdoor pools"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "six pools spread kids out without crowding the adult areas",
+  "after": "five outdoor pools spread kids out without crowding the adult areas",
+  "reason": "Hyatt has 5 outdoor pools"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "My Khe Beach · Family interconnecting rooms · Garden or sea view",
+  "after": "Southern My Khe / Bac My An · Family interconnecting rooms · Garden or sea view",
+  "reason": "Furama area"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "My Khe Beach · Family rooms with connecting configurations · Mid-luxury tier",
+  "after": "Non Nuoc Beach · Family rooms with connecting configurations · Mid-luxury tier",
+  "reason": "Melia Da Nang is on Non Nuoc Beach (19 Truong Sa St)"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "The beach resort sits directly on My Khe Beach, room quality",
+  "after": "The beach resort sits on Non Nuoc Beach, room quality",
+  "reason": "Melia Da Nang is on Non Nuoc Beach"
+ },
+ {
+  "file": "da-nang-hotels-connecting-rooms.html",
+  "before": "My Khe Beach · Connecting options available · Marriott Bonvoy",
+  "after": "Non Nuoc Beach · Connecting options available · Marriott Bonvoy",
+  "reason": "Marriott on Truong Sa coast by Non Nuoc"
+ },
+ {
+  "file": "da-nang-hotels-private-beach.html",
+  "before": "six pools on top of the beach access",
+  "after": "five outdoor pools on top of the beach access",
+  "reason": "Hyatt has 5 outdoor pools"
+ },
+ {
+  "file": "best-areas-da-nang-families.html",
+  "before": "Pullman sits on My Khe with direct beach access and a proper pool. For families with older kids who want beach plus walkable restaurant access, it is the strongest pick on the My Khe strip. An Thuong dining is minutes away on foot, useful when you need to escape the resort for dinner.",
+  "after": "Pullman sits on the Bac My An beach strip, south of My Khe, with direct beach access and an ocean-facing infinity pool. For families with older kids who want beach plus easier city access than the Non Nuoc resorts, it is a strong pick on the southern My Khe strip, about 5.6 km by road from Dragon Bridge (roughly 7 minutes without traffic, routing estimate). An Thuong dining is a short Grab ride away, useful when you need to escape the resort for dinner.",
+  "reason": "Pullman: 101 Vo Nguyen Giap, Bac My An; routes.json Dragon Bridge 5.6 km/7 min; 'minutes on foot' to An Thuong unsupported"
+ },
+ {
+  "file": "best-areas-da-nang-families.html",
+  "before": "alt=\"Pullman Danang Beach Resort My Khe\"",
+  "after": "alt=\"Pullman Danang Beach Resort, Bac My An\"",
+  "reason": "Pullman area"
+ },
+ {
+  "file": "beachfront-vs-city-hotels-da-nang.html",
+  "before": "river views, a rooftop pool, and Han Market within walking distance (Dragon Bridge is a short taxi ride)",
+  "after": "river views, an outdoor pool, and Han Market about 1 km away (roughly a 16-minute walk; Dragon Bridge is a short taxi ride)",
+  "reason": "Novotel pool is a 4th-floor podium outdoor pool, not rooftop; Han Market 1.2 km/16 min walk"
+ },
+ {
+  "file": "beachfront-vs-city-hotels-da-nang.html",
+  "before": "Standard rooftop pools, no resort facilities",
+  "after": "Standard city-hotel pools, no resort facilities",
+  "reason": "City hotels' pools are not rooftop pools (Novotel podium, Grand Mercure ground-level, Brilliant indoor)"
+ },
+ {
+  "file": "beachfront-vs-city-hotels-da-nang.html",
+  "before": "Pools are standard rooftop tanks, not resort-grade",
+  "after": "Pools are standard city-hotel pools, not resort-grade",
+  "reason": "same"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Melia Danang vs Radisson Blu Danang compared for 2026, two underrated 5-stars on Non Nuoc Beach. Honest verdict on which is better value before you book.",
+  "after": "Melia Danang (Non Nuoc Beach) vs Radisson Hotel Danang (My Khe Beach) compared for 2026: a design-led beach resort against a newer hotel with a rooftop infinity pool. Honest verdict on which is better value before you book.",
+  "reason": "Radisson is on My Khe not Non Nuoc; name (x3)"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "The two most underrated five-stars on Da Nang's southern beach strip. One is smaller and design-led for couples; the other is the best value five-star on the coast.",
+  "after": "A design-led beach resort on Non Nuoc Beach against a newer hotel with a rooftop infinity pool on My Khe. One suits couples who want a quieter, design-led stay; the other is a straightforward, good-value beach holiday.",
+  "reason": "Radisson is not on Non Nuoc; not a five-star resort per evidence"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Not a full resort complex: no kids' club and a limited spa.",
+  "after": "Not a full resort complex: the spa is limited by resort standards, and Trip.com lists a kids' club.",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Most people haven't heard of the Radisson Blu, which is exactly why it runs 20-30% below the Hyatt and Marriott despite matching them on infrastructure. Larger rooms, four pools, a real kids programme, and consistent service. If you're not locked into a loyalty program, there's no smarter booking on this stretch of coast.",
+  "after": "Most people haven't heard of the Radisson Hotel Danang, which opened in 2022 with a rooftop infinity pool, modern rooms with balconies and consistent service. It is a polished beach hotel rather than a resort complex. If you're not locked into a loyalty program, it is a straightforward, good-value booking on My Khe.",
+  "reason": "Remove unsupported 4 pools / matching Hyatt infrastructure / kids programme; Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Stronger design identity, smaller and more considered (168 rooms)",
+  "after": "Stronger design identity, more considered, with a smaller-resort feel",
+  "reason": "Melia Danang: Non Nuoc Beach, ~7 outdoor pools, room count sources conflict (408-528), not 168"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Only 3 pools versus Radisson's 4",
+  "after": "Several outdoor pools, some reserved for Level guests",
+  "reason": "Melia Danang: Non Nuoc Beach, ~7 outdoor pools, room count sources conflict (408-528), not 168"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Smaller standard rooms (42 sqm vs 48 sqm)",
+  "after": "Soundproofing between rooms is a recurring complaint",
+  "reason": "room sizes unverified; soundproofing per Melia review"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Best value five-star on this stretch of beach",
+  "after": "Good-value, newer beach hotel on My Khe",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Larger rooms (48 sqm+) and 282 rooms total",
+  "after": "182 rooms, opened in 2022",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "4 pools and a full kids programme",
+  "after": "Rooftop infinity pool; Trip.com lists a kids' club",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Bigger footprint means less of an intimate feel",
+  "after": "A city-beach hotel rather than a resort complex",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Melia is smaller at 168 rooms with a stronger, more considered design identity. Radisson Blu is larger at 282 rooms with a wider beach frontage and more resort infrastructure. Neither feels like a mega-resort; both are a step down in scale from the Hyatt or Sheraton.",
+  "after": "Melia is a resort on Non Nuoc Beach with a stronger, more considered design identity. Radisson Hotel Danang has 182 rooms and sits across the road from My Khe Beach; it is a city-beach hotel rather than a resort complex. Neither feels like a mega-resort.",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Melia's standard rooms start around 42 sqm with a strong, purpose-built design aesthetic. Radisson Blu's start around 48 sqm and are consistently praised for cleanliness and maintenance. Radisson wins on raw space.",
+  "after": "Melia's rooms have a strong, purpose-built design aesthetic. The Radisson's rooms are modern, with balconies and ocean views, and are consistently praised for cleanliness and maintenance. Room sizes vary by category, so check the size of the room you book.",
+  "reason": "sizes unverified; Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Book Radisson Blu If You Want:",
+  "after": "Book Radisson Hotel Danang If You Want:",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "The best five-star value on this stretch of beach",
+  "after": "Good value for a newer beach hotel on My Khe",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Genuinely larger rooms (48 sqm+)",
+  "after": "Modern rooms with balconies and ocean views",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "A full kids programme and family-friendly infrastructure",
+  "after": "Family rooms for four people",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "4 pools and more F&amp;B variety",
+  "after": "A rooftop infinity pool with panoramic beach views",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Only 3 pools; less on-site variety than Radisson",
+  "after": "Soundproofing between rooms is a recurring complaint",
+  "reason": "Melia Danang: Non Nuoc Beach, ~7 outdoor pools, room count sources conflict (408-528), not 168"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Smaller standard rooms than Radisson Blu",
+  "after": "Loungers can run short at peak times",
+  "reason": "Melia Danang: Non Nuoc Beach, ~7 outdoor pools, room count sources conflict (408-528), not 168; per Melia review"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Kids facilities exist but are minimal, not the focus",
+  "after": "Children's pool and generous rooms, but the property leans toward couples",
+  "reason": "Melia Danang: Non Nuoc Beach, ~7 outdoor pools, room count sources conflict (408-528), not 168"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Larger footprint means less of an intimate, boutique feel",
+  "after": "Not a resort complex: the spa is limited by resort standards",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Spa is good but smaller and less distinctive than the Melia's",
+  "after": "Beach is across the road (about 150 m) rather than directly on the sand",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Mixed clientele, families welcome, so it's less quiet than Melia",
+  "after": "Design is polished but not distinctive",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "The smart money says Radisson Blu",
+  "after": "The smart money says Radisson Hotel Danang",
+  "reason": "name"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "The Radisson Blu is the best value five-star on this stretch of Da Nang beach. Larger rooms, four pools, a real family programme, and consistent service, at prices 20-30% below the Hyatt and Marriott. If you're not locked into a specific loyalty program, there's no smarter booking here.",
+  "after": "The Radisson Hotel Danang is a polished, good-value beach hotel on My Khe: modern rooms, a rooftop infinity pool, family rooms for four and consistent service. If you're not locked into a specific loyalty program, it is a straightforward booking.",
+  "reason": "Remove unsupported 4 pools / price claim; Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "and the Radisson's more family-friendly atmosphere isn't what you're after",
+  "after": "and the Radisson's more straightforward beach-hotel feel isn't what you're after",
+  "reason": "Radisson Hotel Danang: 182 rooms, My Khe (across the road), rooftop infinity pool, Trip.com lists a kids' club; not Radisson Blu, not a resort; sizes/pool count unverified"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Both are similar in setting and style; compare the trade-offs above against the rates for your dates.",
+  "after": "They differ in setting (Non Nuoc Beach versus My Khe Beach) and style; compare the trade-offs above against the rates for your dates.",
+  "reason": "different beaches"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Radisson Blu Resort Danang",
+  "after": "Radisson Hotel Danang",
+  "reason": "name is Radisson Hotel Danang (x13)"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Radisson Blu",
+  "after": "Radisson Hotel Danang",
+  "reason": "name is Radisson Hotel Danang (not Blu) (x22)"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Melia vs Radisson Hotel Danang",
+  "after": "Melia vs Radisson Hotel Danang",
+  "reason": "noop (x4)"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": "Radisson Hotel Danang Danang",
+  "after": "Radisson Hotel Danang",
+  "reason": "fix doubled word after rename (x4)"
+ },
+ {
+  "file": "melia-vs-radisson-blu-da-nang.html",
+  "before": ">Non Nuoc Beach</div> (Radisson card eyebrow)",
+  "after": ">My Khe Beach</div>",
+  "reason": "Radisson Hotel Danang is on My Khe"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Furama sits flat on My Khe beachfront with mature gardens",
+  "after": "Furama sits flat on the Bac My An beachfront, south of My Khe, with mature gardens",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Five pool levels cascading down a private bay",
+  "after": "A long infinity pool, a garden pool and a kids pool above a private bay",
+  "reason": "InterContinental: three resort pools (long infinity, Garden, Kids) per official site; kids club exists; Hoi An 48 min by routing estimate"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Five pool levels cascade down the hillside toward the bay, each with a different vantage, and every room",
+  "after": "The long infinity pool and the resort's other pools sit on the hillside above the bay, and every room",
+  "reason": "InterContinental: three resort pools (long infinity, Garden, Kids) per official site; kids club exists; Hoi An 48 min by routing estimate"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "15 minutes from An Thuong and the city center",
+  "after": "About 11 km by road from the airport, and about 5.7 km (roughly 7 minutes without traffic, routing estimate) from Dragon Bridge",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "2km of open My Khe beach",
+  "after": "Open beach on the Bac My An strip, south of My Khe",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Quick access to An Thuong's restaurants and My Khe's beach bars",
+  "after": "Quicker access to the city's restaurants and beach bars than the InterContinental",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Adult-focused atmosphere with limited kids facilities",
+  "after": "Adult-focused atmosphere, though there is a complimentary Planet Trekkers kids club (ages 4-12)",
+  "reason": "InterContinental: three resort pools (long infinity, Garden, Kids) per official site; kids club exists; Hoi An 48 min by routing estimate"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Open My Khe beach, not the private, sheltered setting",
+  "after": "Open public beach, not the private, sheltered setting",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "an easy 15-minute run to the city,",
+  "after": "an easy run to the city,",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Furama is slightly closer to Hoi An at around 40 minutes by Grab. InterContinental on Son Tra Peninsula is about 45 minutes.",
+  "after": "Furama is closer to Hoi An: about 30 km by road, roughly 27 minutes without traffic (routing estimate). The InterContinental on Son Tra Peninsula is about 48 km by road, roughly 48 minutes without traffic.",
+  "reason": "Furama at 103-105 Vo Nguyen Giap, Bac My An south of My Khe; routes.json: airport 11.3 km, Dragon Bridge 5.7 km/7 min, Hoi An 27 min; InterContinental: three resort pools (long infinity, Garden, Kids) per official site; kids club exists; Hoi An 48 min by routing estimate (x2)"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "The difference is small, but Furama is on the south side of Da Nang, which puts it marginally closer to the Hoi An road.",
+  "after": "The difference is real: Furama is on the south side of Da Nang, which puts it much closer to the Hoi An road.",
+  "reason": "routes: 27 vs 48 min"
+ },
+ {
+  "file": "intercontinental-vs-furama-da-nang.html",
+  "before": "Furama is closer to Hoi An: about 30 km by road, roughly 27 minutes without traffic (routing estimate). The InterContinental on Son Tra Peninsula is about 48 km by road, roughly 48 minutes without traffic.",
+  "after": "Furama is closer to Hoi An: about 23 km by road, roughly 27 minutes without traffic (routing estimate). The InterContinental on Son Tra Peninsula is roughly 48 minutes without traffic.",
+  "reason": "Furama review: Hoi An ~23 km/27 min; routes.json Intercon 48 min (x2)"
+ },
+ {
+  "file": "da-nang-guide-for-australian-travelers.html",
+  "before": "Best kids club on My Khe, waterslides, connecting rooms.",
+  "after": "Kids club, waterslides, connecting rooms, on the Truong Sa coast south of My Khe.",
+  "reason": "Sheraton Grand is on Truong Sa coast south of My Khe"
+ },
+ {
+  "file": "da-nang-guide-for-australian-travelers.html",
+  "before": "Five pools, direct My Khe access, World of Hyatt points.",
+  "after": "Five pools, direct beach access on the Non Nuoc / Truong Sa coast south of My Khe, World of Hyatt points.",
+  "reason": "Hyatt is Non Nuoc coast, not My Khe"
+ },
+ {
+  "file": "da-nang-guide-for-australian-travelers.html",
+  "before": "rooftop infinity pool, My Khe Beach. From ~AUD $90/night.",
+  "after": "rooftop infinity pool, across the road from My Khe Beach. From ~AUD $90/night.",
+  "reason": "A La Carte is across the road from the beach"
+ },
+ {
+  "file": "azura-da-nang.html",
+  "before": ">Radisson Blu Resort Danang</a>",
+  "after": ">Radisson Hotel Danang</a>",
+  "reason": "Radisson Hotel Danang is the correct name"
+ },
+ {
+  "file": "da-nang-hotel-prices.html",
+  "before": "you get genuine beachfront rooms for $95",
+  "after": "you get rooms across the road from the beach for $95",
+  "reason": "A La Carte, Four Points and TMS are across Vo Nguyen Giap from the sand, not directly on it"
+ },
+ {
+  "file": "da-nang-hotel-prices.html",
+  "before": "established 5-star resorts along Non Nuoc, places like",
+  "after": "established 5-star resorts along Non Nuoc and the Truong Sa coast, places like",
+  "reason": "Sheraton Grand/Marriott/Hyatt on Truong Sa coast (x2)"
+ },
+ {
+  "file": "dragon-bridge-da-nang.html",
+  "before": ">Stay on the east bank<",
+  "after": ">Stay along the river<",
+  "reason": "Novotel is on the west bank of the Han (36 Bach Dang)"
+ },
+ {
+  "file": "dragon-bridge-da-nang.html",
+  "before": "Hotels on the east bank of the Han River, the Novotel, Calix Hotel area, give you walking distance and the best view angles.",
+  "after": "Hotels along the Han River, the Novotel and Calix Hotel area, keep the bridge close and give you good view angles. The Novotel is about 2.4 km on foot (roughly 32 minutes), so most people will take a short taxi ride.",
+  "reason": "routes.json Novotel to Dragon Bridge walking 2.4 km/32 min"
+ },
+ {
+  "file": "sheraton-vs-hyatt-regency-da-nang.html",
+  "before": "Both resorts sit on the same general stretch of beach with comparable airport and city travel times, roughly 18-20 minutes either way. Sheraton is a touch closer to the city; Hyatt is marginally closer to Marble Mountain and Hoi An day trips.",
+  "after": "Both resorts sit on the same general stretch of coast south of My Khe, with similar travel times. Hyatt is about 14.6 km by road from the airport (roughly 17 minutes without traffic) and about 9 km from Dragon Bridge (roughly 11 minutes); Sheraton is about 16 km (roughly 21 minutes) and about 13 km (roughly 16 minutes). Sheraton is the closer of the two to Hoi An day trips, roughly 20 minutes versus 23 (all routing estimates).",
+  "reason": "routes.json: Hyatt is closer to airport/city, Sheraton closer to Hoi An"
+ },
+ {
+  "file": "sheraton-vs-hyatt-regency-da-nang.html",
+  "before": "(5 pools + 100m beachfront pool)",
+  "after": "(5 outdoor pools)",
+  "reason": "Hyatt has 5 outdoor pools; '5 + 100m pool' implies 6"
+ },
+ {
+  "file": "sheraton-vs-hyatt-regency-da-nang.html",
+  "before": "Hyatt counters with five pools total, including a 100-metre beachfront pool, which",
+  "after": "Hyatt counters with five pools in total, which",
+  "reason": "pool count"
+ },
+ {
+  "file": "sheraton-vs-hyatt-regency-da-nang.html",
+  "before": "Five pools including a 100-metre beachfront pool beats the Sheraton's one dramatic pool",
+  "after": "Five pools beat the Sheraton's one dramatic pool",
+  "reason": "pool count; 100 m pool unverified"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Muong Thanh Luxury is listed one to two minutes from the sand, and our review puts the strip two minutes from Wyndham Soleil.",
+  "after": "Muong Thanh Luxury is across the road from the sand (about a 1-minute walk), and Wyndham Soleil is about a 3-minute walk (0.2 km) from the beach, with the restaurant strip a short walk away.",
+  "reason": "Muong Thanh: across the road, ~0.1 km foot route, ~1 min (adopted review wording); '47 m, closest on the strip' unsupported; Wyndham Soleil beach ~0.2 km/3 min on foot (adopted review wording)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "On My Khe the sand is a minute or two on foot from Muong Thanh Luxury and a minute from Wyndham Soleil.",
+  "after": "On My Khe the sand is about a minute on foot from Muong Thanh Luxury (across the road) and about 3 minutes from Wyndham Soleil.",
+  "reason": "Muong Thanh: across the road, ~0.1 km foot route, ~1 min (adopted review wording); '47 m, closest on the strip' unsupported; Wyndham Soleil beach ~0.2 km/3 min on foot (adopted review wording)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "The sand is 47 metres away, the closest on the strip, and the seafood restaurant strip is a five-minute walk.",
+  "after": "The beach is across the road, about a 1-minute walk, and the seafood restaurant strip is a five-minute walk.",
+  "reason": "Muong Thanh: across the road, ~0.1 km foot route, ~1 min (adopted review wording); '47 m, closest on the strip' unsupported"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "Beach: 1 min walk",
+  "after": "Beach: ~3 min walk",
+  "reason": "Wyndham Soleil beach ~0.2 km/3 min on foot (adopted review wording)"
+ },
+ {
+  "file": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "before": "The beach is a minute’s walk from the entrance and the restaurant strip two minutes on foot.",
+  "after": "The beach is about a 3-minute walk (0.2 km) from the entrance, with the restaurant strip a short walk away.",
+  "reason": "Wyndham Soleil beach ~0.2 km/3 min on foot (adopted review wording)"
+ }
+]

@@ -1,0 +1,146 @@
+[
+ {
+  "before": "all-villa resort on Son Tra Peninsula, private pools, family villas from $200/night.",
+  "after": "all-villa resort on My Khe Beach, private pools, family villas.",
+  "reason": "Not on Son Tra Peninsula (99 Vo Nguyen Giap, Ngu Hanh Son); '$200/night' unverifiable and inconsistent with FAQ $300",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "2026 rates for this Son Tra Peninsula property.",
+  "after": "2026 rates for this My Khe Beach property.",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "On the tip of Son Tra Peninsula, directly facing My Khe Beach. About 10 km from the city centre and 13 km from Da Nang Airport.",
+  "after": "On My Khe Beach in Ngu Hanh Son, at 99 Vo Nguyen Giap Street. About 5.5 km by road from Dragon Bridge and Han Market (routing estimate, roughly 7 minutes without traffic) and about 11.6 km by road from Da Nang Airport.",
+  "reason": "Official address; OSRM distances",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "5-Star Villa Resort · Son Tra Peninsula",
+  "after": "5-Star Villa Resort · My Khe Beach",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Son Tra Peninsula</div>",
+  "after": "<div class=\"hr-snap-val\">My Khe Beach</div>",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "Best for families &amp; villa stays in Son Tra Peninsula.",
+  "after": "Best for families &amp; villa stays on My Khe Beach.",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "The position on Son Tra Peninsula is hard to describe",
+  "after": "The position on My Khe Beach is hard to describe",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "The resort occupies the southern tip, so the sea is in almost every direction: My Khe Beach stretching south on one side, the quieter waters of the bay on the other, the Son Tra forest rising behind.",
+  "after": "The resort sits right on My Khe Beach in Ngu Hanh Son, with the sea in front of you and the beach stretching away along the coast.",
+  "reason": "Not on the Son Tra tip",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "The combination of the peninsula position, the private pool",
+  "after": "The combination of the beachfront position, the private pool",
+  "reason": "area correction",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "specifically for the beachfront villas rather than the hillside category.",
+  "after": "specifically for the beachfront villas rather than the garden villas.",
+  "reason": "Official categories: garden, beach-access, beachfront; no hillside",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "All 111 villas have private infinity pools. Two-bedroom hillside villas run around 200 square metres, three-bedroom beachfront options push to 600.",
+  "after": "Every villa has its own private pool. Garden villas run around 300 to 330 square metres with four bedrooms, and the beachfront villas are about 511 square metres, also with four bedrooms (per the resort's listing).",
+  "reason": "Official: garden 300-330 sqm, beachfront 511 sqm, 4BR; villa count unverified",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "A three-bedroom beachfront villa if traveling as a family, worth the jump from hillside for the kitchen",
+  "after": "A beachfront villa if traveling as a family, worth the jump from the garden villas for the kitchen",
+  "reason": "no three-bedroom/hillside category",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": ">Three-Sided Ocean Views + Private Pools<",
+  "after": ">Ocean Views + Private Pools<",
+  "reason": "three-sided views claim tied to wrong location",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "and the Son Tra Peninsula position gives three-sided ocean views no other Da Nang resort can offer.",
+  "after": "and the beachfront position gives the villas sea views.",
+  "reason": "not on Son Tra tip; superlative unverifiable",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "Couples do just as well in the smaller hillside villas, where the same private pool and dual-ocean setting apply without the extra bedrooms.",
+  "after": "Couples do just as well in the garden villas, where the same private pool applies.",
+  "reason": "no hillside/smaller category found",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": ">Three-sided ocean views<",
+  "after": ">Beachfront setting<",
+  "reason": "claim tied to wrong location",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "A position no other Da Nang resort has, from the southern tip of Son Tra Peninsula, sea in almost every direction.",
+  "after": "Right on My Khe Beach, with the sea in front of the villas.",
+  "reason": "not on Son Tra tip",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "You're 22 minutes from Dragon Bridge and 40 minutes from Hoi An, not prohibitive,",
+  "after": "You're about 7 minutes by road from Dragon Bridge (5.5 km) and about 28 minutes from Hoi An (roughly 24 km), both routing estimates without traffic, not prohibitive,",
+  "reason": "OSRM 7.0 min / 28.1 min",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "<strong>City centre:</strong> 22 min taxi</span>",
+  "after": "<strong>Dragon Bridge:</strong> ~7 min by road (est.)</span>",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "<strong>Airport:</strong> 13 km</span>",
+  "after": "<strong>Airport:</strong> ~11.6 km by road</span>",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "<strong>Hoi An:</strong> 40 min</span>",
+  "after": "<strong>Hoi An:</strong> ~28 min by road (est.)</span>",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "On the tip of Son Tra Peninsula, directly facing My Khe Beach, about 10km from the city centre and 13km from the airport.",
+  "after": "On My Khe Beach in Ngu Hanh Son (99 Vo Nguyen Giap Street), about 5.5km by road from Dragon Bridge and Han Market and about 11.6km by road from the airport (routing estimates).",
+  "reason": "Official address; OSRM",
+  "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+ },
+ {
+  "before": "Dragon Bridge is 22 minutes by taxi and Hoi An is about 40 minutes, both doable as day trips",
+  "after": "Dragon Bridge is about 7 minutes by road (routing estimate, no traffic) and Hoi An about 28 minutes, both easy day trips",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "The upside is the position itself, sea on nearly every side, which no city-centre or My Khe-strip hotel can replicate. The My Khe restaurant strip is a five-minute walk if you want fresh seafood grills without a full taxi trip into town.",
+  "after": "The upside is the position itself, right on My Khe Beach with the sea in front of you. The My Khe restaurant strip is close by if you want fresh seafood grills without a full taxi trip into town.",
+  "reason": "position claims; 5-minute walk unverified",
+  "source": "https://nominatim.openstreetmap.org/search"
+ }
+]

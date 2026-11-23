@@ -1,0 +1,728 @@
+{
+ "tms-hotel-da-nang": {
+  "official_name": "TMS Hotel Da Nang Beach",
+  "brand": "TMS Hotels (TMS Group)",
+  "operator_owner": "TMS Group (not verified from an opened source)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "TMS Luxury Hotel Da Nang Beach (Booking.com URL slug tms-luxury-danang-beach)"
+  ],
+  "name_note": "Listings use 'TMS Hotel Da Nang Beach'; Booking.com URL slug says 'TMS Luxury Danang Beach'. Hotel's own site not opened.",
+  "address": "292 Vo Nguyen Giap Street, Da Nang",
+  "ward_district": "Ngu Hanh Son ward (post-2025 merger; older listings: My An ward, Ngu Hanh Son district)",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "OSM coords 16.0512N: southern part of My Khe on Vo Nguyen Giap, ~5.5 km straight line from the airport. Borderline south-my-khe; listings say My An / Ngu Hanh Son.",
+  "website": "unknown (not opened)",
+  "lat": 16.051152,
+  "lng": 108.2480701,
+  "coord_source": "OSM Nominatim: 'TMS Hotel Da Nang Beach, 292, Duong Vo Nguyen Giap' (address matches listings)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.52,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 12.44,
+    "minutes": 14,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 2.43,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 4.42,
+    "minutes": 5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 3.18,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 4.57,
+    "minutes": 5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 9.1,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 13.54,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.16,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.53,
+    "minutes": 1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.2,
+    "minutes": 3,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest OSM coastline node; shoreline node, not beach access point",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   }
+  ],
+  "beach_access": {
+   "value": "short_walk",
+   "note": "OSM shoreline ~156 m straight line; OSRM foot ~0.2 km / 3 min to shoreline node. Thomas Cook says 'directly across the road from My Khe Beach'. Trip.com conflicting 170 m vs 610 m vs 1.6 km (search snippets, UK page 610 m); OSM geometry supports ~170 m and is not 'direct, no road'. Kayak: 0.9 mi (~1.4 km) to My Khe (likely to a centre point; not credible as shore distance) while also tagged beachfront.",
+   "sources": [
+    "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+    "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp",
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-24529624/tms-hotel-da-nang-beach/ (search snippet only)"
+   ]
+  },
+  "pools": [
+   {
+    "type": "rooftop",
+    "note": "Rooftop infinity pool, glass-walled; some sources say 25th floor (search snippet only).",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool plus shallower sections of rooftop pool",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+     "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp"
+    ]
+   }
+  ],
+  "pool_summary": "One rooftop infinity pool (small, crowded at peak per reviewers) plus a children's pool.",
+  "rooftop": {
+   "rooftop_pool": "yes",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+   ],
+   "note": "Rooftop 'Magic Lounge' serves craft cocktails and light bites."
+  },
+  "club_lounge": {
+   "value": "no",
+   "name": "",
+   "details": "None mentioned on Thomas Cook or Kayak pages; not proven absent.",
+   "sources": [
+    "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+    "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+   ]
+  },
+  "family_facilities": [
+   "Free children's club (Thomas Cook)",
+   "Children's pool",
+   "Sofa beds in some rooms (Kayak)"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Savour (breakfast buffet restaurant)",
+   "Magic Lounge (rooftop bar)",
+   "Coffee shop/cafe",
+   "Snack bar/deli"
+  ],
+  "room_categories": [
+   "Standard",
+   "Premier (king/twin)",
+   "Queen",
+   "Double",
+   "Ocean-view options"
+  ],
+  "multi_bedroom_options": "none seen",
+  "distinctive_amenities": [
+   "Rooftop infinity pool",
+   "Rooftop lounge bar",
+   "Steam room/sauna (Melange Spa)",
+   "Free and valet parking (Kayak)"
+  ],
+  "claims_check": [
+   {
+    "claim": "Area My Khe Beach / 'Beach Direct, no road'",
+    "verdict": "contradicted",
+    "evidence": "Thomas Cook: directly across the road from My Khe. OSM shoreline ~156 m; foot route ~3 min. Hotel is on Vo Nguyen Giap with the road between it and the beach (not asserted by sources beyond Thomas Cook).",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+    ]
+   },
+   {
+    "claim": "Sun lounger and umbrella service sits directly in front of the property",
+    "verdict": "unverifiable",
+    "evidence": "No opened source confirms.",
+    "sources": []
+   },
+   {
+    "claim": "Infinity pool on the roof; rooftop bar alongside it",
+    "verdict": "supported",
+    "evidence": "Thomas Cook: rooftop infinity pool; rooftop Magic Lounge. Kayak lists outdoor pool, AI summary says rooftop.",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+     "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp"
+    ]
+   },
+   {
+    "claim": "155 rooms",
+    "verdict": "unverifiable",
+    "evidence": "Room count not stated on opened pages.",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+    ]
+   },
+   {
+    "claim": "Rooms run 30-38 sqm",
+    "verdict": "unverifiable",
+    "evidence": "No sizes on opened pages.",
+    "sources": [
+     "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp"
+    ]
+   },
+   {
+    "claim": "Families who don't need a kids' club",
+    "verdict": "contradicted",
+    "evidence": "Thomas Cook lists a free children's club and children's pool (editorial framing, but the hotel does have one).",
+    "sources": [
+     "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/"
+    ]
+   },
+   {
+    "claim": "My Khe seafood strip within 2-5 minutes in either direction",
+    "verdict": "unverifiable",
+    "evidence": "Not checked.",
+    "sources": []
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official site not reachable; evidence is Thomas Cook, Kayak, search snippets. Booking.com page returned empty. Trip.com distance conflict resolved in favour of OSM geometry (~156 m shoreline)."
+ },
+ "muong-thanh-luxury-da-nang": {
+  "official_name": "Muong Thanh Luxury Da Nang Hotel",
+  "brand": "Muong Thanh Hospitality (Muong Thanh Luxury)",
+  "operator_owner": "Muong Thanh Group (domestic chain; ownership not verified from an opened source)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Muong Thanh Da Nang (OSM name)"
+  ],
+  "name_note": "Distinct from nearby Muong Thanh Residence Da Nang, which a search snippet showed at the same street address. Listings: 4.5 vs 5 stars vary.",
+  "address": "270 Vo Nguyen Giap Street, Da Nang",
+  "ward_district": "Ngu Hanh Son ward (older: My An / Bac My Phu ward, Ngu Hanh Son district)",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "OSM 16.0537N: My Khe south-central on Vo Nguyen Giap; Trip.com shows Bac My Phu, Ngu Hanh Son. Borderline south-my-khe.",
+  "website": "unknown (muongthanh.com path 404)",
+  "lat": 16.0537171,
+  "lng": 108.2473364,
+  "coord_source": "OSM Nominatim: 'Muong Thanh Da Nang, 270, Duong Vo Nguyen Giap'",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.5,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 12.49,
+    "minutes": 14,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 2.24,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 4.65,
+    "minutes": 6,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.95,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 4.8,
+    "minutes": 6,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 9.08,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 13.59,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.15,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.4,
+    "minutes": 1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.11,
+    "minutes": 1,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest OSM coastline node; shoreline node, not beach access point",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   }
+  ],
+  "beach_access": {
+   "value": "short_walk",
+   "note": "Trip.com: Bai Tam T20 ~60 m, My Khe beach ~340 m, 'within 5-minute walk of My Khe'. OSM shoreline node 152 m (road crossing between). Our '47 m' not supported by either.",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Outdoor pool with view listed on Trip.com; description also mentions an indoor pool (Expedia snippet: indoor + children's). No rooftop pool listed.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   }
+  ],
+  "pool_summary": "Outdoor pool (Trip.com); indoor and children's pool in Expedia snippet (not opened). Pool types conflict across sources.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+   ],
+   "note": "Trip.com mentions a rooftop bar in reviews; no rooftop pool listed."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "Trip.com page did not mention an executive lounge.",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+   ]
+  },
+  "kids_club": {
+   "value": "unknown",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+   ]
+  },
+  "family_facilities": [
+   "Children's meals"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Kim Son (international)",
+   "Breakfast buffet restaurant",
+   "2 bars/lounges incl. rooftop bar"
+  ],
+  "room_categories": [
+   "Deluxe King City (33 sqm)",
+   "Deluxe Twin Ocean View (33 sqm)",
+   "Grand Suite Ocean View With Jacuzzi (89 sqm)",
+   "Presidential Suite (405 sqm)",
+   "3 more types"
+  ],
+  "multi_bedroom_options": "unknown",
+  "distinctive_amenities": [
+   "583 rooms (Trip.com, Agoda snippet)",
+   "Jacuzzi grand suites",
+   "Spa, foot bath"
+  ],
+  "claims_check": [
+   {
+    "claim": "47 metres from My Khe Beach",
+    "verdict": "contradicted",
+    "evidence": "Trip.com: 60 m to T20 beach, 340 m to My Khe; OSM shoreline 152 m, foot ~110 m route to shoreline node.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   },
+   {
+    "claim": "The outdoor pool sits adjacent, small and functional",
+    "verdict": "supported",
+    "evidence": "Trip.com lists an outdoor pool; size not checked. Indoor pool also mentioned by listings.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   },
+   {
+    "claim": "Rooftop bar worth visiting at sunset",
+    "verdict": "supported",
+    "evidence": "Trip.com mentions rooftop bar.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   },
+   {
+    "claim": "Rooms 30-40 sqm",
+    "verdict": "supported",
+    "evidence": "Deluxe rooms 33 sqm; suites far larger (89, 405 sqm).",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   },
+   {
+    "claim": "$148 cheaper than average five-star",
+    "verdict": "unverifiable",
+    "evidence": "Price comparison not checked.",
+    "sources": []
+   },
+   {
+    "claim": "Walk five minutes to seafood grills",
+    "verdict": "unverifiable",
+    "evidence": "Not checked.",
+    "sources": []
+   },
+   {
+    "claim": "Gym equipment limited",
+    "verdict": "unverifiable",
+    "evidence": "Opinion-like; page only lists a Fitness Room.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "No official site opened. Agoda page is JS-only; Expedia returned 429 (only search snippets). Coordinates are from OSM 'Muong Thanh Da Nang' at 270 VNG."
+ },
+ "wyndham-soleil-da-nang": {
+  "official_name": "Wyndham Soleil Danang",
+  "brand": "Wyndham (Wyndham Hotels & Resorts)",
+  "operator_owner": "unknown (Wyndham-branded; owner not verified)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Do not confuse with Wyndham Danang Golden Bay (different hotel). Opened 2025 per Trip.com.",
+  "address": "02 Pham Van Dong, Danang 550000 (official Wyndham page); OSM/Trip.com/Priceline: 194 Vo Nguyen Giap, An Hai",
+  "ward_district": "An Hai ward, Da Nang (formerly Son Tra district)",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "OSM 16.0713N, north My Khe by East Sea Park (official page: across from East Sea Park, near My Khe and Pham Van Dong beach). Hotels.com snippet tags Son Tra. Official postal address 02 Pham Van Dong and OSM 194 Vo Nguyen Giap are the same building at the corner.",
+  "website": "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+  "lat": 16.0712945,
+  "lng": 108.2443844,
+  "coord_source": "OSM Nominatim: 'Wyndham Soleil Danang, 194 Duong Vo Nguyen Giap, An Hai'",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.97,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 13.07,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 2.09,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 4.0,
+    "minutes": 5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.17,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 4.15,
+    "minutes": 4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 8.98,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 11.25,
+    "minutes": 12,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.28,
+    "minutes": null,
+    "method": "great-circle from OSM hotel coords to landmark (My Khe: nearest OSM natural=coastline node)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.42,
+    "minutes": 1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.21,
+    "minutes": 3,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest OSM coastline node; shoreline node, not beach access point",
+    "source": "https://nominatim.openstreetmap.org/search + https://overpass-api.de/api/interpreter + https://router.project-osrm.org"
+   },
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 6,
+    "minutes": null,
+    "method": "stated by hotel (about six kilometers)",
+    "source": "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.31,
+    "minutes": null,
+    "method": "stated by Trip.com listing (310 m)",
+    "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+   }
+  ],
+  "beach_access": {
+   "value": "short_walk",
+   "note": "OSM shoreline 279 m; OSRM foot ~0.21 km / 3 min; Trip.com 310 m; Wyndham says near My Khe and Pham Van Dong Beach. Not 'a minute's walk'.",
+   "sources": [
+    "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+    "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Two outdoor pools incl. a children's pool (official). Trip.com tags infinity pool.",
+    "sources": [
+     "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool",
+    "sources": [
+     "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+     "https://www.priceline.com/hotel-deals/en-us/P5000491951/H500002196/wyndham-soleil-danang.ssp"
+    ]
+   },
+   {
+    "type": "infinity",
+    "note": "Trip.com amenity tag 'infinity pool'; not confirmed by official",
+    "sources": [
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   }
+  ],
+  "pool_summary": "Two outdoor pools including a kids pool, fourth-floor pool bar (official). Infinity tag only on Trip.com. Not rooftop.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview"
+   ],
+   "note": "Pools and pool bar are on the 4th floor (podium), not rooftop; rooftop bar not found."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "Executive lounge",
+   "details": "Trip.com lists 'Executive lounge'; official page mentions VIP services/executive floors but does not describe a lounge; Priceline does not describe one.",
+   "sources": [
+    "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+    "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+    "https://www.priceline.com/hotel-deals/en-us/P5000491951/H500002196/wyndham-soleil-danang.ssp"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+    "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club (official)",
+   "Children's pool",
+   "Free playground (Trip.com)",
+   "Trampoline (Expedia snippet)"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Le Grande (all-day)",
+   "Cafe Pronto",
+   "Fourth-floor pool bar"
+  ],
+  "room_categories": [
+   "Deluxe Studio (twin/king, city or ocean)",
+   "Family Suites (1-bedroom, partial/ocean view)",
+   "Duplex (3 bedrooms)"
+  ],
+  "multi_bedroom_options": "Trip.com shows 3-bedroom Duplex units and 1-bedroom family suites (18 room types). Two-bedroom family suite not seen on opened pages (Hotels.com snippet only).",
+  "distinctive_amenities": [
+   "882 rooms per official page and Trip.com (Expedia snippet says 380: conflicts, trust official)",
+   "Spa with sauna, steam, hot tub",
+   "Across from East Sea Park"
+  ],
+  "claims_check": [
+   {
+    "claim": "The beach is a minute's walk",
+    "verdict": "contradicted",
+    "evidence": "OSM shoreline 279 m; foot route ~3 min; Trip.com 310 m.",
+    "sources": [
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   },
+   {
+    "claim": "34-floor tower / 34th floor",
+    "verdict": "unverifiable",
+    "evidence": "No opened source gives floors (one reviewer on 30th floor).",
+    "sources": [
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   },
+   {
+    "claim": "Two-bedroom family suites on the 34th floor",
+    "verdict": "unverifiable",
+    "evidence": "Opened pages list 1-bedroom family suites and 3-bedroom duplexes; two-bedroom not confirmed.",
+    "sources": [
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   },
+   {
+    "claim": "An outdoor pool with sea views",
+    "verdict": "supported",
+    "evidence": "Official: two outdoor pools incl. children's; Trip.com lists infinity pool. Review omits second/kids pool.",
+    "sources": [
+     "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+     "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup"
+    ]
+   },
+   {
+    "claim": "Park across the street (karaoke noise)",
+    "verdict": "supported",
+    "evidence": "Official: across from East Sea Park (noise itself unverified).",
+    "sources": [
+     "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview"
+    ]
+   },
+   {
+    "claim": "Area My Khe Beach",
+    "verdict": "supported",
+    "evidence": "Official page: near My Khe Beach; north My Khe/An Hai.",
+    "sources": [
+     "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official page opened via WebFetch (address 02 Pham Van Dong; 882 rooms). Rooms/amenity pages on wyndhamhotels.com returned no content."
+ }
+}

@@ -3,6 +3,7 @@
    - Reuses the page's own primary Trip.com link (same href); loads nothing from Trip.com. Clicks are tracked by tripcom-cta.js (one affiliate_click).
    - Never shown while the cookie banner or the mobile menu is open; dismissible for the session. */
 (function () {
+  if (window.DN_STICKY) return; window.DN_STICKY = true;
   'use strict';
   var d = document;
   var src = d.querySelector('.dn-decide--early a.tc-btn') || d.querySelector('.dnc-hero a.tc-btn');

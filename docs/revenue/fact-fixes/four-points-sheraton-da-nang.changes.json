@@ -1,0 +1,26 @@
+[
+ {
+  "before": "FAQ: 5 km Dragon Bridge, 7 km airport; 'On My Khe Beach'",
+  "after": "4.6 km and 13.7 km by road, across the street (Marriott 0.5 km)",
+  "reason": "OSRM; Marriott",
+  "source": "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/ ; https://router.project-osrm.org"
+ },
+ {
+  "before": "The ground-level pool sits between the hotel and the sand",
+  "after": "rooftop pool on the 36th floor, plus separate kids' pool",
+  "reason": "Marriott lists rooftop and kids pools only",
+  "source": "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/ ; https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+ },
+ {
+  "before": "Directly on the sand, twelve minutes from everything; Direct access; directly on beach stretch; direct My Khe access",
+  "after": "Across the street wording",
+  "reason": "Beach is across the seafront road",
+  "source": "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+ },
+ {
+  "before": "My Grab to the airport ran about 12 minutes, Dragon Bridge another 12 from there",
+  "after": "13.7 km by road (~16 min) and 4.6 km (~5 min) from the hotel, routing estimates",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org"
+ }
+]

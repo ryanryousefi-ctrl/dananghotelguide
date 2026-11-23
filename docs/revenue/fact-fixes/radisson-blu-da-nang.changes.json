@@ -1,0 +1,219 @@
+[
+ {
+  "before": "Radisson Blu Resort Danang Review, Worth It? (2026)",
+  "after": "Radisson Hotel Danang Review, Worth It? (2026)",
+  "reason": "Property is Radisson Hotel Danang, not Radisson Blu Resort",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 4
+ },
+ {
+  "before": "Radisson Blu Resort Danang review 2026: stylish Non Nuoc beachfront resort from $100/night. Consistently underrated, one of Da Nang's best value 5-stars.",
+  "after": "Radisson Hotel Danang review 2026: upscale My Khe Beach hotel with a rooftop infinity pool, across the road from the sand. Is it good value?",
+  "reason": "Wrong name, wrong area (My Khe not Non Nuoc), not a resort; unverifiable price/superlative",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 3
+ },
+ {
+  "before": "Independent review of Radisson Blu Resort Danang. My Khe Beach, five-star resort facilities, and 2026 rates.",
+  "after": "Independent review of Radisson Hotel Danang. My Khe Beach, rooftop infinity pool, and 2026 rates.",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\":\"Radisson Blu Resort Danang Review\"",
+  "after": "\"name\":\"Radisson Hotel Danang Review\"",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\":\"Is Radisson Blu Resort Danang worth",
+  "after": "\"name\":\"Is Radisson Hotel Danang worth",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "Yes, the Radisson Blu Danang is a polished five-star beach resort with strong pool facilities, direct My Khe Beach access, and a reliable upper-upscale service standard.",
+  "after": "Yes, the Radisson Hotel Danang is a polished upscale beach hotel with a rooftop infinity pool, an easy walk across the road to My Khe Beach, and a reliable Radisson service standard.",
+  "reason": "Not a resort, not Radisson Blu; official tier is upscale",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 2
+ },
+ {
+  "before": "\"name\":\"How much does Radisson Blu Resort Danang cost",
+  "after": "\"name\":\"How much does Radisson Hotel Danang cost",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "Rates start around $150–$195/night in low season. Peak season runs $260–$390/night.",
+  "after": "Check current rates on Trip.com, pricing varies by season and room type.",
+  "reason": "Unverifiable rate figures",
+  "source": "",
+  "occurrences": 2
+ },
+ {
+  "before": "\"name\":\"Where is Radisson Blu Resort Danang located",
+  "after": "\"name\":\"Where is Radisson Hotel Danang located",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "On My Khe Beach, approximately 7 km from Dragon Bridge and 9 km from Da Nang Airport.",
+  "after": "At 170 Vo Nguyen Giap, about 150 m from My Khe Beach. Dragon Bridge is about 2.3 km in a straight line (about 4.2 km by road) and Da Nang International Airport about 6.2 km in a straight line (about 13 km by road, roughly 16 minutes without traffic, routing estimate).",
+  "reason": "Wrong distances (7/9 km); computed straight-line and OSRM road",
+  "source": "https://nominatim.openstreetmap.org (OSM/Trip coords); https://router.project-osrm.org; https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 2
+ },
+ {
+  "before": "<h1>Radisson Blu Resort Danang</h1>",
+  "after": "<h1>Radisson Hotel Danang</h1>",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "5-Star Beach Resort · My Khe Beach",
+  "after": "5-Star Beach Hotel · My Khe Beach",
+  "reason": "Not a resort",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "a standard hotel-tier brand rather than the premium tier.",
+  "after": "the Radisson brand rather than the Radisson Blu line.",
+  "reason": "Tier description unverified; official tier upscale",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "that property does not appear to exist, the waterpark resort in Da Nang is Mikazuki, a separate Japanese-operated property in Lien Chieu district.",
+  "after": "we found no Radisson Blu in Da Nang itself; the Radisson Blu Resort we could find is in Hoi An (Dien Ban), not in Da Nang.",
+  "reason": "Radisson Blu Resort Hoi An exists; Mikazuki claim unverified",
+  "source": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-resort-hoi-an",
+  "occurrences": 1
+ },
+ {
+  "before": "Four-person family rooms at 70 square metres offer real space for travelling families, and executive suites at 70 square metres are also available at the top of the standard range.",
+  "after": "Family rooms for four and executive suites with Executive Lounge access are also available.",
+  "reason": "70 sqm unverified; Executive suites w/ lounge access listed on Trip.com",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "A family room if travelling with kids, the 70sqm size is a genuine differentiator versus most beach hotels at this price.",
+  "after": "A family room if travelling with kids, for the extra space.",
+  "reason": "70 sqm unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "it passes cleanly, sunbeds, beach service, the full setup.",
+  "after": "it passes well, with the beach about 150 m away across the road.",
+  "reason": "Trip.com: beach 0.15 km; sunbed service unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "with a good rooftop pool over those chasing an expansive resort infrastructure with a kids' club and multiple restaurants, this property doesn't attempt that scale.",
+  "after": "with a good rooftop pool over those chasing expansive resort infrastructure and multiple restaurants, this property doesn't attempt that scale.",
+  "reason": "Kids' club listed on Trip.com, so 'no kids club' contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "Families get real value from the 70sqm four-person rooms, genuine space that most beach hotels at this price don't offer.",
+  "after": "Families get good value from the four-person family rooms, with real space for a group.",
+  "reason": "70 sqm unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "Right on My Khe, sunbeds and full beach service without complication.",
+  "after": "Across the road from My Khe (about 150 m per listings), an easy walk to the sand.",
+  "reason": "Beach is across the road; sunbed service unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "70sqm for four people, genuine family space that's rare at this price point on My Khe.",
+  "after": "Family rooms for four people, real space for travelling groups.",
+  "reason": "70 sqm unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "there's no kids' club and the spa is limited by resort standards,",
+  "after": "the spa is limited by resort standards,",
+  "reason": "Kids' club is listed on Trip.com; claim contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang",
+  "occurrences": 1
+ },
+ {
+  "before": "It's a 14-15 minute taxi to Dragon Bridge and the city centre, and worth being clear that this is the standard Radisson tier, not Radisson Blu,",
+  "after": "Dragon Bridge is about 4.2 km by road (roughly 5 minutes without traffic, routing estimate; allow longer at busy times), and worth being clear that this is the Radisson brand, not Radisson Blu,",
+  "reason": "OSRM driving 4.18 km/4.7 min",
+  "source": "https://nominatim.openstreetmap.org (OSM/Trip coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "the airport 12 minutes, and Dragon Bridge 14 minutes.",
+  "after": "the airport about 13 km by road (roughly 16 minutes without traffic, routing estimate), and Dragon Bridge about 4.2 km by road (roughly 5 minutes).",
+  "reason": "OSRM driving 13.25 km/16 min; 4.18 km/4.7 min",
+  "source": "https://nominatim.openstreetmap.org (OSM/Trip coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "Hoi An is 30 minutes south for a day trip.",
+  "after": "Hoi An old town is about 11 km by road (roughly 12 minutes without traffic, routing estimate) for a day trip.",
+  "reason": "OSRM driving 10.98 km/12.1 min",
+  "source": "https://nominatim.openstreetmap.org (OSM/Trip coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "<h2 class=\"hr-h2\">Radisson Blu Resort Danang: <em>FAQ</em></h2>",
+  "after": "<h2 class=\"hr-h2\">Radisson Hotel Danang: <em>FAQ</em></h2>",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "<summary>Is Radisson Blu Resort Danang worth",
+  "after": "<summary>Is Radisson Hotel Danang worth",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "<summary>How much does Radisson Blu Resort Danang cost",
+  "after": "<summary>How much does Radisson Hotel Danang cost",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "<summary>Where is Radisson Blu Resort Danang located",
+  "after": "<summary>Where is Radisson Hotel Danang located",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "alt=\"Radisson Danang room with ocean-facing balcony\"",
+  "after": "alt=\"Radisson Hotel Danang room with ocean-facing balcony\"",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ },
+ {
+  "before": "alt=\"Radisson Danang breakfast buffet spread\"",
+  "after": "alt=\"Radisson Hotel Danang breakfast buffet spread\"",
+  "reason": "name",
+  "source": "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+  "occurrences": 1
+ }
+]

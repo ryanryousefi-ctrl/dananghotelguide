@@ -464,7 +464,7 @@ button{font-family:var(--font-sans)}
 
 <link rel="stylesheet" href="search-ui.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"></noscript><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
 <style id="dn-dark">:is(.mk-map-wrap,
 .mk-map-stage,
 .mk-map-popup-link,
@@ -712,7 +712,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         </svg>
         <div class="mk-map-popup" id="mkMapPopup">
           <button class="mk-map-popup-close" id="mkMapPopupClose" aria-label="Close">&times;</button>
-          <img id="mkPopupImg" src="" alt="">
+          <img loading="lazy" decoding="async" id="mkPopupImg" src="" alt="">
           <div class="mk-map-popup-body">
             <div class="mk-map-popup-cat" id="mkPopupCat"></div>
             <div class="mk-map-popup-name" id="mkPopupName"></div>
@@ -753,15 +753,6 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
 <p class="dnc-sub">Once you have an area in mind, compare hotels and check available room rates for your travel dates.</p>
 <div class="dnc-actions"><a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="Compare Da Nang Hotel Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid tc-btn--lg" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-list-hero"><span class="tc-btn__text">Compare Da Nang Hotel Prices &rarr;</span></a><a class="dnc-ghost" href="compare-hotels.html?h=tms-hotel-da-nang,radisson-blu-da-nang,wyndham-soleil-da-nang">Compare Hotels Side by Side</a></div>
 <p class="dnc-note">Trip.com is an affiliate partner. We may earn a commission if you book, at no extra cost to you. Prices and availability are shown on Trip.com, not on this site.</p></div></section><!--/dn-c3:r:hero-->
-
-
-
-
-
-
-
-
-
 <!-- WHICH PART OF MY KHE -->
 <section class="mk-section">
   <div class="mk-section-inner">
@@ -931,16 +922,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
     </div>
   </div>
 </section>
-<!--dn-c3:r:dates--><!--dn-c3:band--><section class="dnc dnc-sec" aria-labelledby="dnc-b65"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><h2 class="dnc-h" id="dnc-b65">Your dates change the price</h2><p>Hotel rates can vary by season, weekday, room category and demand. Check the available options for your travel dates before deciding.</p></div><div class="dnc-band__a"><a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="Check Prices for Your Dates on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-dates"><span class="tc-btn__text">Check Prices for Your Dates &rarr;</span></a></div></div></div></section><!--/dn-c3:r:dates-->
-
-
-
-
-
-
-
-
-
+<!--dn-c3:r:dates--><!--dn-c3:band--><section class="dnc dnc-sec" aria-labelledby="dnc-b66"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><h2 class="dnc-h" id="dnc-b66">Your dates change the price</h2><p>Hotel rates can vary by season, weekday, room category and demand. Check the available options for your travel dates before deciding.</p></div><div class="dnc-band__a"><a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="Check Prices for Your Dates on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-dates"><span class="tc-btn__text">Check Prices for Your Dates &rarr;</span></a></div></div></div></section><!--/dn-c3:r:dates-->
 <!-- WHEN TO GO TIMELINE -->
 <section class="mk-section" style="background:var(--sand-mid)" id="timeline">
   <div class="mk-section-inner">
@@ -1112,7 +1094,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
           <div class="mk-hotel-area">Central My Khe</div>
           <div class="mk-hotel-name">Radisson Hotel Danang</div>
           <div class="mk-hotel-desc">Reliable international-standard rooms, sizeable pool deck, walkable to the central beach bars. A safe upper-mid choice for a first trip.</div>
-          <a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="See Radisson Blu Prices for Radisson Hotel Danang on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Radisson Hotel Danang"><span class="tc-btn__text">See Radisson Blu Prices →</span></a>
+          <a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="See Radisson Hotel Danang Prices on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Radisson Hotel Danang"><span class="tc-btn__text">See Radisson Hotel Danang Prices →</span></a>
         </div>
       </div>
 
@@ -1137,11 +1119,11 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
       </div>
 
       <div class="mk-hotel-card">
-        <div class="mk-hotel-img"><img src="images/hotels/wyndham-soleil-da-nang.jpg" alt="Wyndham Soleil Da Nang beachfront tower" loading="lazy" width="500" height="313"></div>
+        <div class="mk-hotel-img"><img src="images/hotels/wyndham-soleil-da-nang.jpg" alt="Wyndham Soleil Da Nang tower near My Khe Beach" loading="lazy" width="500" height="313"></div>
         <div class="mk-hotel-body">
           <div class="mk-hotel-area">Central My Khe</div>
           <div class="mk-hotel-name">Wyndham Soleil Danang</div>
-          <div class="mk-hotel-desc">Tall beachfront tower, multiple pools, large rooms. Good for families who want space and a wide, calmer stretch of sand out front.</div>
+          <div class="mk-hotel-desc">Tall tower across the road from the beach, with two outdoor pools including a kids pool and apartment-style rooms. Good for families who want space and a calmer stretch of sand nearby.</div>
           <a data-provider="tripcom" data-tc-key="hotel:wyndham-soleil-danang" aria-label="See Wyndham Soleil Prices for Wyndham Soleil Da Nang on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=128851042&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397694" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Wyndham Soleil Da Nang"><span class="tc-btn__text">See Wyndham Soleil Prices →</span></a>
         </div>
       </div>
@@ -1149,9 +1131,9 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
       <div class="mk-hotel-card">
         <div class="mk-hotel-img"><img src="images/hotels/sheraton-grand-da-nang.jpg" alt="Sheraton Grand Da Nang Resort beachfront" loading="lazy" width="500" height="313"></div>
         <div class="mk-hotel-body">
-          <div class="mk-hotel-area">Central My Khe</div>
+          <div class="mk-hotel-area">Truong Sa coast, south of My Khe</div>
           <div class="mk-hotel-name">Sheraton Grand Danang Resort</div>
-          <div class="mk-hotel-desc">The benchmark luxury option directly on the sand. Big pool complex, strong breakfast, consistent five-star execution. Priced accordingly.</div>
+          <div class="mk-hotel-desc">The benchmark luxury option directly on the sand, about 9 km by road south of the end of My Khe Beach (routing estimate). A 250 m infinity pool and water park, strong breakfast, consistent five-star execution. Priced accordingly.</div>
           <a data-provider="tripcom" data-tc-key="hotel:sheraton-grand-danang-resort" aria-label="See Sheraton Grand Prices for Sheraton Grand Danang Resort on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=15691333&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397505" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Sheraton Grand Danang Resort"><span class="tc-btn__text">See Sheraton Grand Prices →</span></a>
         </div>
       </div>
@@ -1161,7 +1143,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         <div class="mk-hotel-body">
           <div class="mk-hotel-area">Central My Khe</div>
           <div class="mk-hotel-name">A La Carte Da Nang Beach</div>
-          <div class="mk-hotel-desc">Apartment-style rooms with kitchenettes, right on the sand, that famous rooftop infinity pool. Good for longer stays or anyone wanting more space than a standard hotel room.</div>
+          <div class="mk-hotel-desc">Apartment-style rooms with kitchenettes, just across the road from the sand, that famous rooftop infinity pool. Good for longer stays or anyone wanting more space than a standard hotel room.</div>
           <a data-provider="tripcom" data-tc-key="hotel:a-la-carte-da-nang-beach" aria-label="See A La Carte Prices for A La Carte Da Nang Beach on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=1247137&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397589" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="A La Carte Da Nang Beach"><span class="tc-btn__text">See A La Carte Prices →</span></a>
         </div>
       </div>
@@ -1171,7 +1153,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         <div class="mk-hotel-body">
           <div class="mk-hotel-area">Central My Khe</div>
           <div class="mk-hotel-name">Muong Thanh Luxury Da Nang</div>
-          <div class="mk-hotel-desc">The largest property on the strip by room count. Very large rooms, three pools, one of the better buffet breakfasts at this price point.</div>
+          <div class="mk-hotel-desc">Rooms from about 33 sqm (Deluxe), a pool, and one of the better buffet breakfasts at this price point, with the beach just across the road.</div>
           <a data-provider="tripcom" data-tc-key="hotel:muong-thanh-luxury-da-nang" aria-label="See Muong Thanh Prices for Muong Thanh Luxury Da Nang on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=8065403&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397715" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Muong Thanh Luxury Da Nang"><span class="tc-btn__text">See Muong Thanh Prices →</span></a>
         </div>
       </div>
@@ -1179,18 +1161,9 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
     </div>
   </div>
 </section>
-<!--dn-c3:r:compare--><!--dn-c3:compare--><section class="dnc dnc-sec" aria-labelledby="dnc-cmp66"><div class="dnc-wrap"><div class="dnc-cmp"><p class="dnc-kicker">Compare two hotels</p><h2 class="dnc-h" id="dnc-cmp66">Compare these hotels for your dates</h2>
-<p class="dnc-sub">The right choice can depend on the price difference for your dates. Both are similar in setting and style; compare the trade-offs above against the rates for your dates.</p><div class="dnc-cmp__grid"><div class="dnc-cmp__col"><h3>TMS Hotel Da Nang Beach</h3><p><span class="dnc-lab">Best for</span>Budget-to-midscale beach stays</p><p><span class="dnc-lab">Consider another hotel if</span>A mid-range hotel with small rooms and a small, busy pool.</p><a data-provider="tripcom" data-tc-key="hotel:tms-luxury-danang-beach" aria-label="Check TMS Hotel Da Nang Beach Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid tc-btn--block" href="https://www.trip.com/hotels/detail/?hotelId=24529624&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397540" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-list-compare" data-hotel="TMS Hotel Da Nang Beach"><span class="tc-btn__text">Check TMS Hotel Da Nang Beach Prices &rarr;</span></a></div><div class="dnc-cmp__col"><h3>Radisson Blu Resort Danang</h3><p><span class="dnc-lab">Best for</span>Families who want a roomy four-person room</p><p><span class="dnc-lab">Consider another hotel if</span>Not a full resort complex: no kids' club and a limited spa.</p><a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="Check Radisson Blu Resort Danang Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid tc-btn--block" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-list-compare" data-hotel="Radisson Blu Resort Danang"><span class="tc-btn__text">Check Radisson Blu Resort Danang Prices &rarr;</span></a></div></div>
+<!--dn-c3:r:compare--><!--dn-c3:compare--><section class="dnc dnc-sec" aria-labelledby="dnc-cmp67"><div class="dnc-wrap"><div class="dnc-cmp"><p class="dnc-kicker">Compare two hotels</p><h2 class="dnc-h" id="dnc-cmp67">Compare these hotels for your dates</h2>
+<p class="dnc-sub">The right choice can depend on the price difference for your dates. Area: My Khe Beach versus My Khe (Son Tra side).</p><div class="dnc-cmp__grid"><div class="dnc-cmp__col"><h3>TMS Hotel Da Nang Beach</h3><p><span class="dnc-lab">Best for</span>Budget-to-midscale beach stays</p><p><span class="dnc-lab">Consider another hotel if</span>A mid-range hotel with small rooms and a small, busy pool.</p><a data-provider="tripcom" data-tc-key="hotel:tms-luxury-danang-beach" aria-label="Check TMS Hotel Da Nang Beach Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid tc-btn--block" href="https://www.trip.com/hotels/detail/?hotelId=24529624&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397540" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-list-compare" data-hotel="TMS Hotel Da Nang Beach"><span class="tc-btn__text">Check TMS Hotel Da Nang Beach Prices &rarr;</span></a></div><div class="dnc-cmp__col"><h3>Radisson Hotel Danang</h3><p><span class="dnc-lab">Best for</span>Families who want a roomy four-person room</p><p><span class="dnc-lab">Consider another hotel if</span>A city-beach hotel rather than a resort: the beach is across the road and facilities are hotel-scale.</p><a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="Check Radisson Hotel Danang Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid tc-btn--block" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-list-compare" data-hotel="Radisson Hotel Danang"><span class="tc-btn__text">Check Radisson Hotel Danang Prices &rarr;</span></a></div></div>
 <p class="dnc-note"><a href="compare-hotels.html?h=tms-hotel-da-nang,radisson-blu-da-nang">Open the side-by-side comparison tool</a>. Rates are shown on Trip.com.</p></div></div></section><!--/dn-c3:r:compare-->
-
-
-
-
-
-
-
-
-
 <!-- MY KHE VS NON NUOC -->
 <section class="mk-section">
   <div class="mk-section-inner">
@@ -1198,7 +1171,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
     <h2 class="mk-section-h2">My Khe vs <em>Non Nuoc</em></h2>
     <div class="mk-compare">
       <div class="mk-compare-col">
-        <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach, Da Nang">
+        <img loading="lazy" decoding="async" src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach, Da Nang">
         <div class="mk-compare-title">My Khe</div>
         <ul class="mk-compare-list">
           <li>Walkable to restaurants, cafes and bars</li>
@@ -1207,7 +1180,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         </ul>
       </div>
       <div class="mk-compare-col">
-        <img src="images/broll-premier-village-villas-aerial.jpg" alt="Non Nuoc Beach resort corridor, Da Nang">
+        <img loading="lazy" decoding="async" src="images/broll-premier-village-villas-aerial.jpg" alt="Non Nuoc Beach resort corridor, Da Nang">
         <div class="mk-compare-title">Non Nuoc</div>
         <ul class="mk-compare-list">
           <li>Wider, quieter sand, resort-scale pools</li>
@@ -1309,23 +1282,13 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-<!--dn-c3:r:return--><!--dn-c3:return--><section class="dnc dnc-sec" aria-labelledby="dnc-r67"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><h2 class="dnc-h" id="dnc-r67">Still planning your trip?</h2>
+<!--dn-c3:r:return--><!--dn-c3:return--><section class="dnc dnc-sec" aria-labelledby="dnc-r68"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><h2 class="dnc-h" id="dnc-r68">Still planning your trip?</h2>
 <p>Save this guide so you can return when your travel dates are clearer, then compare our hotel recommendations again and check rates on Trip.com. Your shortlist stays in this browser only; we do not track prices or send alerts.</p></div>
-<div class="dnc-band__a"><button type="button" class="dnc-ghost" data-dn-copylink>Copy Link to This Guide</button><a class="dnc-ghost" href="compare-hotels.html">My Shortlist &amp; Compare</a><a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="Compare Hotel Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-return"><span class="tc-btn__text">Compare Hotel Prices &rarr;</span></a></div></div></div></section><!--/dn-c3:r:return-->
-</main>
+<div class="dnc-band__a"><button type="button" class="dnc-ghost" data-dn-copylink>Copy Link to This Guide</button><a class="dnc-ghost" href="compare-hotels.html">My Shortlist &amp; Compare</a><a data-provider="tripcom" data-tc-key="search:Da Nang Municipality, Vietnam|6232|region" aria-label="Compare Hotel Prices on Trip.com, opens in a new tab" class="dn-booklink affiliate-link dn-btn dn-btn--book tc-btn tc-btn--solid" href="https://www.trip.com/hotels/da-nang-hotels-list-1356/?Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397190" target="_blank" rel="nofollow noopener sponsored" data-cta-location="p3-return"><span class="tc-btn__text">Compare Hotel Prices &rarr;</span></a></div></div></div></section><!--/dn-c3:r:return--></main>
 <footer class="dn-footer">
   <div class="dn-footer__top">
     <div class="dn-footer__brand">
-      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" decoding="async"></picture></a>
+      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img loading="lazy" decoding="async" src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" ></picture></a>
       <p>Independent hotel and travel advice for Da Nang and Hoi An, written by a local editor. No paid placements.</p>
     </div>
     <aside class="shr-bar dn-share" aria-label="Share this page"><span class="shr-label">Share</span>

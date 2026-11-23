@@ -1,0 +1,32 @@
+[
+ {
+  "before": "FAQ: Directly on My Khe Beach, 4 km Dragon Bridge, 6 km airport",
+  "after": "across the road (~0.14 km per listings), 3.7 km by road to Dragon Bridge, 12.8 km by road to airport",
+  "reason": "Trip.com/OSRM (6 km and 4 km were straight-line-ish/wrong)",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/ ; https://router.project-osrm.org"
+ },
+ {
+  "before": "Boutique Beachfront Hotel; Direct beachfront; beach directly out front / below; direct beach access (x4); chips 'Direct'",
+  "after": "across the road wording",
+  "reason": "Hotel is across Vo Nguyen Giap from the beach",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+ },
+ {
+  "before": "248 rooms (x3)",
+  "after": "number removed: 'a few hundred apartment-style rooms (listings disagree)' / 'at this size'",
+  "reason": "Sources give 301, 202, 117",
+  "source": "https://a-la-carte-beach.hotelsdanang.com/en/ ; https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+ },
+ {
+  "before": "22-floor tower",
+  "after": "tower",
+  "reason": "Floor count unverified",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+ },
+ {
+  "before": "10 minutes to airport / Dragon Bridge 10-minute Grab",
+  "after": "~15 min and ~4 min by road (routing estimates), distances added",
+  "reason": "OSRM 12.8 km/15.5 min; 3.7 km/4 min",
+  "source": "https://router.project-osrm.org"
+ }
+]

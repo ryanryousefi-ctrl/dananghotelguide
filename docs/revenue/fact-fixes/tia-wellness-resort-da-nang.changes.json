@@ -1,0 +1,146 @@
+[
+ {
+  "before": "all-inclusive wellness on Non Nuoc Beach, spa and yoga focus",
+  "after": "wellness-inclusive stays on the Truong Sa coast south of My Khe, spa and yoga focus",
+  "reason": "Wrong area; not \"all-inclusive\"",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "All-inclusive wellness concept, spa, and",
+  "after": "Wellness-inclusive concept, spa, and",
+  "reason": "Official site sells \"Wellness Inclusive\", not all-inclusive",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "the all-inclusive wellness model, genuinely excellent spa",
+  "after": "the wellness-inclusive model, genuinely excellent spa",
+  "reason": "Inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "Rates include full board and unlimited spa treatments, starting around $250\u2013$350/night per person. Peak season rates rise to $400\u2013$550/night.",
+  "after": "Rates are for a private pool villa on a wellness-inclusive basis: all-day breakfast and two wellness treatments (80 minutes in total) per person per night, plus daily classes. Full-board plant-based meals come with the Retreat Inclusive programme. Check current rates for your dates.",
+  "reason": "Contradicted inclusions (not full board / unlimited); price figures unverified so removed",
+  "source": "https://tiawellnessresort.com/ ; https://tiawellnessresort.com/nourish/"
+ },
+ {
+  "before": "On My Khe Beach in central Da Nang, approximately 5 km from Dragon Bridge and 7 km from Da Nang Airport.",
+  "after": "At 109 Vo Nguyen Giap Street in Ngu Hanh Son, on the Truong Sa coast south of My Khe, about 7 km by road from Dragon Bridge and about 12.5 km by road from Da Nang Airport (routing estimates).",
+  "reason": "Area and distances: OSRM Dragon Bridge 6.85 km/8.7 min, airport 12.46 km/14.8 min",
+  "source": "https://tiawellnessresort.com/contact-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "<p class=\"dn-hero__meta\">5-Star Wellness Resort \u00b7 My Khe Beach</p>",
+  "after": "<p class=\"dn-hero__meta\">5-Star Wellness Resort \u00b7 Truong Sa Coast, south of My Khe</p>",
+  "reason": "Area",
+  "source": "https://tiawellnessresort.com/contact-us/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">My Khe Beach</div>",
+  "after": "<div class=\"hr-snap-val\">South of My Khe</div>",
+  "reason": "Area",
+  "source": "https://tiawellnessresort.com/contact-us/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Only 58</div>",
+  "after": "<div class=\"hr-snap-val\">Private pool villas</div>",
+  "reason": "58-room count unverified",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">All-inclusive</div>",
+  "after": "<div class=\"hr-snap-val\">All-day breakfast included</div>",
+  "reason": "Inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Unlimited included</div>",
+  "after": "<div class=\"hr-snap-val\">2 treatments per night</div>",
+  "reason": "Inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "and the rate covers everything after that.",
+  "after": "and the wellness programme is built into the rate after that.",
+  "reason": "Inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "the nightly rate covers accommodation, all meals, unlimited spa treatments, yoga classes, breathwork, tai chi, fitness consultations, everything.",
+  "after": "the Wellness Inclusive rate covers your private pool villa, all-day breakfast, two spa treatments per person each night (80 minutes in total), and daily guided classes such as breathwork, yoga and HIIT. Full-board plant-based meals come with the Retreat Inclusive programme.",
+  "reason": "Contradicted inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "The property has just 58 rooms and villas set among lush vegetation on the beach.",
+  "after": "The property is a collection of private pool villas set among lush vegetation on the beach.",
+  "reason": "58 unverified",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "All rooms are private villas with plunge pools.",
+  "after": "All rooms are private pool villas, each opening onto a garden courtyard with its own pool.",
+  "reason": "Official: private swimming pool",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "genuinely removed from the city-beach noise that follows you into most My Khe hotels.",
+  "after": "genuinely removed from the city-beach noise that follows you into many hotels on the main My Khe strip.",
+  "reason": "Soften",
+  "source": "https://tiawellnessresort.com/contact-us/"
+ },
+ {
+  "before": "The My Khe location gives more city access than you'd get at a Non Nuoc or Son Tra property, Dragon Bridge is 12 minutes by Grab, Hoi An is 30 minutes by car, so",
+  "after": "The location south of My Khe still gives reasonable city access, with Dragon Bridge about 7 km by road (roughly 9 minutes without traffic, routing estimate) and Hoi An about 22 km by road (roughly 25 minutes without traffic; the resort says 20 minutes), so",
+  "reason": "Distances: OSRM Dragon Bridge 6.85km/8.7min; Hoi An (15.8794,108.328) 21.67 km/25.8 min",
+  "source": "https://tiawellnessresort.com/contact-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "<div class=\"hr-like-title\">The all-inclusive model</div><p class=\"hr-like-text\">Meals, unlimited spa treatments, and all classes are genuinely included in the rate, no add-on pricing hiding behind a low headline number.</p>",
+  "after": "<div class=\"hr-like-title\">The wellness-inclusive model</div><p class=\"hr-like-text\">Spa treatments, daily classes and all-day breakfast are built into the Wellness Inclusive rate, so there is less add-on pricing than at a typical resort.</p>",
+  "reason": "Contradicted inclusions",
+  "source": "https://tiawellnessresort.com/"
+ },
+ {
+  "before": "<div class=\"hr-like-title\">Only 58 rooms</div><p class=\"hr-like-text\">The resort scale stays human",
+  "after": "<div class=\"hr-like-title\">Villa-only scale</div><p class=\"hr-like-text\">The resort scale stays human",
+  "reason": "58 unverified",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "<div class=\"hr-like-title\">Every villa's plunge pool</div><p class=\"hr-like-text\">Private plunge pool and garden patio",
+  "after": "<div class=\"hr-like-title\">Every villa's private pool</div><p class=\"hr-like-text\">Private pool and garden patio",
+  "reason": "Official wording",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "every category includes the plunge pool and garden patio",
+  "after": "every category includes a private pool and garden patio",
+  "reason": "Official wording",
+  "source": "https://tiawellnessresort.com/pool-villas/"
+ },
+ {
+  "before": "On My Khe Beach, which gives more city access than you'd have at a Non Nuoc or Son Tra property. Dragon Bridge is 12 minutes by Grab, Hoi An is 30 minutes by car, and the airport is about 7km away.",
+  "after": "On the Truong Sa coast in Ngu Hanh Son, south of My Khe, with more city access than you'd have at a Son Tra property. Dragon Bridge is about 7 km by road (roughly 9 minutes without traffic), Hoi An about 22 km by road (roughly 25 minutes without traffic) and the airport about 12.5 km by road (roughly 15 minutes), all routing estimates.",
+  "reason": "Distances OSRM",
+  "source": "https://tiawellnessresort.com/contact-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "<strong>Dragon Bridge:</strong> 12 min Grab",
+  "after": "<strong>Dragon Bridge:</strong> ~9 min by car (7 km)",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "<strong>Airport:</strong> 7 km",
+  "after": "<strong>Airport:</strong> 12.5 km by road (~15 min)",
+  "reason": "OSRM; resort says 15 min",
+  "source": "https://tiawellnessresort.com/contact-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "<strong>Hoi An:</strong> 30 min",
+  "after": "<strong>Hoi An:</strong> ~25 min by car (22 km)",
+  "reason": "OSRM with corrected Hoi An coords",
+  "source": "https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ }
+]

@@ -37,7 +37,7 @@ const LISTCOPY = [
   [/.*/, 'Compare prices for your travel dates', 'Rates vary by date and room type. Check what is actually available for your stay.'],
 ];
 const isHoi = f => /hoi-an|an-bang/.test(f) && !/da-nang-and-hoi-an|from-da-nang/.test(f);
-const strip = h => h.replace(/<!--dn-c3:r:([a-z0-9-]+)-->[\s\S]*?<!--\/dn-c3:r:\1-->\n?/g, '').replace(/<!--dn-c3:links-->[\s\S]*?<!--\/dn-c3:links-->\n?/g, '');
+const strip = h => h.replace(/\n*<!--dn-c3:r:([a-z0-9-]+)-->[\s\S]*?<!--\/dn-c3:r:\1-->\n?/g, '\n').replace(/\n*<!--dn-c3:links-->[\s\S]*?<!--\/dn-c3:links-->\n?/g, '\n');
 const wrap = (n, b) => `<!--dn-c3:r:${n}-->${b}<!--/dn-c3:r:${n}-->`;
 // top-level section boundaries inside <main>
 function boundaries(h) {
@@ -49,7 +49,7 @@ function boundaries(h) {
 }
 const slugsOnPage = h => [...new Set([...h.matchAll(/data-tc-key="(hotel:[^"]*)"/g)].map(m => byTcKey[m[1]]).filter(Boolean))];
 const insertAt = (h, ins) => { // ins: [[position, html]], applied from the end
-  ins.sort((a, b) => b[0] - a[0]); for (const [p, x] of ins) h = h.slice(0, p) + '\n' + x + '\n' + h.slice(p); return h;
+  ins.sort((a, b) => b[0] - a[0]); for (const [p, x] of ins) h = h.slice(0, p) + '\n' + x + h.slice(p); return h;
 };
 const assets = (h, sticky) => {
   if (!/dn-commerce\.css/.test(h)) h = h.replace(/(<link rel="stylesheet" href="tripcom-cta\.css">)/, '$1\n<link rel="stylesheet" href="dn-commerce.css">');
@@ -57,6 +57,15 @@ const assets = (h, sticky) => {
   if (sticky && !/dn-sticky-cta\.js/.test(h)) h = h.replace(/(<script src="tripcom-cta\.js"[^>]*><\/script>)/, '$1\n<script src="dn-sticky-cta.js" defer></script>');
   return h;
 };
+// Pages whose HTML has no <section> structure: explicit, individually reviewed insertion points (module goes AFTER the matched element, which is a direct child of the content container, never inside a list or paragraph).
+const PLACE = {
+  'da-nang-tet-2027-hotels.html': 'article.article-body > div', 'is-da-nang-walkable.html': 'main > div.bb-sig-pick', 'dragon-bridge-da-nang.html': 'main > div.highlight-box',
+  'da-nang-with-kids-guide.html': 'main > div.bb-sig-pick', 'best-time-to-visit-da-nang.html': 'main > div.bb-sig-pick', 'worst-time-to-visit-da-nang.html': 'article.article-body > p:nth-of-type(2)',
+  'da-nang-first-time-visitors.html': 'main > div.bb-editor-tip', 'hoi-an-first-time-visitors.html': 'main > div.quick-facts', 'da-nang-travel-mistakes.html': 'main > div.bb-sig-pick',
+  'da-nang-budget-guide.html': 'main > div.bb-sig-pick', 'da-nang-guide-for-australian-travelers.html': 'article.article-body > ul', 'da-nang-guide-for-singapore-travelers.html': 'article.article-body > ul',
+};
+const cheerio = require('cheerio');
+const placeAfter = (h, sel) => { const $ = cheerio.load(h, { sourceCodeLocationInfo: true }); const el = $(sel).first()[0]; return el && el.sourceCodeLocation ? el.sourceCodeLocation.endOffset : -1; };
 const stats = { list: 0, area: 0, compare: 0, review: 0, guide: 0, skipped: [] };
 const report = [];
 function process_(f, type, theme) {
@@ -64,7 +73,7 @@ function process_(f, type, theme) {
   if (!/<main/.test(h) || !/tripcom-cta\.css/.test(h)) { stats.skipped.push(f + ' (no main/tripcom css)'); return; }
   // First real content section only: ignore sections that belong to the end-of-page modules, and fall back to the end of the page hero when the first section sits late in the page.
   const mStart = h.indexOf('<main'), mEnd = h.lastIndexOf('</main>'); const lim = (() => { const i = h.search(/<!--dn-revenue:(guide|related)-->/); return i >= 0 ? i : mEnd; })();
-  let b = boundaries(h).filter(x => x < lim); if (!b.length || (b[0] - mStart) / (mEnd - mStart) > 0.4) { const hh = h.indexOf('</header>', h.indexOf('<h1', mStart)); const h1 = h.indexOf('<h1', mStart); b = hh > 0 && h1 > 0 && hh - h1 < 4000 ? [hh + 9] : []; } const hotels = slugsOnPage(h).filter(s => f !== C.FACTS[s].review); const dest = isHoi(f) ? 'hoian' : 'danang'; const ins = []; const mods = [];
+  let b = boundaries(h).filter(x => x < lim); if (PLACE[f]) { const o = placeAfter(h, PLACE[f]); b = o > 0 ? [o] : []; } else if (!b.length || (b[0] - mStart) / (mEnd - mStart) > 0.4) { const hh = h.indexOf('</header>', h.indexOf('<h1', mStart)); const h1 = h.indexOf('<h1', mStart); b = hh > 0 && h1 > 0 && hh - h1 < 4000 ? [hh + 9] : []; } const hotels = slugsOnPage(h).filter(s => f !== C.FACTS[s].review); const dest = isHoi(f) ? 'hoian' : 'danang'; const ins = []; const mods = [];
   const first = b[0]; if (first == null) { stats.skipped.push(f + ' (no sections)'); return; }
   const end = h.search(/<!--dn-revenue:(guide|related)-->/) >= 0 ? h.search(/<!--dn-revenue:(guide|related)-->/) : h.lastIndexOf('</main>');
   const at = fr => b[Math.min(b.length - 1, Math.max(1, Math.floor(b.length * fr)))] || first;
@@ -79,10 +88,12 @@ function process_(f, type, theme) {
     ins.push([first, wrap('compare', C.compareModule(mine[0], mine[1], { loc: 'p3-vs-compare', sub: 'Our table and verdict are below. The right choice can depend on the price difference for your dates.' }))]); mods.push('compare'); stats.compare++;
   } else if (type === 'review') {
     const slug = Object.values(C.FACTS).find(x => x.review === f).slug, hx = C.hotel(slug);
-    const m = h.match(/<section class="[^"]*dn-decide--early[^"]*"[\s\S]*?<\/section>/); if (!m) { stats.skipped.push(f + ' (no early module)'); return; }
-    let pos = h.indexOf(m[0]) + m[0].length; if (h.slice(pos).startsWith('<!--/dn-revenue:early-->')) pos += '<!--/dn-revenue:early-->'.length;
-    const tools = `<section class="dnc dnc-sec" aria-label="Save or compare ${C.esc(hx.name)}"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><p>Not sure yet? Save this hotel to a shortlist in this browser, or compare it with another hotel before you check rates.</p></div><div class="dnc-band__a" data-dn-hotel="${slug}"><button type="button" class="dnc-save" data-dn-save="${slug}" aria-pressed="false">Save</button><a class="dnc-ghost" href="compare-hotels.html?h=${slug}">Compare with another hotel</a></div></div></div></section>`;
-    ins.push([pos, wrap('tools', tools)]); mods.push('tools'); stats.review++;
+    const m = h.match(/<section class="[^"]*dn-decide--early[^"]*"[\s\S]*?<\/section>/); let pos, pre = '';
+    if (!m) { // review template without the Phase 1 early module: an editor's verdict (hotel-specific verified button) after the page hero instead
+      const hh = h.indexOf('</header>', h.indexOf('<h1', h.indexOf('<main'))); if (hh < 0) { stats.skipped.push(f + ' (no hero)'); return; } pos = hh + 9; pre = wrap('verdict', C.verdict(slug, { loc: 'p3-review-verdict' }));
+    } else { pos = h.indexOf(m[0]) + m[0].length; if (h.slice(pos).startsWith('<!--/dn-revenue:early-->')) pos += '<!--/dn-revenue:early-->'.length; }
+    const tools = `<section class="dnc dnc-sec" aria-label="Save or compare ${C.esc(C.nm(hx))}"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><p>Not sure yet? Save this hotel to a shortlist in this browser, or compare it with another hotel before you check rates.</p></div><div class="dnc-band__a" data-dn-hotel="${slug}"><button type="button" class="dnc-save" data-dn-save="${slug}" aria-pressed="false">Save</button><a class="dnc-ghost" href="compare-hotels.html?h=${slug}">Compare with another hotel</a></div></div></div></section>`;
+    ins.push([pos, pre || wrap('tools', tools)]); mods.push(pre ? 'verdict' : 'tools'); stats.review++;
   } else if (type === 'guide') {
     const [t, c, d] = THEME[theme]; ins.push([first, wrap('hero', C.heroPrice({ id: 'dnc-h-' + f.slice(0, 20).replace(/[^a-z]/g, ''), light: true, kicker: 'Hotel planning', title: t, copy: c, dest: d, loc: 'p3-guide-hero', secondaryLabel: 'Find My Ideal Hotel' }))]); mods.push('hero');
     if (theme === 'season') { ins.push([end, wrap('seasonal', C.seasonal('danang'))]); mods.push('seasonal'); }

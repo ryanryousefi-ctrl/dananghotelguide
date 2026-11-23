@@ -1,0 +1,813 @@
+{
+ "sheraton-grand-da-nang": {
+  "official_name": "Sheraton Grand Danang Beach Resort & Spa (legacy/listing name: Sheraton Grand Danang Resort & Convention Center)",
+  "brand": "Sheraton (Marriott Bonvoy)",
+  "operator_owner": "Marriott International (Sheraton brand); owner unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Sheraton Grand Danang Resort & Convention Center",
+   "Sheraton Grand Danang Resort",
+   "Sheraton Grand Danang Resort & Spa (OSM)"
+  ],
+  "name_note": "Trip.com lists it as Sheraton Grand Danang Beach Resort & SPA; search snippets of Marriott pages show both 'Beach Resort & Spa' and 'Resort & Convention Center' slugs. Same property at 35 Truong Sa.",
+  "address": "35 Truong Sa Street, Ngu Hanh Son (formerly Hoa Hai Ward), Da Nang",
+  "ward_district": "Ngu Hanh Son (Hoa Hai Ward in older listings)",
+  "neighborhood_group": "truong-sa-coast",
+  "neighborhood_note": "NOT on My Khe Beach. It is on the Truong Sa coastal road in the Hoa Hai / Ngu Hanh Son area, about 8 km (OSRM 8.8 km drive) south of the southern end of the OSM My Khe Beach polygon. Trip.com/Golfasian copy describes the beach as Non Nuoc Beach (the southern continuation of the same sand strip, locally also called My Khe south). Our 'My Khe Beach / restaurant strip 5-10 min walk' framing is not supported.",
+  "website": "https://www.marriott.com/en-us/hotels/dadsi-sheraton-grand-danang-beach-resort-and-spa/overview/",
+  "lat": 15.9814271,
+  "lng": 108.2789535,
+  "coord_source": "OSM Nominatim way 549188946 'Sheraton Grand Danang Resort & Spa, 35 Duong Truong Sa' (address matches)",
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Trip.com lists private beach area and says 'perched on tranquil Non-Nuoc Beach'; OSM coastline node ~240 m from the OSM point (a hotel centroid, so beachfront is consistent).",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/",
+    "https://www.golfasian.com/hotels-resorts/vietnam/sheraton-grand-danang-resort/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "infinity",
+    "note": "250 m infinity pool, 'longest in Danang' per Trip.com copy of Sheraton description; Golfasian also lists 250m infinity pool. 'longest in Vietnam' not verified.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/",
+     "https://www.golfasian.com/hotels-resorts/vietnam/sheraton-grand-danang-resort/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Water park / water slide / kids playground listed; Trip.com 'Water park', 'Water slide'. Booking.com snippet (search result only) says 2 pools incl. separate kids' pool.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   }
+  ],
+  "pool_summary": "One 250 m outdoor infinity lagoon pool plus water-park/kids area; indoor pool not found in any opened source.",
+  "rooftop": {
+   "rooftop_pool": "unknown",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [],
+   "note": "No opened source mentions 'Chill Skybar'; Trip lists La Plage, Tea Lounge, The Grill, bars. Unverified."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "Not confirmed in opened sources.",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club",
+   "Water park",
+   "Water slide",
+   "Playground",
+   "Children's pool/area"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "The Grill (signature steak & seafood)",
+   "La Plage (Asian, brunch/lunch/dinner)",
+   "Tea Lounge",
+   "Bar / lobby bar",
+   "Table 88 and Poolside, Mix Bar (Booking.com search snippet, not opened)"
+  ],
+  "room_categories": [
+   "Deluxe Bay View King",
+   "Deluxe sea/partial sea view king/twin",
+   "Suites"
+  ],
+  "multi_bedroom_options": "Suites listed; bedroom counts not verified.",
+  "distinctive_amenities": [
+   "250 m infinity pool",
+   "Water park",
+   "Private beach area",
+   "Golf course (The Point Da Nang Golf Club 0.34 km per Trip)"
+  ],
+  "claims_check": [
+   {
+    "claim": "785 rooms",
+    "verdict": "contradicted",
+    "evidence": "Trip.com property info: Number of Rooms 258, opened 2018. Golfasian: 258 rooms.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/",
+     "https://www.golfasian.com/hotels-resorts/vietnam/sheraton-grand-danang-resort/"
+    ]
+   },
+   {
+    "claim": "opened in 2018",
+    "verdict": "supported",
+    "evidence": "Trip.com 'Opened: 2018'.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "On My Khe Beach / 'the quieter central section of the My Khe strip'",
+    "verdict": "contradicted",
+    "evidence": "Address 35 Truong Sa Street; OSM coords 15.9814,108.2790 are ~8 km by road south of the My Khe beach polygon; hotel's own blurb says Non-Nuoc Beach.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "7 km to Dragon Bridge",
+    "verdict": "contradicted",
+    "evidence": "Straight line 10.4 km, OSRM drive 13.1 km / 16 min.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json",
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "9 km to airport",
+    "verdict": "contradicted",
+    "evidence": "Straight line 11.1 km, OSRM drive 16.0 km / 21 min (Golfasian-sourced search snippet said ~14.3 km).",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json",
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Hoi An about 35 minutes by car",
+    "verdict": "contradicted",
+    "evidence": "OSRM drive to Hoi An Old Town 22.5 km / 26 min without traffic; 35 min is pessimistic but plausible with traffic.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "City centre 15 minutes by taxi",
+    "verdict": "supported",
+    "evidence": "OSRM to Han Market 13.3 km / 16 min.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Marble Mountains 15 minutes south",
+    "verdict": "contradicted",
+    "evidence": "Trip.com: Marble Mountains 3.3 km away (roughly 8-10 min); direction is north-ish, not south, from this site.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "250 m infinity pool is the longest in Vietnam",
+    "verdict": "unverifiable",
+    "evidence": "Sheraton copy says 'longest 250m infinity pool in Danang', not Vietnam.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "water slide feeding a shallow kids area",
+    "verdict": "supported",
+    "evidence": "Trip amenities: Water slide, Water park, Playground.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "Kids' club splits into three age-based rooms",
+    "verdict": "unverifiable",
+    "evidence": "Kids' club exists; room split not seen.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "An indoor pool",
+    "verdict": "unverifiable",
+    "evidence": "Only outdoor pool listed.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "Market 39 breakfast restaurant; Chill Skybar",
+    "verdict": "unverifiable",
+    "evidence": "Not in Trip.com restaurant list (La Plage, Tea Lounge, The Grill). Possibly renamed or wrong.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+    ]
+   },
+   {
+    "claim": "Seafood restaurants on My Khe strip 5-10 min walk",
+    "verdict": "contradicted",
+    "evidence": "Hotel is not on the My Khe strip; no real foot route computed because the claimed strip is ~8 km away. Nearby listed items: Truong Sa 1.3 km, Lua Silk museum 1.2 km.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/",
+     "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json"
+    ]
+   },
+   {
+    "claim": "Superior rooms ~45 sqm with balconies",
+    "verdict": "unverifiable",
+    "evidence": "Room sizes not captured.",
+    "sources": []
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Marriott.com pages returned 403 and Wayback 429; evidence from Trip.com page (opened) and Golfasian (opened) and Nominatim/OSRM. Walking distances not computed.",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 11.08,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 16.0,
+    "minutes": 21,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 10.41,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 13.1,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 11.29,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 13.3,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 12.09,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Sheraton+Grand+Danang+Resort&format=json"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 22.5,
+    "minutes": 26,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 8.28,
+    "minutes": null,
+    "method": "great-circle to southern end of OSM My Khe Beach relation bbox (16.0488,108.2460)",
+    "source": "https://nominatim.openstreetmap.org/search?q=My+Khe+Beach+Da+Nang&format=json"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 8.8,
+    "minutes": 11,
+    "method": "OSRM car route estimate",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   }
+  ]
+ },
+ "marriott-resort-da-nang": {
+  "official_name": "Danang Marriott Resort & Spa, Non Nuoc Beach Villas",
+  "brand": "Marriott",
+  "operator_owner": "Marriott International (manager); Vinpearl (owner, per Hospitality Net)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Vinpearl Resort & Spa Da Nang (villa property)",
+   "Vinpearl Resort Da Nang"
+  ],
+  "name_note": "TWO distinct Marriott properties sit side by side in Ngu Hanh Son: (a) Danang Marriott Resort & Spa, Non Nuoc Beach Villas = all-villa, 23 Truong Sa, Trip.com 122 rooms, listed opened 2023; (b) Danang Marriott Resort & Spa = 07 Truong Sa, 239 rooms, opened 2022, rooms + suites + some villas, 2 outdoor pools, 5 restaurants. Our page uses the name of (a) but with a '200 villas / 2020' framing that matches neither.",
+  "address": "23 Truong Sa Street, Ngu Hanh Son, Da Nang (Trip.com; Nominatim confirms 23 Duong Truong Sa)",
+  "ward_district": "Ngu Hanh Son (formerly Hoa Hai Ward)",
+  "neighborhood_group": "non-nuoc",
+  "neighborhood_note": "Truong Sa coast next to Non Nuoc / Marble Mountains, about 6.8 km road south of the southern end of My Khe Beach. Not on My Khe. Trip lists Non Nuoc Beach 0.58 km (nearest public beach node).",
+  "website": "https://www.marriott.com/en-us/hotels/dadnn-danang-marriott-resort-and-spa-non-nuoc-beach-villas/overview/",
+  "lat": 15.9938706,
+  "lng": 108.2702536,
+  "coord_source": "OSM Nominatim 'Danang Marriott Resort & Spa, Non Nuoc Beach Villas, 23 Duong Truong Sa'",
+  "beach_access": {
+   "value": "short_walk",
+   "note": "Trip.com lists 'Non Nuoc Beach 0.58 km' and tags 'Public beach'; guest reviews describe private beach/beachfront. Hospitality Net says 'steps from Non Nuoc Beach'. Conflict: treat as short walk/beach-adjacent not strictly verified beachfront for the villa property; the sister hotel (239 rooms) has direct beach.",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+    "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam",
+    "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Shared outdoor / infinity pool",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool, playground",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Private pool in garden/ocean-view villas (2/3/4-bedroom listed). Not every unit verified as pool-equipped (Marriott/Hospitality Net says each villa has private plunge pool).",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam"
+    ]
+   }
+  ],
+  "pool_summary": "Private pool per villa (2-4 bedroom), plus a shared outdoor/infinity pool and a children's pool. Sister Marriott hotel (239 rooms) has 2 outdoor pools.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+   ],
+   "note": "Villa resort; no rooftop pool in listings."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+    "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club",
+   "Children's pool",
+   "Playground",
+   "Buggy service"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "3 restaurants + bar (Trip.com)",
+   "Beachhouse restaurant (guest review on Trip.com)",
+   "Hospitality Net: five dining and social venues"
+  ],
+  "room_categories": [
+   "2 Bedroom Villa Garden View Private Pool (370 sqm)",
+   "3 Bedroom Villa Garden View Private Pool (328 sqm)",
+   "3 Bedroom Villa Ocean View Private Pool (328 sqm)",
+   "4 Bedroom Villa Garden View Private Pool (425 sqm)"
+  ],
+  "multi_bedroom_options": "All listed villas are 2-4 bedrooms; no one-bedroom category seen on Trip.com or Hospitality Net.",
+  "distinctive_amenities": [
+   "Buggy service",
+   "Tennis court",
+   "Billiards",
+   "Free EV charging"
+  ],
+  "claims_check": [
+   {
+    "claim": "every one of the 200 villas has a private pool",
+    "verdict": "contradicted",
+    "evidence": "Trip.com: 122 rooms for villas property (destination2 snippet: 122 villas); 'private plunge pool' per villa per Hospitality Net. 200 matches neither property (239 rooms at sister hotel).",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/",
+     "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam"
+    ]
+   },
+   {
+    "claim": "opened in 2020",
+    "verdict": "contradicted",
+    "evidence": "Trip.com: villas property opened 2023 (a guest review notes it is older converted Vinpearl stock), sister 239-room hotel opened 2022.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+    ]
+   },
+   {
+    "claim": "flagship property, one-bedroom villas ~100 sqm; presidential up to 500 sqm",
+    "verdict": "contradicted",
+    "evidence": "Villas listed 2-, 3-, 4-bedroom; 4BR 425 sqm; 628 sqm 4BR villa at sister hotel.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/",
+     "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam"
+    ]
+   },
+   {
+    "claim": "Non Nuoc Beach directly in front of the resort",
+    "verdict": "unverifiable",
+    "evidence": "Trip: Non Nuoc Beach 0.58 km from villa property; sister hotel has public beach adjacent.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+    ]
+   },
+   {
+    "claim": "13 km to city centre",
+    "verdict": "supported",
+    "evidence": "OSRM 11.3 km drive to Han Market (9.6 km straight line); roughly consistent.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search?q=Marriott+Resort+Spa+Truong+Sa+Da+Nang&format=json",
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "15 km to airport",
+    "verdict": "supported",
+    "evidence": "OSRM 16.7 km / 19 min.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Hoi An 25 minutes",
+    "verdict": "supported",
+    "evidence": "OSRM 20.5 km / 24 min.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Marble Mountains five minutes by taxi",
+    "verdict": "supported",
+    "evidence": "Trip.com: Marble Mountains 1.2 km.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+    ]
+   },
+   {
+    "claim": "Three outlets total",
+    "verdict": "supported",
+    "evidence": "Trip.com: 3 restaurants (villas property); Hospitality Net says five venues.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/",
+     "https://www.hospitalitynet.org/announcement/41010227/marriott-adds-danang-marriott-resort-spa-non-nuoc-beach-villas-vietnam"
+    ]
+   },
+   {
+    "claim": "Street Food Kitchen restaurant",
+    "verdict": "unverifiable",
+    "evidence": "Not named in opened sources.",
+    "sources": []
+   },
+   {
+    "claim": "A central resort pool exists",
+    "verdict": "supported",
+    "evidence": "Outdoor swimming pool, infinity pool, children's pool on Trip.com; reviewer cites 'main pool'.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Marriott.com 403. Must decide which Marriott property the review is about; recommend renaming/fixing counts. Trip.com 'public beach' tag and 0.58 km indicate the villa property may not be strictly beachfront.",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 9.51,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Marriott+Resort+Spa+Truong+Sa+Da+Nang&format=json"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 16.7,
+    "minutes": 19,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 8.75,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Marriott+Resort+Spa+Truong+Sa+Da+Nang&format=json"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 11.1,
+    "minutes": 13,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 9.63,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Marriott+Resort+Spa+Truong+Sa+Da+Nang&format=json"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 11.3,
+    "minutes": 13,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 11.34,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Marriott+Resort+Spa+Truong+Sa+Da+Nang&format=json"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 20.5,
+    "minutes": 24,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 6.64,
+    "minutes": null,
+    "method": "great-circle to southern end of OSM My Khe Beach relation bbox",
+    "source": "https://nominatim.openstreetmap.org/search?q=My+Khe+Beach+Da+Nang&format=json"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 6.8,
+    "minutes": 9,
+    "method": "OSRM car route estimate",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   }
+  ]
+ },
+ "naman-retreat-da-nang": {
+  "official_name": "Naman Retreat",
+  "brand": "Naman (independent; Small Luxury Hotels listing)",
+  "operator_owner": "Naman Retreat (owner/operator not stated on opened pages)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Naman Retreat Resort"
+  ],
+  "name_note": "Official website branding is 'Naman Retreat'. Current site shows rooms 'Babylon Serenity' and 'Bliss Sunlit Suites' plus Pool/Garden Pool/Beachfront villas.",
+  "address": "Truong Sa Street, Ngu Hanh Son Ward, Da Nang City",
+  "ward_district": "Ngu Hanh Son (older listings: Hoa Hai Ward)",
+  "neighborhood_group": "truong-sa-coast",
+  "neighborhood_note": "Truong Sa coastal road south of Non Nuoc, about 10 km by road from the My Khe southern end; officially describes itself as on the road between Da Nang and Hoi An. Our 'Non Nuoc Beach' label is roughly right as a beach name but Naman sits south of Marriott.",
+  "website": "https://namanretreat.com/",
+  "lat": 15.9696672,
+  "lng": 108.2853809,
+  "coord_source": "OSM Nominatim 'Naman Retreat, Duong Truong Sa' (two OSM results within 100 m)",
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Official site: 'toes in the white sand'; Trip.com amenity 'Exclusive Beach Area'.",
+   "sources": [
+    "https://namanretreat.com/about",
+    "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Trip.com description: 3 outdoor pools; amenity lists outdoor pool plus children's pool; reviewer describes long pool.",
+    "sources": [
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool listed on Trip.com.",
+    "sources": [
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Private pools: Pool Villa, Garden Pool Villa, Beachfront Villa (private infinity pool); some Bliss Sunlit suites include pool-villa options in Trip.com listing.",
+    "sources": [
+     "https://namanretreat.com/en/accommodation",
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   }
+  ],
+  "pool_summary": "3 outdoor pools per Trip.com description plus a children's pool; villas have private pools (beachfront villa: private infinity pool).",
+  "rooftop": {
+   "rooftop_pool": "unknown",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [],
+   "note": "Sitini Bar under bamboo dome is a beach/garden bar, not confirmed rooftop."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "B Lounge is a bar, not an executive lounge.",
+   "sources": [
+    "https://namanretreat.com/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club",
+   "Children's pool",
+   "Culture classes (pottery, lanterns)",
+   "Babysitting (extra charge)"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Cococita (Latin American/Mexican)",
+   "Hay Hay (bamboo restaurant)",
+   "B Lounge",
+   "Sitini Bar",
+   "Cofftee Club",
+   "Oceantastic seafood BBQ buffet offer"
+  ],
+  "room_categories": [
+   "Babylon Serenity",
+   "Bliss Sunlit Suites (1 to 3 bedroom)",
+   "Pool Villa",
+   "Garden Pool Villa (3BR, up to 850 sqm)",
+   "Beachfront Villa (3BR, 900-1000 sqm, private infinity pool)"
+  ],
+  "multi_bedroom_options": "Bliss Sunlit Suites 1-3 bedrooms; Garden Pool Villa and Beachfront Villa 3 bedrooms.",
+  "distinctive_amenities": [
+   "Bamboo architecture",
+   "Pure Spa wellness/yoga",
+   "Golf buggies",
+   "Beach games",
+   "Culture classes"
+  ],
+  "claims_check": [
+   {
+    "claim": "Non Nuoc Beach, direct beachfront",
+    "verdict": "supported",
+    "evidence": "Official site refers to white sand beach; Trip.com exclusive beach area.",
+    "sources": [
+     "https://namanretreat.com/about",
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   },
+   {
+    "claim": "Long infinity pool with palms",
+    "verdict": "unverifiable",
+    "evidence": "Trip.com lists outdoor pools and infinity pool for the 3-pool property; length not found.",
+    "sources": [
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   },
+   {
+    "claim": "Two product types: villas vs high-rise",
+    "verdict": "supported",
+    "evidence": "Official categories: villas plus Babylon Serenity / Bliss Sunlit Suites (suites 1-3BR with sea/mountain views).",
+    "sources": [
+     "https://namanretreat.com/en/accommodation"
+    ]
+   },
+   {
+    "claim": "Oceantastic BBQ buffet Wednesdays and Saturdays 6-9pm, ~$51/$63",
+    "verdict": "unverifiable",
+    "evidence": "Official site has an 'Oceantastic BBQ seafood buffet night' offer; schedule/prices not captured.",
+    "sources": [
+     "https://namanretreat.com/"
+    ]
+   },
+   {
+    "claim": "Outlets incl. pool bar, golf cart pickup",
+    "verdict": "supported",
+    "evidence": "Official site lists Sitini bar and buggies appear in reviews on Trip.com.",
+    "sources": [
+     "https://namanretreat.com/",
+     "https://nz.trip.com/hotels/da-nang-hotel-detail-2321451/naman-retreat"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Review has no hard distance claims. Official English pages for pools not retrieved; pool count rests on Trip.com. SLH page opened but was the SLH homepage only.",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 12.44,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Naman+Retreat+Da+Nang&format=json"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 17.3,
+    "minutes": 22,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 11.89,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Naman+Retreat+Da+Nang&format=json"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 14.4,
+    "minutes": 17,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 12.77,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Naman+Retreat+Da+Nang&format=json"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 14.6,
+    "minutes": 17,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 13.02,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search?q=Naman+Retreat+Da+Nang&format=json"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 23.8,
+    "minutes": 27,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 9.76,
+    "minutes": null,
+    "method": "great-circle to southern end of OSM My Khe Beach relation bbox",
+    "source": "https://nominatim.openstreetmap.org/search?q=My+Khe+Beach+Da+Nang&format=json"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 10.1,
+    "minutes": 12,
+    "method": "OSRM car route estimate",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   }
+  ]
+ }
+}

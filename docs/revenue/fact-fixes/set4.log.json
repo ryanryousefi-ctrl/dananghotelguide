@@ -1,0 +1,1360 @@
+[
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "— My Khe vs Non Nuoc",
+  "after": "— Bac My An vs Non Nuoc",
+  "reason": "Pullman is on Bac My An beach (official address 101 Vo Nguyen Giap), not My Khe north/Non Nuoc; routes.json",
+  "occurrences": 4
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "My Khe proximity vs Non Nuoc resort scale",
+  "after": "city proximity vs Non Nuoc resort scale",
+  "reason": "Pullman is on Bac My An beach (official address 101 Vo Nguyen Giap), not My Khe north/Non Nuoc; routes.json",
+  "occurrences": 4
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Hyatt Regency gives you six pools and a reason to never leave",
+  "after": "Hyatt Regency gives you five outdoor pools and a reason to never leave",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Area: South My Khe (Khue My) versus Non Nuoc coast.",
+  "after": "Area: Bac My An beach, south of My Khe, versus the Non Nuoc coast.",
+  "reason": "Pullman is on Bac My An beach (official address 101 Vo Nguyen Giap), not My Khe north/Non Nuoc; routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Six pools, a 120-metre lazy river, and Camp Hyatt beat one good pool and a walkable restaurant strip for most travelers.",
+  "after": "Five outdoor pools and Camp Hyatt beat one good pool and nearby restaurants for most travelers.",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "<li>10-minute walk to An Thuong restaurants</li>",
+  "after": "<li>Restaurants within walking distance</li>",
+  "reason": "Walk times unverified; review says restaurants within walking distance",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "One main pool, no lazy river",
+  "after": "One main pool",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "6 pools plus a 120m lazy river",
+  "after": "Five outdoor pools",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Hyatt Regency has six, including a 120-metre lazy river, which is simply more water than most guests will use in a stay.",
+  "after": "Hyatt Regency has five outdoor pools, which is simply more water than most guests will use in a stay.",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Pullman sits on My Khe's northern section, a 10-minute walk from An Thuong's restaurant strip and 12 minutes from the city centre by Grab.",
+  "after": "Pullman sits on Bac My An beach, south of My Khe, about 5.6 km by road from Dragon Bridge (roughly 7 minutes without traffic, routing estimate) and about 11 km by road from the airport (roughly 13 minutes).",
+  "reason": "Pullman is on Bac My An beach (official address 101 Vo Nguyen Giap), not My Khe north/Non Nuoc; routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "but it's a 20-minute Grab from town.",
+  "after": "but it's about 9 km by road from Dragon Bridge (roughly 11 minutes without traffic, routing estimate).",
+  "reason": "routes.json hyatt dragon_bridge 9 km/11 min",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "<li>An easy walk to An Thuong's restaurants</li>",
+  "after": "<li>Restaurants within walking distance</li>",
+  "reason": "Walk times unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Six pools and a 120m lazy river",
+  "after": "Five outdoor pools",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Only one main pool, no lazy river or villas",
+  "after": "Only one main pool and no villas",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "<li>20-minute Grab ride for city restaurants</li>",
+  "after": "<li>About 9 km by road to Dragon Bridge and city restaurants</li>",
+  "reason": "routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "<li>20-minute Grab into the city for dinner</li>",
+  "after": "<li>About 9 km by road to Dragon Bridge and city restaurants</li>",
+  "reason": "routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "and An Thuong being a 10-minute walk away is a real advantage Hyatt can't match.",
+  "after": "and being closer to the city and its restaurants is a real advantage Hyatt can't match.",
+  "reason": "Walk time unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Camp Hyatt, six pools, a lazy river, and pool villas justify",
+  "after": "Camp Hyatt, five outdoor pools and pool villas justify",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 1
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "- the An Thuong restaurant strip is a 10-minute walk.",
+  "after": "- restaurants are within walking distance.",
+  "reason": "Walk time unverified",
+  "occurrences": 2
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "there are 6 pools including a 120m lazy river,",
+  "after": "there are five outdoor pools,",
+  "reason": "Hyatt: five outdoor pools, no lazy river found (research2/review page)",
+  "occurrences": 2
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "Yes. The An Thuong restaurant area is roughly a 10-minute walk from Pullman Da Nang.",
+  "after": "Yes. Our Pullman review notes restaurants within walking distance.",
+  "reason": "Walk time unverified",
+  "occurrences": 2
+ },
+ {
+  "file": "pullman-vs-hyatt-regency-da-nang.html",
+  "before": "which requires a 20-minute Grab ride to reach similar dining options.",
+  "after": "which is about 9 km by road from Dragon Bridge and city dining (routing estimate), so most dinners mean a Grab.",
+  "reason": "routes.json",
+  "occurrences": 2
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An is about 25 to 30 minutes by car from Marriott Resort, Naman Retreat, Furama Resort and TIA Wellness Resort, which is easier",
+  "after": "Hoi An is roughly 20 to 30 minutes by car without traffic (routing estimates) from Marriott Resort, Naman Retreat, Furama Resort and TIA Wellness Resort, which is easier",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An about 25 minutes by car (listings put the distance at roughly 15 km), so a day trip",
+  "after": "Hoi An about 17 km by road, roughly 21 minutes without traffic (routing estimate), so a day trip",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "On Non Nuoc Beach, about 13 km south of the city centre and 15 km from the airport.",
+  "after": "On the Non Nuoc / Truong Sa coast, south of My Khe, about 11 km by road from Dragon Bridge and about 17 km by road from the airport (routing estimates).",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates; area wording",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "<p>About 13 km and a 25-minute taxi from the city centre, with Hoi An roughly 25 minutes south (listings give about 11.5 km).",
+  "after": "<p>About 14 km by road from Dragon Bridge (roughly 17 minutes without traffic, routing estimate), with Hoi An about 14 km by road, roughly 18 minutes.",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "<p>About 8 km south of the city centre and 10 km from the airport, with Dragon Bridge around 15 minutes away and Hoi An roughly 30 minutes south.",
+  "after": "<p>On the Bac My An beach strip south of My Khe, about 11 km by road from the airport and about 5.7 km by road from Dragon Bridge (roughly 7 minutes without traffic), with Hoi An about 30 km by road, roughly 27 minutes (routing estimates).",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates; Furama area = Bac My An",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "My Khe Beach · Wellness retreat, 58 rooms",
+  "after": "Truong Sa coast · Wellness retreat, 58 rooms",
+  "reason": "TIA is on the Truong Sa coast south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "<p>On My Khe Beach, so it gives more city access than a Non Nuoc property: Dragon Bridge is 12 minutes by Grab, Hoi An 30 minutes by car (listings give about 19 km), and the airport about 7 km away.",
+  "after": "<p>On the Truong Sa coast south of My Khe, it gives somewhat more city access than most Non Nuoc properties: Dragon Bridge is about 7 km by road (roughly 9 minutes without traffic), Hoi An about 22 km by road (roughly 26 minutes) and the airport about 12.5 km by road (routing estimates).",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates; TIA area",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "It is an all-inclusive wellness resort with only 58 rooms",
+  "after": "It is a wellness-inclusive resort with only 58 rooms",
+  "reason": "TIA sells Wellness Inclusive rates (breakfast + treatments), not all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "My Khe Beach · Families and Bonvoy",
+  "after": "Truong Sa coast · Families and Bonvoy",
+  "reason": "Sheraton Grand is on the Truong Sa coast south of My Khe, not My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "<p>At the quieter central section of My Khe Beach: the city centre is 15 minutes north by taxi, Dragon Bridge 7 km away and the airport 9 km. The Marble Mountains are 15 minutes south and Hoi An about 35 minutes by car.",
+  "after": "<p>On the Truong Sa coast in Ngu Hanh Son, south of My Khe: Dragon Bridge is about 13 km by road (roughly 16 minutes without traffic), the airport about 16 km (roughly 21 minutes) and Hoi An about 16 km (roughly 20 minutes) (routing estimates).",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates; Sheraton area; unsupported Marble Mtn time dropped",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Son Tra Peninsula · Villa stays",
+  "after": "My Khe Beach (Ngu Hanh Son) · Villa stays",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, Ngu Hanh Son, not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "<p>On the tip of Son Tra Peninsula, facing My Khe Beach, about 10 km from the city centre. Dragon Bridge is 22 minutes by taxi and Hoi An about 40 minutes: doable as day trips",
+  "after": "<p>On the southern My Khe / Bac My An beach strip in Ngu Hanh Son, about 5.5 km by road from Dragon Bridge and Han Market (routing estimate). Hoi An is about 30 km by road, roughly 28 minutes without traffic: doable as day trips",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates; Premier Village area",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An: ~25 min</div>",
+  "after": "Hoi An: ~20 min</div>",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 2
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An: ~30 min</div>",
+  "after": "Hoi An: ~26 min</div>",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 2
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An: ~35 min</div>",
+  "after": "Hoi An: ~20 min</div>",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An: ~40 min</div>",
+  "after": "Hoi An: ~28 min</div>",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "About 25 to 30 minutes by car from Marriott Resort, Naman Retreat, Furama and TIA Wellness in our reviews, about 35 minutes from Sheraton Grand and about 40 from Premier Village. Traffic changes this.",
+  "after": "Roughly 18 to 28 minutes by car without traffic (routing estimates): about 18 from Naman Retreat, 20 from Sheraton Grand, 21 from Marriott Resort, 26 from TIA Wellness, 27 from Furama and 28 from Premier Village. Traffic changes this.",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 2
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Marriott Resort is about 15 km from the airport and Furama about 10 km, according to our reviews.",
+  "after": "Marriott Resort is about 17 km by road from the airport and Furama about 11 km (routing estimates).",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 2
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "runs about 10-15 minutes by taxi or Grab, depending on traffic and which stretch of beach you're headed to. The northern My Khe strip (Pullman, A La Carte area) is closer to 10-12 minutes.",
+  "after": "runs roughly 13 to 16 minutes by road without traffic (routing estimates), longer in traffic, depending on which stretch of beach you're headed to. The A La Carte area is about 13 km by road; Pullman, Furama and Premier Village on the Bac My An strip are about 11 km.",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "around 8-10 minutes out. Novotel Da Nang Premier Han River and Grand Mercure Da Nang are among the closest major hotels.",
+  "after": "roughly 13 to 15 minutes by road without traffic (routing estimate). Novotel Da Nang Premier Han River and Grand Mercure Da Nang are among the closest major hotels.",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "since even the furthest city or beach hotels are only 15-20 minutes away",
+  "after": "since even the furthest city or beach hotels are only about 15 to 22 minutes away without traffic",
+  "reason": "routes.json free-flow road estimates (OSRM), labelled as routing estimates",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "My Khe Beach, where Pullman and a few others sit, follows",
+  "after": "The Bac My An and My Khe beaches, where Pullman, Furama and a few others sit, follow",
+  "reason": "Pullman/Furama are on Bac My An beach south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Non Nuoc Beach · Camp Hyatt · 6 pools + 120m lazy river",
+  "after": "Non Nuoc Beach · Camp Hyatt · 5 outdoor pools",
+  "reason": "Hyatt: five outdoor pools, no lazy river found",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Camp Hyatt's kids programme, 6 pools including a 120m lazy river, and",
+  "after": "Camp Hyatt's kids programme, five outdoor pools, and",
+  "reason": "Hyatt: five outdoor pools, no lazy river found",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Six pools, including a 120-metre lazy river, gives kids more to do in the water than anywhere else in the city.",
+  "after": "Five outdoor pools give kids a lot to do in the water.",
+  "reason": "Hyatt: five outdoor pools, no lazy river found",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "The one catch: Non Nuoc puts you about 20 minutes from the city centre,",
+  "after": "The one catch: Non Nuoc puts you about 9 km by road from Dragon Bridge (roughly 11 minutes without traffic, routing estimate),",
+  "reason": "routes.json hyatt",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Non Nuoc Beach · Largest waterpark in Da Nang · 785 rooms",
+  "after": "Truong Sa coast · Water park · 258 rooms",
+  "reason": "Sheraton Grand: 258 rooms, Truong Sa coast south of My Khe, not 785 rooms, not walkable to An Thuong",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Large family rooms, beachfront, a kids pool, and An Thuong's restaurants within walking distance.",
+  "after": "Large family rooms, beachfront, a kids pool and a water park.",
+  "reason": "Sheraton Grand: 258 rooms, Truong Sa coast south of My Khe, not 785 rooms, not walkable to An Thuong; no An Thuong walkability",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Sheraton Grand has the largest water complex of any hotel in Da Nang: multiple slides, dedicated kids' pools, a separate adult pool, and an aquatic area that's genuinely impressive in person. At 785 rooms, it's a big property, but it absorbs that volume without turning into a scrum at the pool.",
+  "after": "Sheraton Grand has a big water complex: multiple slides, dedicated kids' pools, a separate adult pool, and an aquatic area that's genuinely impressive in person. At 258 rooms, it's a sizeable family resort, but the pool areas are built to absorb the crowd.",
+  "reason": "Sheraton Grand: 258 rooms, Truong Sa coast south of My Khe, not 785 rooms, not walkable to An Thuong; superlative and mega-resort framing dropped",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Both sit on Non Nuoc Beach and are set up well",
+  "after": "Both sit on the Non Nuoc / Truong Sa coast, south of My Khe, and are set up well",
+  "reason": "Sheraton Grand: 258 rooms, Truong Sa coast south of My Khe, not 785 rooms, not walkable to An Thuong",
+  "occurrences": 2
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Sheraton Grand Da Nang has the largest waterpark of any hotel in the city, with multiple slides and pools.",
+  "after": "Sheraton Grand Da Nang has a water park with multiple slides and pools.",
+  "reason": "Superlative unsupported",
+  "occurrences": 2
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Hyatt Regency isn't a waterpark exactly, but its 120m lazy river and 6 pools compete just fine.",
+  "after": "Hyatt Regency isn't a waterpark exactly, but its five outdoor pools compete just fine.",
+  "reason": "Hyatt: five outdoor pools, no lazy river found",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Coral Kids Club · Mature gardens · My Khe Beach · Good value luxury",
+  "after": "Coral Kids Club · Mature gardens · Bac My An beach · Good value luxury",
+  "reason": "Furama is on Bac My An beach south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "My Khe Beach also puts you closer to the city's restaurant scene than the Non Nuoc properties.",
+  "after": "The Bac My An strip south of My Khe also puts you closer to the city than the Non Nuoc properties (about 5.7 km by road from Dragon Bridge, routing estimate).",
+  "reason": "Furama area; routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "best-family-resort-da-nang.html",
+  "before": "Hyatt Regency has a 120m lazy river and 6 pools.",
+  "after": "Hyatt Regency has five outdoor pools.",
+  "reason": "Hyatt: five outdoor pools, no lazy river found",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "The high-floor pool sits directly above the My Khe beachfront with",
+  "after": "The rooftop infinity pool looks out over My Khe Beach, across the road, with",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "The high-floor pool sits directly above My Khe beachfront with",
+  "after": "The rooftop infinity pool looks out over My Khe Beach, across the road, with",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "The high-floor infinity pool sits directly above My Khe beachfront with",
+  "after": "The rooftop infinity pool looks out over My Khe Beach, across the road, with",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "central beachfront position on Vo Nguyen Giap,",
+  "after": "central position on Vo Nguyen Giap, across the road from the beach,",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "Central beachfront location on Vo Nguyen Giap.",
+  "after": "Central location on Vo Nguyen Giap, across the road from the beach.",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "<li>Central beachfront position</li>",
+  "after": "<li>Central position, across the road from the beach</li>",
+  "reason": "TMS is across the road from My Khe Beach (research2 claims_check)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "and positioned directly on My Khe.",
+  "after": "and positioned on the My Khe strip.",
+  "reason": "'directly on' My Khe overstated; Wyndham/voco-area hotels are across the road",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "See Radisson Blu Prices for Radisson Hotel Danang",
+  "after": "See Radisson Hotel Danang Prices for Radisson Hotel Danang",
+  "reason": "Name: Radisson Hotel Danang, not Radisson Blu",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "See Radisson Blu Prices &rarr;",
+  "after": "See Radisson Hotel Danang Prices &rarr;",
+  "reason": "Name",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "Check Radisson Blu Resort Danang Prices",
+  "after": "Check Radisson Hotel Danang Prices",
+  "reason": "Name",
+  "occurrences": 2
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "<p><span class=\"dnc-lab\">",
+  "after": "<p><span class=\"dnc-lab\">",
+  "reason": "noop",
+  "occurrences": 4
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "<h3>Radisson Blu Resort Danang</h3>",
+  "after": "<h3>Radisson Hotel Danang</h3>",
+  "reason": "Name: Radisson Hotel Danang",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-rooftop-pool.html",
+  "before": "Not a full resort complex: no kids' club and a limited spa.",
+  "after": "Not a full resort complex: a limited spa, and a kids' club we could not confirm.",
+  "reason": "Sources conflict on kids' club (Trip.com lists one); dropped definitive 'no kids club'",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<p class=\"ao-card-meta\">Son Tra Peninsula &middot; $$$</p>",
+  "after": "<p class=\"ao-card-meta\">My Khe Beach (Ngu Hanh Son) &middot; $$$</p>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<div class=\"ao-quick-meta\">All-villa, Son Tra</div>",
+  "after": "<div class=\"ao-quick-meta\">All-villa, My Khe (Ngu Hanh Son)</div>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<div class=\"ao-quick-name\">Premier Village</div>\n        <div class=\"ao-quick-meta\">Son Tra Peninsula</div>",
+  "after": "<div class=\"ao-quick-name\">Premier Village</div>\n        <div class=\"ao-quick-meta\">My Khe Beach (Ngu Hanh Son)</div>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Yes (all units)</td><td class=\"ao-tick\">Yes</td><td class=\"ao-tick\">Yes</td><td>Son Tra</td>",
+  "after": "Yes (all units)</td><td class=\"ao-tick\">Yes</td><td class=\"ao-tick\">Yes</td><td>My Khe</td>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Private pool villas</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Private Pool</span><span class=\"ao-cmp-row-val\">Yes (all units)</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Beach</span><span class=\"ao-cmp-row-val\">Yes</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Spa</span><span class=\"ao-cmp-row-val\">Yes</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Location</span><span class=\"ao-cmp-row-val\">Son Tra</span>",
+  "after": "Private pool villas</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Private Pool</span><span class=\"ao-cmp-row-val\">Yes (all units)</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Beach</span><span class=\"ao-cmp-row-val\">Yes</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Spa</span><span class=\"ao-cmp-row-val\">Yes</span></div>\n        <div class=\"ao-cmp-row\"><span class=\"ao-cmp-row-key\">Location</span><span class=\"ao-cmp-row-val\">My Khe</span>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "The highest concentration of adult-leaning resorts in the city: Naman, Melia and Premier Village's neighbors all sit here.",
+  "after": "The highest concentration of adult-leaning resorts in the city: Naman and Melia both sit here.",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula (Premier is not on Non Nuoc)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "InterContinental and Premier Village both sit here, physically cut off",
+  "after": "The InterContinental sits here, physically cut off",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Naman Retreat, Melia and Premier Village's stretch are all there,",
+  "after": "Naman Retreat and Melia are both there,",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, My Khe beach strip (Ngu Hanh Son), not Son Tra Peninsula",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "The northern stretch near TIA is calmer than the main My Khe strip, but you're still a short Grab from Dragon Bridge and central Da Nang's dining scene.",
+  "after": "TIA sits on the Truong Sa coast south of My Khe, calmer than the main My Khe strip, and about 7 km by road from Dragon Bridge and central Da Nang's dining scene (roughly 9 minutes without traffic, routing estimate).",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son); routes.json",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<p class=\"ao-top-pick-type\">My Khe Beach &middot; The Closest",
+  "after": "<p class=\"ao-top-pick-type\">Truong Sa coast, south of My Khe &middot; The Closest",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Beach resort, My Khe</span>",
+  "after": "Beach resort, Truong Sa coast south of My Khe</span>",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Wellness, My Khe</div>",
+  "after": "Wellness, Truong Sa coast</div>",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Formerly Fusion Maia &middot; My Khe Beach &middot; $$$",
+  "after": "Formerly Fusion Maia &middot; Truong Sa coast &middot; $$$",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<td class=\"ao-tick\">Daily included</td><td>My Khe</td>",
+  "after": "<td class=\"ao-tick\">Included in Wellness Inclusive rate</td><td>Truong Sa coast</td>",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son); TIA sells Wellness Inclusive (breakfast + 2 treatments/80 min per person per night), not daily included spa",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<span class=\"ao-cmp-row-key\">Location</span><span class=\"ao-cmp-row-val\">My Khe</span>",
+  "after": "<span class=\"ao-cmp-row-key\">Location</span><span class=\"ao-cmp-row-val\">Truong Sa coast</span>",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 2
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "TIA Wellness Resort spa pavilion and pool, My Khe Beach",
+  "after": "TIA Wellness Resort spa pavilion and pool, Truong Sa coast",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "TIA Wellness Resort Da Nang private villa and pool area, My Khe Beach",
+  "after": "TIA Wellness Resort Da Nang private villa and pool area, Truong Sa coast",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "TIA Wellness Resort Da Nang villa and pool, My Khe Beach",
+  "after": "TIA Wellness Resort Da Nang villa and pool, Truong Sa coast",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "an included daily spa treatment, private pool villas",
+  "after": "spa treatments included in its Wellness Inclusive rate, private pool villas",
+  "reason": "TIA sells Wellness Inclusive (breakfast + 2 treatments/80 min per person per night), not daily included spa",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Less structured than TIA's daily-inclusion model,",
+  "after": "Less structured than TIA's included-treatment model,",
+  "reason": "TIA sells Wellness Inclusive (breakfast + 2 treatments/80 min per person per night), not daily included spa",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<div class=\"ao-quick-meta\">Daily spa included</div>",
+  "after": "<div class=\"ao-quick-meta\">Treatments in Wellness rate</div>",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "Daily spa treatment included in most rate packages, private pool villas,",
+  "after": "Two spa treatments per person per night included in the Wellness Inclusive rate, private pool villas,",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-adults-only-hotels.html",
+  "before": "<span class=\"ao-cmp-row-val\">Daily included</span>",
+  "after": "<span class=\"ao-cmp-row-val\">Included in Wellness Inclusive rate</span>",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "My Khe vs Non Nuoc?",
+  "after": "Bac My An vs Non Nuoc?",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "My Khe vs Non Nuoc.",
+  "after": "Bac My An vs Non Nuoc.",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>Closer to An Thuong restaurants, ~8 min Grab</li>",
+  "after": "<li>More on-site dining than Pullman</li>",
+  "reason": "Grab times unverified; neighbouring hotels on the same stretch",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>Older infrastructure in places, opened 1997</li>",
+  "after": "<li>Older infrastructure in places</li>",
+  "reason": "Opening year unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>Quieter Non Nuoc beach, closer to Hoi An</li>",
+  "after": "<li>Same Bac My An beach stretch, with about the same road distance to Hoi An as Furama</li>",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>~18 min Grab to An Thuong restaurants</li>",
+  "after": "<li>Fewer on-site dining options</li>",
+  "reason": "Grab times unverified; neighbouring hotels",
+  "occurrences": 2
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>A quieter beach and closer Hoi An access</li>",
+  "after": "<li>Newer facilities on the same stretch of beach</li>",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>Walkable-ish access to An Thuong restaurants</li>",
+  "after": "<li>A Bac My An beach location south of My Khe</li>",
+  "reason": "Walkability unverified; Furama is on Bac My An",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>Opened 1997, some infrastructure shows its age</li>",
+  "after": "<li>One of the older resorts on Bac My An beach, some infrastructure shows its age</li>",
+  "reason": "Opening year unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "<li>~45 min to Hoi An, further than Pullman</li>",
+  "after": "<li>About the same road distance to Hoi An as Pullman (roughly 27 minutes without traffic, routing estimate)</li>",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "tropical landscaping built up since 1997.",
+  "after": "tropical landscaping built up over many years.",
+  "reason": "Opening year unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "Furama carries its 1990s original five-star legacy in ways you either love or find dated. Pullman is a decade newer with",
+  "after": "Furama is one of the older resorts on Bac My An beach, and you either love that or find it dated. Pullman is newer with",
+  "reason": "Opening year unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "Furama sits on South My Khe, busier and with more local character. Pullman is on North Non Nuoc, quieter and more resort-focused, with better access to Hoi An for day trips.",
+  "after": "Furama and Pullman are neighbours on the Bac My An beach strip south of My Khe, about 11 km by road from the airport and about 27 minutes by road from Hoi An (routing estimates). Furama has more local character; Pullman is more modern and resort-focused.",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "and the My Khe position keeps An Thuong's restaurants a short Grab away.",
+  "after": "and the Bac My An beach position keeps Dragon Bridge about 5.7 km away by road (routing estimate).",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "Book Pullman if you want clean modern infrastructure, a quieter beach, better Hoi An access, and Accor",
+  "after": "Book Pullman if you want clean modern infrastructure, a more contemporary feel, and Accor",
+  "reason": "Furama (105 Vo Nguyen Giap) and Pullman (101 Vo Nguyen Giap) are neighbours on Bac My An beach south of My Khe; both ~27 min by road to Hoi An (routes.json)",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "2026, Bac My An vs Non Nuoc?",
+  "after": "2026, two neighbours on Bac My An beach",
+  "reason": "Furama and Pullman are neighbours on Bac My An beach; same road distance to Hoi An",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "compared for 2026, Bac My An vs Non Nuoc.",
+  "after": "compared for 2026, two neighbours on Bac My An beach.",
+  "reason": "Furama and Pullman are neighbours on Bac My An beach; same road distance to Hoi An",
+  "occurrences": 1
+ },
+ {
+  "file": "furama-vs-pullman-da-nang.html",
+  "before": "travelers who want modern infrastructure, closer Hoi An access",
+  "after": "travelers who want modern infrastructure",
+  "reason": "Furama and Pullman are neighbours on Bac My An beach; same road distance to Hoi An",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "Go with TIA Wellness if you want the quiet guaranteed by policy, not just probability.",
+  "after": "Go with TIA Wellness if you want the quietest, most adult-leaning atmosphere on this list.",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<div class=\"price-range\">$180-380/night &middot; My Khe Beach (northern section)</div>",
+  "after": "<div class=\"price-range\">$180-380/night &middot; Truong Sa coast, south of My Khe</div>",
+  "reason": "TIA is on the Truong Sa coast south of My Khe (109 Vo Nguyen Giap)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<span class=\"tag\">Adults-Only</span>\n        <span class=\"tag\">All-Inclusive Spa</span>\n        <span class=\"tag\">Most Private Atmosphere</span>\n        <span class=\"tag\">Guaranteed Quiet</span>",
+  "after": "<span class=\"tag\">Adult-Leaning</span>\n        <span class=\"tag\">Wellness Inclusive</span>\n        <span class=\"tag\">Most Private Atmosphere</span>\n        <span class=\"tag\">Quiet by Design</span>",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page); TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "TIA Wellness is Da Nang's only adults-only resort, and for some honeymooners that fact alone settles it. If you want a contractual guarantee that no families with kids will be at the pool, TIA is the only option in Da Nang.",
+  "after": "TIA Wellness is the most adult-leaning resort on this list, and for some honeymooners that alone settles it. It is not formally adults-only (children are accepted with age-based pricing), so if a strictly child-free stay is a hard requirement, call the resort and confirm its current policy.",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "(daily yoga, meditation sessions, a well-designed spa with Vietnamese-inspired treatments, and an all-inclusive structure that removes any hesitation about using it)",
+  "after": "(yoga and breathwork classes, a well-designed spa with Vietnamese-inspired treatments, and a Wellness Inclusive rate that includes treatments so there is no hesitation about using them)",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "Honest note on the all-inclusive spa structure: if most of your honeymoon",
+  "after": "Honest note on the Wellness Inclusive structure: if most of your honeymoon",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<div class=\"price-range\">$200-400/night &middot; My Khe Beach</div>",
+  "after": "<div class=\"price-range\">$200-400/night &middot; Truong Sa coast, south of My Khe</div>",
+  "reason": "Fusion Maia = TIA, Truong Sa coast",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<span class=\"tag\">All-Inclusive Spa Daily</span>\n        <span class=\"tag\">Breakfast Anywhere</span>",
+  "after": "<span class=\"tag\">Wellness Inclusive Rate</span>\n        <span class=\"tag\">All-Day Breakfast</span>",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "worth its own entry because the all-inclusive spa model deserves the detail. Two treatments per person per day included, breakfast served anywhere on the property until noon: it was built with exactly this kind of trip in mind. Breakfast in bed",
+  "after": "worth its own entry because the wellness-inclusive model deserves the detail. TIA sells a Wellness Inclusive rate with all-day breakfast and two treatments (80 minutes in total) per person per night, while full-board meals come with the Retreat Inclusive programme: it suits exactly this kind of trip. Breakfast in bed",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "The My Khe location gives it more city access than Naman's Non Nuoc setting, with direct beach access and a quieter feel than the resorts further up the strip.",
+  "after": "The Truong Sa coast location, south of My Khe, gives it somewhat more city access than Naman's Non Nuoc setting (about 7 km versus about 14 km by road to Dragon Bridge, routing estimates), with direct beach access and a quieter feel than the resorts further up the strip.",
+  "reason": "routes.json; TIA area",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "The all-inclusive spa is Fusion Maia's biggest differentiator.",
+  "after": "The included spa treatments are Fusion Maia's biggest differentiator.",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "The all-inclusive spa fits a honeymoon better than almost any other trip type",
+  "after": "The included spa treatments fit a honeymoon better than almost any other trip type",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<td>All-inclusive spa romance</td>",
+  "after": "<td>Wellness-inclusive spa romance</td>",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<td>Guaranteed quiet + wellness</td>",
+  "after": "<td>Quiet + wellness</td>",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<td>$180-380</td>\n          <td><span class=\"cross\">No</span></td>\n          <td><span class=\"tick\">Yes</span></td>\n          <td><span class=\"tick\">Yes</span></td>",
+  "after": "<td>$180-380</td>\n          <td><span class=\"tick\">All villas</span></td>\n          <td><span class=\"tick\">Yes</span></td>\n          <td><span class=\"cross\">No</span></td>",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page); all TIA villas have private pools (research2)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "If you need the adults-only guarantee rather than the adult-leaning probability, TIA is the only place in Da Nang that delivers it contractually.",
+  "after": "TIA is the most adult-leaning resort on this list, though it does accept children, so confirm the current policy if a child-free stay is essential.",
+  "reason": "TIA accepts children (Kids Wellness Club; adults-only claim contradicted by booking data and our adults-only page)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "Fusion Maia also has private pool villas and bundles spa treatments into the rate, making it the best all-in value if spa time is a honeymoon priority.",
+  "after": "Fusion Maia also has private pool villas and includes spa treatments in its Wellness Inclusive rate, making it strong value if spa time is a honeymoon priority.",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "Fusion Maia also has private pool villas and bundles spa treatments into the rate.",
+  "after": "Fusion Maia also has private pool villas and includes spa treatments in its Wellness Inclusive rate.",
+  "reason": "TIA sells Wellness Inclusive (all-day breakfast + 2 treatments/80 min per person per night); full board only on Retreat Inclusive; not unlimited/all-inclusive",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "<div class=\"price-range\">$250-500/night &middot; Non Nuoc Beach</div>",
+  "after": "<div class=\"price-range\">$250-500/night &middot; My Khe Beach (Ngu Hanh Son)</div>",
+  "reason": "Premier Village is on My Khe beach strip (99 Vo Nguyen Giap, Ngu Hanh Son), not Non Nuoc/Son Tra",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "The InterContinental and Premier Village sit on their own cliff and beach.",
+  "after": "The InterContinental sits on its own cliff and beach, and Premier Village on its own stretch of My Khe beach.",
+  "reason": "Premier Village is on My Khe beach strip (99 Vo Nguyen Giap, Ngu Hanh Son), not Non Nuoc/Son Tra",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "The standard rooms are excellent, but the private plunge pool makes a real difference.",
+  "after": "The standard rooms are excellent, but the club and suite categories make a real difference.",
+  "reason": "InterContinental villas have private infinity pools, not plunge pools (official accommodation page)",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-honeymoon-hotels.html",
+  "before": "club rooms and suites come with private plunge pools.",
+  "after": "the villa categories have private infinity pools.",
+  "reason": "IC villas have private infinity pools, not plunge pools (official accommodation page)",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "with Hoi An about 30 km by road, roughly 27 minutes (routing estimates).",
+  "after": "with Hoi An roughly 27 minutes by road without traffic (routing estimates).",
+  "reason": "Hoi An road km conflicts between sources (routes.json 30 km vs research 23 km); keep time only",
+  "occurrences": 1
+ },
+ {
+  "file": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "before": "Hoi An is about 30 km by road, roughly 28 minutes without traffic: doable",
+  "after": "Hoi An is roughly 28 minutes by road without traffic (routing estimate): doable",
+  "reason": "Hoi An road km conflicts between sources (routes.json 30 km vs research 23 km); keep time only",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "alt=\"Radisson Blu Resort Danang waterpark\"",
+  "after": "alt=\"Radisson Hotel Danang exterior\"",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "<span class=\"qp-category\">Beach + Kids Club</span>\n          <span class=\"qp-name\">Radisson Blu</span>\n          <span class=\"qp-meta\">Waterpark on My Khe</span>",
+  "after": "<span class=\"qp-category\">Beachside Hotel</span>\n          <span class=\"qp-name\">Radisson Hotel Danang</span>\n          <span class=\"qp-meta\">Rooftop pool, across from My Khe</span>",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "No kids club, big wow factor",
+  "after": "Kids club ages 4–12, big wow factor",
+  "reason": "InterContinental: complimentary Planet Trekkers Kids Club ages 4-12, three resort pools (L_O_N_G infinity, Garden, Kids) plus private villa pools",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "Sheraton or Radisson Blu, closer to My Khe",
+  "after": "Radisson Hotel Danang, closer to My Khe and the city (Trip.com lists a kids' club)",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed; Sheraton Grand is ~13 km by road from Dragon Bridge, not close to My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "area:'Non Nuoc / My Khe border'",
+  "after": "area:'Truong Sa coast, south of My Khe'",
+  "reason": "Sheraton Grand is on the Truong Sa coast south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "{id:'radisson',name:'Radisson Blu Resort Danang',category:'Beach + Kids Club',types:['waterpark','kids-club']",
+  "after": "{id:'radisson',name:'Radisson Hotel Danang',category:'Beachside Hotel',types:['kids-club']",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "imageAlt:'Radisson Blu Resort Danang'",
+  "after": "imageAlt:'Radisson Hotel Danang'",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "description:'A supervised kids club here backs up a waterpark, slides, wave pool, splash zone, that is the best on My Khe at any price, right on the beach strip. Having both means parents are not stuck choosing between a staffed program and open water play; the tradeoff is a pool deck that gets crowded once the property fills up in peak season.',kidsClub:'Supervised kids club plus waterpark access',pool:'Waterpark: slides, wave pool, splash zone',bestFor:'Families who also want to be near My Khe',tradeoff:'Busier, more crowded pool deck in peak season'",
+  "after": "description:'A beachside hotel across the road from My Khe with a rooftop infinity pool. Trip.com lists a kids club, but we could not confirm it with the hotel, so check before you book if the club is the reason you are coming. It has no waterpark.',kidsClub:'Listed on Trip.com, not confirmed',pool:'Rooftop infinity pool',bestFor:'Families who also want to be near My Khe and the city',tradeoff:'Not a full resort, no waterpark, kids club unconfirmed'",
+  "reason": "Radisson Hotel Danang (182 rooms, rooftop infinity pool, beach across the road): no Radisson Blu Resort with waterpark exists; Trip.com lists a kids club, unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "description:'No water park, no kids club, no shallow wading pool. This is the pick for parents who want the best hotel in Da Nang and are fully on supervision duty themselves, there is no staffed program to hand things off to. The funicular and clifftop paths also mean fewer toddlers around, which some parents will read as a feature.',kidsClub:'None',pool:'Four infinity pools terraced down the cliff',bestFor:'Older kids and parents prioritizing the hotel itself',tradeoff:'No dedicated family facilities at all'",
+  "after": "description:'No water park, but there is a complimentary Planet Trekkers Kids Club for ages 4 to 12 and a kids pool. This is the pick for parents who want the best hotel in Da Nang and are happy to supervise for most of the day. The funicular and clifftop paths also mean fewer toddlers around, which some parents will read as a feature.',kidsClub:'Planet Trekkers Kids Club, ages 4–12, complimentary',pool:'Three resort pools (infinity, garden, kids) plus private villa pools',bestFor:'Older kids and parents prioritizing the hotel itself',tradeoff:'No water park, steep clifftop terrain'",
+  "reason": "InterContinental: complimentary Planet Trekkers Kids Club ages 4-12, three resort pools (L_O_N_G infinity, Garden, Kids) plus private villa pools",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-hotels-kids-club.html",
+  "before": "category:'Luxury Splurge',types:['luxury']",
+  "after": "category:'Luxury Splurge',types:['luxury','kids-club']",
+  "reason": "IC has a kids club, so it belongs in the kids-club filter",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "a funicular through jungle, four infinity pools above a private bay,",
+  "after": "a funicular through jungle, three resort pools plus private villa pools above a private bay,",
+  "reason": "InterContinental: three resort pools (50 m L_O_N_G infinity, Garden, Kids) plus private villa pools (official pools page)",
+  "occurrences": 2
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Four infinity pools stepped down a jungle cliff to a private bay,",
+  "after": "Three resort pools, including a 50-metre infinity pool, plus private villa pools, a private bay,",
+  "reason": "InterContinental: three resort pools (50 m L_O_N_G infinity, Garden, Kids) plus private villa pools (official pools page)",
+  "occurrences": 2
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "<span class=\"bb-detail-tag\">4 infinity pools</span>",
+  "after": "<span class=\"bb-detail-tag\">3 resort pools + villa pools</span>",
+  "reason": "InterContinental: three resort pools (50 m L_O_N_G infinity, Garden, Kids) plus private villa pools (official pools page)",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "At under $70 for a direct beachfront room, this is where",
+  "after": "At under $70 for a room across the road from the beach, this is where",
+  "reason": "TMS is across the road from My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Under $70 for a direct beachfront room, the maths works.",
+  "after": "Under $70 for a room across the road from the beach, the maths works.",
+  "reason": "TMS is across the road from My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "<span class=\"bb-sig-detail-tag\">Direct beachfront</span>",
+  "after": "<span class=\"bb-sig-detail-tag\">Across from the beach</span>",
+  "reason": "TMS is across the road from My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Melia vs Radisson Blu Danang</a>",
+  "after": "Melia vs Radisson Hotel Danang</a>",
+  "reason": "Name: Radisson Hotel Danang, not Radisson Blu (visible text only)",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "name:'Radisson Blu Resort Danang'",
+  "after": "name:'Radisson Hotel Danang'",
+  "reason": "Name: Radisson Hotel Danang",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "imageAlt:'Radisson Blu Resort Danang'",
+  "after": "imageAlt:'Radisson Hotel Danang'",
+  "reason": "Name",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "name:'Melia Vinpearl Da Nang'",
+  "after": "name:'Meliá Vinpearl Danang Riverfront'",
+  "reason": "Name: Meliá Vinpearl Danang Riverfront",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "imageAlt:'Melia Vinpearl Da Nang'",
+  "after": "imageAlt:'Meliá Vinpearl Danang Riverfront'",
+  "reason": "Name",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Best-run kids club on My Khe, a serious breakfast buffet",
+  "after": "A strong kids club on the Truong Sa coast south of My Khe, a serious breakfast buffet",
+  "reason": "Sheraton Grand is on the Truong Sa coast south of My Khe, not My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "areaLabel:'My Khe Beach',price:3,bestFor:'Families with kids'",
+  "after": "areaLabel:'Truong Sa Coast',price:3,bestFor:'Families with kids'",
+  "reason": "Sheraton Grand area",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Every villa has a private plunge pool facing the ocean.",
+  "after": "Every villa has a private pool facing the ocean.",
+  "reason": "Private pools confirmed; plunge unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "areaLabel:'My Khe Headland'",
+  "after": "areaLabel:'My Khe Beach (Ngu Hanh Son)'",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, not on a headland/Son Tra",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "areaLabel:'My Khe South'",
+  "after": "areaLabel:'Bac My An Beach'",
+  "reason": "Pullman is on Bac My An beach, south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Open since 1997, three decades of tropical growth make the gardens feel genuine.",
+  "after": "One of the older resorts on Bac My An Beach, with decades of tropical growth that make the gardens feel genuine.",
+  "reason": "Opening year unverified",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "The rooftop pool at dusk turns a specific shade of gold",
+  "after": "The rooftop at dusk turns a specific shade of gold",
+  "reason": "Hilton Da Nang has no confirmed rooftop pool",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "bestFor:'Fast airport transfer'",
+  "after": "bestFor:'Han Market on foot'",
+  "reason": "Hilton is not the fastest airport transfer (about 15 min free-flow); Han Market is about a 7-minute walk",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Han Market is five minutes, and on Fridays",
+  "after": "Han Market is about a 16-minute walk, and on Fridays",
+  "reason": "routes.json novotel foot route 16 min",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "Two spa treatments included every day, daily yoga, pool villas with private plunge pools.",
+  "after": "Wellness Inclusive rate with two spa treatments per person per night, yoga classes, private pool villas.",
+  "reason": "TIA Wellness Inclusive; private pools",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "one minute to the beach.",
+  "after": "about a 3-minute walk to the beach.",
+  "reason": "Wyndham Soleil: OSM foot route ~3 min",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "sand under a minute’s walk.",
+  "after": "a short walk to the sand.",
+  "reason": "Muong Thanh: ~110 m foot route, not under a minute",
+  "occurrences": 1
+ },
+ {
+  "file": "hotel-reviews.html",
+  "before": "areaLabel:'My Khe Beach',price:4,bestFor:'A reset, not just a stay'",
+  "after": "areaLabel:'Truong Sa Coast',price:4,bestFor:'A reset, not just a stay'",
+  "reason": "TIA is on the Truong Sa coast south of My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "arbora-luxury-collection-da-nang.html",
+  "before": "the same stretch as the Hyatt Regency, Marriott Resort, Pullman, and Sheraton Grand.",
+  "after": "the same stretch of coast as the Hyatt Regency, Marriott Resort and Sheraton Grand.",
+  "reason": "Pullman is on Bac My An beach south of My Khe, not Non Nuoc",
+  "occurrences": 1
+ },
+ {
+  "file": "arbora-luxury-collection-da-nang.html",
+  "before": "the Hyatt's 6-pool complex and kids club remain the benchmark",
+  "after": "the Hyatt's five-pool complex and kids club remain the benchmark",
+  "reason": "Hyatt has five outdoor pools",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-guide-for-korean-travelers.html",
+  "before": "A Korean-traveler favourite. My Khe beachfront, walkable to An Thuong.",
+  "after": "A Korean-traveler favourite. Non Nuoc beachfront, about 9 km by road from Dragon Bridge (routing estimate), so An Thuong means a Grab.",
+  "reason": "Hyatt Regency is on Non Nuoc beach south of My Khe (routes.json 9 km/11 min), not walkable to An Thuong",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-guide-for-korean-travelers.html",
+  "before": "Best value branded property on My Khe. Rooftop pool, beachfront.",
+  "after": "Best value branded property on My Khe. Rooftop pool, across the road from the beach.",
+  "reason": "Four Points is across the road from the beach",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-guide-for-korean-travelers.html",
+  "before": "Korean visitors tend to favour beachfront resorts along My Khe Beach. Popular choices include the InterContinental Danang Sun Peninsula Resort, Hyatt Regency Da Nang, Furama Resort, and Four Points by Sheraton.",
+  "after": "Korean visitors tend to favour beach resorts along the Da Nang coast. Popular choices include the InterContinental Danang Sun Peninsula Resort, Hyatt Regency Da Nang (Non Nuoc), Furama Resort (Bac My An beach, south of My Khe), and Four Points by Sheraton (My Khe).",
+  "reason": "Furama is on Bac My An beach, Hyatt on Non Nuoc, not My Khe",
+  "occurrences": 2
+ },
+ {
+  "file": "da-nang-3-day-itinerary.html",
+  "before": "<span class=\"bb-card-cat\">My Khe Beach</span>\n          <h3 class=\"bb-card-name\">Sheraton Grand Danang Resort</h3>\n          <p class=\"bb-card-desc\">Full beach resort with a strong kids club and pool complex, right on My Khe.</p>",
+  "after": "<span class=\"bb-card-cat\">Truong Sa Coast</span>\n          <h3 class=\"bb-card-name\">Sheraton Grand Danang Resort</h3>\n          <p class=\"bb-card-desc\">Full beach resort with a strong kids club and pool complex, on the Truong Sa coast south of My Khe.</p>",
+  "reason": "Sheraton Grand is at 35 Truong Sa St, south of My Khe, not on My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "villas vs tower rooms on Non Nuoc Beach.",
+  "after": "villas vs tower rooms on the southern My Khe and Truong Sa coast.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast south of My Khe (about 8.8 km by road from the southern end of My Khe Beach), not on My Khe; Premier Village is at 99 Vo Nguyen Giap (My Khe south end, Ngu Hanh Son)",
+  "occurrences": 2
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Two resorts on the same stretch of My Khe Beach. One sells",
+  "after": "Two beach resorts roughly 9 km apart by road: Premier Village on the southern My Khe strip, Sheraton Grand on the Truong Sa coast south of it. One sells",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast south of My Khe (about 8.8 km by road from the southern end of My Khe Beach), not on My Khe; Premier Village is at 99 Vo Nguyen Giap (My Khe south end, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Area: South My Khe (Khue My) versus Truong Sa coast (south of My Khe).",
+  "after": "Area: southern My Khe / Bac My An strip versus Truong Sa coast (south of My Khe).",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast south of My Khe (about 8.8 km by road from the southern end of My Khe Beach), not on My Khe; Premier Village is at 99 Vo Nguyen Giap (My Khe south end, Ngu Hanh Son)",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Remote from the city and Hoi An: nothing is walkable.",
+  "after": "About 5.5 km by road from Dragon Bridge (routing estimate), so city dinners mean a Grab.",
+  "reason": "routes.json premier dragon_bridge 5.5 km",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Every unit has a private plunge pool facing the ocean,",
+  "after": "Every unit has a private pool facing the ocean,",
+  "reason": "Private pools confirmed for Premier Village villas; plunge-pool wording unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "<li>Private plunge pool in every villa</li>",
+  "after": "<li>Private pool in every villa</li>",
+  "reason": "Private pools confirmed for Premier Village villas; plunge-pool wording unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "<li>Best kids club and waterslides on My Khe</li>",
+  "after": "<li>Strong kids club and waterslides</li>",
+  "reason": "Sheraton Grand is not on My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Shared pools, no private plunge pool option",
+  "after": "Shared pools, no private pool option",
+  "reason": "Private pools confirmed for Premier Village villas; plunge-pool wording unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "villa has its own plunge pool,",
+  "after": "villa has its own private pool,",
+  "reason": "Private pools confirmed for Premier Village villas; plunge-pool wording unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "<li>A private plunge pool you don't share with anyone</li>",
+  "after": "<li>A private pool you don't share with anyone</li>",
+  "reason": "Private pools confirmed for Premier Village villas; plunge-pool wording unconfirmed",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "Premier Village is the only all-villa property on My Khe Beach and",
+  "after": "Premier Village is the only all-villa property on its stretch of My Khe Beach and",
+  "reason": "Wording kept to Premier's own stretch",
+  "occurrences": 2
+ },
+ {
+  "file": "da-nang-vs-phu-quoc.html",
+  "before": "Best-run kids club and waterslides on My Khe.",
+  "after": "A strong kids club and waterslides on the Truong Sa coast south of My Khe.",
+  "reason": "Sheraton Grand is on the Truong Sa coast, not My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-vs-phu-quoc.html",
+  "before": "Direct beachfront value, rooftop pool.",
+  "after": "Beachfront-area value across the road from the sand, rooftop pool.",
+  "reason": "TMS is across the road from My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "da-nang-vs-hoi-an.html",
+  "before": "Direct beachfront value, rooftop pool.",
+  "after": "Beachfront-area value across the road from the sand, rooftop pool.",
+  "reason": "TMS is across the road from My Khe",
+  "occurrences": 1
+ },
+ {
+  "file": "best-beach-hotel-under-100-da-nang.html",
+  "before": "True beachfront properties at this price point are limited to Vietnamese-chain hotels like Muong Thanh.",
+  "after": "Even the closest at this price point, like the Vietnamese-chain Muong Thanh, sit across the road rather than on the sand.",
+  "reason": "Muong Thanh Luxury Da Nang is across the road from My Khe (~110-150 m to shoreline), not directly on the sand",
+  "occurrences": 1
+ },
+ {
+  "file": "best-beach-hotel-under-100-da-nang.html",
+  "before": "True beachfront at this price is limited to Vietnamese-chain hotels like Muong Thanh.",
+  "after": "Even the closest at this price, like the Vietnamese-chain Muong Thanh, sit across the road rather than on the sand.",
+  "reason": "Muong Thanh Luxury Da Nang is across the road from My Khe (~110-150 m to shoreline), not directly on the sand",
+  "occurrences": 1
+ },
+ {
+  "file": "best-beach-hotel-under-100-da-nang.html",
+  "before": "Muong Thanh Luxury Da Nang hotel exterior on My Khe Beach",
+  "after": "Muong Thanh Luxury Da Nang hotel exterior near My Khe Beach",
+  "reason": "Muong Thanh Luxury Da Nang is across the road from My Khe (~110-150 m to shoreline), not directly on the sand",
+  "occurrences": 1
+ },
+ {
+  "file": "marriott-vs-intercontinental-da-nang.html",
+  "before": "the other is dramatic and adults-first on Son Tra Peninsula.",
+  "after": "the other is dramatic and couple-leaning on Son Tra Peninsula, though it does run a complimentary kids club for ages 4 to 12.",
+  "reason": "InterContinental has a complimentary Planet Trekkers Kids Club (ages 4-12); 'adults-first' overstated",
+  "occurrences": 1
+ },
+ {
+  "file": "premier-village-vs-sheraton-grand-da-nang.html",
+  "before": "privacy matters more than a lazy river, this is the pick.",
+  "after": "privacy matters more than a waterpark, this is the pick.",
+  "reason": "Lazy river claim for Sheraton not supported; Sheraton has a water park",
+  "occurrences": 1
+ }
+]

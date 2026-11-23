@@ -1,0 +1,68 @@
+[
+ {
+  "before": "a rooftop pool with arguably the best view...",
+  "after": "a rooftop bar with river and city views",
+  "reason": "Listings show an indoor pool and a rooftop dining/lounge, no rooftop pool",
+  "source": "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam"
+ },
+ {
+  "before": "meta/og/twitter/JSON-LD/FAQ: rooftop pool; about 1.2 km",
+  "after": "rooftop bar / indoor pool; about 1 km (1.06 km foot route)",
+  "reason": "Same claim kept consistent across metadata",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "about a 10 to 13 minute walk from Dragon Bridge",
+  "after": "about a 14-minute walk (roughly 1.1 km)",
+  "reason": "OSRM foot route 1.06 km, 14.2 min",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "Han Market about three minutes on foot",
+  "after": "about four minutes",
+  "reason": "OSRM foot 0.29 km, 3.9 min",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "4km, about 8 minutes by Grab / quick 4km airport transfer",
+  "after": "about 4 km straight line, roughly 10.6 km by road (~14 min, routing estimate)",
+  "reason": "Straight-line figure was presented as a drive",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "My Khe is a 10-minute Grab ride",
+  "after": "about 3.9 km by road",
+  "reason": "OSRM car 3.9 km, ~5 min no traffic",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "FAQ: About 5 km from My Khe Beach and a few km from airport",
+  "after": "3.9 km by road from My Khe; 4 km straight / 10.6 km by road from airport",
+  "reason": "Corrected",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "Rooms run 28-42 square metres",
+  "after": "removed",
+  "reason": "Unverifiable",
+  "source": "n/a"
+ },
+ {
+  "before": "Locally owned and operated / manager hands-on",
+  "after": "independent, non-chain hotel",
+  "reason": "Ownership unverified; listings show independent hotel",
+  "source": "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam"
+ },
+ {
+  "before": "Pool small, not for laps; pool view of Dragon Bridge",
+  "after": "removed; indoor pool stated; views attributed to rooftop bar/lounge",
+  "reason": "Pool is indoor per listings; size/view unverified",
+  "source": "https://www.expedia.com/Da-Nang-Hotels-Brilliant-Hotel.h5155710.Hotel-Information"
+ },
+ {
+  "before": "hero image alt: rooftop pool overlooking Dragon Bridge",
+  "after": "pool area (illustrative photo)",
+  "reason": "Alt text must not assert a rooftop pool",
+  "source": "n/a"
+ }
+]

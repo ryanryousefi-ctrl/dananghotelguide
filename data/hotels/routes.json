@@ -1,0 +1,867 @@
+{
+ "meta": {
+  "built": "2026-11-23",
+  "methods": {
+   "straight_line_km": "great-circle from OpenStreetMap coordinates",
+   "driving": "OSRM public server, car profile, free-flow (no traffic); real taxi times are usually longer",
+   "walking": "routing.openstreetmap.de foot profile"
+  },
+  "landmarks": {
+   "airport": [
+    16.0425792,
+    108.1971613,
+    "Da Nang International Airport"
+   ],
+   "dragon_bridge": [
+    16.0611682,
+    108.2278968,
+    "Dragon Bridge"
+   ],
+   "han_market": [
+    16.0683525,
+    108.224283,
+    "Han Market"
+   ],
+   "hoi_an_old_town": [
+    15.8779509,
+    108.3239898,
+    "Hoi An Old Town"
+   ]
+  }
+ },
+ "hotels": {
+  "brilliant-hotel-da-nang": {
+   "coords": [
+    16.0666727,
+    108.2247119
+   ],
+   "coord_source": "Nominatim: 'Brilliant Hotel, 162, Duong Bach Dang' building match",
+   "distances": {
+    "airport": {
+     "straight_line_km": 4,
+     "driving": {
+      "km": 10.6,
+      "minutes": 14
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 0.7,
+     "driving": {
+      "km": 1.4,
+      "minutes": 2
+     },
+     "walking": {
+      "km": 1.1,
+      "minutes": 14
+     }
+    },
+    "han_market": {
+     "straight_line_km": 0.2,
+     "driving": {
+      "km": 0.3,
+      "minutes": 0
+     },
+     "walking": {
+      "km": 0.3,
+      "minutes": 4
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 23.5,
+     "driving": {
+      "km": 30.7,
+      "minutes": 29
+     }
+    }
+   }
+  },
+  "novotel-da-nang-han-river": {
+   "coords": [
+    16.0774605,
+    108.2235631
+   ],
+   "coord_source": "Nominatim 'Novotel, Duong Tran Phu' (Thach Thang); building-name match, street 36 Bach Dang not resolved separately - medium confidence",
+   "distances": {
+    "airport": {
+     "straight_line_km": 4.8,
+     "driving": {
+      "km": 10.3,
+      "minutes": 14
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 1.9,
+     "driving": {
+      "km": 2.5,
+      "minutes": 3
+     },
+     "walking": {
+      "km": 2.4,
+      "minutes": 32
+     }
+    },
+    "han_market": {
+     "straight_line_km": 1,
+     "driving": {
+      "km": 1.5,
+      "minutes": 2
+     },
+     "walking": {
+      "km": 1.2,
+      "minutes": 16
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 24.6,
+     "driving": {
+      "km": 31.8,
+      "minutes": 30
+     }
+    }
+   }
+  },
+  "grand-mercure-da-nang": {
+   "coords": [
+    16.048229,
+    108.2268111
+   ],
+   "coord_source": "Nominatim 'Grand Mercure Danang, Duong Dao Xanh 1'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 3.2,
+     "driving": {
+      "km": 9.4,
+      "minutes": 13
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 1.4,
+     "driving": {
+      "km": 2.1,
+      "minutes": 3
+     },
+     "walking": {
+      "km": 2.1,
+      "minutes": 28
+     }
+    },
+    "han_market": {
+     "straight_line_km": 2.3,
+     "driving": {
+      "km": 2.7,
+      "minutes": 3
+     },
+     "walking": {
+      "km": 2.7,
+      "minutes": 36
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 21.6,
+     "driving": {
+      "km": 29.1,
+      "minutes": 27
+     }
+    }
+   }
+  },
+  "hilton-da-nang": {
+   "coords": [
+    16.0726103,
+    108.2242301
+   ],
+   "coord_source": "Nominatim OSM 'Hilton Da Nang, 50 Bach Dang' (matches Trip.com 16.072667,108.224286)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 4.4,
+     "driving": {
+      "km": 10.6,
+      "minutes": 15
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 1.3,
+     "driving": {
+      "km": 2.8,
+      "minutes": 4
+     },
+     "walking": {
+      "km": 1.9,
+      "minutes": 26
+     }
+    },
+    "han_market": {
+     "straight_line_km": 0.5,
+     "driving": {
+      "km": 1.8,
+      "minutes": 3
+     },
+     "walking": {
+      "km": 0.5,
+      "minutes": 7
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 24.1,
+     "driving": {
+      "km": 32.1,
+      "minutes": 30
+     }
+    }
+   }
+  },
+  "melia-vinpearl-da-nang": {
+   "coords": [
+    16.0709337,
+    108.22961
+   ],
+   "coord_source": "Nominatim OSM (matches Trip.com 16.071122,108.229444)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 4.7,
+     "driving": {
+      "km": 12.2,
+      "minutes": 15
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 1.1,
+     "driving": {
+      "km": 3.1,
+      "minutes": 4
+     },
+     "walking": {
+      "km": 1.8,
+      "minutes": 24
+     }
+    },
+    "han_market": {
+     "straight_line_km": 0.6,
+     "driving": {
+      "km": 3.3,
+      "minutes": 4
+     },
+     "walking": {
+      "km": 1.4,
+      "minutes": 19
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 23.7,
+     "driving": {
+      "km": 32.4,
+      "minutes": 30
+     }
+    }
+   }
+  },
+  "radisson-blu-da-nang": {
+   "coords": [
+    16.07393,
+    108.24474
+   ],
+   "coord_source": "Trip.com page coordinates (16.07393,108.24474), consistent with Nominatim 'Radisson' on Loseby st, An Hai (16.07388,108.24467)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 6.2,
+     "driving": {
+      "km": 13.3,
+      "minutes": 16
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2.3,
+     "driving": {
+      "km": 4.2,
+      "minutes": 5
+     }
+    },
+    "han_market": {
+     "straight_line_km": 2.3,
+     "driving": {
+      "km": 4.3,
+      "minutes": 5
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 23.4,
+     "driving": {
+      "km": 33.4,
+      "minutes": 31
+     }
+    }
+   }
+  },
+  "sheraton-grand-da-nang": {
+   "coords": [
+    15.9814271,
+    108.2789535
+   ],
+   "coord_source": "OSM Nominatim way 549188946 'Sheraton Grand Danang Resort & Spa, 35 Duong Truong Sa' (address matches)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 11.1,
+     "driving": {
+      "km": 16,
+      "minutes": 21
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 10.4,
+     "driving": {
+      "km": 13.1,
+      "minutes": 16
+     }
+    },
+    "han_market": {
+     "straight_line_km": 11.3,
+     "driving": {
+      "km": 13.3,
+      "minutes": 16
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 12.5,
+     "driving": {
+      "km": 15.7,
+      "minutes": 20
+     }
+    }
+   }
+  },
+  "marriott-resort-da-nang": {
+   "coords": [
+    15.9938706,
+    108.2702536
+   ],
+   "coord_source": "OSM Nominatim 'Danang Marriott Resort & Spa, Non Nuoc Beach Villas, 23 Duong Truong Sa'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 9.5,
+     "driving": {
+      "km": 16.7,
+      "minutes": 19
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 8.7,
+     "driving": {
+      "km": 11.1,
+      "minutes": 13
+     }
+    },
+    "han_market": {
+     "straight_line_km": 9.6,
+     "driving": {
+      "km": 11.3,
+      "minutes": 13
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 14.1,
+     "driving": {
+      "km": 17.2,
+      "minutes": 21
+     }
+    }
+   }
+  },
+  "naman-retreat-da-nang": {
+   "coords": [
+    15.9696672,
+    108.2853809
+   ],
+   "coord_source": "OSM Nominatim 'Naman Retreat, Duong Truong Sa' (two OSM results within 100 m)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 12.4,
+     "driving": {
+      "km": 17.3,
+      "minutes": 22
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 11.9,
+     "driving": {
+      "km": 14.4,
+      "minutes": 17
+     }
+    },
+    "han_market": {
+     "straight_line_km": 12.8,
+     "driving": {
+      "km": 14.6,
+      "minutes": 17
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 11,
+     "driving": {
+      "km": 14.2,
+      "minutes": 18
+     }
+    }
+   }
+  },
+  "tia-wellness-resort-da-nang": {
+   "coords": [
+    16.03117,
+    108.2551994
+   ],
+   "coord_source": "Nominatim (OSM) 'Tia Wellness Resort, Duong Vo Nguyen Giap, Phuong Ngu Hanh Son' - building match",
+   "distances": {
+    "airport": {
+     "straight_line_km": 6.3,
+     "driving": {
+      "km": 12.5,
+      "minutes": 15
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 4.4,
+     "driving": {
+      "km": 6.8,
+      "minutes": 9
+     }
+    },
+    "han_market": {
+     "straight_line_km": 5.3,
+     "driving": {
+      "km": 7,
+      "minutes": 9
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 18.6,
+     "driving": {
+      "km": 21.6,
+      "minutes": 26
+     }
+    }
+   }
+  },
+  "pullman-da-nang": {
+   "coords": [
+    16.0406291,
+    108.250121
+   ],
+   "coord_source": "Official hotel website location page (Latitude/Longitude); Nominatim returned no result",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.7,
+     "driving": {
+      "km": 11.2,
+      "minutes": 13
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 3.3,
+     "driving": {
+      "km": 5.6,
+      "minutes": 7
+     }
+    },
+    "han_market": {
+     "straight_line_km": 4.1,
+     "driving": {
+      "km": 5.7,
+      "minutes": 7
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 19.7,
+     "driving": {
+      "km": 29.7,
+      "minutes": 27
+     }
+    }
+   }
+  },
+  "furama-resort-da-nang": {
+   "coords": [
+    16.0397489,
+    108.2513386
+   ],
+   "coord_source": "Nominatim (OSM) 'Furama Resort, 105 Vo Nguyen Giap, Ngu Hanh Son' - address matches official",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.8,
+     "driving": {
+      "km": 11.3,
+      "minutes": 13
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 3.5,
+     "driving": {
+      "km": 5.7,
+      "minutes": 7
+     }
+    },
+    "han_market": {
+     "straight_line_km": 4.3,
+     "driving": {
+      "km": 5.8,
+      "minutes": 7
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 19.6,
+     "driving": {
+      "km": 29.8,
+      "minutes": 27
+     }
+    }
+   }
+  },
+  "hyatt-regency-da-nang": {
+   "coords": [
+    16.0125892,
+    108.2637747
+   ],
+   "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim: 'Hyatt Regency Danang Resort and Spa, 5, Duong Truong Sa')",
+   "distances": {
+    "airport": {
+     "straight_line_km": 7.9,
+     "driving": {
+      "km": 14.6,
+      "minutes": 17
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 6.6,
+     "driving": {
+      "km": 9,
+      "minutes": 11
+     },
+     "walking": {
+      "km": 7.8,
+      "minutes": 104
+     }
+    },
+    "han_market": {
+     "straight_line_km": 7.5,
+     "driving": {
+      "km": 9.1,
+      "minutes": 11
+     },
+     "walking": {
+      "km": 9.2,
+      "minutes": 122
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 16.3,
+     "driving": {
+      "km": 19.4,
+      "minutes": 23
+     }
+    }
+   }
+  },
+  "intercontinental-da-nang": {
+   "coords": [
+    16.1210876,
+    108.3061358
+   ],
+   "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim: InterContinental Danang Sun Peninsula Resort, Hoang Sa)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 14.6,
+     "driving": {
+      "km": 28.3,
+      "minutes": 34
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 10.7,
+     "driving": {
+      "km": 19.2,
+      "minutes": 22
+     }
+    },
+    "han_market": {
+     "straight_line_km": 10.5,
+     "driving": {
+      "km": 19.3,
+      "minutes": 22
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 27.1,
+     "driving": {
+      "km": 48.4,
+      "minutes": 48
+     }
+    }
+   }
+  },
+  "premier-village-da-nang": {
+   "coords": [
+    16.0436238,
+    108.2496571
+   ],
+   "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim 'Premier Village Resort, 99'; Accor listing coords 16.043611,108.249722 via search snippet)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.6,
+     "driving": {
+      "km": 11.6,
+      "minutes": 14
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 3,
+     "driving": {
+      "km": 5.5,
+      "minutes": 7
+     }
+    },
+    "han_market": {
+     "straight_line_km": 3.9,
+     "driving": {
+      "km": 5.6,
+      "minutes": 7
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 20.1,
+     "driving": {
+      "km": 30.1,
+      "minutes": 28
+     }
+    }
+   }
+  },
+  "melia-da-nang": {
+   "coords": [
+    16.0010848,
+    108.2691135
+   ],
+   "coord_source": "OSM Nominatim result 'Meliá Danang Beach Resort, Đường Trường Sa' (building-level; Cape Nao Beach Club on same site at 15.9996,108.2712)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 9,
+     "driving": {
+      "km": 16,
+      "minutes": 19
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 8,
+     "driving": {
+      "km": 10.3,
+      "minutes": 12
+     },
+     "walking": {
+      "km": 9.1,
+      "minutes": 122
+     }
+    },
+    "han_market": {
+     "straight_line_km": 8.9,
+     "driving": {
+      "km": 10.5,
+      "minutes": 12
+     },
+     "walking": {
+      "km": 10.5,
+      "minutes": 140
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 14.9,
+     "driving": {
+      "km": 17.9,
+      "minutes": 22
+     }
+    }
+   }
+  },
+  "a-la-carte-da-nang": {
+   "coords": [
+    16.0686936,
+    108.2446224
+   ],
+   "coord_source": "OSM Nominatim 'A La Carte Danang Beach, 200 Võ Nguyên Giáp'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.8,
+     "driving": {
+      "km": 12.7,
+      "minutes": 15
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2,
+     "driving": {
+      "km": 3.7,
+      "minutes": 4
+     }
+    },
+    "han_market": {
+     "straight_line_km": 2.2,
+     "driving": {
+      "km": 3.8,
+      "minutes": 4
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 22.8,
+     "driving": {
+      "km": 32.9,
+      "minutes": 30
+     }
+    }
+   }
+  },
+  "four-points-sheraton-da-nang": {
+   "coords": [
+    16.0778724,
+    108.2451737
+   ],
+   "coord_source": "OSM Nominatim 'Four Points by Sheraton Danang, 118-120 Vo Nguyen Giap'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 6.5,
+     "driving": {
+      "km": 13.7,
+      "minutes": 16
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2.6,
+     "driving": {
+      "km": 4.6,
+      "minutes": 5
+     }
+    },
+    "han_market": {
+     "straight_line_km": 2.5,
+     "driving": {
+      "km": 4.8,
+      "minutes": 5
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 23.8,
+     "driving": {
+      "km": 33.9,
+      "minutes": 31
+     }
+    }
+   }
+  },
+  "tms-hotel-da-nang": {
+   "coords": [
+    16.051152,
+    108.2480701
+   ],
+   "coord_source": "OSM Nominatim: 'TMS Hotel Da Nang Beach, 292, Duong Vo Nguyen Giap' (address matches listings)",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.5,
+     "driving": {
+      "km": 12.4,
+      "minutes": 14
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2.4,
+     "driving": {
+      "km": 4.4,
+      "minutes": 5
+     }
+    },
+    "han_market": {
+     "straight_line_km": 3.2,
+     "driving": {
+      "km": 4.6,
+      "minutes": 5
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 20.9,
+     "driving": {
+      "km": 30.9,
+      "minutes": 28
+     }
+    }
+   }
+  },
+  "muong-thanh-luxury-da-nang": {
+   "coords": [
+    16.0537171,
+    108.2473364
+   ],
+   "coord_source": "OSM Nominatim: 'Muong Thanh Da Nang, 270, Duong Vo Nguyen Giap'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 5.5,
+     "driving": {
+      "km": 12.5,
+      "minutes": 14
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2.2,
+     "driving": {
+      "km": 4.7,
+      "minutes": 6
+     }
+    },
+    "han_market": {
+     "straight_line_km": 3,
+     "driving": {
+      "km": 4.8,
+      "minutes": 6
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 21.2,
+     "driving": {
+      "km": 31,
+      "minutes": 28
+     }
+    }
+   }
+  },
+  "wyndham-soleil-da-nang": {
+   "coords": [
+    16.0712945,
+    108.2443844
+   ],
+   "coord_source": "OSM Nominatim: 'Wyndham Soleil Danang, 194 Duong Vo Nguyen Giap, An Hai'",
+   "distances": {
+    "airport": {
+     "straight_line_km": 6,
+     "driving": {
+      "km": 13.1,
+      "minutes": 16
+     }
+    },
+    "dragon_bridge": {
+     "straight_line_km": 2.1,
+     "driving": {
+      "km": 4,
+      "minutes": 5
+     }
+    },
+    "han_market": {
+     "straight_line_km": 2.2,
+     "driving": {
+      "km": 4.1,
+      "minutes": 4
+     }
+    },
+    "hoi_an_old_town": {
+     "straight_line_km": 23.1,
+     "driving": {
+      "km": 33.3,
+      "minutes": 31
+     }
+    }
+   }
+  }
+ }
+}

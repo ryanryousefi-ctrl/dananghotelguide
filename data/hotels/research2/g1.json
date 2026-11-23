@@ -1,0 +1,790 @@
+{
+ "brilliant-hotel-da-nang": {
+  "official_name": "Brilliant Hotel",
+  "brand": "Independent",
+  "operator_owner": "unknown (locally owned per our review; not verified)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Brilliant Hotel Da Nang"
+  ],
+  "name_note": "Listings (Hotels.com, Expedia, Booking) name it 'Brilliant Hotel'; 'Da Nang' is a location suffix.",
+  "address": "162 Bach Dang Street, Hai Chau District, Da Nang",
+  "ward_district": "Hai Chau Ward (OSM: Phuong Hai Chau)",
+  "neighborhood_group": "han-river-city",
+  "neighborhood_note": "Riverfront on Bach Dang, ~0.2 km from Han Market.",
+  "website": "unknown (no official site found)",
+  "lat": 16.0666727,
+  "lng": 108.2247119,
+  "coord_source": "Nominatim: 'Brilliant Hotel, 162, Duong Bach Dang' building match",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 3.98,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 10.59,
+    "minutes": 13.9,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 0.7,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 1.42,
+    "minutes": 2.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 1.06,
+    "minutes": 14.2,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 0.19,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 0.29,
+    "minutes": 0.4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 0.29,
+    "minutes": 3.9,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 2.37,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 3.9,
+    "minutes": 4.9,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 3.6,
+    "minutes": 48.0,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 11.13,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 14.89,
+    "minutes": 17.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   }
+  ],
+  "beach_access": {
+   "value": "not_beach",
+   "note": "City riverfront hotel; nearest My Khe shoreline ~2.4 km straight, 3.9 km driving, foot 3.6 km.",
+   "sources": [
+    "OSM/OSRM computed"
+   ]
+  },
+  "pools": [
+   {
+    "type": "indoor",
+    "note": "Search snippets from Hotels.com/Expedia/Oyster listings say indoor pool (sun loungers); Expedia mentions a poolside bar. I could not open the listing pages (timeout/429), so this rests on search-result summaries.",
+    "sources": [
+     "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam",
+     "https://www.expedia.com/Da-Nang-Hotels-Brilliant-Hotel.h5155710.Hotel-Information",
+     "https://www.oyster.com/vietnam/hotels/brilliant-hotel/"
+    ]
+   }
+  ],
+  "pool_summary": "Listings indicate an INDOOR pool, not a rooftop pool. Rooftop is described as a dining/lounge/drinks venue with river and skyline views.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam",
+    "https://www.oyster.com/vietnam/hotels/brilliant-hotel/"
+   ],
+   "note": "Rooftop dining/lounge confirmed by listing snippets; pool is indoor. Verdict on rooftop pool is based on snippets only; confirm with hotel."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "unknown",
+   "sources": []
+  },
+  "family_facilities": [],
+  "gym": "unknown",
+  "spa": "unknown",
+  "dining_outlets": [
+   "Rooftop dining/lounge",
+   "Coffee shop/cafe",
+   "Poolside bar (per Expedia)",
+   "Nightclub (per Expedia)"
+  ],
+  "room_categories": [],
+  "multi_bedroom_options": "unknown",
+  "distinctive_amenities": [
+   "17-storey riverfront tower (Oyster)",
+   "Rooftop lounge with river/city views"
+  ],
+  "claims_check": [
+   {
+    "claim": "From the rooftop pool, you're looking right at [Dragon Bridge]",
+    "verdict": "contradicted",
+    "evidence": "Listings describe an indoor pool plus a rooftop dining/lounge area; no rooftop pool found.",
+    "sources": [
+     "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam"
+    ]
+   },
+   {
+    "claim": "rooftop bar runs alongside the pool",
+    "verdict": "contradicted",
+    "evidence": "Rooftop bar/lounge exists, but pool is indoor, so not alongside a rooftop pool (Expedia lists a poolside bar of unknown level).",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Brilliant-Hotel.h5155710.Hotel-Information"
+    ]
+   },
+   {
+    "claim": "about a 10 to 13 minute walk from Dragon Bridge",
+    "verdict": "supported",
+    "evidence": "OSRM foot route 1.06 km, 14.2 min (slightly longer than claimed).",
+    "sources": [
+     "https://routing.openstreetmap.de/"
+    ]
+   },
+   {
+    "claim": "Han Market is about three minutes away on foot",
+    "verdict": "supported",
+    "evidence": "Foot route 0.29 km, 3.9 min.",
+    "sources": [
+     "https://routing.openstreetmap.de/"
+    ]
+   },
+   {
+    "claim": "a quick 4km airport transfer",
+    "verdict": "contradicted",
+    "evidence": "Straight line 3.98 km but driving route 10.6 km, ~14 min (one-way/river layout).",
+    "sources": [
+     "https://router.project-osrm.org/"
+    ]
+   },
+   {
+    "claim": "My Khe is a 10-minute Grab ride away",
+    "verdict": "contradicted",
+    "evidence": "OSRM car 3.9 km, ~5 min no traffic; ~10 min with traffic is plausible.",
+    "sources": [
+     "https://router.project-osrm.org/"
+    ]
+   },
+   {
+    "claim": "Rooms run 28-42 square metres; locally owned",
+    "verdict": "unverifiable",
+    "evidence": "Not found in opened sources.",
+    "sources": []
+   }
+  ],
+  "confidence": "low",
+  "notes": "No official website found; listing pages could not be opened directly (WebFetch timeout/429), pool facts from WebSearch result summaries only."
+ },
+ "novotel-da-nang-han-river": {
+  "official_name": "Novotel Danang Premier Han River",
+  "brand": "Novotel (Accor)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Novotel Danang Premier HAN River"
+  ],
+  "name_note": "Matches Accor page.",
+  "address": "36 Bach Dang Street, Hai Chau District, Da Nang",
+  "ward_district": "Hai Chau",
+  "neighborhood_group": "han-river-city",
+  "neighborhood_note": "West bank Han River, ~20 m from river per Accor.",
+  "website": "https://all.accor.com/hotel/8287/index.gb.shtml",
+  "lat": 16.0774605,
+  "lng": 108.2235631,
+  "coord_source": "Nominatim 'Novotel, Duong Tran Phu' (Thach Thang); building-name match, street 36 Bach Dang not resolved separately - medium confidence",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 4.8,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 10.27,
+    "minutes": 14.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 1.87,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 2.5,
+    "minutes": 3.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 2.43,
+    "minutes": 32.4,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 1.02,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 1.49,
+    "minutes": 2.4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 1.17,
+    "minutes": 15.6,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 2.21,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 4.8,
+    "minutes": 7.4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 4.47,
+    "minutes": 59.7,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 11.16,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 15.12,
+    "minutes": 17.4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 4.5,
+    "minutes": null,
+    "method": "stated by hotel (Trip.com listing)",
+    "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1963544/novotel-danang-premier-han-river/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 4.4,
+    "minutes": 11,
+    "method": "stated by hotel (Accor: Da Nang Beach 4.4 km, 11 min by car)",
+    "source": "https://all.accor.com/hotel/8287/index.gb.shtml"
+   }
+  ],
+  "beach_access": {
+   "value": "not_beach",
+   "note": "Accor: Da Nang Beach 4.4 km, ~11 min by car.",
+   "sources": [
+    "https://all.accor.com/hotel/8287/index.gb.shtml"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Splash Pool; Splash Pool Bar is on the 4th floor (podium level), outdoor area for up to 250 guests (2016-dated page). Trip.com lists outdoor infinity pool, adults-only hours, kids pool, pool bar.",
+    "sources": [
+     "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1963544/novotel-danang-premier-han-river/",
+     "https://all.accor.com/hotel/8287/index.gb.shtml"
+    ]
+   }
+  ],
+  "pool_summary": "Outdoor (infinity) pool on the 4th-floor podium, not on the roof of the 37-39 storey tower.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en",
+    "https://all.accor.com/hotel/8287/index.gb.shtml"
+   ],
+   "note": "Accor mentions a panoramic bar 'one of the city's highest' (location unstated); Premier Lounge on 29th floor. Pool is at 4th floor per one (2016) source; Accor does not state floor."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Premier Lounge (29th floor)",
+   "details": "Breakfast, afternoon tea, pre-dinner cocktails and canapes; views of Han River and Da Nang Beach.",
+   "sources": [
+    "https://all.accor.com/hotel/8287/index.gb.shtml"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en"
+   ]
+  },
+  "family_facilities": [
+   "Kids club 5th floor (2016 source)",
+   "Kids pool (Trip.com)"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "The Square (all-day)",
+   "Gourmet Bar",
+   "Splash Pool Bar",
+   "Panoramic bar"
+  ],
+  "room_categories": [
+   "Superior",
+   "Deluxe",
+   "Executive",
+   "Novotel Suite 56 m2",
+   "Corner Suite 57 m2",
+   "Studio 28 m2",
+   "Serviced apartments 1-3BR (49-152 m2)"
+  ],
+  "multi_bedroom_options": "Apartments 1 to 3 bedrooms",
+  "distinctive_amenities": [
+   "InBalance Spa",
+   "Serviced apartments",
+   "Dragon Bridge view rooms"
+  ],
+  "claims_check": [
+   {
+    "claim": "The rooftop pool delivers city skyline, the Han River...",
+    "verdict": "contradicted",
+    "evidence": "Pool bar/pool area on 4th floor per danangfantasticity (2016); Trip.com/Accor give no rooftop pool.",
+    "sources": [
+     "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en"
+    ]
+   },
+   {
+    "claim": "Premier Floor ... business lounge with complimentary breakfast and evening canapes",
+    "verdict": "supported",
+    "evidence": "Premier Lounge 29th floor; breakfast, afternoon tea, cocktails and canapes.",
+    "sources": [
+     "https://all.accor.com/hotel/8287/index.gb.shtml"
+    ]
+   },
+   {
+    "claim": "39-floor tower holds 323 rooms",
+    "verdict": "contradicted",
+    "evidence": "Building 37 storeys (2016 source); 323 Novotel rooms + 90 apartments; Trip.com says 438 rooms (7-30 floors referenced).",
+    "sources": [
+     "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1963544/novotel-danang-premier-han-river/"
+    ]
+   },
+   {
+    "claim": "about 1 km from Han Market; about 10 minutes on foot",
+    "verdict": "supported",
+    "evidence": "Straight 1.02 km; foot 1.17 km, 15.6 min (longer than 10).",
+    "sources": [
+     "https://routing.openstreetmap.de/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge roughly 2 to 3 km",
+    "verdict": "supported",
+    "evidence": "Straight 1.87, drive 2.5 km.",
+    "sources": [
+     "https://router.project-osrm.org/"
+    ]
+   },
+   {
+    "claim": "airport roughly 4.5 km",
+    "verdict": "supported",
+    "evidence": "Trip.com states 4.5 km (FAQ 4.3 km/16 min); straight 4.8 km; OSRM drive 10.3 km. Danangfantasticity (2016) says 6 km/20 min.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1963544/novotel-danang-premier-han-river/"
+    ]
+   },
+   {
+    "claim": "My Khe Beach is 10 minutes by Grab",
+    "verdict": "supported",
+    "evidence": "Accor: 4.4 km, 11 min by car.",
+    "sources": [
+     "https://all.accor.com/hotel/8287/index.gb.shtml"
+    ]
+   },
+   {
+    "claim": "Rooms 30-40 sq m",
+    "verdict": "supported",
+    "evidence": "Accor: mostly 28-39 m2.",
+    "sources": [
+     "https://all.accor.com/hotel/8287/index.gb.shtml"
+    ]
+   },
+   {
+    "claim": "The Square Restaurant buffet",
+    "verdict": "supported",
+    "evidence": "Accor lists THE SQUARE buffet.",
+    "sources": [
+     "https://all.accor.com/hotel/8287/index.gb.shtml"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Pool floor from a 2016-dated page; Accor does not state it. Hotel coordinates from OSM building-name match."
+ },
+ "grand-mercure-da-nang": {
+  "official_name": "Grand Mercure Danang",
+  "brand": "Grand Mercure (Accor)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Matches Accor page.",
+  "address": "Lot A1, Green Island, Hoa Cuong Ward, Da Nang (OSM: Duong Dao Xanh 1)",
+  "ward_district": "Hoa Cuong (Hai Chau district, former)",
+  "neighborhood_group": "other",
+  "neighborhood_note": "Green Island, south of the city centre on the Han River; not next to Han Market (2.7 km).",
+  "website": "https://all.accor.com/hotel/7821/index.en.shtml",
+  "lat": 16.048229,
+  "lng": 108.2268111,
+  "coord_source": "Nominatim 'Grand Mercure Danang, Duong Dao Xanh 1'",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 3.23,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 9.35,
+    "minutes": 13.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 1.44,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 2.12,
+    "minutes": 3.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 2.12,
+    "minutes": 28.3,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.25,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 2.66,
+    "minutes": 3.5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 2.69,
+    "minutes": 35.9,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 2.43,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 3.74,
+    "minutes": 5.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 3.17,
+    "minutes": 42.3,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 11.35,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 17.47,
+    "minutes": 17.5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "OSM/OSRM"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 4,
+    "minutes": 5,
+    "method": "stated by hotel (Accor: Danang Beach 4 km, 5 min drive)",
+    "source": "https://all.accor.com/hotel/7821/index.en.shtml"
+   }
+  ],
+  "beach_access": {
+   "value": "not_beach",
+   "note": "Accor: beach 4 km, 5 min drive.",
+   "sources": [
+    "https://all.accor.com/hotel/7821/index.en.shtml"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Accor: outdoor pool, La Rive Gauche on GROUND floor overlooking the pool; listings add kids pool, poolside bar, lifeguard.",
+    "sources": [
+     "https://all.accor.com/hotel/7821/index.en.shtml"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Several listings (search summaries).",
+    "sources": [
+     "https://www.travelocity.com/Da-Nang-Hotels-Grand-Mercure-Danang.h4345585.Hotel-Information"
+    ]
+   }
+  ],
+  "pool_summary": "Ground-level outdoor pool (visible from ground-floor restaurant), not rooftop.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://all.accor.com/hotel/7821/index.en.shtml"
+   ],
+   "note": "Nirvana bar is in the lobby; no rooftop venue found."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Privilege Lounge (21st floor)",
+   "details": "Open 6:30 am-10 pm; Deluxe high-floor rooms include access.",
+   "sources": [
+    "https://all.accor.com/hotel/7821/index.en.shtml"
+   ]
+  },
+  "kids_club": {
+   "value": "unknown",
+   "sources": []
+  },
+  "family_facilities": [
+   "Family Superior rooms",
+   "Family Suite",
+   "Kids pool (listings)"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "La Rive Gauche",
+   "The Golden Dragon (Cantonese)",
+   "Veranda (Vietnamese)",
+   "Nirvana lobby bar"
+  ],
+  "room_categories": [
+   "Superior",
+   "Family Superior",
+   "Deluxe",
+   "Executive Twin Suite 52 m2",
+   "Family Suite",
+   "Executive Suite River View"
+  ],
+  "multi_bedroom_options": "Family Suite (details not verified)",
+  "distinctive_amenities": [
+   "Karma Spa 4th floor",
+   "Fitness centre 4th floor",
+   "Green Island location"
+  ],
+  "claims_check": [
+   {
+    "claim": "A rooftop pool with city views",
+    "verdict": "contradicted",
+    "evidence": "Accor: outdoor pool overlooked by ground-floor La Rive Gauche.",
+    "sources": [
+     "https://all.accor.com/hotel/7821/index.en.shtml"
+    ]
+   },
+   {
+    "claim": "three kilometres from the airport, eight minutes by Grab",
+    "verdict": "contradicted",
+    "evidence": "Straight 3.2 km (ok) but OSRM drive 9.4 km, 13 min.",
+    "sources": [
+     "https://router.project-osrm.org/"
+    ]
+   },
+   {
+    "claim": "Han Market is about ten minutes on foot",
+    "verdict": "contradicted",
+    "evidence": "Foot route 2.69 km, 35.9 min.",
+    "sources": [
+     "https://routing.openstreetmap.de/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge a short taxi ride (around 2 km)",
+    "verdict": "supported",
+    "evidence": "Drive 2.1 km, 3 min.",
+    "sources": [
+     "https://router.project-osrm.org/"
+    ]
+   },
+   {
+    "claim": "Han River waterfront options are 10 minutes on foot",
+    "verdict": "unverifiable",
+    "evidence": "Not measured.",
+    "sources": []
+   },
+   {
+    "claim": "My Khe Beach is 10 minutes by Grab",
+    "verdict": "supported",
+    "evidence": "Accor 4 km, 5 min drive; 10 with traffic plausible.",
+    "sources": [
+     "https://all.accor.com/hotel/7821/index.en.shtml"
+    ]
+   },
+   {
+    "claim": "executive floor rooms add lounge access with breakfast and evening canapes",
+    "verdict": "unverifiable",
+    "evidence": "Privilege Lounge 21st floor confirmed; canapes not confirmed.",
+    "sources": [
+     "https://all.accor.com/hotel/7821/index.en.shtml"
+    ]
+   },
+   {
+    "claim": "Rooms 32-45 sq m",
+    "verdict": "unverifiable",
+    "evidence": "Only Exec Twin Suite 52 m2 listed.",
+    "sources": [
+     "https://all.accor.com/hotel/7821/index.en.shtml"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Hotel is on Green Island, closer to Dragon Bridge than Han Market."
+ }
+}

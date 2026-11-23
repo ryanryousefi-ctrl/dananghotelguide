@@ -294,6 +294,14 @@
    ]
   },
   {
+   "page": "da-nang-tet-2027-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
    "page": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
    "type": "list",
    "modules": [
@@ -393,6 +401,22 @@
   },
   {
    "page": "beachfront-vs-city-hotels-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "is-da-nang-walkable.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "dragon-bridge-da-nang.html",
    "type": "area",
    "modules": [
     "hero",
@@ -544,6 +568,13 @@
    "type": "review",
    "modules": [
     "tools"
+   ]
+  },
+  {
+   "page": "four-points-sheraton-da-nang.html",
+   "type": "review",
+   "modules": [
+    "verdict"
    ]
   },
   {
@@ -750,6 +781,13 @@
    ]
   },
   {
+   "page": "da-nang-with-kids-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
    "page": "da-nang-with-teenagers.html",
    "type": "guide",
    "modules": [
@@ -757,7 +795,23 @@
    ]
   },
   {
+   "page": "best-time-to-visit-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
    "page": "rainy-season-da-nang-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
+   "page": "worst-time-to-visit-da-nang.html",
    "type": "guide",
    "modules": [
     "hero",
@@ -788,6 +842,20 @@
    ]
   },
   {
+   "page": "da-nang-first-time-visitors.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "hoi-an-first-time-visitors.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
    "page": "da-nang-tourist-mistakes.html",
    "type": "guide",
    "modules": [
@@ -795,7 +863,21 @@
    ]
   },
   {
+   "page": "da-nang-travel-mistakes.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
    "page": "what-to-pack-for-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-budget-guide.html",
    "type": "guide",
    "modules": [
     "hero"
@@ -823,6 +905,13 @@
    ]
   },
   {
+   "page": "da-nang-guide-for-australian-travelers.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
    "page": "da-nang-guide-for-korean-travelers.html",
    "type": "guide",
    "modules": [
@@ -835,28 +924,21 @@
    "modules": [
     "hero"
    ]
+  },
+  {
+   "page": "da-nang-guide-for-singapore-travelers.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
   }
  ],
  "stats": {
-  "list": 35,
-  "area": 10,
+  "list": 36,
+  "area": 12,
   "compare": 19,
-  "review": 20,
-  "guide": 23,
-  "skipped": [
-   "da-nang-tet-2027-hotels.html (no sections)",
-   "is-da-nang-walkable.html (no sections)",
-   "dragon-bridge-da-nang.html (no sections)",
-   "four-points-sheraton-da-nang.html (no early module)",
-   "da-nang-with-kids-guide.html (no sections)",
-   "best-time-to-visit-da-nang.html (no sections)",
-   "worst-time-to-visit-da-nang.html (no sections)",
-   "da-nang-first-time-visitors.html (no sections)",
-   "hoi-an-first-time-visitors.html (no sections)",
-   "da-nang-travel-mistakes.html (no sections)",
-   "da-nang-budget-guide.html (no sections)",
-   "da-nang-guide-for-australian-travelers.html (no sections)",
-   "da-nang-guide-for-singapore-travelers.html (no sections)"
-  ]
+  "review": 21,
+  "guide": 32,
+  "skipped": []
  }
 }

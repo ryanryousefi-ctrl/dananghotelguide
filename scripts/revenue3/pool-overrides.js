@@ -1,0 +1,25 @@
+'use strict';
+// Pool wording for the compare tool and cards, condensed from research2 pool_summary (sources in data/hotels/research2). Checked 23 Nov 2026.
+module.exports = {
+  'a-la-carte-da-nang': 'Rooftop infinity pool',
+  'brilliant-hotel-da-nang': 'Indoor pool per listings (no rooftop pool found; the rooftop is a bar/dining terrace)',
+  'four-points-sheraton-da-nang': 'Rooftop pool (36th floor) and children\'s pool',
+  'furama-resort-da-nang': 'Several outdoor pools incl. the Lagoon Pool; exact count not verified',
+  'grand-mercure-da-nang': 'Ground-level outdoor pool (not rooftop)',
+  'hilton-da-nang': 'Outdoor pool and children\'s pool; rooftop location not verified',
+  'hyatt-regency-da-nang': '5 outdoor pools (no lazy river found)',
+  'intercontinental-da-nang': '3 resort pools (50 m infinity, Garden, Kids) plus private villa pools',
+  'marriott-resort-da-nang': 'Outdoor pools incl. a children\'s pool; exact count differs between sources',
+  'melia-da-nang': 'Several outdoor pools (some for The Level guests) and a children\'s pool',
+  'melia-vinpearl-da-nang': 'Outdoor, indoor and children\'s pools (per listings)',
+  'muong-thanh-luxury-da-nang': 'Listings disagree on pool type; confirm with the hotel',
+  'naman-retreat-da-nang': 'Outdoor pools and a children\'s pool; private pools in villas',
+  'novotel-da-nang-han-river': 'Outdoor pool on the podium level (not the roof)',
+  'premier-village-da-nang': 'Private pool in every villa, plus a children\'s pool',
+  'pullman-da-nang': 'Outdoor infinity pool; further pool count not verified',
+  'radisson-blu-da-nang': 'Rooftop infinity pool (21st floor)',
+  'sheraton-grand-da-nang': '250 m outdoor infinity pool and a children\'s water-play area',
+  'tia-wellness-resort-da-nang': 'Private pool in each villa and a heated wellness pool',
+  'tms-hotel-da-nang': 'Rooftop infinity pool and children\'s pool',
+  'wyndham-soleil-da-nang': 'Two outdoor pools incl. a children\'s pool (4th floor, not rooftop)',
+};

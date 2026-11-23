@@ -1,0 +1,62 @@
+[
+ {
+  "before": "785 rooms",
+  "after": "258 rooms",
+  "reason": "Trip.com property info says 258 rooms",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ },
+ {
+  "before": "My Khe Beach (area, hero meta, snapshot, FAQ, location)",
+  "after": "Truong Sa coast, south of My Khe",
+  "reason": "Address 35 Truong Sa; ~8.8 km by road from southern end of My Khe",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "longest infinity pool in Vietnam / the country",
+  "after": "billed as the longest in Danang",
+  "reason": "Hotel copy says longest in Danang only",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ },
+ {
+  "before": "7 km Dragon Bridge, 9 km airport",
+  "after": "~13 km / ~16 km by road (16 and 21 min, routing est.)",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Hoi An about 35 minutes by car; Marble Mountains 15 min south",
+  "after": "~22 km, ~26 min by road; Marble Mountains ~3 km",
+  "reason": "OSRM; Trip.com",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "restaurant strip 5-10 min walk (text, chip, like-card)",
+  "after": "taxi required; ~9 km by road to My Khe south end; like-card replaced with water park",
+  "reason": "Not walkable",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Market 39, Chill Skybar",
+  "after": "generic breakfast buffet / resort restaurants, bars and tea lounge",
+  "reason": "Not in sources; Trip lists The Grill, La Plage, Tea Lounge",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ },
+ {
+  "before": "indoor pool sentence",
+  "after": "removed",
+  "reason": "Unverified",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ },
+ {
+  "before": "three age-based kids rooms",
+  "after": "age-based programming",
+  "reason": "Unverified",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ },
+ {
+  "before": "meta descriptions 785 rooms / top water complex",
+  "after": "258 rooms-free description",
+  "reason": "Consistency",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-15691333/sheraton-grand-danang-beach-resort-and-spa/"
+ }
+]
