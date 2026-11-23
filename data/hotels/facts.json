@@ -28,6 +28,7 @@
    },
    "area_label": "My Khe Beach",
    "display": {
+    "straight": null,
     "beach": "Short walk to the beach (per listings)",
     "pools": "outdoor pool, rooftop pool (per listings)",
     "lounge": "Not verified",
@@ -114,8 +115,13 @@
    },
    "area_label": "Han River / city centre",
    "display": {
+    "straight": {
+     "airport": "about 4 km",
+     "bridge": "about 0.5 km",
+     "market": "about 0 km"
+    },
     "beach": "Not a beach hotel",
-    "pools": "indoor pool (per listings)",
+    "pools": "Our review and public listings describe the pool differently; confirm on the hotel page",
     "lounge": "Not verified",
     "kids_club": "Not verified",
     "rooms": "Not verified",
@@ -206,6 +212,7 @@
    },
    "area_label": "My Khe Beach",
    "display": {
+    "straight": null,
     "beach": "Short walk to the beach (per listings)",
     "pools": "outdoor pool, rooftop pool, children's pool (per listings)",
     "lounge": "Not verified",
@@ -297,6 +304,11 @@
    },
    "area_label": "South My Khe (Khue My)",
    "display": {
+    "straight": {
+     "airport": "about 6 km",
+     "bridge": "about 3.5 km",
+     "market": "about 4.5 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "outdoor pool, infinity pool, other pool (per listings)",
     "lounge": "Not verified",
@@ -389,8 +401,13 @@
    },
    "area_label": "City centre (south, Hoa Cuong)",
    "display": {
+    "straight": {
+     "airport": "about 3 km",
+     "bridge": "about 1.5 km",
+     "market": "about 2.5 km"
+    },
     "beach": "Not a beach hotel",
-    "pools": "outdoor pool, children's pool (per listings)",
+    "pools": "Our review and public listings describe the pool differently; confirm on the hotel page",
     "lounge": "Yes (per listings)",
     "kids_club": "Not verified",
     "rooms": "Executive suites with lounge access",
@@ -489,8 +506,13 @@
    },
    "area_label": "Han River / city centre",
    "display": {
+    "straight": {
+     "airport": "about 4.5 km",
+     "bridge": "about 1.5 km",
+     "market": "about 0.5 km"
+    },
     "beach": "Not a beach hotel",
-    "pools": "outdoor pool (per listings)",
+    "pools": "Our review and public listings describe the pool differently; confirm on the hotel page",
     "lounge": "Yes (per listings)",
     "kids_club": "Not verified",
     "rooms": "Executive rooms (river/ocean view); connecting rooms available",
@@ -587,6 +609,11 @@
    },
    "area_label": "Non Nuoc coast",
    "display": {
+    "straight": {
+     "airport": "about 8 km",
+     "bridge": "about 6.5 km",
+     "market": "about 7.5 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "outdoor pool, children's pool (per listings)",
     "lounge": "Yes (per listings)",
@@ -679,6 +706,11 @@
    },
    "area_label": "Son Tra Peninsula",
    "display": {
+    "straight": {
+     "airport": "about 14.5 km",
+     "bridge": "about 10.5 km",
+     "market": "about 10.5 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "infinity pool, children's pool (per listings)",
     "lounge": "Yes (per listings)",
@@ -772,6 +804,11 @@
    },
    "area_label": "Truong Sa coast (south of My Khe)",
    "display": {
+    "straight": {
+     "airport": "about 8.5 km",
+     "bridge": "about 7.5 km",
+     "market": "about 8 km"
+    },
     "beach": "Not verified",
     "pools": "Listings differ; confirm on the hotel page",
     "lounge": "Not verified",
@@ -861,6 +898,11 @@
    },
    "area_label": "Non Nuoc coast",
    "display": {
+    "straight": {
+     "airport": "about 9 km",
+     "bridge": "about 8 km",
+     "market": "about 9 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "outdoor pool, children's pool (per listings)",
     "lounge": "Not verified",
@@ -952,6 +994,11 @@
    },
    "area_label": "Han River east bank",
    "display": {
+    "straight": {
+     "airport": "about 4.5 km",
+     "bridge": "about 1 km",
+     "market": "about 0.5 km"
+    },
     "beach": "Not a beach hotel",
     "pools": "Listings differ; confirm on the hotel page",
     "lounge": "Yes (per listings)",
@@ -1068,6 +1115,7 @@
    },
    "area_label": "My Khe Beach (south end)",
    "display": {
+    "straight": null,
     "beach": "Short walk to the beach (per listings)",
     "pools": "Listings disagree on pool type; confirm on the hotel page",
     "lounge": "Not verified",
@@ -1154,6 +1202,7 @@
    },
    "area_label": "Non Nuoc coast",
    "display": {
+    "straight": null,
     "beach": "Not verified",
     "pools": "Not verified",
     "lounge": "Not verified",
@@ -1246,6 +1295,7 @@
    },
    "area_label": "Han River / city centre",
    "display": {
+    "straight": null,
     "beach": "Not a beach hotel",
     "pools": "Listings differ (one third-party source mentions a rooftop pool); confirm on the hotel page",
     "lounge": "Not verified",
@@ -1348,6 +1398,11 @@
    },
    "area_label": "South My Khe (Khue My)",
    "display": {
+    "straight": {
+     "airport": "about 5.5 km",
+     "bridge": "about 3 km",
+     "market": "about 4 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "outdoor pool, children's pool, other pool (per listings)",
     "lounge": "No (per listings)",
@@ -1441,6 +1496,11 @@
    },
    "area_label": "South My Khe (Khue My)",
    "display": {
+    "straight": {
+     "airport": "about 5.5 km",
+     "bridge": "about 3.5 km",
+     "market": "about 4 km"
+    },
     "beach": "Beachfront (per listings)",
     "pools": "outdoor pool (per listings)",
     "lounge": "Yes (per listings)",
@@ -1521,7 +1581,9 @@
     "why": "Large family rooms that most beach hotels at this level lack.",
     "drawback": "Not a full resort complex: no kids' club and a limited spa."
    },
+   "area_label": "Not verified",
    "display": {
+    "straight": null,
     "beach": "Not verified",
     "pools": "Not verified",
     "lounge": "Not verified",
@@ -1596,6 +1658,11 @@
    },
    "area_label": "Truong Sa coast (south of My Khe)",
    "display": {
+    "straight": {
+     "airport": "about 11 km",
+     "bridge": "about 10.5 km",
+     "market": "about 11.5 km"
+    },
     "beach": "Not verified",
     "pools": "infinity pool, children's pool (per listings)",
     "lounge": "Not verified",
@@ -1680,6 +1747,7 @@
    },
    "area_label": "South My Khe (Khue My)",
    "display": {
+    "straight": null,
     "beach": "Not verified",
     "pools": "Not verified",
     "lounge": "Not verified",
@@ -1767,6 +1835,7 @@
    },
    "area_label": "My Khe Beach",
    "display": {
+    "straight": null,
     "beach": "Short walk to the beach (per listings)",
     "pools": "outdoor pool, rooftop pool (per listings)",
     "lounge": "Not verified",
@@ -1849,6 +1918,7 @@
    },
    "area_label": "My Khe Beach",
    "display": {
+    "straight": null,
     "beach": "Short walk to the beach (per listings)",
     "pools": "outdoor pool, children's pool, infinity pool (per listings)",
     "lounge": "Not verified",
