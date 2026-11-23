@@ -36,7 +36,8 @@ for (const [f, p] of pages) {
     const i = h.indexOf('<section class="hr-section hr-take">'); const j = i < 0 ? -1 : h.indexOf('</section>', i);
     if (i >= 0 && j > 0 && h.slice(i + 10, j).indexOf('<section') < 0) {
       const best = snap(h, 'Best for'), area = snap(h, 'Area');
-      const bits = [best && `Best for ${best.charAt(0).toLowerCase() + best.slice(1)}`, area && `in ${area}`].filter(Boolean).join(' ');
+      const lc = w => (/^[A-Z][a-z]+ [A-Z]/.test(w) || /^(Bonvoy|Han|Dragon|My|Hoi|Da|Non|Son|Hilton|Accor|IHG|Marriott|Hyatt)\b/.test(w)) ? w : w.charAt(0).toLowerCase() + w.slice(1);
+      const bits = [best && `Best for ${lc(best)}`, area && `in ${area}`].filter(Boolean).join(' ');
       const copy = `${bits ? bits.replace(/\.$/, '') + '. ' : ''}Rates and availability change daily: check current room prices for your dates on Trip.com.`;
       const mod = `\n<!--dn-revenue:early--><section class="hr-section dn-decide dn-decide--early" aria-label="Check ${esc(name)} prices"><div class="hr-section-inner dn-decide__inner"><div class="dn-decide__copy"><p class="dn-decide__kicker">Considering ${esc(name)}?</p><p class="dn-decide__text">${esc(copy)}</p></div>${build(p.anchor, label(name, 'Prices'), 'early_review')}</div></section><!--/dn-revenue:early-->`;
       h = h.slice(0, j + 10) + mod + h.slice(j + 10); early++;

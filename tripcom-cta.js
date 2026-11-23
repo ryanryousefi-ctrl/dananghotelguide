@@ -145,6 +145,7 @@
     var f = (p || '/').replace(/^\/(kr\/)?/, '').replace(/\.html$/, '').replace(/\/$/, '');
     if (/^kr\//.test((p || '').replace(/^\//, ''))) return 'korean';
     if (f === '' || f === 'index') return 'home';
+    if (/find-your-hotel/.test(f)) return 'finder';
     if (/(directory|hotels-map|^map)/.test(f)) return 'directory_map';
     if (/-vs-|^da-nang-vs/.test(f)) return 'comparison';
     if (/^(best|top)-|-hotels?$|hotels-with|^family-hotels|^boutique|^da-nang-.*hotels/.test(f)) return 'best_list';
