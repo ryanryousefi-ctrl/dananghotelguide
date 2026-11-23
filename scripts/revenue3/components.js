@@ -12,7 +12,7 @@ const DEST_NAME = { danang: 'Da Nang', hoian: 'Hoi An' };
 
 // Approved CTA wording only (see docs/revenue/PHASE3.md "language policy").
 function tc(entry, label, loc, o = {}) {
-  const cls = ['dn-booklink', 'affiliate-link', 'dn-btn', 'dn-btn--book', 'tc-btn', o.ghost ? '' : 'tc-btn--solid', o.lg ? 'tc-btn--lg' : '', o.block ? 'tc-btn--block' : ''].filter(Boolean).join(' ');
+  const cls = ['dn-booklink', 'affiliate-link', 'dn-btn', 'dn-btn--book', 'tc-btn', o.ghost ? '' : 'tc-btn--solid', o.lg ? 'tc-btn--lg' : '', o.compact ? 'tc-btn--compact' : '', o.block ? 'tc-btn--block' : ''].filter(Boolean).join(' ');
   const hotel = o.hotel ? ` data-hotel="${esc(o.hotel)}"` : '';
   return `<a data-provider="tripcom" data-tc-key="${esc(entry.key)}" aria-label="${esc(label)} on Trip.com, opens in a new tab" class="${cls}" href="${entry.affiliate_url.replace(/&/g, '&amp;')}" target="_blank" rel="nofollow noopener sponsored" data-cta-location="${esc(loc)}"${hotel}><span class="tc-btn__text">${esc(label)} &rarr;</span></a>`;
 }
@@ -26,7 +26,7 @@ const uid = (() => { let n = 0; return p => `${p}${++n}`; })();
 
 // Facts rendering: objective facts only from research (sourced). Unknown -> "Not verified".
 const AREA_LABEL = { 'my-khe': 'My Khe Beach', 'han-river': 'Han River / city centre', 'son-tra': 'Son Tra Peninsula', 'non-nuoc': 'Non Nuoc Beach', 'an-thuong': 'An Thuong' };
-function area(h) { return h.area_label || null; }
+function area(h) { return h.area_label && h.area_label !== 'Not verified' ? h.area_label : null; }
 function beach(h) { const r = h.research; if (!r || !r.beach_access || r.beach_access === 'not_verified') return null; return { beachfront: 'Beachfront', short_walk: 'Short walk to the beach', not_beach: 'Not a beach hotel' }[r.beach_access] || null; }
 
 // ---- A: hero price-check module -------------------------------------------------------------

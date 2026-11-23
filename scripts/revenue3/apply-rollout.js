@@ -37,7 +37,7 @@ const LISTCOPY = [
   [/.*/, 'Compare prices for your travel dates', 'Rates vary by date and room type. Check what is actually available for your stay.'],
 ];
 const isHoi = f => /hoi-an|an-bang/.test(f) && !/da-nang-and-hoi-an|from-da-nang/.test(f);
-const strip = h => h.replace(/<!--dn-c3:r:([a-z0-9-]+)-->[\s\S]*?<!--\/dn-c3:r:\1-->\n?/g, '');
+const strip = h => h.replace(/<!--dn-c3:r:([a-z0-9-]+)-->[\s\S]*?<!--\/dn-c3:r:\1-->\n?/g, '').replace(/<!--dn-c3:links-->[\s\S]*?<!--\/dn-c3:links-->\n?/g, '');
 const wrap = (n, b) => `<!--dn-c3:r:${n}-->${b}<!--/dn-c3:r:${n}-->`;
 // top-level section boundaries inside <main>
 function boundaries(h) {
@@ -62,7 +62,9 @@ const report = [];
 function process_(f, type, theme) {
   const p = path.join(ROOT, f); let h = strip(fs.readFileSync(p, 'utf8')); const orig = fs.readFileSync(p, 'utf8');
   if (!/<main/.test(h) || !/tripcom-cta\.css/.test(h)) { stats.skipped.push(f + ' (no main/tripcom css)'); return; }
-  const b = boundaries(h); const hotels = slugsOnPage(h).filter(s => f !== C.FACTS[s].review); const dest = isHoi(f) ? 'hoian' : 'danang'; const ins = []; const mods = [];
+  // First real content section only: ignore sections that belong to the end-of-page modules, and fall back to the end of the page hero when the first section sits late in the page.
+  const mStart = h.indexOf('<main'), mEnd = h.lastIndexOf('</main>'); const lim = (() => { const i = h.search(/<!--dn-revenue:(guide|related)-->/); return i >= 0 ? i : mEnd; })();
+  let b = boundaries(h).filter(x => x < lim); if (!b.length || (b[0] - mStart) / (mEnd - mStart) > 0.4) { const hh = h.indexOf('</header>', h.indexOf('<h1', mStart)); const h1 = h.indexOf('<h1', mStart); b = hh > 0 && h1 > 0 && hh - h1 < 4000 ? [hh + 9] : []; } const hotels = slugsOnPage(h).filter(s => f !== C.FACTS[s].review); const dest = isHoi(f) ? 'hoian' : 'danang'; const ins = []; const mods = [];
   const first = b[0]; if (first == null) { stats.skipped.push(f + ' (no sections)'); return; }
   const end = h.search(/<!--dn-revenue:(guide|related)-->/) >= 0 ? h.search(/<!--dn-revenue:(guide|related)-->/) : h.lastIndexOf('</main>');
   const at = fr => b[Math.min(b.length - 1, Math.max(1, Math.floor(b.length * fr)))] || first;
