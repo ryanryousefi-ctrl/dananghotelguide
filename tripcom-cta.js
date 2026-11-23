@@ -8,7 +8,8 @@
    2. Tracking. One delegated listener sends a single GA4 'affiliate_click'
       per click on any Trip.com link, static or dynamic:
         provider, hotel_name, page_path, cta_location, device_category,
-        link_key (registry key), destination_type.
+        link_key (registry key), destination_type, page_type, cta_label,
+        cta_position (0-100, % down the page).
       A click is not a booking: commissions are confirmed only in the
       Trip.com affiliate dashboard after check-out. */
 (function () {
@@ -127,6 +128,35 @@
     return 'desktop';
   }
 
+  // Placement and page category, derived at click time so older buttons need no extra markup. Names only; no personal data.
+  function inferLocation(el) {
+    if (!el || !el.closest) return 'untagged';
+    if (el.closest('.leaflet-popup, .dhm-pop, [class*="map-pop"]')) return 'map_popup';
+    if (el.closest('#mobileMenu, .dn-menu')) return 'mobile_menu';
+    if (el.closest('.dn-header, header.dn-header')) return 'header';
+    if (el.closest('table')) return 'comparison_table';
+    if (el.closest('.dn-adband, .dn-ad, iframe')) return 'banner';
+    if (el.closest('.dn-footer, footer')) return 'footer';
+    if (el.closest('.dhd-book, [class*="dhd-"], [class*="dir-"]')) return 'directory';
+    if (el.closest('.dn-hero, .dn-hero__extra')) return 'hero';
+    return 'inline';
+  }
+  function pageType(p) {
+    var f = (p || '/').replace(/^\/(kr\/)?/, '').replace(/\.html$/, '').replace(/\/$/, '');
+    if (/^kr\//.test((p || '').replace(/^\//, ''))) return 'korean';
+    if (f === '' || f === 'index') return 'home';
+    if (/(directory|hotels-map|^map)/.test(f)) return 'directory_map';
+    if (/-vs-|^da-nang-vs/.test(f)) return 'comparison';
+    if (/^(best|top)-|-hotels?$|hotels-with|^family-hotels|^boutique|^da-nang-.*hotels/.test(f)) return 'best_list';
+    if (/where-to-stay|areas/.test(f)) return 'neighborhood_guide';
+    if (/^news$|2026$/.test(f)) return 'news';
+    if (document.querySelector('.hr-snapshot, .review-prose')) return 'hotel_review';
+    return 'guide';
+  }
+  function position(el) {
+    try { var h = document.documentElement.scrollHeight || 1; var top = el.getBoundingClientRect().top + (window.pageYOffset || 0); return Math.max(0, Math.min(100, Math.round(100 * top / h))); } catch (e) { return null; }
+  }
+
   var lastFire = typeof WeakMap === 'function' ? new WeakMap() : null;
 
   function track(el, extra) {
@@ -142,10 +172,13 @@
       provider: 'tripcom',
       hotel_name: (el && el.getAttribute('data-hotel')) || null,
       page_path: window.location.pathname,
-      cta_location: (el && el.getAttribute('data-cta-location')) || 'untagged',
+      cta_location: (el && el.getAttribute('data-cta-location')) || inferLocation(el),
       device_category: device(),
       link_key: (el && el.getAttribute('data-tc-key')) || null,
       destination_type: /hotelid=|hotel-detail-/i.test(href) ? 'hotel' : 'city',
+      page_type: pageType(window.location.pathname),
+      cta_label: ((el && el.textContent) || '').replace(/\s+/g, ' ').replace(/[→↗›»]/g, '').trim().slice(0, 60),
+      cta_position: position(el),
       transport_type: 'beacon'
     };
     for (var k in extra || {}) params[k] = extra[k];
