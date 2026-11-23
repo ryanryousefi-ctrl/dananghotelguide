@@ -1238,6 +1238,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.dananghotelguide.com/compare-hotels.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.dananghotelguide.com/find-your-hotel.html</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>

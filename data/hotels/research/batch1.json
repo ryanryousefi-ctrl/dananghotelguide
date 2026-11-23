@@ -1,0 +1,513 @@
+{
+ "hilton-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "not_verified",
+  "club_lounge": "yes",
+  "room_types": [
+   "Executive rooms (river/ocean view)",
+   "connecting rooms available"
+  ],
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Outdoor pool 6am-10pm, described as compact (Expedia/Hotels.com)"
+   }
+  ],
+  "pool_note": "Outdoor only per listings; no rooftop/indoor pool confirmed",
+  "restaurants_count_or_names": "2 restaurants per one listing",
+  "official_website": "https://www.hilton.com/en/hotels/dadhitw-hilton-da-nang/",
+  "lat": 16.0726103,
+  "lng": 108.2242301,
+  "official_name": "Hilton Da Nang",
+  "neighborhood": "Han River / Hai Chau",
+  "address": "50 Bach Dang St, Hai Chau Ward, Da Nang",
+  "beach_access": "not_beach",
+  "club_lounge_name": "Executive Lounge (listing highlight for Executive rooms)",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not seen"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "My Khe Beach",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.expedia.com/Da-Nang-Hotels-Hilton-Da-Nang.h19288251.Hotel-Information",
+   "https://www.hotels.com/ho618224032/hilton-da-nang-da-nang-vietnam/",
+   "https://nominatim.openstreetmap.org/search?q=Hilton+Da+Nang"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Kids club not confirmed.",
+  "beach_access_note": "Riverfront on Han River; no beach source seen"
+ },
+ "novotel-da-nang-han-river": {
+  "checked": "2026-11-23",
+  "kids_club": "not_verified",
+  "club_lounge": "not_verified",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "rooftop",
+    "note": "Booking.com + lastminute list rooftop pool"
+   },
+   {
+    "type": "infinity",
+    "note": "Booking.com/lastminute list infinity pool"
+   },
+   {
+    "type": "kids",
+    "note": "Booking.com kids' pool"
+   }
+  ],
+  "pool_note": "Rooftop/infinity confirmed only by Booking.com and lastminute listings, not official site",
+  "restaurants_count_or_names": "Listings conflict: 2 vs 4; Sky36 appears near-by listing, unconfirmed",
+  "official_website": null,
+  "lat": null,
+  "lng": null,
+  "official_name": "Novotel Danang Premier Han River",
+  "neighborhood": "Han River / Hai Chau",
+  "address": "36 Bach Dang St, Hai Chau, Da Nang (address from query; not re-confirmed on a page read)",
+  "beach_access": "not_beach",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not seen"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "My Khe Beach",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://sp.booking.com/hotel/vn/novotel-danang-premier-han-river.html",
+   "https://www.lastminute.com/hotels/vietnam/danang/novotel-danang-premier-han-river_hid-650065",
+   "https://duytan.edu.vn/conferences/home/PointOfInterestDetail/14-novotel-danang-premier-han-river/3-international-food-tourism-forum"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Nominatim returned no result (lat/lng null). Official domain guess novotelpremierdanang.com failed DNS.",
+  "beach_access_note": "City riverfront; no beach source seen"
+ },
+ "grand-mercure-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "not_verified",
+  "club_lounge": "yes",
+  "room_types": [
+   "Executive suites with lounge access"
+  ],
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Outdoor pool 6am-9/10pm per listings"
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool listed"
+   }
+  ],
+  "pool_note": "Outdoor + kids only",
+  "restaurants_count_or_names": "not_verified",
+  "official_website": "https://all.accor.com/hotel/7821/index.en.shtml",
+  "lat": 16.048229,
+  "lng": 108.2268111,
+  "official_name": "Grand Mercure Danang",
+  "neighborhood": "Green Island / Hoa Cuong (Hai Chau, south of centre)",
+  "address": "Lot A1, Green Island Villas Zone, Hoa Cuong, Da Nang",
+  "beach_access": "not_beach",
+  "club_lounge_name": "Executive lounge (Expedia/Trip.com/Accor suite listing)",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not seen"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "My Khe Beach",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.expedia.com/es/Da-Nang-Hoteles-Grand-Mercure-Danang.h4345585.Informacion-Hotel",
+   "https://all.accor.com/hotel/7821/index.pt.shtml",
+   "https://nominatim.openstreetmap.org/search?q=Grand+Mercure+Danang"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Listing GPS 16.048371,108.227005 matches OSM.",
+  "beach_access_note": "Inland Green Island on Han River side; no beach source seen"
+ },
+ "brilliant-hotel-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "not_verified",
+  "club_lounge": "not_verified",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "indoor",
+    "note": "Heated indoor pool (Oyster, Expedia, Hotels.com)"
+   }
+  ],
+  "pool_note": "NO rooftop pool found: only indoor pool plus rooftop bar/dining",
+  "restaurants_count_or_names": "Rooftop bar/dining, full restaurant",
+  "official_website": null,
+  "lat": 16.0666727,
+  "lng": 108.2247119,
+  "official_name": "Brilliant Hotel",
+  "neighborhood": "Han River / Hai Chau",
+  "address": "162 Bach Dang St, Hai Chau, Da Nang",
+  "beach_access": "not_beach",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not seen"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "My Khe Beach",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.hotels.com/ho410222/brilliant-hotel-da-nang-vietnam",
+   "https://www.booking.com/hotel/vn/brilliant.en-gb.html",
+   "https://nominatim.openstreetmap.org/search?q=Brilliant+Hotel+Da+Nang"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Contradicts any 'rooftop pool' claim; rooftop bar only.",
+  "beach_access_note": "Han River waterfront, 17 storeys per Oyster"
+ },
+ "melia-vinpearl-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "yes",
+  "club_lounge": "yes",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Meliá site lists outdoor pool"
+   },
+   {
+    "type": "infinity",
+    "note": "Agoda lists infinity pool + rooftop sky bar (not official)"
+   },
+   {
+    "type": "kids",
+    "note": "Trip.com children's pool"
+   }
+  ],
+  "pool_note": "Outdoor per Meliá; infinity per Agoda only; no rooftop pool confirmed (sky bar only)",
+  "restaurants_count_or_names": "not_verified",
+  "official_website": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-vinpearl-danang-riverfront",
+  "lat": 16.0709337,
+  "lng": 108.22961,
+  "official_name": "Meliá Vinpearl Danang Riverfront",
+  "neighborhood": "Han River east bank / An Hai",
+  "address": "341 Tran Hung Dao, An Hai, Da Nang (street number not confirmed on read page; OSM places it on Tran Hung Dao)",
+  "beach_access": "not_beach",
+  "club_lounge_name": "Executive Lounge (Trip.com listing)",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": 4.7,
+    "minutes_or_null": 13,
+    "source": "Trip.com"
+   },
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": 7.2,
+    "minutes_or_null": null,
+    "source": "Hotels.com (4.5 mi)"
+   },
+   {
+    "to": "Da Nang airport",
+    "kind": "straight_line",
+    "km": 3.0,
+    "minutes_or_null": null,
+    "source": "Agoda 'from airport' (type unclear)"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "My Khe Beach",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.melia.com/en/hotels/vietnam/da-nang/melia-vinpearl-danang-riverfront",
+   "https://uk.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront",
+   "https://www.agoda.com/vinpearl-condotel-riverfront-da-nang/hotel/da-nang-vn.html",
+   "https://nominatim.openstreetmap.org/search?q=Melia+Vinpearl+Danang+Riverfront"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Airport distances conflict (3.0/4.7/5/7.2 km); do not claim 'fastest transfer'.",
+  "beach_access_note": "Riverfront; no beach source seen"
+ },
+ "melia-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "yes",
+  "club_lounge": "not_verified",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Booking.com counts 7 pools, Expedia 5 outdoor; guest-review reply mentions beachfront infinity pools"
+   },
+   {
+    "type": "kids",
+    "note": "Kids' pool (lastminute)"
+   }
+  ],
+  "pool_note": "Pool count conflicts (5 vs 7); types beyond outdoor/kids not confirmed",
+  "restaurants_count_or_names": "not_verified",
+  "official_website": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-danang-beach-resort",
+  "lat": 16.0010848,
+  "lng": 108.2691135,
+  "official_name": "Meliá Danang Beach Resort",
+  "neighborhood": "Non Nuoc / Ngu Hanh Son",
+  "address": "19 Truong Sa, Hoa Hai, Ngu Hanh Son, Da Nang (Trip.com/lastminute)",
+  "beach_access": "beachfront",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not seen"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.melia.com/en/hotels/vietnam/da-nang/melia-danang-beach-resort",
+   "https://booking.com/hotel/vn/melia-danang.html",
+   "https://vacations.aircanada.com/en/accommodation-details/DADMEL/melia-danang-beach-resort",
+   "https://nominatim.openstreetmap.org/search?q=Melia+Danang+Beach+Resort"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Not verified: Level club lounge.",
+  "beach_access_note": "Air Canada listing: directly on Non Nuoc Beach"
+ },
+ "intercontinental-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "yes",
+  "club_lounge": "yes",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "infinity",
+    "note": "50 m infinity pool, adults-only (official site)"
+   },
+   {
+    "type": "kids",
+    "note": "Adjacent kid's pool (official site)"
+   }
+  ],
+  "pool_note": "Official pools page found via search; 2 outdoor pools",
+  "restaurants_count_or_names": "not_verified",
+  "official_website": "https://www.danang.intercontinental.com/",
+  "lat": 16.1210876,
+  "lng": 108.3061358,
+  "official_name": "InterContinental Danang Sun Peninsula Resort",
+  "neighborhood": "Son Tra (Bai Bac)",
+  "address": "Bai Bac, Son Tra Peninsula, Son Tra, Da Nang (OSM: Hoang Sa St)",
+  "beach_access": "beachfront",
+  "club_lounge_name": "Club InterContinental lounge below lobby (afternoon tea 14:30-16:30, cocktails 17:30-19:30)",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": 20,
+    "source": "search summary: about 20 min"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.danang.intercontinental.com/recreation/swimming-pools/",
+   "https://www.danang.intercontinental.com/facilities-amenities/",
+   "https://www.hotels.com/ho389711",
+   "https://nominatim.openstreetmap.org/search?q=InterContinental+Danang+Sun+Peninsula"
+  ],
+  "confidence": "medium",
+  "notes": "Kids club is Planet Trekkers (ages 12 and under) per official site. Official pages seen only through search summaries; direct fetch failed. Distance to Dragon Bridge/Han Market not verified; far from centre.",
+  "beach_access_note": "Bai Bac cove resort; direct beach not read on an official page — treat as likely, verify"
+ },
+ "hyatt-regency-da-nang": {
+  "checked": "2026-11-23",
+  "kids_club": "yes",
+  "club_lounge": "yes",
+  "room_types": [],
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "5 outdoor pools (Expedia)"
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool and waterslide (Expedia)"
+   }
+  ],
+  "pool_note": "Count from Expedia only",
+  "restaurants_count_or_names": "not_verified",
+  "official_website": "https://www.hyatt.com/hyatt-regency/en-US/dadrd-hyatt-regency-danang-resort-and-spa",
+  "lat": 16.0125892,
+  "lng": 108.2637747,
+  "official_name": "Hyatt Regency Danang Resort and Spa",
+  "neighborhood": "Non Nuoc / Ngu Hanh Son (Hoa Hai)",
+  "address": "5 Truong Sa, Hoa Hai, Ngu Hanh Son, Da Nang",
+  "beach_access": "beachfront",
+  "club_lounge_name": "Regency Club (Hotels.com / review summary)",
+  "distances": [
+   {
+    "to": "Da Nang airport",
+    "kind": "driving",
+    "km": null,
+    "minutes_or_null": 20,
+    "source": "Booking.com 20 min; Expedia/Hotels.com 21 min"
+   },
+   {
+    "to": "Dragon Bridge",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   },
+   {
+    "to": "Han Market",
+    "kind": "walking",
+    "km": null,
+    "minutes_or_null": null,
+    "source": "not verified"
+   }
+  ],
+  "sources": [
+   "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+   "https://booking.com/hotel/vn/hyatt-regency-danang-resort-and-spa.html",
+   "https://www.oyster.com/vietnam/hotels/hyatt-regency-danang-resort-and-spa/",
+   "https://nominatim.openstreetmap.org/search?q=Hyatt+Regency+Danang"
+  ],
+  "confidence": "medium",
+  "notes": "Official hotel sites could not be fetched (timeouts/403/DNS); data is from aggregator listings via search summaries, not official pages. Kids club is paid hourly (Oyster).",
+  "beach_access_note": "Expedia: 'luxury hotel on the beach'"
+ }
+}

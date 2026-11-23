@@ -34,7 +34,7 @@
       var tags = el('div', 'fy-tags'); [h.setting, h.style, h.budget].concat(h.audience.filter(function (x) { return au !== 'any' && x === au; }), h.priorities.filter(function (x) { return pr.indexOf(x) > -1; })).forEach(function (x) { tags.appendChild(el('span', 'fy-tag', LABEL[x] || x)); }); c.appendChild(tags);
       var why = el('p', 'fy-why'); why.appendChild(el('strong', null, 'Why it fits: ')); why.appendChild(d.createTextNode(h.reason)); c.appendChild(why);
       var con = el('p', 'fy-con'); con.appendChild(el('strong', null, 'Potential drawback: ')); con.appendChild(d.createTextNode(h.drawback)); c.appendChild(con);
-      var act = el('div', 'fy-act'); act.appendChild(link(h, 'Check ' + (h.name.length <= 28 ? h.name : 'Room') + ' Prices', 'finder')); var rv = el('a', 'fy-rev', 'Read our review'); rv.href = h.review; act.appendChild(rv); c.appendChild(act); out.appendChild(c);
+      var act = el('div', 'fy-act'); act.appendChild(link(h, 'Check ' + (h.name.length <= 28 ? h.name : 'Room') + ' Prices', 'finder')); var rv = el('a', 'fy-rev', 'Read our review'); rv.href = h.review; act.appendChild(rv); var sv = el('button', 'dnc-save', 'Save'); sv.type = 'button'; sv.setAttribute('data-dn-save', h.id); act.appendChild(sv); var cm = el('a', 'fy-rev', 'Compare'); cm.href = 'compare-hotels.html?h=' + h.id; act.appendChild(cm); c.setAttribute('data-dn-hotel', h.id); c.appendChild(act); out.appendChild(c); setTimeout(function () { document.dispatchEvent(new CustomEvent('dn:shortlist')); }, 0);
     });
     if (!ranked.length) out.appendChild(el('p', 'fy-why', 'Try loosening the budget or style choice.'));
     out.focus && out.focus({ preventScroll: false });
