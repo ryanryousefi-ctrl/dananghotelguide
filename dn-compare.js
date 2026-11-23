@@ -41,6 +41,8 @@
   }
   document.addEventListener('dn:shortlist', shortlist);
   var m = /[?&]h=([^&]+)/.exec(location.search); if (m) sel = decodeURIComponent(m[1]).split(',').filter(function (s) { return byId[s]; }).slice(0, 3);
+  // Returning visitor with saved hotels and no deep link: open the comparison of their shortlist straight away.
+  if (!sel.length && window.DN_SHORTLIST) { var sl = window.DN_SHORTLIST.get().filter(function (x) { return byId[x]; }); if (sl.length >= 2) sel = sl.slice(0, 3); }
   render(); setTimeout(shortlist, 0);
   if (!sel.length && window.DN_SHORTLIST && window.DN_SHORTLIST.get().length) track('dn_shortlist_return', { list_size: window.DN_SHORTLIST.get().length });
 })();

@@ -93,7 +93,7 @@ function datesReminder(d = 'danang', loc = 'p3-dates') {
 function returnModule(d = 'danang') {
   const id = uid('dnc-r');
   return `<!--dn-c3:return--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><div class="dnc-band"><div class="dnc-band__t"><h2 class="dnc-h" id="${id}">Still planning your trip?</h2>
-<p>Save this guide so you can return when your travel dates are clearer, then compare our hotel recommendations again and check rates on Trip.com. Your shortlist stays in this browser only; we do not track prices or send alerts.</p></div>
+<p>Save this guide so you can return when your travel dates are clearer, then compare our hotel recommendations again and check rates on Trip.com. Your shortlist stays in this browser only; we do not track prices or send alerts.</p><p class="dnc-note" data-dn-shortlist-cta hidden></p></div>
 <div class="dnc-band__a"><button type="button" class="dnc-ghost" data-dn-copylink>Copy Link to This Guide</button><a class="dnc-ghost" href="compare-hotels.html">My Shortlist &amp; Compare</a>${destBtn(d, 'p3-return', { label: 'Compare Hotel Prices' })}</div></div></div></section>`;
 }
 // ---- H: seasonal booking advice -----------------------------------------------------------------

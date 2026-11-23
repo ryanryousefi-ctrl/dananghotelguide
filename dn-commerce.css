@@ -86,3 +86,8 @@
 /* sticky offset for the shared mobile bar remains in dn-sticky-cta.js */
 @media(max-width:480px){.dnc-actions a.tc-btn,.dnc-band__a a.tc-btn{width:100%}}
 @media(max-width:600px){.dnc-table table{min-width:440px}.dnc-table table[data-n="3"]{min-width:600px}.dnc-table th[scope=row]{width:5.4rem;font-size:.66rem;padding:.5rem .45rem;position:sticky;left:0;z-index:1}.dnc-table td,.dnc-table thead th{font-size:.82rem;padding:.5rem .55rem}.dnc-table a.tc-btn{padding:6px 8px!important;font-size:.74rem!important;min-width:0!important}}
+/* Stay Planner (finder) */
+.fy-plan{border-left:4px solid #111;background:#f5f5f5;padding:.9rem 1rem;margin:.6rem 0 1rem;border-radius:0 8px 8px 0}
+.fy-plan p{margin:.3rem 0;line-height:1.55;font-size:.95rem}.fy-plan .fy-plan-h{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;color:#555;margin:0 0 .3rem}
+.fy-act .dnc-save{border:1.5px solid rgba(0,0,0,.25);background:#fff;border-radius:6px;padding:.4rem .9rem;min-height:44px;font-weight:700;cursor:pointer}
+.fy-act .dnc-save[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
