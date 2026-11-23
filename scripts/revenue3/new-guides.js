@@ -20,7 +20,7 @@ ${C.heroPrice({ id: 'glance-h', light: true, kicker: 'Check prices', title: 'Com
 <section class="dnc dnc-sec"><div class="dnc-wrap"><h2 class="dnc-h">The 21 hotels</h2><div class="dnc-table"><table style="min-width:900px"><thead><tr><th scope="col">Hotel</th><th scope="col">Area</th><th scope="col">Beach access</th><th scope="col">Pools</th><th scope="col">Club lounge</th><th scope="col">Kids' club</th><th scope="col">Rates</th></tr></thead><tbody>${rows}</tbody></table></div>
 <p class="dnc-note">"Per listings" means a public listing states it; it is not an inspection. Radisson Blu Danang is listed under the name used in our review; listings for that property are inconsistent, so most of its fields are unverified. Our reviews, not this table, carry our opinions.</p></div></section>
 ${sec('How to use this table', ul(['<strong>Beach or city?</strong> The "Beach access" column separates beachfront hotels from the city hotels on the Han River. Beach hotels and city hotels suit different trips; see <a href="beachfront-vs-city-hotels-da-nang.html">beach versus city hotels</a>.', '<strong>Pools differ.</strong> A "rooftop" or "infinity" pool is a facility listings sometimes disagree about, which is why several hotels show "Listings differ".', '<strong>Lounge access</strong> changes the value of a stay for some travellers; read <a href="da-nang-hotels-executive-lounge.html">our lounge guide</a> before paying for it.', '<strong>Narrow it down</strong> with the <a href="find-your-hotel.html">hotel finder</a>, then compare two or three in the <a href="compare-hotels.html">comparison tool</a>.']))}
-${C.datesReminder('danang', 'p3-glance-dates')}${C.returnModule('danang')}` });
+${C.returnModule('danang')}` });
 }
 // 2. Without a car
 {
@@ -32,7 +32,7 @@ ${sec('City hotels: the walkable option', p('These five are on the Han River sid
 ${sec('If you want the beach and no car', p('These two sit a short walk from My Khe Beach according to listings. You can walk to the sand and to nearby restaurants; for the city centre you will use Grab.') + C.cards(beach, { loc: 'p3-nocar-card' }))}
 ${C.compareModule('novotel-da-nang-han-river', 'a-la-carte-da-nang', { loc: 'p3-nocar-compare', sub: 'A city base against a beach base.' })}
 ${sec('Getting around without a car', ul(['Read our <a href="da-nang-grab-guide.html">Grab guide</a> and <a href="da-nang-transport-guide.html">transport guide</a> for how rides work.', 'Your first ride is usually the airport: see the <a href="da-nang-airport-guide.html">airport guide</a>.', 'For Hoi An day trips, a city-centre base shortens the ride; see <a href="da-nang-vs-hoi-an.html">Da Nang or Hoi An</a>.']))}
-${C.datesReminder('danang', 'p3-nocar-dates')}${C.returnModule('danang')}` });
+${C.returnModule('danang')}` });
 }
 // 3. How to check prices
 {
@@ -55,7 +55,7 @@ ${sec('If your plan is beach first', p('Choose a beachfront or near-beach hotel 
 ${sec('If the hotel is the destination', p('A large resort works for three nights if you accept that the city is a ride away.') + C.cards(['hyatt-regency-da-nang', 'intercontinental-da-nang'], { loc: 'p3-three-card' }))}
 ${C.compareModule('hilton-da-nang', 'hyatt-regency-da-nang', { loc: 'p3-three-compare', sub: 'A city stay against a resort stay.' })}
 ${sec('Related', ul(['<a href="da-nang-3-day-itinerary.html">A 3-day Da Nang itinerary</a>', '<a href="where-to-stay-in-da-nang.html">Where to stay in Da Nang</a>', '<a href="how-to-check-da-nang-hotel-prices.html">How to check hotel prices for your dates</a>', '<a href="compare-hotels.html">Compare hotels side by side</a>']))}
-${C.datesReminder('danang', 'p3-three-dates')}${C.returnModule('danang')}` });
+${C.returnModule('danang')}` });
 }
 const sm = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8'); let sm2 = sm;
 for (const pg of pages) {
