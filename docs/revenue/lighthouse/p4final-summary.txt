@@ -1,0 +1,7 @@
+p4final index performance:65 accessibility:100 best-practices:79 seo:92 LCP:5.1 s CLS:0 TBT:210 ms
+p4final where-to-stay-in-da-nang performance:87 accessibility:97 best-practices:79 seo:92 LCP:3.7 s CLS:0.013 TBT:160 ms
+p4final hilton-da-nang performance:86 accessibility:96 best-practices:79 seo:92 LCP:4.0 s CLS:0 TBT:90 ms
+p4final best-hotels-in-da-nang performance:85 accessibility:96 best-practices:79 seo:92 LCP:4.0 s CLS:0 TBT:100 ms
+p4final hyatt-vs-marriott-da-nang performance:77 accessibility:93 best-practices:79 seo:92 LCP:5.4 s CLS:0 TBT:120 ms
+p4final compare-hotels performance:99 accessibility:96 best-practices:79 seo:92 LCP:1.7 s CLS:0 TBT:80 ms
+p4final find-your-hotel performance:99 accessibility:96 best-practices:79 seo:92 LCP:1.5 s CLS:0 TBT:100 ms

@@ -35,4 +35,30 @@ Pages built: 3 new + 10 substantially rebuilt + 19 comparison upgrades = 32 piec
 - **Azura / Silk Path Grand:** not needed (reviews withdrawn).
 
 ## Validation, production and rollback
-PHASE4_RESULTS
+- **Affiliate integrity:** strict validator `--cutover` 0 failures; selftest 30/30; banner suite 16/16 with 162 placements; `affiliate-proof.js` vs `89294d5`: 181 new Trip.com anchors, all exact registry URLs; 5 removed on purpose (generic Da Nang search buttons on the two withdrawn pages and on the removed Azura/Silk Path cards); no other existing link altered. One `affiliate_click` per click verified in browser.
+- **Facts:** `fact-consistency.js` 0 errors on 216 pages. **Guardrails:** `cta-audit.js` no adjacent duplicate modules on 135 pages.
+- **Browser tests:** `functional-test.js` 33/33 (planner rules, saved-count nav, compare auto-load, withdrawn pages, finder scenarios, shortlist, consent). Production `live-smoke.js` 47/47 (21 pages x 2 widths + live clicks, tools, withdrawn page). Overflow sweep: 193 changed pages x 4 widths, 0 overflow, 0 page errors. Real devices: not tested.
+- **SEO:** 0 non-news broken internal links, 0 canonical mismatches, 0 invalid JSON-LD; sitemap updated (+3 pages, -2 withdrawn); orphans are the pre-existing utility/news pages plus the two withdrawn pages (intentional).
+- **Lighthouse** (mobile, production, single runs, run with nothing else in parallel; an earlier after-run was contaminated by a concurrent browser test and is not used):
+
+| Page | Before (`89294d5`) | After (`6483ccb`) |
+|---|---|---|
+| Homepage | 66, LCP 4.9 s, CLS 0.001, TBT 370 ms | 65, LCP 5.1 s, CLS 0, TBT 210 ms |
+| Where to Stay | 79, LCP 2.2 s, TBT 700 ms | 87, LCP 3.7 s, TBT 160 ms |
+| Hilton review | 92, LCP 3.0 s | 86, LCP 4.0 s, CLS 0 |
+| Best hotels list | 87, LCP 3.6 s | 85, LCP 4.0 s |
+| Hyatt vs Marriott | 71, LCP 7.4 s | 77, LCP 5.4 s |
+| Compare tool | 98 | 99, CLS 0 |
+| Stay Planner | 99 | 99, CLS 0 |
+
+Fixes made in Batch F after measuring: the consent banner now uses the system font (a late web-font swap reflowed it), and the compare tool's hotel checklist is rendered in static HTML (it was injected by script and shifted the page). Accessibility 93-100, SEO 92, Best Practices 79 (third-party cookies from AdSense) unchanged.
+- **Vercel:** all three projects built successfully for both merges.
+
+**Production:** final code merge `6483ccb` (batches A-E merged as `b5c4be5`); previous production `89294d5`.
+**Rollback:** `git revert -m 1 6483ccb` (layout-shift fixes only), `git revert -m 1 b5c4be5` (all Phase 4), push `main`; or promote the Vercel deployment of `89294d5`. Commits on `phase4`: `0f62310` withdrawn hotels (revert alone to restore those two reviews), `9cae40c` batches B-E.
+
+## Limitations (external)
+- No GA4 or Search Console access: no baselines or outcome data; dashboards are ready for exports. Custom dimensions still unregistered.
+- Trip.com cookie window, cross-product attribution and sub-ID reporting are unconfirmed by official sources (ask affiliation@trip.com).
+- Fusion Suites has no Trip.com deep link; only the account owner can generate one.
+- Search volumes: no verifiable source available; opportunities were ranked on qualitative SERP evidence.
