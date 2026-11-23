@@ -8,7 +8,7 @@ let html = fs.readFileSync(FILE, 'utf8');
 const wrap = (n, body) => `<!--dn-c3:ws:${n}-->${body}<!--/dn-c3:ws:${n}-->`;
 const strip = n => { html = html.replace(new RegExp(`<!--dn-c3:ws:${n}-->[\\s\\S]*?<!--/dn-c3:ws:${n}-->\\n?`, 'g'), ''); };
 const esc = C.esc;
-['hero', 'chooser', 'picks', 'compare', 'season', 'final'].forEach(strip);
+['hero', 'chooser', 'picks', 'compare', 'season', 'return', 'final'].forEach(strip);
 html = html.replace(/<!--dn-c3:ws:card-[a-z-]+-->[\s\S]*?<!--\/dn-c3:ws:card-[a-z-]+-->/g, '');
 
 // 1. hero price-check (right after the page hero, so the lede still answers the question first)
@@ -46,7 +46,7 @@ for (const [id, slugs] of Object.entries(ROWS)) {
 }
 // 5. compare modules after the by-area hotels section
 const PAIRS = [['a-la-carte-da-nang', 'four-points-sheraton-da-nang'], ['novotel-da-nang-han-river', 'hilton-da-nang'], ['hyatt-regency-da-nang', 'melia-da-nang']];
-const compare = wrap('compare', PAIRS.map(([a, b]) => C.compareModule(a, b, { loc: 'p3-ws-compare' })).join(''));
+const compare = wrap('compare', C.compareGroup(PAIRS, { loc: 'p3-ws-compare', title: 'Compare these hotels for your dates', sub: 'Three pairs, one per area: the main difference and a price check for each.' }));
 const sig = html.indexOf('<section class="ws-compare-dark">'); if (sig < 0) throw new Error('no ws-compare-dark');
 html = html.slice(0, sig) + compare + '\n' + html.slice(sig);
 // 6. seasonal advice before the bottom-line section; final booking section after FAQ
@@ -56,7 +56,8 @@ html = html.slice(0, bl) + season + '\n' + html.slice(bl);
 const finalHtml = wrap('final', `<section class="dnc dnc-final dnc-sec" aria-labelledby="ws-final-h"><div class="dnc-wrap"><p class="dnc-kicker">Next step</p><h2 class="dnc-h" id="ws-final-h">Ready to choose your Da Nang hotel?</h2>
 <ul class="dnc-recap"><li><b>First trip, want the beach</b>My Khe Beach</li><li><b>Want to walk to dinner</b>An Thuong</li><li><b>City sights and local life</b>Han River</li><li><b>Resort days with the family</b>Non Nuoc</li><li><b>Privacy and scenery</b>Son Tra</li><li><b>Old Town atmosphere</b>Hoi An</li></ul>
 <div class="dnc-actions">${C.destBtn('danang', 'p3-ws-final', { lg: true, label: 'Compare Da Nang Hotel Prices' })}${C.destBtn('hoian', 'p3-ws-final', { label: 'Compare Hoi An Hotel Prices' })}<a class="dnc-ghost" href="find-your-hotel.html">Use the hotel finder</a></div>
-<p class="dnc-note">Disclosure: we earn a commission if you book through our Trip.com links, at no extra cost to you. It does not change what we recommend. Trip.com city searches are not filtered by neighborhood.</p></div></section>${C.returnModule('danang')}`);
+<p class="dnc-note">Disclosure: we earn a commission if you book through our Trip.com links, at no extra cost to you. It does not change what we recommend. Trip.com city searches are not filtered by neighborhood.</p></div></section>`);
+const retm = wrap('return', C.returnModule('danang')); const fq = html.indexOf('<section class="ws-faq">'); if (fq < 0) throw new Error('no faq'); html = html.slice(0, fq) + retm + '\n' + html.slice(fq);
 const rel = html.indexOf('<!--dn-revenue:related-->'); const faqEnd = rel > 0 ? rel : html.lastIndexOf('</main>');
 html = html.slice(0, faqEnd) + finalHtml + '\n' + html.slice(faqEnd);
 // 7. assets

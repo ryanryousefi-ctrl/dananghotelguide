@@ -66,6 +66,10 @@ function compareModule(a, b, o = {}) {
 <p class="dnc-note"><a href="compare-hotels.html?h=${esc(a)},${esc(b)}">Open the side-by-side comparison tool</a>. Rates are shown on Trip.com.</p></div></div></section>`;
 }
 
+function compareGroup(pairs, o = {}) {
+  const id = uid('dnc-cg'); const col = (sl, loc) => { const h = hotel(sl); return `<div class="dnc-cmp__col"><h3>${esc(h.name)}</h3><p><span class="dnc-lab">Best for</span>${esc(h.editorial.bestFor)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(h.editorial.drawback)}</p>${hotelBtn(sl, loc, { block: true })}</div>`; };
+  return `<!--dn-c3:compare--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><p class="dnc-kicker">Compare before you choose</p><h2 class="dnc-h" id="${id}">${esc(o.title || 'Compare these hotels for your dates')}</h2><p class="dnc-sub">${esc(o.sub || 'The right choice can depend on the price difference for your dates.')}</p>${pairs.map(([a, b]) => `<div class="dnc-cmp" style="margin-bottom:1rem"><p class="dnc-sub" style="margin:0">${esc(diffLine(a, b))}</p><div class="dnc-cmp__grid">${col(a, o.loc || 'p3-compare')}${col(b, o.loc || 'p3-compare')}</div><p class="dnc-note"><a href="compare-hotels.html?h=${esc(a)},${esc(b)}">Open the side-by-side comparison tool</a>. Rates are shown on Trip.com.</p></div>`).join('')}</div></section>`;
+}
 // ---- D: editor's booking verdict ---------------------------------------------------------------
 function verdict(slug, o = {}) {
   const h = hotel(slug), ed = h.editorial, id = uid('dnc-v');
@@ -104,4 +108,4 @@ function seasonal(d = 'danang') {
 <div class="dnc-actions">${destBtn(d, 'p3-seasonal', { label: 'Check Prices for Your Dates' })}</div></div></section>`;
 }
 
-module.exports = { esc, tc, DEST, DEST_NAME, FACTS, hotel, hotelBtn, destBtn, heroPrice, priceCard, cards, compareModule, verdict, band, datesReminder, returnModule, seasonal, area, beach, diffLine, hotelEntry, AREA_LABEL };
+module.exports = { compareGroup, esc, tc, DEST, DEST_NAME, FACTS, hotel, hotelBtn, destBtn, heroPrice, priceCard, cards, compareModule, verdict, band, datesReminder, returnModule, seasonal, area, beach, diffLine, hotelEntry, AREA_LABEL };

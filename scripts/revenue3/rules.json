@@ -1,0 +1,7 @@
+{
+  "_doc": "CTA placement guardrails enforced by cta-audit.js. maxModules = max number of Phase 3 commercial modules (.dnc-hero/.dnc-band/.dnc-cmp/.dnc-verdict) per page type; no two commercial modules may be adjacent (something must sit between them).",
+  "maxModules": { "list": 5, "area": 5, "compare": 3, "review": 3, "guide": 3, "flagship": 14, "tool": 8 },
+  "flagship": ["where-to-stay-in-da-nang.html", "index.html"],
+  "tool": ["compare-hotels.html", "da-nang-hotels-at-a-glance.html", "da-nang-hotels-without-a-car.html", "how-to-check-da-nang-hotel-prices.html", "da-nang-hotels-for-three-nights.html"],
+  "excludeTypes": ["news", "legal", "utility"]
+}
