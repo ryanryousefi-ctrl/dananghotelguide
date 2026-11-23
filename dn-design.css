@@ -333,3 +333,7 @@ html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.act
 
 /* Contrast fix: light booking info cards inside the dark hero inherited the hero's pale text tokens (#d9d9d9 on #f0f0f0). Re-darken them for this card only. */
 .dn-hero__extra > div[style*="ocean-pale"] { --ocean: #111111; --ink-muted: #4d4d4d; --coral: #111111; }
+
+/* Mobile containment: wide comparison tables scroll inside themselves instead of widening the page (pre-existing horizontal overflow at 320-390px). */
+@media (max-width: 767px) { main table { display: block !important; max-width: 100% !important; overflow-x: auto; -webkit-overflow-scrolling: touch; } main table th, main table td { min-width: 5.5rem; } main { overflow-x: clip; max-width: 100vw; min-width: 0; } main > * { min-width: 0; max-width: 100%; } }
+@media (max-width: 767px) { .footer-legal, .footer-legal-links { flex-wrap: wrap; white-space: normal; max-width: 100%; } .footer-legal-links { flex-shrink: 1 !important; } }

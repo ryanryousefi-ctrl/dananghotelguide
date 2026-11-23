@@ -87,18 +87,18 @@ a.tc-btn .tc-btn__text { color: inherit !important; min-width: 0; text-wrap: bal
 
 /* General hotel SEARCH (city lists, "Search stays"): secondary look, so a button for one specific hotel is never mistaken for a search.
    The header and mobile-menu "Search stays" buttons are primary calls to action and stay solid. */
-a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta),
-a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta) {
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid),
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid) {
   background: #fff !important; color: var(--tc-blue) !important; border-color: var(--tc-blue) !important; box-shadow: none !important;
 }
-a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta)::before,
-a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta)::before { border-right-color: rgba(29, 78, 216, .4); }
-a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover,
-a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover {
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid)::before,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid)::before { border-right-color: rgba(29, 78, 216, .4); }
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid):hover,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid):hover {
   background: var(--tc-blue) !important; color: #fff !important; border-color: var(--tc-blue) !important;
 }
-a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover::before,
-a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):hover::before { border-right-color: rgba(255, 255, 255, .55); }
+a.tc-btn:not(#tc-n)[data-tc-key^="search:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid):hover::before,
+a.tc-btn:not(#tc-n)[data-tc-key^="city:"]:not(.nav-stays-btn):not(.mobile-stays-btn):not(.dn-menu__cta):not(.dn-header__cta):not(.tc-btn--solid):hover::before { border-right-color: rgba(255, 255, 255, .55); }
 
 /* Compact: header nav, map popups, directory rows. */
 a.tc-btn:not(#tc-n).tc-btn--compact { min-height: 40px !important; padding: 6px 12px !important; gap: .6em !important; font-size: .8rem !important; }
@@ -165,3 +165,41 @@ a.tc-link .tc-link__logo {
 
 /* Narrow hero widgets: stack the logo above the label instead of squeezing it. */
 .bk-widget a.tc-btn:not(#tc-n), .tc-widget a.tc-btn:not(#tc-n) { flex-wrap: wrap !important; row-gap: 6px !important; }
+
+/* ── Booking-decision modules (reviews): editorial "check prices" prompts, not ads. Buttons keep the shared .tc-btn component. ── */
+.dn-decide { padding-block: 0; }
+.dn-decide--early { background: var(--sand, #f3f3f3); }
+.dn-decide__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.75rem; }
+.dn-decide--early .dn-decide__inner { padding-block: 1.1rem; }
+.dn-decide__copy { flex: 1 1 22rem; min-width: 0; border-left: 3px solid #111; padding-left: 1rem; }
+.dn-decide__kicker { margin: 0 0 .25rem; font-weight: 700; font-size: .95rem; color: #111; letter-spacing: .01em; }
+.dn-decide__text { margin: 0; font-size: .9rem; line-height: 1.55; color: #333; max-width: 46rem; }
+.dn-decide__alts { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(0,0,0,.14); }
+.dn-decide__alts .dn-decide__kicker { margin-bottom: .75rem; }
+.dn-decide__row { display: flex; flex-wrap: wrap; gap: .6rem; }
+@media (max-width: 600px) { .dn-decide__inner > a.tc-btn { width: 100%; justify-content: center; } .dn-decide__row > a.tc-btn { flex: 1 1 100%; } }
+.dn-decide--guide { margin: 3rem 0 0; padding: 0 var(--dn-gutter, 1.25rem); }
+.dn-decide__wrap { max-width: 920px; margin: 0 auto; padding: 1.4rem 0 1.6rem; border-top: 3px solid #111; }
+.dn-decide--guide .dn-decide__kicker { font-size: 1.05rem; }
+.dn-decide--guide .dn-decide__text { margin-bottom: 1rem; }
+.dn-decide__links { margin: 1rem 0 0; font-size: .88rem; color: #333; }
+.dn-decide__links a { color: #111; text-decoration: underline; text-underline-offset: 2px; margin-right: .9rem; display: inline-block; }
+.dn-decide__note { margin: .9rem 0 0; font-size: .75rem; color: #555; }
+
+/* Mobile sticky price-check bar (hotel reviews; see dn-sticky-cta.js). Sits above the page, below menus; never over the cookie banner. */
+.dn-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 800; display: flex; gap: .5rem; align-items: center; padding: .55rem .75rem calc(.55rem + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid rgba(0,0,0,.18); box-shadow: 0 -4px 16px rgba(0,0,0,.08); }
+.dn-sticky[hidden] { display: none; }
+.dn-sticky > a.tc-btn { flex: 1 1 auto; justify-content: center; }
+.dn-sticky__x { flex: 0 0 44px; height: 44px; border: 1px solid rgba(0,0,0,.25); background: #fff; color: #111; font-size: 1.4rem; line-height: 1; border-radius: 8px; cursor: pointer; }
+@media (min-width: 768px) { .dn-sticky { display: none !important; } }
+@media (prefers-reduced-motion: no-preference) { .dn-sticky:not([hidden]) { animation: dnStickyIn .2s ease-out; } @keyframes dnStickyIn { from { transform: translateY(100%); } to { transform: none; } } }
+
+/* Homepage: direct, no-third-party price-check actions beside the finder and in the booking band. */
+.dh-quick { margin: .6rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; font-size: .9rem; color: #333; }
+.dh-book__direct { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1rem; }
+@media (max-width: 600px) { .dh-book__direct > a.tc-btn { flex: 1 1 100%; justify-content: center; } }
+
+.dn-decide--guide .dn-decide__kicker { text-transform: none; letter-spacing: 0; font-size: 1.2rem; font-family: var(--dn-serif, Georgia, serif); font-weight: 500; }
+.dn-linklist__grid { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .5rem 1.5rem; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+.dn-linklist__grid a { color: #111; text-decoration: underline; text-underline-offset: 2px; font-size: .92rem; }
+.dn-linklist__h { margin: 1.75rem 0 0; font-size: 1rem; }
