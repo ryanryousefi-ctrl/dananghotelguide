@@ -1,0 +1,3 @@
+#!/bin/sh
+# Blocks commits that add dependency directories, symlinks or oversized files. Enable once per clone: git config core.hooksPath .githooks
+node "$(git rev-parse --show-toplevel)/scripts/repo-hygiene.js" --staged
