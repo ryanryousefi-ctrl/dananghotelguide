@@ -7,7 +7,7 @@ const MAP = { 'where-to-stay-in-da-nang.html': ['glance', 'car', 'how', 'three']
 let n = 0;
 for (const [f, keys] of Object.entries(MAP)) {
   const p = path.join(ROOT, f); if (!fs.existsSync(p)) continue; let h = fs.readFileSync(p, 'utf8');
-  h = h.replace(/<!--dn-c3:links-->[\s\S]*?<!--\/dn-c3:links-->\n?/, '');
+  h = h.replace(/\n*<!--dn-c3:links-->[\s\S]*?<!--\/dn-c3:links-->\n?/, '\n');
   const block = `<!--dn-c3:links--><section class="dnc dnc-sec" aria-label="Related planning tools"><div class="dnc-wrap"><p class="dnc-note"><strong>Related planning:</strong> ${keys.map(k => `<a href="${L[k][0]}">${L[k][1]}</a>`).join(' · ')}</p></div></section><!--/dn-c3:links-->`;
   const i = h.search(/<!--dn-revenue:(guide|related)-->/); const at = i >= 0 ? i : h.lastIndexOf('</main>'); if (at < 0) { console.log('skip', f); continue; }
   h = h.slice(0, at) + block + '\n' + h.slice(at);
