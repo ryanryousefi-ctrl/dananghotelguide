@@ -19,7 +19,7 @@ Branch `revenue-journey`. Baseline production commit: `00d193d`. Every change is
 6. Four new decision guides built only from facts in our own reviews: hotels near Dragon Bridge and Han Market; My Khe Beach or Han River; hotels with executive lounges; where to stay between Da Nang and Hoi An. All in the sitemap, linked from hubs. Not translated into Korean.
 7. Internal links: comparisons and decision guides now have inbound links (hotel-reviews hub, guides, where-to-stay hubs).
 8. Mobile containment CSS (tables scroll inside themselves, footer legal links wrap).
-9. Honest labels: six airport-guide buttons said "Book <Hotel>" but point to the Da Nang search; they now say "Compare Da Nang Hotel Prices". (Their URLs are unchanged.)
+9. Honest labels: airport-guide buttons (6) said "Book <Hotel>" but point to the Da Nang search; they now say "Compare Da Nang Hotel Prices". (Their URLs are unchanged.)
 
 ## Affiliate integrity (proved by diff against production)
 - Existing Trip.com hrefs lost or changed: 0. New anchors: 143, every one an exact `affiliate_url` from data/tripcom/registry.json. Registry untouched.
