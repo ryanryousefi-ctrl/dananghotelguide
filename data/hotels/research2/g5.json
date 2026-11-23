@@ -1,0 +1,787 @@
+{
+ "hyatt-regency-da-nang": {
+  "official_name": "Hyatt Regency Danang Resort and Spa",
+  "brand": "Hyatt Regency (Hyatt)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Name on our page matches. Our page title/schema says 'Hyatt Regency Danang Review 2026, 6 Pools, Lazy River' but body says 5 pools.",
+  "address": "5 Truong Sa Street, Ngu Hanh Son Ward, Da Nang 50510",
+  "ward_district": "Ngu Hanh Son (Non Nuoc / Truong Sa coast)",
+  "neighborhood_group": "truong-sa-coast",
+  "neighborhood_note": "Nominatim places it on Truong Sa road at Non Nuoc beach, about 9 km by road south of the city centre landmarks. Our 'Non Nuoc' label is fine.",
+  "website": "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa",
+  "lat": 16.0125892,
+  "lng": 108.2637747,
+  "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim: 'Hyatt Regency Danang Resort and Spa, 5, Duong Truong Sa')",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 7.86,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 14.6,
+    "minutes": 17.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 6.62,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 8.99,
+    "minutes": 10.9,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 7.5,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 9.14,
+    "minutes": 10.7,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.23,
+    "minutes": null,
+    "method": "great-circle to nearest OSM coastline node (16.0136,108.2656); this is the resort's own beach, Non Nuoc/Truong Sa, not the My Khe strip",
+    "source": "https://overpass-api.de/api/interpreter"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.3,
+    "minutes": 4.0,
+    "method": "OSRM foot route to nearest coastline node",
+    "source": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 19.46,
+    "minutes": 23.3,
+    "method": "OSRM car route estimate (no traffic) to 15.8794,108.3280; the coordinates in the task prompt (16.0794) are NOT Hoi An (they are ~20 km north), so I used 15.8794",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Private beach per listing snippets; OSM coastline node ~230 m from the resort point.",
+   "sources": [
+    "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+    "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Five outdoor pools incl. an infinity-edge pool overlooking the beach, a main pool with waterslide, an adults-only pool, kids pool with slide (snippets).",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   }
+  ],
+  "pool_summary": "5 outdoor pools; no indoor, rooftop or lazy river found in sources.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+    "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+   ],
+   "note": "No source mentions rooftop pool; absence only, treat as not evidenced."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Regency Club Lounge",
+   "details": "Near lobby, indoor seating plus patio; breakfast, all-day drinks, evening cocktails; for suites/Club Access rooms.",
+   "sources": [
+    "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/regency-club"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+    "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+   ]
+  },
+  "family_facilities": [
+   "Camp Hyatt kids club (hourly fee per one review)",
+   "kids pool with slide",
+   "playground"
+  ],
+  "gym": "unknown",
+  "spa": "yes",
+  "dining_outlets": [],
+  "room_categories": [],
+  "multi_bedroom_options": "unknown",
+  "distinctive_amenities": [
+   "Beside an 18-hole golf course (per listing)",
+   "Marble Mountains about 5 min drive"
+  ],
+  "claims_check": [
+   {
+    "claim": "The resort sits 12 kilometres from Da Nang's city centre",
+    "verdict": "contradicted",
+    "evidence": "OSRM road distance to Han Market 9.1 km and Dragon Bridge 9.0 km; straight-line 7.5/6.6 km. 12 km is overstated by ~3 km (could only hold if 'centre' means somewhere further north).",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Non Nuoc Beach sits about 12km south of Da Nang's city centre",
+    "verdict": "contradicted",
+    "evidence": "Same: about 9 km by road to the central landmarks.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "14km from the airport",
+    "verdict": "supported",
+    "evidence": "OSRM 14.6 km / 17 min.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge, Han Market... about 20 minutes (Grab)",
+    "verdict": "unverifiable",
+    "evidence": "OSRM free-flow is ~11 min; 20 min is plausible in traffic, but no traffic data.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Five Pools / Pools: 5 outdoor pools",
+    "verdict": "supported",
+    "evidence": "Listing snippets say five outdoor pools.",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   },
+   {
+    "claim": "Headline: 6 Pools, Lazy River (title/schema)",
+    "verdict": "contradicted",
+    "evidence": "Sources say five pools; no lazy river found. Conflicts with our own body text of five.",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   },
+   {
+    "claim": "main lagoon pool snakes through the resort ... sand-bottom pool",
+    "verdict": "unverifiable",
+    "evidence": "No source found for a lagoon-style or sand-bottom pool.",
+    "sources": []
+   },
+   {
+    "claim": "Camp Hyatt kids' club",
+    "verdict": "supported",
+    "evidence": "2023 press release/snippets mention Camp Hyatt.",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   },
+   {
+    "claim": "Direct beachfront",
+    "verdict": "supported",
+    "evidence": "Private beach per listings; coastline ~230 m.",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   },
+   {
+    "claim": "Marble Mountains five-minute taxi",
+    "verdict": "supported",
+    "evidence": "Snippet: Marble Mountains ~5 minutes' drive.",
+    "sources": [
+     "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information",
+     "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+    ]
+   },
+   {
+    "claim": "in the Ngu Hanh Son district",
+    "verdict": "supported",
+    "evidence": "Nominatim ward Ngu Hanh Son.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Hyatt official pages returned 403; Hyatt/Expedia details below come from WebSearch result snippets (search tool summaries of those URLs), not from pages I opened directly. Gym, restaurants, room categories not verified."
+ },
+ "intercontinental-da-nang": {
+  "official_name": "InterContinental Danang Sun Peninsula Resort",
+  "brand": "InterContinental (IHG)",
+  "operator_owner": "Owned by Bai Bac Resort; operated by IHG",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Matches.",
+  "address": "Son Tra Peninsula, Da Nang 550000 (Bai Bac, Hoang Sa road)",
+  "ward_district": "Son Tra Ward",
+  "neighborhood_group": "son-tra",
+  "neighborhood_note": "Correct; inside Son Tra Nature Reserve.",
+  "website": "https://www.danang.intercontinental.com/",
+  "lat": 16.1210876,
+  "lng": 108.3061358,
+  "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim: InterContinental Danang Sun Peninsula Resort, Hoang Sa)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 14.55,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 28.25,
+    "minutes": 33.6,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 15,
+    "minutes": 30,
+    "method": "stated by hotel (FAQ: ~30 min, 15 km; the 15 km figure conflicts with OSRM 28 km, trust OSRM for distance, hotel for ~30 min)",
+    "source": "https://www.danang.intercontinental.com/faq/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 10.69,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 19.17,
+    "minutes": 22.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 10.53,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 19.32,
+    "minutes": 22.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 49.02,
+    "minutes": 48.7,
+    "method": "OSRM car route estimate (no traffic) to 15.8794,108.3280 (prompt's 16.0794 is not Hoi An)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Private 700 m golden-sand beach exclusive to guests; villas have private staircase to beach.",
+   "sources": [
+    "https://www.danang.intercontinental.com/faq/",
+    "https://www.danang.intercontinental.com/accommodation/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "infinity",
+    "note": "L_O_N_G Pool: 50 m signature infinity pool, adults only, temperature-controlled, Jacuzzi",
+    "sources": [
+     "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+    ]
+   },
+   {
+    "type": "outdoor",
+    "note": "Garden Pool beside beach and L_O_N_G Bar, adjacent Jacuzzi",
+    "sources": [
+     "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Kids Pool beside Garden Pool",
+    "sources": [
+     "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Private pools in villas, penthouses (Heavenly Penthouse has a rooftop infinity pool, private)",
+    "sources": [
+     "https://www.danang.intercontinental.com/accommodation/"
+    ]
+   }
+  ],
+  "pool_summary": "Official page: three resort pools (50 m L_O_N_G infinity pool, Garden Pool, Kids Pool) plus private pools in villas/penthouses. Wikipedia (older) says two outdoor pools. No four terraced pools, no 'Citadel Pool' found.",
+  "rooftop": {
+   "rooftop_pool": "yes",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://www.danang.intercontinental.com/accommodation/"
+   ],
+   "note": "Only private rooftop infinity pools on the One-Bedroom Heavenly Penthouses; no public rooftop pool."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Club InterContinental Lounge",
+   "details": "Daily breakfast, afternoon tea 14:00-16:00, evening cocktails 16:30-18:30; villa host.",
+   "sources": [
+    "https://danang.intercontinental.com/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.danang.intercontinental.com/faq/"
+   ]
+  },
+  "family_facilities": [
+   "Planet Trekkers Kids Club, complimentary, supervised, ages 4-12",
+   "Kids pool",
+   "kids under 6 eat free"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "La Maison 1888",
+   "Citron",
+   "Tingara",
+   "Barefoot",
+   "The L_O_N_G Bar",
+   "Buffalo Bar"
+  ],
+  "room_categories": [
+   "Resort Classic Room Oceanview (70 sqm)",
+   "Resort Classic Panoramic Room",
+   "Club Panoramic Room",
+   "Resort Terrace Suite",
+   "Club Terrace Suite",
+   "Heavenly Penthouse",
+   "Seaside Villas (by the Beach/on the Rocks)",
+   "Spa Lagoon Villa",
+   "Royal Residence",
+   "Sun Peninsula Residence (2-3BR)"
+  ],
+  "multi_bedroom_options": "Two- and three-bedroom villas/residences, e.g. 2BR Sun Peninsula Residence 800 sqm",
+  "distinctive_amenities": [
+   "Nam Tram cable car/funicular",
+   "Mi Sol Spa",
+   "Soar Gym (Technogym)",
+   "Bensley design"
+  ],
+  "claims_check": [
+   {
+    "claim": "four infinity pools terraced down a cliff face / Four infinity pools",
+    "verdict": "contradicted",
+    "evidence": "Official pools page: 'three luxe pool choices' (L_O_N_G infinity, Garden, Kids). FAQ mentions main outdoor infinity pools plus Long Pool, so exact count is ambiguous but no four terraced pools.",
+    "sources": [
+     "https://www.danang.intercontinental.com/recreation/swimming-pools/",
+     "https://www.danang.intercontinental.com/faq/"
+    ]
+   },
+   {
+    "claim": "The Citadel Pool at the top",
+    "verdict": "unverifiable",
+    "evidence": "No pool of that name on official pages.",
+    "sources": [
+     "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+    ]
+   },
+   {
+    "claim": "there's no kids' club",
+    "verdict": "contradicted",
+    "evidence": "Complimentary Planet Trekkers Kids Club, ages 4-12.",
+    "sources": [
+     "https://www.danang.intercontinental.com/faq/"
+    ]
+   },
+   {
+    "claim": "a new Club InterContinental Lounge",
+    "verdict": "supported",
+    "evidence": "Club InterContinental lounge exists (whether new in 2022 unverified).",
+    "sources": [
+     "https://danang.intercontinental.com/"
+    ]
+   },
+   {
+    "claim": "Entry-level hillside rooms run around 55 square metres",
+    "verdict": "contradicted",
+    "evidence": "Official entry room Resort Classic Room is 70 sqm.",
+    "sources": [
+     "https://www.danang.intercontinental.com/accommodation/"
+    ]
+   },
+   {
+    "claim": "Long Beach Villas 230 sqm, plunge pool",
+    "verdict": "unverifiable",
+    "evidence": "No 'Long Beach Villa' category on official list; seaside villas have infinity pools, not plunge.",
+    "sources": [
+     "https://www.danang.intercontinental.com/accommodation/"
+    ]
+   },
+   {
+    "claim": "Son Tra Peninsula about 10km north of the city centre",
+    "verdict": "contradicted",
+    "evidence": "Straight-line ~10.5 km, but road distance 19 km.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge is 25 minutes away; Han Market 25-30 min",
+    "verdict": "supported",
+    "evidence": "OSRM 22 min both, without traffic.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Airport 30-40 min drive",
+    "verdict": "supported",
+    "evidence": "OSRM 34 min; hotel says ~30 min.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/",
+     "https://www.danang.intercontinental.com/faq/"
+    ]
+   },
+   {
+    "claim": "Private beach",
+    "verdict": "supported",
+    "evidence": "Private 700 m beach.",
+    "sources": [
+     "https://www.danang.intercontinental.com/faq/"
+    ]
+   },
+   {
+    "claim": "Michelin-starred La Maison 1888",
+    "verdict": "supported",
+    "evidence": "Official page lists one Michelin star.",
+    "sources": [
+     "https://danang.intercontinental.com/"
+    ]
+   },
+   {
+    "claim": "HARPO's overseen by Luke Nguyen",
+    "verdict": "unverifiable",
+    "evidence": "Not in official dining list (Citron, Tingara, Barefoot etc.).",
+    "sources": [
+     "https://danang.intercontinental.com/"
+    ]
+   }
+  ],
+  "confidence": "high",
+  "notes": "Hoi An drive uses corrected coords (prompt coords wrong). Wikipedia (older) lists 'two outdoor pools'; official site trusted."
+ },
+ "premier-village-da-nang": {
+  "official_name": "Premier Village Danang Resort (Managed by Accor)",
+  "brand": "Accor (Premier Village; Accor ID 9530)",
+  "operator_owner": "Managed by Accor; owned by Sun Group / Sun Paradise Land (listed on sunparadiseland.com; ownership not explicitly stated on opened page)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Premier Village Danang Resort Managed by Accor"
+  ],
+  "name_note": "Matches.",
+  "address": "99 Vo Nguyen Giap Street, My An (Ngu Hanh Son) Ward, Da Nang",
+  "ward_district": "Ngu Hanh Son",
+  "neighborhood_group": "south-my-khe",
+  "neighborhood_note": "CONTRADICTED: it is on My Khe beach / Vo Nguyen Giap street, about 5 km by road from Dragon Bridge and Han Market, NOT on Son Tra Peninsula tip. Accor coords 16.0436,108.2497 and Nominatim 16.04362,108.24966 agree.",
+  "website": "https://all.accor.com/hotel/9530/index.en.shtml",
+  "lat": 16.0436238,
+  "lng": 108.2496571,
+  "coord_source": "https://nominatim.openstreetmap.org/search (Nominatim 'Premier Village Resort, 99'; Accor listing coords 16.043611,108.249722 via search snippet)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.61,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 11.62,
+    "minutes": 14.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 3.04,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 5.46,
+    "minutes": 7.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 3.86,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 5.61,
+    "minutes": 6.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.25,
+    "minutes": null,
+    "method": "great-circle to nearest OSM coastline node (16.0441,108.2520)",
+    "source": "https://overpass-api.de/api/interpreter"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.18,
+    "minutes": 2.5,
+    "method": "OSRM foot route",
+    "source": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.18,
+    "minutes": 0.8,
+    "method": "OSRM car route estimate",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 23.52,
+    "minutes": 28.1,
+    "method": "OSRM car route estimate (no traffic) to 15.8794,108.3280 (prompt coords wrong)",
+    "source": "https://router.project-osrm.org/route/v1/driving/"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 4.2,
+    "minutes": null,
+    "method": "stated by hotel/Vietnamese listing: 4.2 km to city centre",
+    "source": "https://danangfantasticity.com/premier-village-danang-resort/"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Listing: along My Khe beach; beach club Nautica; OSM coastline ~250 m from point.",
+   "sources": [
+    "https://danangfantasticity.com/premier-village-danang-resort/",
+    "https://www.kayak.com/Da-Nang-Hotels-Premier-Village-Danang-Resort---Managed-by-AccorHotels.2069660.ksp"
+   ]
+  },
+  "pools": [
+   {
+    "type": "other",
+    "note": "Private pool in each villa (garden, beach-access and beachfront villas)",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Kids pool/dedicated pool area per Hotels.com/Orbitz snippets",
+    "sources": [
+     "https://www.hotels.com/ho459390"
+    ]
+   }
+  ],
+  "pool_summary": "Private pool per villa, plus communal/poolside bar and children's pool (snippet-level).",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [],
+   "note": "Not evidenced."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "unknown",
+   "sources": []
+  },
+  "family_facilities": [
+   "Kids pool and arcade/game room (listing snippets)",
+   "Accor MyKids package"
+  ],
+  "gym": "unknown",
+  "spa": "unknown",
+  "dining_outlets": [
+   "Lemongrass",
+   "Ca Chuon Co (seafood)",
+   "Nautica Beach Club"
+  ],
+  "room_categories": [
+   "Garden villa 300-330 sqm (4BR)",
+   "Beach-access villa 360-390 sqm",
+   "Beachfront villa 511 sqm (4BR)"
+  ],
+  "multi_bedroom_options": "Villas have up to 4 bedrooms (3-4BR; Accor lists 1-4BR ocean-access villas per snippets)",
+  "distinctive_amenities": [
+   "15 ha site",
+   "Buggy service (unverified)"
+  ],
+  "claims_check": [
+   {
+    "claim": "Son Tra Peninsula (area, hero, location text 'tip of Son Tra Peninsula')",
+    "verdict": "contradicted",
+    "evidence": "Official address 99 Vo Nguyen Giap, My An ward, Ngu Hanh Son; OSM puts it at My Khe south end, ~8 km south of the Son Tra reserve resorts.",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/",
+     "https://nominatim.openstreetmap.org/search"
+    ]
+   },
+   {
+    "claim": "About 10km from the city centre",
+    "verdict": "contradicted",
+    "evidence": "Listing says 4.2 km; Kayak ~5 km; OSRM 5.5 km to Han Market/Dragon Bridge.",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/",
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "13km from the airport",
+    "verdict": "contradicted",
+    "evidence": "OSRM 11.6 km (straight 5.6).",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge is 22 minutes by taxi",
+    "verdict": "contradicted",
+    "evidence": "OSRM 7 min (5.5 km), even with traffic well under 22.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "Hoi An about 40 minutes",
+    "verdict": "contradicted",
+    "evidence": "OSRM 28 min (23.5 km) without traffic; 40 would need heavy traffic.",
+    "sources": [
+     "https://router.project-osrm.org/route/v1/driving/"
+    ]
+   },
+   {
+    "claim": "My Khe restaurant strip five-minute walk",
+    "verdict": "unverifiable",
+    "evidence": "It sits on My Khe beach itself; no foot route to a specific restaurant computed.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search"
+    ]
+   },
+   {
+    "claim": "All 111 villas have private infinity pools",
+    "verdict": "unverifiable",
+    "evidence": "Not confirmed; private pools confirmed; villa count not found (one listing says 106 rooms).",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/"
+    ]
+   },
+   {
+    "claim": "Two-bedroom hillside villas ~200 sqm; three-bedroom beachfront 600 sqm",
+    "verdict": "contradicted",
+    "evidence": "Official: garden villas 300-330 sqm (4BR), beachfront 511 sqm (4BR).",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/"
+    ]
+   },
+   {
+    "claim": "three restaurants",
+    "verdict": "supported",
+    "evidence": "Lemongrass, Ca Chuon Co, Nautica Beach Club.",
+    "sources": [
+     "https://danangfantasticity.com/premier-village-danang-resort/"
+    ]
+   },
+   {
+    "claim": "My Khe Beach stretching south on one side / sea in almost every direction / southern tip of Son Tra",
+    "verdict": "contradicted",
+    "evidence": "It is on My Khe beach; not at Son Tra tip.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search"
+    ]
+   },
+   {
+    "claim": "Direct beachfront; walk under two minutes from beachfront villa",
+    "verdict": "supported",
+    "evidence": "Beach ~180 m (2.5 min foot route from resort centre point).",
+    "sources": [
+     "https://routing.openstreetmap.de/routed-foot/route/v1/foot/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Accor page itself returned 410; address/coords via search snippets of Accor plus Nominatim and a Vietnamese tourism listing. Gym/spa/kids club unverified. Hoi An coords in prompt were wrong."
+ }
+}

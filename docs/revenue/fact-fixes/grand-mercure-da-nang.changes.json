@@ -1,0 +1,50 @@
+[
+ {
+  "before": "rooftop pool with city views (all mentions)",
+  "after": "outdoor pool at ground level overlooked by La Rive Gauche",
+  "reason": "Accor page",
+  "source": "https://all.accor.com/hotel/7821/index.en.shtml"
+ },
+ {
+  "before": "three kilometres from airport, eight minutes by Grab; ten minutes by car",
+  "after": "about 3 km straight line, ~9.4 km / 13 min by road",
+  "reason": "Routing estimate",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "Han Market about ten minutes on foot / short walk / walking distance",
+  "after": "about 2.7 km, ~36-minute walk (taxi ride)",
+  "reason": "OSRM foot 2.69 km, 35.9 min",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "Rooms run 32-45 sq m",
+  "after": "removed",
+  "reason": "Unverifiable",
+  "source": "https://all.accor.com/hotel/7821/index.en.shtml"
+ },
+ {
+  "before": "executive floor lounge with complimentary breakfast and evening canapes",
+  "after": "Privilege Lounge (21st floor, per Accor)",
+  "reason": "Breakfast/canapes not confirmed",
+  "source": "https://all.accor.com/hotel/7821/index.en.shtml"
+ },
+ {
+  "before": "Han River waterfront 10 minutes on foot",
+  "after": "a short ride away",
+  "reason": "Unmeasured",
+  "source": "n/a"
+ },
+ {
+  "before": "meta: spacious suites..., Accor's best value property; lede fastest airport access in the city",
+  "after": "Han River views from upper floors, Green Island location; short drive to airport",
+  "reason": "Unverifiable superlatives; location on Green Island south of centre",
+  "source": "https://all.accor.com/hotel/7821/index.en.shtml"
+ },
+ {
+  "before": "FAQ: centrally located / central Da Nang",
+  "after": "on Green Island south of the city centre",
+  "reason": "Area accuracy",
+  "source": "https://nominatim.openstreetmap.org/"
+ }
+]

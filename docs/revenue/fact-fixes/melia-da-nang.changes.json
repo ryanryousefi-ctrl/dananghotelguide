@@ -1,0 +1,50 @@
+[
+ {
+  "before": "Title/meta/og/twitter: 'My Khe Beachfront' / 'directly on My Khe Beach'",
+  "after": "'Non Nuoc Beachfront' / 'on Non Nuoc Beach'",
+  "reason": "Resort is on Non Nuoc Beach (Truong Sa), not My Khe",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+ },
+ {
+  "before": "Only 109 rooms (lede, snapshot, take, likes, pool copy)",
+  "after": "Room count removed; snapshot now 'Pools: Several, some Level-only'",
+  "reason": "Sources give 408/521/528 rooms, never 109; sources disagree so no number",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2 ; https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+ },
+ {
+  "before": "long infinity pool, a family pool, and an adults-only pool; three pools",
+  "after": "several outdoor pools, some Level-only, infinity pools and a children's pool",
+  "reason": "Portal lists 7 outdoor pools; no adults-only pool found",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+ },
+ {
+  "before": "afternoon snack buffets",
+  "after": "afternoon snacks",
+  "reason": "Lounge serves afternoon tea/snacks 14:00-16:00",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+ },
+ {
+  "before": "Deluxe Sea View ~55 sqm",
+  "after": "size removed",
+  "reason": "Size not verified (55 sqm is Level Premium)",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+ },
+ {
+  "before": "city 13km north, 25 min; 13km/15km chips and FAQ",
+  "after": "about 10 km by road to Han Market; about 16 km by road to airport (routing estimates)",
+  "reason": "OSRM car routes",
+  "source": "https://router.project-osrm.org"
+ },
+ {
+  "before": "Hoi An 30 minutes south",
+  "after": "about 20 km by road, roughly 25 to 30 minutes",
+  "reason": "OSRM 19.7 km, 23 min no traffic",
+  "source": "https://router.project-osrm.org"
+ },
+ {
+  "before": "El Meson (3 passages, alt text, like-card)",
+  "after": "Hedged: notes describe it, not on current dining list (Sasa, Cape Nao Beach Club, pool bar); alt text generic",
+  "reason": "El Meson not found in listings",
+  "source": "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+ }
+]

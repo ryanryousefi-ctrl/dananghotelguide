@@ -1,0 +1,878 @@
+[
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "The Sheraton is the largest hotel in Da Nang at 785 rooms with a genuine waterpark;",
+  "after": "The Sheraton is the bigger name for families, with a 258-room resort and a genuine water park;",
+  "reason": "Sheraton 258 rooms not 785"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "The Marriott is contained and quiet, roughly 200 rooms and villas. The Sheraton Grand is a genuine mega-resort at 785 rooms, the largest hotel in Da Nang by a wide margin. That scale shows in the crowd, not just the buildings.",
+  "after": "The Marriott is contained and quiet, with 239 rooms, suites and villas. The Sheraton Grand is the more family-oriented of the two, with 258 rooms and a water park. That family focus shows in the crowd, not just the buildings.",
+  "reason": "Marriott 239 rooms; Sheraton 258 rooms"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "<li>785 rooms means more foot traffic and noise</li>",
+  "after": "<li>The water park and kids' club mean more foot traffic and noise</li>",
+  "reason": "Sheraton 258 rooms not 785"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "<li>785 rooms means real crowds at the pool and breakfast during peak season</li>",
+  "after": "<li>Family-heavy crowds at the pool and breakfast during peak season</li>",
+  "reason": "Sheraton 258 rooms not 785"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "<li>The largest resort in Da Nang experience</li>",
+  "after": "<li>The bigger family-resort experience</li>",
+  "reason": "drop largest-resort framing"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "villa-style resort stay",
+  "after": "resort stay with private pool villas",
+  "reason": "Marriott not all-villa"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "the Marriott is smaller, quieter, and more spa-focused",
+  "after": "the Marriott is quieter and more spa-focused",
+  "reason": "Marriott 239 vs Sheraton 258: not meaningfully smaller"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "You'll also likely pay a bit less for the extra scale.",
+  "after": "You'll also likely pay a bit less.",
+  "reason": "drop scale framing"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "Club lounge access at a bigger property",
+  "after": "Club lounge access",
+  "reason": "drop size framing"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "slides, splash zone, lazy river",
+  "after": "slides, splash zone",
+  "reason": "lazy river unsupported for Sheraton (x2)"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "has slides, a splash zone, and a lazy river, one of",
+  "after": "has slides and a splash zone, one of",
+  "reason": "lazy river unsupported"
+ },
+ {
+  "file": "marriott-vs-sheraton-da-nang.html",
+  "before": "The bigger family-resort experience",
+  "after": "The more family-oriented resort experience",
+  "reason": "wording"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Brilliant Hotel: listings put it about 1.2 km, or 10 to 13 minutes on foot.",
+  "after": "Brilliant Hotel: about 1.1 km, roughly a 14-minute walk.",
+  "reason": "routes.json foot/road estimates (x2)"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "about 10 minutes on foot from Grand Mercure per Mercure\u2019s guide, and about 1.3 km from Melia Vinpearl Riverfront.",
+  "after": "about 2.7 km from Grand Mercure (roughly a 36-minute walk, so most people take a taxi), and about 1.4 km on foot from Meli\u00e1 Vinpearl Danang Riverfront.",
+  "reason": "routes.json foot/road estimates (x2)"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Reasonably. Listings put Novotel about 4.5 km from the airport, Grand Mercure about a 10-minute drive, and Brilliant Hotel about 2 to 3.6 km depending on the source.",
+  "after": "Reasonably. Novotel is about 4.8 km from the airport in a straight line (about 10 km by road), Grand Mercure about 9.4 km by road (roughly 13 minutes without traffic), and Brilliant Hotel about 4 km in a straight line (about 10.6 km by road). Road times are routing estimates.",
+  "reason": "routes.json foot/road estimates (x2)"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "about 1.2 km (10 to 13 minutes on foot) from Dragon Bridge",
+  "after": "about 1.1 km (about a 14-minute walk) from Dragon Bridge",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Dragon Bridge is roughly 2 to 3 km away (sources vary) and the airport about 4.5 km.",
+  "after": "Dragon Bridge is about 2.4 km away on foot (roughly a 32-minute walk) and the airport about 4.8 km in a straight line (about 10 km by road).",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Accor and Hotels.com list Novotel about 1 km from Han Market.",
+  "after": "Accor and Hotels.com list Novotel about 1 km from Han Market (about 1.2 km on the foot route).",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Han Market: ~10 min walk",
+  "after": "Han Market: ~2.7 km (about a 36-minute walk)",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Mercure\u2019s own local guide describes about a 10-minute walk to Han Market. Booking sites put Dragon Bridge around 2 km away, a short taxi ride, and the airport roughly a 10-minute drive.",
+  "after": "Han Market is about 2.7 km away (roughly a 36-minute walk by foot route, so a taxi is the better option). Dragon Bridge is about 2 km by road, a short taxi ride, and the airport about 9.4 km by road, roughly 13 minutes without traffic (routing estimate).",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Han Market: ~1.3 km",
+  "after": "Han Market: ~1.4 km on foot",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Meli\u00e1 lists Han Market at about 1.3 km (Expedia: a 12-minute walk) and Dragon Bridge at about 1.8 km (Expedia: an 18-minute walk).",
+  "after": "The foot route to Han Market is about 1.4 km (roughly 19 minutes) and to Dragon Bridge about 1.8 km (roughly 24 minutes).",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "it is the furthest of the four from Han Market on foot, and the beach is a Grab ride away.",
+  "after": "Han Market is a 19-minute walk rather than a few minutes, and the beach is a Grab ride away.",
+  "reason": "routes.json foot/road estimates; Grand Mercure is further on foot"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "The northern My Khe strip (Pullman, A La Carte area) is closer to 10-12 minutes.",
+  "after": "The stretch of My Khe nearer the city (the A La Carte area) is the quicker run; Pullman and the southern strip are about 13 minutes by road without traffic (routing estimate).",
+  "reason": "Pullman is southern My Khe/Bac My An, not northern"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "around 8-10 minutes out. Novotel Da Nang Premier Han River and Grand Mercure Da Nang are among the closest major hotels.",
+  "after": "around 13 to 15 minutes by road without traffic (routing estimate). Novotel Da Nang Premier Han River and Grand Mercure Da Nang are among the closest major hotels.",
+  "reason": "routes.json foot/road estimates"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Melia Vinpearl Danang Riverfront</a></div>",
+  "after": "Meli\u00e1 Vinpearl Danang Riverfront</a></div>",
+  "reason": "correct name"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "Grand Mercure Danang and Melia Vinpearl Danang Riverfront.</p>",
+  "after": "Grand Mercure Danang and Meli\u00e1 Vinpearl Danang Riverfront.</p>",
+  "reason": "correct name"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": "\"Yes. Han Market is about 0.3 km from Brilliant",
+  "after": "\"Mostly. Han Market is about 0.3 km from Brilliant",
+  "reason": "GM is 36 min walk"
+ },
+ {
+  "file": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+  "before": ">Yes. Han Market is about 0.3 km from Brilliant",
+  "after": ">Mostly. Han Market is about 0.3 km from Brilliant",
+  "reason": "GM is 36 min walk"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "Most Da Nang private pool villas (including Naman Retreat's Nest Villas, InterContinental club rooms, and TIA villas) have plunge pools. Premier Village Da Nang is the main exception, with a full-size private pool at every villa.",
+  "after": "Many Da Nang private pool villas, including Naman Retreat's Nest Villas, have plunge-style pools. The InterContinental's villas have private infinity pools, TIA's villas have private swimming pools, and Premier Village Da Nang has a private pool at every villa.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists; TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "Most Da Nang private pool villas (including Naman Retreat's Nest Villas, InterContinental club rooms, and TIA villas) have plunge pools. Premier Village Da Nang is the main exception with full-size private pools per villa.",
+  "after": "Many Da Nang private pool villas, including Naman Retreat's Nest Villas, have plunge-style pools. The InterContinental's villas have private infinity pools, TIA's villas have private swimming pools, and Premier Village Da Nang has a private pool at every villa.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "Naman Retreat's Nest Villas, Fusion Maia pavilions, InterContinental Club rooms, and TIA villas all have plunge pools.",
+  "after": "Naman Retreat's Nest Villas and Fusion Maia pavilions have plunge-style pools, while the InterContinental's villas have private infinity pools and TIA's villas have private swimming pools.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "At the InterContinental, Club room plunge pools sit on private balconies or terraces with real seclusion built into the architecture rather than added with a fence afterward.",
+  "after": "At the InterContinental, the villa pools sit on private terraces with real seclusion built into the architecture rather than added with a fence afterward.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "The Club category suites and villas have private plunge pools on terraces that look out over open ocean, views no beach resort in Da Nang can match.",
+  "after": "The villas and penthouses have private pools, and the resort also has three shared pools (the 50 m L_O_N_G infinity pool, a Garden Pool and a Kids Pool), with views out over open ocean that no beach resort in Da Nang can match.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<p>The villas have plunge pools, not swimming pools.</p>",
+  "after": "<p>Beyond the private villa pools, the resort has three shared pools and a complimentary Planet Trekkers Kids Club for ages 4 to 12.</p>",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<span class=\"tag\">Plunge Pools</span>",
+  "after": "<span class=\"tag\">Private Villa Pools</span>",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<td>Plunge (cliff terrace)</td>",
+  "after": "<td>Private infinity (cliff terrace)</td>",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "The InterContinental's Club category is a small subset of total rooms.",
+  "after": "The InterContinental's villa and penthouse categories are a small subset of total rooms.",
+  "reason": "IC: three resort pools + private villa pools (infinity), kids club exists"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<div class=\"price-range\">$300-600/night &middot; Non Nuoc Beach</div>",
+  "after": "<div class=\"price-range\">$300-600/night &middot; Southern My Khe (Bac My An)</div>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, southern My Khe (Ngu Hanh Son)"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "The layout gives you direct access to Non Nuoc Beach as well,",
+  "after": "The layout gives you direct access to the beach as well,",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, southern My Khe (Ngu Hanh Son)"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<td>Full-size swimming pool</td>\n          <td>Non Nuoc Beach</td>",
+  "after": "<td>Private pool</td>\n          <td>Southern My Khe (Bac My An)</td>",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, southern My Khe (Ngu Hanh Son)"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<span class=\"tag\">Adults-Only</span>",
+  "after": "<span class=\"tag\">Kids Wellness Club</span>",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<span class=\"tag\">All-Inclusive Spa Treatments</span>",
+  "after": "<span class=\"tag\">Wellness Inclusive Packages</span>",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "$220-420/night for villa categories &middot; My Khe Beach",
+  "after": "$220-420/night for villa categories &middot; Southern My Khe (Bac My An)",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "Villa rooms have private gardens and plunge pools, and the overall atmosphere is deliberately quiet and retreated, more spa retreat than beach resort, even though it sits on My Khe Beach.",
+  "after": "Villa rooms have private gardens and private swimming pools, and the overall atmosphere is deliberately quiet and retreated, more spa retreat than beach resort, even though it sits right on the beach.",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "The adults-only policy is a genuine differentiator. If avoiding children entirely is a priority, TIA is the only property in Da Nang where this is guaranteed across the whole resort.",
+  "after": "TIA is built around wellness rather than family holidays, but it is not adults-only: it has a Kids Wellness Club and two- and three-bedroom villas.",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "The My Khe location is a quieter section of beach,",
+  "after": "The location on the southern My Khe / Bac My An beach strip is a quieter section of beach,",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<td>Plunge (garden)</td>\n          <td>My Khe Beach</td>",
+  "after": "<td>Private pool (garden)</td>\n          <td>Southern My Khe (Bac My An)</td>",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<td>Adults-only + all-inclusive spa</td>",
+  "after": "<td>Wellness Inclusive packages + spa</td>",
+  "reason": "TIA: official says private swimming pool; Kids Wellness Club exists; Wellness Inclusive not all-inclusive/unlimited; south of My Khe"
+ },
+ {
+  "file": "da-nang-hotels-private-pool-villa.html",
+  "before": "<td>$220-420</td>\n          <td><span class=\"tick\">Yes</span></td>",
+  "after": "<td>$220-420</td>\n          <td><span class=\"tick\">No</span></td>",
+  "reason": "TIA not adults-only (text only; class unchanged)"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "both city-centre, both rooftop pools. One wins on height and views; the other wins on pool and Dragon Bridge position.",
+  "after": "both city-centre, both with an outdoor pool. One wins on lounge-floor views; the other has a rooftop bar and the shorter hop to Dragon Bridge.",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Dragon Bridge views, rooftop bars, value",
+  "after": "Dragon Bridge access, river views, value",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight (x3)"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<div class=\"hvh-split-hotel-eyebrow\">Tran Phu Street, Han River</div>",
+  "after": "<div class=\"hvh-split-hotel-eyebrow\">36 Bach Dang, Han River</div>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Novotel is taller with better high-floor river panoramas and the Level 36 Sky Bar. Hilton has the more photogenic rooftop pool and sits five minutes closer to the prime Dragon Bridge fireworks spot.",
+  "after": "Novotel has the 29th-floor Premier Lounge with river and coast views. Hilton has a rooftop bar with panoramic views and sits closer to Dragon Bridge (about 1.3 km in a straight line, against about 1.9 km for the Novotel).",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight; Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "alt=\"Hilton Da Nang rooftop pool with river views\"",
+  "after": "alt=\"Hilton Da Nang pool with river views\"",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>One of Da Nang's tallest hotels, exceptional high-floor river views</li>",
+  "after": "<li>High-floor river views, with the Premier Lounge on the 29th floor</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Level 36 Sky Bar, one of the city's most popular rooftop spots</li>",
+  "after": "<li>Premier Lounge with river views, breakfast and evening canapes, per Accor</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Ten-minute walk to the prime Dragon Bridge viewing spot</li>",
+  "after": "<li>Dragon Bridge is about 2.4 km on foot (roughly a 32-minute walk), so plan a short taxi ride</li>",
+  "reason": "Novotel foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>More photogenic rooftop infinity pool</li>",
+  "after": "<li>A rooftop bar with a skyline view, plus an outdoor pool</li>",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Prime Bach Dang Street position, about 1 km from Han Market</li>",
+  "after": "<li>Prime Bach Dang Street position, about 0.5 km (roughly a 7-minute walk) from Han Market</li>",
+  "reason": "Hilton-Han Market 0.5 km/7 min walk"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Slightly larger standard rooms (38 sqm vs 35 sqm)</li>",
+  "after": "<li>A slightly higher room score in our review</li>",
+  "reason": "sqm figures unsupported"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Fewer floors, so panoramic views are less dramatic</li>",
+  "after": "<li>Its Executive Lounge is on the 27th floor, a little lower than the Novotel's lounge</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": ">Rooftop Pool<",
+  "after": ">Pool<",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight (x2)"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": ">Rooftop Bar<",
+  "after": ">Bar Views<",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight (x2)"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Novotel is 323 rooms and one of Da Nang's tallest hotels, on Tran Phu Street above the Han River. Hilton is smaller at 258 rooms, positioned on Bach Dang Street closer to Dragon Bridge.",
+  "after": "Novotel is at 36 Bach Dang, on the Han River. Hilton is on Bach Dang Street too, closer to Dragon Bridge.",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting; Hilton 258 rooms not verified in this comparison"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": ">The Rooftop Pools<",
+  "after": ">The Pools<",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "alt=\"Novotel Danang Premier rooftop pool on 36th floor\"",
+  "after": "alt=\"Novotel Danang Premier outdoor pool\"",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "alt=\"Hilton Da Nang rooftop infinity pool\"",
+  "after": "alt=\"Hilton Da Nang outdoor pool\"",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Novotel's pool sits on the 36th floor with the Level 36 Sky Bar attached, a genuine asset for a pre-dinner drink. Hilton's rooftop infinity pool is the more photogenic of the two, with river and city views merging at the edge.",
+  "after": "Novotel's outdoor pool is reportedly at podium level, with a poolside bar. Hilton's outdoor pool is small, but its rooftop bar has the better skyline view of the two for a sunset drink.",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight; Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>The best possible high-floor river panorama</li>",
+  "after": "<li>A high-floor river panorama and the Premier Lounge</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Access to the Level 36 Sky Bar</li>",
+  "after": "<li>Premier Lounge access, per Accor</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>The more photogenic rooftop infinity pool</li>",
+  "after": "<li>A rooftop bar with a skyline view</li>",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>A five-minute walk to the prime Dragon Bridge fireworks spot</li>",
+  "after": "<li>A shorter hop to the Dragon Bridge fireworks spot (about 1.3 km in a straight line)</li>",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Slightly larger standard rooms</li>",
+  "after": "<li>A slightly higher room score in our review</li>",
+  "reason": "sqm unsupported"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Ten-minute walk to the best Dragon Bridge viewing spot, not five</li>",
+  "after": "<li>Dragon Bridge is about a 32-minute walk, so plan a short taxi ride</li>",
+  "reason": "Novotel foot route 32 min"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Rooftop pool is smaller than the Hilton's</li>",
+  "after": "<li>The pool is a city-hotel pool, not a resort-scale one</li>",
+  "reason": "Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "<li>Fewer floors means less dramatic panoramic views than the Novotel</li>",
+  "after": "<li>The pool is small, and the lounge sits a few floors below the Novotel's</li>",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Want the best view from your room and a rooftop bar worth visiting even if you're not a guest, book a high-floor river-facing room at the Novotel. Want the better pool and the closest walk to Dragon Bridge for DIFF fireworks, book the Hilton.",
+  "after": "Want the best view from your room and a lounge floor, book a high-floor river-facing room at the Novotel. Want a rooftop bar and the shorter trip to Dragon Bridge for DIFF fireworks, book the Hilton.",
+  "reason": "Hilton has outdoor pool + rooftop bar (no rooftop pool); Hilton-Dragon Bridge walk 26 min / 1.3 km straight; Novotel pool at podium level; Sky36 unverified; 36 Bach Dang; room count conflicting"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "couples who want the better pool, DIFF",
+  "after": "couples who want a rooftop bar, DIFF",
+  "reason": "no verified better/rooftop pool"
+ },
+ {
+  "file": "novotel-vs-hilton-da-nang.html",
+  "before": "Hilton for pool and fireworks position",
+  "after": "Hilton for its rooftop bar and fireworks position",
+  "reason": "no verified rooftop pool"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "Premier Village Da Nang Resort anchors this end of the peninsula.",
+  "after": "Premier Village Da Nang Resort, on the southern My Khe beach strip in Ngu Hanh Son (about 5.5 km by road to Dragon Bridge and Han Market, routing estimate), is the main pool-villa option nearby.",
+  "reason": "Premier Village is at 99 Vo Nguyen Giap, not on Son Tra"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "The InterContinental and Premier Village are exceptional resorts, but you are isolated from restaurants and nightlife.",
+  "after": "The InterContinental is an exceptional resort, but you are isolated from restaurants and nightlife.",
+  "reason": "Premier Village not on Son Tra"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "InterContinental and Premier Village are exceptional resorts, but you're isolated from restaurants and nightlife.",
+  "after": "The InterContinental is an exceptional resort, but you're isolated from restaurants and nightlife.",
+  "reason": "Premier Village not on Son Tra"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "<div class=\"bb-hotel-pick-sub\">Pool villas on the water</div>",
+  "after": "<div class=\"bb-hotel-pick-sub\">Pool villas, southern My Khe beach strip</div>",
+  "reason": "area"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "<div class=\"bb-hotel-pick-sub\">Riverfront, Sky36 rooftop bar</div>",
+  "after": "<div class=\"bb-hotel-pick-sub\">Riverfront, Premier Lounge</div>",
+  "reason": "Sky36 unverified"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "<div class=\"bb-hotel-pick-sub\">Beachfront resort</div>",
+  "after": "<div class=\"bb-hotel-pick-sub\">Beachfront resort, Truong Sa coast south of My Khe</div>",
+  "reason": "Sheraton Grand is on the Truong Sa coast, not My Khe"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "<div class=\"bb-hotel-pick-sub\">Upscale, beach edge of An Thuong</div>",
+  "after": "<div class=\"bb-hotel-pick-sub\">Upscale beach resort, Non Nuoc / Truong Sa coast south of My Khe</div>",
+  "reason": "Meli\u00e1 Danang is on Non Nuoc / Truong Sa coast, not An Thuong"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "The full-scale resort corridor south of the Marble Mountains. Hyatt Regency, Furama, and Marriott anchor this strip.",
+  "after": "The full-scale resort corridor south of the Marble Mountains. Hyatt Regency and Marriott anchor this strip, with Furama a little further north on the Bac My An beach strip, south of My Khe.",
+  "reason": "Furama is Bac My An, not Non Nuoc"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "The Hyatt Regency, Furama, and Marriott are all strong options here.",
+  "after": "The Hyatt Regency and Marriott are strong options here, and Furama (on the Bac My An beach strip, south of My Khe) is a little closer to the city.",
+  "reason": "Furama area"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "The Hyatt Regency, Furama, and Marriott are strong options here and the beach is excellent.",
+  "after": "The Hyatt Regency and Marriott are strong options here and the beach is excellent; Furama (on the Bac My An beach strip, south of My Khe, about 11 km by road to the airport) is a little closer to the city.",
+  "reason": "Furama area; airport 11.3 km road"
+ },
+ {
+  "file": "da-nang-first-time-visitors-area-guide.html",
+  "before": "Hyatt Regency, Furama, Marriott. Best when",
+  "after": "Hyatt Regency, Marriott, and nearby Furama. Best when",
+  "reason": "Furama area"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "Novotel Da Nang Premier Han River has Sky36 - one of Da Nang's best-known rooftop bars with river views.",
+  "after": "Novotel Da Nang Premier Han River has a Premier Lounge on the 29th floor with river views, according to Accor.",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "Sky36 on the top floor is a genuine rooftop bar - river views, city lights, Dragon Bridge in frame on a clear night. The hotel sits right on Bach Dang and the pool faces the water.",
+  "after": "The Premier Lounge on the 29th floor, per Accor, looks over the Han River and the beach. The hotel sits right on Bach Dang, and its outdoor pool is at podium level.",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "the location and the rooftop make it the safe choice with the highest floor count and the best view real estate.",
+  "after": "the location and the high-floor river views make it the safe choice.",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<span class=\"bb-sig-detail-tag\">Sky36 rooftop bar</span>",
+  "after": "<span class=\"bb-sig-detail-tag\">Premier Lounge (29th floor)</span>",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<span class=\"bb-sig-detail-tag\">River-facing pool</span>",
+  "after": "<span class=\"bb-sig-detail-tag\">Outdoor pool</span>",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "alt=\"Novotel Da Nang Premier Han River - rooftop Sky36 bar\"",
+  "after": "alt=\"Novotel Da Nang Premier Han River\"",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "Sky36 on the top floor is one of Da Nang's genuinely good rooftop bars - river views, Dragon Bridge in frame on a clear night. The pool faces the water. Consistent",
+  "after": "The Premier Lounge on the 29th floor has Han River views, per Accor, and the outdoor pool is at podium level. Consistent",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "the location and rooftop make it the safe call.",
+  "after": "the location and the high-floor views make it the safe call.",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<strong>Rooftop:</strong> Sky36 bar + pool",
+  "after": "<strong>Lounge:</strong> Premier Lounge (29th floor) + outdoor pool",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<strong>Dragon Bridge:</strong> Walkable</div>\n        </div>\n        <div class=\"bb-card-links\">\n          <a data-provider=\"tripcom\" data-tc-key=\"hotel:novotel",
+  "after": "<strong>Dragon Bridge:</strong> About 2.4 km on foot, a short taxi ride</div>\n        </div>\n        <div class=\"bb-card-links\">\n          <a data-provider=\"tripcom\" data-tc-key=\"hotel:novotel",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "Novotel's Sky36 is the most established - proper bar, river views, Dragon Bridge sightlines. CARO's",
+  "after": "Novotel's Premier Lounge on the 29th floor has river views, per Accor. CARO's",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<span class=\"bb-dragon-fact-val\">8-12 minutes</span>",
+  "after": "<span class=\"bb-dragon-fact-val\">About 2.5 km, a short taxi ride</span>",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "CARO, Novotel, and Brilliant are all close enough to walk to the bridge.",
+  "after": "CARO and Brilliant (about a 14-minute walk) are close enough to walk to the bridge; Novotel is a short taxi ride.",
+  "reason": "Novotel: Sky36 unverified; pool is on the 4th-floor podium; Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "<strong>Beach:</strong> Direct access",
+  "after": "<strong>Beach:</strong> Across the road",
+  "reason": "A La Carte is across the road from the sand"
+ },
+ {
+  "file": "best-han-river-hotels-da-nang.html",
+  "before": "If you want the beach on your doorstep but river and city views from above",
+  "after": "If you want the beach across the road but river and city views from above",
+  "reason": "A La Carte across the road"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "Pullman sits flat on the main My Khe strip with",
+  "after": "Pullman sits flat on the southern My Khe / Bac My An beach strip with",
+  "reason": "Pullman is at 101 Vo Nguyen Giap, Bac My An beach, south of My Khe"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "<li>Direct access to the main My Khe Beach strip</li>",
+  "after": "<li>Direct access to the beach on the southern My Khe / Bac My An strip</li>",
+  "reason": "Pullman is at 101 Vo Nguyen Giap, Bac My An beach, south of My Khe"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "<li>Limited kids facilities, this is an adult-focused resort</li>",
+  "after": "<li>The cliffside layout is built around seclusion rather than an easy family beach day, though a complimentary Kids Club for ages 4 to 12 is available</li>",
+  "reason": "IC has a complimentary Planet Trekkers Kids Club (ages 4-12)"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "<li>Better kids facilities and a family-friendly layout</li>",
+  "after": "<li>A flat, easy layout for families</li>",
+  "reason": "IC has a complimentary Planet Trekkers Kids Club (ages 4-12)"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "My Khe setup is more conventional and better for families.",
+  "after": "My Khe-side setup is more conventional and easier for families.",
+  "reason": "IC has a complimentary Planet Trekkers Kids Club (ages 4-12)"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "<li>My Khe's main strip is busier and less exclusive than a private cove</li>",
+  "after": "<li>The My Khe beach strip is busier and less exclusive than a private cove</li>",
+  "reason": "Pullman is at 101 Vo Nguyen Giap, Bac My An beach, south of My Khe"
+ },
+ {
+  "file": "boutique-hotels-da-nang.html",
+  "before": "My Khe &middot; Rooftop pool &middot; Direct beach access &middot; Serviced apartments",
+  "after": "My Khe &middot; Rooftop pool &middot; Across the road from the beach &middot; Serviced apartments",
+  "reason": "A La Carte is across the road from My Khe, not on the sand"
+ },
+ {
+  "file": "boutique-hotels-da-nang.html",
+  "before": "<strong>Style:</strong> Boutique beachfront with rooftop-pool identity",
+  "after": "<strong>Style:</strong> Boutique near the beach with rooftop-pool identity",
+  "reason": "A La Carte is across the road from My Khe, not on the sand"
+ },
+ {
+  "file": "boutique-hotels-da-nang.html",
+  "before": "<strong>Location:</strong> Direct My Khe beachfront</p>\n          <p class=\"bb-card-fact\"><strong>Tradeoff:</strong> Apartment-style",
+  "after": "<strong>Location:</strong> Across the road from My Khe Beach</p>\n          <p class=\"bb-card-fact\"><strong>Tradeoff:</strong> Apartment-style",
+  "reason": "A La Carte is across the road from My Khe, not on the sand"
+ },
+ {
+  "file": "intercontinental-vs-pullman-da-nang.html",
+  "before": "Better kids facilities",
+  "after": "A flat, family-friendly layout",
+  "reason": "IC has a kids club; Pullman kids facilities not verified"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "Six pools including a lazy river, a genuinely good kids club",
+  "after": "Five outdoor pools, a genuinely good kids club",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "<li>Six pools including a lazy river</li>",
+  "after": "<li>Five outdoor pools</li>",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "The Hyatt spreads six pools across its grounds, including a lazy river built for kids.",
+  "after": "The Hyatt spreads five outdoor pools across its grounds.",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "<li>A lazy river and enough pools that kids never fight over one</li>",
+  "after": "<li>Five outdoor pools, so kids rarely fight over one</li>",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "<li>Fewer pools overall, one lazy-river-style feature is missing entirely</li>",
+  "after": "<li>A smaller shared pool lineup than the Hyatt's five (the villas have private pools)</li>",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "The Hyatt's six pools, lazy river, and Camp Hyatt program",
+  "after": "The Hyatt's five pools and Camp Hyatt program",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "<li>Smaller kids club, fewer pools</li>",
+  "after": "<li>Smaller kids club and a smaller shared pool lineup</li>",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "(5 pools vs Marriott's 5)",
+  "after": "(five outdoor pools)",
+  "reason": "self-contradictory pool count"
+ },
+ {
+  "file": "hyatt-vs-marriott-da-nang.html",
+  "before": "Couples and Bonvoy members who want a villa-style resort stay",
+  "after": "Couples and Bonvoy members who want a resort stay with private pool villas",
+  "reason": "Marriott is 239 rooms, suites and villas, not all-villa"
+ },
+ {
+  "file": "da-nang-airport-to-my-khe.html",
+  "before": "Northern My Khe (closest to TIA Wellness Resort and Son Tra) is the quietest stretch",
+  "after": "Northern My Khe (the Son Tra end) is the quietest stretch",
+  "reason": "TIA is at 109 Vo Nguyen Giap on the Truong Sa coast south of My Khe, not northern My Khe/near Son Tra (about 12.5 km / 15 min by road from the airport, routing estimate) (x2)"
+ },
+ {
+  "file": "da-nang-airport-to-my-khe.html",
+  "before": "<td>My Khe (northern, near TIA)</td>",
+  "after": "<td>My Khe (northern, Son Tra end)</td>",
+  "reason": "TIA is at 109 Vo Nguyen Giap on the Truong Sa coast south of My Khe, not northern My Khe/near Son Tra (about 12.5 km / 15 min by road from the airport, routing estimate)"
+ },
+ {
+  "file": "da-nang-quiet-areas-hotels.html",
+  "before": "a calmer address than the main My Khe hotel strip. It sits between Non Nuoc and central Da Nang, making it more connected than the pure Non Nuoc resorts while still offering proper resort space.",
+  "after": "a calmer address than the main My Khe hotel strip. It sits on the Bac My An beach strip south of My Khe, about 11 km by road from the airport (routing estimate), making it more connected than the Non Nuoc resorts further south while still offering proper resort space.",
+  "reason": "Furama is on the Bac My An beach strip (103-105 Vo Nguyen Giap), south of My Khe; ~11 km by road to airport"
+ },
+ {
+  "file": "da-nang-quiet-areas-hotels.html",
+  "before": "<strong>Area:</strong> Non Nuoc / Bac My An",
+  "after": "<strong>Area:</strong> Bac My An beach strip, south of My Khe",
+  "reason": "Furama is on the Bac My An beach strip (103-105 Vo Nguyen Giap), south of My Khe; ~11 km by road to airport"
+ },
+ {
+  "file": "da-nang-quiet-areas-hotels.html",
+  "before": "from the older Radisson Blu.",
+  "after": "from the older Radisson Hotel Danang.",
+  "reason": "Radisson Hotel Danang naming"
+ },
+ {
+  "file": "da-nang-5-day-itinerary.html",
+  "before": "The Hyatt, Sheraton, and similar properties near My Khe have strong pool setups.",
+  "after": "The Hyatt, Sheraton, and similar resorts on the Non Nuoc / Truong Sa coast, south of My Khe, have strong pool setups.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast, south of My Khe (about 8.8 km by road from the southern end of My Khe, routing estimate)"
+ },
+ {
+  "file": "da-nang-5-day-itinerary.html",
+  "before": "Full beach resort with a strong kids club and pool complex, right on My Khe.",
+  "after": "Full beach resort with a strong kids club and pool complex, on the Truong Sa coast in Ngu Hanh Son, south of My Khe.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast, south of My Khe (about 8.8 km by road from the southern end of My Khe, routing estimate)"
+ },
+ {
+  "file": "da-nang-5-day-itinerary.html",
+  "before": "<span class=\"bb-card-cat\">My Khe Beach</span>\n          <h3 class=\"bb-card-name\">Sheraton Grand Danang Resort</h3>",
+  "after": "<span class=\"bb-card-cat\">Truong Sa Coast, south of My Khe</span>\n          <h3 class=\"bb-card-name\">Sheraton Grand Danang Resort</h3>",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast, south of My Khe (about 8.8 km by road from the southern end of My Khe, routing estimate)"
+ },
+ {
+  "file": "guides.html",
+  "before": "Both on My Khe, both 5-star \u2014 the key differences in room quality, pool size, and beach setup.",
+  "after": "Pullman is on the southern My Khe / Bac My An beach strip and Sheraton Grand on the Truong Sa coast south of My Khe, both 5-star \u2014 the key differences in room quality, pool size, and beach setup.",
+  "reason": "Sheraton Grand is at 35 Truong Sa St on the Truong Sa coast, south of My Khe (about 8.8 km by road from the southern end of My Khe, routing estimate)"
+ },
+ {
+  "file": "guides.html",
+  "before": "alt=\"Hyatt Regency Da Nang resort My Khe beach exterior\"",
+  "after": "alt=\"Hyatt Regency Da Nang resort Non Nuoc beach exterior\"",
+  "reason": "Hyatt is on Non Nuoc / Truong Sa coast, not My Khe (x2)"
+ },
+ {
+  "file": "guides.html",
+  "before": "alt=\"Marriott Resort Da Nang My Khe beach exterior\"",
+  "after": "alt=\"Marriott Resort Da Nang Non Nuoc beach exterior\"",
+  "reason": "Marriott is on Non Nuoc / Truong Sa coast, not My Khe"
+ },
+ {
+  "file": "search.html",
+  "before": "Direct sand access, honest trade-offs, prices from $40/night.",
+  "after": "Beachfront and across-the-road options, honest trade-offs, prices from $40/night.",
+  "reason": "not every hotel is directly on the sand; Sheraton Grand is south of My Khe"
+ },
+ {
+  "file": "intercontinental-vs-hyatt-da-nang.html",
+  "before": "Six pools including a 120m lazy river",
+  "after": "Five outdoor pools",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "intercontinental-vs-hyatt-da-nang.html",
+  "before": "six pools and direct beachfront spread",
+  "after": "five outdoor pools and direct beachfront spread",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "intercontinental-vs-hyatt-da-nang.html",
+  "before": "Six pools and a lazy river that actually keeps kids busy",
+  "after": "Five outdoor pools that give kids plenty to do",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "intercontinental-vs-hyatt-da-nang.html",
+  "before": "Six pools and direct Non Nuoc beach access",
+  "after": "Five pools and direct Non Nuoc beach access",
+  "reason": "Hyatt has 5 outdoor pools; no lazy river found"
+ },
+ {
+  "file": "intercontinental-vs-hyatt-da-nang.html",
+  "before": "<li>Limited kids facilities, this is an adult-focused resort</li>",
+  "after": "<li>The cliffside layout is built around seclusion rather than an easy family beach day, though a complimentary Kids Club for ages 4 to 12 is available</li>",
+  "reason": "IC has a complimentary Planet Trekkers Kids Club (ages 4-12)"
+ },
+ {
+  "file": "tms-hotel-vs-sala-danang-beach.html",
+  "before": "a proven, consistent beachfront hotel at a strong price",
+  "after": "a proven, consistent hotel across the road from the beach at a strong price",
+  "reason": "TMS is across the road from My Khe Beach, not directly on the sand; ~12.4 km / 14 min by road to airport (routing estimate)"
+ },
+ {
+  "file": "tms-hotel-vs-sala-danang-beach.html",
+  "before": "If you just want a reliable beachfront stay,",
+  "after": "If you just want a reliable stay close to the beach,",
+  "reason": "TMS is across the road from My Khe Beach, not directly on the sand; ~12.4 km / 14 min by road to airport (routing estimate)"
+ },
+ {
+  "file": "tms-hotel-vs-sala-danang-beach.html",
+  "before": "roughly 10-12 minutes from the airport",
+  "after": "roughly 14 minutes from the airport by road without traffic (routing estimate)",
+  "reason": "TMS is across the road from My Khe Beach, not directly on the sand; ~12.4 km / 14 min by road to airport (routing estimate)"
+ },
+ {
+  "file": "da-nang-guide-for-russian-travelers.html",
+  "before": "A well-located mid-range option directly on My Khe Beach with modern rooms, a rooftop pool,",
+  "after": "A well-located mid-range option across the road from My Khe Beach with modern rooms, a rooftop pool,",
+  "reason": "TMS is across the road from My Khe Beach, not directly on the sand; ~12.4 km / 14 min by road to airport (routing estimate)"
+ }
+]

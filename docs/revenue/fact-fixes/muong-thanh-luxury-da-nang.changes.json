@@ -1,0 +1,149 @@
+[
+ {
+  "before": "Vietnamese-owned 5-star on My Khe Beach, large rooms from $55/night",
+  "after": "Vietnamese hotel chain property near My Khe Beach, rooms from $55/night",
+  "reason": "Star rating conflicts (4.5 vs 5) and room sizes unverified",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 3
+ },
+ {
+  "before": "“47 metres from My Khe, and $148 cheaper than the five-star average.”",
+  "after": "“Across the road from My Khe, and cheaper than the five-star average.”",
+  "reason": "47 m contradicted; $148 unverifiable",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">47m away, closest on the strip</div>",
+  "after": "<div class=\"hr-snap-val\">Across the road, about 1 min walk</div>",
+  "reason": "47 m contradicted; 'closest' unverifiable; OSRM foot 0.11 km/1 min",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "Muong Thanh Luxury is 47 metres from My Khe Beach.",
+  "after": "Muong Thanh Luxury is across the road from My Khe Beach (about 0.1 km on a foot route to the shoreline, roughly a 1-minute walk).",
+  "reason": "47 m contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "The nightly rate is consistently $148 cheaper than the average five-star hotel in Da Nang, and you're still this close to the water.",
+  "after": "The nightly rate is consistently cheaper than the average five-star hotel in Da Nang, and you're still this close to the water.",
+  "reason": "$148 unverifiable",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "That number comes directly from a booking platform comparison.",
+  "after": "That comparison comes from booking platform rates.",
+  "reason": "Number removed",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "The beach is 47 metres away, and the rooftop bar is worth visiting at sunset.",
+  "after": "The beach is just across the road, and the rooftop bar is worth visiting at sunset.",
+  "reason": "47 m contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "Rooms run 30-40 square metres with balconies in most categories,",
+  "after": "Rooms have balconies in most categories,",
+  "reason": "Sizes vary: Deluxe 33 sqm, suites 89-405 sqm; range claim removed",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "47 metres from My Khe Beach at a price point well under the city's five-star average, this is the hotel's entire value proposition in one fact. Walk out the door, turn right, and the sand is there.",
+  "after": "Across the road from My Khe Beach (about 0.1 km on a foot route to the shoreline) at a price point well under the city's five-star average, this is the hotel's entire value proposition in one fact. Cross the road and the beach is there.",
+  "reason": "47 m contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "no other hotel in this price bracket gets you this close to the water.",
+  "after": "few hotels in this price bracket get you this close to the water.",
+  "reason": "Superlative unverifiable",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "47 metres to the sand means you walk out the door, turn right, and you're there.",
+  "after": "The beach is across the road, about 0.1 km on a foot route to the shoreline, so it's roughly a one-minute walk.",
+  "reason": "47 m contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "The outdoor pool sits adjacent, small and functional,",
+  "after": "The pool (listings differ on whether it is outdoor, indoor or both) is small and functional,",
+  "reason": "Pool type conflicts across sources",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "the gym equipment is limited and the pool won't replace",
+  "after": "the gym is a basic fitness room and the pool won't replace",
+  "reason": "Gym 'limited' unverifiable; listing says Fitness Room",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "<p class=\"hr-like-text\">47 metres from My Khe, one of the closest positions on the entire strip.</p>",
+  "after": "<p class=\"hr-like-text\">Across the road from My Khe, about 0.1 km on a foot route to the shoreline.</p>",
+  "reason": "47 m contradicted",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "Roughly $148 a night cheaper than the Da Nang five-star average,",
+  "after": "Cheaper than the Da Nang five-star average,",
+  "reason": "$148 unverifiable",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "My Khe Beach, 47 metres from the sand, restaurant strip a 5-minute walk, airport 12 minutes and Dragon Bridge 12 minutes by Grab.",
+  "after": "My Khe Beach across the road (about 0.1 km on a foot route, roughly 1 minute), restaurant strip a 5-minute walk, the airport about 12.5 km by road (roughly 14 minutes without traffic, routing estimate) and Dragon Bridge about 4.7 km by road (roughly 6 minutes).",
+  "reason": "Wrong figures replaced with OSRM estimates",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "Hoi An is 30 minutes south for a day trip.",
+  "after": "Hoi An Ancient Town is about 13.6 km by road (roughly 16 minutes without traffic, routing estimate).",
+  "reason": "Hoi An time",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Beach:</strong> 47 m</span>",
+  "after": "<strong>Beach:</strong> Across the road, ~1 min walk</span>",
+  "reason": "Chip",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Airport:</strong> 12 min</span>",
+  "after": "<strong>Airport:</strong> ~12.5 km / ~14 min by road (estimate)</span>",
+  "reason": "Chip",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "On My Khe Beach, approximately 5 km from Dragon Bridge and 7 km from Da Nang Airport.",
+  "after": "Across the road from My Khe Beach, about 4.7 km by road from Dragon Bridge and about 12.5 km by road from Da Nang Airport (routing estimates without traffic).",
+  "reason": "Wrong distances",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "delivers reliable if unspectacular four-star quality.",
+  "after": "delivers reliable if unspectacular quality.",
+  "reason": "Star rating conflicts across sources",
+  "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-8065403/hotel",
+  "occurrences": 1
+ }
+]

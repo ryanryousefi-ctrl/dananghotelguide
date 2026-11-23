@@ -1,0 +1,100 @@
+[
+ {
+  "before": "My Khe Beach, rooftop pool, and 2026 rates",
+  "after": "My Khe Beach, pools, and 2026 rates",
+  "reason": "No rooftop pool; pools are on 4th floor",
+  "source": "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+  "occurrences": 1
+ },
+ {
+  "before": "with a strong rooftop pool and reliable",
+  "after": "with outdoor pools (including a children's pool) and reliable",
+  "reason": "No rooftop pool",
+  "source": "https://www.wyndhamhotels.com/wyndham/danang-vietnam/wyndham-soleil-danang/overview",
+  "occurrences": 1
+ },
+ {
+  "before": "On My Khe Beach, 6 km from Dragon Bridge and 8 km from Da Nang Airport.",
+  "after": "Near My Khe Beach (about 0.2 km on foot, roughly 3 minutes), about 4 km by road from Dragon Bridge (roughly 5 minutes) and about 13 km by road from Da Nang Airport (roughly 16 minutes), routing estimates without traffic.",
+  "reason": "Wrong distances",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">A minute's walk</div>",
+  "after": "<div class=\"hr-snap-val\">About 3 min walk</div>",
+  "reason": "Foot 0.21 km/3 min; Trip.com 310 m",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "the upper-floor views from the 34th floor are genuinely striking, the staff consistently earn the warmest descriptions in guest reviews, and the beach is a minute's walk.",
+  "after": "the upper-floor views are genuinely striking, the staff consistently earn the warmest descriptions in guest reviews, and the beach is about a 3-minute walk (0.2 km).",
+  "reason": "34th floor unverifiable; beach time",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "The 34-floor tower gives good return on height. Two-bedroom family suites on the 34th floor have ocean views from every room and a balcony",
+  "after": "The tower gives good return on height. Family suites on the upper floors have ocean views and a balcony",
+  "reason": "Floor count and two-bedroom unverified",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+  "occurrences": 1
+ },
+ {
+  "before": "A two-bedroom family suite on the 34th floor or as close to it as available, ocean-facing specifically.",
+  "after": "A family suite on the highest floor available, ocean-facing specifically.",
+  "reason": "Unverified",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+  "occurrences": 1
+ },
+ {
+  "before": "Rooms on the 34th floor deliver some of the best ocean views",
+  "after": "Rooms on the highest floors deliver some of the best ocean views",
+  "reason": "34th floor unverified",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+  "occurrences": 1
+ },
+ {
+  "before": "The beach is a minute's walk, that part is straightforward and genuine, and it's the one element of this hotel with no asterisk attached to it.",
+  "after": "The beach is about a 3-minute walk (0.2 km on a foot route), that part is straightforward, and it's the one element of this hotel with no asterisk attached to it.",
+  "reason": "Beach time",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "Two-bedroom family suites on the top floors work well",
+  "after": "Family suites on the upper floors work well",
+  "reason": "Two-bedroom unverified",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+  "occurrences": 1
+ },
+ {
+  "before": "Among the best on My Khe Beach from floor 30 and above,",
+  "after": "Among the best on My Khe Beach from the upper floors,",
+  "reason": "Floor threshold unverified",
+  "source": "https://ae.trip.com/hotels/da-nang-hotel-detail-128851042/wyndham-soleil-danang-free-two-ways-airport-pickup",
+  "occurrences": 1
+ },
+ {
+  "before": "A genuine minute's walk from the entrance, no exaggeration needed here.",
+  "after": "About a 3-minute walk (0.2 km) from the entrance on a foot route.",
+  "reason": "Beach time",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "My Khe Beach, a minute's walk from the entrance, with the airport 8km and about 12 minutes away. What this means for the trip: the beach access here is as good as it gets in Da Nang, genuinely a minute's walk, not a marketing exaggeration. Dragon Bridge is about 10 minutes by taxi, and the restaurant strip is two minutes on foot.",
+  "after": "My Khe Beach, about a 3-minute walk (0.2 km) from the entrance, with the airport about 13 km by road (roughly 16 minutes without traffic, routing estimate). What this means for the trip: the beach is close, though not at the doorstep. Dragon Bridge is about 4 km by road (roughly 5 minutes), and the restaurant strip is a short walk.",
+  "reason": "Wrong distances/times",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Beach:</strong> 1 min walk</span><span class=\"hr-loc-chip\"><strong>Airport:</strong> 8 km</span>",
+  "after": "<strong>Beach:</strong> ~3 min walk</span><span class=\"hr-loc-chip\"><strong>Airport:</strong> ~13 km by road</span>",
+  "reason": "Chips",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ }
+]

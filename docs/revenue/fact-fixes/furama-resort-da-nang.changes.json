@@ -1,0 +1,68 @@
+[
+ {
+  "before": "Located on Bac My An Beach, approximately 8 km south of Da Nang city centre and 10 km from Da Nang Airport.",
+  "after": "Located on Bac My An Beach at 103-105 Vo Nguyen Giap Street, about 6 km by road from Han Market and about 11 km by road from Da Nang Airport (routing estimates).",
+  "reason": "OSRM Han Market 5.81km; airport 11.27km/13.4min",
+  "source": "https://furamavietnam.com/en/how-to-get-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "Furama opened in 1997, which means it has been on Bac My An Beach for almost thirty years.",
+  "after": "Furama is one of the older resorts on Bac My An Beach, and has been here for the better part of thirty years.",
+  "reason": "Opening year unverified; official room page says lagoon forest cultivated nearly three decades",
+  "source": "https://furamavietnam.com/en/accommodation/rooms-suites/"
+ },
+ {
+  "before": "ten hectares of mature tropical garden",
+  "after": "a mature tropical garden",
+  "reason": "Hectare figure unverified",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "Furama was also the first resort in Vietnam to receive a Culinary Heritage Asia-Pacific designation, and it shows",
+  "after": "Furama also presents itself as a \"Culinary Heritage\" resort, and it shows",
+  "reason": "First-in-Vietnam designation unverified; official site: culinary heritage resort",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "Culinary Heritage Asia-Pacific designation backed up with",
+  "after": "The resort's Culinary Heritage positioning is backed up with",
+  "reason": "Designation unverified",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "The beach itself is direct, lifeguarded, with water sports",
+  "after": "The beach itself is direct, with water sports",
+  "reason": "Lifeguards unverified; official lists water sports",
+  "source": "https://furamavietnam.com/en/recreation/"
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Direct, lifeguarded</div>",
+  "after": "<div class=\"hr-snap-val\">Direct beachfront</div>",
+  "reason": "Lifeguards unverified",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "<strong>Beach:</strong> Direct, lifeguarded",
+  "after": "<strong>Beach:</strong> Direct beachfront",
+  "reason": "Lifeguards unverified",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "about 8km south of the city centre and 10km from the airport, with Dragon Bridge around 15 minutes away and Hoi An roughly 30 minutes south.",
+  "after": "about 6 km by road from Han Market and about 11 km by road from the airport (roughly 13-15 minutes without traffic; the resort says 15 minutes by taxi), with Dragon Bridge about 5.7 km by road (roughly 7 minutes without traffic) and Hoi An about 23 km by road (roughly 27 minutes without traffic), all routing estimates.",
+  "reason": "OSRM Han Market 5.81km; airport 11.27km/13.4; Dragon Bridge 5.66km/7.3; Hoi An 22.92km/27.2",
+  "source": "https://furamavietnam.com/en/how-to-get-us/ ; https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ },
+ {
+  "before": "Marble Mountains sits about five minutes away by taxi",
+  "after": "Marble Mountains is a short taxi ride away",
+  "reason": "Time unverified",
+  "source": "https://furamavietnam.com/en/"
+ },
+ {
+  "before": "<strong>Airport:</strong> 10 km",
+  "after": "<strong>Airport:</strong> 11 km by road",
+  "reason": "OSRM 11.27 km",
+  "source": "https://router.project-osrm.org (OSRM car route estimate, no traffic)"
+ }
+]

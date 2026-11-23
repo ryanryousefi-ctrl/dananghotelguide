@@ -1,0 +1,62 @@
+[
+ {
+  "before": "H1/FAQ/breadcrumb name '...Non Nuoc Beach Villas'",
+  "after": "Da Nang Marriott Resort & Spa",
+  "reason": "Registry hotelId 993558 is the 7 Truong Sa resort",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "200 villas, all with private pool",
+  "after": "239 rooms, suites and villas; private pools in 3-4 bedroom villas",
+  "reason": "Trip.com 239 rooms, villa list",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "opened 2020, flagship",
+  "after": "opened 2022, renovated 2023",
+  "reason": "Trip.com",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "one-bedroom villa ~100 sqm; presidential 500 sqm with kitchens",
+  "after": "3/4-bedroom villas ~575/628 sqm; no kitchen claim",
+  "reason": "Trip.com room list",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "central resort pool",
+  "after": "two outdoor pools plus children's pool",
+  "reason": "Trip.com",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "Street Food Kitchen; three outlets",
+  "after": "five restaurants incl. Goji Kitchen + Bar, Madame Son",
+  "reason": "Trip.com",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "13 km city / 15 km airport / Hoi An 25 min",
+  "after": "~10 km / ~15 km by road / ~22 min (19 km) routing est.",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Marble Mountains 5 min taxi",
+  "after": "few minutes by taxi (Trip: 0.3 km)",
+  "reason": "Trip.com",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "no entry-level room / all-villa pricing",
+  "after": "removed",
+  "reason": "Deluxe Ocean room exists",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-993558/danang-marriott-resort-spa-non-nuoc-beach-villas/"
+ },
+ {
+  "before": "added note: separate property Non Nuoc Beach Villas (23 Truong Sa, 122 rooms)",
+  "after": "(added)",
+  "reason": "Clarify two properties",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-7362595/vinpearl-resort-and-spa-da-nang/"
+ }
+]

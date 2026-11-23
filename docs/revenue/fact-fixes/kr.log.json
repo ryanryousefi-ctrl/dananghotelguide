@@ -1,0 +1,854 @@
+[
+ {
+  "file": "kr/best-areas-for-korean-families.html",
+  "before": "수영장이 5개 레인으로 나뉘어 있어 아이들 전용 얕은 풀이 따로 있습니다.",
+  "after": "야외 수영장이 5개 있고 아이들이 쓰기 좋은 키즈풀도 따로 있습니다.",
+  "reason": "Hyatt has five outdoor pools, no six pools/lazy river; \"5개 레인\" was a mistranslation"
+ },
+ {
+  "file": "kr/best-areas-for-korean-families.html",
+  "before": "래디슨 블루 리조트 다낭",
+  "after": "래디슨 호텔 다낭",
+  "reason": "Property is Radisson Hotel Danang, not Radisson Blu Resort"
+ },
+ {
+  "file": "kr/best-areas-for-korean-families.html",
+  "before": "미케 비치에 있어 한식당 접근이 편하면서도 리조트 시설이 충실합니다.",
+  "after": "미케 비치 맞은편(도로 건너)에 있어 해변 접근이 편하고 루프탑 인피니티 풀 같은 시설이 있습니다.",
+  "reason": "Radisson is across the road from My Khe, not a resort; unverified Korean-restaurant claim removed"
+ },
+ {
+  "file": "kr/best-areas-for-korean-families.html",
+  "before": "<strong>장점:</strong> 미케 위치, 가족 시설, 합리적 가격. <strong>단점:</strong> 하얏트보다 수영장이 작습니다.",
+  "after": "<strong>장점:</strong> 미케 비치 맞은편 위치, 합리적 가격. <strong>단점:</strong> 하얏트보다 수영장이 작습니다.",
+  "reason": "Remove unsupported \"family facilities\" claim; kids club status unverified"
+ },
+ {
+  "file": "kr/best-areas-for-korean-families.html",
+  "before": "미케 남부라 안트엉 거리까지 도보로는 멀지만 그랩으로 5분 거리입니다.",
+  "after": "미케 비치 남쪽 끝(박미안 해변)이라 안트엉 거리까지 도보로는 멀고, 그랩으로 이동하는 것이 현실적입니다.",
+  "reason": "Pullman is on Bac My An beach, south of My Khe; the specific 5-min Grab figure is unsupported (routing ~7 min to Dragon Bridge)"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "5개 레인 수영장",
+  "after": "야외 수영장 5개",
+  "reason": "Hyatt has five outdoor pools; \"5개 레인\" mistranslation"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 직접 접근</span>",
+  "after": "<span class=\"hotel-tag\">논억 비치 해변 접근</span>",
+  "reason": "Sheraton Grand is on the Non Nuoc / Truong Sa coast, not My Khe"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 (식당가, 안트엉 거리 도보 가능)",
+  "after": "<strong>위치:</strong> 논억 비치·쯔엉사 해안 (미케 비치 남쪽, 용다리까지 도로로 약 13km, 교통 없을 때 약 16분(경로 추정))",
+  "reason": "Sheraton Grand is on Truong Sa coast; routing 13.1 km / 16 min to Dragon Bridge"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "미케 비치에 직접 접해 있는 5성급 호텔입니다. 하얏트에 비해 수영장 규모는 작지만, 저녁에 안트엉 거리 식당들을 걸어서 이용할 수 있는 위치가 강점입니다.",
+  "after": "논억 비치 쪽 쯔엉사 해안도로에 있는 5성급 리조트입니다. 인피니티 풀과 워터슬라이드 같은 가족용 시설이 있지만, 안트엉 거리 식당가와는 떨어져 있어 외식은 그랩 이동이 필요합니다.",
+  "reason": "Not on My Khe; not walkable to An Thuong"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "<strong>위치 강점:</strong> 해변과 식당가 모두 도보 5분 이내. <strong>약점:</strong>",
+  "after": "<strong>위치 특징:</strong> 해변 접근은 좋지만 식당가는 도보권이 아닙니다. <strong>약점:</strong>",
+  "reason": "Not within 5 min walk of restaurant strip"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 북쪽 (안트엉 거리에서 도보 10분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 박미안 해변 (응우한선군, 안트엉 거리는 그랩 이동 권장)",
+  "reason": "Pullman is on Bac My An beach strip (Ngu Hanh Son)"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "래디슨 블루 리조트 다낭",
+  "after": "래디슨 호텔 다낭",
+  "reason": "Property is Radisson Hotel Danang"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치</span>\n        <span><strong>가격대:</strong> $100~180/박",
+  "after": "<strong>위치:</strong> 미케 비치 (손짜 쪽, 해변 맞은편 도로 건너)</span>\n        <span><strong>가격대:</strong> $100~180/박",
+  "reason": "Radisson Hotel Danang: My Khe, Son Tra side, across the road from beach"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "미케 비치에서 해변 접근성이 좋고 수영장이 충분히 넓습니다. 쉐라톤보다 저렴하면서 유사한 위치 장점을 갖고 있습니다. 안트엉 거리 식당들을 걸어서 이용하기에 좋은 위치입니다.",
+  "after": "미케 비치 맞은편(도로 건너)에 있어 해변 접근성이 좋고, 루프탑 인피니티 풀이 있습니다. 해변 쪽 식당과 카페를 이용하기에 편한 위치입니다.",
+  "reason": "Radisson across the road; removed unsupported Sheraton comparison and An Thuong walkability"
+ },
+ {
+  "file": "kr/best-hotels-in-da-nang.html",
+  "before": "위치 편의성은 쉐라톤 그랜드 다낭.",
+  "after": "논억 해변의 가족 리조트는 쉐라톤 그랜드 다낭.",
+  "reason": "Sheraton Grand is far from city/restaurant strip; \"location convenience\" unsupported"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "미케 비치 북부 — 풀만·쉐라톤 구역",
+  "after": "미케 비치 남쪽 끝 — 풀만·푸라마 구역",
+  "reason": "Sheraton Grand is not on My Khe north; Pullman/Furama are on the southern My Khe / Bac My An strip (Ngu Hanh Son)"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "미케 비치 최북단으로, 풀만 다낭 비치 리조트와 쉐라톤 그랜드 다낭이 이 구역에 있습니다.",
+  "after": "미케 비치 남쪽 끝 박미안 해변(응우한선군) 구역으로, 풀만 다낭 비치 리조트와 푸라마 리조트가 이 구역에 있습니다.",
+  "reason": "Pullman/Furama on Bac My An strip; Sheraton moved to Non Nuoc zone"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<span class=\"dist-tag\">한강변까지 그랩 20분</span>",
+  "after": "<span class=\"dist-tag\">용다리까지 도로로 약 7분(경로 추정, 교통 없을 때)</span>",
+  "reason": "Pullman/Furama to Dragon Bridge: routing ~7 min"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<span class=\"dist-tag\">다낭 공항까지 그랩 25분</span>",
+  "after": "<span class=\"dist-tag\">다낭 공항까지 도로로 약 13분(경로 추정, 교통 없을 때)</span>",
+  "reason": "Pullman/Furama to airport: routing ~13 min"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "쉐라톤 그랜드, 풀만이 해변 바로 앞.",
+  "after": "풀만, 푸라마가 해변 바로 앞.",
+  "reason": "Sheraton Grand removed from this zone"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "A 라 카르테, 레디슨 블루 계열.",
+  "after": "A 라 카르테, 래디슨 호텔 다낭 등(도로 건너 해변 맞은편).",
+  "reason": "Radisson Hotel Danang / A La Carte are across the road, not directly on sand"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<h4>비치프론트 호텔</h4>\n            <p>해변 직접 접근, 오션 뷰.",
+  "after": "<h4>비치프론트 호텔</h4>\n            <p>해변 가까움(일부는 도로 건너), 오션 뷰.",
+  "reason": "A La Carte/Radisson are across the road"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "논억 비치 — 하얏트·멜리아·인터컨티넨탈 구역",
+  "after": "논억 비치 — 하얏트·멜리아·쉐라톤 구역",
+  "reason": "InterContinental is on Son Tra, not Non Nuoc; Sheraton Grand is on Truong Sa coast"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "미케 비치에서 남쪽으로 약 10km, 마블 마운틴 근처에 있는 구역입니다. 세 개의 5성급 리조트 — 하얏트 리젠시, 멜리아 다낭, 그리고 논억 구역의 인터컨티넨탈 — 가 각각 독립적인 위치에 자리하고 있어요.",
+  "after": "미케 비치 남쪽 끝에서 도로로 약 7~10km, 마블 마운틴 근처 논억·쯔엉사 해안에 있는 구역입니다. 하얏트 리젠시, 멜리아 다낭, 쉐라톤 그랜드 다낭 같은 5성급 리조트가 각각 독립적인 위치에 자리하고 있어요. (인터컨티넨탈은 손짜 반도에 있어 이 구역이 아닙니다.)",
+  "reason": "InterContinental is inside Son Tra Nature Reserve; Sheraton/Hyatt/Melia on Non Nuoc/Truong Sa coast"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "하얏트 리젠시는 논억 비치 남쪽, 멜리아는 중앙 구역, 인터컨티넨탈(논억)은 별도 위치예요.",
+  "after": "하얏트 리젠시는 논억 비치 쪽, 멜리아는 마블 마운틴 옆 해변, 쉐라톤 그랜드는 쯔엉사 해안도로에 따로 있어요.",
+  "reason": "InterContinental is not in Non Nuoc"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<span class=\"dist-tag\">마블 마운틴 도보 10~15분(리조트 따라 다름)</span>",
+  "after": "<span class=\"dist-tag\">마블 마운틴까지는 리조트에 따라 다름(쉐라톤 기준 약 3.3km)</span>",
+  "reason": "Sheraton Grand is 3.3 km from Marble Mountains, not a 10-15 min walk"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<span class=\"dist-tag\">다낭 공항까지 그랩 30분</span>",
+  "after": "<span class=\"dist-tag\">다낭 공항까지 도로로 약 17~21분(경로 추정, 교통 없을 때)</span>",
+  "reason": "Hyatt 17 min / Sheraton 21 min routing to airport"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "노보텔 한 리버, 힐튼 다낭이 이 구역.",
+  "after": "멜리아 비엔팔 다낭 리버프런트(쩐흥다오 강변)가 이 구역.",
+  "reason": "Novotel/Hilton are on the west bank; Melia Vinpearl Danang Riverfront is on the east bank"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "미케 비치까지 그랩 10~15분. 용다리 도보 가능 거리 호텔 다수.",
+  "after": "미케 비치까지 그랩 10~15분. 용다리까지 도보 약 24분(멜리아 비엔팔 기준).",
+  "reason": "Melia Vinpearl walk to Dragon Bridge is ~24 min"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "해변까지는 그랩 20분 이상. 브릴리언트 호텔이 강변 위치.",
+  "after": "해변까지는 그랩 10~15분 정도(교통에 따라 다름). 노보텔 한 리버, 힐튼 다낭, 브릴리언트 호텔이 이 강변에 있습니다.",
+  "reason": "Novotel/Hilton/Brilliant are all on the west bank; Brilliant to My Khe ~5 min routing, 10 min with traffic"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "<span class=\"dist-tag\">용다리 불쇼 도보 가능 (동쪽 기준)</span>",
+  "after": "<span class=\"dist-tag\">용다리 도보: 브릴리언트 약 14분, 힐튼 약 26분, 노보텔 약 32분</span>",
+  "reason": "Walking times from routes.json"
+ },
+ {
+  "file": "kr/best-areas-to-stay-in-da-nang.html",
+  "before": "풀만이나 쉐라톤 같은 대형 리조트도 북쪽에 있어요.",
+  "after": "풀만 같은 대형 리조트는 남쪽 박미안 해안에, 쉐라톤 그랜드는 논억·쯔엉사 해안에 있어 시내와 떨어진 조용한 곳입니다.",
+  "reason": "Pullman/Sheraton are not in north My Khe (2 occurrences)"
+ },
+ {
+  "file": "kr/best-budget-hotels-in-da-nang.html",
+  "before": "미케 비치 바로 앞에 위치한 4성급 호텔로, 루프탑 수영장에서",
+  "after": "미케 비치 도로 건너 맞은편에 위치한 4성급 호텔로, 루프탑 수영장에서",
+  "reason": "A La Carte is across the road from My Khe, not directly on sand"
+ },
+ {
+  "file": "kr/best-budget-hotels-in-da-nang.html",
+  "before": "용다리에서 도보 거리라 주말 밤 불쇼를 걸어서 볼 수 있어요.",
+  "after": "용다리까지 도보 약 14분이라 주말 밤 불쇼를 걸어서 볼 수 있어요.",
+  "reason": "Brilliant to Dragon Bridge walk 14 min (routes.json)"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "<span class=\"hotel-dist\">용다리 도보 5~8분</span>",
+  "after": "<span class=\"hotel-dist\">용다리 도보 약 32분(2.4km)</span>",
+  "reason": "Novotel to Dragon Bridge foot route 2.4 km / 32 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "한강변에 위치한 5성급 호텔로, 용다리와 가장 가까운 고급 옵션 중 하나입니다.",
+  "after": "한강변에 위치한 5성급 호텔로, 용다리까지는 도보 약 32분(차로 약 3분)이라 불쇼는 그랩이나 택시로 가는 것이 편합니다.",
+  "reason": "Novotel is not close to Dragon Bridge on foot"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "<li>용다리 도보 거리</li>\n                <li>강 전망 객실 가능</li>",
+  "after": "<li>한강변 위치, 한 시장 도보 약 16분</li>\n                <li>강 전망 객실 가능</li>",
+  "reason": "Novotel Dragon Bridge walk is 32 min; Han Market 16 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "<span class=\"hotel-dist\">용다리 도보 10~12분</span>",
+  "after": "<span class=\"hotel-dist\">용다리 도보 약 26분(1.9km)</span>",
+  "reason": "Hilton to Dragon Bridge foot route 1.9 km / 26 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "<li>용다리까지 도보 10분+</li>",
+  "after": "<li>용다리까지 도보 약 26분</li>",
+  "reason": "Hilton Dragon Bridge walk is 26 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "<span class=\"hotel-dist\">용다리 도보 7~10분</span>",
+  "after": "<span class=\"hotel-dist\">용다리 도보 약 14분(1.1km)</span>",
+  "reason": "Brilliant to Dragon Bridge foot route 1.1 km / 14 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "용다리 불쇼를 걸어서 볼 수 있는 거리에 있고, 주변 로컬 식당 접근도 좋습니다.",
+  "after": "용다리까지 도보 약 14분으로 불쇼를 걸어서 볼 수 있는 거리에 있고, 한 시장은 도보 약 4분입니다. 주변 로컬 식당 접근도 좋습니다.",
+  "reason": "Brilliant walk times from routes.json"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "토·일 밤 9시 용다리 불쇼를 걸어서 볼 수 있는 한강변 호텔을 정리했습니다.",
+  "after": "토·일 밤 9시 용다리 불쇼를 보기 좋은 한강변 호텔을 정리했습니다(도보 거리는 호텔마다 약 14~32분으로 차이가 큽니다).",
+  "reason": "Walking times to Dragon Bridge vary 14-32 min"
+ },
+ {
+  "file": "kr/best-hotels-near-dragon-bridge.html",
+  "before": "한강변에서 용다리 불쇼를 도보로 볼 수 있는 호텔들입니다.",
+  "after": "한강변에서 용다리 불쇼를 보러 가기 좋은 호텔들입니다(도보 약 14~32분, 호텔마다 다름).",
+  "reason": "Walking times to Dragon Bridge vary 14-32 min"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "한식당 도보 10~15분: Hyatt Regency, Premier Village, InterContinental",
+  "after": "한식당까지 그랩 이용 권장: Hyatt Regency(논느억 해안), Premier Village(미케 비치 남쪽 끝), InterContinental(손짜 반도)",
+  "reason": "Hyatt (Non Nuoc), Premier Village (southern My Khe) and InterContinental (Son Tra) are far from the An Thuong strip; not a 10-15 min walk"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "가성비 최고: A La Carte — 한식당 거리 바로 옆, 비치 프런트, 합리적 가격",
+  "after": "가성비 최고: A La Carte — 한식당 거리 바로 옆, 미케 비치 도로 건너 맞은편, 합리적 가격",
+  "reason": "A La Carte is across the road from My Khe"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "럭셔리: InterContinental Son Tra — 한식당까지 그랩 15분이지만 조식이 해결",
+  "after": "럭셔리: InterContinental Son Tra — 손짜 반도에 있어 한식당까지 그랩이 필요하지만(용다리까지 도로로 약 22분, 경로 추정) 조식이 해결",
+  "reason": "InterContinental is ~22 min by road from Dragon Bridge/Han Market"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "<span class=\"hotel-fact\">미케 비치 프런트</span>",
+  "after": "<span class=\"hotel-fact\">미케 비치 맞은편(도로 건너)</span>",
+  "reason": "A La Carte is across the road"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "미케 비치도 바로 앞입니다. 루프탑 수영장",
+  "after": "미케 비치는 도로만 건너면 됩니다. 루프탑 수영장",
+  "reason": "A La Carte is across the road"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "<span class=\"hotel-fact\">미케 비치 직접 접근</span>\n      <span class=\"hotel-fact\">조식 퀄리티 좋음</span>",
+  "after": "<span class=\"hotel-fact\">미케 비치 맞은편(도로 건너)</span>\n      <span class=\"hotel-fact\">조식 퀄리티 좋음</span>",
+  "reason": "TMS is across the road from My Khe"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "<span class=\"hotel-fact\">풀 6개</span>",
+  "after": "<span class=\"hotel-fact\">야외 수영장 5개</span>",
+  "reason": "Hyatt has five outdoor pools, not six"
+ },
+ {
+  "file": "kr/best-hotels-near-korean-restaurants.html",
+  "before": "두 곳 모두 미케 비치 직접 접근 가능하고 주변 한식당까지 도보 10분 이내입니다.",
+  "after": "두 곳 모두 미케 비치까지 도로만 건너면 되고(도보 약 2~3분) 주변 한식당까지 도보 10분 이내입니다.",
+  "reason": "A La Carte and Wyndham are across the road, not directly on sand (2 occurrences)"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "조용하고 한적합니다. 풀만, 쉐라톤이 이 구역에 있어요.",
+  "after": "조용하고 한적합니다. 래디슨 호텔 다낭이 손짜 쪽인 이 구역(해변 맞은편)에 있어요. 풀만은 이보다 남쪽 끝 박미안 해안에, 쉐라톤 그랜드는 더 남쪽 논억 비치 쪽에 있습니다.",
+  "reason": "Radisson is north My Khe; Pullman is Bac My An strip; Sheraton Grand is on Non Nuoc coast"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "하얏트 리젠시는 미케 비치가 아닌 논억 비치 위치임을 명확히 표기했습니다.",
+  "after": "하얏트 리젠시와 쉐라톤 그랜드는 미케 비치가 아닌 논억 비치 쪽(쯔엉사 해안) 위치임을 명확히 표기했습니다.",
+  "reason": "Sheraton Grand is on Non Nuoc / Truong Sa coast, not My Khe"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 북부</span>\n            <span class=\"hotel-dist\">해변까지 직접 접근</span>",
+  "after": "<span class=\"hotel-tag\">논억 비치 (미케 비치 아님)</span>\n            <span class=\"hotel-dist\">해변까지 직접 접근</span>",
+  "reason": "Sheraton Grand is on Non Nuoc coast"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "미케 비치 북부에 있는 5성급 리조트입니다. 호텔에서 해변으로 직접 나갈 수 있는 진정한 비치프론트 위치예요. 프라이빗 비치 구역도 운영하고, 수영장도 여러 개 있습니다. 북부 위치라 주변이 조용하고 한적한 편이에요. 단, 안트엉 거리 식당이나 편의시설은 그랩으로 10분 이상 이동이 필요합니다.",
+  "after": "미케 비치가 아니라 논억 비치 쪽 쯔엉사 해안도로에 있는 5성급 리조트입니다. 호텔에서 해변으로 직접 나갈 수 있는 비치프론트 위치예요. 프라이빗 비치 구역도 운영하고, 인피니티 풀과 워터슬라이드 시설이 있습니다. 주변이 조용하고 한적한 편이에요. 단, 미케 비치의 안트엉 거리 식당이나 편의시설까지는 도로로 약 8km라 그랩 이동이 필요합니다.",
+  "reason": "Sheraton Grand not on My Khe; ~8.8 km road from southern My Khe"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<li>북부 조용한 환경</li>",
+  "after": "<li>조용한 해안 환경</li>",
+  "reason": "Sheraton is not in north My Khe"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<li>시내까지 그랩 25분</li>",
+  "after": "<li>용다리까지 도로로 약 16분(경로 추정, 교통 없을 때)</li>",
+  "reason": "Sheraton to Dragon Bridge routing 13.1 km / 16 min"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "래디슨 블루 다낭",
+  "after": "래디슨 호텔 다낭",
+  "reason": "Property is Radisson Hotel Danang, not Radisson Blu"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 중남부</span>\n            <span class=\"hotel-dist\">해변 바로 앞</span>",
+  "after": "<span class=\"hotel-tag\">미케 비치 북쪽 (손짜 쪽)</span>\n            <span class=\"hotel-dist\">해변 맞은편(도로 건너)</span>",
+  "reason": "Radisson Hotel Danang: My Khe, Son Tra side, across the road"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "미케 비치 중남부에 위치한 비치프론트 리조트입니다. 해변 바로 앞이면서도 안트엉 거리가 도보권이라는 게 큰 장점이에요. 해변 접근성 + 주변 편의시설을 동시에 누릴 수 있는 몇 안 되는 위치입니다.",
+  "after": "미케 비치 북쪽 손짜 쪽에 위치한 호텔로, 해변 맞은편(도로 건너)에 있고 리조트가 아닌 도심형 호텔입니다. 해변 접근성이 좋고 21층 루프탑 인피니티 풀이 있습니다.",
+  "reason": "Radisson is a hotel not a resort; no evidence of An Thuong walkability; across road"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<li>해변 바로 앞</li>\n                <li>안트엉 거리 도보권</li>",
+  "after": "<li>해변 맞은편(도로 건너)</li>\n                <li>루프탑 인피니티 풀</li>",
+  "reason": "Radisson across the road; An Thuong walkability unsupported"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<span class=\"hotel-badge badge-beachfront\">비치프론트</span>\n          <div class=\"hotel-header\">\n            <div class=\"hotel-name\">래디슨 호텔 다낭</div>",
+  "after": "<span class=\"hotel-badge badge-beachfront\">해변 맞은편</span>\n          <div class=\"hotel-header\">\n            <div class=\"hotel-name\">래디슨 호텔 다낭</div>",
+  "reason": "Radisson is across the road"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 북부</span>\n            <span class=\"hotel-dist\">해변 직접 접근</span>\n            <span class=\"hotel-price-tag\">$110~200",
+  "after": "<span class=\"hotel-tag\">미케 비치 남쪽 끝 (박미안 해변)</span>\n            <span class=\"hotel-dist\">해변 직접 접근</span>\n            <span class=\"hotel-price-tag\">$110~200",
+  "reason": "Pullman is on Bac My An beach strip"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "미케 비치 북쪽 조용한 구역에 있는 비치프론트 리조트입니다. 쉐라톤과 마찬가지로 해변 직접 접근이 가능하고, 북부 특유의 한적한 분위기를 즐길 수 있어요. 성수기에도 남부보다 해변이 덜 붐빕니다.",
+  "after": "미케 비치 남쪽 끝 박미안 해변(응우한선군)에 있는 비치프론트 리조트입니다. 해변 직접 접근이 가능하고, 한적한 분위기를 즐길 수 있어요. 성수기에도 안트엉 구역보다 해변이 덜 붐비는 편입니다.",
+  "reason": "Pullman is not north My Khe; Sheraton comparison removed"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "<li>북부 한적한 해변</li>",
+  "after": "<li>한적한 남쪽 해변</li>",
+  "reason": "Pullman not north"
+ },
+ {
+  "file": "kr/best-hotels-near-my-khe-beach.html",
+  "before": "리조트가 아닌 도심형 호텔입니다.",
+  "after": "리조트가 아닌 호텔입니다.",
+  "reason": "Avoid unsupported \"city-type\" wording; Radisson is a hotel not a resort"
+ },
+ {
+  "file": "kr/best-korean-bbq-in-da-nang.html",
+  "before": "힐튼에서는 도보 10~15분.",
+  "after": "힐튼은 한강변에 있어 안트엉 거리까지 도보가 아니라 그랩 이동이 필요합니다(미케 비치까지 약 4km).",
+  "reason": "Hilton is a city hotel ~4 km from My Khe, not a 10-15 min walk from An Thuong"
+ },
+ {
+  "file": "kr/boutique-hotels-da-nang.html",
+  "before": "논억 비치 인근 (시내에서 차로 20분)",
+  "after": "논억 비치 남쪽 쯔엉사 해안도로 (용다리까지 도로로 약 17분, 경로 추정)",
+  "reason": "Naman is on Truong Sa coast south of Non Nuoc/Marriott; routing 17 min to Dragon Bridge"
+ },
+ {
+  "file": "kr/boutique-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 (시내에서 차로 10분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 박미안 해변 일대, 응우한선군 (용다리까지 도로로 약 9분, 경로 추정)",
+  "reason": "TIA is on southern My Khe / Bac My An strip (Ngu Hanh Son); routing 9 min"
+ },
+ {
+  "file": "kr/boutique-hotels-da-nang.html",
+  "before": "미케 비치에 위치해 있어 시내 접근성은 나만보다 낫습니다.",
+  "after": "미케 비치 남쪽 해안에 있어 시내 접근성은 나만보다 낫습니다.",
+  "reason": "TIA is on southern My Khe / Bac My An strip"
+ },
+ {
+  "file": "kr/boutique-hotels-da-nang.html",
+  "before": "조용한 분위기의 미케 비치 숙소를 원하는 분.",
+  "after": "조용한 분위기의 해변 숙소를 원하는 분.",
+  "reason": "TIA is not on the central My Khe strip"
+ },
+ {
+  "file": "kr/boutique-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 남쪽 (시내에서 차로 15분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 박미안 해변 (용다리까지 도로로 약 7분, 경로 추정)",
+  "reason": "Furama is on Bac My An strip; routing 7 min to Dragon Bridge"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<li>쉐라톤·래디슨·풀만·힐튼 위치</li>",
+  "after": "<li>래디슨 호텔 다낭(해변 맞은편), 풀만(남쪽 끝 박미안 해변) 위치</li>",
+  "reason": "Sheraton Grand and Hilton are not on My Khe; Radisson across road; Pullman on Bac My An strip"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<li>하얏트 리젠시 위치</li>",
+  "after": "<li>하얏트 리젠시, 쉐라톤 그랜드 위치</li>",
+  "reason": "Sheraton Grand is on Non Nuoc / Truong Sa coast"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 직접 접근</span>\n      </div>\n      <div class=\"hotel-meta\">\n        <span><strong>위치:</strong> 미케 비치 중심 (안트엉 거리 도보 5분)</span>",
+  "after": "<span class=\"hotel-tag\">논억 비치 직접 접근</span>\n      </div>\n      <div class=\"hotel-meta\">\n        <span><strong>위치:</strong> 논억 비치 쪽 쯔엉사 해안 (미케 비치 남쪽, 용다리까지 도로로 약 16분, 경로 추정)</span>",
+  "reason": "Sheraton Grand is on Non Nuoc coast, not My Khe center"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "로비에서 곧바로 미케 비치로 나갈 수 있습니다. 해변 구역에 쉐라톤 전용 선베드가 배치되어 있습니다. 위치가 가장 좋은 곳 중 하나로, 저녁에 걸어서 안트엉 거리 해산물 식당을 이용할 수 있습니다.",
+  "after": "해변으로 직접 나갈 수 있는 비치프론트 리조트로, 미케 비치가 아니라 논억 비치 쪽 쯔엉사 해안에 있습니다. 안트엉 거리 식당가와는 도로로 약 8km 떨어져 있어 외식은 그랩이 필요합니다.",
+  "reason": "Not on My Khe; not walkable to An Thuong"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<strong>해변 접근:</strong> 직접 접근, 전용 선베드 구역 있음. <strong>약점:</strong> 수영장 규모가 하얏트보다 작고, 성수기에는 투숙객 수가 많아 붐빕니다. 해변 중심부라 7~8월에는 주변이 혼잡합니다.",
+  "after": "<strong>해변 접근:</strong> 직접 접근. <strong>약점:</strong> 안트엉 거리 등 식당가와 떨어져 있어 외출 시 그랩이 필요합니다.",
+  "reason": "Not in busy My Khe center"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "래디슨 블루 리조트 다낭",
+  "after": "래디슨 호텔 다낭",
+  "reason": "Property is Radisson Hotel Danang"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<span class=\"hotel-tag\">가성비 해변 호텔</span>\n      </div>\n      <div class=\"hotel-meta\">\n        <span><strong>위치:</strong> 미케 비치 (안트엉 거리 도보 5분)</span>",
+  "after": "<span class=\"hotel-tag\">가성비 해변 호텔</span>\n      </div>\n      <div class=\"hotel-meta\">\n        <span><strong>위치:</strong> 미케 비치 북쪽 (손짜 쪽, 해변 맞은편 도로 건너)</span>",
+  "reason": "Radisson is My Khe, Son Tra side, across the road"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "쉐라톤과 비슷한 위치에 있지만 가격이 약 20~30% 저렴합니다. 미케 비치 해변 직접 접근이 가능하고 수영장이 넓습니다. 쉐라톤보다 브랜드 인지도는 낮지만 시설 대비 가격이 합리적입니다. 안트엉 거리를 걸어서 이용할 수 있는 위치입니다.",
+  "after": "미케 비치 맞은편(도로 건너)에 있어 해변 접근이 좋고 루프탑 인피니티 풀이 있습니다. 시설 대비 가격이 합리적인 편입니다.",
+  "reason": "Across the road; removed Sheraton comparison and An Thuong walkability"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<strong>해변 접근:</strong> 직접 접근 가능. <strong>이런 분에게 맞음:</strong> 위치는 쉐라톤급이면서 예산을 절약하고 싶은 분.",
+  "after": "<strong>해변 접근:</strong> 도로 건너 맞은편. <strong>이런 분에게 맞음:</strong> 해변 가까운 호텔을 예산을 아끼며 찾는 분.",
+  "reason": "Across the road"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<strong>위치:</strong> 미케 비치 북쪽 끝 (안트엉 거리에서 도보 10~15분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 끝 박미안 해변 (응우한선군, 안트엉 거리는 그랩 이동 권장)",
+  "reason": "Pullman is on Bac My An strip"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<span class=\"hotel-tag\">미케 북쪽 · 조용한 구간</span>",
+  "after": "<span class=\"hotel-tag\">미케 남쪽 끝 · 조용한 구간</span>",
+  "reason": "Pullman is not north My Khe"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "미케 비치 북쪽 구간에 위치해 중심부보다 조용합니다.",
+  "after": "미케 비치 남쪽 끝 박미안 해변에 위치해 중심부보다 조용합니다.",
+  "reason": "Pullman on Bac My An strip"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "7~8월 성수기에도 중심부 쉐라톤 앞 해변보다 한적한 편입니다. 안트엉 거리 식당들은 걸어서 15분 이내로 이용 가능합니다.",
+  "after": "7~8월 성수기에도 안트엉 거리 앞 중심부 해변보다 한적한 편입니다. 식당가는 도보권이 아니라 그랩 이동이 현실적입니다.",
+  "reason": "Sheraton center-beach reference wrong; An Thuong not within 15 min walk"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "주의:</strong> 식당가까지 도보로 쉐라톤보다 거리가 있습니다.",
+  "after": "주의:</strong> 식당가까지 도보로는 멀어 그랩이 필요합니다.",
+  "reason": "Sheraton comparison removed"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "5개의 수영장, 어른 전용 풀, 키즈풀이 분리되어 있습니다.",
+  "after": "야외 수영장 5개(어른 전용 풀, 키즈풀 포함)가 있습니다.",
+  "reason": "Hyatt has five outdoor pools"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "미케 비치 도심 분위기를 원한다면 쉐라톤이 낫습니다.",
+  "after": "미케 비치 도심 분위기를 원한다면 미케 비치 쪽 호텔이 낫습니다.",
+  "reason": "Sheraton is not in My Khe center"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<span class=\"hotel-tag\">시내 접근성 + 해변</span>",
+  "after": "<span class=\"hotel-tag\">시내 접근성 (해변은 차로 이동)</span>",
+  "reason": "Hilton is a city hotel, not on the beach"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<strong>위치:</strong> 미케 비치 (시내와 해변 사이)",
+  "after": "<strong>위치:</strong> 한강 서쪽 강변 (미케 비치까지 약 4km)",
+  "reason": "Hilton is on the Han River west bank, ~4 km from My Khe"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "미케 비치에 접해 있으면서 시내 접근성도 갖춘 호텔입니다.",
+  "after": "한강변 시내에 있어 시내 접근성이 좋은 호텔로, 해변까지는 차로 이동해야 합니다.",
+  "reason": "Hilton is not beach-adjacent"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "수영장은 중간 규모이고 해변 선베드 이용이 가능합니다. 가격대가 쉐라톤보다 합리적이면서 위치는 비슷합니다.",
+  "after": "수영장은 중간 규모입니다. 해변이 아닌 시내 위치가 장점인 호텔입니다.",
+  "reason": "Hilton has no beach sunbeds; location not similar to Sheraton"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "<strong>해변 접근:</strong> 미케 비치 직접 접근.",
+  "after": "<strong>해변 접근:</strong> 직접 접근 불가, 미케 비치까지 차로 이동.",
+  "reason": "Hilton is not beachfront"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "쉐라톤 그랜드, 래디슨 블루, 풀만, 하얏트 리젠시, 힐튼 다낭은 모두 실제 해변 직접 접근이 가능한 곳입니다.",
+  "after": "쉐라톤 그랜드, 풀만, 하얏트 리젠시는 해변 직접 접근이 가능하고, 래디슨 호텔 다낭은 도로 하나를 건너면 해변입니다. 힐튼 다낭은 시내 호텔로 해변 접근이 되지 않습니다.",
+  "reason": "Radisson across the road; Hilton city hotel (2 occurrences)"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "풀만(미케 비치 북쪽 한적한 구간)",
+  "after": "풀만(미케 비치 남쪽 끝 박미안 해변)",
+  "reason": "Pullman is on Bac My An strip (2 occurrences)"
+ },
+ {
+  "file": "kr/da-nang-beach-hotels.html",
+  "before": "쉐라톤·래디슨·풀만·하얏트·힐튼 실용 정보",
+  "after": "쉐라톤 그랜드·래디슨 호텔 다낭·풀만·하얏트 실용 정보",
+  "reason": "Hilton is not a beach hotel; Radisson name"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 (안트엉 거리 도보 5분)",
+  "after": "<strong>위치:</strong> 논억 비치 쪽 쯔엉사 해안 (미케 비치 남쪽, 용다리까지 도로로 약 16분, 경로 추정)",
+  "reason": "Sheraton Grand is on Truong Sa coast, not My Khe"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "아이와 함께 다낭 곳곳을 탐방하고 싶은 가족에게 위치가 가장 편리합니다. 저녁에 아이들 손을 잡고 안트엉 거리 해산물 식당을 걸어서 이용할 수 있습니다.",
+  "after": "인피니티 풀과 워터슬라이드 같은 시설이 있어 리조트 중심 가족 여행에 맞습니다. 안트엉 거리 식당가와는 떨어져 있어 외식에는 그랩이 필요합니다.",
+  "reason": "Not walkable to An Thuong"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "수영장 규모는 하얏트보다 작지만 해변이 바로 앞입니다.",
+  "after": "해변 직접 접근이 가능합니다.",
+  "reason": "Remove unsupported pool size comparison"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "리조트 휴양과 관광지 탐방을 함께 원하는 가족, 한국어 지원이 중요한 분.",
+  "after": "리조트 휴양 중심 가족, 한국어 지원이 중요한 분.",
+  "reason": "Location not convenient for sightseeing"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 북쪽 (안트엉 거리 도보 15분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 끝 박미안 해변 (안트엉 거리는 그랩 이동 권장)",
+  "reason": "Pullman is on Bac My An strip"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "미케 비치 북쪽에 위치해 중심부보다 조용하고,",
+  "after": "미케 비치 남쪽 끝 박미안 해변에 위치해 중심부보다 조용하고,",
+  "reason": "Pullman is on Bac My An strip"
+ },
+ {
+  "file": "kr/family-hotels-da-nang.html",
+  "before": "일반 5성급 리조트(하얏트, 쉐라톤, 풀만 등)는 워터파크가 없고",
+  "after": "일반 5성급 리조트(하얏트, 풀만 등)는 워터파크가 없고",
+  "reason": "Sheraton Grand lists water park/slide (2 occurrences)"
+ },
+ {
+  "file": "kr/index.html",
+  "before": "두 곳 모두 미케 비치에 위치해 있어 저녁 외출이 편합니다.",
+  "after": "두 곳 모두 논억 비치 쪽에 있어 저녁 외출에는 그랩이 필요합니다.",
+  "reason": "Hyatt and Sheraton Grand are on the Non Nuoc coast, not My Khe"
+ },
+ {
+  "file": "kr/index.html",
+  "before": "두 곳 모두 미케 비치에 위치해 저녁 외출이 편합니다.",
+  "after": "두 곳 모두 논억 비치 쪽에 있어 저녁 외출에는 그랩이 필요합니다.",
+  "reason": "Hyatt and Sheraton Grand are on the Non Nuoc coast, not My Khe (JSON-LD)"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "쉐라톤 그랜드 다낭 — 미케 비치 위치, 한식당 도보 거리",
+  "after": "쉐라톤 그랜드 다낭 — 논억 비치 쪽 쯔엉사 해안, 외출은 그랩",
+  "reason": "Sheraton Grand is not on My Khe / not walkable to restaurants"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "미케 비치 위치 · 과소평가된 선택",
+  "after": "논억 비치 위치 · 가족형 리조트",
+  "reason": "Sheraton Grand on Non Nuoc coast"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "다낭에서 가장 과소평가된 5성급 리조트 중 하나입니다. 미케 비치에 직접 면해 있어 안트엉 거리 한식당까지 도보 5분 거리입니다. 하얏트보다 수영장이 작고 해변이 약간 붐비지만, 저녁에 걸어서 외출할 수 있다는 점이 결정적입니다.",
+  "after": "인피니티 풀과 워터슬라이드 시설이 있는 5성급 리조트로, 논억 비치 쪽 쯔엉사 해안도로에 있습니다. 미케 비치의 안트엉 거리 한식당과는 도로로 약 8km 떨어져 있어 식사 외출에는 그랩이 필요합니다.",
+  "reason": "Not on My Khe; not 5 min walk to Korean restaurants"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "<strong>장점:</strong> 5성급이면서 한식당 도보 거리. 해변 직접 접근. <strong>단점:</strong> 수영장 규모가 하얏트보다 작음.",
+  "after": "<strong>장점:</strong> 5성급, 해변 직접 접근, 워터슬라이드 시설. <strong>단점:</strong> 한식당 도보 접근 불가, 외출 시 그랩 필요.",
+  "reason": "Sheraton Grand not near Korean restaurants"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "미케 남부라 안트엉 거리까지 걸어가기엔 멀지만 그랩으로 5분입니다.",
+  "after": "미케 비치 남쪽 끝 박미안 해변이라 안트엉 거리까지 걸어가기엔 멀어 그랩으로 이동하는 것이 현실적입니다.",
+  "reason": "Pullman on Bac My An strip; 5-min Grab figure unsupported"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "<span><strong>위치:</strong> 미케 비치</span>",
+  "after": "<span><strong>위치:</strong> 논억 비치 쪽 쯔엉사 해안 (미케 비치 남쪽)</span>",
+  "reason": "Sheraton Grand is on Truong Sa coast"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "<span><strong>위치:</strong> 미케 남부</span>",
+  "after": "<span><strong>위치:</strong> 미케 비치 남쪽 끝 박미안 해변</span>",
+  "reason": "Pullman is on Bac My An strip"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "<span><strong>위치:</strong> 미케 남부</span>",
+  "after": "<span><strong>위치:</strong> 미케 비치 남쪽 박미안 해변</span>",
+  "reason": "Furama is on Bac My An strip"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "<span><strong>위치:</strong> 미케 비치 인근</span>",
+  "after": "<span><strong>위치:</strong> 미케 비치 남쪽 해안 (응우한선군)</span>",
+  "reason": "TIA is on southern My Khe / Bac My An strip (Ngu Hanh Son)"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "쉐라톤은 미케 비치 도심에 접해 있어 저녁 외출이 편리합니다.",
+  "after": "쉐라톤 그랜드는 논억 비치 쪽 쯔엉사 해안에 있어 조용하지만 저녁 외출에는 그랩이 필요합니다.",
+  "reason": "Sheraton Grand is not on My Khe city beach (2 occurrences)"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<td><strong>쉐라톤 그랜드</strong></td><td>미케 비치</td><td>$160~280 (약 21~36만원)</td><td>외출 선호, 한국인 친화</td>",
+  "after": "<td><strong>쉐라톤 그랜드</strong></td><td>논억 비치 (쯔엉사 해안)</td><td>$160~280 (약 21~36만원)</td><td>해변 리조트, 한국인 친화</td>",
+  "reason": "Sheraton Grand on Non Nuoc / Truong Sa coast"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<td><strong>풀만</strong></td><td>미케 비치 북쪽</td>",
+  "after": "<td><strong>풀만</strong></td><td>미케 비치 남쪽 끝 (박미안)</td>",
+  "reason": "Pullman on Bac My An strip"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "5개 레인 수영장,",
+  "after": "야외 수영장 5개,",
+  "reason": "Hyatt has five outdoor pools"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<span class=\"hotel-tag\">미케 비치 직접 접근</span>",
+  "after": "<span class=\"hotel-tag\">논억 비치 직접 접근</span>",
+  "reason": "Sheraton Grand on Non Nuoc coast"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 중심 (안트엉 거리 도보 5분)",
+  "after": "<strong>위치:</strong> 논억 비치 쪽 쯔엉사 해안 (용다리까지 도로로 약 16분, 경로 추정)",
+  "reason": "Sheraton Grand not in My Khe center"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "미케 비치에 직접 붙어 있는 5성급 호텔 중 위치가 가장 편리합니다. 저녁에 안트엉 거리 해산물 식당들을 걸어서 이용할 수 있고, 한 시장까지 그랩으로 5분입니다.",
+  "after": "논억 비치 쪽 쯔엉사 해안도로에 있는 비치프론트 5성급 리조트입니다. 안트엉 거리 식당가와는 도로로 약 8km 떨어져 있어 외출은 그랩이 필요하고, 한 시장까지는 도로로 약 16분(경로 추정)입니다.",
+  "reason": "Not on My Khe; Han Market 16 min by road"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "수영장은 하얏트보다 작지만 해변이 바로 앞이라 크게 문제 되지 않습니다.",
+  "after": "인피니티 풀과 워터슬라이드 시설이 있습니다.",
+  "reason": "Remove unsupported pool comparison"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<strong>위치 강점:</strong> 해변과 식당가 모두 도보 권내. 그랩으로 어디든 이동이 쉬운 위치.",
+  "after": "<strong>위치 특징:</strong> 해변 직접 접근은 좋지만 식당가는 도보권이 아닙니다.",
+  "reason": "Not within walking distance of restaurant strip"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "<strong>위치:</strong> 미케 비치 북쪽 (안트엉 거리에서 도보 10~15분)",
+  "after": "<strong>위치:</strong> 미케 비치 남쪽 끝 박미안 해변 (안트엉 거리는 그랩 이동 권장)",
+  "reason": "Pullman on Bac My An strip"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "미케 비치 북쪽 끝에 위치해 주변이 쉐라톤 주변보다 조용합니다.",
+  "after": "미케 비치 남쪽 끝 박미안 해변에 위치해 중심부보다 조용합니다.",
+  "reason": "Pullman on Bac My An strip"
+ },
+ {
+  "file": "kr/luxury-hotels-da-nang.html",
+  "before": "주의:</strong> 주변 식당 접근성이 쉐라톤보다 약간 떨어집니다.",
+  "after": "주의:</strong> 안트엉 거리 식당가까지는 그랩 이동이 필요합니다.",
+  "reason": "Sheraton comparison removed"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "미케 북쪽 (힐튼 구역)",
+  "after": "미케 북쪽 (래디슨 구역)",
+  "reason": "Hilton is a Han River city hotel, not on north My Khe"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "힐튼 다낭, 쉐라톤 그랜드 다낭이 있는 미케 북부입니다.",
+  "after": "래디슨 호텔 다낭(해변 맞은편)이 있는 미케 북부, 손짜 쪽 구역입니다.",
+  "reason": "Hilton/Sheraton Grand are not in north My Khe; Radisson Hotel Danang is"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "용다리, 한 시장, 콘 시장이 도보 거리이고 쇼핑과 시내 관광에 편리합니다.",
+  "after": "용다리, 한 시장, 콘 시장이 차로 3분 안팎(경로 추정)이라 쇼핑과 시내 관광에 편리합니다. 도보로는 한 시장까지 노보텔 약 16분, 그랜드 머큐어 약 36분, 용다리까지 노보텔 약 32분이 걸립니다.",
+  "reason": "Novotel/Grand Mercure are not a short walk from Han Market/Dragon Bridge"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "쉐라톤 그랜드 다낭 (미케 북부)",
+  "after": "쉐라톤 그랜드 다낭 (논느억)",
+  "reason": "Sheraton Grand is on Non Nuoc coast"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "미케 비치에 직접 면한 5성급. 안트엉 거리 도보 5분,",
+  "after": "논느억 쪽 쯔엉사 해안에 직접 면한 5성급. 안트엉 거리까지는 도로로 약 8km라 그랩 필요,",
+  "reason": "Not on My Khe; not 5 min walk to An Thuong"
+ },
+ {
+  "file": "kr/where-koreans-stay-in-da-nang.html",
+  "before": "용다리 야경, 한 시장 도보 거리, 롯데마트 15분.",
+  "after": "용다리 야경(차로 약 3분, 도보 약 32분), 한 시장 도보 약 16분, 롯데마트 15분.",
+  "reason": "Novotel walk times from routes.json"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "활기를 원한다면 북쪽 힐튼 구역을 선택하세요.",
+  "after": "활기를 원한다면 북쪽 래디슨 구역을 선택하세요.",
+  "reason": "Hilton is a Han River city hotel, not on north My Khe (2 occurrences)"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "미케 북쪽 (힐튼 구역)",
+  "after": "미케 북쪽 (래디슨 구역)",
+  "reason": "Hilton is not on north My Khe"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "힐튼 다낭과 쉐라톤이 위치한 구역입니다.",
+  "after": "래디슨 호텔 다낭(해변 맞은편)이 위치한 구역입니다.",
+  "reason": "Hilton/Sheraton Grand are not on north My Khe"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "<span class=\"hotel-tag\">미케 북부</span>\n    </div>\n    <div class=\"hotel-meta\">\n      <span><strong>위치:</strong> 미케 북부, 해변 직접 접근</span>",
+  "after": "<span class=\"hotel-tag\">한강변 시내</span>\n    </div>\n    <div class=\"hotel-meta\">\n      <span><strong>위치:</strong> 한강 서쪽 강변 (미케 비치까지 약 4km)</span>",
+  "reason": "Hilton is a city riverside hotel, not beachfront; kept as a reference entry (does not really belong in a My Khe list)"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "미케 비치 북부의 랜드마크 호텔입니다. 인피니티 풀이 인상적이고 해변 접근성이 최상입니다. 로비에서 직접 해변으로 나갈 수 있습니다. 주변에 레스토랑과 카페가 많고 야간 분위기도 좋습니다.",
+  "after": "한강변 시내에 있는 호텔로 미케 비치 구역이 아니며, 해변은 차로 이동해야 합니다. 한 시장까지 도보 약 7분이라 시내 관광과 쇼핑에 편리합니다.",
+  "reason": "Hilton has no direct beach access; Han Market 7 min walk"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "<strong>장점:</strong> 해변 직접 접근, 5성급 시설. <strong>단점:</strong> 성수기에 수영장이 혼잡하고 가격이 빠르게 오릅니다.",
+  "after": "<strong>장점:</strong> 5성급 시설, 시내 접근성. <strong>단점:</strong> 해변 직접 접근 불가, 가격이 빠르게 오릅니다.",
+  "reason": "Hilton is not beachfront"
+ },
+ {
+  "file": "kr/why-koreans-love-my-khe-beach.html",
+  "before": "논느억(Non Nuoc) 해변의 하얏트나 인터컨티넨탈에 묵으면",
+  "after": "논느억(Non Nuoc) 해변의 하얏트나 쉐라톤 그랜드에 묵으면",
+  "reason": "InterContinental is on Son Tra, not Non Nuoc"
+ },
+ {
+  "file": "kr/where-to-stay-in-da-nang.html",
+  "before": "하얏트·멜리아·인터컨티넨탈 같은 대형 리조트가 있지만",
+  "after": "하얏트·멜리아·쉐라톤 그랜드 같은 대형 리조트가 있지만",
+  "reason": "InterContinental is on Son Tra, not Non Nuoc"
+ },
+ {
+  "file": "kr/where-to-stay-in-da-nang.html",
+  "before": "미케 비치 남쪽으로 약 10km, 마블 마운틴 근처에 있는 구역입니다. 하얏트 리젠시, 멜리아, 인터컨티넨탈(손짜와 다른 위치)이 이 구역에 모여 있습니다.",
+  "after": "미케 비치 남쪽 끝에서 도로로 약 7~10km, 마블 마운틴 근처에 있는 구역입니다. 하얏트 리젠시, 멜리아, 쉐라톤 그랜드 같은 대형 리조트가 이 구역에 모여 있습니다(인터컨티넨탈은 손짜 반도에 있어 이 구역이 아닙니다).",
+  "reason": "InterContinental is on Son Tra; Sheraton Grand on Truong Sa coast"
+ },
+ {
+  "file": "kr/korean-friendly-resorts-da-nang.html",
+  "before": "5개 레인으로 나뉜 수영장",
+  "after": "야외 수영장 5개",
+  "reason": "Hyatt has five outdoor pools; \"5개 레인\" mistranslation"
+ }
+]

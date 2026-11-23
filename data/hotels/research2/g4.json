@@ -1,0 +1,804 @@
+{
+ "tia-wellness-resort-da-nang": {
+  "official_name": "TIA Wellness Resort",
+  "brand": "TIA Wellness Resort (independent)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Fusion Maia Da Nang (wellness roots from 2008 as Fusion Maia, per TIA story)"
+  ],
+  "name_note": "Official site says TIA's wellness roots began in 2008 as Fusion Maia; the property appears to have been rebranded to TIA (site favicon uploads dated 2026-02). Our review name matches the current official name.",
+  "address": "109 Vo Nguyen Giap Street, Ngu Hanh Son Ward, Danang City, Viet Nam",
+  "ward_district": "Ngu Hanh Son Ward",
+  "neighborhood_group": "south-my-khe",
+  "neighborhood_note": "Sits on Vo Nguyen Giap coastal road in Ngu Hanh Son ward, ~3 km south of the Furama/Pullman cluster's north edge; official site says 10 min from heart of Danang, 15 min from airport, 20 min from Hoi An. Not the central My Khe strip our review implies.",
+  "website": "https://tiawellnessresort.com/",
+  "lat": 16.03117,
+  "lng": 108.2551994,
+  "coord_source": "Nominatim (OSM) 'Tia Wellness Resort, Duong Vo Nguyen Giap, Phuong Ngu Hanh Son' - building match",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 6.33,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 12.46,
+    "minutes": 14.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 4.43,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 6.85,
+    "minutes": 8.7,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 5.29,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 7.0,
+    "minutes": 8.5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 18.58,
+    "minutes": null,
+    "method": "great-circle from hotel coords",
+    "source": "coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 21.67,
+    "minutes": 25.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.2,
+    "minutes": null,
+    "method": "great-circle from hotel coords to nearest OSM coastline vertex (Overpass natural=coastline)",
+    "source": "https://overpass.kumi.systems/api/interpreter"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.72,
+    "minutes": 2.6,
+    "method": "OSRM car route estimate (no traffic) to nearest coastline vertex; includes road snapping",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.69,
+    "minutes": 9.2,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest coastline vertex; walk time depends on snapping to nearest path",
+    "source": "https://routing.openstreetmap.de"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Official: 'situated on a stunning beachfront'; ocean-front villas. OSM coastline ~0.2 km from hotel coordinate point.",
+   "sources": [
+    "https://tiawellnessresort.com/",
+    "https://overpass.kumi.systems/api/interpreter"
+   ]
+  },
+  "pools": [
+   {
+    "type": "other",
+    "note": "Private pool in every villa (garden courtyard private swimming pool; larger pools at ocean-front 2/3-bedroom villas). Review calls these 'plunge pools'; official says 'swimming pool'.",
+    "sources": [
+     "https://tiawellnessresort.com/pool-villas/"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Heated Wellness Pool (up to 30C) in Wellness Centre",
+    "sources": [
+     "https://tiawellnessresort.com/explore/"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Poolside Ocean Bistro implies a shared pool area (not separately described)",
+    "sources": [
+     "https://tiawellnessresort.com/nourish/"
+    ]
+   }
+  ],
+  "pool_summary": "Private pool per villa plus a heated wellness pool in the wellness centre; no rooftop pool.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://tiawellnessresort.com/",
+    "https://www.tiawellnessresort.com/contact",
+    "https://tiawellnessresort.com/pool-villas/",
+    "https://tiawellnessresort.com/explore/"
+   ],
+   "note": "No rooftop pool/bar appears on any official page opened (absence of evidence)."
+  },
+  "club_lounge": {
+   "value": "no",
+   "name": "",
+   "details": "None listed; villa-only resort. Art Lounge is a cafe/bar.",
+   "sources": [
+    "https://tiawellnessresort.com/nourish/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://tiawellnessresort.com/explore/"
+   ]
+  },
+  "family_facilities": [
+   "Kids Wellness Club",
+   "Two- and three-bedroom villas"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "The Dining Room",
+   "The Ocean Bistro",
+   "The Art Lounge",
+   "In-room/destination dining"
+  ],
+  "room_categories": [
+   "One-Bedroom Private Pool Villa",
+   "Two-Bedroom Private Pool Villa",
+   "Two-Bedroom Private Pool Villa (Ocean Front)",
+   "Three-Bedroom Private Pool Villa (Ocean Front)"
+  ],
+  "multi_bedroom_options": "2- and 3-bedroom villas (ocean-front 2 and 3 bedroom)",
+  "distinctive_amenities": [
+   "22 treatment rooms",
+   "two steam rooms and saunas",
+   "two hydrotherapy rooms",
+   "two indoor yoga studios",
+   "Technogym cardio and strength gyms",
+   "organic biodynamic wine list",
+   "Wellness Inclusive / Retreat Inclusive / Private Retreats programmes"
+  ],
+  "claims_check": [
+   {
+    "claim": "the nightly rate covers accommodation, all meals, unlimited spa treatments, yoga classes... / Meals: All-inclusive / Spa: Unlimited included",
+    "verdict": "contradicted",
+    "evidence": "Official Wellness Inclusive: private pool villa with ALL-DAY BREAKFAST, 2 wellness treatments (80 min total) per person per night, daily minibar, classes. Full-board plant-based meals only on Retreat Inclusive. Not unlimited spa, not all meals in base plan (a la carte restaurants exist).",
+    "sources": [
+     "https://tiawellnessresort.com/",
+     "https://tiawellnessresort.com/nourish/"
+    ]
+   },
+   {
+    "claim": "just 58 rooms and villas",
+    "verdict": "unverifiable",
+    "evidence": "Official pages opened give no total room count.",
+    "sources": [
+     "https://tiawellnessresort.com/pool-villas/"
+    ]
+   },
+   {
+    "claim": "All rooms are private villas with plunge pools",
+    "verdict": "supported",
+    "evidence": "All categories are private pool villas; official says private swimming pool in garden courtyard (larger than a plunge pool at ocean-front villas).",
+    "sources": [
+     "https://tiawellnessresort.com/pool-villas/"
+    ]
+   },
+   {
+    "claim": "Area: My Khe Beach / On My Khe Beach",
+    "verdict": "contradicted",
+    "evidence": "Official address is 109 Vo Nguyen Giap, Ngu Hanh Son Ward, south of My Khe proper; coordinates 16.031,108.255. Beachfront on the same long Da Nang beach but in the south, not the My Khe strip.",
+    "sources": [
+     "https://www.tiawellnessresort.com/contact",
+     "https://nominatim.openstreetmap.org"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge is 12 minutes by Grab",
+    "verdict": "contradicted",
+    "evidence": "OSRM car estimate 6.85 km / 8.7 min without traffic (4.4 km straight). Official says 10 min from city heart. 12 min plausible with traffic; mark as unverifiable-to-slightly-high.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Hoi An is 30 minutes by car",
+    "verdict": "unverifiable",
+    "evidence": "Corrected Hoi An point (15.8794,108.328): OSRM 21.7 km / 25.8 min without traffic; official site says 20 min. 30 min plausible with traffic.",
+    "sources": [
+     "https://www.tiawellnessresort.com/contact",
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "the airport is about 7km away",
+    "verdict": "contradicted",
+    "evidence": "OSRM 12.5 km / 14.8 min by road (6.3 km straight line). 7 km only matches the straight line; official says 15 min.",
+    "sources": [
+     "https://www.tiawellnessresort.com/contact",
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "no rooftop bar",
+    "verdict": "supported",
+    "evidence": "No rooftop bar or pool on official pages.",
+    "sources": [
+     "https://tiawellnessresort.com/",
+     "https://www.tiawellnessresort.com/contact",
+     "https://tiawellnessresort.com/pool-villas/",
+     "https://tiawellnessresort.com/explore/"
+    ]
+   },
+   {
+    "claim": "yoga, breathwork, tai chi classes",
+    "verdict": "supported",
+    "evidence": "Breathwork master class, Vinyasa, Hatha, HIIT listed; tai chi appears in Kids Wellness Club; not confirmed for adults.",
+    "sources": [
+     "https://tiawellnessresort.com/",
+     "https://tiawellnessresort.com/explore/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official domain tiawellnessresort.com opened directly. Operator/owner not found. Beach distance is nearest OSM coastline vertex from the building point, not a measured walk. Hoi An figures recomputed with corrected coordinates 15.8794,108.3280."
+ },
+ "pullman-da-nang": {
+  "official_name": "Pullman Danang Beach Resort",
+  "brand": "Pullman (Accor)",
+  "operator_owner": "Accor (management); owner unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Official name 'Pullman Danang Beach Resort' confirmed; our review title 'Pullman Da Nang Beach Resort' differs only in spacing.",
+  "address": "101 Vo Nguyen Giap Street, Ngu Hanh Son Ward, 550000 Danang, Vietnam",
+  "ward_district": "Ngu Hanh Son Ward",
+  "neighborhood_group": "south-my-khe",
+  "neighborhood_note": "Official 2025/26 news states the resort is 'on the shores of Bac My An beach'; Accor lists Marble Mountain 5 min drive. This is the south coast stretch, not My Khe proper.",
+  "website": "https://www.pullman-danang.com/",
+  "lat": 16.0406291,
+  "lng": 108.250121,
+  "coord_source": "Official hotel website location page (Latitude/Longitude); Nominatim returned no result",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.66,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 11.18,
+    "minutes": 13.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 3.29,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 5.57,
+    "minutes": 6.9,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 4.14,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 5.72,
+    "minutes": 6.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 19.77,
+    "minutes": null,
+    "method": "great-circle from hotel coords",
+    "source": "coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 22.83,
+    "minutes": 26.9,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.31,
+    "minutes": null,
+    "method": "great-circle from hotel coords to nearest OSM coastline vertex (Overpass natural=coastline)",
+    "source": "https://overpass.kumi.systems/api/interpreter"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.57,
+    "minutes": 1.9,
+    "method": "OSRM car route estimate (no traffic) to nearest coastline vertex; includes road snapping",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.63,
+    "minutes": 8.4,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest coastline vertex; walk time depends on road snapping",
+    "source": "https://routing.openstreetmap.de"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Accor: 'beachfront oasis'; Azure Beach Lounge on the beach; ocean-facing infinity pool.",
+   "sources": [
+    "https://all.accor.com/hotel/8838/index.en.shtml",
+    "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool"
+   ]
+  },
+  "pools": [
+   {
+    "type": "infinity",
+    "note": "Outdoor infinity pool facing the ocean with Krislite fibre-optic 'starry sky' lighting",
+    "sources": [
+     "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool"
+    ]
+   },
+   {
+    "type": "other",
+    "note": "Accor guest-review text mentions a cold pool in the spa; Infinity Bar views 'infinity ponds, outdoor pool'. Kids pool appears in listing snippets (search results only, not opened) - unverified.",
+    "sources": [
+     "https://all.accor.com/hotel/8838/index.en.shtml"
+    ]
+   }
+  ],
+  "pool_summary": "One main outdoor infinity pool (starry-sky lighting) confirmed officially; additional pool count conflicts across listings (1 vs 2 pools in snippets) and is unverified. No rooftop pool.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://www.pullman-danang.com/",
+    "https://www.pullman-danang.com/the-resort/location/",
+    "https://all.accor.com/hotel/8838/index.en.shtml"
+   ],
+   "note": "No rooftop facility on official pages; bars are Infinity Bar and Azure Beach Lounge (ground level)."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "No Executive Lounge found on official/Accor pages opened. Only a Traveloka snippet (not opened) mentions one for an Executive Suite.",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.pullman-danang.com/"
+   ]
+  },
+  "family_facilities": [
+   "Cwing Kids' Club",
+   "Family Connecting Room",
+   "Junior Family Suite",
+   "Family Suite (two bedrooms)",
+   "One- and two-bedroom cottages"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Epice",
+   "Azure Beach Lounge",
+   "Infinity Bar"
+  ],
+  "room_categories": [
+   "Superior",
+   "Family Connecting Room",
+   "Deluxe",
+   "Deluxe Partial Ocean View",
+   "Deluxe Ocean View",
+   "Junior Suite",
+   "Junior Family Suite",
+   "Family Suite",
+   "Penthouse Suite",
+   "One-bedroom cottage",
+   "Two-bedroom cottage"
+  ],
+  "multi_bedroom_options": "Two-bedroom Family Suite, one-/two-bedroom cottages",
+  "distinctive_amenities": [
+   "Starry-sky fibre-optic pool",
+   "The Nang Spa",
+   "Fit Lounge",
+   "tennis/pickleball/padel",
+   "S\u00f3ng water sports",
+   "Hoi An shuttle",
+   "186 rooms and cottages"
+  ],
+  "claims_check": [
+   {
+    "claim": "Area: My Khe Beach / My Khe Beach, with the restaurant strip 5-10 minutes on foot",
+    "verdict": "contradicted",
+    "evidence": "Official says Bac My An beach; address Vo Nguyen Giap, Ngu Hanh Son. Walking to the My Khe restaurant strip not checked; unverifiable.",
+    "sources": [
+     "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool",
+     "https://www.pullman-danang.com/the-resort/location/"
+    ]
+   },
+   {
+    "claim": "the entrance looks straight through to the infinity pool, and through that to the ocean",
+    "verdict": "supported",
+    "evidence": "Official: infinity pool outdoors facing the ocean; open lobby not independently confirmed.",
+    "sources": [
+     "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool"
+    ]
+   },
+   {
+    "claim": "direct sea views from every room [suites]",
+    "verdict": "contradicted",
+    "evidence": "Accor lists Junior Suite views as garden or pool side; ocean view is only for certain categories (Ocean View Deluxe, some suites).",
+    "sources": [
+     "https://all.accor.com/hotel/8838/index.en.shtml",
+     "https://www.pullman-danang.com/rooms-suites-cottages/"
+    ]
+   },
+   {
+    "claim": "Standard rooms are smaller, around 40 square metres",
+    "verdict": "supported",
+    "evidence": "Accor: Superior and Deluxe max 42 sqm with balcony.",
+    "sources": [
+     "https://all.accor.com/hotel/8838/index.en.shtml"
+    ]
+   },
+   {
+    "claim": "one junior bedroom, one master (suite)",
+    "verdict": "supported",
+    "evidence": "Family Suite has two bedrooms, master with chaise longue and Jacuzzi bath.",
+    "sources": [
+     "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool"
+    ]
+   },
+   {
+    "claim": "The airport is 15 minutes",
+    "verdict": "supported",
+    "evidence": "Official: 15 min; OSRM 11.2 km / 13.1 min (no traffic); straight line 5.7 km.",
+    "sources": [
+     "https://www.pullman-danang.com/",
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Hoi An is 35 minutes by car",
+    "verdict": "unverifiable",
+    "evidence": "Corrected: OSRM 22.8 km / 26.9 min no traffic; Accor says 30 min. 35 slightly high.",
+    "sources": [
+     "https://all.accor.com/hotel/8838/index.en.shtml",
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "the pool is smaller than you'd expect (opinion) / pool: infinity",
+    "verdict": "unverifiable",
+    "evidence": "Opinion; pool size not published.",
+    "sources": [
+     "https://www.pullman-danang.com/the-danang-beach-resort/new-look-for-brand-new-family-suites-and-starlit-pool"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Executive Lounge existence unverified. Pool count not verified from an opened listing (Booking/Expedia blocked). Accor listed distance figures look partly inconsistent (Hoi An 25 km); OSRM used instead. Hoi An figures recomputed with corrected coordinates 15.8794,108.3280."
+ },
+ "furama-resort-da-nang": {
+  "official_name": "Furama Resort Danang",
+  "brand": "Furama Resort (Furama Resort & IBH / Indochina Beach Hotels)",
+  "operator_owner": "Furama Resort Danang (IBH Academy / Furama group)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Furama Resort Da Nang"
+  ],
+  "name_note": "Name matches; 'Danang' vs 'Da Nang' spelling only.",
+  "address": "103-105 Vo Nguyen Giap Street, Ngu Hanh Son Ward, Danang City, Vietnam",
+  "ward_district": "Ngu Hanh Son Ward",
+  "neighborhood_group": "south-my-khe",
+  "neighborhood_note": "Same Vo Nguyen Giap coastal strip as Pullman; official site says 15 min taxi to airport. Our review's 'Bac My An' matches this stretch.",
+  "website": "https://furamavietnam.com/en/",
+  "lat": 16.0397489,
+  "lng": 108.2513386,
+  "coord_source": "Nominatim (OSM) 'Furama Resort, 105 Vo Nguyen Giap, Ngu Hanh Son' - address matches official",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.8,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 11.27,
+    "minutes": 13.4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 3.46,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 5.66,
+    "minutes": 7.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 4.3,
+    "minutes": null,
+    "method": "great-circle from hotel coords to landmark coords",
+    "source": "https://nominatim.openstreetmap.org (coords)"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 5.81,
+    "minutes": 7.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 19.62,
+    "minutes": null,
+    "method": "great-circle from hotel coords",
+    "source": "coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 22.92,
+    "minutes": 27.2,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.21,
+    "minutes": null,
+    "method": "great-circle from hotel coords to nearest OSM coastline vertex (Overpass natural=coastline)",
+    "source": "https://overpass.kumi.systems/api/interpreter"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "driving",
+    "km": 0.74,
+    "minutes": 2.5,
+    "method": "OSRM car route estimate (no traffic) to nearest coastline vertex; includes road snapping",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.2,
+    "minutes": 2.7,
+    "method": "OSRM foot route (routing.openstreetmap.de) to nearest coastline vertex; unlike TIA/Pullman, route snaps near beach path",
+    "source": "https://routing.openstreetmap.de"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Official: 'along Danang Beach's white sands', beachfront villas, wedding 'beachfront setting'.",
+   "sources": [
+    "https://furamavietnam.com/en/",
+    "https://furamavietnam.com/en/recreation/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "other",
+    "note": "Freshwater 'lagoon pool' with rooms overlooking it (official).",
+    "sources": [
+     "https://furamavietnam.com/en/"
+    ]
+   },
+   {
+    "type": "outdoor",
+    "note": "Second outdoor pool: official lists 'Swimming Pools' plural and non-resident pool access; 'Ocean Pool' name unconfirmed. Search-result snippets from Booking/Expedia (not opened) say 2 outdoor + kids pool.",
+    "sources": [
+     "https://furamavietnam.com/en/recreation/"
+    ]
+   }
+  ],
+  "pool_summary": "Lagoon pool confirmed officially; pools plural per official amenity list; exact 'Ocean Pool' naming and count unverified. No rooftop pool.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://furamavietnam.com/en/"
+   ],
+   "note": "Low-rise resort; no rooftop facility found."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "Business Lounge",
+   "details": "Official lists a Business Lounge for workation; no club lounge benefits found.",
+   "sources": [
+    "https://furamavietnam.com/en/accommodation/rooms-suites/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://furamavietnam.com/en/recreation/restaurants-bars/"
+   ]
+  },
+  "family_facilities": [
+   "Kids Club",
+   "Family Room by Balcony",
+   "Activities for kids"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Cafe Indochine (from review, not verified)",
+   "see official Restaurants & Bars page"
+  ],
+  "room_categories": [
+   "Lagoon Superior",
+   "Garden Superior",
+   "Garden Deluxe",
+   "Ocean Deluxe",
+   "Ocean Studio Suite",
+   "Ocean Suite",
+   "Presidential Suite",
+   "Family Room by Balcony",
+   "Private Pool & Beachfront Villas"
+  ],
+  "multi_bedroom_options": "68 villas (private pool and beachfront); bedroom counts not opened",
+  "distinctive_amenities": [
+   "198 rooms/suites + 68 pool villas",
+   "V-Senses Spa",
+   "water sports",
+   "Culinary Heritage theme"
+  ],
+  "claims_check": [
+   {
+    "claim": "Furama sits on Bac My An Beach, about 8km south of the city centre",
+    "verdict": "contradicted",
+    "evidence": "Han Market 4.3 km straight / 5.8 km by road.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "10km from the airport",
+    "verdict": "unverifiable",
+    "evidence": "OSRM 11.3 km / 13.4 min; straight 5.8 km; official 15 min taxi. 10 km is roughly near road distance.",
+    "sources": [
+     "https://furamavietnam.com/en/how-to-get-us/",
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge around 15 minutes away",
+    "verdict": "contradicted",
+    "evidence": "OSRM 5.7 km / 7.3 min without traffic.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Hoi An roughly 30 minutes south",
+    "verdict": "supported",
+    "evidence": "Corrected: OSRM 22.9 km / 27.2 min no traffic; ~30 min plausible.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Two pools define the property: the Lagoon Pool and the central Ocean Pool",
+    "verdict": "unverifiable",
+    "evidence": "Lagoon pool confirmed; Ocean Pool by name not found on opened pages.",
+    "sources": [
+     "https://furamavietnam.com/en/",
+     "https://furamavietnam.com/en/recreation/"
+    ]
+   },
+   {
+    "claim": "Beach: Direct, lifeguarded",
+    "verdict": "unverifiable",
+    "evidence": "Direct beachfront confirmed; lifeguards not confirmed.",
+    "sources": [
+     "https://furamavietnam.com/en/"
+    ]
+   },
+   {
+    "claim": "opened in 1997 / ten hectares / first Culinary Heritage designation",
+    "verdict": "unverifiable",
+    "evidence": "Not found on opened pages; official site calls itself 'Culinary Heritage Resort'.",
+    "sources": [
+     "https://furamavietnam.com/en/"
+    ]
+   },
+   {
+    "claim": "Main building rooms and beachfront villas",
+    "verdict": "supported",
+    "evidence": "Official lists 198 rooms/suites plus 68 pool and beachfront villas.",
+    "sources": [
+     "https://furamavietnam.com/en/",
+     "https://furamavietnam.com/en/accommodation/rooms-suites/"
+    ]
+   },
+   {
+    "claim": "Marble Mountains about five minutes away by taxi",
+    "verdict": "unverifiable",
+    "evidence": "Not on Furama pages; Accor lists Marble Mountain 5 min from the nearby Pullman.",
+    "sources": [
+     "https://all.accor.com/hotel/8838/index.en.shtml"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Listing sites blocked (Booking 202, Expedia/Hotels 429). Pool count from search snippets only. Hoi An figures recomputed with corrected coordinates 15.8794,108.3280."
+ }
+}

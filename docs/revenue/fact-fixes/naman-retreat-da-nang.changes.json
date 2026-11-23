@@ -1,0 +1,20 @@
+[
+ {
+  "before": "Non Nuoc Beach, ~13 km and 25 min taxi from city centre; Hoi An ~25 min south",
+  "after": "Truong Sa St coast south of Non Nuoc; ~15 km/17 min to Han Market, ~24 km/27 min to Hoi An (routing est.)",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "chips: City centre 25 min taxi / Hoi An 25 min",
+  "after": "~17 min / ~27 min by road",
+  "reason": "OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "FAQ location answer",
+  "after": "updated to same",
+  "reason": "Consistency",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ }
+]

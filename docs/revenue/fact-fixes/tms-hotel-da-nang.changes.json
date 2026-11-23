@@ -1,0 +1,107 @@
+[
+ {
+  "before": "direct My Khe beachfront, rooftop pool",
+  "after": "across-the-road My Khe beachfront, rooftop pool",
+  "reason": "Beach is across Vo Nguyen Giap road, not direct",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 3
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Direct, no road</div>",
+  "after": "<div class=\"hr-snap-val\">Across the road, about 3 min walk</div>",
+  "reason": "Thomas Cook: directly across the road; OSRM foot 0.2 km/3 min",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/ ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "Directly on My Khe Beach, 6 km from Dragon Bridge and 8 km from Da Nang Airport.",
+  "after": "Across the road from My Khe Beach (about 0.2 km on foot, roughly 3 minutes), about 4.4 km by road from Dragon Bridge (roughly 5 minutes) and about 12.4 km by road from Da Nang Airport (roughly 14 minutes), routing estimates without traffic.",
+  "reason": "Distances wrong; labelled as OSRM car estimates",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "On busy days it gets crowded, it's not a large pool, and the hotel has 155 rooms.",
+  "after": "On busy days it gets crowded, and it's not a large pool.",
+  "reason": "Room count unverifiable",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ },
+ {
+  "before": "this is not a large pool and the hotel runs 155 rooms, so go early",
+  "after": "this is not a large pool, so go early",
+  "reason": "Room count unverifiable",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ },
+ {
+  "before": "Rooms run 30-38 square metres, not large, but clean",
+  "after": "Rooms are not large, but clean",
+  "reason": "Room sizes unverifiable",
+  "source": "https://www.kayak.com/Da-Nang-Hotels-Tms-Hotel-Da-Nang-Beach.4262218.ksp",
+  "occurrences": 1
+ },
+ {
+  "before": "Direct My Khe Beach access is the hotel's strongest asset for its price point, no road crossing, no shuttle, no secondary pool that substitutes for sand. Sun lounger and umbrella service sits directly in front of the property. The My Khe seafood restaurant strip runs within 2-5 minutes in either direction,",
+  "after": "My Khe Beach access is the hotel's strongest asset for its price point: the beach is across the road (about 0.2 km on a foot route to the shoreline, roughly a 3-minute walk), with no shuttle and no secondary pool that substitutes for sand. The My Khe seafood restaurant strip runs within 2-5 minutes in either direction,",
+  "reason": "Not 'no road crossing'; loungers unverifiable and removed",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/ ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<div class=\"hr-like-title\">Direct beach access</div><p class=\"hr-like-text\">No road, no shuttle, straight onto the sand with lounger and umbrella service in front.</p>",
+  "after": "<div class=\"hr-like-title\">Close beach access</div><p class=\"hr-like-text\">Across the road from My Khe, about 0.2 km on foot (roughly 3 minutes), no shuttle needed.</p>",
+  "reason": "Not direct; loungers unverifiable",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/ ; https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "and families who don't need a kids' club or elaborate facilities all do well at TMS",
+  "after": "and families do well at TMS, which lists a free children's club and a children's pool, though it isn't a resort-scale family hotel",
+  "reason": "Thomas Cook lists a free children's club and children's pool",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ },
+ {
+  "before": "There's no kids' club, no extensive spa, and no multiple restaurant formats,",
+  "after": "There's no extensive spa and few restaurant formats (a breakfast restaurant, a rooftop bar and a cafe),",
+  "reason": "Kids club exists per Thomas Cook; restaurants per Thomas Cook",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ },
+ {
+  "before": "Direct My Khe Beach frontage, one of Da Nang's best urban beach stretches,",
+  "after": "Across the road from My Khe Beach, one of Da Nang's best urban beach stretches,",
+  "reason": "Not direct frontage",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ },
+ {
+  "before": "The airport is 8km away, about 12 minutes by taxi, and Dragon Bridge is a similar 12-minute Grab ride. What this means in practice: you can land, be on the sand within 20 minutes, and never need a car again except for a Hoi An day trip.",
+  "after": "The airport is about 12.4 km by road (roughly 14 minutes without traffic, routing estimate), and Dragon Bridge is about 4.4 km by road (roughly 5 minutes). What this means in practice: you can land and be on the sand quickly, and not need a car again except for a Hoi An day trip.",
+  "reason": "Wrong distances/times replaced with OSRM car estimates",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Beach:</strong> Direct</span>",
+  "after": "<strong>Beach:</strong> Across the road, ~3 min walk</span>",
+  "reason": "Chip fix",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Airport:</strong> 8 km / 12 min</span>",
+  "after": "<strong>Airport:</strong> ~12.4 km by road / ~14 min (estimate)</span>",
+  "reason": "Chip fix",
+  "source": "https://nominatim.openstreetmap.org + https://router.project-osrm.org (OSRM car/foot routes, OSM coastline)",
+  "occurrences": 1
+ },
+ {
+  "before": "the rooftop view, the direct beach access,",
+  "after": "the rooftop view, the close beach access,",
+  "reason": "Consistency",
+  "source": "https://www.thomascook.com/holidays/vietnam/da-nang/tms-hotel-da-nang-beach-2271982/",
+  "occurrences": 1
+ }
+]

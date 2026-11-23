@@ -1,0 +1,219 @@
+[
+ {
+  "before": "Melia Vinpearl Da Nang Review, City Hotel (2026)",
+  "after": "Meliá Vinpearl Danang Riverfront Review, City Hotel (2026)",
+  "reason": "Current official name (formerly Vinpearl Condotel Riverfront)",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 4
+ },
+ {
+  "before": "Melia Vinpearl Da Nang review 2026: Han River city-center hotel next to Vincom Mall. Large rooms, rooftop pool, from $80/night. Best city hotel in Da Nang?",
+  "after": "Meliá Vinpearl Danang Riverfront review 2026: Han River city-centre hotel next to Vincom Plaza. Large rooms, outdoor and indoor pools. Is it the best city hotel in Da Nang?",
+  "reason": "Rooftop pool unsupported (outdoor+indoor pools per Trip.com); price floor unverifiable",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 3
+ },
+ {
+  "before": "Independent review of Melia Vinpearl Da Nang. Vietnamese luxury brand, Han River, pools, and 2026 rates.",
+  "after": "Independent review of Meliá Vinpearl Danang Riverfront. Han River city-centre hotel, pools, and 2026 rates.",
+  "reason": "Official name; hotel is managed under Meliá brand",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\": \"Melia Vinpearl Da Nang\",\n      \"item\"",
+  "after": "\"name\": \"Meliá Vinpearl Danang Riverfront\",\n      \"item\"",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\": \"Is Melia Vinpearl Da Nang worth",
+  "after": "\"name\": \"Is Meliá Vinpearl Danang Riverfront worth",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\": \"How much does Melia Vinpearl Da Nang cost",
+  "after": "\"name\": \"How much does Meliá Vinpearl Danang Riverfront cost",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "\"name\": \"Where is Melia Vinpearl Da Nang located",
+  "after": "\"name\": \"Where is Meliá Vinpearl Danang Riverfront located",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "Yes, a beautifully designed resort with one of Da Nang's most impressive pool setups and a quieter beach than the My Khe strip. Strong value for a five-star property.",
+  "after": "Yes, for a city-focused stay: a five-star Han River hotel with an outdoor pool, an indoor pool and Vincom Plaza next door. It is not a beach resort, and My Khe Beach is a short ride away.",
+  "reason": "FAQ described it as a beach resort; it is a city riverfront hotel",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "Low season rates start around $120–$220/night. Peak season rises to $300–$450/night.",
+  "after": "Check current rates on Trip.com, pricing varies by season and room type.",
+  "reason": "Unverifiable rate figures",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "On Han River in the Ngu Hanh Son district, about 13 km south of Da Nang city and 15 km from Da Nang Airport.",
+  "after": "At 341 Tran Hung Dao, on the east bank of the Han River in the city centre (An Hai, Son Tra). It is about 4.7 km from Da Nang International Airport in a straight line, or about 12 km by road (roughly 15 minutes without traffic, routing estimate).",
+  "reason": "FAQ location was wrong (not Ngu Hanh Son, not 13/15 km)",
+  "source": "https://nominatim.openstreetmap.org; https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "<h1>Melia Vinpearl Da Nang</h1>",
+  "after": "<h1>Meliá Vinpearl Danang Riverfront</h1>",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "“Best pool facilities of any Da Nang city hotel.”",
+  "after": "“Outdoor and indoor pools in a city-centre hotel.”",
+  "reason": "Superlative unverifiable",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">420sqm outdoor + indoor</div>",
+  "after": "<div class=\"hr-snap-val\">Outdoor + indoor</div>",
+  "reason": "420 sqm unverified",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "and a 420-square-metre outdoor pool facing the water.",
+  "after": "and an outdoor pool facing the water.",
+  "reason": "420 sqm unverified",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "Han Market is about 1.3 km away (roughly a 12-minute walk), Dragon Bridge about 1.8 km (roughly 18 minutes on foot), and Vincom Mall",
+  "after": "Han Market is about 1.4 km away on foot (roughly a 19-minute walk), Dragon Bridge about 1.8 km (roughly 24 minutes on foot), and Vincom Mall",
+  "reason": "OSRM foot: 1.44 km/19.4 min; 1.83 km/24.4 min",
+  "source": "https://routing.openstreetmap.de/routed-foot (OSRM foot route)",
+  "occurrences": 1
+ },
+ {
+  "before": "and family apartments are well-configured for parents with children.",
+  "after": "and the family room options are well-configured for parents with children.",
+  "reason": "Apartments not verified (room list: Deluxe, Junior Suite, Suite)",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "and family apartments configured well for parents travelling with children.",
+  "after": "and the family room options configured well for parents travelling with children.",
+  "reason": "same",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "A 420-square-metre outdoor pool plus an indoor pool make this the best pool setup of any city hotel in Da Nang, with Dragon Bridge views from the river-facing sides.",
+  "after": "An outdoor pool plus an indoor pool make this a strong pool setup for a city hotel in Da Nang, with Dragon Bridge views from the river-facing sides.",
+  "reason": "420 sqm and superlative unverifiable",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "but the combination of scale and river views is not matched by any other non-beach hotel in Da Nang.",
+  "after": "but the combination of two pools and river views is hard to find at other non-beach hotels in Da Nang.",
+  "reason": "Superlative softened",
+  "source": "",
+  "occurrences": 1
+ },
+ {
+  "before": "My Khe Beach is 10 minutes by Grab, close enough for daily trips, not walkable.",
+  "after": "My Khe Beach is a short Grab ride away (about 2 km), close enough for daily trips, not walkable.",
+  "reason": "10-min figure unverified; ~1.9 km straight line to beach centroid",
+  "source": "https://nominatim.openstreetmap.org",
+  "occurrences": 1
+ },
+ {
+  "before": "the pool here covers the resort-swimming itch better than any other hotel in the city centre.",
+  "after": "the pool here covers the resort-swimming itch well for a city-centre hotel.",
+  "reason": "Superlative unverifiable",
+  "source": "",
+  "occurrences": 1
+ },
+ {
+  "before": "and well-configured apartment rooms, there's",
+  "after": "and well-configured family rooms, there's",
+  "reason": "apartments unverified",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "420sqm outdoor pool plus an indoor pool, the best pool setup of any Da Nang city hotel by a clear margin.",
+  "after": "Outdoor pool plus an indoor pool, a strong pool setup for a city hotel.",
+  "reason": "420 sqm and superlative unverifiable",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "Han Market is roughly a 12-minute walk and the bridge about 18 minutes on foot,",
+  "after": "Han Market is roughly a 19-minute walk and the bridge about 24 minutes on foot (routed on foot),",
+  "reason": "OSRM foot routes",
+  "source": "https://routing.openstreetmap.de/routed-foot (OSRM foot route)",
+  "occurrences": 1
+ },
+ {
+  "before": "the beach is a 10-minute Grab ride, not a walk.",
+  "after": "the beach is a short Grab ride away, not a walk.",
+  "reason": "unverified time",
+  "source": "",
+  "occurrences": 1
+ },
+ {
+  "before": "with Han Market about 1.3 km away (roughly a 12-minute walk), Dragon Bridge about 1.8 km away (roughly an 18-minute walk) and Vincom Mall",
+  "after": "with Han Market about 1.4 km away on foot (roughly a 19-minute walk), Dragon Bridge about 1.8 km away (roughly a 24-minute walk) and Vincom Mall",
+  "reason": "OSRM foot",
+  "source": "https://routing.openstreetmap.de/routed-foot (OSRM foot route)",
+  "occurrences": 1
+ },
+ {
+  "before": "My Khe Beach is a genuine 10-minute Grab ride, easy for",
+  "after": "My Khe Beach is a short Grab ride away (about 2 km), easy for",
+  "reason": "unverified time",
+  "source": "https://nominatim.openstreetmap.org",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Dragon Bridge:</strong> ~18 min walk",
+  "after": "<strong>Dragon Bridge:</strong> ~24 min walk",
+  "reason": "OSRM foot",
+  "source": "https://routing.openstreetmap.de/routed-foot (OSRM foot route)",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Beach:</strong> 10 min Grab",
+  "after": "<strong>Beach:</strong> short Grab ride",
+  "reason": "unverified time",
+  "source": "",
+  "occurrences": 1
+ },
+ {
+  "before": "alt=\"Melia Vinpearl Da Nang river view room\"",
+  "after": "alt=\"Meliá Vinpearl Danang Riverfront river view room\"",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ },
+ {
+  "before": "alt=\"Melia Vinpearl Da Nang breakfast buffet spread\"",
+  "after": "alt=\"Meliá Vinpearl Danang Riverfront breakfast buffet spread\"",
+  "reason": "name",
+  "source": "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/",
+  "occurrences": 1
+ }
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "before": "6 pools, lazy river, Non Nuoc beachfront",
+  "after": "5 outdoor pools, Non Nuoc beachfront",
+  "reason": "Sources list five outdoor pools; no lazy river found; our own body says five",
+  "source": "https://www.expedia.com/Da-Nang-Hotels-Hyatt-Regency-Danang-Resort-And-Spa.h4624340.Hotel-Information"
+ },
+ {
+  "before": "Hyatt Regency Danang Review 2026, 6 Pools, Lazy River",
+  "after": "Hyatt Regency Danang Review 2026, 5 Pools",
+  "reason": "same as above",
+  "source": "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+ },
+ {
+  "before": "Located on Non Nuoc Beach in the Ngu Hanh Son district, about 12 km south of Da Nang city centre and 14 km from Da Nang Airport.",
+  "after": "Located on Non Nuoc Beach in the Ngu Hanh Son district, about 9 km by road from Dragon Bridge and Han Market (routing estimate, roughly 11 minutes without traffic) and about 14.6 km by road from Da Nang Airport (routing estimate).",
+  "reason": "12 km overstated; OSRM 9.0-9.1 km",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "The resort sits 12 kilometres from Da Nang's city centre, which means",
+  "after": "The resort sits about 9 kilometres by road from Dragon Bridge and Han Market (routing estimate), which means",
+  "reason": "12 km contradicted by OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Non Nuoc Beach sits about 12km south of Da Nang's city centre, in the Ngu Hanh Son district, and 14km from the airport.",
+  "after": "Non Nuoc Beach sits about 9km by road from Dragon Bridge and Han Market (routing estimate, roughly 11 minutes without traffic), in the Ngu Hanh Son district, and about 14.6km by road from the airport.",
+  "reason": "12 km contradicted by OSRM",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "<strong>Airport:</strong> 14 km</span>",
+  "after": "<strong>Airport:</strong> ~14.6 km by road</span>",
+  "reason": "precision/method label",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Ocean view rooms run around 52 square metres, big enough that you stop noticing the size",
+  "after": "Ocean view rooms are big enough that you stop noticing the size",
+  "reason": "52 sqm not verifiable",
+  "source": "(unverified)"
+ },
+ {
+  "before": "There's also a sand-bottom pool, genuinely unusual for a resort this size, and a shallower pool near the beach",
+  "after": "There's also a shallower pool near the beach",
+  "reason": "sand-bottom pool not found in any source",
+  "source": "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+ },
+ {
+  "before": "The main lagoon pool snakes through the resort almost like a river, with sections you can swim between, but",
+  "after": "The main pool is the centrepiece, but",
+  "reason": "lagoon/river-style pool not supported (no lazy river found)",
+  "source": "https://www.hyatt.com/hyatt-regency/en-US/danhr-hyatt-regency-danang-resort-and-spa/faqs"
+ }
+]

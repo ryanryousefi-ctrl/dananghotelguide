@@ -1,0 +1,62 @@
+[
+ {
+  "before": "about 10 km north of Da Nang city centre and 15 km from Da Nang International Airport.",
+  "after": "about 19 km by road from Dragon Bridge and Han Market (routing estimate, roughly 22 minutes without traffic) and about 30 minutes' drive from Da Nang International Airport, according to the resort.",
+  "reason": "10 km is only straight-line (10.5 km); road distance 19 km; airport time per resort FAQ",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Entry-level hillside rooms run around 55 square metres with",
+  "after": "Entry-level rooms run around 70 square metres (per the resort's own room page) with",
+  "reason": "Official Resort Classic Room is 70 sqm",
+  "source": "https://www.danang.intercontinental.com/accommodation/"
+ },
+ {
+  "before": "The Long Beach Villas at the bottom of the property are the peak of the portfolio: 230 square metres, private plunge pool, direct beach access.",
+  "after": "The beachfront Seaside Villas at the bottom of the property are the peak of the portfolio: a private infinity pool and a private staircase to the beach.",
+  "reason": "Official list has no 'Long Beach Villas'; villas have infinity pools, not plunge pools; 230 sqm unverified",
+  "source": "https://www.danang.intercontinental.com/accommodation/"
+ },
+ {
+  "before": "one of the Long Beach Villas, plunge pool and beach access included.",
+  "after": "one of the Seaside Villas by the Beach, private pool and beach access included.",
+  "reason": "same",
+  "source": "https://www.danang.intercontinental.com/accommodation/"
+ },
+ {
+  "before": "Four infinity pools terrace down a cliff face to a private bay inside a nature reserve, and this is the resort's defining feature",
+  "after": "The resort has three pools, a 50-metre infinity pool, a garden pool beside the beach and a kids' pool, plus private pools attached to the villas and penthouses, all in a nature reserve beside a private bay, and this is the resort's defining feature",
+  "reason": "Official: three pool choices",
+  "source": "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+ },
+ {
+  "before": "The Citadel Pool at the top gives the widest view: open sea, the bay curving below, jungle on both sides. Swim there",
+  "after": "The 50-metre L_O_N_G Pool gives the widest view, with panoramic outlooks over the resort and the peninsula. Swim there",
+  "reason": "No 'Citadel Pool' on official pages; L_O_N_G Pool per official page",
+  "source": "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+ },
+ {
+  "before": "Between the beach and the four terraced pools, you could",
+  "after": "Between the beach and the pools, you could",
+  "reason": "four terraced pools unsupported",
+  "source": "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+ },
+ {
+  "before": "there's no kids' club in the mold of the family-focused resorts further down the coast, and",
+  "after": "there is a complimentary, supervised Planet Trekkers Kids Club for ages 4 to 12, though it's less of a headline feature than at the family-focused resorts further down the coast, and",
+  "reason": "Resort FAQ confirms kids club",
+  "source": "https://www.danang.intercontinental.com/faq/"
+ },
+ {
+  "before": "Son Tra Peninsula, about 10km north of the city centre and closer to a 30-40 minute drive from the airport",
+  "after": "Son Tra Peninsula, about 10km north of the city centre in a straight line (around 19km by road, routing estimate) and closer to a 30-40 minute drive from the airport",
+  "reason": "label straight-line vs road",
+  "source": "https://router.project-osrm.org/route/v1/driving/"
+ },
+ {
+  "before": "Then the resort comes into view below: four infinity pools terraced down a cliff face toward a private bay,",
+  "after": "Then the resort comes into view below: villas and pools stepping down a cliff face toward a private bay,",
+  "reason": "Official page lists three pools, not four terraced infinity pools",
+  "source": "https://www.danang.intercontinental.com/recreation/swimming-pools/"
+ }
+]

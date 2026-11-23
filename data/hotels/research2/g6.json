@@ -1,0 +1,703 @@
+{
+ "melia-da-nang": {
+  "official_name": "Meliá Danang Beach Resort",
+  "brand": "Meliá Hotels International (Meliá)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Melia Danang Beach Resort",
+   "Melia Da Nang"
+  ],
+  "name_note": "Listings use both Meliá and Melia; no rename found. Opened 2015, renovated 2021 per Trip.com.",
+  "address": "19 Truong Sa Street, Hoa Hai Ward (now Ngu Hanh Son ward), Ngu Hanh Son District, Da Nang",
+  "ward_district": "Hoa Hai / Ngu Hanh Son, Ngu Hanh Son District",
+  "neighborhood_group": "non-nuoc",
+  "neighborhood_note": "On Non Nuoc Beach beside Marble Mountains, south of Da Nang city; about 9 km straight-line from the airport.",
+  "website": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-danang-beach-resort",
+  "lat": 16.0010848,
+  "lng": 108.2691135,
+  "coord_source": "OSM Nominatim result 'Meliá Danang Beach Resort, Đường Trường Sa' (building-level; Cape Nao Beach Club on same site at 15.9996,108.2712)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 8.97,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 15.95,
+    "minutes": 19,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 8.0,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 10.34,
+    "minutes": 12,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 8.88,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 10.49,
+    "minutes": 12,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 10.74,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 19.73,
+    "minutes": 23,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": null,
+    "minutes": null,
+    "method": "not computed: Overpass coastline API unavailable; hotel is on Non Nuoc Beach, not My Khe",
+    "source": ""
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Official-listing text (Danang tourism portal) describes private beach; Trip.com lists private beach area and Non Nuoc beach 420 m (listing-computed from POI centroid).",
+   "sources": [
+    "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+    "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "7 outdoor pools incl. pools for Level guests (Danang Fantasticity); infinity pools mentioned by Trip.com reviews; one pool reserved for Level; children's pool and water slide listed by Trip.com. Other sites say 5-6; 7 most common.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool listed",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   }
+  ],
+  "pool_summary": "About 7 outdoor pools (some Level-only), children's pool and water slide. 'Adults-only pool' not confirmed in opened sources.",
+  "rooftop": {
+   "rooftop_pool": "no",
+   "rooftop_bar_or_deck": "unknown",
+   "sources": [
+    "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+   ],
+   "note": "No rooftop pool described; low-rise villa-style resort."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "The Level Lounge",
+   "details": "Private Level check-in, lounge with afternoon tea/snacks/cocktails/wine 14:00-16:00, Level-only pools and private beach area.",
+   "sources": [
+    "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+    "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+    "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+   ]
+  },
+  "family_facilities": [
+   "Kidsdom kids club",
+   "children's pool",
+   "playground",
+   "water slide",
+   "Level Premium Connecting Room 110 sqm"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Sasa Restaurant",
+   "Cape Nao Beach Club",
+   "Pool Bar",
+   "Elyxr Bar"
+  ],
+  "room_categories": [
+   "Deluxe Sea View",
+   "Grand Premium (58 sqm)",
+   "Prestige Suite",
+   "The Level Premium (55 sqm)",
+   "The Level Premium Connecting (110 sqm)"
+  ],
+  "multi_bedroom_options": "Connecting Level Premium rooms (two king rooms, 110 sqm)",
+  "distinctive_amenities": [
+   "Marble Mountains next door",
+   "Level private pools",
+   "outdoor cinema",
+   "non-motorised water sports"
+  ],
+  "claims_check": [
+   {
+    "claim": "Only 109 rooms",
+    "verdict": "contradicted",
+    "evidence": "Official-style tourism portal says 408 accommodations; Trip.com says 521 rooms; TripAdvisor snippet 528. None say 109.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   },
+   {
+    "claim": "long infinity pool, a family pool, and an adults-only pool (three pools)",
+    "verdict": "contradicted",
+    "evidence": "7 outdoor pools incl. Level ones per portal; infinity pools and children's pool confirmed; adults-only pool not found.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   },
+   {
+    "claim": "Level: private dedicated reception, exclusive lounge with afternoon snack buffets",
+    "verdict": "supported",
+    "evidence": "Private check-in and Level lounge with afternoon tea/snacks 14:00-16:00.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   },
+   {
+    "claim": "Non Nuoc Beach location, Marble Mountains five minutes away",
+    "verdict": "supported",
+    "evidence": "Resort on Non Nuoc Beach; Marble Mountains 'right next door' / 5-min walk.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-2614627/melia-danang/"
+    ]
+   },
+   {
+    "claim": "Hoi An is 30 minutes south by car",
+    "verdict": "supported",
+    "evidence": "OSRM drive ~19.7 km, ~23 min without traffic; 30 min plausible with traffic.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Entry-level Deluxe Sea View ~55 sqm",
+    "verdict": "unverifiable",
+    "evidence": "Sizes seen: Level Premium 55, Grand Premium 58, a 42 sqm room; Deluxe Sea View size not seen.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+    ]
+   },
+   {
+    "claim": "El Meson (Spanish Mediterranean restaurant)",
+    "verdict": "unverifiable",
+    "evidence": "Official-portal dining list shows Sasa Restaurant, Cape Nao Beach Club, Pool Bar, Elyxr Bar; El Meson not found.",
+    "sources": [
+     "https://danangfantasticity.com/en/melia-danang-beach-resort-2"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official melia.com returned 403; relied on Danang tourism portal and Trip.com. Beach distance to My Khe not computed (Overpass down); property is not on My Khe."
+ },
+ "a-la-carte-da-nang": {
+  "official_name": "A La Carte Da Nang Beach",
+  "brand": "A La Carte (independent)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Khach san A La Carte Da Nang Beach",
+   "Hotel A La Carte Danang Beach"
+  ],
+  "name_note": "Vietnamese listing: Khách sạn A La Carte Đà Nẵng Beach. Opened 2014, renovated 2020 (Trip.com). Classed as 4-star aparthotel/condotel.",
+  "address": "200 Vo Nguyen Giap, An Hai Ward, Son Tra, Da Nang",
+  "ward_district": "An Hai / Son Tra (OSM now shows Ngu Hanh Son ward)",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "Across Vo Nguyen Giap from My Khe Beach, near East Sea Park (320 m).",
+  "website": "https://www.alacartedanangbeach.com",
+  "lat": 16.0686936,
+  "lng": 108.2446224,
+  "coord_source": "OSM Nominatim 'A La Carte Danang Beach, 200 Võ Nguyên Giáp'",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 5.84,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 12.75,
+    "minutes": 15,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 1.97,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 3.67,
+    "minutes": 4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 2.5,
+    "minutes": 33,
+    "method": "OSRM foot route",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.17,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 3.82,
+    "minutes": 4,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 3.0,
+    "minutes": 40,
+    "method": "OSRM foot route",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 8.99,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 11.54,
+    "minutes": 13,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.14,
+    "minutes": null,
+    "method": "stated by listing (Trip.com 'My Khe Beach 0.14 km away')",
+    "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+   }
+  ],
+  "beach_access": {
+   "value": "short_walk",
+   "note": "Listings say 'right across the road from My Khe Beach' (Trip.com) and 0.14 km; Hotelsdanang lists beach access/private beach. Not directly on sand.",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/",
+    "https://a-la-carte-beach.hotelsdanang.com/en/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "rooftop",
+    "note": "Rooftop infinity pool with ocean views; pool opens 6am, closes ~8pm per guest review",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/",
+     "https://a-la-carte-beach.hotelsdanang.com/en/"
+    ]
+   }
+  ],
+  "pool_summary": "One rooftop infinity pool with adjacent rooftop bar.",
+  "rooftop": {
+   "rooftop_pool": "yes",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/",
+    "https://a-la-carte-beach.hotelsdanang.com/en/"
+   ],
+   "note": "Rooftop bar and pool confirmed."
+  },
+  "club_lounge": {
+   "value": "no",
+   "name": "",
+   "details": "None found.",
+   "sources": [
+    "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://a-la-carte-beach.hotelsdanang.com/en/",
+    "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club listed",
+   "playground",
+   "apartment rooms with kitchens"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "rooftop bar/restaurant",
+   "3 restaurants onsite (Hotelsdanang)",
+   "pool bar"
+  ],
+  "room_categories": [
+   "Standard King",
+   "One-Bedroom Queen Suite",
+   "One-Bedroom Ocean View Suite with Balcony",
+   "Apartment"
+  ],
+  "multi_bedroom_options": "One-bedroom apartments/suites with kitchenettes",
+  "distinctive_amenities": [
+   "rooftop infinity pool",
+   "in-room kitchenettes"
+  ],
+  "claims_check": [
+   {
+    "claim": "248 rooms",
+    "verdict": "contradicted",
+    "evidence": "Sources conflict: 301 (Hotelsdanang), 202 (Trip.com description), 117 (Trip.com property block); none say 248. Most common 202.",
+    "sources": [
+     "https://a-la-carte-beach.hotelsdanang.com/en/",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+    ]
+   },
+   {
+    "claim": "Rooftop infinity pool",
+    "verdict": "supported",
+    "evidence": "Rooftop infinity pool in both listings.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/",
+     "https://a-la-carte-beach.hotelsdanang.com/en/"
+    ]
+   },
+   {
+    "claim": "Direct beachfront / beach directly out front",
+    "verdict": "contradicted",
+    "evidence": "Across the road, 0.14 km (Trip.com); not on sand.",
+    "sources": [
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+    ]
+   },
+   {
+    "claim": "22-floor tower",
+    "verdict": "unverifiable",
+    "evidence": "Floor count not found.",
+    "sources": []
+   },
+   {
+    "claim": "10 minutes to the airport",
+    "verdict": "contradicted",
+    "evidence": "OSRM ~12.8 km, ~15.5 min no traffic.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Rooftop restaurant all-day dining and cocktails by pool",
+    "verdict": "supported",
+    "evidence": "Rooftop bar and restaurant listed.",
+    "sources": [
+     "https://a-la-carte-beach.hotelsdanang.com/en/",
+     "https://www.trip.com/hotels/da-nang-hotel-detail-1247137/a-la-carte-da-nang-beach/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official site not opened. Room count unresolved; recommend dropping specific number or using 'around 200+'. My Khe shoreline distance not computed (Overpass down)."
+ },
+ "four-points-sheraton-da-nang": {
+  "official_name": "Four Points by Sheraton Danang",
+  "brand": "Four Points by Sheraton (Marriott Bonvoy)",
+  "operator_owner": "unknown",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Marriott code DADFP.",
+  "address": "118-120 Vo Nguyen Giap Street, An Hai ward, Son Tra, Da Nang (Vietnam Coracle writes 18-20)",
+  "ward_district": "An Hai / Son Tra",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "Centre-north of My Khe municipal beach; cross the street to sand.",
+  "website": "https://danang.fourpointshotelsheraton.com/en",
+  "lat": 16.0778724,
+  "lng": 108.2451737,
+  "coord_source": "OSM Nominatim 'Four Points by Sheraton Danang, 118-120 Vo Nguyen Giap'",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 6.46,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 13.68,
+    "minutes": 16,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 2.62,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 4.61,
+    "minutes": 5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 3.45,
+    "minutes": 46,
+    "method": "OSRM foot route",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.47,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 4.76,
+    "minutes": 5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 3.41,
+    "minutes": 46,
+    "method": "OSRM foot route",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 8.85,
+    "minutes": null,
+    "method": "great-circle from OSM coords",
+    "source": "https://nominatim.openstreetmap.org (hotel coords) + brief landmark coords"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 10.55,
+    "minutes": 12,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "walking",
+    "km": 0.5,
+    "minutes": null,
+    "method": "stated by hotel (Marriott page 'Swimming: My Khe Beach 0.5 KM')",
+    "source": "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+   }
+  ],
+  "beach_access": {
+   "value": "short_walk",
+   "note": "Across the seafront road from the beach (Vietnam Coracle); Marriott lists My Khe 0.5 km.",
+   "sources": [
+    "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/",
+    "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "rooftop",
+    "note": "Outdoor Rooftop Swimming Pool (36th floor, infinity), 6am-9pm",
+    "sources": [
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/",
+     "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Kids Swimming Pool, lifeguard",
+    "sources": [
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+    ]
+   }
+  ],
+  "pool_summary": "Rooftop pool on 36th floor plus kids pool; no ground-level pool found.",
+  "rooftop": {
+   "rooftop_pool": "yes",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/",
+    "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+   ],
+   "note": "Horizon Bar on 36th floor with rooftop pool."
+  },
+  "club_lounge": {
+   "value": "unknown",
+   "name": "",
+   "details": "Not checked.",
+   "sources": []
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+   ]
+  },
+  "family_facilities": [
+   "Kids Zone on floor 2 (complimentary)",
+   "kids pool"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "The Eatery (buffet)",
+   "Horizon Bar (36th floor)"
+  ],
+  "room_categories": [
+   "Superior",
+   "Deluxe",
+   "Panoramic (all ~32 sqm per Coracle)"
+  ],
+  "multi_bedroom_options": "unknown",
+  "distinctive_amenities": [
+   "Serenity Spa",
+   "Jacuzzi with city view",
+   "24/7 gym",
+   "sauna and steam room",
+   "yoga on 34th floor"
+  ],
+  "claims_check": [
+   {
+    "claim": "ground-level pool sits between the hotel and the sand",
+    "verdict": "contradicted",
+    "evidence": "Pool is rooftop on 36th floor; Marriott lists rooftop and kids pools only. (Review also contradicts itself with 'rooftop pool deck'.)",
+    "sources": [
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/",
+     "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+    ]
+   },
+   {
+    "claim": "Horizon Bar rooftop",
+    "verdict": "supported",
+    "evidence": "Horizon Bar on 36th floor.",
+    "sources": [
+     "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/",
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+    ]
+   },
+   {
+    "claim": "Horizon Bar 100+ craft beers",
+    "verdict": "unverifiable",
+    "evidence": "Seen only in a search snippet from third-party listings; not on opened pages.",
+    "sources": []
+   },
+   {
+    "claim": "Directly on the sand / Direct access",
+    "verdict": "contradicted",
+    "evidence": "Cross the street; ~0.5 km per Marriott.",
+    "sources": [
+     "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/",
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+    ]
+   },
+   {
+    "claim": "Grab to airport about 12 minutes; Dragon Bridge another 12",
+    "verdict": "contradicted",
+    "evidence": "OSRM airport 13.7 km ~16 min; Dragon Bridge ~4.6 km ~5 min from hotel.",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "Room close to 35 sqm",
+    "verdict": "unverifiable",
+    "evidence": "Coracle says 32 sqm.",
+    "sources": [
+     "https://www.vietnamcoracle.com/four-points-sheraton-danang-independent-review/"
+    ]
+   },
+   {
+    "claim": "Kids facilities modest / not resort-scale",
+    "verdict": "supported",
+    "evidence": "Kids Zone floor 2 and kids pool.",
+    "sources": [
+     "https://www.marriott.com/en-us/hotels/dadfp-four-points-danang/experiences/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Marriott experiences page opened. Room count nearly 400 per Coracle."
+ }
+}

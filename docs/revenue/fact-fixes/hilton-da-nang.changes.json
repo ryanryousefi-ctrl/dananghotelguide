@@ -1,0 +1,114 @@
+[
+ {
+  "before": "Han River Hotel Near My Khe Beach (2026)",
+  "after": "Han River City Hotel (2026)",
+  "reason": "Hotel is in the city centre ~2.4-4 km from My Khe, not near it",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 4
+ },
+ {
+  "before": "Han River location near My Khe Beach, rooftop infinity pool.",
+  "after": "Han River city-centre location, outdoor pool and rooftop bar.",
+  "reason": "No source supports a rooftop infinity pool; Trip.com lists outdoor heated pool plus rooftop Sky bar",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 3
+ },
+ {
+  "before": "Han River location near My Khe Beach, rooms, rooftop pool, and value",
+  "after": "Han River city-centre location, rooms, outdoor pool and rooftop bar, and value",
+  "reason": "same",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "<p class=\"dn-hero__meta\">5-Star City Hotel · Han River, near My Khe Beach</p>",
+  "after": "<p class=\"dn-hero__meta\">5-Star City Hotel · Han River, city centre</p>",
+  "reason": "area wording overstated",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "<div class=\"hr-snap-val\">Han River, near My Khe Beach</div>",
+  "after": "<div class=\"hr-snap-val\">Han River, city centre</div>",
+  "reason": "area wording overstated",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "and the Executive Lounge looking out over Da Nang Bay.",
+  "after": "and the Executive Lounge on the 27th floor looking out over the Han River.",
+  "reason": "Trip.com: lounge on 27th floor with Han River views; bay view unverified",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "and a location 10 minutes from Dragon Bridge and 15 from Han Market by taxi.",
+  "after": "and a location about 0.5 km from Han Market (roughly a 7-minute walk) and about 2.8 km by road from Dragon Bridge (a few minutes by taxi, routing estimate without traffic).",
+  "reason": "OSRM foot 0.51 km/6.9 min to Han Market; driving 2.78 km/3.7 min to Dragon Bridge",
+  "source": "https://nominatim.openstreetmap.org (OSM coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "Executive Lounge floors add complimentary breakfast plus evening cocktails, which changes",
+  "after": "Executive Lounge access is reported to bring breakfast plus evening cocktails (confirm what your rate includes), which changes",
+  "reason": "Lounge breakfast inclusion not confirmed by official source",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "The Executive Lounge itself has views of the nearby beach and Da Nang Bay, and from that vantage point the city's geography makes more sense than it does from the river, on a clear day you can trace the coastline south toward the Marble Mountains.",
+  "after": "The Executive Lounge itself sits on the 27th floor with views over the Han River, and from that height the city's geography makes more sense than it does from street level.",
+  "reason": "Lounge views listed as Han River; beach/bay/Marble Mountains view unverified (beach is 2-4 km away)",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "The pool adjacent to it is small relative",
+  "after": "The outdoor pool is small relative",
+  "reason": "Rooftop pool unsupported; Trip.com lists outdoor heated pool",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "My Khe Beach itself is a short taxi away, not walkable,",
+  "after": "My Khe Beach itself is a taxi ride away (listings put it roughly 4 km off), not walkable,",
+  "reason": "distance qualified",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "Complimentary breakfast and evening cocktails with views over Da Nang Bay, a real value-add",
+  "after": "Evening cocktails and, reportedly, breakfast for lounge-access guests, with Han River views from the 27th floor, a real value-add",
+  "reason": "unverifiable inclusion and wrong view",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "Roughly 4 km from the airport in a straight line",
+  "after": "About 4.4 km from the airport in a straight line",
+  "reason": "great-circle 4.42 km (page said 4.5 and 4 inconsistent)",
+  "source": "https://nominatim.openstreetmap.org (OSM coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "The rooftop pool is small compared to beach resort competitors",
+  "after": "The outdoor pool is small compared to beach resort competitors",
+  "reason": "Rooftop pool unsupported",
+  "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+  "occurrences": 1
+ },
+ {
+  "before": "(about 0.5 km and 1.5 km in a straight line, from map coordinates)",
+  "after": "(about 0.5 km and 1.3 km in a straight line, from map coordinates)",
+  "reason": "great-circle to Dragon Bridge is 1.33 km",
+  "source": "https://nominatim.openstreetmap.org (OSM coords); https://router.project-osrm.org",
+  "occurrences": 1
+ },
+ {
+  "before": "<strong>Dragon Bridge:</strong> ~1.5 km straight-line",
+  "after": "<strong>Dragon Bridge:</strong> ~1.3 km straight-line",
+  "reason": "great-circle 1.33 km",
+  "source": "https://nominatim.openstreetmap.org (OSM coords); https://router.project-osrm.org",
+  "occurrences": 1
+ }
+]

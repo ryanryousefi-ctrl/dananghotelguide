@@ -1,0 +1,44 @@
+[
+ {
+  "before": "Rooftop pool (meta/og/twitter/JSON-LD)",
+  "after": "Outdoor pool",
+  "reason": "No source supports a rooftop pool; pool bar reported on 4th floor",
+  "source": "https://all.accor.com/hotel/8287/index.gb.shtml"
+ },
+ {
+  "before": "The rooftop pool delivers city skyline... rooftop bar alongside it",
+  "after": "outdoor pool at podium level (reportedly 4th floor, older listing) with poolside bar; 29th-floor Premier Lounge views per Accor",
+  "reason": "Pool floor source is a 2016 listing; Accor does not state floor",
+  "source": "https://danangfantasticity.com/en/novotel-danang-premier-han-river-en"
+ },
+ {
+  "before": "The 39-floor tower holds 323 rooms",
+  "after": "removed",
+  "reason": "Sources: 37 storeys, 323 rooms + 90 apartments (2016), Trip.com 438 rooms; conflicting",
+  "source": "https://www.trip.com/hotels/da-nang-hotel-detail-1963544/novotel-danang-premier-han-river/"
+ },
+ {
+  "before": "Han Market about 10 minutes on foot",
+  "after": "about 1 km, roughly a 16-minute walk",
+  "reason": "OSRM foot 1.17 km, 15.6 min",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "airport 4.5 km, short Grab ride / Three kilometres from the airport",
+  "after": "4.5 km straight line, ~10 km by road (~14 min routing estimate)",
+  "reason": "Straight-line not a drive; 3 km was wrong",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ },
+ {
+  "before": "Rooms 30-40 sq m",
+  "after": "roughly 28-39 sq m",
+  "reason": "Accor lists mostly 28-39 m2",
+  "source": "https://all.accor.com/hotel/8287/index.gb.shtml"
+ },
+ {
+  "before": "snapshot/chips airport 4.5 km",
+  "after": "straight line + by road",
+  "reason": "Label distance kind",
+  "source": "OSRM routing estimate (router.project-osrm.org / routing.openstreetmap.de), coords from OSM Nominatim"
+ }
+]

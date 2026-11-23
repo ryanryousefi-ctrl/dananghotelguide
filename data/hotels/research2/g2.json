@@ -1,0 +1,752 @@
+{
+ "hilton-da-nang": {
+  "official_name": "Hilton Da Nang",
+  "brand": "Hilton",
+  "operator_owner": "unknown (Hilton-managed; owner not verified)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Name matches.",
+  "address": "50 Bach Dang St, Hai Chau, Da Nang",
+  "ward_district": "Hai Chau Ward (post-2025 merger) / Hai Chau District",
+  "neighborhood_group": "han-river-city",
+  "neighborhood_note": "West bank of Han River in the city centre; Trip.com puts My Khe Beach at 4.0 km. Our review's 'near My Khe Beach' / 'Han River, near My Khe Beach' area label is loose: it is a city hotel, not beach-adjacent.",
+  "website": "https://www.hilton.com/en/hotels/dadhitw-hilton-da-nang/ (403 to us, not opened)",
+  "lat": 16.0726103,
+  "lng": 108.2242301,
+  "coord_source": "Nominatim OSM 'Hilton Da Nang, 50 Bach Dang' (matches Trip.com 16.072667,108.224286)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 4.42,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 10.55,
+    "minutes": 14.6,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 1.33,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 2.78,
+    "minutes": 3.7,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 1.92,
+    "minutes": 25.6,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 0.47,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 1.77,
+    "minutes": 2.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 0.51,
+    "minutes": 6.9,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 11.11,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 15.41,
+    "minutes": 17.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 2.44,
+    "minutes": null,
+    "method": "great-circle to OSM relation centroid of My Khe Beach (16.0756,108.2469); approximate, not exact shoreline",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 4.0,
+    "minutes": null,
+    "method": "stated by listing (Trip.com 'My Khe Beach (4.0 km)')",
+    "source": "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+   }
+  ],
+  "beach_access": {
+   "value": "not_beach",
+   "note": "Several km from My Khe; listing gives 4.0 km.",
+   "sources": [
+    "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Trip.com lists 'Outdoor swimming pool', 'Scenic heated pool', 'Pool with view', 'Children's pool'. No source says the pool is on the roof.",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   }
+  ],
+  "pool_summary": "Outdoor heated pool with view plus children's pool per Trip.com; rooftop location of the pool not verified.",
+  "rooftop": {
+   "rooftop_pool": "unknown",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+   ],
+   "note": "Trip.com lists a Sky bar ('panoramic views at the rooftop bar') and a rooftop restaurant (The Sail). A rooftop POOL is not stated anywhere I opened; official Hilton page blocked (403). Our review says the pool is 'adjacent' to the rooftop bar: unverified."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Executive Lounge",
+   "details": "Trip.com: executive lounge on the 27th floor with Han River views. TripAdvisor/search snippets (not fully opened): cocktail hour ~5:30-7:30pm, snacks all day, breakfast reviews mixed; access for suites/executive rooms/Diamond status. Lounge breakfast included for lounge-access guests: reported by guest reviews only, not confirmed by official source.",
+   "sources": [
+    "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+    "https://www.tripadvisor.com/Hotel_Review-g298085-d12919657-Reviews-or70-Hilton_Da_Nang-Da_Nang.html (search snippet only)"
+   ]
+  },
+  "kids_club": {
+   "value": "unknown",
+   "sources": []
+  },
+  "family_facilities": [
+   "Children's pool",
+   "Children's meals",
+   "Children's toys",
+   "Family Connecting Room"
+  ],
+  "gym": "yes",
+  "spa": "unknown",
+  "dining_outlets": [
+   "Brasserie Nam (buffet)",
+   "The Sail (rooftop)",
+   "Sky bar",
+   "Lobby bar",
+   "Cafe",
+   "Snack bar"
+  ],
+  "room_categories": [
+   "Family Connecting Room",
+   "King Accessible Room",
+   "King One Bedroom Suite City View",
+   "King One Bedroom Suite Ocean View",
+   "Executive floor rooms"
+  ],
+  "multi_bedroom_options": "Family connecting rooms; one-bedroom suites",
+  "distinctive_amenities": [
+   "Executive floor",
+   "Sky bar",
+   "Heated pool"
+  ],
+  "claims_check": [
+   {
+    "claim": "Airport: about 4.5 km in a straight line / roughly 4 km",
+    "verdict": "supported",
+    "evidence": "Great-circle 4.42 km. But road distance is ~10.6 km (OSRM, ~15 min); review's own caveat that road is longer is right. Note 'roughly 4 km' vs 4.5 km internal inconsistency; 4.4 is right. Trip.com says 4.4 km by car which appears to be straight-line.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search",
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   },
+   {
+    "claim": "10 minutes from Dragon Bridge and 15 from Han Market by taxi",
+    "verdict": "contradicted",
+    "evidence": "OSRM driving: Dragon Bridge 2.8 km / ~3.7 min; Han Market 1.8 km / ~2.8 min. Han Market is only ~7 min on foot (0.51 km). Dragon Bridge ~26 min walk. Han Market is closer than Dragon Bridge, review has it reversed and times much inflated (traffic/parking could add but not 15 min).",
+    "sources": [
+     "https://router.project-osrm.org"
+    ]
+   },
+   {
+    "claim": "rooftop pool (meta description: 'rooftop pool'); pool adjacent to the rooftop bar",
+    "verdict": "unverifiable",
+    "evidence": "Sources show outdoor heated pool plus a rooftop bar/restaurant; none state pool on roof.",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   },
+   {
+    "claim": "Executive Lounge floors add complimentary breakfast plus evening cocktails",
+    "verdict": "unverifiable",
+    "evidence": "Lounge exists (27th fl). Cocktail hour supported by guest reviews; breakfast inclusion not confirmed by official source.",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   },
+   {
+    "claim": "Executive Lounge has views of the nearby beach and Da Nang Bay",
+    "verdict": "unverifiable",
+    "evidence": "Trip.com says Han River views; room types include Ocean View. Beach is ~2-4 km away.",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge visible from river-facing rooms",
+    "verdict": "unverifiable",
+    "evidence": "Bridge 1.3 km away; plausible, not confirmed.",
+    "sources": []
+   },
+   {
+    "claim": "My Khe Beach is a short taxi away, not walkable",
+    "verdict": "supported",
+    "evidence": "Several km (listing: 4.0 km).",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   },
+   {
+    "claim": "Area label 'Han River, near My Khe Beach'",
+    "verdict": "unverifiable",
+    "evidence": "Han River side yes; 'near My Khe' is generous (2.4-4 km).",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel",
+     "https://nominatim.openstreetmap.org/search"
+    ]
+   },
+   {
+    "claim": "Does not have kids' club",
+    "verdict": "unverifiable",
+    "evidence": "No kids' club listed on Trip.com, but a children's pool is.",
+    "sources": [
+     "https://ph.trip.com/hotels/da-nang-hotel-detail-23151826/hotel"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "Official Hilton page returned 403; facts rest on Trip.com plus search snippets of TripAdvisor. Distance numbers computed."
+ },
+ "melia-vinpearl-da-nang": {
+  "official_name": "Meliá Vinpearl Danang Riverfront",
+  "brand": "Meliá Hotels & Resorts (Meliá Vinpearl)",
+  "operator_owner": "Meliá Hotels International managing; Vinpearl (Vingroup) property",
+  "operating_status": "operating",
+  "former_or_alternate_names": [
+   "Vinpearl Condotel Riverfront Da Nang",
+   "Vinpearl Riverfront Condotel Da Nang"
+  ],
+  "name_note": "Current official name is Meliá Vinpearl Danang Riverfront (melia.com URL and listings). It was rebranded from Vinpearl Condotel Riverfront as part of Meliá converting 12 Vinpearl hotels (Travel Weekly Asia, via search snippet; exact date not found). Our site's name 'Melia Vinpearl Da Nang' omits 'Riverfront'; the property is not a separate 'Melia Vinpearl Da Nang'.",
+  "address": "341 Tran Hung Dao St, An Hai Bac, Son Tra, Da Nang",
+  "ward_district": "An Hai ward (post-merger) / Son Tra District",
+  "neighborhood_group": "han-river-city",
+  "neighborhood_note": "East bank of Han River, Tran Hung Dao riverfront with Vincom Plaza.",
+  "website": "https://www.melia.com/en/hotels/vietnam/da-nang/melia-vinpearl-danang-riverfront (403 to us)",
+  "lat": 16.0709337,
+  "lng": 108.22961,
+  "coord_source": "Nominatim OSM (matches Trip.com 16.071122,108.229444)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 4.69,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 12.22,
+    "minutes": 15.3,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 1.1,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 3.15,
+    "minutes": 4.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 1.83,
+    "minutes": 24.4,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 0.64,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 3.3,
+    "minutes": 3.8,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 1.44,
+    "minutes": 19.4,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 10.55,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 14.03,
+    "minutes": 14.5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 1.92,
+    "minutes": null,
+    "method": "great-circle to OSM relation centroid of My Khe Beach; approximate, not exact shoreline",
+    "source": "https://nominatim.openstreetmap.org/search"
+   }
+  ],
+  "beach_access": {
+   "value": "not_beach",
+   "note": "City riverfront hotel; My Khe about 2 km away by straight line to beach centroid.",
+   "sources": [
+    "https://nominatim.openstreetmap.org/search",
+    "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+   ]
+  },
+  "pools": [
+   {
+    "type": "outdoor",
+    "note": "Outdoor pool (Trip.com, search snippet); 420 sqm figure not verified.",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "type": "indoor",
+    "note": "Heated indoor pool",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "type": "kids",
+    "note": "Children's pool",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   }
+  ],
+  "pool_summary": "Outdoor + indoor + children's pool per Trip.com. Agoda snippet also mentions an infinity pool; 420 sqm unverified.",
+  "rooftop": {
+   "rooftop_pool": "unknown",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+   ],
+   "note": "Trip.com: Sky bar and a rooftop restaurant mentioned in a review."
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Executive lounge (name 'The Level' NOT found)",
+   "details": "Trip.com lists an Executive lounge. 'The Level' is the name of Meliá's club-lounge concept at other Meliá hotels but no source I found links it to this property.",
+   "sources": [
+    "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+   ]
+  },
+  "family_facilities": [
+   "Kids' club",
+   "Children's pool",
+   "Playground",
+   "Childcare service"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Han River 1",
+   "Rumba",
+   "Aquamarina (per Trip.com descr)",
+   "Sky bar",
+   "Lobby bar"
+  ],
+  "room_categories": [
+   "Deluxe Room",
+   "Deluxe Room with Horizon View",
+   "Junior Suite",
+   "Suite"
+  ],
+  "multi_bedroom_options": "Condotel/apartment product (864 rooms, per search snippet of Trip.com); family apartments not directly verified.",
+  "distinctive_amenities": [
+   "Adjacent Vincom Plaza (Trip.com: shopping mall)",
+   "Spa, sauna",
+   "Free theme-park shuttle (snippet)"
+  ],
+  "claims_check": [
+   {
+    "claim": "Han Market is about 1.3 km away (roughly a 12-minute walk)",
+    "verdict": "contradicted",
+    "evidence": "Great-circle 0.64 km; OSRM foot route 1.44 km / ~19 min; Trip.com states 1.7 km. Neither 1.3 km nor 12 min matches the foot route.",
+    "sources": [
+     "https://nominatim.openstreetmap.org/search",
+     "https://routing.openstreetmap.de/routed-foot",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "claim": "Dragon Bridge about 1.8 km (roughly 18 minutes on foot)",
+    "verdict": "contradicted",
+    "evidence": "Distance 1.83 km foot route matches (and Trip.com 1.8 km) but time is ~24 min by foot route, not 18.",
+    "sources": [
+     "https://routing.openstreetmap.de/routed-foot",
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "claim": "420-square-metre outdoor pool plus indoor pool",
+    "verdict": "unverifiable",
+    "evidence": "Outdoor and indoor pools confirmed; size not found.",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "claim": "My Khe Beach is 10 minutes by Grab",
+    "verdict": "unverifiable",
+    "evidence": "Not routed; ~2 km straight to beach, plausible.",
+    "sources": []
+   },
+   {
+    "claim": "Vincom Mall directly adjacent",
+    "verdict": "supported",
+    "evidence": "Trip.com lists a shopping mall; Vincom Plaza within walk.",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   },
+   {
+    "claim": "Best pool of any city hotel / not matched",
+    "verdict": "unverifiable",
+    "evidence": "Opinion/comparative.",
+    "sources": []
+   },
+   {
+    "claim": "Family apartments",
+    "verdict": "unverifiable",
+    "evidence": "Room list shows Deluxe/Junior Suite/Suite; condotel apartments exist per snippets.",
+    "sources": [
+     "https://us.trip.com/hotels/da-nang-hotel-detail-22154936/melia-vinpearl-danang-riverfront/"
+    ]
+   }
+  ],
+  "confidence": "medium",
+  "notes": "melia.com returned 403. 'The Level' lounge and 420 sqm pool unverified. Hotel is on the east (Son Tra) bank across from Han Market side."
+ },
+ "radisson-blu-da-nang": {
+  "official_name": "Radisson Hotel Danang",
+  "brand": "Radisson Hotels (Radisson Hotel Group), upscale tier 'Radisson' (not Radisson Blu)",
+  "operator_owner": "Radisson Hotel Group (owner not named)",
+  "operating_status": "operating",
+  "former_or_alternate_names": [],
+  "name_note": "Property is Radisson Hotel Danang, NOT Radisson Blu. No rename found. Our slug/page title 'Radisson Blu Da Nang' and the CTA 'Considering Radisson Blu Resort Danang?' / 'Check Radisson Blu Resort Danang Prices' are wrong. Radisson Blu Resort Hoi An exists (Ha My Beach, Dien Ban, ~22 km from airport; official page says closed until further notice but booking sites list it as open: conflicting) but no Radisson Blu property was found inside Da Nang itself. Official Radisson URL slug is radisson-da-nang.",
+  "address": "170 Vo Nguyen Giap Street, Phuoc My Ward, Son Tra District, Da Nang",
+  "ward_district": "Phuoc My / An Hai (post-merger), Son Tra",
+  "neighborhood_group": "my-khe",
+  "neighborhood_note": "Beside My Khe Beach on Vo Nguyen Giap street, north My Khe stretch; Trip.com: beach 150 m.",
+  "website": "https://www.radissonhotels.com/en-us/hotels/radisson-da-nang",
+  "lat": 16.07393,
+  "lng": 108.24474,
+  "coord_source": "Trip.com page coordinates (16.07393,108.24474), consistent with Nominatim 'Radisson' on Loseby st, An Hai (16.07388,108.24467)",
+  "distances": [
+   {
+    "to": "airport",
+    "kind": "straight_line",
+    "km": 6.16,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "airport",
+    "kind": "driving",
+    "km": 13.25,
+    "minutes": 16.0,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "straight_line",
+    "km": 2.29,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "driving",
+    "km": 4.18,
+    "minutes": 4.7,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "dragon_bridge",
+    "kind": "walking",
+    "km": 3.05,
+    "minutes": 40.7,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "han_market",
+    "kind": "straight_line",
+    "km": 2.27,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "han_market",
+    "kind": "driving",
+    "km": 4.33,
+    "minutes": 4.5,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "han_market",
+    "kind": "walking",
+    "km": 3.11,
+    "minutes": 41.6,
+    "method": "OSRM foot route (routing.openstreetmap.de)",
+    "source": "https://routing.openstreetmap.de/routed-foot"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "straight_line",
+    "km": 8.92,
+    "minutes": null,
+    "method": "great-circle from OSM/Trip coords",
+    "source": "https://nominatim.openstreetmap.org/search"
+   },
+   {
+    "to": "hoi_an_old_town",
+    "kind": "driving",
+    "km": 10.98,
+    "minutes": 12.1,
+    "method": "OSRM car route estimate (no traffic)",
+    "source": "https://router.project-osrm.org"
+   },
+   {
+    "to": "my_khe_beach",
+    "kind": "straight_line",
+    "km": 0.15,
+    "minutes": null,
+    "method": "stated by listing (Trip.com 'My Khe Beach: 0.15km from the hotel')",
+    "source": "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+   }
+  ],
+  "beach_access": {
+   "value": "beachfront",
+   "note": "Trip.com: My Khe Beach 0.15 km, across the road; guests describe being just across the road, not literally on sand. Radisson page: 'steps from My Khe Beach' (search snippet).",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+   ]
+  },
+  "pools": [
+   {
+    "type": "rooftop",
+    "note": "Rooftop infinity pool at Vivid Rooftop Bar & Pool, 21st floor",
+    "sources": [
+     "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+    ]
+   },
+   {
+    "type": "infinity",
+    "note": "as above",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+    ]
+   }
+  ],
+  "pool_summary": "Rooftop infinity pool on 21st floor.",
+  "rooftop": {
+   "rooftop_pool": "yes",
+   "rooftop_bar_or_deck": "yes",
+   "sources": [
+    "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+   ],
+   "note": "Vivid Rooftop Bar & Pool"
+  },
+  "club_lounge": {
+   "value": "yes",
+   "name": "Executive Lounge (20th floor)",
+   "details": "Executive Lounge Access room types on Trip.com.",
+   "sources": [
+    "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+   ]
+  },
+  "kids_club": {
+   "value": "yes",
+   "sources": [
+    "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+   ]
+  },
+  "family_facilities": [
+   "Kids' Club (Trip.com facility list; unverified by official)",
+   "Children's playground 350 m"
+  ],
+  "gym": "yes",
+  "spa": "yes",
+  "dining_outlets": [
+   "Restaurant",
+   "Bar",
+   "Lobby Bar",
+   "Vivid Rooftop Bar & Pool"
+  ],
+  "room_categories": [
+   "Deluxe Twin City View",
+   "Deluxe Room Partial Ocean View",
+   "Executive Suite Corner Ocean View Executive Lounge Access"
+  ],
+  "multi_bedroom_options": "unknown",
+  "distinctive_amenities": [
+   "Spa, steam room",
+   "Event space up to 300",
+   "Opened 2 June 2022"
+  ],
+  "claims_check": [
+   {
+    "claim": "Radisson Hotel Danang opened in 2022 on My Khe Beach, 182 rooms, rooftop infinity pool",
+    "verdict": "supported",
+    "evidence": "Grand opening 2 June 2022, 182 rooms, rooftop infinity pool 21st fl.",
+    "sources": [
+     "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+    ]
+   },
+   {
+    "claim": "this property is Radisson, not Radisson Blu (body text)",
+    "verdict": "supported",
+    "evidence": "Official name Radisson Hotel Danang.",
+    "sources": [
+     "https://danangfantasticity.com/en/news/radisson-officially-launches-new-hotel-in-danang-city",
+     "https://www.radissonhotels.com/en-us/hotels/radisson-da-nang"
+    ]
+   },
+   {
+    "claim": "Radisson Blu Resort Danang with waterpark does not appear to exist",
+    "verdict": "supported",
+    "evidence": "No such Da Nang property found; Radisson Blu Resort Hoi An exists in Quang Nam/Hoi An area. Review does not mention that Hoi An one.",
+    "sources": [
+     "https://www.radissonhotels.com/en-us/hotels/radisson-blu-resort-hoi-an"
+    ]
+   },
+   {
+    "claim": "Page title / CTA 'Radisson Blu Da Nang' / 'Radisson Blu Resort Danang'",
+    "verdict": "contradicted",
+    "evidence": "Property is not Radisson Blu and not a resort.",
+    "sources": [
+     "https://www.radissonhotels.com/en-us/hotels/radisson-da-nang"
+    ]
+   },
+   {
+    "claim": "Beach is directly accessible; sunbeds, beach service",
+    "verdict": "unverifiable",
+    "evidence": "Beach 150 m across the road; sunbed service not confirmed.",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+    ]
+   },
+   {
+    "claim": "Family rooms/executive suites 70 sqm",
+    "verdict": "unverifiable",
+    "evidence": "Sizes not checked.",
+    "sources": []
+   },
+   {
+    "claim": "no kids' club",
+    "verdict": "contradicted",
+    "evidence": "Review says property doesn't attempt a kids' club; Trip.com facility list shows Kids' Club (not officially confirmed).",
+    "sources": [
+     "https://uk.trip.com/hotels/da-nang-hotel-detail-70920349/radisson-hotel-danang"
+    ]
+   },
+   {
+    "claim": "Mikazuki waterpark in Lien Chieu is Da Nang's waterpark resort",
+    "verdict": "unverifiable",
+    "evidence": "Not checked.",
+    "sources": []
+   }
+  ],
+  "confidence": "medium",
+  "notes": "radissonhotels.com returned 403 to fetch; details from Da Nang Fantasticity article (opened) and Trip.com (opened); Radisson page address from search result snippet."
+ }
+}
