@@ -1,0 +1,3 @@
+final index performance:67 accessibility:100 best-practices:79 seo:92 LCP:5.0 s CLS:0 TBT:290 ms
+final where-to-stay-in-da-nang performance:87 accessibility:97 best-practices:79 seo:92 LCP:3.7 s CLS:0 TBT:70 ms
+final hyatt-vs-marriott-da-nang performance:72 accessibility:92 best-practices:75 seo:92 LCP:5.1 s CLS:0 TBT:120 ms
