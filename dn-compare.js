@@ -30,7 +30,9 @@
     document.getElementById('dnc-copy').onclick = function () { var u = location.href; if (navigator.clipboard) navigator.clipboard.writeText(u).then(function () { count.textContent = 'Comparison link copied.'; }, function () { window.prompt('Copy this link:', u); }); else window.prompt('Copy this link:', u); };
     document.getElementById('dnc-saveall').onclick = function () { sel.forEach(function (s) { if (window.DN_SHORTLIST && !window.DN_SHORTLIST.has(s)) window.DN_SHORTLIST.toggle(s); }); count.textContent = 'Saved to the shortlist in this browser.'; };
   }
-  H.forEach(function (h) { var l = document.createElement('label'), i = document.createElement('input'); i.type = 'checkbox'; i.value = h.id; i.addEventListener('change', function () { var ix = sel.indexOf(h.id); if (i.checked && ix < 0 && sel.length < 3) sel.push(h.id); else if (!i.checked && ix > -1) sel.splice(ix, 1); render(); }); l.appendChild(i); l.appendChild(document.createTextNode(' ' + h.name)); pick.appendChild(l); });
+  // The checkbox list is rendered in the static HTML (no layout shift); bind to it, or build it if an older page lacks it.
+  if (!pick.querySelector('input')) H.forEach(function (h) { var l = document.createElement('label'), i = document.createElement('input'); i.type = 'checkbox'; i.value = h.id; l.appendChild(i); l.appendChild(document.createTextNode(' ' + h.name)); pick.appendChild(l); });
+  Array.prototype.forEach.call(pick.querySelectorAll('input'), function (i) { i.addEventListener('change', function () { var id = i.value, ix = sel.indexOf(id); if (i.checked && ix < 0 && sel.length < 3) sel.push(id); else if (!i.checked && ix > -1) sel.splice(ix, 1); render(); }); });
   function shortlist() {
     var box = document.getElementById('dnc-sl'), ul = document.getElementById('dnc-sl-list'); var l = (window.DN_SHORTLIST ? window.DN_SHORTLIST.get() : []).filter(function (s) { return byId[s]; });
     if (!l.length) { box.hidden = true; return; } box.hidden = false;
