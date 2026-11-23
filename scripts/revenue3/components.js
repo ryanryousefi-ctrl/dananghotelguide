@@ -55,7 +55,6 @@ function diffLine(a, b) {
   const A = hotel(a), B = hotel(b), bits = [];
   if (A.setting !== B.setting) bits.push(`${A.name} is the ${A.setting === 'beach' ? 'beach' : 'city'} option and ${B.name} the ${B.setting === 'beach' ? 'beach' : 'city'} option.`);
   const aa = area(A), ab = area(B); if (aa && ab && aa !== ab) bits.push(`Area: ${aa} versus ${ab}.`);
-  if (A.style !== B.style) bits.push(`Style: ${A.style} versus ${B.style}.`);
   if (!bits.length) bits.push('Both are similar in setting and style; compare the trade-offs above against the rates for your dates.');
   return bits.join(' ');
 }

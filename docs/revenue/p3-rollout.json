@@ -1,0 +1,913 @@
+{
+ "pages": [
+  {
+   "page": "best-hotels-in-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "luxury-hotels-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "family-hotels-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "best-family-resort-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-beach-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "boutique-hotels-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-budget-hotels-in-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-value-hotels-hoi-an.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-hotels-in-hoi-an.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-beach-hotel-under-100-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "best-luxury-resort-couples-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "best-han-river-hotels-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "best-hotels-an-thuong-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-hotels-near-my-khe-beach.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "best-resorts-son-tra-peninsula.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-riverfront-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-quiet-areas-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-adults-only-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-honeymoon-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-infinity-pool.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-kids-club.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-rooftop-pool.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-executive-lounge.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-private-beach.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-private-pool-villa.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-spa-packages.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-with-lazy-river.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-connecting-rooms.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotels-near-airport.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "hoi-an-old-town-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "an-bang-beach-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-resort-breakfast-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-fireworks-festival-hotels.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-hotel-directory.html",
+   "type": "list",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "my-khe-beach-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "son-tra-peninsula-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "non-nuoc-beach-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "hoi-an.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "where-to-stay-in-hoi-an.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "return"
+   ]
+  },
+  {
+   "page": "where-to-stay-between-da-nang-and-hoi-an.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "best-areas-da-nang-families.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "da-nang-first-time-visitors-area-guide.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "dates",
+    "compare",
+    "return"
+   ]
+  },
+  {
+   "page": "my-khe-or-han-river-where-to-stay-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "beachfront-vs-city-hotels-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "is-da-nang-walkable.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "dragon-bridge-da-nang.html",
+   "type": "area",
+   "modules": [
+    "hero",
+    "return"
+   ]
+  },
+  {
+   "page": "a-la-carte-vs-tms-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "four-points-vs-novotel-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "furama-vs-pullman-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "hyatt-regency-vs-furama-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "hyatt-regency-vs-sheraton-grand-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "hyatt-vs-marriott-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "intercontinental-vs-furama-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "intercontinental-vs-hyatt-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "intercontinental-vs-pullman-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "marriott-vs-intercontinental-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "marriott-vs-sheraton-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "melia-vs-hyatt-regency-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "melia-vs-radisson-blu-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "novotel-vs-hilton-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "premier-village-vs-sheraton-grand-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "pullman-vs-hyatt-regency-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "pullman-vs-sheraton-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "sheraton-vs-hyatt-regency-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "tia-wellness-vs-naman-retreat-da-nang.html",
+   "type": "compare",
+   "modules": [
+    "compare"
+   ]
+  },
+  {
+   "page": "a-la-carte-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "brilliant-hotel-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "furama-resort-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "grand-mercure-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "hilton-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "hyatt-regency-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "intercontinental-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "marriott-resort-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "melia-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "melia-vinpearl-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "muong-thanh-luxury-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "naman-retreat-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "novotel-da-nang-han-river.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "premier-village-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "pullman-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "radisson-blu-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "sheraton-grand-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "tia-wellness-resort-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "tms-hotel-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "wyndham-soleil-da-nang.html",
+   "type": "review",
+   "modules": [
+    "tools"
+   ]
+  },
+  {
+   "page": "da-nang-3-day-itinerary.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-5-day-itinerary.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-7-day-itinerary.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-itinerary.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "how-many-days-in-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "things-to-do-in-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-airport-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-airport-to-my-khe.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-airport-to-hoi-an.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-transport-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-grab-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-with-kids-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-with-teenagers.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "best-time-to-visit-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
+   "page": "rainy-season-da-nang-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
+   "page": "da-nang-weather-by-month.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
+   "page": "da-nang-hotel-prices-by-month.html",
+   "type": "guide",
+   "modules": [
+    "hero",
+    "seasonal"
+   ]
+  },
+  {
+   "page": "da-nang-first-time-travel-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-first-time-visitors.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "hoi-an-first-time-visitors.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-tourist-mistakes.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-travel-mistakes.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "what-to-pack-for-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-budget-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-travel-budget-guide.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "is-hoi-an-cheaper-than-da-nang.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-vs-hoi-an.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-guide-for-korean-travelers.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  },
+  {
+   "page": "da-nang-guide-for-russian-travelers.html",
+   "type": "guide",
+   "modules": [
+    "hero"
+   ]
+  }
+ ],
+ "stats": {
+  "list": 35,
+  "area": 12,
+  "compare": 19,
+  "review": 20,
+  "guide": 29,
+  "skipped": [
+   "da-nang-tet-2027-hotels.html (no sections)",
+   "four-points-sheraton-da-nang.html (no early module)",
+   "worst-time-to-visit-da-nang.html (no sections)",
+   "da-nang-guide-for-australian-travelers.html (no sections)",
+   "da-nang-guide-for-singapore-travelers.html (no sections)"
+  ]
+ }
+}
