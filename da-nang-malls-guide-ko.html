@@ -226,7 +226,7 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
 .guide-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4.5vw,3.4rem);color:#fff;line-height:1.1;letter-spacing:-.03em;margin-bottom:1rem;max-width:780px}
 .guide-hero h1 em{font-style:italic;color:rgba(255,255,255,.7)}
 .guide-hero-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;font-size:.78rem;color:rgba(255,255,255,.72)}
-.guide-layout{max-width:var(--max);margin:0 auto;padding:clamp(2.5rem,5vw,4rem) var(--gutter);display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start}
+.guide-body{min-width:0}.guide-layout{max-width:var(--max);margin:0 auto;padding:clamp(2.5rem,5vw,4rem) var(--gutter);display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start}
 .guide-sidebar{position:sticky;top:80px}
 .guide-body p{font-size:1rem;line-height:1.8;color:var(--ink-soft);margin-bottom:1.2rem}
 .guide-body h2{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,1.9rem);color:var(--ink);line-height:1.15;letter-spacing:-.025em;margin:2.5rem 0 .8rem}
@@ -409,7 +409,7 @@ a{text-decoration:none;color:inherit}a{color:var(--ocean)}
   
 <link rel="stylesheet" href="search-ui.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"></noscript><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
 <style id="dn-dark">:is(.guide-hero,
 .data-table th,
 .sidebar-cta,
@@ -602,7 +602,7 @@ html body :is(.nav-hamburger span,.author-box,.highlight-box,.warning-box,.sideb
   <article class="guide-body">
 
     <div class="author-box">
-      <img class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi" width="52" height="52">
+      <img loading="lazy" decoding="async" class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi" width="52" height="52">
       <div><div class="author-name">Ryan Yousefi</div><div class="author-role">편집장 · 다낭 호텔 가이드 · 2022년부터 다낭 거주</div></div>
       <div class="author-updated">최종 업데이트<br>2026년 3월</div>
     </div>
@@ -1291,7 +1291,7 @@ html body :is(.nav-hamburger span,.author-box,.highlight-box,.warning-box,.sideb
 <footer class="dn-footer">
   <div class="dn-footer__top">
     <div class="dn-footer__brand">
-      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" decoding="async"></picture></a>
+      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img loading="lazy" decoding="async" src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" ></picture></a>
       <p>다낭과 호이안의 호텔을 직접 확인하고 쓰는 독립 가이드입니다.</p>
     </div>
     <aside class="shr-bar dn-share" aria-label="이 페이지 공유"><span class="shr-label">공유</span>

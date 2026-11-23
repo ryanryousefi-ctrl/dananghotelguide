@@ -12,7 +12,7 @@ for (const f of files) {
   const p = path.join(ROOT, f); let h = fs.readFileSync(p, 'utf8'); const o = h;
   const m = h.indexOf('<main'); if (m > 0) { let first = true;
     h = h.slice(0, m) + h.slice(m).replace(/<img\b[^>]*>/g, tag => { if (first) { first = false; return tag; } if (/\bloading=|fetchpriority=/.test(tag)) return tag; lazy++; return tag.replace(/^<img\b/, '<img loading="lazy" decoding="async"').replace(/decoding="async"([^>]*)decoding="[^"]*"/, 'decoding="async"$1'); }); }
-  h = h.replace(/<link rel="stylesheet" href="(https:\/\/fonts\.googleapis\.com\/css2\?[^"]+)"\s*\/?>/g, (all, u) => { fonts++; return `<link rel="preload" as="style" href="${u}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${u}"></noscript>`; });
+  h = h.replace(/(<noscript>)?<link rel="stylesheet" href="(https:\/\/fonts\.googleapis\.com\/css2\?[^"]+)"\s*\/?>/g, (all, ns, u) => { if (ns) return all; fonts++; return `<link rel="preload" as="style" href="${u}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${u}"></noscript>`; });
   if (f === 'index.html') { const a = h.indexOf('<script src="search-engine.js"></script>'), b = h.lastIndexOf('<script src="search-engine.js"></script>'); if (a >= 0 && b > a) { h = h.slice(0, a) + h.slice(a + '<script src="search-engine.js"></script>'.length); dup++; } }
   if (h !== o) { fs.writeFileSync(p, h); touched++; }
 }

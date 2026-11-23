@@ -390,7 +390,7 @@ button{font-family:var(--font-sans);cursor:pointer}
   
 <link rel="stylesheet" href="search-ui.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"></noscript><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
 <style id="dn-dark">:is(.bb-pick-overlay,
 .bb-verdict-col.yes .bb-verdict-icon,
 .bb-map,
@@ -1177,7 +1177,7 @@ html body :is(.nav-hamburger span,.bb-verdict,.bb-verdict-col.yes,.bb-verdict-co
 <section class="bb-section" style="padding-bottom:1rem">
   <div class="bb-section-inner" style="max-width:760px">
     <div class="author-box">
-      <img class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi" width="52" height="52">
+      <img loading="lazy" decoding="async" class="author-avatar" src="images/ryan-yousefi.jpg" alt="Ryan Yousefi" width="52" height="52">
       <div>
         <div class="author-name">Ryan Yousefi</div>
         <div class="author-role">Editor-in-chief &middot; Da Nang Hotel Guide &middot; Based in Vietnam since 2022</div>
@@ -1269,7 +1269,7 @@ html body :is(.nav-hamburger span,.bb-verdict,.bb-verdict-col.yes,.bb-verdict-co
 <footer class="dn-footer">
   <div class="dn-footer__top">
     <div class="dn-footer__brand">
-      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" decoding="async"></picture></a>
+      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img loading="lazy" decoding="async" src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" ></picture></a>
       <p>Independent hotel and travel advice for Da Nang and Hoi An, written by a local editor. No paid placements.</p>
     </div>
     <aside class="shr-bar dn-share" aria-label="Share this page"><span class="shr-label">Share</span>

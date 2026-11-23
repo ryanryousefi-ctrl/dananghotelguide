@@ -464,7 +464,7 @@ button{font-family:var(--font-sans)}
 
 <link rel="stylesheet" href="search-ui.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"></noscript><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="dn-design.css">
 <style id="dn-dark">:is(.mk-map-wrap,
 .mk-map-stage,
 .mk-map-popup-link,
@@ -712,7 +712,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         </svg>
         <div class="mk-map-popup" id="mkMapPopup">
           <button class="mk-map-popup-close" id="mkMapPopupClose" aria-label="Close">&times;</button>
-          <img id="mkPopupImg" src="" alt="">
+          <img loading="lazy" decoding="async" id="mkPopupImg" src="" alt="">
           <div class="mk-map-popup-body">
             <div class="mk-map-popup-cat" id="mkPopupCat"></div>
             <div class="mk-map-popup-name" id="mkPopupName"></div>
@@ -1094,7 +1094,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
           <div class="mk-hotel-area">Central My Khe</div>
           <div class="mk-hotel-name">Radisson Hotel Danang</div>
           <div class="mk-hotel-desc">Reliable international-standard rooms, sizeable pool deck, walkable to the central beach bars. A safe upper-mid choice for a first trip.</div>
-          <a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="See Radisson Prices for Radisson Hotel Danang on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Radisson Hotel Danang"><span class="tc-btn__text">See Radisson Hotel Danang Prices →</span></a>
+          <a data-provider="tripcom" data-tc-key="hotel:radisson-danang" aria-label="See Radisson Hotel Danang Prices on Trip.com, opens in a new tab" href="https://www.trip.com/hotels/detail/?hotelId=70920349&amp;Allianceid=11013066&amp;SID=333523744&amp;trip_sub1=&amp;trip_sub3=D20397645" class="mk-hotel-link affiliate-link dn-btn dn-btn--book tc-btn" target="_blank" rel="nofollow noopener sponsored" data-cta-location="booking_hotel_card" data-hotel="Radisson Hotel Danang"><span class="tc-btn__text">See Radisson Hotel Danang Prices →</span></a>
         </div>
       </div>
 
@@ -1171,7 +1171,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
     <h2 class="mk-section-h2">My Khe vs <em>Non Nuoc</em></h2>
     <div class="mk-compare">
       <div class="mk-compare-col">
-        <img src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach, Da Nang">
+        <img loading="lazy" decoding="async" src="images/broll-my-khe-beach-panoramic.jpg" alt="My Khe Beach, Da Nang">
         <div class="mk-compare-title">My Khe</div>
         <ul class="mk-compare-list">
           <li>Walkable to restaurants, cafes and bars</li>
@@ -1180,7 +1180,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
         </ul>
       </div>
       <div class="mk-compare-col">
-        <img src="images/broll-premier-village-villas-aerial.jpg" alt="Non Nuoc Beach resort corridor, Da Nang">
+        <img loading="lazy" decoding="async" src="images/broll-premier-village-villas-aerial.jpg" alt="Non Nuoc Beach resort corridor, Da Nang">
         <div class="mk-compare-title">Non Nuoc</div>
         <ul class="mk-compare-list">
           <li>Wider, quieter sand, resort-scale pools</li>
@@ -1288,7 +1288,7 @@ html body :is(.nav-hamburger span,.mk-map-popup,.bb-sig-pick,.mk-quick-card,.bb-
 <footer class="dn-footer">
   <div class="dn-footer__top">
     <div class="dn-footer__brand">
-      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" decoding="async"></picture></a>
+      <a class="dn-brand dn-brand--logo dn-brand--light" href="index.html"><picture><source type="image/webp" srcset="assets/brand/dnhg-logo-640.webp 640w, assets/brand/dnhg-logo-1000.webp 1000w" sizes="(max-width: 899px) 216px, 256px"><img loading="lazy" decoding="async" src="assets/brand/dnhg-logo-640.png" srcset="assets/brand/dnhg-logo-640.png 640w, assets/brand/dnhg-logo-1000.png 1000w" sizes="(max-width: 899px) 216px, 256px" alt="Da Nang Hotel Guide" width="640" height="160" ></picture></a>
       <p>Independent hotel and travel advice for Da Nang and Hoi An, written by a local editor. No paid placements.</p>
     </div>
     <aside class="shr-bar dn-share" aria-label="Share this page"><span class="shr-label">Share</span>
