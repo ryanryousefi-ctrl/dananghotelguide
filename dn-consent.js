@@ -35,7 +35,10 @@
     d.body.appendChild(box);
   }
 
+  // Show the banner once web fonts have loaded (or after 1.5 s at most), so its text does not reflow after it appears
+  // (a font swap inside the fixed banner was the main layout shift). Consent Mode defaults are already set in <head>.
+  function whenFontsReady(fn) { var done = false; function go() { if (!done) { done = true; fn(); } } try { if (d.fonts && d.fonts.ready) d.fonts.ready.then(go, go); else go(); } catch (e) { go(); } setTimeout(go, 1500); }
   var saved = read();
-  if (saved) apply(saved); else open();
+  if (saved) apply(saved); else whenFontsReady(open);
   d.addEventListener('click', function (e) { var t = e.target.closest && e.target.closest('.dn-consent-open'); if (t) { e.preventDefault(); close(); open(); } });
 })();
