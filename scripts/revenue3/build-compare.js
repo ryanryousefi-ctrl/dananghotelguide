@@ -23,7 +23,7 @@ const main = `<main id="dn-main">
 <section class="dnc dnc-tool" id="dnc-tool" aria-labelledby="cmp-h">
 <h2 class="dnc-h" id="cmp-h">1. Pick two or three hotels</h2>
 <div class="dnc-sl" id="dnc-sl" hidden><strong>Your saved shortlist</strong> <span class="dnc-note">(stored only in this browser; clear it any time)</span><ul id="dnc-sl-list"></ul><div class="dnc-actions"><button type="button" class="dnc-ghost" id="dnc-sl-load">Compare my shortlist</button><button type="button" class="dnc-ghost" id="dnc-sl-clear">Clear shortlist</button></div></div>
-<div class="dnc-pick" id="dnc-pick" role="group" aria-label="Hotels to compare"></div>
+<div class="dnc-pick" id="dnc-pick" role="group" aria-label="Hotels to compare">${H.map(h => `<label><input type="checkbox" value="${esc(h.id)}"> ${esc(h.name)}</label>`).join('')}</div>
 <p class="dnc-note" id="dnc-count" aria-live="polite">Choose at least two hotels.</p>
 <h2 class="dnc-h" id="cmp-r" style="margin-top:1.5rem">2. Compare</h2>
 <div id="dnc-out" aria-live="polite"><p class="dnc-sub">Your comparison appears here.</p></div>

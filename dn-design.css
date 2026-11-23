@@ -337,3 +337,5 @@ html body .filters-bar .filter-btn:hover, html body .filters-bar .filter-btn.act
 /* Mobile containment: wide comparison tables scroll inside themselves instead of widening the page (pre-existing horizontal overflow at 320-390px). */
 @media (max-width: 767px) { main table { display: block !important; max-width: 100% !important; overflow-x: auto; -webkit-overflow-scrolling: touch; } main table th, main table td { min-width: 5.5rem; } main { overflow-x: clip; max-width: 100vw; min-width: 0; } main > * { min-width: 0; max-width: 100%; } }
 @media (max-width: 767px) { .footer-legal, .footer-legal-links { flex-wrap: wrap; white-space: normal; max-width: 100%; } .footer-legal-links { flex-shrink: 1 !important; } }
+/* Consent banner uses the system font stack so the web-font swap can never reflow it (it was the main layout shift). */
+.dn-consent, .dn-consent__t, .dn-consent p, .dn-consent__b { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important; }
