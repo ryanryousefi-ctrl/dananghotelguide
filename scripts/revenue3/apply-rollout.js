@@ -107,7 +107,7 @@ function process_(f, type, theme) {
 }
 for (const s of LISTS) if (all.includes(s + '.html')) process_(s + '.html', 'list');
 for (const s of AREAS) if (all.includes(s + '.html')) process_(s + '.html', 'area');
-for (const f of all.filter(f => /-vs-/.test(f) && !/^da-nang-vs-|beachfront-vs|tms-hotel-vs-sala|mandila/.test(f))) process_(f, 'compare');
+for (const f of all.filter(f => /-vs-/.test(f) && !/^da-nang-vs-|beachfront-vs|tms-hotel-vs-sala|mandila|intercontinental-vs-tia-wellness/.test(f))) process_(f, 'compare'); // generated comparison pages carry their own module
 for (const r of REVIEWS) if (all.includes(r)) process_(r, 'review');
 for (const [theme, ps] of Object.entries(GUIDE)) for (const s of ps) if (all.includes(s + '.html') && !LISTS.includes(s) && !AREAS.includes(s)) process_(s + '.html', 'guide', theme);
 fs.writeFileSync(path.join(ROOT, 'docs/revenue/p3-rollout.json'), JSON.stringify({ pages: report, stats }, null, 1));

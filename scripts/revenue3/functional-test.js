@@ -69,5 +69,19 @@ const srv = http.createServer((q, r) => { const p = decodeURIComponent(q.url.spl
   // 6. shortlist storage blocked -> no crash, no fake Saved state persisted
   { const c = await mk(390, true); await c.addInitScript(() => { Object.defineProperty(window, 'localStorage', { get() { throw new Error('blocked'); } }); }); const p = await c.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
     await p.goto(base + 'compare-hotels.html'); await p.waitForTimeout(300); t('storage blocked: compare page renders without errors', !errs.length && (await p.locator('#dnc-pick input').count()) === 21, errs.join('|')); await c.close(); }
+
+  // 7. Phase 4: Stay Planner, saved-count nav, compare auto-load, withdrawn pages
+  { const c = await mk(390, true); const p = await c.newPage(); await p.goto(base + 'find-your-hotel.html'); await p.waitForTimeout(400);
+    await p.evaluate(() => { const f = document.getElementById('fyForm'); f.reset(); f.querySelector('input[name=nights][value=short]').checked = true; f.querySelector('input[name=focus][value=convenience]').checked = true; f.requestSubmit(); }); await p.waitForTimeout(300);
+    const plan = await p.evaluate(() => ({ plan: !!document.querySelector('#fyRes .fy-plan'), meta: [...document.querySelectorAll('#fyRes .fy-meta')].some(m => /min by road/.test(m.textContent)), ev: (window.dataLayer || []).map(x => Array.prototype.slice.call(x)).filter(x => x[0] === 'event' && x[1] === 'dn_planner_use').length }));
+    t('planner: short convenience trip shows a stay plan, road/walk times, one dn_planner_use event', plan.plan && plan.meta && plan.ev === 1, JSON.stringify(plan));
+    const top = await p.evaluate(() => { const d = JSON.parse(document.getElementById('fyData').textContent).hotels; const n = document.querySelector('#fyRes .fy-card h3').textContent.trim(); return d.find(h => h.name === n); });
+    t('planner: top short-stay convenience pick is near the city (walk or <=8 min road to Han Market)', top && top.go && top.go.market && (top.go.market.walk || top.go.market.drive <= 8), JSON.stringify(top && top.go));
+    await p.locator('#fyRes [data-dn-save]').nth(0).click(); await p.locator('#fyRes [data-dn-save]').nth(1).click();
+    await p.goto(base + 'best-hotels-in-da-nang.html'); await p.waitForTimeout(400);
+    t('nav shows saved count on other pages', /\(2\)/.test(await p.locator('[data-dn-saved-nav]').first().textContent()));
+    await p.goto(base + 'compare-hotels.html'); await p.waitForTimeout(400); t('compare page auto-loads a saved shortlist', (await p.locator('.dnc-table a.tc-btn').count()) === 2);
+    await c.close(); }
+  for (const w of ['azura-da-nang.html', 'silk-path-grand-da-nang.html']) { const h = require('fs').readFileSync(require('path').join(ROOT, w), 'utf8'); t(w + ': withdrawn, noindex, no hotel schema', /noindex, follow/.test(h) && /review withdrawn/i.test(h) && !/"@type":\s*"(Hotel|Review|LodgingBusiness)"/.test(h)); }
   await b.close(); srv.close(); const nb = R.filter(x => !x).length; console.log(`\n${R.length - nb}/${R.length} passed`); process.exit(nb ? 1 : 0);
 })();

@@ -1,0 +1,405 @@
+[
+ {
+  "rank": 1,
+  "query_cluster": "Hotel taxes, service charge and 'net/++' pricing (price decision)",
+  "example_queries": [
+   "Da Nang hotel taxes and service charge",
+   "Vietnam hotel VAT service charge 5%",
+   "is VAT included in Da Nang hotel price",
+   "++ net net hotel rate Vietnam"
+  ],
+  "evidence": "No dedicated answer ranks. Results are tipping/restaurant pages (vietnamtourism.com/en/do-you-tip-at-vietnamese-restaurants-the-complete-guide-for-travelers), Flight Centre Hoi An money page (flightcentre.co.uk/travel-guides/vietnam/hoi-an/money: 'many higher-end hotels include 5% service'), a 1995 joint circular (thuvienphapluat.vn ... Joint-circular-No-88-TTLB) and VAT-law trade pages that never name hotels. Gaps: hotel-specific worked example (net -> total), how Trip.com/Booking show taxes, whether 8% or 10% VAT applies now.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Labelled autocomplete-style evidence: none gathered; this is an inferred gap from SERP absence. A TravelVietnam Furama listing shows rates 'include 10% VAT and 5% service charge' (travelvietnam.com/vietnam-hotels/hotels-in-danang/furama-resort-danang.html).",
+  "our_existing_pages": [
+   "da-nang-hotel-prices.html",
+   "how-to-check-da-nang-hotel-prices.html"
+  ],
+  "recommendation": "new page (da-nang-hotel-taxes-service-charge.html), link from both price pages",
+  "why_we_can_win": "Zero strong intent-matched competitors, high pre-booking intent from every market, easy to make authoritative with a worked example and a 'check your checkout total' list. Must state VAT uncertainty honestly (see summary)."
+ },
+ {
+  "rank": 2,
+  "query_cluster": "Family villa / 2-3 bedroom suite with private pool",
+  "example_queries": [
+   "Da Nang 3 bedroom villa private pool family",
+   "Da Nang family suite two bedroom resort",
+   "다낭 투베드룸 풀빌라 가족"
+  ],
+  "evidence": "Page one is OTA listings (expedia.com/Da-Nang-Hotels-BRG-Golf-Club-Danang-Private-Pool-Villa-3-Bedrooms-3, hotels.com/ho3472295264, vrbo.com/1562087, airbnb.com/h/suhapooldn) plus Korean blogs (trvlogue.com/ko/da-nang-family-resorts-2026, tripstore.kr/blog). OTA pages give no true bedroom/bed config, resort-vs-rental trade-offs, or which villas sit at a staffed resort with kids club. Many are independent rentals with unclear service.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Korean 2-bedroom pool-villa blog posts rank for the 'two-bedroom family' query, a qualitative sign Korean demand uses 'two-bed room' wording.",
+  "our_existing_pages": [
+   "da-nang-hotels-private-pool-villa.html",
+   "family-hotels-da-nang.html",
+   "best-family-resort-da-nang.html",
+   "airbnb.html"
+  ],
+  "recommendation": "rebuild da-nang-hotels-private-pool-villa.html to add a 2BR/3BR family-suite table (sleeps, beds, pool type, resort services)",
+  "why_we_can_win": "Existing page already owns the topic; add the bedroom-configuration table and 'resort villa vs Airbnb villa' verdict that OTAs cannot give."
+ },
+ {
+  "rank": 3,
+  "query_cluster": "Da Nang vs Hoi An: where to base yourself / how to split nights",
+  "example_queries": [
+   "Da Nang or Hoi An where to stay",
+   "how many nights Da Nang Hoi An",
+   "where to stay between Da Nang and Hoi An"
+  ],
+  "evidence": "vinpearl.com/en/hoi-an-or-da-nang, vinwonders.com/en/wonderpedia/news/da-nang-or-hoi-an, gourmettraveller.com.au, klook.com/blog/hoi-an-where-to-stay, vietcetera.com. Mostly brand-owned (Vin) or generic; gap: concrete night-split by trip length with hotel type, transfer time and cost, and honest beach-water caveat for Hoi An.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Most guides converge on 5-7 nights = 3 + 2 split (labelled: from search summaries).",
+  "our_existing_pages": [
+   "da-nang-vs-hoi-an.html",
+   "where-to-stay-between-da-nang-and-hoi-an.html",
+   "how-many-days-in-da-nang.html",
+   "is-hoi-an-cheaper-than-da-nang.html",
+   "da-nang-airport-to-hoi-an.html"
+  ],
+  "recommendation": "consolidate overlapping pages into da-nang-vs-hoi-an.html as hub; add a night-split decision table with Trip.com links",
+  "why_we_can_win": "We already hold 4-5 adjacent pages; consolidation + clear internal linking beats thin competitors, and the commercial intent (which hotel to book per base) is ours."
+ },
+ {
+  "rank": 4,
+  "query_cluster": "Best area to stay in Da Nang (generic head term)",
+  "example_queries": [
+   "best area to stay in Da Nang",
+   "where to stay in Da Nang",
+   "Da Nang best neighborhood"
+  ],
+  "evidence": "Crowded: goatsontheroad, thebrokebackpacker, nomadicnotes, misstourist, localvietnam.com/da-nang/da-nang-where-to-stay, travelness, vietnamdiscovery, agoda travel guide, 22places, Sun World. All similar: My Khe / city centre / Son Tra, hostel-biased, dated. Gap: ward names (My An vs An Thuong vs Phuoc My vs Man Thai), actual walking distance to beach/Han River, noise, new post-merger naming.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Search results page itself lists 15+ near-identical guides = saturated; hard to rank on head term alone.",
+  "our_existing_pages": [
+   "where-to-stay-in-da-nang.html",
+   "da-nang-first-time-visitors-area-guide.html",
+   "da-nang-hotels-map.html",
+   "my-khe-or-han-river-where-to-stay-da-nang.html",
+   "where-to-stay.html"
+  ],
+  "recommendation": "consolidate duplicates into where-to-stay-in-da-nang.html (301/canonical the near-duplicates), keep map",
+  "why_we_can_win": "Win via first-hand ward-level detail and a map; overlapping own pages currently cannibalise each other."
+ },
+ {
+  "rank": 5,
+  "query_cluster": "Family-focused where to stay (kids, toddlers, ages)",
+  "example_queries": [
+   "where to stay in Da Nang with kids",
+   "Da Nang family hotels toddlers",
+   "best family resort Da Nang kids club"
+  ],
+  "evidence": "Hotel-owned content ranks: pullman-danang.com/discovery/destination/resort-with-kids-club-da-nang (self-promoting), booking.com family list, trip.com toplist, honeykidsasia.com, littlestepsasia.com, novotel.accor.com. Gap: age-banded recommendations (0-3 / 4-8 / teens), pool depth, babysitting cost, and honest comparison without a brand bias.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Pullman publishing 'Top 10 family resorts' to rank suggests the query is commercially contested.",
+  "our_existing_pages": [
+   "best-areas-da-nang-families.html",
+   "family-hotels-da-nang.html",
+   "best-family-resort-da-nang.html",
+   "da-nang-hotels-kids-club.html",
+   "da-nang-with-kids-guide.html",
+   "da-nang-with-teenagers.html"
+  ],
+  "recommendation": "consolidate family pages into family-hotels-da-nang.html (age-banded matrix); keep kids-club page as sub-page",
+  "why_we_can_win": "Independent, age-banded and verified-details approach differentiates from hotel-owned lists."
+ },
+ {
+  "rank": 6,
+  "query_cluster": "Korean-language family trips (Mikazuki, Sheraton, Marriott villa, Fusion)",
+  "example_queries": [
+   "다낭 가족여행 호텔 추천",
+   "다낭 키즈클럽 호텔",
+   "다낭 투베드룸 풀빌라",
+   "다낭 미케비치 vs 한강 숙소"
+  ],
+  "evidence": "Korean blogs and OTAs rank: tripstore.kr/blog (affiliate), trvlogue.com/ko/da-nang-family-resorts-2026, yeogi.com, kr.trip.com/blog/danang-poolvilla, esquirekorea.co.kr/article/1906440, agoda.com/ko-kr. Korean searchers want free-child policies (e.g. under 12 free), baby-pool vs family pool, Grab distances, and 2-bedroom rooms. Our English site only has da-nang-guide-for-korean-travelers.html and a Korean malls page.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Korean-language SERP is distinct and heavily affiliate-blog driven; Korean autocomplete not directly observable via this tool.",
+  "our_existing_pages": [
+   "da-nang-guide-for-korean-travelers.html",
+   "da-nang-malls-guide-ko.html"
+  ],
+  "recommendation": "new page (Korean-language family-hotel page, ko) plus rebuild the Korean traveller guide with Hyatt/Sheraton/Marriott family specifics",
+  "why_we_can_win": "Korea is Da Nang's largest inbound market; few English-language sites serve it; a Korean page can cite English-verified details. Needs native-quality Korean review."
+ },
+ {
+  "rank": 7,
+  "query_cluster": "Refundable vs non-refundable, typhoon cancellation (rainy-season booking risk)",
+  "example_queries": [
+   "Da Nang hotel free cancellation typhoon",
+   "refundable vs non-refundable hotel Da Nang",
+   "Da Nang rainy season hotel booking"
+  ],
+  "evidence": "localvietnam.com/da-nang/..., vietnamtourism.com/en/typhoon-season-in-central-vietnam-what-happens-if-one-hits-your-trip, mightytravels.com Nov/Dec 2024 give weather but only 'book refundable'. No page explains platform-level typhoon/force-majeure rules, how much non-refundable saves (one Rakuten listing: US$99 vs US$104 flexible), or deadline traps.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Rainy season SERP is weather-first; booking-risk angle is open.",
+  "our_existing_pages": [
+   "rainy-season-da-nang-guide.html",
+   "worst-time-to-visit-da-nang.html",
+   "how-to-check-da-nang-hotel-prices.html"
+  ],
+  "recommendation": "rebuild rainy-season-da-nang-guide.html with a 'book flexible' decision section; or new section on how-to-check page",
+  "why_we_can_win": "Directly drives conversion on flexible-rate Trip.com bookings; competitors give weather only."
+ },
+ {
+  "rank": 8,
+  "query_cluster": "When to book / cost by season",
+  "example_queries": [
+   "when to book Da Nang hotel",
+   "Da Nang hotel prices by month",
+   "cheapest month Da Nang hotels",
+   "Da Nang peak season prices"
+  ],
+  "evidence": "trip.com/guide/info/best-time-to-visit-da-nang.html (Jun avg ~US$151, Oct ~US$119 per search summary), vinpearl.com/en/peak-season-in-vietnam, traveloka best-time, hotels.com price-trend pages (inconsistent). Gap: lead-time guidance by booking window, holiday spikes (Apr 30, Tet, Sept 2) and tier-specific price ranges.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Hotels.com trend pages disagree on cheapest month (Jan vs Apr), showing data weakness we can exploit with our own rate logging.",
+  "our_existing_pages": [
+   "da-nang-hotel-prices-by-month.html",
+   "guides-da-nang-hotel-prices-by-month.html",
+   "da-nang-hotel-prices.html",
+   "da-nang-tet-2027-hotels.html"
+  ],
+  "recommendation": "consolidate the two by-month pages into one (canonical), cross-link hotel-prices",
+  "why_we_can_win": "Duplicate by-month pages split ranking; one data-backed page with our own rate checks should beat OTA averages."
+ },
+ {
+  "rank": 9,
+  "query_cluster": "Hotels near Ba Na Hills / overnight on the mountain",
+  "example_queries": [
+   "hotels near Ba Na Hills",
+   "Mercure Ba Na Hills overnight",
+   "stay at Ba Na Hills Golden Bridge early"
+  ],
+  "evidence": "hotels.com/de10454074 (OTA), klook.com/blog/where-to-stay-ba-na-hills, expedia. Gap: honest 'should you sleep up there' call, transfer times (~55 min from city), cable-car timing, Mercure French Village rooms/noise.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Klook blog ranks, meaning travel-activity players see commercial value.",
+  "our_existing_pages": [
+   "ba-na-hills-guide.html",
+   "marble-mountains-da-nang.html"
+  ],
+  "recommendation": "rebuild ba-na-hills-guide.html with a Where-to-stay section (or new hotels-near-ba-na-hills page if guide is already long)",
+  "why_we_can_win": "Intent is strongly bookable; competitor set is OTA + one Klook post."
+ },
+ {
+  "rank": 10,
+  "query_cluster": "Hotels near Marble Mountains / Non Nuoc",
+  "example_queries": [
+   "hotels near Marble Mountains Da Nang",
+   "Non Nuoc beach hotels",
+   "Marriott Non Nuoc"
+  ],
+  "evidence": "Expedia/Travelocity/hotels.com location pages, hopegoo; no editorial. Gap: Non Nuoc vs My Khe (calmer, more resort, fewer restaurants, 15-25 min to centre), shuttle availability.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Only OTA pages in top results.",
+  "our_existing_pages": [
+   "marble-mountains-da-nang.html",
+   "non-nuoc-beach-da-nang.html",
+   "marriott-resort-da-nang.html"
+  ],
+  "recommendation": "rebuild non-nuoc-beach-da-nang.html to include 'hotels' section; link from marble mountains page",
+  "why_we_can_win": "OTA-only SERP; we have the Non Nuoc beach page already."
+ },
+ {
+  "rank": 11,
+  "query_cluster": "Hotels near Dragon Bridge / Han Market (city stay)",
+  "example_queries": [
+   "hotels near Dragon Bridge",
+   "Han River hotels Da Nang",
+   "Da Nang city centre hotel"
+  ],
+  "evidence": "hotels.com, expedia Da Nang Downtown, localvietnam; gap: Dragon Bridge fire/water show schedule noise, walking time to My Khe (~25-30 min), Han Market distance.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative only.",
+  "our_existing_pages": [
+   "best-hotels-near-dragon-bridge-han-market-da-nang.html",
+   "best-han-river-hotels-da-nang.html",
+   "da-nang-riverfront-hotels.html",
+   "dragon-bridge-da-nang.html"
+  ],
+  "recommendation": "consolidate best-han-river-hotels and da-nang-riverfront-hotels into one canonical page",
+  "why_we_can_win": "Near-duplicate titles ('Best Han River Hotels...') cannibalise each other."
+ },
+ {
+  "rank": 12,
+  "query_cluster": "Han River vs My Khe",
+  "example_queries": [
+   "Han River vs My Khe where to stay",
+   "My Khe or city centre Da Nang",
+   "Da Nang beach or city hotel"
+  ],
+  "evidence": "explorertom.com, nomadicnotes, localvietnam, agoda guide, vietnamtourism.com/en/my-khe-beach-in-da-nang-swimming-seasons-and-where-to-stay. Most say 'My Khe for first timers'; none compare price, taxi times to attractions, swim season. Gap: price gap table, Grab minutes to key sights.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Search summary: 'none compared the two areas head to head on price'.",
+  "our_existing_pages": [
+   "my-khe-or-han-river-where-to-stay-da-nang.html",
+   "beachfront-vs-city-hotels-da-nang.html"
+  ],
+  "recommendation": "consolidate beachfront-vs-city into my-khe-or-han-river page",
+  "why_we_can_win": "Two own pages answer the same query; merge and add price/time table."
+ },
+ {
+  "rank": 13,
+  "query_cluster": "Hotel head-to-heads (Hyatt vs Marriott, InterContinental vs TIA, Sheraton vs Marriott)",
+  "example_queries": [
+   "Hyatt Regency vs Marriott Da Nang",
+   "Sheraton Grand vs Marriott Danang",
+   "InterContinental vs TIA",
+   "InterContinental vs Hyatt Da Nang"
+  ],
+  "evidence": "Only tripexpert.com programmatic 'X vs Y' pages (tripexpert.com/da-nang/hotels/hyatt-regency-danang-resort-and-spa-vs-...), flyertalk thread, luxurytraveldiary (generic Hyatt vs Marriott brands). Thin and not decision-ready. We already have hyatt-vs-marriott, marriott-vs-sheraton, intercontinental-vs-hyatt. Missing: InterContinental vs TIA (different product: Son Tra villa vs all-inclusive spa pool-suite) and Sheraton vs Hilton, TIA vs Naman exists.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Search for 'InterContinental vs TIA vs Sheraton vs Marriott' returned no true head-to-head, only aggregator lists.",
+  "our_existing_pages": [
+   "hyatt-vs-marriott-da-nang.html",
+   "marriott-vs-sheraton-da-nang.html",
+   "intercontinental-vs-hyatt-da-nang.html",
+   "marriott-vs-intercontinental-da-nang.html",
+   "tia-wellness-vs-naman-retreat-da-nang.html"
+  ],
+  "recommendation": "new page intercontinental-vs-tia-wellness-da-nang.html; refresh existing vs pages with pricing + 'who should pick which' summary",
+  "why_we_can_win": "Very weak competition; we hold nearly the full set already."
+ },
+ {
+  "rank": 14,
+  "query_cluster": "Is a luxury resort worth it / room category choice",
+  "example_queries": [
+   "is luxury resort Da Nang worth it",
+   "4 star vs 5 star Da Nang",
+   "Da Nang room categories ocean view vs garden view"
+  ],
+  "evidence": "Only OTA lists (hotels.com 4-star, expedia luxury) with quote that 'many 5-star have same amenities as 4-star'. No editorial answer. Gap: what you actually get for the price delta (private beach, lounge, kids club, villa), and which room type to buy.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative.",
+  "our_existing_pages": [
+   "luxury-hotels-da-nang.html",
+   "da-nang-hotels-at-a-glance.html",
+   "da-nang-hotel-prices.html"
+  ],
+  "recommendation": "new page (is-a-luxury-resort-in-da-nang-worth-it.html) including room-category cheat sheet",
+  "why_we_can_win": "Opinionated decision content is what OTAs cannot publish."
+ },
+ {
+  "rank": 15,
+  "query_cluster": "Club / executive lounge worth it",
+  "example_queries": [
+   "Da Nang executive lounge worth it",
+   "Hyatt Regency Club Lounge Da Nang",
+   "InterContinental Club Da Nang"
+  ],
+  "evidence": "luxurytraveldiary.com best-executive-club-lounges-in-vietnam (2020-23 versions), milelion Hilton review, hotel official pages (danang.intercontinental.com/amenities/club-intercontinental). Marriott lounge status unclear (FlyerTalk). Gap: current inclusions, price premium, family value.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Points-and-miles blogs dominate; no cost-benefit table.",
+  "our_existing_pages": [
+   "da-nang-hotels-executive-lounge.html"
+  ],
+  "recommendation": "rebuild da-nang-hotels-executive-lounge.html with premium-vs-a-la-carte-breakfast maths",
+  "why_we_can_win": "Existing page; add numbers."
+ },
+ {
+  "rank": 16,
+  "query_cluster": "Connecting rooms",
+  "example_queries": [
+   "Da Nang hotels connecting rooms",
+   "family room for 5 Da Nang",
+   "adjoining rooms Da Nang"
+  ],
+  "evidence": "expedia filter pages (several domains), pullman-danang.com guide (brand), honeykidsasia. Gap: guarantee vs request, which hotels truly guarantee connecting, family-of-5 alternatives (suite vs two rooms).",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Multiple Expedia domain pages ranking = low-effort competition.",
+  "our_existing_pages": [
+   "da-nang-hotels-connecting-rooms.html"
+  ],
+  "recommendation": "rebuild da-nang-hotels-connecting-rooms.html (add family-of-5 suite alternative)",
+  "why_we_can_win": "Existing page is niche-specific; competitors are filter pages."
+ },
+ {
+  "rank": 17,
+  "query_cluster": "Beachfront vs across the road / private beach / ocean view",
+  "example_queries": [
+   "Da Nang beachfront vs across the road",
+   "Da Nang private beach hotels",
+   "ocean view room Da Nang"
+  ],
+  "evidence": "Hotels.com/Expedia listings; no editorial on road crossing, beach access in Hyatt/Furama vs My Khe strip hotels, lifeguard/swim season.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative.",
+  "our_existing_pages": [
+   "da-nang-hotels-private-beach.html",
+   "da-nang-beach-hotels.html",
+   "da-nang-hotels-infinity-pool.html"
+  ],
+  "recommendation": "consolidate into da-nang-beach-hotels.html with a 'walking distance' column; keep private-beach page",
+  "why_we_can_win": "Distance-to-sand data is unique."
+ },
+ {
+  "rank": 18,
+  "query_cluster": "Long stay / month hotel vs serviced apartment",
+  "example_queries": [
+   "Da Nang monthly hotel rate",
+   "long stay hotel Da Nang",
+   "Da Nang serviced apartment month"
+  ],
+  "evidence": "Airbnb monthly category pages only (no prices). Gap: hotel long-stay discounts vs apartments vs digital-nomad cost.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Low commercial value for hotel affiliate; links more to Airbnb/other.",
+  "our_existing_pages": [
+   "da-nang-digital-nomad-guide.html",
+   "da-nang-budget-guide.html",
+   "airbnb.html"
+  ],
+  "recommendation": "consolidate into da-nang-digital-nomad-guide.html",
+  "why_we_can_win": "Low priority: Trip.com commission weak for long stays."
+ },
+ {
+  "rank": 19,
+  "query_cluster": "Without a car / airport transfer and hotel location",
+  "example_queries": [
+   "Da Nang hotels without a car",
+   "airport to My Khe hotel",
+   "hotels near Da Nang airport"
+  ],
+  "evidence": "Mostly Grab/transport guides; limited hotel-specific. Gap: Grab minutes + cost to hotel zones.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative.",
+  "our_existing_pages": [
+   "da-nang-hotels-without-a-car.html",
+   "da-nang-hotels-near-airport.html",
+   "da-nang-airport-to-my-khe.html",
+   "da-nang-airport-guide.html"
+  ],
+  "recommendation": "keep; add time/cost table",
+  "why_we_can_win": "Already covered; minor uplift."
+ },
+ {
+  "rank": 20,
+  "query_cluster": "Short trip / 3 nights",
+  "example_queries": [
+   "Da Nang 3 nights hotel",
+   "Da Nang weekend",
+   "2 nights Da Nang"
+  ],
+  "evidence": "Itinerary content (agoda 3-days, pickyourtrail). Gap: lodging-first plan.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative.",
+  "our_existing_pages": [
+   "da-nang-hotels-for-three-nights.html",
+   "da-nang-3-day-itinerary.html"
+  ],
+  "recommendation": "keep",
+  "why_we_can_win": "Already have it."
+ },
+ {
+  "rank": 21,
+  "query_cluster": "Spa / rooftop pool / lazy river amenity pages",
+  "example_queries": [
+   "Da Nang hotels with rooftop pool",
+   "hotel spa packages Da Nang",
+   "lazy river Da Nang hotel"
+  ],
+  "evidence": "Mostly OTA filters and listicles; Angsana Lang Co lazy river (angsana.com) the real answer for lazy river (Korean blog also notes 300 m lazy river, ~1h from city).",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. Qualitative.",
+  "our_existing_pages": [
+   "da-nang-hotels-rooftop-pool.html",
+   "da-nang-hotels-spa-packages.html",
+   "da-nang-hotels-with-lazy-river.html"
+  ],
+  "recommendation": "keep; low priority",
+  "why_we_can_win": "Niche; small but converts."
+ },
+ {
+  "rank": 22,
+  "query_cluster": "Australia / Singapore / UK / US angle",
+  "example_queries": [
+   "Da Nang from Australia hotels",
+   "Da Nang Singapore long weekend",
+   "Da Nang UK family"
+  ],
+  "evidence": "Jetstar hotel listing pages rank for AU (jetstar.com/au/en/hotels/...); I could not confirm current AU-Da Nang direct flights. SG guides are direct-flight oriented. Needs: flight-time, arrival-time-optimised hotel selection (late arrivals), currency, school-holiday peaks.",
+  "signals": "Search done 2026-11-23 via WebSearch (US-only index). No volume data found; signals are qualitative. AU/UK/US distinct needs are plausible but evidence thin.",
+  "our_existing_pages": [
+   "da-nang-guide-for-australian-travelers.html",
+   "da-nang-guide-for-singapore-travelers.html"
+  ],
+  "recommendation": "keep; add school-holiday windows and arrival-time hotel picks",
+  "why_we_can_win": "Existing market pages; refresh only after verifying flight facts."
+ }
+]

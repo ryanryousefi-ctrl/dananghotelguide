@@ -189,6 +189,7 @@
    "modules": [
     "hero",
     "dates",
+    "compare",
     "return"
    ]
   },

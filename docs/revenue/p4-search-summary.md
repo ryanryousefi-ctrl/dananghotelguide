@@ -1,0 +1,11 @@
+# Da Nang SERP opportunities (research 2026-11-23)
+
+Top bets: (1) hotel taxes/service charge explainer (no real competitor), (2) 2-3BR family villa/suite rebuild, (3) Da Nang vs Hoi An consolidation, (4) Korean-language family page, (5) rainy-season flexible-booking angle, (6) consolidate duplicates (by-month prices, Han River pages, family pages, where-to-stay). New head-to-head gap: InterContinental vs TIA. No search volumes were found; all signals are qualitative.
+
+## VAT / service charge facts (cite carefully)
+- VAT: standard rate is 10%. Resolution 204/2025/QH15 (National Assembly, 17 Jun 2025) cuts it to 8% for goods/services in Article 9(3) of VAT Law 48/2024/QH15, from 1 Jul 2025 to 31 Dec 2026; implementing guidance is Decree 174/2025/ND-CP. Excluded: telecoms, finance/banking, securities, insurance, real estate, metal and mining products (except coal), excise goods. Sources: https://english.luatvietnam.vn/tai-chinh/resolution-204-2025-qh15-vat-reduction-403956-d1.html ; https://www.dfdl.com/insights/legal-and-tax-updates/vietnam-extension-of-the-reduced-8-vat-rate-to-31-december-2026/
+- UNVERIFIED: no source I found names hotel accommodation as in or out. It is not in the exclusion list, so the 8% likely applies, but state "8% (until 31 Dec 2026, then expected 10% unless extended) - confirm on your invoice". A third-party tracker found no extension beyond 2026 as of 5 Oct 2026 (lookuptax.com/tax-changes/vietnam/8pc-reduced-rate-ends-2026, not official).
+- Service charge: no current official figure found. Reputable-ish: Flight Centre says many higher-end hotels include 5% service fees (https://www.flightcentre.co.uk/travel-guides/vietnam/hoi-an/money); a Furama listing quotes rates incl. 10% VAT + 5% service charge (https://travelvietnam.com/vietnam-hotels/hotels-in-danang/furama-resort-danang.html); a 1995 joint circular capped tourist surcharge at 5% (outdated). Treat 5% as common practice, not law; ++ rates add taxes on top, "net" rates are all-in. Do not publish "10% VAT" as current without noting the 8% period.
+- Compounding example from one guide: 8,500,000 VND -> 9,775,000 VND (x1.15 = 5% service + 10% VAT, simple additive, not compounded); verify per hotel.
+
+Per-item evidence in serp.json.

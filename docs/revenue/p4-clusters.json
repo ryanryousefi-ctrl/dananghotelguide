@@ -1,0 +1,295 @@
+[
+ {
+  "page": "family-hotels-da-nang.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-kids-club.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-private-pool-villa.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-connecting-rooms.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-executive-lounge.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "luxury-hotels-da-nang.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-beach-hotels.html",
+  "modules": [
+   "table"
+  ]
+ },
+ {
+  "page": "non-nuoc-beach-da-nang.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-vs-hoi-an.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "rainy-season-da-nang-guide.html",
+  "modules": [
+   "table",
+   "nav"
+  ]
+ },
+ {
+  "page": "where-to-stay-in-da-nang.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "my-khe-or-han-river-where-to-stay-da-nang.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-first-time-visitors-area-guide.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "best-areas-da-nang-families.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-without-a-car.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotels-for-three-nights.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "where-to-stay-between-da-nang-and-hoi-an.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "best-family-resort-da-nang.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-with-kids-guide.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "is-a-luxury-resort-in-da-nang-worth-it.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "best-luxury-resort-couples-da-nang.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-honeymoon-hotels.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "intercontinental-vs-tia-wellness-da-nang.html",
+  "modules": [
+   "vs",
+   "nav"
+  ]
+ },
+ {
+  "page": "hyatt-vs-marriott-da-nang.html",
+  "modules": [
+   "vs",
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotel-prices.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotel-prices-by-month.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "how-to-check-da-nang-hotel-prices.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-hotel-taxes-service-charge.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "da-nang-tet-2027-hotels.html",
+  "modules": [
+   "nav"
+  ]
+ },
+ {
+  "page": "a-la-carte-vs-tms-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "four-points-vs-novotel-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "furama-vs-pullman-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "hyatt-regency-vs-furama-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "hyatt-regency-vs-sheraton-grand-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "intercontinental-vs-furama-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "intercontinental-vs-hyatt-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "intercontinental-vs-pullman-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "marriott-vs-intercontinental-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "marriott-vs-sheraton-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "melia-vs-hyatt-regency-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "melia-vs-radisson-blu-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "novotel-vs-hilton-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "premier-village-vs-sheraton-grand-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "pullman-vs-hyatt-regency-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "pullman-vs-sheraton-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "sheraton-vs-hyatt-regency-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ },
+ {
+  "page": "tia-wellness-vs-naman-retreat-da-nang.html",
+  "modules": [
+   "vs"
+  ]
+ }
+]

@@ -227,6 +227,10 @@
   "da-nang-hotel-prices-by-month.html -> news.html",
   "da-nang-hotel-prices-by-month.html -> news.html",
   "da-nang-hotel-prices-by-month.html -> news.html",
+  "da-nang-hotel-taxes-service-charge.html -> news.html",
+  "da-nang-hotel-taxes-service-charge.html -> news.html",
+  "da-nang-hotel-taxes-service-charge.html -> news.html",
+  "da-nang-hotel-taxes-service-charge.html -> news.html",
   "da-nang-hotels-at-a-glance.html -> news.html",
   "da-nang-hotels-at-a-glance.html -> news.html",
   "da-nang-hotels-at-a-glance.html -> news.html",
@@ -534,6 +538,14 @@
   "intercontinental-vs-pullman-da-nang.html -> news.html",
   "intercontinental-vs-pullman-da-nang.html -> news.html",
   "intercontinental-vs-pullman-da-nang.html -> news.html",
+  "intercontinental-vs-tia-wellness-da-nang.html -> news.html",
+  "intercontinental-vs-tia-wellness-da-nang.html -> news.html",
+  "intercontinental-vs-tia-wellness-da-nang.html -> news.html",
+  "intercontinental-vs-tia-wellness-da-nang.html -> news.html",
+  "is-a-luxury-resort-in-da-nang-worth-it.html -> news.html",
+  "is-a-luxury-resort-in-da-nang-worth-it.html -> news.html",
+  "is-a-luxury-resort-in-da-nang-worth-it.html -> news.html",
+  "is-a-luxury-resort-in-da-nang-worth-it.html -> news.html",
   "is-da-nang-walkable.html -> news.html",
   "is-da-nang-walkable.html -> news.html",
   "is-hoi-an-cheaper-than-da-nang.html -> news.html",
@@ -743,7 +755,7 @@
  ],
  "orphans": [
   "airbnb.html",
-  "da-nang-guide-for-russian-travelers.html",
+  "azura-da-nang.html",
   "da-nang-malls-guide-ko.html",
   "da-nang-national-day-celebration-2026.html",
   "da-nang-time-converter.html",
@@ -751,12 +763,15 @@
   "da-nang-vladivostok-flight-russian-tourism-2026.html",
   "how-to-live-in-da-nang-under-1000-a-month.html",
   "search.html",
+  "silk-path-grand-da-nang.html",
   "vietnam-high-tech-economy-2026.html"
  ],
  "issues": {
   "canonicalMismatch": [],
   "notInSitemap": [
-   "search.html"
+   "azura-da-nang.html",
+   "search.html",
+   "silk-path-grand-da-nang.html"
   ],
   "noH1": [],
   "multiH1": [],
