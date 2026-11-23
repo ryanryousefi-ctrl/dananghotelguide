@@ -31,4 +31,4 @@ Strict affiliate validator (`--cutover`, 212 pages, 0 failures); render+GA sampl
 Not run: Lighthouse/performance measurement (no change in scripts loaded beyond two small deferred files and one CSS file; not measured), Search Console and GA4 (no access), real-device testing.
 
 ## Rollback
-Batch 2: `git revert -m 1 c833137`. Batch 1: `git revert -m 1 45c78b6` (also revert `03f3585` is NOT needed; it only removes a stray symlink). Or promote the Vercel deployment of `dd4571a`.
+Batch 3: `git revert -m 1 2e1f3ed`. Batch 2: `git revert -m 1 c833137`. Batch 1: `git revert -m 1 45c78b6` (`03f3585` only removes a stray symlink and need not be reverted). Or promote the Vercel deployment of `dd4571a`.
