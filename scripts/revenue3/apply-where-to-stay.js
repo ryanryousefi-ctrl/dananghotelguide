@@ -9,7 +9,7 @@ const wrap = (n, body) => `<!--dn-c3:ws:${n}-->${body}<!--/dn-c3:ws:${n}-->`;
 const strip = n => { html = html.replace(new RegExp(`<!--dn-c3:ws:${n}-->[\\s\\S]*?<!--/dn-c3:ws:${n}-->\\n?`, 'g'), ''); };
 const esc = C.esc;
 ['hero', 'chooser', 'picks', 'compare', 'season', 'return', 'final'].forEach(strip);
-html = html.replace(/<!--dn-c3:ws:card-[a-z-]+-->[\s\S]*?<!--\/dn-c3:ws:card-[a-z-]+-->/g, '');
+html = html.replace(/<!--dn-c3:ws:card-([a-z-]+)-->[\s\S]*?<!--\/dn-c3:ws:card-\1-->\n */g, '');
 
 // 1. hero price-check (right after the page hero, so the lede still answers the question first)
 const hero = wrap('hero', C.heroPrice({ id: 'ws-hero-pc', kicker: 'Check prices for your dates', title: 'Where should you stay in Da Nang?', copy: 'Beachfront resorts, Han River hotels, family-friendly stays and boutique hideaways: find the right area, then check real prices for your travel dates.', secondaryLabel: 'Find My Ideal Hotel', secondaryHref: 'find-your-hotel.html', note: 'Choose your neighborhood, compare our hotel recommendations, and check current room availability through Trip.com. Trip.com is an affiliate partner: we may earn a commission if you book, at no extra cost to you. We do not book rooms ourselves.' }));

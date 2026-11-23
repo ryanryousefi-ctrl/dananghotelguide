@@ -1,0 +1,11 @@
+{
+ "run": "2026-11-23T10:24:24.730Z",
+ "pages": 213,
+ "errors": [],
+ "warnings": [
+  {
+   "check": "low-confidence",
+   "why": "brilliant-hotel-da-nang.beach shown as \"Not a beach hotel\" from low-confidence research"
+  }
+ ]
+}

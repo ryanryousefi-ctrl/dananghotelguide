@@ -5,7 +5,7 @@
   var d = document, form = d.getElementById('fyForm'), out = d.getElementById('fyRes'), hoi = d.getElementById('fyHoi'), grp = d.getElementById('fyDN');
   var dataEl = d.getElementById('fyData'); if (!form || !out || !dataEl) return;
   var DATA; try { DATA = JSON.parse(dataEl.textContent); } catch (e) { return; }
-  var LABEL = { beach: 'Beachfront', city: 'City / Han River', resort: 'Resort', hotel: 'Hotel', villa: 'Villa or boutique', value: 'Value', upscale: 'Upscale', luxury: 'Luxury', families: 'Families', couples: 'Couples', solo: 'Solo or friends', business: 'Business', wellness: 'Wellness', pool: 'Pool', quiet: 'Quiet', walkable: 'Walkable', lounge: 'Lounge', beachfront: 'Beach at the door' };
+  var LABEL = { beach: 'Beach area', city: 'City / Han River', resort: 'Resort', hotel: 'Hotel', villa: 'Villa or boutique', value: '4-star', upscale: '5-star', luxury: '5-star luxury', families: 'Families', couples: 'Couples', solo: 'Solo or friends', business: 'Business', wellness: 'Wellness', pool: 'Pool', quiet: 'Quiet', walkable: 'Walkable', lounge: 'Lounge', beachfront: 'Beachfront', kids: "Kids' club", airport: 'Near the airport', nightlife: 'Nightlife nearby' };
   function val(n) { var e = form.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : 'any'; }
   function prios() { return [].slice.call(form.querySelectorAll('input[name="prio"]:checked')).map(function (e) { return e.value; }); }
   function el(tag, cls, text) { var e = d.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }

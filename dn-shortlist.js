@@ -3,6 +3,7 @@
    GA4 (only if gtag exists and consent allows via the page's own consent mode): dn_shortlist_save / dn_shortlist_remove / dn_copy_link.
    These are tool-engagement events, never booking events. */
 (function () {
+  if (window.DN_SHORTLIST) return; // loaded once per page even if included twice
   var KEY = 'dn_shortlist_v1', MAX = 6;
   function read() { try { var v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v.filter(function (s) { return typeof s === 'string'; }) : []; } catch (e) { return mem; } }
   var mem = [];

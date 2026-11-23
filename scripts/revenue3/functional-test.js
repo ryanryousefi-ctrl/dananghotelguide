@@ -44,5 +44,30 @@ const srv = http.createServer((q, r) => { const p = decodeURIComponent(q.url.spl
   { const c = await mk(1280, true); const p = await c.newPage(); await p.goto(base + 'best-hotels-in-da-nang.html'); await p.evaluate(() => scrollTo(0, document.body.scrollHeight * 0.5)); await p.waitForTimeout(500); t('desktop: no sticky bar', (await p.locator('.dn-sticky:not([hidden])').count()) === 0); await c.close(); }
   // 4. consent: with no stored choice the banner shows and the Trip.com buttons are plain links
   { const c = await mk(390, false); const p = await c.newPage(); await p.goto(base + 'where-to-stay-in-da-nang.html'); await p.waitForTimeout(800); t('consent banner still appears for new visitors', (await p.locator('.dn-consent').count()) > 0); await c.close(); }
+
+  // 5. finder scenarios (results must respect the verified tags in the embedded data)
+  { const c = await mk(390, true); const p = await c.newPage(); await p.goto(base + 'find-your-hotel.html'); await p.waitForTimeout(400);
+    const data = await p.evaluate(() => JSON.parse(document.getElementById('fyData').textContent).hotels); const byName = Object.fromEntries(data.map(h => [h.name, h]));
+    const run = async (o) => { await p.evaluate(o => { const f = document.getElementById('fyForm'); f.reset(); for (const [k, v] of Object.entries(o)) { if (k === 'prio') v.forEach(x => { const i = f.querySelector(`input[name=prio][value="${x}"]`); if (i) i.checked = true; }); else { const i = f.querySelector(`input[name="${k}"][value="${v}"]`); if (i) i.checked = true; } } f.requestSubmit(); }, o); await p.waitForTimeout(250);
+      return p.evaluate(() => [...document.querySelectorAll('#fyRes .fy-card h3')].map(h => h.textContent.trim())); };
+    let r = await run({ audience: 'families', setting: 'beach', style: 'resort', prio: ['beachfront', 'kids'] });
+    t('finder: family beachfront resort -> beach hotels, top pick tagged beachfront + kids club', r.length && r.every(n => byName[n] && byName[n].setting === 'beach') && byName[r[0]].priorities.includes('beachfront') && byName[r[0]].priorities.includes('kids'), r.join(', '));
+    r = await run({ audience: 'couples', budget: 'luxury', prio: ['quiet'] });
+    t('finder: luxury couple wanting privacy -> 5-star luxury results', r.length && r.every(n => byName[n].budget === 'luxury'), r.join(', '));
+    r = await run({ setting: 'city', prio: ['walkable'] });
+    t('finder: no car -> city hotels, top picks walk to Han Market', r.length && r.every(n => byName[n].setting === 'city') && byName[r[0]].priorities.includes('walkable') && !r.slice(0, 2).includes('Grand Mercure Danang'), r.join(', '));
+    r = await run({ prio: ['nightlife'] });
+    t('finder: nightlife -> top picks tagged nightlife', r.length && byName[r[0]].priorities.includes('nightlife'), r.join(', '));
+    r = await run({ setting: 'city' });
+    t('finder: city hotel -> only non-beach hotels', r.length && r.every(n => byName[n].setting === 'city'), r.join(', '));
+    r = await run({ prio: ['airport'] });
+    t('finder: near the airport -> top pick has a <=15 min road estimate tag', r.length && byName[r[0]].priorities.includes('airport'), r.join(', '));
+    const fyBtns = await p.evaluate(() => [...document.querySelectorAll('#fyRes a.tc-btn')].every(a => /Allianceid=11013066/.test(a.href) && /SID=333523744/.test(a.href)));
+    t('finder: every result button carries Alliance ID and Site ID', fyBtns);
+    await p.locator('#fyRes [data-dn-save]').first().click(); t('finder: Save stores the hotel locally', (await p.evaluate(() => JSON.parse(localStorage.getItem('dn_shortlist_v1') || '[]').length)) === 1);
+    await c.close(); }
+  // 6. shortlist storage blocked -> no crash, no fake Saved state persisted
+  { const c = await mk(390, true); await c.addInitScript(() => { Object.defineProperty(window, 'localStorage', { get() { throw new Error('blocked'); } }); }); const p = await c.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message));
+    await p.goto(base + 'compare-hotels.html'); await p.waitForTimeout(300); t('storage blocked: compare page renders without errors', !errs.length && (await p.locator('#dnc-pick input').count()) === 21, errs.join('|')); await c.close(); }
   await b.close(); srv.close(); const nb = R.filter(x => !x).length; console.log(`\n${R.length - nb}/${R.length} passed`); process.exit(nb ? 1 : 0);
 })();

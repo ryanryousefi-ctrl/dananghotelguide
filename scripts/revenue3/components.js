@@ -18,9 +18,10 @@ function tc(entry, label, loc, o = {}) {
 }
 const hotel = slug => { const h = FACTS[slug]; if (!h) throw new Error('unknown hotel ' + slug); return h; };
 const hotelEntry = h => byKey(h.tripcom_key);
+const nm = h => h.official_name || h.name; // verified current property name (data/hotels/research2), falls back to our review's name
 const shortName = n => n.replace(/^(Danang|Da Nang)\s+/i, '').replace(/ (Da Nang|Danang).*$/i, m => m).trim();
 const hotelLabel = name => name.length <= 28 ? `Check ${name} Prices` : 'Check Room Prices';
-const hotelBtn = (slug, loc, o = {}) => { const h = hotel(slug); return tc(hotelEntry(h), o.label || hotelLabel(h.name), loc, Object.assign({ hotel: h.name }, o)); };
+const hotelBtn = (slug, loc, o = {}) => { const h = hotel(slug); return tc(hotelEntry(h), o.label || hotelLabel(nm(h)), loc, Object.assign({ hotel: nm(h) }, o)); };
 const destBtn = (d, loc, o = {}) => tc(DEST[d], o.label || `Compare ${DEST_NAME[d]} Hotel Prices`, loc, o);
 const uid = (() => { let n = 0; return p => `${p}${++n}`; })();
 
@@ -43,8 +44,8 @@ function heroPrice(o) {
 function priceCard(slug, o = {}) {
   const h = hotel(slug), ed = h.editorial, loc = o.loc || 'p3-card';
   const meta = [area(h), beach(h)].filter(Boolean).join(' · ');
-  return `<article class="dnc-card" data-dn-hotel="${esc(slug)}">${h.image ? `<img class="dnc-card__img" src="${esc(h.image)}" alt="${esc(h.name)}" loading="lazy" decoding="async" width="600" height="400">` : ''}
-<div class="dnc-card__b"><h3>${esc(h.name)}</h3>${meta ? `<p class="dnc-meta">${esc(meta)}</p>` : ''}
+  return `<article class="dnc-card" data-dn-hotel="${esc(slug)}">${h.image ? `<img class="dnc-card__img" src="${esc(h.image)}" alt="${esc(nm(h))}" loading="lazy" decoding="async" width="600" height="400">` : ''}
+<div class="dnc-card__b"><h3>${esc(nm(h))}</h3>${meta ? `<p class="dnc-meta">${esc(meta)}</p>` : ''}
 <p><span class="dnc-lab">Best for</span>${esc(ed.bestFor)}</p><p><span class="dnc-lab">Why choose it</span>${esc(ed.why)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(ed.drawback)}</p>
 <div class="dnc-card__f">${hotelBtn(slug, loc, { block: true })}<div class="dnc-card__links"><a href="${esc(h.review)}">Read our review</a><button type="button" class="dnc-save" data-dn-save="${esc(slug)}" aria-pressed="false">Save</button><a href="compare-hotels.html?h=${esc(slug)}" data-dn-compare-link>Compare</a></div></div></div></article>`;
 }
@@ -53,29 +54,29 @@ const cards = (slugs, o) => `<div class="dnc-cards">${slugs.map(s => priceCard(s
 // ---- C: compare module (two hotels) ----------------------------------------------------------
 function diffLine(a, b) {
   const A = hotel(a), B = hotel(b), bits = [];
-  if (A.setting !== B.setting) bits.push(`${A.name} is the ${A.setting === 'beach' ? 'beach' : 'city'} option and ${B.name} the ${B.setting === 'beach' ? 'beach' : 'city'} option.`);
+  if (A.setting !== B.setting) bits.push(`${nm(A)} is the ${A.setting === 'beach' ? 'beach' : 'city'} option and ${nm(B)} the ${B.setting === 'beach' ? 'beach' : 'city'} option.`);
   const aa = area(A), ab = area(B); if (aa && ab && aa !== ab) bits.push(`Area: ${aa} versus ${ab}.`);
   if (!bits.length) bits.push('Both are similar in setting and style; compare the trade-offs above against the rates for your dates.');
   return bits.join(' ');
 }
 function compareModule(a, b, o = {}) {
   const loc = o.loc || 'p3-compare', A = hotel(a), B = hotel(b), id = uid('dnc-cmp');
-  const col = (s, h) => `<div class="dnc-cmp__col"><h3>${esc(h.name)}</h3><p><span class="dnc-lab">Best for</span>${esc(h.editorial.bestFor)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(h.editorial.drawback)}</p>${hotelBtn(s, loc, { block: true })}</div>`;
+  const col = (s, h) => `<div class="dnc-cmp__col"><h3>${esc(nm(h))}</h3><p><span class="dnc-lab">Best for</span>${esc(h.editorial.bestFor)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(h.editorial.drawback)}</p>${hotelBtn(s, loc, { block: true })}</div>`;
   return `<!--dn-c3:compare--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><div class="dnc-cmp"><p class="dnc-kicker">Compare two hotels</p><h2 class="dnc-h" id="${id}">Compare these hotels for your dates</h2>
 <p class="dnc-sub">${esc(o.sub || 'The right choice can depend on the price difference for your dates.')} ${esc(diffLine(a, b))}</p><div class="dnc-cmp__grid">${col(a, A)}${col(b, B)}</div>
 <p class="dnc-note"><a href="compare-hotels.html?h=${esc(a)},${esc(b)}">Open the side-by-side comparison tool</a>. Rates are shown on Trip.com.</p></div></div></section>`;
 }
 
 function compareGroup(pairs, o = {}) {
-  const id = uid('dnc-cg'); const col = (sl, loc) => { const h = hotel(sl); return `<div class="dnc-cmp__col"><h3>${esc(h.name)}</h3><p><span class="dnc-lab">Best for</span>${esc(h.editorial.bestFor)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(h.editorial.drawback)}</p>${hotelBtn(sl, loc, { block: true })}</div>`; };
+  const id = uid('dnc-cg'); const col = (sl, loc) => { const h = hotel(sl); return `<div class="dnc-cmp__col"><h3>${esc(nm(h))}</h3><p><span class="dnc-lab">Best for</span>${esc(h.editorial.bestFor)}</p><p><span class="dnc-lab">Consider another hotel if</span>${esc(h.editorial.drawback)}</p>${hotelBtn(sl, loc, { block: true })}</div>`; };
   return `<!--dn-c3:compare--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><p class="dnc-kicker">Compare before you choose</p><h2 class="dnc-h" id="${id}">${esc(o.title || 'Compare these hotels for your dates')}</h2><p class="dnc-sub">${esc(o.sub || 'The right choice can depend on the price difference for your dates.')}</p>${pairs.map(([a, b]) => `<div class="dnc-cmp" style="margin-bottom:1rem"><p class="dnc-sub" style="margin:0">${esc(diffLine(a, b))}</p><div class="dnc-cmp__grid">${col(a, o.loc || 'p3-compare')}${col(b, o.loc || 'p3-compare')}</div><p class="dnc-note"><a href="compare-hotels.html?h=${esc(a)},${esc(b)}">Open the side-by-side comparison tool</a>. Rates are shown on Trip.com.</p></div>`).join('')}</div></section>`;
 }
 // ---- D: editor's booking verdict ---------------------------------------------------------------
 function verdict(slug, o = {}) {
   const h = hotel(slug), ed = h.editorial, id = uid('dnc-v');
-  return `<!--dn-c3:verdict--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><div class="dnc-verdict"><p class="dnc-kicker">Editor's verdict</p><h2 class="dnc-h" id="${id}">Is ${esc(h.name)} right for you?</h2>
+  return `<!--dn-c3:verdict--><section class="dnc dnc-sec" aria-labelledby="${id}"><div class="dnc-wrap"><div class="dnc-verdict"><p class="dnc-kicker">Editor's verdict</p><h2 class="dnc-h" id="${id}">Is ${esc(nm(h))} right for you?</h2>
 <dl><dt>Best for</dt><dd>${esc(ed.bestFor)}</dd><dt>Why choose it</dt><dd>${esc(ed.why)}</dd><dt>Consider another hotel if</dt><dd>${esc(ed.drawback)}</dd></dl>
-<div class="dnc-actions">${hotelBtn(slug, o.loc || 'p3-verdict', { label: h.name.length <= 24 ? `Check ${h.name} Rooms & Rates` : 'Check Rooms & Rates' })}</div>
+<div class="dnc-actions">${hotelBtn(slug, o.loc || 'p3-verdict', { label: nm(h).length <= 24 ? `Check ${nm(h)} Rooms & Rates` : 'Check Rooms & Rates' })}</div>
 <p class="dnc-note">Our verdict is editorial opinion. Room availability and rates are shown on Trip.com.</p></div></div></section>`;
 }
 
@@ -108,4 +109,6 @@ function seasonal(d = 'danang') {
 <div class="dnc-actions">${destBtn(d, 'p3-seasonal', { label: 'Check Prices for Your Dates' })}</div></div></section>`;
 }
 
-module.exports = { compareGroup, esc, tc, DEST, DEST_NAME, FACTS, hotel, hotelBtn, destBtn, heroPrice, priceCard, cards, compareModule, verdict, band, datesReminder, returnModule, seasonal, area, beach, diffLine, hotelEntry, AREA_LABEL };
+// Keep each shared asset tag once (generators reuse each other's pages as templates).
+function dedupeAssets(h) { const seen = new Set(); return h.replace(/<link rel="stylesheet" href="(dn-commerce\.css|tripcom-cta\.css)">\n?|<script src="(dn-shortlist\.js|dn-sticky-cta\.js|dn-compare\.js|dn-finder\.js|tripcom-cta\.js)" defer><\/script>\n?/g, m => { const k = m.trim(); if (seen.has(k)) return ''; seen.add(k); return m; }); }
+module.exports = { dedupeAssets, nm, compareGroup, esc, tc, DEST, DEST_NAME, FACTS, hotel, hotelBtn, destBtn, heroPrice, priceCard, cards, compareModule, verdict, band, datesReminder, returnModule, seasonal, area, beach, diffLine, hotelEntry, AREA_LABEL };

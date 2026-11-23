@@ -1160,9 +1160,9 @@
     "pool"
    ],
    "editorial": {
-    "bestFor": "Business and culture-focused visitors who want to walk to restaurants and markets",
-    "why": "A walkable city base on the river side of town.",
-    "drawback": "Not a beach hotel; the pool is city-hotel scale."
+    "bestFor": "Business travellers who want a quieter city base with lounge access",
+    "why": "A city hotel on Green Island with an executive lounge, away from the busiest streets.",
+    "drawback": "Not a beach hotel, and Han Market is about a 36-minute walk; plan on short rides."
    },
    "area_label": "Green Island, south of the city centre",
    "display": {
@@ -4752,7 +4752,7 @@
   },
   "radisson-blu-da-nang": {
    "slug": "radisson-blu-da-nang",
-   "name": "Radisson Blu Resort Danang",
+   "name": "Radisson Hotel Danang",
    "review": "radisson-blu-da-nang.html",
    "tripcom_key": "hotel:radisson-danang",
    "image": "images/hotels/radisson-blu-da-nang.jpg",
