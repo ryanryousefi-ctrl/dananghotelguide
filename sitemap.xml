@@ -86,12 +86,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dananghotelguide.com/azura-da-nang.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.dananghotelguide.com/ba-na-hills-guide.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -926,12 +920,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dananghotelguide.com/silk-path-grand-da-nang.html</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.dananghotelguide.com/son-tra-peninsula-da-nang.html</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -1269,6 +1257,24 @@
   </url>
   <url>
     <loc>https://www.dananghotelguide.com/da-nang-hotels-for-three-nights.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dananghotelguide.com/da-nang-hotel-taxes-service-charge.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dananghotelguide.com/intercontinental-vs-tia-wellness-da-nang.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dananghotelguide.com/is-a-luxury-resort-in-da-nang-worth-it.html</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
