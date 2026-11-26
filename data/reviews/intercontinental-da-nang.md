@@ -310,6 +310,20 @@ Whether the upgrade represents good value depends on the nightly price differenc
 
 But for travelers planning to remain on the property for most of their stay, Club access would be near the top of my list of upgrades to consider.
 
+### Cocktail Hour in the Club Lounge: Better Than Advertised
+
+The evening cocktail hour in the Club InterContinental Lounge deserves a closer look.
+
+The menu covers the essentials: Rosso vermouth and Campari as aperitifs, Ketel One, Grey Goose and Absolut vodka, Gordon's and Vietnam's own Song Cai gin, Kraken Spiced and Bacardí rum, Johnnie Walker Black Label and Jack Daniel's whisky, Baileys and other liqueurs, Hennessy VSOP cognac, and beer from Heineken and Ba Na Sun Kraft.
+
+The drinks were better than advertised.
+
+The food selection, on the other hand, was lacking compared to other hotels I've stayed at with similar cocktail hours.
+
+But it's called cocktail hour, not buffet hour.
+
+The light bites are there to go with your drinks, and when each of those drinks would normally cost 500,000 VND, having something to eat alongside them is a bonus.
+
 ## Getting Around: The Famous Nam Tram
 
 One of the most distinctive features of the resort is the Nam Tram, a funicular railway connecting the different elevations of the property.
