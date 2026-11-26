@@ -33,10 +33,16 @@ const out = body.map(b => {
   return `<p>${inline(b.text)}</p>`;
 });
 // first H2 starts the sections; everything before it is the introduction
+// Editor's photos (optional <review>.photos.json next to the Markdown): each <figure> goes right after the paragraph whose text starts with "after".
+const photosFile = path.join(ROOT, mdFile.replace(/\.md$/, '.photos.json'));
+if (fs.existsSync(photosFile)) { const PH = JSON.parse(fs.readFileSync(photosFile, 'utf8')).photos; const plain = x => x.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+  for (const ph of PH.slice().reverse()) { const hits = out.map((x, i) => (x.startsWith('<p>') && plain(x).startsWith(ph.after) ? i : -1)).filter(i => i >= 0);
+    if (hits.length !== 1) throw new Error(`photo anchor must match exactly one paragraph (${hits.length}): ${ph.after}`);
+    out.splice(hits[0] + 1, 0, `<figure class="rv-fig"><img src="${ph.src}" srcset="${ph.src800} ${Math.round(ph.w * 800 / Math.max(ph.w, ph.h))}w, ${ph.src} ${ph.w}w" sizes="(max-width: 760px) 100vw, 720px" width="${ph.w}" height="${ph.h}" alt="${esc(ph.alt)}" loading="lazy" decoding="async"><figcaption>${esc(ph.caption)}</figcaption></figure>`); } }
 // Keep the page's Trip.com dynamic banner (one of the sitewide placements) byte-for-byte, between sections at about 42% of the article (its recorded placement).
 let hPage = fs.readFileSync(P, 'utf8'); const BRE = /\n?<!-- TRIP\.COM DYNAMIC BANNER -->[\s\S]*?<!-- \/TRIP\.COM DYNAMIC BANNER -->\n?/;
 const bannerBlock = (hPage.match(BRE) || [])[0]; if (bannerBlock) hPage = hPage.replace(BRE, '\n');
-if (bannerBlock) { const wc = out.map(x => x.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length); const total = wc.reduce((a, b) => a + b, 0); let acc = 0, at = -1;
+if (bannerBlock) { const wc = out.map(x => (x.startsWith('<figure') ? '' : x).replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length); const total = wc.reduce((a, b) => a + b, 0); let acc = 0, at = -1;
   for (let i = 0; i < out.length; i++) { if (i > 0 && out[i].startsWith('<h2') && acc / total >= 0.42) { at = i; break; } acc += wc[i]; }
   if (at > 0) out.splice(at, 0, '</article>\n' + bannerBlock.trim() + '\n<article class="rv-article rv-article--cont">'); } // full width: the 728x90 band needs more than the 720px text column
 const firstH2 = out.findIndex(x => x.startsWith('<h2'));
@@ -58,7 +64,7 @@ ${rest}
 <!--review:end-->`;
 let h = hPage;
 const css = `<style id="rv-style">.rv-hero .dn-eyebrow{color:#555!important;text-shadow:none!important;filter:none!important;opacity:1!important}.rv-hero h1{max-width:22ch}.rv-byline{margin:.4rem 0 0;font-size:1rem;opacity:.9}.rv-score{display:flex;align-items:baseline;flex-wrap:wrap;gap:.35rem .6rem;margin-top:1rem}.rv-score__num{font:700 2.6rem/1 var(--font-display,Georgia,serif)}.rv-score__max{font-size:1.1rem;opacity:.75}.rv-score__lbl{flex-basis:100%;font-size:.9rem;opacity:.85}
-.rv-article{max-width:720px;margin:0 auto;padding:2rem var(--gutter,1.25rem) 2.5rem;font-size:1.075rem;line-height:1.75;color:var(--ink,#111)}.rv-article p{margin:0 0 1.05rem}.rv-article h2{font:700 clamp(1.45rem,4vw,1.9rem)/1.2 var(--font-display,Georgia,serif);margin:2.6rem 0 1rem;scroll-margin-top:90px}.rv-article h3{font:700 clamp(1.15rem,3vw,1.35rem)/1.3 var(--font-display,Georgia,serif);margin:2rem 0 .8rem;scroll-margin-top:90px}.rv-article ul{margin:0 0 1.2rem;padding-left:1.2rem}.rv-article li{margin:.4rem 0}.rv-article strong{font-weight:700}.rv-article--cont{padding-top:.5rem}.rv-intro{border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;margin-bottom:.4rem}
+.rv-article{max-width:720px;margin:0 auto;padding:2rem var(--gutter,1.25rem) 2.5rem;font-size:1.075rem;line-height:1.75;color:var(--ink,#111)}.rv-article p{margin:0 0 1.05rem}.rv-article h2{font:700 clamp(1.45rem,4vw,1.9rem)/1.2 var(--font-display,Georgia,serif);margin:2.6rem 0 1rem;scroll-margin-top:90px}.rv-article h3{font:700 clamp(1.15rem,3vw,1.35rem)/1.3 var(--font-display,Georgia,serif);margin:2rem 0 .8rem;scroll-margin-top:90px}.rv-article ul{margin:0 0 1.2rem;padding-left:1.2rem}.rv-article li{margin:.4rem 0}.rv-article strong{font-weight:700}.rv-article--cont{padding-top:.5rem}.rv-fig{margin:1.6rem 0 1.9rem}.rv-fig img{display:block;width:100%;height:auto;border-radius:6px;background:#eee}.rv-fig figcaption{font-size:.88rem;line-height:1.5;color:#555;margin-top:.5rem}.rv-intro{border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;margin-bottom:.4rem}
 @media(max-width:600px){.rv-article{font-size:1.02rem;padding-top:1.4rem}}</style>`;
 if (/<!--review:begin-->/.test(h)) {
   // re-render: keep whatever sits at the mid marker (booking modules) and replace the rest of the block
