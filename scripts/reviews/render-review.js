@@ -48,7 +48,7 @@ if (bannerBlock) { const wc = out.map(x => (x.startsWith('<figure') ? '' : x).re
 const firstH2 = out.findIndex(x => x.startsWith('<h2'));
 const intro = out.slice(0, firstH2).join('\n'), rest = out.slice(firstH2).join('\n');
 const heroCfg = (() => { const f = path.join(ROOT, mdFile.replace(/\.md$/, '.photos.json')); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).hero : null; })();
-const heroOpen = heroCfg ? `<header class="dn-hero rv-hero rv-hero--img"><div class="dn-hero__media"><img src="${heroCfg.src}" alt="" fetchpriority="high" decoding="async"></div><div class="dn-hero__inner">` : '<header class="dn-hero dn-hero--plain rv-hero"><div class="dn-hero__inner">';
+const heroOpen = heroCfg ? `<header class="dn-hero rv-hero rv-hero--img"><div class="dn-hero__media"><img src="${heroCfg.src}"${heroCfg.srcset ? ` srcset="${heroCfg.srcset}" sizes="100vw"` : ''}${heroCfg.style ? ` style="${heroCfg.style}"` : ''} alt="" fetchpriority="high" decoding="async"></div><div class="dn-hero__inner">` :'<header class="dn-hero dn-hero--plain rv-hero"><div class="dn-hero__inner">';
 const article = `<!--review:begin-->
 ${heroOpen}
 <p class="dn-eyebrow">Hotel Review</p>

@@ -183,7 +183,9 @@
   }
  ],
  "hero": {
-  "src": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&amp;h=630&amp;fit=crop&amp;auto=format",
-  "note": "Top banner image restored from the previous version of this review (owner request, 26 Nov 2026)."
+  "src": "images/dn/slide-1-1000.webp",
+  "srcset": "images/dn/slide-1-640.webp 640w, images/dn/slide-1-1000.webp 1000w, images/dn/slide-1-1600.webp 1600w",
+  "style": "object-position:50% 62%",
+  "note": "Top banner: the InterContinental image used on the homepage slider (owner request, 26 Nov 2026)."
  }
 }
