@@ -1,5 +1,5 @@
 {
- "note": "Original photography by Ryan Yousefi from his stay. Each photo is inserted after the paragraph that starts with 'after'. Metadata (incl. GPS) stripped.",
+ "note": "Photos from Ryan Yousefi's stay, plus resort images carried over from the previous version of this review (bay-aerial, infinity-pool, jungle-walkway, staff-ao-dai, guest-room, funicular-cabin, palm-beach, pool-villa-aerial). 'after' anchors a photo to the paragraph that starts with that text; 'afterHeading' places it directly under the H2/H3 that starts with that text. Metadata (incl. GPS) stripped.",
  "photos": [
   {
    "src": "images/hotels/intercontinental/ic-reception-desk-1600.jpg",
@@ -180,6 +180,114 @@
    "after": "They were simply a family enjoying an ordinary day in the trees.",
    "alt": "A red-shanked douc langur perched on wooden poles with a leaf in its mouth",
    "caption": "A douc langur perched on wooden poles, a leaf in its mouth."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-bay-aerial-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-bay-aerial-800.jpg",
+   "w": 1600,
+   "h": 1067,
+   "afterHeading": "The Drive",
+   "alt": "Aerial view of the InterContinental Danang Sun Peninsula Resort bay, with the resort on the forested hillside",
+   "caption": "The resort’s secluded bay on Son Tra Peninsula, with its buildings stepping up the forested hillside."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-club-spirits-menu-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-club-spirits-menu-800.jpg",
+   "w": 1200,
+   "h": 1600,
+   "afterHeading": "Cocktail Hour in the Club Lounge",
+   "alt": "Club InterContinental Lounge spirits menu listing aperitifs, vodka, gin, rum, whisky, liqueurs, cognac and beer",
+   "caption": "The Club Lounge spirits menu: aperitifs, vodka, gin, rum, whisky, liqueurs, Hennessy VSOP and local craft beer."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-infinity-pool-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-infinity-pool-800.jpg",
+   "w": 810,
+   "h": 810,
+   "afterHeading": "The Swimming Pools",
+   "alt": "Swimmer underwater in the InterContinental Danang infinity pool with the resort and Son Tra hillside behind",
+   "caption": "A swimmer in the infinity pool, with the resort and the Son Tra hillside behind."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-terra-mare-entrance-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-terra-mare-entrance-800.jpg",
+   "w": 1200,
+   "h": 1600,
+   "afterHeading": "Restaurants",
+   "alt": "Entrance to Terra Mare restaurant under its thatched roof at InterContinental Danang",
+   "caption": "The entrance to Terra Mare, under its thatched roof."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-grill-seafood-buffet-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-grill-seafood-buffet-800.jpg",
+   "w": 1200,
+   "h": 1600,
+   "after": "Grilled meats and seafood take center stage",
+   "alt": "Buffet line beside an open kitchen with chefs at work and a Catch of the day chalkboard",
+   "caption": "Chefs at the open kitchen beside the grill and seafood buffet."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-jungle-walkway-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-jungle-walkway-800.jpg",
+   "w": 1200,
+   "h": 800,
+   "afterHeading": "The Spa and Wellness Experience",
+   "alt": "Couple on a jungle walkway at InterContinental Danang with the bay below",
+   "caption": "A walkway through the forest that surrounds the resort."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-staff-ao-dai-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-staff-ao-dai-800.jpg",
+   "w": 1200,
+   "h": 780,
+   "afterHeading": "Staff and Employees",
+   "alt": "InterContinental Danang staff member in a white ao dai holding a tray in a dining room",
+   "caption": "A member of the resort’s staff in a white ao dai."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-villas-from-beach-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-villas-from-beach-800.jpg",
+   "w": 900,
+   "h": 1600,
+   "afterHeading": "Families and Children",
+   "alt": "InterContinental Danang hillside villas seen from the beach beneath a striped umbrella",
+   "caption": "The hillside villas, seen from beneath a beach umbrella."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-guest-room-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-guest-room-800.jpg",
+   "w": 1200,
+   "h": 800,
+   "afterHeading": "The Price",
+   "alt": "InterContinental Danang guest room with dark wood, a Moorish-style arch and a yellow carpet",
+   "caption": "A guest room: dark wood, a Moorish-style arch and a bold yellow carpet."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-funicular-cabin-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-funicular-cabin-1600.jpg",
+   "w": 800,
+   "h": 450,
+   "afterHeading": "What Could Be Better",
+   "alt": "Nam Tram funicular cabin descending the hillside toward the beach at InterContinental Danang",
+   "caption": "The Nam Tram cabin on its way down the hillside to the beach."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-palm-beach-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-palm-beach-800.jpg",
+   "w": 1200,
+   "h": 800,
+   "afterHeading": "Check-Out",
+   "alt": "InterContinental Danang private beach with palm trees and white sand",
+   "caption": "Palms and white sand on the private beach."
+  },
+  {
+   "src": "images/hotels/intercontinental/ic-pool-villa-aerial-1600.jpg",
+   "src800": "images/hotels/intercontinental/ic-pool-villa-aerial-800.jpg",
+   "w": 1024,
+   "h": 768,
+   "afterHeading": "Final Verdict",
+   "alt": "Aerial view of a hillside pool villa at InterContinental Danang above the bay",
+   "caption": "A hillside villa and its pool, with the bay beyond."
   }
  ],
  "hero": {
