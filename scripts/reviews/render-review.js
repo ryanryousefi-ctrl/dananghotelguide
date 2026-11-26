@@ -47,8 +47,10 @@ if (bannerBlock) { const wc = out.map(x => (x.startsWith('<figure') ? '' : x).re
   if (at > 0) out.splice(at, 0, '</article>\n' + bannerBlock.trim() + '\n<article class="rv-article rv-article--cont">'); } // full width: the 728x90 band needs more than the 720px text column
 const firstH2 = out.findIndex(x => x.startsWith('<h2'));
 const intro = out.slice(0, firstH2).join('\n'), rest = out.slice(firstH2).join('\n');
+const heroCfg = (() => { const f = path.join(ROOT, mdFile.replace(/\.md$/, '.photos.json')); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')).hero : null; })();
+const heroOpen = heroCfg ? `<header class="dn-hero rv-hero rv-hero--img"><div class="dn-hero__media"><img src="${heroCfg.src}" alt="" fetchpriority="high" decoding="async"></div><div class="dn-hero__inner">` : '<header class="dn-hero dn-hero--plain rv-hero"><div class="dn-hero__inner">';
 const article = `<!--review:begin-->
-<header class="dn-hero dn-hero--plain rv-hero"><div class="dn-hero__inner">
+${heroOpen}
 <p class="dn-eyebrow">Hotel Review</p>
 <h1>${inline(h1.text)}</h1>
 <p class="rv-byline">${inline(byline.text)}</p>
@@ -63,7 +65,7 @@ ${rest}
 </article>
 <!--review:end-->`;
 let h = hPage;
-const css = `<style id="rv-style">.rv-hero .dn-eyebrow{color:#555!important;text-shadow:none!important;filter:none!important;opacity:1!important}.rv-hero h1{max-width:22ch}.rv-byline{margin:.4rem 0 0;font-size:1rem;opacity:.9}.rv-score{display:flex;align-items:baseline;flex-wrap:wrap;gap:.35rem .6rem;margin-top:1rem}.rv-score__num{font:700 2.6rem/1 var(--font-display,Georgia,serif)}.rv-score__max{font-size:1.1rem;opacity:.75}.rv-score__lbl{flex-basis:100%;font-size:.9rem;opacity:.85}
+const css = `<style id="rv-style">.dn-hero--plain.rv-hero .dn-eyebrow{color:#555!important;text-shadow:none!important;filter:none!important;opacity:1!important}.rv-hero--img .rv-byline,.rv-hero--img .rv-score{color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.45)}.rv-hero h1{max-width:22ch}.rv-byline{margin:.4rem 0 0;font-size:1rem;opacity:.9}.rv-score{display:flex;align-items:baseline;flex-wrap:wrap;gap:.35rem .6rem;margin-top:1rem}.rv-score__num{font:700 2.6rem/1 var(--font-display,Georgia,serif)}.rv-score__max{font-size:1.1rem;opacity:.75}.rv-score__lbl{flex-basis:100%;font-size:.9rem;opacity:.85}
 .rv-article{max-width:720px;margin:0 auto;padding:2rem var(--gutter,1.25rem) 2.5rem;font-size:1.075rem;line-height:1.75;color:var(--ink,#111)}.rv-article p{margin:0 0 1.05rem}.rv-article h2{font:700 clamp(1.45rem,4vw,1.9rem)/1.2 var(--font-display,Georgia,serif);margin:2.6rem 0 1rem;scroll-margin-top:90px}.rv-article h3{font:700 clamp(1.15rem,3vw,1.35rem)/1.3 var(--font-display,Georgia,serif);margin:2rem 0 .8rem;scroll-margin-top:90px}.rv-article ul{margin:0 0 1.2rem;padding-left:1.2rem}.rv-article li{margin:.4rem 0}.rv-article strong{font-weight:700}.rv-article--cont{padding-top:.5rem}.rv-fig{margin:1.6rem 0 1.9rem}.rv-fig img{display:block;width:100%;height:auto;border-radius:6px;background:#eee}.rv-fig figcaption{font-size:.88rem;line-height:1.5;color:#555;margin-top:.5rem}.rv-intro{border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;margin-bottom:.4rem}
 @media(max-width:600px){.rv-article{font-size:1.02rem;padding-top:1.4rem}}</style>`;
 if (/<!--review:begin-->/.test(h)) {
