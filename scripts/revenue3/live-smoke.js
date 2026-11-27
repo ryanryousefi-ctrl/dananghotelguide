@@ -14,9 +14,14 @@ const t = (n, ok, d) => { R.push(!!ok); console.log((ok ? 'PASS' : 'FAIL') + '  
     } await c.close(); }
   { const c = await b.newContext({ viewport: { width: 1280, height: 900 } }); const p = await c.newPage(); let pops = 0; c.on('page', pp => { pops++; pp.close(); });
     await p.goto(B + 'where-to-stay-in-da-nang.html', { waitUntil: 'load' }); await p.waitForTimeout(1500); t('no Trip.com tab opens without a click', pops === 0, pops);
-    await p.click('.dnc-hero a.tc-btn'); await p.waitForTimeout(800); const k = await p.evaluate(() => (window.dataLayer || []).map(x => Array.prototype.slice.call(x)).filter(x => x[0] === 'event' && x[1] === 'affiliate_click').length);
+    await p.click('.rr-hero a.tc-btn'); await p.waitForTimeout(800); const k = await p.evaluate(() => (window.dataLayer || []).map(x => Array.prototype.slice.call(x)).filter(x => x[0] === 'event' && x[1] === 'affiliate_click').length);
     t('one click -> exactly one affiliate_click', k === 1, k);
     const txt = await p.evaluate(() => document.body.innerText); t('where-to-stay: no Radisson Blu / Sheraton-on-My-Khe text', !/Radisson Blu/.test(txt), '');
+    await p.goto(B, { waitUntil: 'load' }); await p.waitForTimeout(800);
+    await p.click('#find .rr-chip[data-g="setting"][data-v="city"]'); await p.waitForTimeout(200);
+    const cityOk = await p.evaluate(() => { const v = [...document.querySelectorAll('#find [data-shop-card]')].filter(c => c.offsetParent !== null); return v.length > 0 && v.every(c => c.dataset.setting === 'city'); });
+    t('home instant filter live: City shows only city hotels', cityOk);
+    t('home search box not loaded before a click', (await p.locator('iframe#S20398814').count()) === 0); await p.click('.rr-sbox__go'); await p.waitForTimeout(300); t('home search box loads after a click', (await p.locator('iframe#S20398814').count()) === 1);
     await p.goto(B + 'compare-hotels.html?h=hilton-da-nang,sheraton-grand-da-nang', { waitUntil: 'load' }); await p.waitForTimeout(800);
     const tb = await p.evaluate(() => document.querySelector('.dnc-table') && document.querySelector('.dnc-table').innerText);
     t('compare tool live: labelled road/walk distances, verified names', /by road/i.test(tb || '') && /Sheraton Grand Danang Beach Resort/i.test(tb || '') && /min walk/i.test(tb || ''), (tb || '').slice(0, 120));

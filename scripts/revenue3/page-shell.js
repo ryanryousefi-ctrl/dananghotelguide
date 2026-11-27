@@ -3,7 +3,7 @@
 const fs = require('fs'), path = require('path'); const C = require('./components');
 const ROOT = path.resolve(__dirname, '..', '..'); const esc = C.esc;
 // the reset layer marks find-your-hotel.html as a rebuilt layout and loads the finder script; generated pages must not inherit either
-const T = fs.readFileSync(path.join(ROOT, 'find-your-hotel.html'), 'utf8').replace(/ data-layout="[^"]*"/, '').replace(/<script src="dn-shop\.js" defer><\/script>\n?/, '');
+const T = fs.readFileSync(path.join(ROOT, 'find-your-hotel.html'), 'utf8').replace(/ data-layout="[^"]*"/, '').replace(/<script src="dn-shop\.js" defer><\/script>\n?/, '').replace(/<link rel="preload" as="image" data-rr-preload[^>]*>\n?/, '');
 module.exports = function shell({ file, title, desc, crumb, eyebrow, h1, lede, heroImg, main, sticky }) {
   const url = 'https://www.dananghotelguide.com/' + file;
   let head = T.slice(0, T.indexOf('</head>')), rest = T.slice(T.indexOf('</head>'));
