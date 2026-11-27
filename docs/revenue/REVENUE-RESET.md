@@ -65,11 +65,26 @@ Result: **71 protected pages; editorial content identical on all 71, changed on 
 - Overflow and page-error sweep, every changed page at 320, 375, 390, 428, 768, 1024, 1280, 1440: **193 changed pages at 8 widths: no horizontal overflow, no new page errors (`best-budget-hotels-in-da-nang.html` has one script error that also exists on production)**
 - Facts: `fact-consistency.js` 216 pages, 0 errors (1 existing warning). Module guardrail `cta-audit.js`: no adjacent duplicates.
 - SEO (`scripts/revenue/seo-check.js`): 0 canonical mismatches, 0 missing or multiple H1, 0 invalid JSON-LD, 0 hreflang errors; orphans equal the baseline (11); the only "broken" internal links are `news.html`, which Vercel serves through a rewrite (unchanged). URLs, titles, meta descriptions, canonicals, structured data and sitemap are unchanged. H1 changed on three pages: homepage, Where to Stay (both as specified) and Find Hotels.
-- Lighthouse (mobile, production, single runs, nothing else running): RESULT_LIGHTHOUSE
+- Lighthouse (mobile, production, single runs, nothing else running): see the table below. Single mobile runs are noisy on this site (the same unchanged page swings by 20+ points between runs), so repeated runs are shown where a result looked like a regression.
+
+| Page | Before (production `e6b9fd4`) | After (production `628fe41`) |
+|---|---|---|
+| Homepage | 40, LCP 5.0 s, CLS 0.001, TBT 2,710 ms | 70, LCP 5.1 s, CLS 0.013, TBT 190 ms |
+| Where to Stay | 88, LCP 3.6 s, CLS 0.013, TBT 170 ms | 85, LCP 3.9 s, CLS 0, TBT 90 ms |
+| Best hotels | 81, LCP 4.0 s, CLS 0, TBT 230 ms | three runs: 65 / 73 / 87, LCP 11.7 / 5.7 / 3.6 s, CLS 0.076 / 0 / 0 |
+| Luxury | 71, LCP 9.5 s, CLS 0 | three runs: 64 / 80 / 83, LCP 9.5 / 3.6 / 4.2 s, CLS 0 |
+| Hilton review (layout unchanged) | 60, LCP 7.3 s | 92, LCP 2.8 s (run-to-run noise: the page did not change) |
+| Find Hotels | 99, LCP 1.5 s, TBT 80 ms | 90, LCP 2.4 s, TBT 260 ms (now renders 21 hotel cards) |
+
+The first after-deploy run (`a4c3d70`) showed real LCP regressions on the homepage (6.4 s) and Where to Stay (5.5 s): the new hero image was discovered late. Fixed in `628fe41` by preloading each rebuilt hero image (`preloadHero()` in `scripts/reset/shop.js`). Accessibility 94–100, SEO 92 and Best Practices 79 (AdSense third-party cookies) are unchanged. Raw summaries: `docs/revenue/lighthouse/rrbefore-summary.txt`, `rrafter-summary.txt`, `rrfinal-summary.txt`.
 
 ## 6. Deployment and rollback
 
-RESULT_DEPLOY
+- Merges to `main`: `8baf9cf` (the rebuild), `a4c3d70` (hotfix: `dn-shop.js` was missing from the `.vercelignore` deploy allowlist and returned 404 for about 10 minutes; in that window the homepage showed its 6 default cards and every booking button worked, but the filter chips and the search-box button did nothing), `628fe41` (hero image preload, live smoke update).
+- Vercel: all three projects (`dananghotelguide`, `dananghotelguide-33mw`, `dananghotelguide-rq9a`) built successfully for each merge.
+- Production checks: `live-smoke.js` 50/50 on production (pages at two widths, live clicks, one `affiliate_click` per click, homepage filter, click-to-load search box, compare tool, Stay Planner, withdrawn page, Sheraton facts).
+- **Rollback:** all of the reset: `git revert -m 1 628fe41 && git revert -m 1 a4c3d70 && git revert -m 1 8baf9cf`, then push `main` (or promote the Vercel deployment of `e6b9fd4`). Only the preload: `git revert -m 1 628fe41`. Rebuilding after a revert: `build-all.sh` from the reverted tree restores the Phase 4 generators.
+- **New public file types:** anything new at the repo root must be added to `.vercelignore` (allowlist), or it will 404 in production.
 
 ## 7. Affiliate economics and second-partner evaluation
 
