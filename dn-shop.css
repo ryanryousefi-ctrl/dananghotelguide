@@ -1,0 +1,105 @@
+/* Operation Revenue Reset: hotel-shopping design system (cards, grids, filter, area cards, tiles, compact heroes). One file for every rebuilt page. */
+:root{--rr-ink:#14181f;--rr-mute:#5b6472;--rr-line:#e3e6ea;--rr-bg:#fff;--rr-soft:#f6f7f9;--rr-accent:#0b3a53;--rr-radius:12px}
+.rr{background:var(--rr-bg);color:var(--rr-ink)}
+.rr-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.rr-sec{padding:44px 0}.rr-sec--soft{background:var(--rr-soft)}
+.rr-h2{font:400 clamp(1.6rem,3.6vw,2.3rem)/1.15 var(--font-display,Georgia,serif);margin:0 0 6px;color:var(--rr-ink)}
+.rr-sub{color:var(--rr-mute);margin:0 0 22px;max-width:62ch;font-size:1rem;line-height:1.55}
+.rr-disc{font-size:.82rem;line-height:1.5;color:var(--rr-mute);margin:14px 0 0;max-width:80ch}
+/* compact shopping hero: headline + one primary action, recommendations start within the first screen */
+.rr-hero{position:relative;color:#fff;background:#0b2230;overflow:hidden}
+.rr-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.rr-hero__in{position:relative;max-width:1200px;margin:0 auto;padding:56px 20px 40px}
+.rr-hero h1{font:400 clamp(2rem,5.4vw,3.4rem)/1.05 var(--font-display,Georgia,serif);margin:0 0 12px;max-width:20ch;color:#fff}
+.rr-hero p.rr-lede{font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.5;max-width:56ch;margin:0 0 20px;color:#eef2f5}
+.rr-hero__acts{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.rr-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:8px;font-weight:700;font-size:.98rem;text-decoration:none;letter-spacing:.01em}
+.rr-btn--main{background:#fff;color:var(--rr-ink)}.rr-btn--main:hover{background:#eef2f5}
+.rr-link{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.rr-hero__meta{font-size:.8rem;opacity:.85;margin:16px 0 0}
+.rr-hero--slim .rr-hero__in{padding:40px 20px 28px}
+/* finder */
+.rr-find{background:#fff;border:1px solid var(--rr-line);border-radius:var(--rr-radius);padding:18px;box-shadow:0 8px 30px rgba(15,25,35,.08);margin-top:-26px;position:relative}
+.rr-find__row{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px}
+.rr-find__g{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.rr-find__lab{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rr-mute);margin-right:4px;min-width:74px}
+.rr-chip{border:1px solid #cfd5dc;background:#fff;border-radius:999px;padding:7px 13px;font:600 .88rem/1.1 inherit;color:var(--rr-ink);cursor:pointer;min-height:36px}
+.rr-chip[aria-pressed=true]{background:var(--rr-accent);border-color:var(--rr-accent);color:#fff}
+.rr-chip:focus-visible{outline:3px solid #7cc4ff;outline-offset:2px}
+.rr-find__status{font-size:.9rem;color:var(--rr-mute);margin:8px 0 0}
+.rr-find__status strong{color:var(--rr-ink)}
+.rr-reset{background:none;border:0;color:var(--rr-accent);text-decoration:underline;cursor:pointer;font:inherit;padding:0 4px}
+.rr-results{margin-top:22px}
+.rr-more{display:block;margin:22px auto 0;background:#fff;border:1px solid var(--rr-ink);border-radius:8px;padding:12px 22px;font:700 .95rem inherit;cursor:pointer}
+.rr-hoian{display:none;border:1px solid var(--rr-line);border-radius:var(--rr-radius);padding:22px;background:var(--rr-soft)}
+.rr-hoian h3{margin:0 0 6px;font:400 1.5rem/1.2 var(--font-display,Georgia,serif)}
+.rr-hoian ul{margin:10px 0 16px;padding-left:18px}.rr-hoian li{margin:4px 0}
+.rr-none{display:none;padding:18px;border:1px dashed #c8ced6;border-radius:10px;color:var(--rr-mute)}
+/* hotel card */
+.sc-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.sc-grid--3{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.sc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--rr-line);border-radius:var(--rr-radius);overflow:hidden;min-width:0}
+.sc--more,.sc[hidden]{display:none}.rr-showall .sc--more:not([hidden]){display:flex}
+.sc__media{position:relative;display:block;aspect-ratio:3/2;background:#dfe4ea}
+.sc__media img{width:100%;height:100%;object-fit:cover;display:block}
+.sc__ph{display:flex;align-items:center;justify-content:center;height:100%;padding:16px;text-align:center;font:400 1.3rem/1.2 var(--font-display,Georgia,serif);color:#fff;background:linear-gradient(135deg,#0b3a53,#2a6f86)}
+.sc__badge{position:absolute;left:10px;top:10px;background:#fff;color:var(--rr-ink);font:700 .74rem/1 inherit;letter-spacing:.04em;text-transform:uppercase;padding:7px 9px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.sc__body{display:flex;flex-direction:column;gap:6px;padding:14px 16px 16px;flex:1}
+.sc__tier{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rr-mute);margin:0}
+.sc__name{font:400 1.32rem/1.2 var(--font-display,Georgia,serif);margin:0}
+.sc__name a{color:var(--rr-ink);text-decoration:none}.sc__name a:hover{text-decoration:underline}
+.sc__meta{font-size:.86rem;color:var(--rr-mute);margin:0}
+.sc__src{font-size:.8rem;color:var(--rr-accent);font-weight:600;margin:0}
+.sc__why{margin:4px 0 0;font-size:.95rem;line-height:1.5}
+.sc__facts{margin:4px 0 0;display:grid;gap:4px;font-size:.88rem;line-height:1.45}
+.sc__facts div{display:grid;grid-template-columns:78px 1fr;gap:8px}
+.sc__facts dt{font-weight:700;color:var(--rr-mute);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.sc__facts dd{margin:0}
+.sc__cta{margin-top:auto;padding-top:10px}
+.sc__cta .tc-btn{width:100%}
+.sc__links{display:flex;gap:16px;align-items:center;font-size:.88rem;margin:6px 0 0;flex-wrap:wrap}
+.sc__links a{color:var(--rr-ink);font-weight:600}
+.sc__save{background:none;border:0;padding:0;font:600 .88rem inherit;color:var(--rr-ink);text-decoration:underline;cursor:pointer}
+.sc__save[aria-pressed=true]{color:var(--rr-accent)}
+/* category tiles */
+.cat-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.cat{position:relative;display:block;border-radius:10px;overflow:hidden;aspect-ratio:3/2;background:#0b3a53;color:#fff;text-decoration:none}
+.cat img{width:100%;height:100%;object-fit:cover;opacity:.72;display:block;transition:transform .3s}
+.cat:hover img{transform:scale(1.04)}
+.cat__l{position:absolute;left:12px;bottom:10px;right:12px;font:700 1rem/1.2 inherit;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+/* area cards */
+.ac-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.ac{border:1px solid var(--rr-line);border-radius:var(--rr-radius);padding:18px;background:#fff;font-size:.94rem;line-height:1.5}
+.ac h3{font:400 1.4rem/1.2 var(--font-display,Georgia,serif);margin:0 0 8px}
+.ac p{margin:0 0 6px}.ac__con{color:#5a3d1e}
+.ac__hl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rr-mute);margin:12px 0 4px!important}
+.ac__hotels{list-style:none;margin:0 0 8px;padding:0}
+.ac__hotels li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--rr-line)}
+.ac__hotels li a:first-child{color:var(--rr-ink);font-weight:600}
+.ac__more{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px!important}
+.ac__more>a{font-weight:600;color:var(--rr-accent)}
+/* jump links */
+.rr-jump{display:flex;gap:8px;overflow-x:auto;padding:12px 0;margin:0;list-style:none;scrollbar-width:thin}
+.rr-jump a{white-space:nowrap;display:inline-block;padding:7px 12px;border:1px solid var(--rr-line);border-radius:999px;font-size:.86rem;color:var(--rr-ink);text-decoration:none;background:#fff}
+.rr-jumpbar{border-bottom:1px solid var(--rr-line);background:#fff}
+/* quick answer */
+.rr-answer{border-left:4px solid var(--rr-accent);background:var(--rr-soft);padding:14px 18px;border-radius:0 10px 10px 0;margin:0 0 22px;font-size:1rem;line-height:1.55}
+.rr-answer p{margin:0}
+/* compare strip (category pages) */
+.rr-cmp{width:100%;border-collapse:collapse;font-size:.9rem;margin:6px 0 0}
+.rr-cmp th,.rr-cmp td{border-bottom:1px solid var(--rr-line);padding:9px 8px;text-align:left;vertical-align:top}
+.rr-cmp th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rr-mute)}
+.rr-cmp-wrap{overflow-x:auto}
+/* editorial links (demoted) */
+.rr-links{display:grid;gap:8px 24px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin:0;padding:0;list-style:none}
+.rr-links a{color:var(--rr-ink);font-weight:600}
+.rr-bottom{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sc--compact .sc__media{aspect-ratio:16/9}.sc--compact .sc__body{gap:4px}
+@media(max-width:600px){.rr-find__row{display:block;margin:0}.rr-find__g{flex-wrap:nowrap;overflow-x:auto;padding:4px 0 6px;scrollbar-width:none;margin:0 -14px;padding-left:14px;padding-right:14px}.rr-find__g::-webkit-scrollbar{display:none}.rr-chip{flex:0 0 auto}.rr-find h2{font-size:1.35rem}.sc__media{aspect-ratio:16/9}.rr-sec{padding:32px 0}.rr-hero__in{padding:34px 16px 34px}.rr-wrap{padding:0 16px}.rr-find{padding:14px;margin-top:-20px}.rr-find__lab{min-width:64px;flex:0 0 auto}.sc-grid,.sc-grid--3{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr 1fr}.rr-hero--slim .rr-hero__in{padding:26px 16px 22px}}
+.sc--lite{border-top:4px solid var(--rr-accent)}.sc--lite .sc__name{font-size:1.4rem}
+.rr-h3{font:400 1.3rem/1.2 var(--font-display,Georgia,serif);margin:28px 0 8px}
+.rr-anchor{display:block;position:relative;top:-90px;visibility:hidden;height:0}
+.rr-bottom a:not(.tc-btn){font-weight:600;color:var(--rr-accent)}
+.rr-sbwrap{display:grid;gap:24px;grid-template-columns:1fr 340px;align-items:center}.rr-sbox{border:1px dashed #c8ced6;border-radius:12px;padding:18px;min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.rr-sbox__t{font-weight:700;margin:0 0 4px}.rr-sbox__n{font-size:.85rem;color:var(--rr-mute);margin:0 0 10px}.rr-sbox iframe{max-width:100%}
+@media(max-width:760px){.rr-sbwrap{grid-template-columns:1fr}}
+@media(max-width:600px){.sc-grid--rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:0 16px 10px;scrollbar-width:none}.sc-grid--rail::-webkit-scrollbar{display:none}.sc-grid--rail>.sc{flex:0 0 86%;scroll-snap-align:start}}

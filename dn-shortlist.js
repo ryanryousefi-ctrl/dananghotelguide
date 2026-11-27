@@ -24,7 +24,7 @@
   function paint() {
     var l = read();
     // Return-visitor cues: saved count in the Hotels menu, and a "compare your saved hotels" prompt where a page offers a slot. Nothing leaves the browser.
-    document.querySelectorAll('[data-dn-saved-nav]').forEach(function (a) { a.textContent = l.length ? 'Compare & Saved (' + l.length + ')' : 'Compare & Saved'; a.href = l.length ? 'compare-hotels.html?h=' + l.slice(0, 3).join(',') : 'compare-hotels.html'; });
+    document.querySelectorAll('[data-dn-saved-nav]').forEach(function (a) { var lb = a.getAttribute('data-dn-saved-label') || 'Compare & Saved'; a.textContent = l.length ? lb + ' (' + l.length + ')' : lb; a.href = l.length ? 'compare-hotels.html?h=' + l.slice(0, 3).join(',') : 'compare-hotels.html'; });
     document.querySelectorAll('[data-dn-shortlist-cta]').forEach(function (el) { if (!l.length) { el.hidden = true; return; } el.hidden = false; el.innerHTML = ''; var t = document.createTextNode('You have ' + l.length + ' saved hotel' + (l.length > 1 ? 's' : '') + ' in this browser. '); var a = document.createElement('a'); a.href = 'compare-hotels.html?h=' + l.slice(0, 3).join(','); a.textContent = 'Compare them and recheck rates'; el.appendChild(t); el.appendChild(a); });
     document.querySelectorAll('[data-dn-save]').forEach(function (b) {
       var on = l.indexOf(b.getAttribute('data-dn-save')) > -1;
