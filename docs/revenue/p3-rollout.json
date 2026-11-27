@@ -315,6 +315,7 @@
    "type": "list",
    "modules": [
     "hero",
+    "compare",
     "return"
    ]
   },

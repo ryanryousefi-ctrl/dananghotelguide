@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Revenue dashboard from GA4 Exploration CSV exports (see docs/revenue/reporting-workflow.md). Reads real exports only.
 //   node scripts/revenue4/revenue-dashboard.js --clicks clicks.csv [--views views.csv] [--events events.csv] [--out docs/revenue/dashboards/revenue.html]
-// clicks.csv: page_path, event_count (+ any of cta_location, page_type, cta_label, cta_position, link_key, hotel_name, device_category)
+// clicks.csv: page_path, event_count (+ any of layout_version, cta_location, page_type, cta_label, cta_position, link_key, hotel_name, device_category)
 // events.csv: event_name, event_count (+ device_category): dn_compare_use, dn_shortlist_save, dn_shortlist_remove, dn_shortlist_return, dn_copy_link, dn_planner_use
 'use strict';
 const fs = require('fs'), path = require('path'); const { csv, num, tableHtml, page, arg } = require('./report-lib');
@@ -12,6 +12,8 @@ const group = (key, fn) => { const m = new Map(); for (const r of C) { const k =
 const views = new Map(); for (const r of V) views.set(r.page_path, (views.get(r.page_path) || 0) + num(r.views || r.screen_page_views));
 const body = [];
 body.push(tableHtml('Pages by affiliate clicks', ['Page', 'Clicks', 'Share', 'Views', 'Clicks per 100 views'], group('page_path').slice(0, 40).map(([k, v]) => [k, v, pct(v, total), views.get(k) || '', views.get(k) ? (100 * v / views.get(k)).toFixed(2) : ''])));
+body.push(tableHtml('Layout cohort (before / after the Revenue Reset)', ['layout_version', 'Clicks', 'Share'], group('layout_version').map(([k, v]) => [k, v, pct(v, total)]), 'reset1 = pages rebuilt by Operation Revenue Reset (2026-11-27); legacy = unchanged layout. Compare clicks per 100 views per cohort over equal date ranges; a click is not a booking.'));
+body.push(tableHtml('Reset cards and modules (cta_location rr-*)', ['cta_location', 'Clicks'], group('cta_location').filter(([k]) => /^rr-/.test(k))));
 body.push(tableHtml('By page type', ['Page type', 'Clicks', 'Share'], group('page_type').map(([k, v]) => [k, v, pct(v, total)])));
 body.push(tableHtml('By CTA location', ['cta_location', 'Clicks', 'Share'], group('cta_location').map(([k, v]) => [k, v, pct(v, total)])));
 body.push(tableHtml('Where on the page', ['Position band', 'Clicks', 'Share'], group(null, r => { const p = num(r.cta_position); return r.cta_position == null || r.cta_position === '' ? '(not set)' : p < 25 ? '0-25% (top)' : p < 50 ? '25-50%' : p < 75 ? '50-75%' : '75-100% (end)'; }).map(([k, v]) => [k, v, pct(v, total)])));

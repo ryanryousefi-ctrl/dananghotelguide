@@ -20,3 +20,10 @@ Property: the one receiving `G-0T1H4G2N80`. Path: **Admin → Data display → C
 After creation: data appears for events **from that moment on** (no backfill); allow 24 to 48 hours. Mark `affiliate_click` as a key event only if you want it in conversion reports; it is a click, not a booking. Bookings are proven only in the Trip.com affiliate dashboard (Booking report T+1, Commission report after check-out).
 
 Verify: Admin → DebugView with the GA Debugger extension, click one Trip.com button and one Save button; you should see exactly one `affiliate_click` (with the six parameters) and one `dn_shortlist_save`.
+
+## Added 2026-11-27 (Operation Revenue Reset)
+| Dimension name | Event parameter | Why |
+|---|---|---|
+| Layout version | `layout_version` | `reset1` on rebuilt pages, `legacy` elsewhere; the before/after cohort for affiliate clicks |
+| Filter group | `filter_group` | `dn_shop_filter` event: which instant-filter group visitors use |
+| Filter value | `filter_value` | `dn_shop_filter` event: which values |

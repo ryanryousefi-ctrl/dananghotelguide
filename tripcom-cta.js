@@ -180,6 +180,7 @@
       page_type: pageType(window.location.pathname),
       cta_label: ((el && el.textContent) || '').replace(/\s+/g, ' ').replace(/[→↗›»]/g, '').trim().slice(0, 60),
       cta_position: position(el),
+      layout_version: document.documentElement.getAttribute('data-layout') || 'legacy',
       transport_type: 'beacon'
     };
     for (var k in extra || {}) params[k] = extra[k];

@@ -12,14 +12,27 @@ const srv = http.createServer((q, r) => { const p = decodeURIComponent(q.url.spl
   // 1. where-to-stay hero + card buttons: one affiliate_click each, no auto-open
   { const c = await mk(1280, true); const p = await c.newPage(); let popups = 0; c.on('page', () => popups++); await p.goto(base + 'where-to-stay-in-da-nang.html'); await p.waitForTimeout(600);
     t('where-to-stay: no Trip.com tab opens without a click', popups === 0, popups);
-    await p.click('.dnc-hero a.tc-btn'); await p.waitForTimeout(400); let k = await clicks(p);
-    t('hero button: exactly one affiliate_click, cta_location p3-hero, page_type present', k.length === 1 && k[0].cta_location === 'p3-hero' && !!k[0].page_type, JSON.stringify(k));
+    await p.click('.rr-hero a.tc-btn'); await p.waitForTimeout(400); let k = await clicks(p);
+    t('hero button: exactly one affiliate_click, cta_location rr-ws-hero, page_type and layout_version present', k.length === 1 && k[0].cta_location === 'rr-ws-hero' && !!k[0].page_type && k[0].layout_version === 'reset1', JSON.stringify(k));
     const hrefOk = await p.evaluate(() => [...document.querySelectorAll('a[data-provider="tripcom"]')].every(a => /^https:\/\/www\.trip\.com\/hotels\//.test(a.href) && /Allianceid=11013066/.test(a.href) && /SID=333523744/.test(a.href)));
     t('where-to-stay: every Trip.com anchor carries Alliance ID and Site ID', hrefOk);
-    await p.locator('.dnc-card a.tc-btn').first().click(); await p.waitForTimeout(300); k = await clicks(p);
-    t('hotel card button: one more affiliate_click with hotel_name and cta_location p3-ws-pick', k.length === 2 && k[1].cta_location === 'p3-ws-pick' && !!k[1].hotel_name, JSON.stringify(k[1]));
+    await p.locator('.sc a.tc-btn').first().click(); await p.waitForTimeout(300); k = await clicks(p);
+    t('hotel card button: one more affiliate_click with hotel_name and cta_location rr-ws-picks', k.length === 2 && k[1].cta_location === 'rr-ws-picks' && !!k[1].hotel_name, JSON.stringify(k[1]));
     const heads = await p.evaluate(() => ({ h1: document.querySelectorAll('h1').length, ids: [...document.querySelectorAll('[id]')].map(e => e.id).filter((x, i, a) => a.indexOf(x) !== i).length }));
     t('where-to-stay: exactly one h1, no duplicate ids', heads.h1 === 1 && heads.ids === 0, JSON.stringify(heads)); await c.close(); }
+  // 1b. Revenue Reset homepage: instant filter, Hoi An panel, click-to-load search box, one affiliate_click per card click
+  { const c = await mk(390, true); const p = await c.newPage(); let popups = 0; c.on('page', () => popups++); const errs = []; p.on('pageerror', e => errs.push(String(e))); await p.goto(base + 'index.html'); await p.waitForTimeout(500);
+    const vis = () => p.evaluate(() => [...document.querySelectorAll('#find [data-shop-card]')].filter(c => c.offsetParent !== null).map(c => c.getAttribute('data-dn-hotel')));
+    let v = await vis(); t('home: shows 6 top picks by default, no Trip.com tab without a click, no iframe before consent to load', v.length === 6 && popups === 0 && (await p.locator('iframe[src*="trip.com"]').count()) === 0, v.length + ' ' + popups);
+    await p.click('#find .rr-chip[data-g="aud"][data-v="families"]'); await p.click('#find .rr-chip[data-g="amen"][data-v="kids"]'); await p.waitForTimeout(150); v = await vis();
+    const okKids = await p.evaluate(ids => ids.every(id => { const c = document.querySelector('#find [data-dn-hotel="' + id + '"]'); return / families /.test(' ' + c.dataset.aud + ' ') && / kids /.test(' ' + c.dataset.amen + ' '); }), v);
+    t('home filter: families + kids club shows only matching verified hotels', v.length > 0 && okKids, v.join());
+    await p.click('#find .rr-chip[data-g="dest"][data-v="hoian"]'); await p.waitForTimeout(100); t('home filter: Hoi An shows the Hoi An panel and hides Da Nang cards', await p.locator('.rr-hoian').isVisible() && (await vis()).length === 0);
+    await p.click('#find .rr-chip[data-g="dest"][data-v="danang"]'); await p.locator('#find [data-shop-card]:visible a.tc-btn').first().click(); await p.waitForTimeout(300); const k = await clicks(p);
+    t('home card: exactly one affiliate_click, hotel deep link, cta_location rr-home-results', k.length === 1 && k[0].cta_location === 'rr-home-results' && k[0].destination_type === 'hotel' && !!k[0].hotel_name, JSON.stringify(k));
+    await p.locator('.rr-sbox__go').click(); await p.waitForTimeout(150); t('home: official search box loads only after the visitor clicks', (await p.locator('iframe#S20398814').count()) === 1);
+    const heads = await p.evaluate(() => ({ h1: document.querySelectorAll('h1').length, dup: [...document.querySelectorAll('[id]')].map(e => e.id).filter((x, i, a) => a.indexOf(x) !== i).length, ov: document.documentElement.scrollWidth - innerWidth }));
+    t('home: one h1, no duplicate ids, no overflow at 390, no page errors', heads.h1 === 1 && heads.dup === 0 && heads.ov <= 1 && !errs.length, JSON.stringify(heads) + errs.join('|')); await c.close(); }
   // 2. shortlist + compare
   { const c = await mk(390, true); const p = await c.newPage(); await p.goto(base + 'where-to-stay-in-da-nang.html'); await p.waitForTimeout(500);
     const sv = p.locator('[data-dn-save="hyatt-regency-da-nang"]').first(); await sv.scrollIntoViewIfNeeded(); await sv.click();
