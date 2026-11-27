@@ -14,7 +14,7 @@ function assets(h, { js } = {}) {
   if (js && !/dn-shop\.js/.test(h)) h = h.replace('</body>', '<script src="dn-shop.js" defer></script>\n</body>');
   if (!/dn-shortlist\.js/.test(h)) h = h.replace('</body>', '<script src="dn-shortlist.js" defer></script>\n</body>');
   if (!/<html[^>]*data-layout=/.test(h)) h = h.replace(/<html([^>]*)>/, `<html$1 data-layout="${LAYOUT}">`);
-  return h;
+  return S.preloadHero(h);
 }
 const hero = ({ h1, lede, acts, img, srcset, slim, meta }) => `<header class="rr-hero${slim ? ' rr-hero--slim' : ''}">${img ? `<img class="rr-hero__img" src="${img}"${srcset ? ` srcset="${srcset}" sizes="100vw"` : ''} alt="" fetchpriority="high" decoding="async">` : ''}<div class="rr-hero__in"><h1>${h1}</h1><p class="rr-lede">${lede}</p><div class="rr-hero__acts">${acts}</div>${meta ? `<p class="rr-hero__meta">${meta}</p>` : ''}</div></header>`;
 

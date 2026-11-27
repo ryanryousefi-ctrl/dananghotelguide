@@ -82,4 +82,12 @@ function areaCard(a) {
 
 const disclosure = (t) => `<p class="rr-disc">${t || 'We are an independent hotel guide. Our picks are our own; hotels do not pay to be listed. If you book through a Trip.com link we may earn a commission, at no extra cost to you. Prices and availability are shown on Trip.com, not on this site.'}</p>`;
 
-module.exports = { card, grid, picks, tiles, areaCard, disclosure, ranked, amenities, img, PICKS, CATS, FACTS, esc, nm, hotelBtn, destBtn };
+// LCP: preload the rebuilt hero image and decode it synchronously. Idempotent.
+function preloadHero(h) {
+  h = h.replace(/<link rel="preload" as="image" data-rr-preload[^>]*>\n?/g, '');
+  const m = h.match(/<img class="rr-hero__img" src="([^"]+)"(?: srcset="([^"]+)" sizes="([^"]+)")?/); if (!m || /^https?:/.test(m[1])) return h;
+  h = h.replace(/(<img class="rr-hero__img"[^>]*?) decoding="async"/, '$1');
+  const link = `<link rel="preload" as="image" data-rr-preload href="${m[1]}"${m[2] ? ` imagesrcset="${m[2]}" imagesizes="${m[3]}"` : ''} fetchpriority="high">`;
+  return h.replace(/(<meta name="viewport"[^>]*>)/, `$1\n${link}`);
+}
+module.exports = { preloadHero, card, grid, picks, tiles, areaCard, disclosure, ranked, amenities, img, PICKS, CATS, FACTS, esc, nm, hotelBtn, destBtn };

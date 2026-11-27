@@ -95,6 +95,7 @@ for (const [file, intent, picks, dest] of PAGES) {
   if (!/dn-shop\.css/.test(h)) h = h.replace('</head>', '<link rel="stylesheet" href="dn-shop.css">\n</head>');
   if (!/dn-shortlist\.js/.test(h)) h = h.replace('</body>', '<script src="dn-shortlist.js" defer></script>\n</body>');
   if (!/<html[^>]*data-layout=/.test(h)) h = h.replace(/<html([^>]*)>/, '<html$1 data-layout="reset1">');
+  h = S.preloadHero(h);
   if (h !== o) { fs.writeFileSync(p, h); n++; }
 }
 // Directory and map: optional tools, not steps. Slim hero, shortcuts to the curated shortlists, then the tool itself.
@@ -107,6 +108,7 @@ for (const [file, what] of [['da-nang-hotel-directory.html', 'the full directory
   h = h.slice(0, hz) + `\n<!--rr:cat-->\n${body}\n<!--/rr:cat-->\n` + h.slice(hz).replace(/^\n+/, '');
   if (!/dn-shop\.css/.test(h)) h = h.replace('</head>', '<link rel="stylesheet" href="dn-shop.css">\n</head>');
   if (!/<html[^>]*data-layout=/.test(h)) h = h.replace(/<html([^>]*)>/, '<html$1 data-layout="reset1">');
+  h = S.preloadHero(h);
   if (h !== o) { fs.writeFileSync(p, h); n++; }
 }
 console.log('category + tool pages rebuilt:', n);
